@@ -1,0 +1,127 @@
+{
+    "0": {
+      "name": "XM4",
+      "type": "Assault Rifle",
+      "game": "Black Ops 6"
+    },
+    "1": {
+      "name": "AK-74",
+      "type": "Assault Rifle",
+      "game": "Black Ops 6"
+    },
+    "2": {
+      "name": "AMES 85",
+      "type": "Assault Rifle",
+      "game": "Black Ops 6"
+    },
+    "3": {
+      "name": "GPR 91",
+      "type": "Assault Rifle",
+      "game": "Black Ops 6"
+    },
+    "4": {
+      "name": "MODEL L",
+      "type": "Assault Rifle",
+      "game": "Black Ops 6"
+    },
+    "5": {
+      "name": "GOBLIN MK 2",
+      "type": "Assault Rifle",
+      "game": "Black Ops 6"
+    },
+    "6": {
+      "name": "AS VAL",
+      "type": "Assault Rifle",
+      "game": "Black Ops 6"
+    },
+    "7": {
+      "name": "C9",
+      "type": "SMG",
+      "game": "Black Ops 6"
+    },
+    "8": {
+      "name": "KSV",
+      "type": "SMG",
+      "game": "Black Ops 6"
+    },
+    "9": {
+      "name": "TANTO .22",
+      "type": "SMG",
+      "game": "Black Ops 6"
+    },
+    "10": {
+      "name": "PP-919",
+      "type": "SMG",
+      "game": "Black Ops 6"
+    },
+    "11": {
+      "name": "JACKAL PDW",
+      "type": "SMG",
+      "game": "Black Ops 6"
+    },
+    "12": {
+      "name": "KOMPAKT 92",
+      "type": "SMG",
+      "game": "Black Ops 6"
+    },
+    "13": {
+      "name": "Marine SP",
+      "type": "Shotgun",
+      "game": "Black Ops 6"
+    },
+    "14": {
+      "name": "ASG-89",
+      "type": "Shotgun",
+      "game": "Black Ops 6"
+    },
+    "15": {
+      "name": "LW3A1 Frostline",
+      "type": "Sniper Rifle",
+      "game": "Black Ops 6"
+    },
+    "16": {
+      "name": "SVD",
+      "type": "Sniper Rifle",
+      "game": "Black Ops 6"
+    },
+    "17": {
+      "name": "LR 7.62",
+      "type": "Sniper Rifle",
+      "game": "Black Ops 6"
+    },
+    "18": {
+      "name": "PU-21",
+      "type": "LMG",
+      "game": "Black Ops 6"
+    },
+    "19": {
+      "name": "XMG",
+      "type": "LMG",
+      "game": "Black Ops 6"
+    },
+    "20": {
+      "name": "GPMG-7",
+      "type": "LMG",
+      "game": "Black Ops 6"
+    },
+    "21": {
+      "name": "Swat 5.56",
+      "type": "Marksman Rifle",
+      "game": "Black Ops 6"
+    },
+    "22": {
+      "name": "Tsarkov 7.62",
+      "type": "Marksman Rifle",
+      "game": "Black Ops 6"
+    },
+    "23": {
+      "name": "AEK-973",
+      "type": "Marksman Rifle",
+      "game": "Black Ops 6"
+    },
+    "24": {
+      "name": "DM-10",
+      "type": "Marksman Rifle",
+      "game": "Black Ops 6"
+    }
+}

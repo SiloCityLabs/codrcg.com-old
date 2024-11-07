@@ -1,0 +1,34 @@
+{
+    "0": {
+      "name": "9mm PM",
+      "type": "Pistol",
+      "game": "Black Ops 6"
+    },
+    "1": {
+      "name": "Grekhova",
+      "type": "Pistol",
+      "game": "Black Ops 6"
+    },
+    "2": {
+      "name": "GS45",
+      "type": "Pistol",
+      "game": "Black Ops 6"
+    },
+    "3": {
+      "name": "Stryder .22",
+      "type": "Pistol",
+      "game": "Black Ops 6"
+    },
+    "4": {
+      "name": "CIGMA 2B",
+      "type": "Launcher",
+      "game": "Black Ops 6",
+      "no_attach": true
+    },
+    "5": {
+      "name": "HE-1",
+      "type": "Launcher",
+      "game": "Black Ops 6",
+      "no_attach": true
+    }
+}

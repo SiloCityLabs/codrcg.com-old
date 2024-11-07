@@ -12,34 +12,32 @@ import { ClassProps } from "@/types/WarzoneTwo";
 
 function WarzoneTwoLoadout(props: ClassProps) {
   const [containerClass, setContainerClass] = useState("hidden");
-  const weapon = { name: "", type: "", game: "", no_attach: false };
   let p_attachments = implodeObject(props.p_attachments);
   let s_attachments = implodeObject(props.s_attachments);
-  const [perks, setPerks] = useState(null);
-  const [primary, setPrimary] = useState(weapon);
-  const [secondary, setSecondary] = useState(weapon);
-  const [tactical, setTactical] = useState({ name: "", type: "" });
-  const [lethal, setLethal] = useState({ name: "", type: "" });
+  const [data, setData] = useState({
+    perks: null,
+    primaryWeapon: { name: "", type: "", game: "", no_attach: false },
+    secondaryWeapon: { name: "", type: "", game: "", no_attach: false },
+    tacticalEquip: { name: "", type: "" },
+    lethalEquip: { name: "", type: "" },
+  });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const perks = await fetchPerks();
-        setPerks(perks);
-
         const primaryWeapon = await fetchWeapon("primary");
-        setPrimary(primaryWeapon);
-
-        //TODO: Update this to include primarys aswell & test that you dont have the same weapon 2x
         const secondaryWeapon = await fetchWeapon("secondary");
-        setSecondary(secondaryWeapon);
-
         const tacticalEquip = await fetchEquipment("tactical", "warzone-two");
-        setTactical(tacticalEquip);
-
         const lethalEquip = await fetchEquipment("lethal", "warzone-two");
-        setLethal(lethalEquip);
 
+        setData({
+          perks,
+          primaryWeapon,
+          secondaryWeapon,
+          tacticalEquip,
+          lethalEquip,
+        });
         setContainerClass("");
       } catch (error: any) {
         console.error(error.message); // Handle errors centrally
@@ -49,10 +47,10 @@ function WarzoneTwoLoadout(props: ClassProps) {
     fetchData();
   }, []);
 
-  console.log("primary", primary);
-  console.log("secondary", secondary);
-  console.log("tactical", tactical);
-  console.log("lethal", lethal);
+  const { perks, primaryWeapon, secondaryWeapon, tacticalEquip, lethalEquip } =
+    data;
+
+  // Remove unnecessary console logs
 
   return (
     <>
@@ -62,36 +60,38 @@ function WarzoneTwoLoadout(props: ClassProps) {
       >
         <Row id="weapons">
           <Col>
-            <span className="label">Primary:</span> {primary.name} (
-            {primary.game}) <br />
-            {primary.no_attach ? (
-              // No attachments case: Display "No Attachments" or a custom message
+            <span className="label">Primary:</span> {primaryWeapon.name} (
+            {primaryWeapon.game})
+            <br />
+            {primaryWeapon.no_attach ? (
               <>
+                {" "}
                 <span className="label">Primary Attachments: </span> No
-                Attachments
+                Attachments{" "}
               </>
             ) : (
-              // Attachments case: Display the existing logic for attachments
               <>
+                {" "}
                 <span className="label">Primary Attachments:</span>{" "}
-                {p_attachments}
+                {p_attachments}{" "}
               </>
             )}
           </Col>
           <Col>
-            <span className="label">Secondary:</span> {secondary.name} -{" "}
-            {secondary.game} <br />
-            {secondary.no_attach ? (
-              // No attachments case: Display "No Attachments" or a custom message
+            <span className="label">Secondary:</span> {secondaryWeapon.name} -{" "}
+            {secondaryWeapon.game}
+            <br />
+            {secondaryWeapon.no_attach ? (
               <>
+                {" "}
                 <span className="label">Secondary Attachments: </span> No
-                Attachments
+                Attachments{" "}
               </>
             ) : (
-              // Attachments case: Display the existing logic for attachments
               <>
+                {" "}
                 <span className="label">Secondary Attachments:</span>{" "}
-                {s_attachments}
+                {s_attachments}{" "}
               </>
             )}
           </Col>
@@ -99,10 +99,10 @@ function WarzoneTwoLoadout(props: ClassProps) {
         <Row>
           <Col id="equipment">
             <span id="tactical">
-              <span className="label">Tactical:</span> {tactical.name}
+              <span className="label">Tactical:</span> {tacticalEquip.name}
             </span>
             <span id="lethal">
-              <span className="label">Lethal:</span> {lethal.name}
+              <span className="label">Lethal:</span> {lethalEquip.name}
             </span>
           </Col>
           <Col>

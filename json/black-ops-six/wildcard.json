@@ -1,0 +1,32 @@
+{
+    "0": {
+      "name": "Tactical Expert",
+      "type": "Wildcard",
+      "game": "Black Ops 6"
+    },
+    "1": {
+      "name": "Overkill",
+      "type": "Wildcard",
+      "game": "Black Ops 6"
+    },
+    "2": {
+      "name": "Gunfighter",
+      "type": "Wildcard",
+      "game": "Black Ops 6"
+    },
+    "3": {
+      "name": "Danger Close",
+      "type": "Wildcard",
+      "game": "Black Ops 6"
+    },
+    "4": {
+      "name": "Prepper",
+      "type": "Wildcard",
+      "game": "Black Ops 6"
+    },
+    "5": {
+      "name": "Perk Greed",
+      "type": "Wildcard",
+      "game": "Black Ops 6"
+    }
+}

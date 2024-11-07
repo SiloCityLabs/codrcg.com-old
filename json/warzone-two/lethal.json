@@ -1,0 +1,50 @@
+{
+  "1": {
+    "name": "PROXIMITY MINE",
+    "type": "Lethal"
+  },
+  "2": {
+    "name": "DRILL CHARGE",
+    "type": "Lethal"
+  },
+  "3": {
+    "name": "MOLOTOV COCKTAIL",
+    "type": "Lethal"
+  },
+  "4": {
+    "name": "STICKY GRENADE",
+    "type": "Lethal"
+  },
+  "5": {
+    "name": "C4",
+    "type": "Lethal"
+  },
+  "6": {
+    "name": "THROWING STAR",
+    "type": "Lethal"
+  },
+  "7": {
+    "name": "BREACHER DRONE",
+    "type": "Lethal"
+  },
+  "8": {
+    "name": "FRAG GRENADE",
+    "type": "Lethal"
+  },
+  "9": {
+    "name": "CLAYMORE",
+    "type": "Lethal"
+  },
+  "10": {
+    "name": "THROWING KNIFE",
+    "type": "Lethal"
+  },
+  "11": {
+    "name": "THERMITE",
+    "type": "Lethal"
+  },
+  "12": {
+    "name": "THEROBARIC GRENADE",
+    "type": "Lethal"
+  }
+}

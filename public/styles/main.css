@@ -1,0 +1,11 @@
+@tailwind utilities;
+
+#cod-header {
+  margin-bottom: 25px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

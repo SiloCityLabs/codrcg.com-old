@@ -1,0 +1,22 @@
+#random-class .label {
+    font-weight: bold;
+}
+
+.generator h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#weapons {
+    margin-bottom: 20px;
+}
+
+#tactical {
+    margin-right: 25px;
+}
+
+.perk {
+    background: #fff;
+    border-radius: 4px;
+    padding-bottom: 100%;
+ }

@@ -1,0 +1,303 @@
+{
+  "0": {
+    "name": "TAQ-56",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "1": {
+    "name": "M4",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "2": {
+    "name": "STB 556",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "3": {
+    "name": "KASTOV 762",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "4": {
+    "name": "M13B",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "5": {
+    "name": "CHIMERA",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "6": {
+    "name": "ISO HEMLOCK",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "7": {
+    "name": "TEMPUS RAZORBACK",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "8": {
+    "name": "FR AVANCER",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "9": {
+    "name": "M13C",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "10": {
+    "name": "TR-76 GEIST",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "11": {
+    "name": "LACHMANN-556",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "12": {
+    "name": "M16",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "13": {
+    "name": "KASTOV-74U",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "14": {
+    "name": "KASTOV 545",
+    "type": "Assault Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "15": {
+    "name": "LACHMANN-762",
+    "type": "Battle Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "16": {
+    "name": "CRONEN SQUALL",
+    "type": "Battle Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "17": {
+    "name": "FTAC RECON",
+    "type": "Battle Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "18": {
+    "name": "TAQ-V",
+    "type": "Battle Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "19": {
+    "name": "SO-14",
+    "type": "Battle Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "20": {
+    "name": "LACHMANN SHROUD",
+    "type": "SMG",
+    "game": "Modern Warfare 2"
+  },
+  "21": {
+    "name": "ISO 45",
+    "type": "SMG",
+    "game": "Modern Warfare 2"
+  },
+  "22": {
+    "name": "ISO 9MM",
+    "type": "SMG",
+    "game": "Modern Warfare 2"
+  },
+  "23": {
+    "name": "PDSW 528",
+    "type": "SMG",
+    "game": "Modern Warfare 2"
+  },
+  "24": {
+    "name": "VEL 46",
+    "type": "SMG",
+    "game": "Modern Warfare 2"
+  },
+  "25": {
+    "name": "FENNEC 45",
+    "type": "SMG",
+    "game": "Modern Warfare 2"
+  },
+  "26": {
+    "name": "BAS-P",
+    "type": "SMG",
+    "game": "Modern Warfare 2"
+  },
+  "27": {
+    "name": "LACHMANN SUB",
+    "type": "SMG",
+    "game": "Modern Warfare 2"
+  },
+  "28": {
+    "name": "FSS HURRICANE",
+    "type": "SMG",
+    "game": "Modern Warfare 2"
+  },
+  "29": {
+    "name": "MX9",
+    "type": "SMG",
+    "game": "Modern Warfare 2"
+  },
+  "30": {
+    "name": "MINIBAK",
+    "type": "SMG",
+    "game": "Modern Warfare 2"
+  },
+  "31": {
+    "name": "VAZNEV-9K",
+    "type": "SMG",
+    "game": "Modern Warfare 2"
+  },
+  "32": {
+    "name": "KV BROADSIDE",
+    "type": "Shotgun",
+    "game": "Modern Warfare 2"
+  },
+  "33": {
+    "name": "LOCKWOOD 300",
+    "type": "Shotgun",
+    "game": "Modern Warfare 2"
+  },
+  "34": {
+    "name": "EXPEDTITE 12",
+    "type": "Shotgun",
+    "game": "Modern Warfare 2"
+  },
+  "35": {
+    "name": "BRYSON 800",
+    "type": "Shotgun",
+    "game": "Modern Warfare 2"
+  },
+  "36": {
+    "name": "MX GUARDIAN",
+    "type": "Shotgun",
+    "game": "Modern Warfare 2"
+  },
+  "37": {
+    "name": "BRYSON 890",
+    "type": "Shotgun",
+    "game": "Modern Warfare 2"
+  },
+  "38": {
+    "name": "SAKIN MG38",
+    "type": "LMG",
+    "game": "Modern Warfare 2"
+  },
+  "39": {
+    "name": "RAAL MG",
+    "type": "LMG",
+    "game": "Modern Warfare 2"
+  },
+  "40": {
+    "name": "556 ICARUS",
+    "type": "LMG",
+    "game": "Modern Warfare 2"
+  },
+  "41": {
+    "name": "RAPP H",
+    "type": "LMG",
+    "game": "Modern Warfare 2"
+  },
+  "42": {
+    "name": "HCR 56",
+    "type": "LMG",
+    "game": "Modern Warfare 2"
+  },
+  "43": {
+    "name": "RPK",
+    "type": "LMG",
+    "game": "Modern Warfare 2"
+  },
+  "44": {
+    "name": "EBR-14",
+    "type": "Marksman Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "45": {
+    "name": "SP-R 208",
+    "type": "Marksman Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "46": {
+    "name": "LOCKWOOD MK2",
+    "type": "Marksman Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "47": {
+    "name": "TEMPUS TORRENT",
+    "type": "Marksman Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "48": {
+    "name": "CROSSBOW",
+    "type": "Marksman Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "49": {
+    "name": "LM-S",
+    "type": "Marksman Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "50": {
+    "name": "SA-B 50",
+    "type": "Marksman Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "51": {
+    "name": "TAQ-M",
+    "type": "Marksman Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "52": {
+    "name": "MCPR-300",
+    "type": "Sniper Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "53": {
+    "name": "SIGNAL 50",
+    "type": "Sniper Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "54": {
+    "name": "VICTUS XMR",
+    "type": "Sniper Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "55": {
+    "name": "FJX IMPERIUM",
+    "type": "Sniper Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "56": {
+    "name": "CARRACK .300",
+    "type": "Sniper Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "57": {
+    "name": "LA-B 330",
+    "type": "Sniper Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "58": {
+    "name": "SP-X 80",
+    "type": "Sniper Rifle",
+    "game": "Modern Warfare 2"
+  },
+  "59": {
+    "name": "RIOT SHIELD",
+    "type": "Melee",
+    "game": "Modern Warfare 2",
+    "no_attach": true
+  }
+}

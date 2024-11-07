@@ -1,0 +1,37 @@
+{
+    "slot1": {
+        "0": "Battle Hardened",
+        "1": "Double Time",
+        "2": "E.O.D.",
+        "3": "Focus",
+        "4": "Irradiated",
+        "5": "Mechanic",
+        "6": "Mountaineer",
+        "7": "Scavenger",
+        "8": "Shrapnel",
+        "9": "Sleight of Hand",
+        "10": "Spotter",
+        "11": "Strong Arm"
+    },
+    "slot3" :{
+        "0": "Cold-Blooded",
+        "1": "Escapist",
+        "2": "Payout",
+        "3": "Primed",
+        "4": "Quick Fix",
+        "5": "Resupply",
+        "6": "Stalker",
+        "7": "Survivor",
+        "8": "Tempered",
+        "9": "Tracker"
+    },
+    "slot4" : {
+        "0" : "Birdseye",
+        "1" : "Combat Scout",
+        "2" : "Flex",
+        "3" : "Ghost",
+        "4" : "High Alert",
+        "5" : "Resolute",
+        "6" : "Shrouded"
+    }
+}

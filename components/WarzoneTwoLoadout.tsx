@@ -13,6 +13,7 @@ import { ClassProps } from '@/types/WarzoneTwo';
 
 
 function WarzoneTwoLoadout(props: ClassProps) {
+    const [containerClass, setContainerClass] = useState('hidden');
     const weapon = { name: '', type: '', game: '', no_attach: false };
     let p_attachments = implodeObject(props.p_attachments);
     let s_attachments = implodeObject(props.s_attachments);
@@ -40,6 +41,8 @@ function WarzoneTwoLoadout(props: ClassProps) {
 
                 const lethalEquip = await fetchEquipment('lethal', 'warzone-two');
                 setLethal(lethalEquip);
+
+                setContainerClass('');
             } catch (error: any) {
                 console.error(error.message); // Handle errors centrally
             }
@@ -55,10 +58,10 @@ function WarzoneTwoLoadout(props: ClassProps) {
 
     return (
         <>
-            <Container id='random-class' className='shadow-lg p-3 mb-5 bg-body rounded'>
+            <Container id='random-class' className={`${containerClass} shadow-lg p-3 mb-5 bg-body rounded`}>
                 <Row id='weapons'>
                     <Col>
-                        <span className='label'>Primary:</span> {primary.name} - {primary.game} <br />
+                        <span className='label'>Primary:</span> {primary.name} ({primary.game}) <br />
                         {primary.no_attach ? (
                             // No attachments case: Display "No Attachments" or a custom message
                             <><span className='label'>Primary Attachments: </span> No Attachments</>

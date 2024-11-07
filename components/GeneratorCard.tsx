@@ -1,14 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../public/styles/components/GeneratorCard.css';
-
-type CardProps = {
-    title: string;
-    text: string;
-    link: string;
-    variant: string;
-    disabled: boolean;
-}
+//Types
+import { CardProps } from '@/types/GeneratorCard';
 
 function GeneratorCard(props: CardProps) {
     return (

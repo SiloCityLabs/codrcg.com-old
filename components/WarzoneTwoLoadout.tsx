@@ -7,31 +7,10 @@ import { fetchPerks } from '../helpers/fetchPerks';
 //Styles
 import '../public/styles/components/Loadout.css';
 import { fetchEquipment } from '@/helpers/fetchEquipment';
+//Types
+import { ClassProps } from '@/types/WarzoneTwo'; 
 
-type ClassPerks = {
-    perk1: string;
-    perk2: string;
-    perk3: string;
-    perk4: string;
-}
 
-type GunAttachments = {
-    attach1: string;
-    attach2: string;
-    attach3: string;
-    attach4: string;
-    attach5: string;
-}
-
-type ClassProps = {
-    primary: string;
-    p_attachments: GunAttachments;
-    secondary: string;
-    s_attachments: GunAttachments;
-    tactical: string;
-    lethal: string;
-    perks: ClassPerks;
-}
 
 function WarzoneTwoLoadout(props: ClassProps) {
     const weapon = { name: '', type: '', game: '', no_attach: false };

@@ -1,5 +1,5 @@
-export async function fetchPerks() {
-  const response = await fetch("/api/warzone-two/perks");
+export async function fetchPerks(game: string = "") {
+  const response = await fetch(`/api/${game}/perks`);
   if (!response.ok) {
     throw new Error(`Error fetching perks: ${response.statusText}`);
   }

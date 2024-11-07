@@ -10,7 +10,7 @@ import { fetchEquipment } from "@/helpers/fetchEquipment";
 //Types
 import { ClassProps } from "@/types/WarzoneTwo";
 
-function WarzoneTwoLoadout(props: ClassProps) {
+function WarzoneTwoLoadout(props: any) {
   const [containerClass, setContainerClass] = useState("hidden");
   let p_attachments = implodeObject(props.p_attachments);
   let s_attachments = implodeObject(props.s_attachments);
@@ -25,7 +25,7 @@ function WarzoneTwoLoadout(props: ClassProps) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const perks = await fetchPerks();
+        const perks = await fetchPerks("warzone-two");
         const primaryWeapon = await fetchWeapon("primary");
         const secondaryWeapon = await fetchWeapon("secondary");
         const tacticalEquip = await fetchEquipment("tactical", "warzone-two");

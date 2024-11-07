@@ -1,14 +1,17 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
+import BlackOpsSixLoadout from "@/components/BlackOpsSixLoadout";
 
 export default function BlackOpsSix() {
   return (
     <>
       <Header />
-      <Container fluid>
+      <Container className="generator" fluid>
         <Row>
           <Col>
-            <p>Black Ops 6 - Random Class Generator</p>
+            <h2>Black Ops 6 - Random Class Generator</h2>
+
+            <BlackOpsSixLoadout />
           </Col>
         </Row>
       </Container>

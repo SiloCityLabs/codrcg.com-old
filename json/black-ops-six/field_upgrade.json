@@ -1,0 +1,57 @@
+{
+    "0": {
+      "name": "Assault Pack",
+      "type": "Field Upgrade",
+      "game": "Black Ops 6"
+    },
+    "1": {
+      "name": "Spring Mine",
+      "type": "Field Upgrade",
+      "game": "Black Ops 6"
+    },
+    "2": {
+      "name": "Trophy System",
+      "type": "Field Upgrade",
+      "game": "Black Ops 6"
+    },
+    "3": {
+      "name": "Scrambler",
+      "type": "Field Upgrade",
+      "game": "Black Ops 6"
+    },
+    "4": {
+      "name": "Signal Lure",
+      "type": "Field Upgrade",
+      "game": "Black Ops 6"
+    },
+    "5": {
+      "name": "War Cry",
+      "type": "Field Upgrade",
+      "game": "Black Ops 6"
+    },
+    "6": {
+      "name": "Tactical Insertion",
+      "type": "Field Upgrade",
+      "game": "Black Ops 6"
+    },
+    "7": {
+      "name": "Acoustic Amp",
+      "type": "Field Upgrade",
+      "game": "Black Ops 6"
+    },
+    "8": {
+      "name": "Morphine Injector",
+      "type": "Field Upgrade",
+      "game": "Black Ops 6"
+    },
+    "9": {
+      "name": "Neurogas",
+      "type": "Field Upgrade",
+      "game": "Black Ops 6"
+    },
+    "10": {
+      "name": "Sleeper Agent",
+      "type": "Field Upgrade",
+      "game": "Black Ops 6"
+    }
+  }

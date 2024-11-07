@@ -1,0 +1,42 @@
+{
+    "0": {
+      "name": "Concussion",
+      "type": "Tactical",
+      "game": "Black Ops 6"
+    },
+    "1": {
+      "name": "Flashbang",
+      "type": "Tactical",
+      "game": "Black Ops 6"
+    },
+    "2": {
+      "name": "Spy Cam",
+      "type": "Tactical",
+      "game": "Black Ops 6"
+    },
+    "3": {
+      "name": "Smoke",
+      "type": "Tactical",
+      "game": "Black Ops 6"
+    },
+    "4": {
+      "name": "Prox Alarm",
+      "type": "Tactical",
+      "game": "Black Ops 6"
+    },
+    "5": {
+      "name": "Stim Shot",
+      "type": "Tactical",
+      "game": "Black Ops 6"
+    },
+    "6": {
+      "name": "Decoy",
+      "type": "Tactical",
+      "game": "Black Ops 6"
+    },
+    "7": {
+      "name": "Shock Charge",
+      "type": "Tactical",
+      "game": "Black Ops 6"
+    }
+  }

@@ -7,13 +7,19 @@ import { fetchPerks } from "../helpers/fetchPerks";
 //Styles
 import "../public/styles/components/Loadout.css";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
-//Types
-import { ClassProps } from "@/types/WarzoneTwo";
 
-function WarzoneTwoLoadout(props: any) {
+function WarzoneTwoLoadout() {
+  const attachs = {
+    attach1: "attach1",
+    attach2: "attach2",
+    attach3: "attach3",
+    attach4: "attach4",
+    attach5: "attach5",
+  };
+
   const [containerClass, setContainerClass] = useState("hidden");
-  let p_attachments = implodeObject(props.p_attachments);
-  let s_attachments = implodeObject(props.s_attachments);
+  let p_attachments = implodeObject(attachs);
+  let s_attachments = implodeObject(attachs);
   const [data, setData] = useState({
     perks: null,
     primaryWeapon: { name: "", type: "", game: "", no_attach: false },

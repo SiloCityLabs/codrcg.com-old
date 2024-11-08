@@ -1,4 +1,4 @@
-import tacticalList from "../../../json/black-ops-six/tactical.json";
+import tacticalList from "../../../json/black-ops-six/equipment/tactical.json";
 import { randomListItem } from "../../../helpers/randomListItem";
 import { Equipment } from "@/app/lib/definitions";
 

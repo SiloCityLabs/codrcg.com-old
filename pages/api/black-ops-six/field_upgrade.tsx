@@ -1,4 +1,4 @@
-import fieldUpgradeList from "../../../json/black-ops-six/field_upgrade.json";
+import fieldUpgradeList from "../../../json/black-ops-six/equipment/field_upgrade.json";
 import { randomListItem } from "../../../helpers/randomListItem";
 import { Equipment } from "@/app/lib/definitions";
 

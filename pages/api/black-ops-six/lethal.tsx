@@ -1,4 +1,4 @@
-import lethalList from "../../../json/black-ops-six/lethal.json";
+import lethalList from "../../../json/black-ops-six/equipment/lethal.json";
 import { randomListItem } from "../../../helpers/randomListItem";
 import { Equipment } from "@/app/lib/definitions";
 

@@ -1,4 +1,4 @@
-import primaryList from "../../../json/black-ops-six/primary.json";
+import primaryList from "../../../json/black-ops-six/weapon/primary.json";
 import { randomListItem } from "../../../helpers/randomListItem";
 import { Weapon } from "@/app/lib/definitions";
 

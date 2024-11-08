@@ -1,6 +1,6 @@
-import perk1List from "../../../json/black-ops-six/perk1.json";
-import perk2List from "../../../json/black-ops-six/perk2.json";
-import perk3List from "../../../json/black-ops-six/perk3.json";
+import perk1List from "../../../json/black-ops-six/perk/perk1.json";
+import perk2List from "../../../json/black-ops-six/perk/perk2.json";
+import perk3List from "../../../json/black-ops-six/perk/perk3.json";
 import { randomListItem } from "../../../helpers/randomListItem";
 import { implodeObject } from "../../../helpers/implodeObject";
 

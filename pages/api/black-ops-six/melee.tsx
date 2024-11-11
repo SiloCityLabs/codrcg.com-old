@@ -1,5 +1,5 @@
-import meleeList from "../../../json/black-ops-six/weapon/melee.json";
-import { randomListItem } from "../../../helpers/randomListItem";
+import meleeList from "@/json/black-ops-six/weapon/melee.json";
+import { randomListItem } from "@/helpers/randomListItem";
 import { Weapon } from "@/app/lib/definitions";
 
 export default async function handler(req, res) {

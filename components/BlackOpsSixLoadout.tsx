@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { implodeObject } from "../helpers/implodeObject";
 import { fetchWeapon } from "../helpers/fetchWeapon";
 import { fetchPerks } from "../helpers/fetchPerks";
+import { fetchAttachments } from "@/helpers/fetchAttachments";
 //Styles
 import "../public/styles/components/Loadout.css";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
@@ -34,7 +35,16 @@ function BlackOpsSixLoadout() {
     const fetchData = async () => {
       try {
         const perks = await fetchPerks("black-ops-six");
-        const primaryWeapon = await fetchWeapon("primary", "black-ops-six");
+        // const primaryWeapon = await fetchWeapon("primary", "black-ops-six");
+        const primaryWeapon = {
+          name: "AK-74",
+          type: "assault_rifle",
+          game: "black-ops-six",
+          no_attach: false,
+        };
+        //Get Primary Attachments
+        let tmp_attachments = fetchAttachments(primaryWeapon);
+        console.log("tmp_attachments", tmp_attachments);
         const secondaryWeapon = await fetchWeapon("secondary", "black-ops-six");
         const meleeWeapon = await fetchWeapon("melee", "black-ops-six");
         const tacticalEquip = await fetchEquipment("tactical", "black-ops-six");

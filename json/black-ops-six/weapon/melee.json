@@ -2,13 +2,13 @@
     "0": {
       "name": "Knife",
       "type": "Melee",
-      "game": "Black Ops 6",
+      "game": "black-ops-six",
       "no_attach": true
     },
     "1": {
       "name": "Baseball Bat",
       "type": "Melee",
-      "game": "Black Ops 6",
+      "game": "black-ops-six",
       "no_attach": true
     }
 }

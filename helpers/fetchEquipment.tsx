@@ -8,9 +8,8 @@ export async function fetchEquipment(type: string, game: string = "") {
   if (!response.ok) {
     throw new Error(`Error fetching ${type} weapons: ${response.statusText}`);
   }
-
-  const weapon = await response.json();
-  return weapon;
+  const data = await response.json();
+  return data;
 }
 
 function getGame() {

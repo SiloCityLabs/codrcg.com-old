@@ -1,5 +1,5 @@
-import tacticalList from "../../../json/black-ops-six/equipment/tactical.json";
-import { randomListItem } from "../../../helpers/randomListItem";
+import tacticalList from "@/json/black-ops-six/equipment/tactical.json";
+import { randomListItem } from "@/helpers/randomListItem";
 import { Equipment } from "@/app/lib/definitions";
 
 export default async function handler(req, res) {

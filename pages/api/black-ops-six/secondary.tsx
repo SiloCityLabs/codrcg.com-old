@@ -1,5 +1,5 @@
-import secondaryList from "../../../json/black-ops-six/weapon/secondary.json";
-import { randomListItem } from "../../../helpers/randomListItem";
+import secondaryList from "@/json/black-ops-six/weapon/secondary.json";
+import { randomListItem } from "@/helpers/randomListItem";
 import { Weapon } from "@/app/lib/definitions";
 
 export default async function handler(req, res) {

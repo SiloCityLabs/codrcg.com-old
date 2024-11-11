@@ -4,6 +4,6 @@ export async function fetchPerks(game: string = "") {
     throw new Error(`Error fetching perks: ${response.statusText}`);
   }
 
-  const perks = await response.json();
-  return perks;
+  const data = await response.json();
+  return data;
 }

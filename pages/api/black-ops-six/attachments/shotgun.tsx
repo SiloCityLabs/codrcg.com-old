@@ -11,14 +11,16 @@ export default async function handler(req, res) {
     randomizeAttachments(attachments, data, body.count);
   }
 
-  res.status(200).json("");
+  console.info("attachments", attachments);
+
+  res.status(200).json(attachments);
 }
 
 function getGunAttachments(gun: string) {
   switch (gun) {
     case "asg89":
       return asg89;
-    case "marineSp":
+    case "marinesp":
       return marineSp;
     default:
       return null;

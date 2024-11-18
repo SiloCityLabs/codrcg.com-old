@@ -12,14 +12,16 @@ export default async function handler(req, res) {
     randomizeAttachments(attachments, data, body.count);
   }
 
-  res.status(200).json("");
+  console.info("attachments", attachments);
+
+  res.status(200).json(attachments);
 }
 
 function getGunAttachments(gun: string) {
   switch (gun) {
     case "lr762":
       return lr762;
-    case "lw3a1Frostline":
+    case "lw3a1frostline":
       return lw3a1Frostline;
     case "svd":
       return svd;

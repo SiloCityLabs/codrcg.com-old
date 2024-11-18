@@ -19,11 +19,11 @@ function BlackOpsSixLoadout() {
   };
 
   const [containerClass, setContainerClass] = useState("hidden");
-  let p_attachments = implodeObject(attachs);
   let s_attachments = implodeObject(attachs);
   const [data, setData] = useState({
     perks: null,
     primaryWeapon: { name: "", type: "", game: "", no_attach: false },
+    p_attachments: "",
     secondaryWeapon: { name: "", type: "", game: "", no_attach: false },
     meleeWeapon: { name: "", type: "", game: "" },
     tacticalEquip: { name: "", type: "" },
@@ -37,8 +37,10 @@ function BlackOpsSixLoadout() {
         const perks = await fetchPerks("black-ops-six");
         const primaryWeapon = await fetchWeapon("primary", "black-ops-six");
         //Get Primary Attachments
-        let tmp_attachments = fetchAttachments(primaryWeapon);
-        console.log("tmp_attachments", tmp_attachments);
+        const p_attachments = implodeObject(
+          await fetchAttachments(primaryWeapon)
+        );
+        console.log("p_attachments", p_attachments);
         const secondaryWeapon = await fetchWeapon("secondary", "black-ops-six");
         const meleeWeapon = await fetchWeapon("melee", "black-ops-six");
         const tacticalEquip = await fetchEquipment("tactical", "black-ops-six");
@@ -51,6 +53,7 @@ function BlackOpsSixLoadout() {
         setData({
           perks,
           primaryWeapon,
+          p_attachments,
           secondaryWeapon,
           meleeWeapon,
           tacticalEquip,
@@ -69,6 +72,7 @@ function BlackOpsSixLoadout() {
   const {
     perks,
     primaryWeapon,
+    p_attachments,
     secondaryWeapon,
     meleeWeapon,
     tacticalEquip,

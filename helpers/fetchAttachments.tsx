@@ -2,9 +2,8 @@ import { randomNumber } from "./randomNumber";
 //Types
 import { Weapon } from "@/types/Generator";
 
-export async function fetchAttachments(weapon: Weapon) {
+export async function fetchAttachments(weapon: Weapon, count: number = 5) {
   const gun = cleanUp(weapon.name);
-  const count = 5;
 
   console.log("API URL:", `/api/${weapon.game}/attachments/${weapon.type}`);
 
@@ -17,12 +16,13 @@ export async function fetchAttachments(weapon: Weapon) {
       },
       body: JSON.stringify({
         gun: gun,
-        count: count
+        count: count,
       }),
     }
   );
 
   if (!response.ok) {
+    console.error();
     throw new Error(
       `Error fetching ${gun} attachments: ${response.statusText}`
     );

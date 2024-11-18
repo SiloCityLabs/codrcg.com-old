@@ -20,6 +20,7 @@ export default class Header extends React.Component {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/changelog">Changelog</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

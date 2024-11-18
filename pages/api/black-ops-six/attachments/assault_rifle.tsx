@@ -5,7 +5,7 @@ import goblinMk2 from "@/json/black-ops-six/attachments/assault_rifle/goblinMk2.
 import gpr91 from "@/json/black-ops-six/attachments/assault_rifle/gpr91.json";
 import modelL from "@/json/black-ops-six/attachments/assault_rifle/modelL.json";
 import xm4 from "@/json/black-ops-six/attachments/assault_rifle/xm4.json";
-import { randomListItem } from "@/helpers/randomListItem";
+import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 export default async function handler(req, res) {
   let attachments: any = {};
@@ -39,36 +39,5 @@ function getGunAttachments(gun: string) {
       return xm4;
     default:
       return null;
-  }
-}
-
-/**
- * Randomly selects attachments from a pool of data.
- *
- * @param {object} attachArr - The object to store the selected attachments.
- * @param {object} data - The pool of attachments to choose from.
- * @param {number} count - The number of attachments to select.
- *
- * @returns {void}
- */
-function randomizeAttachments(attachArr: any, data: any, count: number) {
-  let attachs = 0;
-
-  while (attachs < count) {
-    const keys = Object.keys(data);
-    const randomIndex = Math.floor(Math.random() * keys.length);
-    const randomKey = keys[randomIndex];
-
-    console.log("data", data);
-    console.log(`randomizeAttachments ${attachs} < ${count}`);
-    console.log("randomKey", randomKey);
-    if (attachArr.hasOwnProperty(randomKey)) {
-      console.log("randomizeAttachments: already exists");
-      continue;
-    } else {
-      console.log("randomizeAttachments: doesnt already exist");
-      attachArr[randomKey] = randomListItem(data[randomKey]);
-      attachs++;
-    }
   }
 }

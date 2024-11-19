@@ -40,5 +40,12 @@
       "type": "Perk 3",
       "game": "black-ops-six",
       "color": "Green"
+    },
+    "7": {
+      "name": "Shrapnel Radar",
+      "type": "Perk 3",
+      "game": "black-ops-six",
+      "color": "Blue",
+      "isDlc": true
     }
   }

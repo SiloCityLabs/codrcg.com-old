@@ -40,5 +40,12 @@
       "type": "Perk 2",
       "game": "black-ops-six",
       "color": "Green"
+    },
+    "7": {
+      "name": "Shadow",
+      "type": "Perk 2",
+      "game": "black-ops-six",
+      "color": "Green",
+      "isDlc": true
     }
   }

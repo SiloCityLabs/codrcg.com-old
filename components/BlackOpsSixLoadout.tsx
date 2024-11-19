@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 //Helpers
 import { implodeObject } from "../helpers/implodeObject";
 import { fetchWeapon } from "../helpers/fetchWeapon";
@@ -34,44 +35,12 @@ function BlackOpsSixLoadout() {
   });
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const wildcard = await fetchWildcard("black-ops-six");
-        
-        const perks = await fetchPerks("black-ops-six");
-        const primaryWeapon = await fetchWeapon("primary", "black-ops-six");
-        //Get Primary Attachments
-        const p_attachments = implodeObject(
-          await fetchAttachments(primaryWeapon)
-        );
-        const secondaryWeapon = await fetchWeapon("secondary", "black-ops-six");
-        const meleeWeapon = await fetchWeapon("melee", "black-ops-six");
-        const tacticalEquip = await fetchEquipment("tactical", "black-ops-six");
-        const lethalEquip = await fetchEquipment("lethal", "black-ops-six");
-        const fieldUpgrade = await fetchEquipment(
-          "field_upgrade",
-          "black-ops-six"
-        );
-
-        setData({
-          perks,
-          primaryWeapon,
-          p_attachments,
-          secondaryWeapon,
-          meleeWeapon,
-          tacticalEquip,
-          lethalEquip,
-          fieldUpgrade,
-          wildcard,
-        });
-        setContainerClass("");
-      } catch (error: any) {
-        console.error(error.message); // Handle errors centrally
-      }
-    };
-
-    fetchData();
+    fetchLoadoutData(setData, setContainerClass);
   }, []);
+
+  const handleClick = async () => {
+    await fetchLoadoutData(setData, setContainerClass);
+  };
 
   const {
     perks,
@@ -154,9 +123,47 @@ function BlackOpsSixLoadout() {
             <span className="label">Wildcard:</span> {wildcard.name}
           </Col>
         </Row>
+        <Row id="button-row">
+          <Col className="text-center">
+            <Button variant="black-ops" href="#" onClick={handleClick}>
+              Generate Loadout
+            </Button>
+          </Col>
+        </Row>
       </Container>
     </>
   );
+}
+
+async function fetchLoadoutData(setData, setContainerClass) {
+  try {
+    const wildcard = await fetchWildcard("black-ops-six");
+
+    const perks = await fetchPerks("black-ops-six");
+    const primaryWeapon = await fetchWeapon("primary", "black-ops-six");
+    //Get Primary Attachments
+    const p_attachments = implodeObject(await fetchAttachments(primaryWeapon));
+    const secondaryWeapon = await fetchWeapon("secondary", "black-ops-six");
+    const meleeWeapon = await fetchWeapon("melee", "black-ops-six");
+    const tacticalEquip = await fetchEquipment("tactical", "black-ops-six");
+    const lethalEquip = await fetchEquipment("lethal", "black-ops-six");
+    const fieldUpgrade = await fetchEquipment("field_upgrade", "black-ops-six");
+
+    setData({
+      perks,
+      primaryWeapon,
+      p_attachments,
+      secondaryWeapon,
+      meleeWeapon,
+      tacticalEquip,
+      lethalEquip,
+      fieldUpgrade,
+      wildcard,
+    });
+    setContainerClass("");
+  } catch (error: any) {
+    console.error(error.message); // Handle errors centrally
+  }
 }
 
 export default BlackOpsSixLoadout;

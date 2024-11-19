@@ -4,6 +4,8 @@ import kompakt92 from "@/json/black-ops-six/attachments/smg/kompakt92.json";
 import ksv from "@/json/black-ops-six/attachments/smg/ksv.json";
 import pp919 from "@/json/black-ops-six/attachments/smg/pp919.json";
 import tanto22 from "@/json/black-ops-six/attachments/smg/tanto22.json";
+//DLC Weapons
+import saug from "@/json/black-ops-six/attachments/smg/saug.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 export default async function handler(req, res) {
@@ -34,6 +36,8 @@ function getGunAttachments(gun: string) {
       return pp919;
     case "tanto22":
       return tanto22;
+    case "saug":
+      return saug;
     default:
       return null;
   }

@@ -5,6 +5,8 @@ import goblinMk2 from "@/json/black-ops-six/attachments/assault_rifle/goblinMk2.
 import gpr91 from "@/json/black-ops-six/attachments/assault_rifle/gpr91.json";
 import modelL from "@/json/black-ops-six/attachments/assault_rifle/modelL.json";
 import xm4 from "@/json/black-ops-six/attachments/assault_rifle/xm4.json";
+//DLC Weapons
+import krigC from "@/json/black-ops-six/attachments/assault_rifle/krigC.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 export default async function handler(req, res) {
@@ -37,6 +39,8 @@ function getGunAttachments(gun: string) {
       return modelL;
     case "xm4":
       return xm4;
+    case "krigc":
+      return krigC;
     default:
       return null;
   }

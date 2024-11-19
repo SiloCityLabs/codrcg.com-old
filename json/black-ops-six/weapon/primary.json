@@ -123,5 +123,29 @@
       "name": "DM-10",
       "type": "marksman_rifle",
       "game": "black-ops-six"
+    },
+    "25": {
+      "name": "Krig C",
+      "type": "assault_rifle",
+      "game": "black-ops-six",
+      "isDlc": true
+    },
+    "26": {
+      "name": "Saug",
+      "type": "smg",
+      "game": "black-ops-six",
+      "isDlc": true
+    },
+    "27": {
+      "name": "Maelstrom",
+      "type": "shotgun",
+      "game": "black-ops-six",
+      "isDlc": true
+    },
+    "28": {
+      "name": "AMR Mod 4",
+      "type": "sniper",
+      "game": "black-ops-six",
+      "isDlc": true
     }
 }

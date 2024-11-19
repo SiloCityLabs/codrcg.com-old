@@ -24,6 +24,7 @@ function BlackOpsSixLoadout() {
     lethalEquip: { name: "", type: "" },
     fieldUpgrade: { name: "", type: "" },
     wildcard: { name: "", type: "" },
+    fieldUpgrade2: { name: "", type: "" },
   });
 
   useEffect(() => {
@@ -45,6 +46,7 @@ function BlackOpsSixLoadout() {
     lethalEquip,
     fieldUpgrade,
     wildcard,
+    fieldUpgrade2,
   } = data;
 
   return (
@@ -109,6 +111,9 @@ function BlackOpsSixLoadout() {
           </Col>
           <Col>
             <span className="label">Field Upgrade:</span> {fieldUpgrade.name}
+            {wildcard.name === "Prepper" && (
+              <span> &amp; {fieldUpgrade2.name}</span>
+            )}
           </Col>
         </Row>
         <Row>
@@ -139,11 +144,14 @@ async function fetchLoadoutData(setData, setContainerClass) {
   try {
     let secondaryWeapon;
     let s_attachments;
+    let fieldUpgrade2;
     const wildcard = await fetchWildcard("black-ops-six");
     //Figure out primary attachment count
     const primAttachCount = wildcard.name === "Gunfighter" ? 8 : 5;
+    //Figure out if perk greed is done
+    const isPerkGreed = wildcard.name === "Perk Greed" ? true : false;
 
-    const perks = await fetchPerks("black-ops-six");
+    const perks = await fetchPerks("black-ops-six", isPerkGreed);
     const primaryWeapon = await fetchWeapon("primary", "black-ops-six");
     //Get Primary Attachments
     const p_attachments = implodeObject(
@@ -161,6 +169,16 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const tacticalEquip = await fetchEquipment("tactical", "black-ops-six");
     const lethalEquip = await fetchEquipment("lethal", "black-ops-six");
     const fieldUpgrade = await fetchEquipment("field_upgrade", "black-ops-six");
+    if (wildcard.name === "Prepper") {
+      //Loop to make sure we don't get the same field upgrade
+      while (true) {
+        fieldUpgrade2 = await fetchEquipment("field_upgrade", "black-ops-six");
+
+        if (fieldUpgrade.name !== fieldUpgrade2.name) {
+          break;
+        }
+      }
+    }
 
     setData({
       perks,
@@ -173,6 +191,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       lethalEquip,
       fieldUpgrade,
       wildcard,
+      fieldUpgrade2,
     });
     setContainerClass("");
   } catch (error: any) {

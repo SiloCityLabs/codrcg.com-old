@@ -28,3 +28,10 @@ export type KillStreak = {
     score: number;
     isDlc?: boolean;
 }
+
+export type Equipment = {
+    name: string;
+    type: string;
+    game: string;
+    isDlc?: boolean;
+}

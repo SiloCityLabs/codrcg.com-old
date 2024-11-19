@@ -1,9 +1,9 @@
-import meleeList from "@/json/black-ops-six/weapon/melee.json";
+import dataList from "@/json/black-ops-six/weapon/melee.json";
 import { randomListItem } from "@/helpers/randomListItem";
-import { Weapon } from "@/app/lib/definitions";
+import { Weapon } from "@/types/Generator";
 
 export default async function handler(req, res) {
-  const melee: Weapon = randomListItem(meleeList);
+  const data: Weapon = randomListItem(dataList);
 
-  res.status(200).json(melee);
+  res.status(200).json(data);
 }

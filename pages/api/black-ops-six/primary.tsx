@@ -1,9 +1,9 @@
-import primaryList from "@/json/black-ops-six/weapon/primary.json";
+import dataList from "@/json/black-ops-six/weapon/primary.json";
 import { randomListItem } from "@/helpers/randomListItem";
-import { Weapon } from "@/app/lib/definitions";
+import { Weapon } from "@/types/Generator";
 
 export default async function handler(req, res) {
-  const primary: Weapon = randomListItem(primaryList);
+  const data: Weapon = randomListItem(dataList);
 
-  res.status(200).json(primary);
+  res.status(200).json(data);
 }

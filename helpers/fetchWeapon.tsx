@@ -14,6 +14,7 @@ export async function fetchWeapon(type: string = "", game: string = "") {
   return data;
 }
 
+//TODO: Maybe make this its own function for WARZONE
 function getGame() {
   let game: string;
   const randomNum = randomNumber(0, 6);

@@ -5,10 +5,6 @@ import { Weapon } from "@/types/Generator";
 export async function fetchAttachments(weapon: Weapon, count: number = 5) {
   const gun = cleanUp(weapon.name);
 
-  console.log("API URL:", `/api/${weapon.game}/attachments/${weapon.type}`);
-  console.log("API gun:", gun);
-  console.log("API count:", count);
-
   const response = await fetch(
     `/api/${weapon.game}/attachments/${weapon.type}`,
     {

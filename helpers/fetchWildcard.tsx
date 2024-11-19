@@ -1,12 +1,12 @@
 import { randomNumber } from "./randomNumber";
 
-export async function fetchEquipment(type: string, game: string = "") {
+export async function fetchWildcard(game: string = "") {
   game = game === "" ? getGame() : game;
 
-  const response = await fetch(`/api/${game}/${type}`);
+  const response = await fetch(`/api/${game}/wildcard`);
 
   if (!response.ok) {
-    throw new Error(`Error fetching ${type} weapons: ${response.statusText}`);
+    throw new Error(`Error fetching ${game} wildcard: ${response.statusText}`);
   }
   const data = await response.json();
   return data;

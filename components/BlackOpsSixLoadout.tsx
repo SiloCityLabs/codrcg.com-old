@@ -5,9 +5,10 @@ import { implodeObject } from "../helpers/implodeObject";
 import { fetchWeapon } from "../helpers/fetchWeapon";
 import { fetchPerks } from "../helpers/fetchPerks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
+import { fetchEquipment } from "@/helpers/fetchEquipment";
+import { fetchWildcard } from "@/helpers/fetchWildcard";
 //Styles
 import "../public/styles/components/Loadout.css";
-import { fetchEquipment } from "@/helpers/fetchEquipment";
 
 function BlackOpsSixLoadout() {
   const attachs = {
@@ -29,18 +30,20 @@ function BlackOpsSixLoadout() {
     tacticalEquip: { name: "", type: "" },
     lethalEquip: { name: "", type: "" },
     fieldUpgrade: { name: "", type: "" },
+    wildcard: { name: "", type: "" },
   });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const wildcard = await fetchWildcard("black-ops-six");
+        
         const perks = await fetchPerks("black-ops-six");
         const primaryWeapon = await fetchWeapon("primary", "black-ops-six");
         //Get Primary Attachments
         const p_attachments = implodeObject(
           await fetchAttachments(primaryWeapon)
         );
-        console.log("p_attachments", p_attachments);
         const secondaryWeapon = await fetchWeapon("secondary", "black-ops-six");
         const meleeWeapon = await fetchWeapon("melee", "black-ops-six");
         const tacticalEquip = await fetchEquipment("tactical", "black-ops-six");
@@ -59,6 +62,7 @@ function BlackOpsSixLoadout() {
           tacticalEquip,
           lethalEquip,
           fieldUpgrade,
+          wildcard,
         });
         setContainerClass("");
       } catch (error: any) {
@@ -78,6 +82,7 @@ function BlackOpsSixLoadout() {
     tacticalEquip,
     lethalEquip,
     fieldUpgrade,
+    wildcard,
   } = data;
 
   return (
@@ -128,8 +133,8 @@ function BlackOpsSixLoadout() {
             {meleeWeapon.game}) - ({meleeWeapon.type})
           </Col>
         </Row>
-        <Row>
-          <Col id="equipment">
+        <Row id="equipment">
+          <Col>
             <span id="tactical">
               <span className="label">Tactical:</span> {tacticalEquip.name}
             </span>
@@ -142,6 +147,11 @@ function BlackOpsSixLoadout() {
           </Col>
           <Col>
             <span className="label">Field Upgrade:</span> {fieldUpgrade.name}
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <span className="label">Wildcard:</span> {wildcard.name}
           </Col>
         </Row>
       </Container>

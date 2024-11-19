@@ -12,21 +12,13 @@ import { fetchWildcard } from "@/helpers/fetchWildcard";
 import "../public/styles/components/Loadout.css";
 
 function BlackOpsSixLoadout() {
-  const attachs = {
-    attach1: "attach1",
-    attach2: "attach2",
-    attach3: "attach3",
-    attach4: "attach4",
-    attach5: "attach5",
-  };
-
   const [containerClass, setContainerClass] = useState("hidden");
-  let s_attachments = implodeObject(attachs);
   const [data, setData] = useState({
     perks: null,
     primaryWeapon: { name: "", type: "", game: "", no_attach: false },
     p_attachments: "",
     secondaryWeapon: { name: "", type: "", game: "", no_attach: false },
+    s_attachments: "",
     meleeWeapon: { name: "", type: "", game: "" },
     tacticalEquip: { name: "", type: "" },
     lethalEquip: { name: "", type: "" },
@@ -47,6 +39,7 @@ function BlackOpsSixLoadout() {
     primaryWeapon,
     p_attachments,
     secondaryWeapon,
+    s_attachments,
     meleeWeapon,
     tacticalEquip,
     lethalEquip,
@@ -136,14 +129,34 @@ function BlackOpsSixLoadout() {
 }
 
 async function fetchLoadoutData(setData, setContainerClass) {
+  const attachs = {
+    attach1: "attach1",
+    attach2: "attach2",
+    attach3: "attach3",
+    attach4: "attach4",
+    attach5: "attach5",
+  };
   try {
+    let secondaryWeapon;
+    let s_attachments;
     const wildcard = await fetchWildcard("black-ops-six");
+    //Figure out primary attachment count
+    const primAttachCount = wildcard.name === "Gunfighter" ? 8 : 5;
 
     const perks = await fetchPerks("black-ops-six");
     const primaryWeapon = await fetchWeapon("primary", "black-ops-six");
     //Get Primary Attachments
-    const p_attachments = implodeObject(await fetchAttachments(primaryWeapon));
-    const secondaryWeapon = await fetchWeapon("secondary", "black-ops-six");
+    const p_attachments = implodeObject(
+      await fetchAttachments(primaryWeapon, primAttachCount)
+    );
+    //Check for overkill
+    if (wildcard.name === "Overkill") {
+      secondaryWeapon = await fetchWeapon("primary", "black-ops-six");
+      s_attachments = implodeObject(await fetchAttachments(secondaryWeapon));
+    } else {
+      secondaryWeapon = await fetchWeapon("secondary", "black-ops-six");
+      s_attachments = implodeObject(attachs);
+    }
     const meleeWeapon = await fetchWeapon("melee", "black-ops-six");
     const tacticalEquip = await fetchEquipment("tactical", "black-ops-six");
     const lethalEquip = await fetchEquipment("lethal", "black-ops-six");
@@ -154,6 +167,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       primaryWeapon,
       p_attachments,
       secondaryWeapon,
+      s_attachments,
       meleeWeapon,
       tacticalEquip,
       lethalEquip,

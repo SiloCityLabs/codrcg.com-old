@@ -12,7 +12,7 @@ export async function fetchPerks(
     }),
   });
   if (!response.ok) {
-    throw new Error(`Error fetching perks: ${response.statusText}`);
+    throw new Error(`Error fetching perks for ${game}: ${response.statusText}`);
   }
 
   const data = await response.json();

@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import { implodeObject } from "../helpers/implodeObject";
 import { fetchWeapon } from "../helpers/fetchWeapon";
 import { fetchPerks } from "../helpers/fetchPerks";
+import { fetchStreaks } from "../helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchWildcard } from "@/helpers/fetchWildcard";
@@ -15,6 +16,7 @@ function BlackOpsSixLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
     perks: null,
+    streaks: null,
     primaryWeapon: { name: "", type: "", game: "", no_attach: false },
     p_attachments: "",
     secondaryWeapon: { name: "", type: "", game: "", no_attach: false },
@@ -37,6 +39,7 @@ function BlackOpsSixLoadout() {
 
   const {
     perks,
+    streaks,
     primaryWeapon,
     p_attachments,
     secondaryWeapon,
@@ -120,6 +123,10 @@ function BlackOpsSixLoadout() {
           <Col>
             <span className="label">Wildcard:</span> {wildcard.name}
           </Col>
+          <Col>
+            <span className="label">Streaks:</span> {streaks}
+          </Col>
+          <Col></Col>
         </Row>
         <Row id="button-row">
           <Col className="text-center">
@@ -150,8 +157,10 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const primAttachCount = wildcard.name === "Gunfighter" ? 8 : 5;
     //Figure out if perk greed is done
     const isPerkGreed = wildcard.name === "Perk Greed" ? true : false;
+    const isHighRoller = wildcard.name === "High Roller" ? true : false;
 
     const perks = await fetchPerks("black-ops-six", isPerkGreed);
+    const streaks = await fetchStreaks("black-ops-six", isHighRoller);
     const primaryWeapon = await fetchWeapon("primary", "black-ops-six");
     //Get Primary Attachments
     const p_attachments = implodeObject(
@@ -182,6 +191,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
 
     setData({
       perks,
+      streaks,
       primaryWeapon,
       p_attachments,
       secondaryWeapon,

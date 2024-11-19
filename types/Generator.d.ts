@@ -21,7 +21,7 @@ export type Wildcard = {
     isDlc?: boolean;
 }
 
-export type KillStreak = {
+export type Streak = {
     name: string;
     type: string;
     game: string;

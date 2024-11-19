@@ -39,7 +39,7 @@
       "name": "High Roller",
       "type": "Wildcard",
       "game": "black-ops-six",
-      "description": "Allow 4th Killstreak",
+      "description": "Allow 4th Streak",
       "isDlc": true
     }
 }

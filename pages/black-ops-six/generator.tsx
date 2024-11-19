@@ -3,9 +3,15 @@ import Header from "@/components/Header";
 import BlackOpsSixLoadout from "@/components/BlackOpsSixLoadout";
 
 export default function BlackOpsSix() {
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "Changelog", href: "/changelog" },
+    { label: "About", href: "/about" },
+  ];
+
   return (
     <>
-      <Header />
+      <Header className="black-ops-6" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>

@@ -6,21 +6,31 @@ import Navbar from "react-bootstrap/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../public/styles/main.css";
 
-export default class Header extends React.Component {
+interface HeaderProps {
+  className?: string;
+  navLinks: { label: string; href: string }[];
+}
+
+export default class Header extends React.Component<HeaderProps> {
   render() {
+    const { className, navLinks } = this.props;
+
     return (
       <Navbar
         id="cod-header"
         expand="lg"
-        className="navbar navbar-dark bg-dark"
+        className={`navbar navbar-dark bg-dark ${className}`}
       >
         <Container>
           <Navbar.Brand href="/">COD RCG</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/changelog">Changelog</Nav.Link>
+              {navLinks.map((link, index) => (
+                <Nav.Link key={index} href={link.href}>
+                  {link.label}
+                </Nav.Link>
+              ))}
             </Nav>
           </Navbar.Collapse>
         </Container>

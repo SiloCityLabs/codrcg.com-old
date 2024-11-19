@@ -12,3 +12,19 @@ export type Perk = {
     game: string;
     isDlc?: boolean;
 }
+
+export type Wildcard = {
+    name: string;
+    type: string;
+    game: string;
+    description: string;
+    isDlc?: boolean;
+}
+
+export type KillStreak = {
+    name: string;
+    type: string;
+    game: string;
+    score: number;
+    isDlc?: boolean;
+}

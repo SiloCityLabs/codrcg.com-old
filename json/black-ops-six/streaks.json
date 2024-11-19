@@ -111,6 +111,7 @@
       "name": "Hand Cannon",
       "type": "Killstreak",
       "score": 900,
-      "game": "black-ops-six"
+      "game": "black-ops-six",
+      "isDlc": true
     }
 }

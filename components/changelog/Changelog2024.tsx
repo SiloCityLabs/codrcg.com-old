@@ -10,6 +10,10 @@ function Changelog2024() {
         <Row>
           <Col>
             <p>
+              11/22/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
+              Added Season 01 perks and weapons to the generator
+            </p>
+            <p>
               11/20/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
               Generator is now available!
             </p>

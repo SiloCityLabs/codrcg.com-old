@@ -60,8 +60,7 @@ function BlackOpsSixLoadout() {
       >
         <Row id="weapons">
           <Col>
-            <span className="label">Primary:</span> {primaryWeapon.name} - (
-            {primaryWeapon.game}) - ({primaryWeapon.type})
+            <span className="label">Primary:</span> {primaryWeapon.name}
             <br />
             {primaryWeapon.no_attach ? (
               <>
@@ -78,8 +77,7 @@ function BlackOpsSixLoadout() {
             )}
           </Col>
           <Col>
-            <span className="label">Secondary:</span> {secondaryWeapon.name} - (
-            {secondaryWeapon.game}) - ({secondaryWeapon.type})
+            <span className="label">Secondary:</span> {secondaryWeapon.name}
             <br />
             {secondaryWeapon.no_attach ? (
               <>
@@ -96,37 +94,33 @@ function BlackOpsSixLoadout() {
             )}
           </Col>
           <Col>
-            <span className="label">Melee:</span> {meleeWeapon.name} - (
-            {meleeWeapon.game}) - ({meleeWeapon.type})
+            <span className="label">Melee:</span> {meleeWeapon.name}
           </Col>
         </Row>
         <Row id="equipment">
           <Col>
-            <span id="tactical">
-              <span className="label">Tactical:</span> {tacticalEquip.name}
-            </span>
-            <span id="lethal">
-              <span className="label">Lethal:</span> {lethalEquip.name}
-            </span>
+            <span className="label">Tactical:</span> {tacticalEquip.name}
+          </Col>
+          <Col>
+            <span className="label">Lethal:</span> {lethalEquip.name}
           </Col>
           <Col>
             <span className="label">Perks:</span> {perks}
           </Col>
+        </Row>
+        <Row>
           <Col>
             <span className="label">Field Upgrade:</span> {fieldUpgrade.name}
             {wildcard.name === "Prepper" && (
               <span> &amp; {fieldUpgrade2.name}</span>
             )}
           </Col>
-        </Row>
-        <Row>
           <Col>
             <span className="label">Wildcard:</span> {wildcard.name}
           </Col>
           <Col>
             <span className="label">Streaks:</span> {streaks}
           </Col>
-          <Col></Col>
         </Row>
         <Row id="button-row">
           <Col className="text-center">
@@ -141,17 +135,10 @@ function BlackOpsSixLoadout() {
 }
 
 async function fetchLoadoutData(setData, setContainerClass) {
-  const attachs = {
-    attach1: "attach1",
-    attach2: "attach2",
-    attach3: "attach3",
-    attach4: "attach4",
-    attach5: "attach5",
-  };
   try {
     let secondaryWeapon;
-    let s_attachments;
     let fieldUpgrade2;
+    let s_attachments;
     const wildcard = await fetchWildcard("black-ops-six");
     //Figure out primary attachment count
     const primAttachCount = wildcard.name === "Gunfighter" ? 8 : 5;
@@ -169,10 +156,13 @@ async function fetchLoadoutData(setData, setContainerClass) {
     //Check for overkill
     if (wildcard.name === "Overkill") {
       secondaryWeapon = await fetchWeapon("primary", "black-ops-six");
-      s_attachments = implodeObject(await fetchAttachments(secondaryWeapon));
     } else {
       secondaryWeapon = await fetchWeapon("secondary", "black-ops-six");
-      s_attachments = implodeObject(attachs);
+    }
+    //Verify if secondary weapon has attachments
+    console.log("secondaryWeapon.no_attach", secondaryWeapon.no_attach);
+    if (!secondaryWeapon.no_attach) {
+      s_attachments = implodeObject(await fetchAttachments(secondaryWeapon));
     }
     const meleeWeapon = await fetchWeapon("melee", "black-ops-six");
     const tacticalEquip = await fetchEquipment("tactical", "black-ops-six");

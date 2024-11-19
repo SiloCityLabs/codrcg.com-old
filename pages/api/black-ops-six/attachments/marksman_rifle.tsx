@@ -13,8 +13,6 @@ export default async function handler(req, res) {
     randomizeAttachments(attachments, data, body.count);
   }
 
-  console.info("attachments", attachments);
-
   res.status(200).json(attachments);
 }
 

@@ -1,34 +1,90 @@
 {
     "optic": {
-        "0": "optic1",
-        "1": "optic2"
+        "0": "Otero Micro Dot",
+        "1": "Merlin Mini",
+        "2": "PrismaTech Reflex",
+        "3": "Volzhskiy Reflex",
+        "4": "Merlin Reflex",
+        "5": "Accu-Spot Reflex",
+        "6": "Otero Red Dot",
+        "7": "OM3 '92 Holo",
+        "8": "Pinpoint Holoscout",
+        "9": "Willis 3x",
+        "10": "K&S Red Dot",
+        "11": "Remuda Mini Reflex",
+        "12": "Kepler Microflex",
+        "13": "Redwell Reflex",
+        "14": "Dobrych MF Reflex",
+        "15": "Kepler Red Dot",
+        "16": "Accu-Spot Ultra Holo",
+        "17": "Jason Armory 2x",
+        "18": "PrismaTech 4x",
+        "19": "Dobrych 4x",
+        "20": "Pinpoint Hybrid",
+        "21": "PrismaPoint Hybrid",
+        "22": "Hawker Hybrid",
+        "23": "R&K Multizoom",
+        "24": "Blandwell 7x Scope",
+        "25": "Otero Thermal 2x"
     },
     "muzzle": {
-        "0": "muzzle1",
-        "1": "muzzle2"
+        "0": "Suppressor",
+        "1": "Compensator",
+        "2": "Ported Compensator",
+        "3": "Muzzle Brake"
     },
     "barrel": {
-        "0": "barrel1",
-        "1": "barrel2"
+        "0": "Gain-Twist Barrel",
+        "1": "Long Barrel",
+        "2": "Short Barrel",
+        "3": "CHF Barrel",
+        "4": "Reinforced Barrel"
     },
     "underbarrel": {
-        "0": "underbarrel1",
-        "1": "underbarrel2"
+        "0": "Vertical Foregrip",
+        "1": "Lightweight Foregrip",
+        "2": "Marksman Foregrip",
+        "3": "Precision Foregrip",
+        "4": "Launcher - Standard",
+        "5": "Launcher - Smoke",
+        "6": "Launcher - High Explosive",
+        "7": "Launcher - Drill Charge",
+        "8": "Ranger Foregrip"
     },
     "magazine": {
-        "0": "magazine1",
-        "1": "magazine2"
+        "0": "Extended Mag I",
+        "1": "Fast Mag I",
+        "2": "Extended Mag II",
+        "3": "Flip Mag",
+        "4": "Extended Mag III",
+        "5": "Fast Mag II"
     },
     "rear_grip": {
-        "0": "rear_grip1",
-        "1": "rear_grip2"
+        "0": "Quickdraw Grip",
+        "1": "Assault Grip",
+        "2": "Commando Grip",
+        "3": "Ergonomic Grip",
+        "4": "CQB Grip"
     },
     "stock": {
-        "0": "stock1",
-        "1": "stock2"
+        "0": "Light Stock",
+        "1": "Heavy Stock",
+        "2": "Balanced Stock",
+        "3": "Combat Stock",
+        "4": "Infiltrator Stock",
+        "5": "Buffer Weight Stock"
     },
     "fire_mods": {
-        "0": "fire_mods1",
-        "1": "fire_mods2"
+        "0": "Rapid Fire",
+        "1": "5.56 NATO Overpressured",
+        "2": "Recoil Springs",
+        "3": "5.56 NATO FMJ"
+    },
+    "laser": {
+        "0": "Steady Aim Laser",
+        "1": "Fast Motion Laser",
+        "2": "Tactical Laser",
+        "3": "Strelok Laser",
+        "4": "Target Laser"
     }
 }

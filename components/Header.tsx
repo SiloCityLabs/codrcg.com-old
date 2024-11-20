@@ -11,9 +11,14 @@ interface HeaderProps {
   navLinks: { label: string; href: string }[];
 }
 
+const defaultNavLinks = [
+  { label: "Home", href: "/" },
+  { label: "Changelog", href: "/changelog" },
+];
+
 export default class Header extends React.Component<HeaderProps> {
   render() {
-    const { className, navLinks } = this.props;
+    const { className, navLinks = defaultNavLinks } = this.props;
 
     return (
       <Navbar

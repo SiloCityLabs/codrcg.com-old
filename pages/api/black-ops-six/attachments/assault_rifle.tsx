@@ -22,6 +22,8 @@ export default async function handler(req, res) {
 }
 
 function getGunAttachments(gun: string) {
+  return xm4;
+
   switch (gun) {
     case "ak74":
       return ak74;

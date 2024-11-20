@@ -55,9 +55,7 @@
         "0": "Extended Mag I",
         "1": "Fast Mag I",
         "2": "Extended Mag II",
-        "3": "Flip Mag",
-        "4": "Extended Mag III",
-        "5": "Fast Mag II"
+        "3": "Flip Mag"
     },
     "rear_grip": {
         "0": "Quickdraw Grip",
@@ -82,8 +80,8 @@
     },
     "fire_mods": {
         "0": "Rapid Fire",
-        "1": "5.45x39mm Overpressured",
+        "1": "5.56 NATO Overpressured",
         "2": "Recoil Springs",
-        "3": "5.45x39mm FMJ"
+        "3": "5.56 NATO FMJ"
     }
 }

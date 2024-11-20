@@ -1,44 +1,44 @@
 {
     "optic": {
-        "0": "Otero Micro Dot",
-        "1": "Merlin Mini",
-        "2": "PrismaTech Reflex",
-        "3": "Volzhskiy Reflex",
-        "4": "Merlin Reflex",
-        "5": "Accu-Spot Reflex",
-        "6": "Otero Red Dot",
-        "7": "OM3 '92 Holo",
-        "8": "Pinpoint Holoscout",
-        "9": "Willis 3x",
+        "0": "Remuda Mini Reflex",
+        "1": "Otero Micro Dot",
+        "2": "Kepler Microflex",
+        "3": "Merlin Mini",
+        "4": "PrismaTech Reflex",
+        "5": "Volzhskiy Reflex",
+        "6": "Merlin Reflex",
+        "7": "Redwell Reflex",
+        "8": "Dobrych MF Reflex",
+        "9": "Accu-Spot Reflex",
         "10": "K&S Red Dot",
-        "11": "Remuda Mini Reflex",
-        "12": "Kepler Microflex",
-        "13": "Redwell Reflex",
-        "14": "Dobrych MF Reflex",
-        "15": "Kepler Red Dot",
-        "16": "Accu-Spot Ultra Holo",
-        "17": "Jason Armory 2x",
+        "11": "Kepler Red Dot",
+        "12": "Otero Red Dot",
+        "13": "OM3 '92 Holo",
+        "14": "Pinpoint Holoscout",
+        "15": "Accu-Spot Ultra Holo",
+        "16": "Jason Armory 2x",
+        "17": "Willis 3x",
         "18": "PrismaTech 4x",
         "19": "Dobrych 4x",
         "20": "Pinpoint Hybrid",
         "21": "PrismaPoint Hybrid",
-        "22": "Hawker Hybrid",
-        "23": "R&K Multizoom",
-        "24": "Blandwell 7x Scope",
-        "25": "Otero Thermal 2x"
+        "22": "R&K Multizoom",
+        "23": "Blandwell 7x Scope",
+        "24": "Otero Thermal 2x",
+        "25": "Hawker Hybrid"
     },
     "muzzle": {
         "0": "Suppressor",
         "1": "Compensator",
-        "2": "Ported Compensator",
-        "3": "Muzzle Brake"
+        "2": "Muzzle Brake",
+        "3": "Ported Compensator"
     },
     "barrel": {
         "0": "Gain-Twist Barrel",
         "1": "Long Barrel",
-        "2": "Short Barrel",
-        "3": "CHF Barrel",
-        "4": "Reinforced Barrel"
+        "2": "Reinforced Barrel",
+        "3": "Short Barrel",
+        "4": "CHF Barrel"
     },
     "underbarrel": {
         "0": "Vertical Foregrip",
@@ -68,17 +68,11 @@
     },
     "stock": {
         "0": "Light Stock",
-        "1": "Heavy Stock",
-        "2": "Balanced Stock",
-        "3": "Combat Stock",
-        "4": "Infiltrator Stock",
+        "1": "Infiltrator Stock",
+        "2": "Heavy Stock",
+        "3": "Balanced Stock",
+        "4": "Combat Stock",
         "5": "Buffer Weight Stock"
-    },
-    "fire_mods": {
-        "0": "Rapid Fire",
-        "1": "5.56 NATO Overpressured",
-        "2": "Recoil Springs",
-        "3": "5.56 NATO FMJ"
     },
     "laser": {
         "0": "Steady Aim Laser",
@@ -86,5 +80,11 @@
         "2": "Tactical Laser",
         "3": "Strelok Laser",
         "4": "Target Laser"
+    },
+    "fire_mods": {
+        "0": "Rapid Fire",
+        "1": "5.56 NATO Overpressured",
+        "2": "Recoil Springs",
+        "3": "5.56 NATO FMJ"
     }
 }

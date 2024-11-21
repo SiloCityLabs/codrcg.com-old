@@ -30,12 +30,5 @@
       "type": "launcher",
       "game": "black-ops-six",
       "no_attach": true
-    },
-    "6": {
-      "name": "Sirin 9mm",
-      "type": "pistol",
-      "game": "black-ops-six",
-      "no_attach": true,
-      "isDlc": true
     }
 }

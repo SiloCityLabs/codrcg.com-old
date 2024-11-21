@@ -4,16 +4,15 @@ import marineSp from "@/json/black-ops-six/attachments/shotgun/marineSp.json";
 import maelstrom from "@/json/black-ops-six/attachments/shotgun/maelstrom.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
-export default async function handler(req, res) {
+export function getShotgunAttachments(gun: string, count: number) {
   let attachments: any = {};
-  const body = req.body;
-  const data = getGunAttachments(body.gun);
+  const data = getGunAttachments(gun);
 
   if (data) {
-    randomizeAttachments(attachments, data, body.count);
+    randomizeAttachments(attachments, data, count);
   }
 
-  res.status(200).json(attachments);
+  return attachments;
 }
 
 function getGunAttachments(gun: string) {

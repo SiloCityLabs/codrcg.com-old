@@ -1,35 +1,20 @@
-import { randomNumber } from "./randomNumber";
+import { getBO6Attachments } from "./generator/black-ops-six/getBO6Attachments";
 //Types
 import { Weapon } from "@/types/Generator";
 
 export async function fetchAttachments(weapon: Weapon, count: number = 5) {
-  const gun = cleanUp(weapon.name);
+  const gun = weapon.name.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+  const attachments = getAttachments(weapon.game, gun, count, weapon.type);
 
-  const response = await fetch(
-    `/api/${weapon.game}/attachments/${weapon.type}`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        gun: gun,
-        count: count,
-      }),
-    }
-  );
-
-  if (!response.ok) {
-    console.error();
-    throw new Error(
-      `Error fetching ${gun} attachments: ${response.statusText}`
-    );
-  }
-
-  const data = await response.json();
-  return data;
+  return attachments;
 }
 
-function cleanUp(str: string = "") {
-  return str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+function getAttachments(game, gun, count, type) {
+  console.log("game, gun, count, type", game, gun, count, type);
+  switch (game) {
+    case "black-ops-six":
+      return getBO6Attachments(type, gun, count);
+    default:
+      return {};
+  }
 }

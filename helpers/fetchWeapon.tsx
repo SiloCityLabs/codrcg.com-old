@@ -6,11 +6,8 @@ import { Weapon } from "@/types/Generator";
 
 export async function fetchWeapon(type: string = "", game: string = "") {
   const dataList = getWeaponList(type, game);
-  console.log("fetchWeapon dataList", dataList);
-  console.log("fetchWeapon type, game", type, game);
 
   const data: Weapon = randomListItem(dataList);
-  console.log("fetchWeapon data", data);
 
   return data;
 }

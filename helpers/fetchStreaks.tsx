@@ -1,22 +1,23 @@
+import { getStreakList } from "@/functions/generator/getStreakList";
+import { randomListItem } from "./randomListItem";
+
 export async function fetchStreaks(
   game: string = "",
   isHighRoller: boolean = false
 ) {
-  const response = await fetch(`/api/${game}/streaks`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      isHighRoller: isHighRoller,
-    }),
-  });
-  if (!response.ok) {
-    throw new Error(
-      `Error fetching streaks for ${game}: ${response.statusText}`
-    );
+  let count = 0;
+  let streak: string;
+  const streakCount = isHighRoller ? 4 : 3;
+  let streaks: string[] = [];
+
+  while (count < streakCount) {
+    streak = randomListItem(getStreakList(game)).name;
+
+    if (!streaks.includes(streak)) {
+      streaks[count] = streak;
+      count++;
+    }
   }
 
-  const data = await response.json();
-  return data;
+  return streaks.join(", ");
 }

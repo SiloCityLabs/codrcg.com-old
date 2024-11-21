@@ -1,20 +1,29 @@
+import { getPerkList } from "@/functions/generator/getPerkList";
+import { randomListItem } from "./randomListItem";
+
 export async function fetchPerks(
   game: string = "",
   isPerkGreed: boolean = false
 ) {
-  const response = await fetch(`/api/${game}/perks`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      isPerkGreed: isPerkGreed,
-    }),
-  });
-  if (!response.ok) {
-    throw new Error(`Error fetching perks for ${game}: ${response.statusText}`);
+  const perkList = getPerkList(game);
+  let perks = [
+    randomListItem(perkList?.perk1List).name,
+    randomListItem(perkList?.perk2List).name,
+    randomListItem(perkList?.perk3List).name,
+  ];
+
+  if (isPerkGreed) {
+    let perk4: string;
+    const mergedObject = { ...perkList.perk1List, ...perkList.perk2List, ...perkList.perk3List };
+    while (true) {
+      perk4 = randomListItem(mergedObject).name;
+
+      if (!perks.includes(perk4)) {
+        break;
+      }
+    }
+    perks[3] = perk4;
   }
 
-  const data = await response.json();
-  return data;
+  return perks.join(", ");
 }

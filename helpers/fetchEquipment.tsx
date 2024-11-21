@@ -1,6 +1,6 @@
-import { getLethalList } from "@/functions/generator/getLethalList";
-import { getTacticalList } from "@/functions/generator/getTacticalList";
-import { getFieldUpgradeList } from "@/functions/generator/getFieldUpgradeList";
+import { getLethalList } from "@/functions/generator/equipment/getLethalList";
+import { getTacticalList } from "@/functions/generator/equipment/getTacticalList";
+import { getFieldUpgradeList } from "@/functions/generator/equipment/getFieldUpgradeList";
 import { randomListItem } from "./randomListItem";
 import { Equipment } from "@/types/Generator";
 

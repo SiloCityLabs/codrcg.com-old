@@ -1,52 +1,29 @@
-import { randomNumber } from "./randomNumber";
+import { getPrimaryList } from "@/functions/generator/weapons/getPrimaryList";
+import { getSecondaryList } from "@/functions/generator/weapons/getSecondaryList";
+import { getMeleeList } from "@/functions/generator/weapons/getMeleeList";
+import { randomListItem } from "./randomListItem";
+import { Weapon } from "@/types/Generator";
 
 export async function fetchWeapon(type: string = "", game: string = "") {
-  type = type === "" ? getType() : type;
-  game = game === "" ? getGame() : game;
+  const dataList = getWeaponList(type, game);
+  console.log("fetchWeapon dataList", dataList);
+  console.log("fetchWeapon type, game", type, game);
 
-  const response = await fetch(`/api/${game}/${type}`);
+  const data: Weapon = randomListItem(dataList);
+  console.log("fetchWeapon data", data);
 
-  if (!response.ok) {
-    throw new Error(`Error fetching ${type} weapons: ${response.statusText}`);
-  }
-
-  const data = await response.json();
   return data;
 }
 
-//TODO: Maybe make this its own function for WARZONE
-function getGame() {
-  let game: string;
-  const randomNum = randomNumber(0, 6);
-
-  switch (randomNum) {
-    case 1:
-    case 3:
-    case 5:
-      game = "modern-warfare-two";
-      break;
+function getWeaponList(type, game) {
+  switch (type) {
+    case "primary":
+      return getPrimaryList(game);
+    case "secondary":
+      return getSecondaryList(game);
+    case "melee":
+      return getMeleeList(game);
     default:
-      game = "modern-warfare-three";
-      break;
+      return {};
   }
-
-  return game;
-}
-
-function getType() {
-  let type: string;
-  const randomNum = randomNumber(0, 6);
-
-  switch (randomNum) {
-    case 1:
-    case 3:
-    case 5:
-      type = "secondary";
-      break;
-    default:
-      type = "primary";
-      break;
-  }
-
-  return type;
 }

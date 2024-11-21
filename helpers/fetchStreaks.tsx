@@ -1,4 +1,4 @@
-import { getStreakList } from "@/functions/generator/getStreakList";
+import { getStreakList } from "@/helpers/generator/getStreakList";
 import { randomListItem } from "./randomListItem";
 
 export async function fetchStreaks(

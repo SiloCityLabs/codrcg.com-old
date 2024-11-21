@@ -1,4 +1,4 @@
-import { getPerkList } from "@/functions/generator/getPerkList";
+import { getPerkList } from "@/helpers/generator/getPerkList";
 import { randomListItem } from "./randomListItem";
 
 export async function fetchPerks(
@@ -14,7 +14,11 @@ export async function fetchPerks(
 
   if (isPerkGreed) {
     let perk4: string;
-    const mergedObject = { ...perkList.perk1List, ...perkList.perk2List, ...perkList.perk3List };
+    const mergedObject = {
+      ...perkList.perk1List,
+      ...perkList.perk2List,
+      ...perkList.perk3List,
+    };
     while (true) {
       perk4 = randomListItem(mergedObject).name;
 

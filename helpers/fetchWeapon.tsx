@@ -1,6 +1,6 @@
-import { getPrimaryList } from "@/functions/generator/weapons/getPrimaryList";
-import { getSecondaryList } from "@/functions/generator/weapons/getSecondaryList";
-import { getMeleeList } from "@/functions/generator/weapons/getMeleeList";
+import { getPrimaryList } from "@/helpers/generator/weapons/getPrimaryList";
+import { getSecondaryList } from "@/helpers/generator/weapons/getSecondaryList";
+import { getMeleeList } from "@/helpers/generator/weapons/getMeleeList";
 import { randomListItem } from "./randomListItem";
 import { Weapon } from "@/types/Generator";
 

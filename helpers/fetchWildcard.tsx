@@ -1,4 +1,4 @@
-import { getWildcardList } from "@/functions/generator/getWildcardList";
+import { getWildcardList } from "@/helpers/generator/getWildcardList";
 import { randomListItem } from "./randomListItem";
 import { Wildcard } from "@/types/Generator";
 

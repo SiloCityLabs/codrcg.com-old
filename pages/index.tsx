@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Alert from "react-bootstrap/Alert";
 import Header from "@/components/Header";
@@ -11,6 +12,17 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Call Of Duty Random Class Generator</title>
+        <meta
+          name="description"
+          content="Spice up your COD gameplay! Generate unique random loadouts for any Call of Duty title. Discover new weapons, perks, and gear combinations."
+        />
+        <meta
+          name="keywords"
+          content="call of duty, random class generator, black ops 6, warzone, modern warfare 3 (2023)"
+        />
+      </Head>
       <Header navLinks={navLinks} />
       <Container fluid>
         <Row className="justify-content-md-center">

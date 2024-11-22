@@ -1,34 +1,77 @@
 {
     "optic": {
-        "0": "optic1",
-        "1": "optic2"
+        "0": "Iron Sight",
+        "1": "Kepler Microflex",
+        "2": "PrismaTech Reflex",
+        "3": "Redwell Reflex",
+        "4": "K&S Red Dot",
+        "5": "Kepler Red Dot",
+        "6": "OM3 '92 Holo",
+        "7": "Accu-Spot Ultra Holo",
+        "8": "Willis 3x",
+        "9": "PrismaTech 4x",
+        "10": "Dobrych 4x",
+        "11": "K&S Thermal Holo",
+        "12": "Pinpoint Hybrid",
+        "13": "PrismaPoint Hybrid",
+        "14": "R&K Multizoom",
+        "15": "Remuda Range Finder",
+        "16": "Blandwell 7x Scope",
+        "17": "Remuda Dual Zoom",
+        "18": "VMF Variable Scope",
+        "19": "Redwell Custom Zoom",
+        "20": "Otero Thermal 2x",
+        "21": "Thermal 6x"
     },
     "muzzle": {
-        "0": "muzzle1",
-        "1": "muzzle2"
+        "0": "Suppressor",
+        "1": "Compensator",
+        "2": "Muzzle Brake",
+        "3": "Ported Compensator"
     },
     "barrel": {
-        "0": "barrel1",
-        "1": "barrel2"
+        "0": "Gain-Twist Barrel",
+        "1": "Long Barrel",
+        "2": "Reinforced Barrel",
+        "3": "Short Barrel",
+        "4": "CHF Barrel"
     },
-    "underbarrel": {
-        "0": "underbarrel1",
-        "1": "underbarrel2"
+    "stock_pad": {
+        "0": "Weighted Pad",
+        "1": "Lightweight Pad",
+        "2": "Marksman Pad",
+        "3": "Precision Pad",
+        "4": "Ranger Pad"
     },
     "magazine": {
-        "0": "magazine1",
-        "1": "magazine2"
+        "0": "Extended Mag I",
+        "1": "Fast Mag I",
+        "2": "Extended Mag II"
     },
-    "rear_grip": {
-        "0": "rear_grip1",
-        "1": "rear_grip2"
+    "comb": {
+        "0": "Quickdraw Riser",
+        "1": "Combat Riser",
+        "2": "Commando Riser",
+        "3": "Ergonomic Riser",
+        "4": "CQB Riser"
     },
     "stock": {
-        "0": "stock1",
-        "1": "stock2"
+        "0": "Light Stock",
+        "1": "Infiltrator Stock",
+        "2": "Heavy Stock",
+        "3": "Balanced Stock",
+        "4": "Combat Stock"
+    },
+    "laser": {
+        "0": "Steady Aim Laser",
+        "1": "Fast Motion Laser",
+        "2": "Tactical Laser",
+        "3": "Strelok Laser",
+        "4": "Target Laser"
     },
     "fire_mods": {
-        "0": "fire_mods1",
-        "1": "fire_mods2"
+        "0": "Rapid Fire",
+        "1": "7.62 NATO Overpressured",
+        "2": "7.62 NATO FMJ"
     }
 }

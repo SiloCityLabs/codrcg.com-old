@@ -9,18 +9,16 @@ Getting Started
 To run the project locally:
 
 ```bash
-git clone https://github.com/yourusername/codrcg.com.gitcd codrcg.com
+git clone https://github.com/yourusername/codrcg.com.git
+cd codrcg.com
 ```
 
 ```bash
-npm install# oryarn install# orpnpm install
+npm install
 ```
-    
 
 ```bash
-npm run dev# or 
-yarn dev# or
-pnpm dev
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the website.

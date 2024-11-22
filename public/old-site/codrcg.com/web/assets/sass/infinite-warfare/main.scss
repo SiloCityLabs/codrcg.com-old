@@ -1,0 +1,6 @@
+@import "../main.scss"; 
+
+$mainColor:color("yellow", "accent-2");
+
+/* Load Components */
+@import "components/global.scss";

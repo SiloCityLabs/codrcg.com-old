@@ -1,0 +1,6 @@
+@import "../main.scss";
+
+$mainColor:color("blue", "darken-2");
+
+/* Load Components */
+@import "components/_global";

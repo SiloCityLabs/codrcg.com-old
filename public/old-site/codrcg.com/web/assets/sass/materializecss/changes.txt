@@ -1,0 +1,23 @@
+// IN _variables.scss
+
+/* Header Styles */
+$h1-fontsize: 2.25em !default;
+$h2-fontsize: 1.75em !default;
+$h3-fontsize: 1.43em !default;
+$h4-fontsize: 1.37em !default;
+$h5-fontsize: 1.05em !default;
+$h6-fontsize: 1.00em !default;
+
+/*** Fonts ***/
+$roboto-font-path: "/assets/font/roboto/" !default;
+$icons-font-path: "/assets/font/material-design-icons/" !default;
+
+
+/******** Change $secondary-color to updat inputs *********/
+$secondary-color: color("grey", "darken-2") !default;
+
+// IN _color.scss
+$cod: (
+  "WWII":        #9B8B3D,
+);
+// ADD "cod": $cod to $colors object

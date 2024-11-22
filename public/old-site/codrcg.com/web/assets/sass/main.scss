@@ -1,0 +1,12 @@
+@import "materializecss/materialize.scss";
+
+$mainColor:color("red", "darken-3");
+
+/* Load Components */
+@import "components/materializeFixes.scss";
+@import "components/global.scss";
+
+/* Pages */
+@import "pages/changelog.scss";
+@import "pages/index.scss";
+@import "pages/login.scss";

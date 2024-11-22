@@ -1,0 +1,58 @@
+h1{
+	font-size: 20px;
+}
+#subBtn{
+	text-align: center;
+}
+
+.fieldText{
+	position: relative;
+	bottom: 10px;
+}
+
+@media only screen and (min-width: 501px) {
+	#forgotpass{
+		width:350px;
+		border:0;
+		padding:2px;
+	}
+	.leftcol{
+		text-align: right;
+		white-space:nowrap;
+		padding-right: 5px;
+	}
+	.rightcol{
+		text-align: left;
+		width: 200px;
+	}
+	.textfield{
+		width: 90%;
+	}
+}
+
+/* Browsers 500px and lower */
+@media only screen and (max-width: 500px) {
+	#forgotpass{
+		width:300px;
+		border:0;
+		padding:2px;
+		margin: 0 auto;
+		font-size: 0.8em;
+	}
+	.leftcol{
+		width: 50px;
+		text-align: right;
+		white-space:nowrap;
+		padding-right: 5px;
+	}
+	.rightcol{
+		text-align: left;
+		width: 120px;
+	}
+	.textfield{
+		width: 90%;
+	}
+	.smallText{
+		font-size: 12px;
+	}
+}

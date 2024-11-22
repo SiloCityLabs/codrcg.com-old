@@ -1,0 +1,25 @@
+/* ###################################################### Materialize Fixes ###################################################### */
+@media only screen and (max-width: 601px){
+  /* Fix for navbar icons */
+  nav i {
+      height: 56px !important;
+      line-height: 56px !important;
+  }
+}
+
+/* Badges */
+span.badge{
+  border-radius: 2px;
+  right: 30px !important;
+}
+
+span.badge.orange{color: #fff !important; }
+ 
+/* Left menu padding fix   */
+#LeftMenu.collection .collection-item{
+  padding: 0px !important;
+}
+
+.nav-wrapper i.left {
+  margin-right: 0px;
+}

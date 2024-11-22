@@ -1,0 +1,132 @@
+/* Clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/* footer
+----------------------------------------------------------------------------------------------------*/
+#footer {
+	text-align: center;
+	color: #888888;
+	text-shadow: 0 1px 0 #ffffff;
+	font-size: 0.9em;
+	padding-top:15px;
+}
+
+#footer a { color: #888888; }
+
+/* Custom stuff
+----------------------------------------------------------------------------------------------------*/
+.center{
+    text-align:center;
+    margin:auto;
+}
+
+.text-center{
+	text-align: center !important;
+}
+
+.no-decoration{
+	text-decoration: none;
+}
+
+/* used for centering table contents td,th
+-----------------------------------------------------------------------------------------------------*/
+.table-center{
+    text-align:center !important; 
+    vertical-align:middle !important;
+}
+
+/***
+Tools
+***/
+
+.display-none,
+.display-hide {
+  display: none;
+}
+
+.no-space {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.noresize{
+	resize: none;
+}
+
+.no-margin {
+  margin:0;
+}
+
+.no-border {
+  border:0 !important;
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px !important;
+}
+
+.margin-top-10 {
+  margin-top: 10px !important;
+}
+
+.margin-bottom-15 {
+  margin-bottom: 15px !important;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px !important;
+}
+
+.margin-top-20 {
+  margin-top: 20px !important;
+}
+
+.margin-bottom-25 {
+  margin-bottom: 25px !important;
+}
+
+.margin-right-10 {
+  margin-right: 10px !important;
+}
+
+.bold {
+  font-weight:600 !important;
+}
+
+.fix-margin {
+  margin-left: 0px !important
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.inline {
+  display: inline;
+}
+
+.text-align-reverse {
+  text-align: right;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+/* ng-cloak - hides ugly angular stuff */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}

@@ -1,0 +1,11 @@
+@import "../main.scss"; 
+
+$mainColorBo3:color("orange", "accent-4");
+
+/* Load Components */
+@import "components/bo3global.scss";
+
+/* Pages */
+@import "pages/class.scss";
+@import "pages/index.scss";
+@import "pages/info.scss";

@@ -63,7 +63,8 @@
         "1": "Infiltrator Stock",
         "2": "Heavy Stock",
         "3": "Balanced Stock",
-        "4": "Combat Stock"
+        "4": "Combat Stock",
+        "5": "Buffer Weight Stock"
     },
     "laser": {
         "0": "Steady Aim Laser",

@@ -55,6 +55,7 @@
     },
     "fire_mods": {
         "0": "Rapid Fire",
-        "1": "12 Gauge Slug"
+        "1": "12 Gauge Slug",
+        "2": "12 Gauge Dragon's Breath"
     }
 }

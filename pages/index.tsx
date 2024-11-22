@@ -10,11 +10,11 @@ export default function Home() {
         <title>Call Of Duty Random Class Generator</title>
         <meta
           name="description"
-          content="Spice up your COD gameplay! Generate unique random loadouts for any Call of Duty title. Discover new weapons, perks, and gear combinations."
+          content="Your hub for all call of duty random class generators past, present and future."
         />
         <meta
           name="keywords"
-          content="call of duty, random class generator, black ops 6, zombies, black ops 6 zombies, warzone, modern warfare 3 (2023)"
+          content="call of duty, cod, random class generator, rcg, multiplayer, call of duty random class generator, Morden Warfare 2 RCG, MW2 RCG, mw2 random class generator, modern warfare 2, modern warfare 2 random class generator, Black Ops RCG, blops, black ops, ops rcg, black ops random class generator, Morden Warfare 3 RCG, MW3 RCG, mw3 random class generator, modern warfare 3, modern warfare 3 random class generator, Black Ops 2 RCG, blops 2, black ops 2, ops 2 rcg, black ops 2 random class generator, Ghost random class generator, Ghost, Advanced Warfare RCG, advanced warfare random class generator, Black Ops 3 RCG, blops 3, black ops 3, ops 3 rcg, black ops 3 random class generator, Call of Duty: WWII, World War II RCG, WWII, world war II random class generator, Call of Duty: WW2, World War 2 RCG, WW2, world war 2 random class generator, black ops 6, zombies, black ops 6 zombies, warzone, modern warfare 3 (2023)"
         />
       </Head>
       <div id="we-are-back-banner" className="py-2">

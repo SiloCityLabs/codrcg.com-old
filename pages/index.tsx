@@ -1,15 +1,9 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
-import Alert from "react-bootstrap/Alert";
 import Header from "@/components/Header";
 import GeneratorCard from "@/components/GeneratorCard";
 
 export default function Home() {
-  const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "Changelog", href: "/changelog" },
-  ];
-
   return (
     <>
       <Head>
@@ -20,18 +14,14 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="call of duty, random class generator, black ops 6, warzone, modern warfare 3 (2023)"
+          content="call of duty, random class generator, black ops 6, zombies, black ops 6 zombies, warzone, modern warfare 3 (2023)"
         />
       </Head>
-      <Header navLinks={navLinks} />
+      <div id="we-are-back-banner" className="py-2">
+        <span className="fs-5">We're back, and we're open source!!</span>
+      </div>
+      <Header />
       <Container fluid>
-        <Row className="justify-content-md-center">
-          <Col xs lg={8} className="text-center">
-            <Alert key="primary" variant="primary">
-              We're back, and were open source!!
-            </Alert>
-          </Col>
-        </Row>
         <Row className="justify-content-md-center">
           <Col xl={3} lg={4} className="text-center">
             <GeneratorCard

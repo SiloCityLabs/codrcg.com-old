@@ -8,12 +8,17 @@ import "../public/styles/main.css";
 
 interface HeaderProps {
   className?: string;
-  navLinks: { label: string; href: string }[];
+  navLinks?: { label: string; href: string; target?: string }[];
 }
 
 const defaultNavLinks = [
-  { label: "Home", href: "/" },
-  { label: "Changelog", href: "/changelog" },
+  { label: "Home", href: "/", target: "" },
+  { label: "Changelog", href: "/changelog", target: "" },
+  {
+    label: "GitHub",
+    href: "https://github.com/SiloCityLabs/codrcg.com/tree/black-ops-six",
+    target: "_blank",
+  },
 ];
 
 export default class Header extends React.Component<HeaderProps> {
@@ -24,7 +29,9 @@ export default class Header extends React.Component<HeaderProps> {
       <Navbar
         id="cod-header"
         expand="lg"
-        className={`navbar navbar-dark bg-dark ${className}`}
+        bg="dark"
+        data-bs-theme="dark"
+        className={`${className}`}
       >
         <Container>
           <Navbar.Brand href="/">COD RCG</Navbar.Brand>
@@ -32,7 +39,11 @@ export default class Header extends React.Component<HeaderProps> {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               {navLinks.map((link, index) => (
-                <Nav.Link key={index} href={link.href}>
+                <Nav.Link
+                  key={index}
+                  href={link.href}
+                  target={link.target ? link.target : "_self"}
+                >
                   {link.label}
                 </Nav.Link>
               ))}

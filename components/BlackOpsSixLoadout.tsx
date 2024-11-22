@@ -56,70 +56,84 @@ function BlackOpsSixLoadout() {
     <>
       <Container
         id="random-class"
-        className={`${containerClass} shadow-lg p-3 mb-5 bg-body rounded`}
+        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
-        <Row id="weapons">
-          <Col>
-            <span className="label">Primary:</span> {primaryWeapon.name}
+        <Row className="justify-content-md-center">
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Primary:</span> <br />
+            <span className="text-muted fs-6">{primaryWeapon.name}</span>
             <br />
             {primaryWeapon.no_attach ? (
               <>
-                {" "}
-                <span className="label">Primary Attachments: </span> No
-                Attachments{" "}
+                <span className="fw-bolder fs-5">Primary Attachments: </span>
+                <br />
+                No Attachments
               </>
             ) : (
               <>
-                {" "}
-                <span className="label">Primary Attachments:</span>{" "}
-                {p_attachments}{" "}
+                <span className="fw-bolder fs-5">Primary Attachments:</span>
+                <br />
+                <span className="text-muted fs-6">{p_attachments}</span>
               </>
             )}
           </Col>
-          <Col>
-            <span className="label">Secondary:</span> {secondaryWeapon.name}
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Secondary:</span> <br />
+            <span className="text-muted fs-6">{secondaryWeapon.name}</span>
             <br />
             {secondaryWeapon.no_attach ? (
               <>
-                {" "}
-                <span className="label">Secondary Attachments: </span> No
-                Attachments{" "}
+                <span className="fw-bolder fs-5">Secondary Attachments: </span>
+                <br />
+                No Attachments
               </>
             ) : (
               <>
-                {" "}
-                <span className="label">Secondary Attachments:</span>{" "}
-                {s_attachments}{" "}
+                <span className="fw-bolder fs-5">Secondary Attachments:</span>
+                <br />
+                <span className="text-muted fs-6">{s_attachments}</span>
               </>
             )}
           </Col>
-          <Col>
-            <span className="label">Melee:</span> {meleeWeapon.name}
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Melee:</span> <br />
+            <span className="text-muted fs-6">{meleeWeapon.name}</span>
           </Col>
         </Row>
-        <Row id="equipment">
-          <Col>
-            <span className="label">Tactical:</span> {tacticalEquip.name}
+        <hr />
+        <Row className="justify-content-md-center mb-4">
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Tactical:</span> <br />
+            <span className="text-muted fs-6">{tacticalEquip.name}</span>
           </Col>
-          <Col>
-            <span className="label">Lethal:</span> {lethalEquip.name}
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Lethal:</span> <br />
+            <span className="text-muted fs-6">{lethalEquip.name}</span>
           </Col>
-          <Col>
-            <span className="label">Perks:</span> {perks}
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Perks:</span> <br />
+            <span className="text-muted fs-6">{perks}</span>
           </Col>
         </Row>
-        <Row>
-          <Col>
-            <span className="label">Field Upgrade:</span> {fieldUpgrade.name}
+        <hr />
+        <Row className="mb-5">
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
+            <span className="text-muted fs-6">{fieldUpgrade.name}</span>
             {wildcard.name === "Prepper" && (
-              <span> &amp; {fieldUpgrade2.name}</span>
+              <>
+                <br />
+                <span className="text-muted fs-6"> {fieldUpgrade2.name}</span>
+              </>
             )}
           </Col>
-          <Col>
-            <span className="label">Wildcard:</span> {wildcard.name}
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Wildcard:</span> <br />
+            <span className="text-muted fs-6">{wildcard.name}</span>
           </Col>
-          <Col>
-            <span className="label">Streaks:</span> {streaks}
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Streaks:</span> <br />
+            <span className="text-muted fs-6">{streaks}</span>
           </Col>
         </Row>
         <Row id="button-row">

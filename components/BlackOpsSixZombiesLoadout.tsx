@@ -66,9 +66,6 @@ function BlackOpsSixZombiesLoadout() {
           </Col>
         </Row>
         <Row className="justify-content-md-center mb-4">
-          {/* <Col>
-            <Badge bg="dark">Melee:</Badge> {meleeWeapon.name}
-          </Col> */}
           <Col xs md="4" lg="3">
             <span className="label">Melee:</span> {meleeWeapon.name}
           </Col>

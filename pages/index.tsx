@@ -3,9 +3,14 @@ import Header from "@/components/Header";
 import GeneratorCard from "@/components/GeneratorCard";
 
 export default function Home() {
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "Changelog", href: "/changelog" },
+  ];
+
   return (
     <>
-      <Header />
+      <Header navLinks={navLinks} />
       <Container fluid>
         <Row>
           <Col xl={3} lg={4} md={6}>
@@ -17,8 +22,8 @@ export default function Home() {
               link="black-ops-six/generator"
               disabled={false}
               btn2Text="Zombies Generator"
-              link2="black-ops-six/zombies/generator"
-              disabled2={true}
+              link2="black-ops-six/zombies-generator"
+              disabled2={false}
             />
           </Col>
           <Col xl={3} lg={4} md={6}>

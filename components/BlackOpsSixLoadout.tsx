@@ -160,7 +160,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       secondaryWeapon = await fetchWeapon("secondary", "black-ops-six");
     }
     //Verify if secondary weapon has attachments
-    console.log("secondaryWeapon.no_attach", secondaryWeapon.no_attach);
     if (!secondaryWeapon.no_attach) {
       s_attachments = implodeObject(await fetchAttachments(secondaryWeapon));
     }

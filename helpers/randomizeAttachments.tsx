@@ -11,7 +11,7 @@ import { randomListItem } from "@/helpers/randomListItem";
  */
 export function randomizeAttachments(attachArr: any, data: any, count: number) {
   let attachs = 0;
-
+  //TODO: Max this out (some weapons have less than 8) - ISSUE #22
   while (attachs < count) {
     const keys = Object.keys(data);
     const randomIndex = Math.floor(Math.random() * keys.length);

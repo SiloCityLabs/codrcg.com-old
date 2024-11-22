@@ -10,7 +10,6 @@ export async function fetchAttachments(weapon: Weapon, count: number = 5) {
 }
 
 function getAttachments(game, gun, count, type) {
-  console.log("game, gun, count, type", game, gun, count, type);
   switch (game) {
     case "black-ops-six":
       return getBO6Attachments(type, gun, count);

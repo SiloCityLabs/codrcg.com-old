@@ -38,13 +38,6 @@
         "3": "Short Barrel",
         "4": "CHF Barrel"
     },
-    "underbarrel": {
-        "0": "Vertical Foregrip",
-        "1": "Lightweight Foregrip",
-        "2": "Marksman Foregrip",
-        "3": "Precision Foregrip",
-        "4": "Ranger Foregrip"
-    },
     "magazine": {
         "0": "Extended Mag I",
         "1": "Fast Mag I",

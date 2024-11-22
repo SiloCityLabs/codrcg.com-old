@@ -135,17 +135,5 @@
       "type": "smg",
       "game": "black-ops-six",
       "isDlc": true
-    },
-    "27": {
-      "name": "Maelstrom",
-      "type": "shotgun",
-      "game": "black-ops-six",
-      "isDlc": true
-    },
-    "28": {
-      "name": "AMR Mod 4",
-      "type": "sniper",
-      "game": "black-ops-six",
-      "isDlc": true
-    }
+    }    
 }

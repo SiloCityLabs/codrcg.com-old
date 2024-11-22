@@ -49,7 +49,7 @@
         "0": "Extended Mag I",
         "1": "Flip Mag",
         "2": "Extended Mag II",
-        "3": "Fast Mag I"
+        "3": "Fast Mag II"
     },
     "rear_grip": {
         "0": "Quickdraw Grip",
@@ -59,11 +59,12 @@
         "4": "CQB Grip"
     },
     "stock": {
-        "0": "No Stock",
+        "0": "Light Stock",
         "1": "Infiltrator Stock",
         "2": "Heavy Stock",
         "3": "Balanced Stock",
-        "4": "Combat Stock"
+        "4": "Combat Stock",
+        "5": "Akimbo Saug"
     },
     "laser": {
         "0": "Steady Aim Laser",

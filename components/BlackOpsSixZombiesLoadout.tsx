@@ -55,7 +55,7 @@ function BlackOpsSixZombiesLoadout() {
               <>
                 <span className="fw-bolder fs-5">Primary Attachments: </span>
                 <br />
-                No Attachments
+                <span className="text-muted fs-6">No Attachments</span>
               </>
             ) : (
               <>

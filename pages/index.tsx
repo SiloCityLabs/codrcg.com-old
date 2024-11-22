@@ -18,8 +18,8 @@ export default function Home() {
         />
       </Head>
       <div id="we-are-back-banner" className="py-2">
-        <span className="fs-5">We're back, and we're open source!!</span>
-      </div>
+        <span className="fs-5">We&apos;re back, and we&apos;re open source!!</span>
+        </div>
       <Header />
       <Container fluid>
         <Row className="justify-content-md-center">

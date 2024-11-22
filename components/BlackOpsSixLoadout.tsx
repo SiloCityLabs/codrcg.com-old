@@ -59,7 +59,7 @@ function BlackOpsSixLoadout() {
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
         <Row className="justify-content-md-center">
-          <Col sm className="text-center">
+          <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Primary:</span> <br />
             <span className="text-muted fs-6">{primaryWeapon.name}</span>
             <br />
@@ -77,7 +77,7 @@ function BlackOpsSixLoadout() {
               </>
             )}
           </Col>
-          <Col sm className="text-center">
+          <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Secondary:</span> <br />
             <span className="text-muted fs-6">{secondaryWeapon.name}</span>
             <br />
@@ -101,12 +101,12 @@ function BlackOpsSixLoadout() {
           </Col>
         </Row>
         <hr />
-        <Row className="justify-content-md-center mb-4">
-          <Col sm className="text-center">
+        <Row className="justify-content-md-center">
+          <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
             <span className="text-muted fs-6">{tacticalEquip.name}</span>
           </Col>
-          <Col sm className="text-center">
+          <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
             <span className="text-muted fs-6">{lethalEquip.name}</span>
           </Col>
@@ -117,7 +117,7 @@ function BlackOpsSixLoadout() {
         </Row>
         <hr />
         <Row className="mb-5">
-          <Col sm className="text-center">
+          <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
             <span className="text-muted fs-6">{fieldUpgrade.name}</span>
             {wildcard.name === "Prepper" && (
@@ -127,7 +127,7 @@ function BlackOpsSixLoadout() {
               </>
             )}
           </Col>
-          <Col sm className="text-center">
+          <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Wildcard:</span> <br />
             <span className="text-muted fs-6">{wildcard.name}</span>
           </Col>

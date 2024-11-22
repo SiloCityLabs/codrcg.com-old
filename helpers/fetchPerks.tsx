@@ -20,6 +20,7 @@ export async function fetchPerks(
       perkList.perk2List,
       perkList.perk3List
     );
+
     while (true) {
       perk4 = randomListItem(mergedObject).name;
 

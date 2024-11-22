@@ -8,7 +8,7 @@ function GeneratorCard(props: CardProps) {
   const btn2IsVisible: boolean = props.link2 ? true : false;
 
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "18rem" }} className="mx-auto">
       <Card.Img variant="top" src="https://placehold.co/100x100" />
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>

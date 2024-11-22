@@ -1,4 +1,4 @@
-export function implodeObject(obj: { [key: string]: string }): string {
+export function implodeObject(obj: Object): string {
   const values = Object.values(obj);
   return values.join(", ");
 }

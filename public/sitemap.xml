@@ -1,0 +1,75 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+	<url>
+		<loc>https://codrcg.com/</loc>
+	</url>
+	<!-- <url>
+		<loc>https://codrcg.com/aboutus</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/changelog</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/contactus</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/login</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/privacy</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/shoutouts</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/statistics</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/terms</loc>
+	</url> -->
+
+	<!-- black ops section -->
+	<!-- <url>
+		<loc>https://codrcg.com/black-ops/</loc>
+	</url> -->
+
+	<!-- black ops 2 section -->
+	<!-- <url>
+		<loc>https://codrcg.com/black-ops-2/</loc>
+	</url> -->
+
+	<!-- black ops 3 section -->
+	<!-- <url>
+		<loc>https://codrcg.com/bo3/</loc>
+	</url> -->
+
+	<!-- Modern Warfare Section -->
+	<!-- <url>
+		<loc>https://codrcg.com/modern-warfare/</loc>
+	</url> -->
+
+	<!-- Modern Warfare 2 Section -->
+	<!-- <url>
+		<loc>https://codrcg.com/modern-warfare-2/</loc>
+	</url> -->
+
+	<!-- Modern Warfare 3 Section -->
+	<!-- <url>
+		<loc>https://codrcg.com/modern-warfare-3/</loc>
+	</url> -->
+
+	<!-- Infinite Warfare Section -->
+	<!-- <url>
+		<loc>https://codrcg.com/infinite-warfare/</loc>
+	</url> -->
+
+	<!-- World War 2 Section -->
+	<!-- <url>
+		<loc>https://codrcg.com/world-war-2/</loc>
+	</url> -->
+</urlset>

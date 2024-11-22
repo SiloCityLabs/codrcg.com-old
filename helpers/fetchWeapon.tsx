@@ -1,51 +1,32 @@
-import { randomNumber } from './randomNumber';
+import { getPrimaryList } from "@/helpers/generator/weapons/getPrimaryList";
+import { getSecondaryList } from "@/helpers/generator/weapons/getSecondaryList";
+import { getMeleeList } from "@/helpers/generator/weapons/getMeleeList";
+import { mergeObjectsWithRekey } from "@/helpers/mergeObjectsWithRekey";
+import { randomListItem } from "./randomListItem";
+import { Weapon } from "@/types/Generator";
 
-export async function fetchWeapon(type: string = '', game: string = '') {
-    type = type === '' ? getType() : type;
-    game = game === '' ? getGame() : game;
+export async function fetchWeapon(type: string = "", game: string = "") {
+  const dataList = getWeaponList(type, game);
 
-    const response = await fetch(`/api/${game}/${type}`);
+  const data: Weapon = randomListItem(dataList);
 
-    if (!response.ok) {
-        throw new Error(`Error fetching ${type} weapons: ${response.statusText}`);
-    }
-
-    const weapon = await response.json();
-    return weapon;
+  return data;
 }
 
-function getGame() {
-    let game: string;
-    const randomNum = randomNumber(0, 6);
-
-    switch (randomNum) {
-        case 1:
-        case 3:
-        case 5:
-            game = 'modern-warfare-two';
-            break;
-        default:
-            game = 'modern-warfare-three';
-            break;
-    }
-
-    return game;
-}
-
-function getType() {
-    let type: string;
-    const randomNum = randomNumber(0, 6);
-
-    switch (randomNum) {
-        case 1:
-        case 3:
-        case 5:
-            type = 'secondary';
-            break;
-        default:
-            type = 'primary';
-            break;
-    }
-
-    return type;
+function getWeaponList(type, game) {
+  switch (type) {
+    case "primary":
+      return getPrimaryList(game);
+    case "secondary":
+      return getSecondaryList(game);
+    case "all":
+      return mergeObjectsWithRekey(
+        getPrimaryList(game),
+        getSecondaryList(game)
+      );
+    case "melee":
+      return getMeleeList(game);
+    default:
+      return {};
+  }
 }

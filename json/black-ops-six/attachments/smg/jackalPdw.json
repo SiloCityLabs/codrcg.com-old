@@ -1,0 +1,81 @@
+{
+    "optic": {
+        "0": "Remuda Mini Reflex",
+        "1": "Otero Micro Dot",
+        "2": "Kepler Microflex",
+        "3": "Merlin Mini",
+        "4": "PrismaTech Reflex",
+        "5": "Volzhskiy Reflex",
+        "6": "Merlin Reflex",
+        "7": "Redwell Reflex",
+        "8": "Dobrych MF Reflex",
+        "9": "Accu-Spot Reflex",
+        "10": "K&S Red Dot",
+        "11": "Kepler Red Dot",
+        "12": "Otero Red Dot",
+        "13": "OM3 '92 Holo",
+        "14": "Pinpoint Holoscout",
+        "15": "Accu-Spot Ultra Holo",
+        "16": "Jason Armory 2x",
+        "17": "Willis 3x",
+        "18": "PrismaTech 4x",
+        "19": "K&S Thermal Holo",
+        "20": "Pinpoint Hybrid",
+        "21": "R&K Multizoom",
+        "22": "VMF Variable Scope",
+        "23": "Otero Thermal 2x"
+    },
+    "muzzle": {
+        "0": "Suppressor",
+        "1": "Compensator",
+        "2": "Muzzle Brake",
+        "3": "Ported Compensator"
+    },
+    "barrel": {
+        "0": "Gain-Twist Barrel",
+        "1": "Long Barrel",
+        "2": "Reinforced Barrel",
+        "3": "Short Barrel",
+        "4": "CHF Barrel"
+    },
+    "underbarrel": {
+        "0": "Vertical Foregrip",
+        "1": "Lightweight Foregrip",
+        "2": "Marksman Foregrip",
+        "3": "Precision Foregrip",
+        "4": "Ranger Foregrip"
+    },
+    "magazine": {
+        "0": "Extended Mag I",
+        "1": "Fast Mag I",
+        "2": "Extended Mag II",
+        "3": "Fast Mag II"
+    },
+    "rear_grip": {
+        "0": "Quickdraw Grip",
+        "1": "Assault Grip",
+        "2": "Commando Grip",
+        "3": "Ergonomic Grip",
+        "4": "CQB Grip"
+    },
+    "stock": {
+        "0": "No Stock",
+        "1": "Infiltrator Stock",
+        "2": "Heavy Stock",
+        "3": "Balanced Stock",
+        "4": "Combat Stock"
+    },
+    "laser": {
+        "0": "Steady Aim Laser",
+        "1": "Fast Motion Laser",
+        "2": "Tactical Laser",
+        "3": "Strelok Laser",
+        "4": "Target Laser"
+    },
+    "fire_mods": {
+        "0": "Rapid Fire",
+        "1": "9x18mm Makarov Overpressured",
+        "2": "Recoil Springs",
+        "3": "9x18mm Makarov FMJ"
+    }
+}

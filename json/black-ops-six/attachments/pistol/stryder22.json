@@ -1,0 +1,52 @@
+{
+    "optic": {
+        "0": "Remunda Mini Reflex",
+        "1": "Otero Micro Dot",
+        "2": "Kepler Microflex",
+        "3": "Merlin Mini",
+        "4": "Accu-Spot Reflex",
+        "5": "Kepler Pistol Scope"
+    },
+    "muzzle": {
+        "0": "Suppressor",
+        "1": "Compensator",
+        "2": "Muzzle Brake",
+        "3": "Ported Compensator"
+    },
+    "barrel": {
+        "0": "Gain-Twist Barrel",
+        "1": "Long Barrel",
+        "2": "Reinforced Barrel",
+        "3": "Short Barrel",
+        "4": "CHF Barrel"
+    },
+    "magazine": {
+        "0": "Extended Mag I",
+        "1": "Fast Mag I",
+        "2": "Extended Mag II",
+        "3": "Fast Mag II"
+    },
+    "rear_grip": {
+        "0": "Quickdraw Grip",
+        "1": "Assault Grip",
+        "2": "Commando Grip",
+        "3": "Ergonomic Grip",
+        "4": "CQB Grip"
+    },
+    "stock": {
+        "0": "Akimbo Stryder .22"
+    },
+    "laser": {
+        "0": "Steady Aim Laser",
+        "1": "Fast Motion Laser",
+        "2": "Tactical Laser",
+        "3": "Strelok Laser",
+        "4": "Target Laser"
+    },
+    "fire_mods": {
+        "0": "Rapid Fire",
+        "1": ".22 WMR Overpressured",
+        "2": "Recoil Springs",
+        "3": ".22 WMR FMJ"
+    }
+}

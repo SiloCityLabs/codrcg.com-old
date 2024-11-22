@@ -1,32 +1,26 @@
-import { randomNumber } from './randomNumber';
+import { getLethalList } from "@/helpers/generator/equipment/getLethalList";
+import { getTacticalList } from "@/helpers/generator/equipment/getTacticalList";
+import { getFieldUpgradeList } from "@/helpers/generator/equipment/getFieldUpgradeList";
+import { randomListItem } from "./randomListItem";
+import { Equipment } from "@/types/Generator";
 
-export async function fetchEquipment(type: string, game: string = '') {
-    game = game === '' ? getGame() : game;
+export async function fetchEquipment(type: string, game: string = "") {
+  const dataList = getEquipmentList(type, game);
 
-    const response = await fetch(`/api/${game}/${type}`);
+  const data: Equipment = randomListItem(dataList);
 
-    if (!response.ok) {
-        throw new Error(`Error fetching ${type} weapons: ${response.statusText}`);
-    }
-
-    const weapon = await response.json();
-    return weapon;
+  return data;
 }
 
-function getGame() {
-    let game: string;
-    const randomNum = randomNumber(0, 6);
-
-    switch (randomNum) {
-        case 1:
-        case 3:
-        case 5:
-            game = 'modern-warfare-two';
-            break;
-        default:
-            game = 'modern-warfare-three';
-            break;
-    }
-
-    return game;
+function getEquipmentList(type, game) {
+  switch (type) {
+    case "lethal":
+      return getLethalList(game);
+    case "tactical":
+      return getTacticalList(game);
+    case "field_upgrade":
+      return getFieldUpgradeList(game);
+    default:
+      return {};
+  }
 }

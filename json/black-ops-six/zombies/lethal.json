@@ -1,0 +1,42 @@
+{
+    "0": {
+      "name": "Frag",
+      "type": "Lethal",
+      "game": "black-ops-six"
+    },
+    "1": {
+      "name": "Semtex",
+      "type": "Lethal",
+      "game": "black-ops-six"
+    },
+    "2": {
+      "name": "C4",
+      "type": "Lethal",
+      "game": "black-ops-six"
+    },
+    "3": {
+      "name": "Thermo Grenade",
+      "type": "Lethal",
+      "game": "black-ops-six"
+    },
+    "4": {
+      "name": "Impact Grenade",
+      "type": "Lethal",
+      "game": "black-ops-six"
+    },
+    "5": {
+      "name": "Molotov",
+      "type": "Lethal",
+      "game": "black-ops-six"
+    },
+    "6": {
+      "name": "Blast Trap",
+      "type": "Lethal",
+      "game": "black-ops-six"
+    },
+    "7": {
+      "name": "Combat Axe",
+      "type": "Lethal",
+      "game": "black-ops-six"
+    }
+  }

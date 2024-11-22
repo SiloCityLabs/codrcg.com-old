@@ -1,0 +1,89 @@
+{
+    "optic": {
+        "0": "Remuda Mini Reflex",
+        "1": "Otero Micro Dot",
+        "2": "Kepler Microflex",
+        "3": "Merlin Mini",
+        "4": "PrismaTech Reflex",
+        "5": "Volzhskiy Reflex",
+        "6": "Merlin Reflex",
+        "7": "Redwell Reflex",
+        "8": "Dobrych MF Reflex",
+        "9": "Accu-Spot Reflex",
+        "10": "K&S Red Dot",
+        "11": "Kepler Red Dot",
+        "12": "Otero Red Dot",
+        "13": "OM3 '92 Holo",
+        "14": "Pinpoint Holoscout",
+        "15": "Accu-Spot Ultra Holo",
+        "16": "Jason Armory 2x",
+        "17": "Willis 3x",
+        "18": "PrismaTech 4x",
+        "19": "Dobrych 4x",
+        "20": "Pinpoint Hybrid",
+        "21": "PrismaPoint Hybrid",
+        "22": "R&K Multizoom",
+        "23": "Blandwell 7x Scope",
+        "24": "Otero Thermal 2x",
+        "25": "Hawker Hybrid"
+    },
+    "muzzle": {
+        "0": "Suppressor",
+        "1": "Compensator",
+        "2": "Ported Compensator",
+        "3": "Muzzle Brake"
+    },
+    "barrel": {
+        "0": "Gain-Twist Barrel",
+        "1": "Long Barrel",
+        "2": "Short Barrel",
+        "3": "CHF Barrel",
+        "4": "Reinforced Barrel"
+    },
+    "underbarrel": {
+        "0": "Vertical Foregrip",
+        "1": "Lightweight Foregrip",
+        "2": "Marksman Foregrip",
+        "3": "Precision Foregrip",
+        "4": "Launcher - Standard",
+        "5": "Launcher - Smoke",
+        "6": "Launcher - High Explosive",
+        "7": "Launcher - Drill Charge",
+        "8": "Ranger Foregrip"
+    },
+    "magazine": {
+        "0": "Extended Mag I",
+        "1": "Fast Mag I",
+        "2": "Extended Mag II",
+        "3": "Flip Mag",
+        "4": "Extended Mag III",
+        "5": "Fast Mag II"
+    },
+    "rear_grip": {
+        "0": "Quickdraw Grip",
+        "1": "Assault Grip",
+        "2": "Commando Grip",
+        "3": "Ergonomic Grip",
+        "4": "CQB Grip"
+    },
+    "stock": {
+        "0": "Light Stock",
+        "1": "Heavy Stock",
+        "2": "Balanced Stock",
+        "3": "Combat Stock",
+        "4": "Infiltrator Stock"
+    },
+    "laser": {
+        "0": "Steady Aim Laser",
+        "1": "Fast Motion Laser",
+        "2": "Tactical Laser",
+        "3": "Strelok Laser",
+        "4": "Target Laser"
+    },
+    "fire_mods": {
+        "0": "Rapid Fire",
+        "1": "5.45x39mm Overpressured",
+        "2": "Recoil Springs",
+        "3": "5.45x39mm FMJ"
+    }
+}

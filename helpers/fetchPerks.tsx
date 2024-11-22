@@ -1,9 +1,35 @@
-export async function fetchPerks() {
-    const response = await fetch('/api/warzone-two/perks');
-    if (!response.ok) {
-        throw new Error(`Error fetching perks: ${response.statusText}`);
-    }
+import { getPerkList } from "@/helpers/generator/getPerkList";
+import { mergeObjectsWithRekey } from "@/helpers/mergeObjectsWithRekey";
+import { randomListItem } from "./randomListItem";
 
-    const perks = await response.json();
-    return perks;
+export async function fetchPerks(
+  game: string = "",
+  isPerkGreed: boolean = false
+) {
+  const perkList = getPerkList(game);
+  let perks = [
+    randomListItem(perkList?.perk1List).name,
+    randomListItem(perkList?.perk2List).name,
+    randomListItem(perkList?.perk3List).name,
+  ];
+
+  if (isPerkGreed) {
+    let perk4: string;
+    const mergedObject = mergeObjectsWithRekey(
+      perkList.perk1List,
+      perkList.perk2List,
+      perkList.perk3List
+    );
+
+    while (true) {
+      perk4 = randomListItem(mergedObject).name;
+
+      if (!perks.includes(perk4)) {
+        break;
+      }
+    }
+    perks[3] = perk4;
+  }
+
+  return perks.join(", ");
 }

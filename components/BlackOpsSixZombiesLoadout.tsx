@@ -89,7 +89,7 @@ function BlackOpsSixZombiesLoadout() {
           </Col>
         </Row>
         <Row className="justify-content-md-center">
-          <Col xs md="8" lg="6" className="d-grid gap-2">
+          <Col xs md="8" lg="6" className="text-center">
             <Button variant="black-ops" href="#" onClick={handleClick}>
               Generate Loadout
             </Button>
@@ -106,7 +106,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const primAttachCount = 8;
 
     //TODO: Have an any? for zombies and warzone
-    const primaryWeapon = await fetchWeapon("primary", "black-ops-six");
+    const primaryWeapon = await fetchWeapon("all", "black-ops-six");
     //Get Primary Attachments
     const p_attachments = implodeObject(
       await fetchAttachments(primaryWeapon, primAttachCount)

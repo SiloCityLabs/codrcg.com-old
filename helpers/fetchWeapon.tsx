@@ -1,6 +1,7 @@
 import { getPrimaryList } from "@/helpers/generator/weapons/getPrimaryList";
 import { getSecondaryList } from "@/helpers/generator/weapons/getSecondaryList";
 import { getMeleeList } from "@/helpers/generator/weapons/getMeleeList";
+import { mergeObjectsWithRekey } from "@/helpers/mergeObjectsWithRekey";
 import { randomListItem } from "./randomListItem";
 import { Weapon } from "@/types/Generator";
 
@@ -18,6 +19,11 @@ function getWeaponList(type, game) {
       return getPrimaryList(game);
     case "secondary":
       return getSecondaryList(game);
+    case "all":
+      return mergeObjectsWithRekey(
+        getPrimaryList(game),
+        getSecondaryList(game)
+      );
     case "melee":
       return getMeleeList(game);
     default:

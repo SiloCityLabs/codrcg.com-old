@@ -47,38 +47,45 @@ function BlackOpsSixZombiesLoadout() {
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
         <Row className="justify-content-md-center mb-4">
-          <Col xs md="8" lg="6">
-            <span className="label">Primary:</span> {primaryWeapon.name}
+          <Col xs md="8" lg="6" className="text-center">
+            <span className="fw-bolder fs-5">Primary:</span> <br />
+            <span className="text-muted fs-6">{primaryWeapon.name}</span>
             <br />
             {primaryWeapon.no_attach ? (
               <>
-                {" "}
-                <span className="label">Primary Attachments: </span> No
-                Attachments{" "}
+                <span className="fw-bolder fs-5">Primary Attachments: </span>
+                <br />
+                No Attachments
               </>
             ) : (
               <>
-                {" "}
-                <span className="label">Primary Attachments:</span>{" "}
-                {p_attachments}{" "}
+                <span className="fw-bolder fs-5">Primary Attachments:</span>
+                <br />
+                <span className="text-muted fs-6">{p_attachments}</span>
               </>
             )}
           </Col>
         </Row>
+        <hr />
         <Row className="justify-content-md-center mb-4">
-          <Col xs md="4" lg="3">
-            <span className="label">Melee:</span> {meleeWeapon.name}
+          <Col xs md="4" lg="3" className="text-center">
+            <span className="fw-bolder fs-5">Melee:</span> <br />
+            <span className="text-muted fs-6">{meleeWeapon.name}</span>
           </Col>
-          <Col xs md="4" lg="3">
-            <span className="label">Field Upgrade:</span> {fieldUpgrade.name}
+          <Col xs md="4" lg="3" className="text-center">
+            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
+            <span className="text-muted fs-6">{fieldUpgrade.name}</span>
           </Col>
         </Row>
+        <hr />
         <Row className="justify-content-md-center mb-4">
-          <Col xs md="4" lg="3">
-            <span className="label">Tactical:</span> {tacticalEquip.name}
+          <Col xs md="4" lg="3" className="text-center">
+            <span className="fw-bolder fs-5">Tactical:</span> <br />
+            <span className="text-muted fs-6">{tacticalEquip.name}</span>
           </Col>
-          <Col xs md="4" lg="3">
-            <span className="label">Lethal:</span> {lethalEquip.name}
+          <Col xs md="4" lg="3" className="text-center">
+            <span className="fw-bolder fs-5">Lethal:</span> <br />
+            <span className="text-muted fs-6">{lethalEquip.name}</span>
           </Col>
         </Row>
         <Row className="justify-content-md-center">
@@ -98,6 +105,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     //Figure out primary attachment count
     const primAttachCount = 8;
 
+    //TODO: Have an any? for zombies and warzone
     const primaryWeapon = await fetchWeapon("primary", "black-ops-six");
     //Get Primary Attachments
     const p_attachments = implodeObject(

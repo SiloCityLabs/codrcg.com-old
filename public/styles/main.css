@@ -13,9 +13,9 @@
 /* Temp top banner */
 #we-are-back-banner {
   text-align: center;
-  /* background-color: #212529; */
-  background-color: black;
+  background-color: #212529;
   color: white;
+  border-bottom: black solid 1px;
 }
 
 

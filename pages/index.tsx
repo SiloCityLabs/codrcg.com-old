@@ -41,7 +41,7 @@ export default function Home() {
               title="Warzone"
               text="Coming this holiday season"
               variant="success"
-              link="warzone-two/generator"
+              link="warzone/generator"
               disabled={true}
             />
           </Col>

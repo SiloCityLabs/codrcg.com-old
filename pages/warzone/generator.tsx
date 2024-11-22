@@ -1,6 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-import WarzoneTwoLoadout from "@/components/WarzoneTwoLoadout";
 
 export default function WarzoneTwo() {
   return (
@@ -9,9 +8,7 @@ export default function WarzoneTwo() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Warzone 2 - Random Class Generator</h2>
-
-            <WarzoneTwoLoadout />
+            <p>Warzone - Random Class Generator</p>
           </Col>
         </Row>
       </Container>

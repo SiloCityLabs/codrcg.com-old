@@ -14,6 +14,7 @@ export default function BlackOpsSix() {
     <>
       <Head>
         <title>Black Ops 6 Random Class Generator</title>
+        <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
           content="Spice up your COD gameplay! Generate unique random loadouts for Black Ops 6. Discover new weapons, perks, and gear combinations."

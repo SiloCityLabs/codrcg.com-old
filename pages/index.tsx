@@ -8,6 +8,7 @@ export default function Home() {
     <>
       <Head>
         <title>Call Of Duty Random Class Generator</title>
+        <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
           content="Your hub for all call of duty random class generators past, present and future."

@@ -5,6 +5,7 @@ import { getMarksmanRifleAttachments } from "./attachments/getMarksmanRifleAttac
 import { getPistolAttachments } from "./attachments/getPistolAttachments";
 import { getShotgunAttachments } from "./attachments/getShotgunAttachments";
 import { getSniperAttachments } from "./attachments/getSniperAttachments";
+import { getSpecialAttachments } from "./attachments/getSpecialAttachments";
 
 export function getBO6Attachments(type: string, gun: string, count: number) {
   switch (type) {
@@ -22,6 +23,8 @@ export function getBO6Attachments(type: string, gun: string, count: number) {
       return getShotgunAttachments(gun, count);
     case "sniper":
       return getSniperAttachments(gun, count);
+    case "special":
+      return getSpecialAttachments(gun, count);
     default:
       return {};
   }

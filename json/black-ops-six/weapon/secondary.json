@@ -30,5 +30,10 @@
       "type": "launcher",
       "game": "black-ops-six",
       "no_attach": true
+    },
+    "6": {
+      "name": "Sirin 9MM",
+      "type": "special",
+      "game": "black-ops-six"
     }
 }

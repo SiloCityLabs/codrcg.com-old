@@ -1,4 +1,5 @@
 import { randomListItem } from "@/helpers/randomListItem";
+import { verifyBO6Attachments } from "@/helpers/generator/black-ops-six/verifyBO6Attachments";
 
 /**
  * Randomly selects attachments from a pool of data.
@@ -10,22 +11,37 @@ import { randomListItem } from "@/helpers/randomListItem";
  * @returns {void}
  */
 export function randomizeAttachments(attachArr: any, data: any, count: number) {
-  let attachs = 0;
-  let keys = Object.keys(data);
-  //Reset count if we are asking for more attachments than the weapon has
-  if (count >= keys.length) {
-    count = keys.length;
+  let attachCount = 0;
+  const keys = Object.keys(data);
+
+  // Reset count if we are asking for more attachments than the weapon has
+  count = Math.min(count, keys.length);
+
+  // Shuffle the keys array for random selection
+  for (let i = keys.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [keys[i], keys[j]] = [keys[j], keys[i]];
   }
 
-  while (attachs < count) {
-    const randomIndex = Math.floor(Math.random() * keys.length);
-    const randomKey = keys[randomIndex];
+  for (let i = 0; i < count && attachCount < count; i++) {
+    const randomKey = keys[i];
 
-    if (attachArr.hasOwnProperty(randomKey)) {
-      continue;
-    } else {
-      attachArr[randomKey] = randomListItem(data[randomKey]);
-      attachs++;
+    if (!attachArr.hasOwnProperty(randomKey)) {
+      const attachment = randomListItem(data[randomKey]);
+      const addAttachment = verifyBO6Attachments(
+        data,
+        attachArr,
+        attachment,
+        randomKey,
+        count,
+        (newCount) => {
+          count = newCount;
+        }
+      );
+      if (addAttachment) {
+        attachArr[randomKey] = attachment;
+        attachCount++;
+      }
     }
   }
 }

@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import Badge from "react-bootstrap/Badge";
 //Helpers
 import { implodeObject } from "../helpers/implodeObject";
 import { fetchWeapon } from "../helpers/fetchWeapon";
-import { fetchStreaks } from "../helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
-import { fetchWildcard } from "@/helpers/fetchWildcard";
 //Styles
 import "../public/styles/components/Loadout.css";
 

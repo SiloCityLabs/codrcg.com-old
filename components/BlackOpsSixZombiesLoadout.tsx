@@ -7,6 +7,7 @@ import { fetchWeapon } from "../helpers/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchBO6Gobblegums } from "@/helpers/generator/black-ops-six/fetchBO6Gobblegums";
+import { fetchBO6ZombiesMap } from "@/helpers/generator/black-ops-six/fetchBO6ZombiesMap";
 //Styles
 import "../public/styles/components/Loadout.css";
 
@@ -20,6 +21,7 @@ function BlackOpsSixZombiesLoadout() {
     lethalEquip: { name: "", type: "" },
     fieldUpgrade: { name: "", type: "" },
     gobblegum: "",
+    zombieMap: "",
   });
 
   useEffect(() => {
@@ -38,6 +40,7 @@ function BlackOpsSixZombiesLoadout() {
     lethalEquip,
     fieldUpgrade,
     gobblegum,
+    zombieMap,
   } = data;
 
   return (
@@ -95,8 +98,8 @@ function BlackOpsSixZombiesLoadout() {
             <span className="text-muted fs-6">{gobblegum}</span>
           </Col>
           <Col xs md="4" lg="3" className="text-center">
-            {/* <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{lethalEquip.name}</span> */}
+            <span className="fw-bolder fs-5">Map:</span> <br />
+            <span className="text-muted fs-6">{zombieMap}</span>
           </Col>
         </Row>
         <Row className="justify-content-md-center">
@@ -126,6 +129,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const lethalEquip = await fetchEquipment("lethal", game);
     const fieldUpgrade = await fetchEquipment("field_upgrade", game);
     const gobblegum = fetchBO6Gobblegums();
+    const zombieMap = fetchBO6ZombiesMap();
 
     setData({
       primaryWeapon,
@@ -135,6 +139,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       lethalEquip,
       fieldUpgrade,
       gobblegum,
+      zombieMap,
     });
     setContainerClass("");
   } catch (error: any) {

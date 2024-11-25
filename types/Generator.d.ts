@@ -35,3 +35,9 @@ export type Equipment = {
     game: string;
     isDlc?: boolean;
 }
+
+export type ZombiesMap = {
+    name: string;
+    type: string;
+    game: string;
+}

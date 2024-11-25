@@ -6,6 +6,8 @@ import { implodeObject } from "../helpers/implodeObject";
 import { fetchWeapon } from "../helpers/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
+import { fetchBO6Gobblegums } from "@/helpers/generator/black-ops-six/fetchBO6Gobblegums";
+import { fetchBO6ZombiesMap } from "@/helpers/generator/black-ops-six/fetchBO6ZombiesMap";
 //Styles
 import "../public/styles/components/Loadout.css";
 
@@ -18,6 +20,8 @@ function BlackOpsSixZombiesLoadout() {
     tacticalEquip: { name: "", type: "" },
     lethalEquip: { name: "", type: "" },
     fieldUpgrade: { name: "", type: "" },
+    gobblegum: "",
+    zombieMap: "",
   });
 
   useEffect(() => {
@@ -35,6 +39,8 @@ function BlackOpsSixZombiesLoadout() {
     tacticalEquip,
     lethalEquip,
     fieldUpgrade,
+    gobblegum,
+    zombieMap,
   } = data;
 
   return (
@@ -85,6 +91,17 @@ function BlackOpsSixZombiesLoadout() {
             <span className="text-muted fs-6">{lethalEquip.name}</span>
           </Col>
         </Row>
+        <hr />
+        <Row className="justify-content-md-center mb-4">
+          <Col xs md="4" lg="3" className="text-center">
+            <span className="fw-bolder fs-5">Gobblegum:</span> <br />
+            <span className="text-muted fs-6">{gobblegum}</span>
+          </Col>
+          <Col xs md="4" lg="3" className="text-center">
+            <span className="fw-bolder fs-5">Map:</span> <br />
+            <span className="text-muted fs-6">{zombieMap}</span>
+          </Col>
+        </Row>
         <Row className="justify-content-md-center">
           <Col xs md="8" lg="6" className="text-center">
             <Button variant="black-ops" href="#" onClick={handleClick}>
@@ -111,6 +128,8 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const tacticalEquip = await fetchEquipment("tactical", game);
     const lethalEquip = await fetchEquipment("lethal", game);
     const fieldUpgrade = await fetchEquipment("field_upgrade", game);
+    const gobblegum = fetchBO6Gobblegums();
+    const zombieMap = fetchBO6ZombiesMap();
 
     setData({
       primaryWeapon,
@@ -119,6 +138,8 @@ async function fetchLoadoutData(setData, setContainerClass) {
       tacticalEquip,
       lethalEquip,
       fieldUpgrade,
+      gobblegum,
+      zombieMap,
     });
     setContainerClass("");
   } catch (error: any) {

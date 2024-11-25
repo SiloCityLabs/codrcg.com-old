@@ -170,7 +170,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     );
     //Check for overkill
     if (wildcard.name === "Overkill") {
-      secondaryWeapon = await fetchWeapon("primary", game);
+      secondaryWeapon = await fetchWeapon("primary", game, primaryWeapon.name);
     } else {
       secondaryWeapon = await fetchWeapon("secondary", game);
     }

@@ -107,11 +107,11 @@ function WarzoneLoadout() {
         </Row>
         <hr />
         <Row className="mb-5">
-          <Col sm className="text-center">
+          <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Perks:</span> <br />
             <span className="text-muted fs-6">{perks}</span>
           </Col>
-          <Col sm className="text-center mb-3 mb-md-0">
+          <Col sm className="text-center">
             <span className="fw-bolder fs-5">Wildcard:</span> <br />
             <span className="text-muted fs-6">{wildcard.name}</span>
           </Col>

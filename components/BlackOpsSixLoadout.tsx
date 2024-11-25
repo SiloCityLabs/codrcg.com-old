@@ -150,41 +150,42 @@ function BlackOpsSixLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
+    const game = "black-ops-six";
     let secondaryWeapon;
     let fieldUpgrade2;
     let s_attachments;
-    const wildcard = await fetchWildcard("black-ops-six");
+    const wildcard = await fetchWildcard(game);
     //Figure out primary attachment count
     const primAttachCount = wildcard.name === "Gunfighter" ? 8 : 5;
     //Figure out if perk greed is done
     const isPerkGreed = wildcard.name === "Perk Greed" ? true : false;
     const isHighRoller = wildcard.name === "High Roller" ? true : false;
 
-    const perks = await fetchPerks("black-ops-six", isPerkGreed);
-    const streaks = await fetchStreaks("black-ops-six", isHighRoller);
-    const primaryWeapon = await fetchWeapon("primary", "black-ops-six");
+    const perks = await fetchPerks(game, isPerkGreed);
+    const streaks = await fetchStreaks(game, isHighRoller);
+    const primaryWeapon = await fetchWeapon("primary", game);
     //Get Primary Attachments
     const p_attachments = implodeObject(
       await fetchAttachments(primaryWeapon, primAttachCount)
     );
     //Check for overkill
     if (wildcard.name === "Overkill") {
-      secondaryWeapon = await fetchWeapon("primary", "black-ops-six");
+      secondaryWeapon = await fetchWeapon("primary", game);
     } else {
-      secondaryWeapon = await fetchWeapon("secondary", "black-ops-six");
+      secondaryWeapon = await fetchWeapon("secondary", game);
     }
     //Verify if secondary weapon has attachments
     if (!secondaryWeapon.no_attach) {
       s_attachments = implodeObject(await fetchAttachments(secondaryWeapon));
     }
-    const meleeWeapon = await fetchWeapon("melee", "black-ops-six");
-    const tacticalEquip = await fetchEquipment("tactical", "black-ops-six");
-    const lethalEquip = await fetchEquipment("lethal", "black-ops-six");
-    const fieldUpgrade = await fetchEquipment("field_upgrade", "black-ops-six");
+    const meleeWeapon = await fetchWeapon("melee", game);
+    const tacticalEquip = await fetchEquipment("tactical", game);
+    const lethalEquip = await fetchEquipment("lethal", game);
+    const fieldUpgrade = await fetchEquipment("field_upgrade", game);
     if (wildcard.name === "Prepper") {
       //Loop to make sure we don't get the same field upgrade
       while (true) {
-        fieldUpgrade2 = await fetchEquipment("field_upgrade", "black-ops-six");
+        fieldUpgrade2 = await fetchEquipment("field_upgrade", game);
 
         if (fieldUpgrade.name !== fieldUpgrade2.name) {
           break;

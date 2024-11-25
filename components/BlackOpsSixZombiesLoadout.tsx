@@ -102,25 +102,18 @@ function BlackOpsSixZombiesLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
-    //Figure out primary attachment count
+    const game = "black-ops-six-zombies";
+    //Primary attachment count
     const primAttachCount = 8;
-
-    //TODO: Have an any? for zombies and warzone
     const primaryWeapon = await fetchWeapon("all", "black-ops-six");
     //Get Primary Attachments
     const p_attachments = implodeObject(
       await fetchAttachments(primaryWeapon, primAttachCount)
     );
     const meleeWeapon = await fetchWeapon("melee", "black-ops-six");
-    const tacticalEquip = await fetchEquipment(
-      "tactical",
-      "black-ops-six-zombies"
-    );
-    const lethalEquip = await fetchEquipment("lethal", "black-ops-six-zombies");
-    const fieldUpgrade = await fetchEquipment(
-      "field_upgrade",
-      "black-ops-six-zombies"
-    );
+    const tacticalEquip = await fetchEquipment("tactical", game);
+    const lethalEquip = await fetchEquipment("lethal", game);
+    const fieldUpgrade = await fetchEquipment("field_upgrade", game);
 
     setData({
       primaryWeapon,

@@ -4,11 +4,25 @@ import { getMeleeList } from "@/helpers/generator/weapons/getMeleeList";
 import { mergeObjectsWithRekey } from "@/helpers/mergeObjectsWithRekey";
 import { randomListItem } from "./randomListItem";
 import { Weapon } from "@/types/Generator";
+import { fetchGame } from "@/helpers/fetchGame";
 
-export async function fetchWeapon(type: string = "", game: string = "") {
+export async function fetchWeapon(
+  type: string = "",
+  game: string = "",
+  weapon: string = ""
+) {
+  //Choose random game to select a weapon from
+  game = game === "" ? fetchGame() : game;
   const dataList = getWeaponList(type, game);
+  let data: Weapon;
 
-  const data: Weapon = randomListItem(dataList);
+  while (true) {
+    data = randomListItem(dataList);
+
+    if (data.name != weapon) {
+      break;
+    }
+  }
 
   return data;
 }

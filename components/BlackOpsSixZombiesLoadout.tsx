@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import Badge from "react-bootstrap/Badge";
 //Helpers
 import { implodeObject } from "../helpers/implodeObject";
 import { fetchWeapon } from "../helpers/fetchWeapon";
-import { fetchStreaks } from "../helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
-import { fetchWildcard } from "@/helpers/fetchWildcard";
 //Styles
 import "../public/styles/components/Loadout.css";
 
@@ -102,25 +99,18 @@ function BlackOpsSixZombiesLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
-    //Figure out primary attachment count
+    const game = "black-ops-six-zombies";
+    //Primary attachment count
     const primAttachCount = 8;
-
-    //TODO: Have an any? for zombies and warzone
     const primaryWeapon = await fetchWeapon("all", "black-ops-six");
     //Get Primary Attachments
     const p_attachments = implodeObject(
       await fetchAttachments(primaryWeapon, primAttachCount)
     );
     const meleeWeapon = await fetchWeapon("melee", "black-ops-six");
-    const tacticalEquip = await fetchEquipment(
-      "tactical",
-      "black-ops-six-zombies"
-    );
-    const lethalEquip = await fetchEquipment("lethal", "black-ops-six-zombies");
-    const fieldUpgrade = await fetchEquipment(
-      "field_upgrade",
-      "black-ops-six-zombies"
-    );
+    const tacticalEquip = await fetchEquipment("tactical", game);
+    const lethalEquip = await fetchEquipment("lethal", game);
+    const fieldUpgrade = await fetchEquipment("field_upgrade", game);
 
     setData({
       primaryWeapon,

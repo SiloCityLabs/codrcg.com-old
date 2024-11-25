@@ -12,11 +12,10 @@ import { fetchWildcard } from "@/helpers/fetchWildcard";
 //Styles
 import "../public/styles/components/Loadout.css";
 
-function BlackOpsSixLoadout() {
+function WarzoneLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
     perks: null,
-    streaks: null,
     primaryWeapon: { name: "", type: "", game: "", no_attach: false },
     p_attachments: "",
     secondaryWeapon: { name: "", type: "", game: "", no_attach: false },
@@ -24,9 +23,7 @@ function BlackOpsSixLoadout() {
     meleeWeapon: { name: "", type: "", game: "" },
     tacticalEquip: { name: "", type: "" },
     lethalEquip: { name: "", type: "" },
-    fieldUpgrade: { name: "", type: "" },
     wildcard: { name: "", type: "" },
-    fieldUpgrade2: { name: "", type: "" },
   });
 
   useEffect(() => {
@@ -39,7 +36,6 @@ function BlackOpsSixLoadout() {
 
   const {
     perks,
-    streaks,
     primaryWeapon,
     p_attachments,
     secondaryWeapon,
@@ -47,9 +43,7 @@ function BlackOpsSixLoadout() {
     meleeWeapon,
     tacticalEquip,
     lethalEquip,
-    fieldUpgrade,
     wildcard,
-    fieldUpgrade2,
   } = data;
 
   return (
@@ -110,35 +104,21 @@ function BlackOpsSixLoadout() {
             <span className="fw-bolder fs-5">Lethal:</span> <br />
             <span className="text-muted fs-6">{lethalEquip.name}</span>
           </Col>
-          <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perks:</span> <br />
-            <span className="text-muted fs-6">{perks}</span>
-          </Col>
         </Row>
         <hr />
         <Row className="mb-5">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">{fieldUpgrade.name}</span>
-            {wildcard.name === "Prepper" && (
-              <>
-                <br />
-                <span className="text-muted fs-6"> {fieldUpgrade2.name}</span>
-              </>
-            )}
-          </Col>
-          <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Wildcard:</span> <br />
-            <span className="text-muted fs-6">{wildcard.name}</span>
+            <span className="fw-bolder fs-5">Perks:</span> <br />
+            <span className="text-muted fs-6">{perks}</span>
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Streaks:</span> <br />
-            <span className="text-muted fs-6">{streaks}</span>
+            <span className="fw-bolder fs-5">Wildcard:</span> <br />
+            <span className="text-muted fs-6">{wildcard.name}</span>
           </Col>
         </Row>
         <Row id="button-row">
           <Col className="text-center">
-            <Button variant="black-ops" href="#" onClick={handleClick}>
+            <Button variant="success" href="#" onClick={handleClick}>
               Generate Loadout
             </Button>
           </Col>
@@ -150,52 +130,35 @@ function BlackOpsSixLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
-    const game = "black-ops-six";
+    const game = "warzone";
     let secondaryWeapon;
-    let fieldUpgrade2;
     let s_attachments;
     const wildcard = await fetchWildcard(game);
     //Figure out primary attachment count
     const primAttachCount = wildcard.name === "Gunfighter" ? 8 : 5;
-    //Figure out if perk greed is done
-    const isPerkGreed = wildcard.name === "Perk Greed" ? true : false;
-    const isHighRoller = wildcard.name === "High Roller" ? true : false;
 
-    const perks = await fetchPerks(game, isPerkGreed);
-    const streaks = await fetchStreaks(game, isHighRoller);
-    const primaryWeapon = await fetchWeapon("primary", game);
+    const perks = await fetchPerks(game);
+    const primaryWeapon = await fetchWeapon("primary");
     //Get Primary Attachments
     const p_attachments = implodeObject(
       await fetchAttachments(primaryWeapon, primAttachCount)
     );
     //Check for overkill
     if (wildcard.name === "Overkill") {
-      secondaryWeapon = await fetchWeapon("primary", game, primaryWeapon.name);
+      secondaryWeapon = await fetchWeapon("primary", "", primaryWeapon.name);
     } else {
-      secondaryWeapon = await fetchWeapon("secondary", game);
+      secondaryWeapon = await fetchWeapon("secondary");
     }
     //Verify if secondary weapon has attachments
     if (!secondaryWeapon.no_attach) {
       s_attachments = implodeObject(await fetchAttachments(secondaryWeapon));
     }
-    const meleeWeapon = await fetchWeapon("melee", game);
+    const meleeWeapon = await fetchWeapon("melee");
     const tacticalEquip = await fetchEquipment("tactical", game);
     const lethalEquip = await fetchEquipment("lethal", game);
-    const fieldUpgrade = await fetchEquipment("field_upgrade", game);
-    if (wildcard.name === "Prepper") {
-      //Loop to make sure we don't get the same field upgrade
-      while (true) {
-        fieldUpgrade2 = await fetchEquipment("field_upgrade", game);
-
-        if (fieldUpgrade.name !== fieldUpgrade2.name) {
-          break;
-        }
-      }
-    }
 
     setData({
       perks,
-      streaks,
       primaryWeapon,
       p_attachments,
       secondaryWeapon,
@@ -203,9 +166,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       meleeWeapon,
       tacticalEquip,
       lethalEquip,
-      fieldUpgrade,
       wildcard,
-      fieldUpgrade2,
     });
     setContainerClass("");
   } catch (error: any) {
@@ -213,4 +174,4 @@ async function fetchLoadoutData(setData, setContainerClass) {
   }
 }
 
-export default BlackOpsSixLoadout;
+export default WarzoneLoadout;

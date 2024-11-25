@@ -1,0 +1,38 @@
+{
+  "0": {
+    "name": "Gung-Ho",
+    "type": "Perk 3",
+    "game": "warzone",
+    "color": "Yellow"
+  },
+  "1": {
+    "name": "Resolute",
+    "type": "Perk 3",
+    "game": "warzone",
+    "color": "Yellow"
+  },
+  "2": {
+    "name": "Ghost",
+    "type": "Perk 3",
+    "game": "warzone",
+    "color": "Yellow"
+  },
+  "3": {
+    "name": "Birdseye",
+    "type": "Perk 3",
+    "game": "warzone",
+    "color": "Yellow"
+  },
+  "4": {
+    "name": "Tempered",
+    "type": "Perk 3",
+    "game": "warzone",
+    "color": "Yellow"
+  },
+  "5": {
+    "name": "Alertness",
+    "type": "Perk 3",
+    "game": "warzone",
+    "color": "Yellow"
+  }
+}

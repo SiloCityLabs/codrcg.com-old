@@ -10,6 +10,17 @@ function Changelog2024() {
         <Row>
           <Col>
             <p>
+              11/26/2024: <a href="warzone/generator">Warzone:</a> Generator is
+              now available!
+            </p>
+            <p>
+              11/23/2024:{" "}
+              <a href="black-ops-six/zombies-generator">
+                Black Ops VI Zombies:
+              </a>{" "}
+              Generator is now available!
+            </p>
+            <p>
               11/22/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
               Added Season 01 perks and weapons to the generator
             </p>

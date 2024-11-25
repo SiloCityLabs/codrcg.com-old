@@ -1,0 +1,57 @@
+{
+    "0": {
+      "name": "Frag",
+      "type": "Lethal",
+      "game": "warzone"
+    },
+    "1": {
+      "name": "Semtex",
+      "type": "Lethal",
+      "game": "warzone"
+    },
+    "2": {
+      "name": "Impact Grenade",
+      "type": "Lethal",
+      "game": "warzone"
+    },
+    "3": {
+      "name": "Thermobaric",
+      "type": "Lethal",
+      "game": "warzone"
+    },
+    "4": {
+      "name": "Molotov Cocktail",
+      "type": "Lethal",
+      "game": "warzone"
+    },
+    "5": {
+      "name": "Drill Charge",
+      "type": "Lethal",
+      "game": "warzone"
+    },
+    "6": {
+      "name": "C4",
+      "type": "Lethal",
+      "game": "warzone"
+    },
+    "7": {
+      "name": "Blast Trap",
+      "type": "Lethal",
+      "game": "warzone"
+    },
+    "8": {
+      "name": "Spring Mine",
+      "type": "Lethal",
+      "game": "warzone"
+    },
+    "9": {
+      "name": "Throwing Knife",
+      "type": "Lethal",
+      "game": "warzone"
+    },
+    "10": {
+      "name": "Combat Axe",
+      "type": "Lethal",
+      "game": "warzone"
+    }
+  }

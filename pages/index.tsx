@@ -19,15 +19,17 @@ export default function Home() {
         />
       </Head>
       <div id="we-are-back-banner" className="py-2">
-        <span className="fs-5">We&apos;re back, and we&apos;re open source!!</span>
-        </div>
+        <span className="fs-5">
+          We&apos;re back, and we&apos;re open source!!
+        </span>
+      </div>
       <Header />
       <Container fluid>
         <Row className="justify-content-md-center">
           <Col xl={3} lg={4} className="text-center">
             <GeneratorCard
               title="Black Ops 6"
-              text="Zombies generator coming in december 2024"
+              text=""
               variant="black-ops"
               btn1Text="MP Generator"
               link="black-ops-six/generator"
@@ -40,10 +42,10 @@ export default function Home() {
           <Col xl={3} lg={4} className="text-center">
             <GeneratorCard
               title="Warzone"
-              text="Coming this holiday season"
+              text=""
               variant="success"
               link="warzone/generator"
-              disabled={true}
+              disabled={false}
             />
           </Col>
           <Col xl={3} lg={4} className="text-center">
@@ -53,6 +55,9 @@ export default function Home() {
               variant="danger"
               link="modern-warfare-three/generator"
               disabled={true}
+              btn2Text="Zombies Generator"
+              link2="modern-warfare-three/zombies-generator"
+              disabled2={true}
             />
           </Col>
         </Row>

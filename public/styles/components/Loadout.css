@@ -4,10 +4,15 @@
 }
 
  /* RCG Navbar Changes */
- #cod-header.black-ops-6 {
-    background: #F96800 !important;
- }
+#cod-header.black-ops-6 {
+  background: #F96800 !important;
+}
 
- #cod-header.black-ops-6 a{
-   color: white !important;
- }
+#cod-header.black-ops-6 a,
+#cod-header.warzone a {
+  color: white !important;
+}
+
+#cod-header.warzone {
+  background: #198754 !important;
+}

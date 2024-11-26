@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 //Helpers
-import { implodeObject } from "../../helpers/implodeObject";
-import { fetchWeapon } from "../../helpers/fetchWeapon";
+import { implodeObject } from "@/helpers/implodeObject";
+import { fetchWeapon } from "@/helpers/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 //Styles

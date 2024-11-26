@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 //Helpers
-import { implodeObject } from "../../helpers/implodeObject";
-import { fetchWeapon } from "../../helpers/fetchWeapon";
-import { fetchPerks } from "../../helpers/fetchPerks";
-import { fetchStreaks } from "../../helpers/fetchStreaks";
+import { implodeObject } from "@/helpers/implodeObject";
+import { fetchWeapon } from "@/helpers/fetchWeapon";
+import { fetchPerks } from "@/helpers/generator/modern-warfare-three/fetchPerks";
+import { fetchStreaks } from "@/helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 //Styles
@@ -139,7 +139,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     let p_attachments;
     let secondaryWeapon;
     let s_attachments;
-    const perks = fetchPerks("black-ops-six");
+    const perks = fetchPerks();
     const streaks = fetchStreaks(game);
     const vest = fetchEquipment("vest", game);
     const primaryWeapon = fetchWeapon("primary", game);

@@ -29,7 +29,7 @@ function BlackOpsSixZombiesLoadout() {
   }, []);
 
   const handleClick = async () => {
-    await fetchLoadoutData(setData, setContainerClass);
+    fetchLoadoutData(setData, setContainerClass);
   };
 
   const {
@@ -119,15 +119,15 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const game = "black-ops-six-zombies";
     //Primary attachment count
     const primAttachCount = 8;
-    const primaryWeapon = await fetchWeapon("all", "black-ops-six");
+    const primaryWeapon = fetchWeapon("all", "black-ops-six");
     //Get Primary Attachments
     const p_attachments = implodeObject(
-      await fetchAttachments(primaryWeapon, primAttachCount)
+      fetchAttachments(primaryWeapon, primAttachCount)
     );
-    const meleeWeapon = await fetchWeapon("melee", "black-ops-six");
-    const tacticalEquip = await fetchEquipment("tactical", game);
-    const lethalEquip = await fetchEquipment("lethal", game);
-    const fieldUpgrade = await fetchEquipment("field_upgrade", game);
+    const meleeWeapon = fetchWeapon("melee", "black-ops-six");
+    const tacticalEquip = fetchEquipment("tactical", game);
+    const lethalEquip = fetchEquipment("lethal", game);
+    const fieldUpgrade = fetchEquipment("field_upgrade", game);
     const gobblegum = fetchBO6Gobblegums();
     const zombieMap = fetchBO6ZombiesMap();
 

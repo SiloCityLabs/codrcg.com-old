@@ -2,18 +2,20 @@ import { getBO6Attachments } from "./generator/black-ops-six/getBO6Attachments";
 //Types
 import { Weapon } from "@/types/Generator";
 
-export async function fetchAttachments(weapon: Weapon, count: number = 5) {
+const attachmentGetters: Record<
+  string,
+  (type: string, gun: string, count: number) => any
+> = {
+  "black-ops-six": getBO6Attachments,
+};
+
+export function fetchAttachments(weapon: Weapon, count: number = 5): any {
   const gun = weapon.name.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-  const attachments = getAttachments(weapon.game, gun, count, weapon.type);
+  const getAttachments = attachmentGetters[weapon.game];
 
-  return attachments;
-}
-
-function getAttachments(game, gun, count, type) {
-  switch (game) {
-    case "black-ops-six":
-      return getBO6Attachments(type, gun, count);
-    default:
-      return {};
+  if (getAttachments) {
+    return getAttachments(weapon.type, gun, count);
+  } else {
+    return {};
   }
 }

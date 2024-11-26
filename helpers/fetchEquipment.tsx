@@ -4,23 +4,22 @@ import { getFieldUpgradeList } from "@/helpers/generator/equipment/getFieldUpgra
 import { randomListItem } from "./randomListItem";
 import { Equipment } from "@/types/Generator";
 
-export async function fetchEquipment(type: string, game: string = "") {
-  const dataList = getEquipmentList(type, game);
+const equipmentListGetters: Record<string, (game: string) => any> = {
+  lethal: getLethalList,
+  tactical: getTacticalList,
+  field_upgrade: getFieldUpgradeList,
+};
 
-  const data: Equipment = randomListItem(dataList);
+export function fetchEquipment(
+  type: string,
+  game: string = ""
+): Equipment {
+  const getEquipmentList = equipmentListGetters[type];
 
-  return data;
-}
-
-function getEquipmentList(type, game) {
-  switch (type) {
-    case "lethal":
-      return getLethalList(game);
-    case "tactical":
-      return getTacticalList(game);
-    case "field_upgrade":
-      return getFieldUpgradeList(game);
-    default:
-      return {};
+  if (getEquipmentList) {
+    const dataList = getEquipmentList(game);
+    return randomListItem(dataList);
+  } else {
+    return {} as Equipment; // Provide a default empty Equipment object
   }
 }

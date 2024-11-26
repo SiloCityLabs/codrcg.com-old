@@ -2,33 +2,32 @@ import { getPerkList } from "@/helpers/generator/getPerkList";
 import { mergeObjectsWithRekey } from "@/helpers/mergeObjectsWithRekey";
 import { randomListItem } from "./randomListItem";
 
-export async function fetchPerks(
+export function fetchPerks(
   game: string = "",
   isPerkGreed: boolean = false
-) {
+): string {
   const perkList = getPerkList(game);
-  let perks = [
-    randomListItem(perkList?.perk1List).name,
-    randomListItem(perkList?.perk2List).name,
-    randomListItem(perkList?.perk3List).name,
-  ];
+  const perks: string[] = [];
 
-  if (isPerkGreed) {
-    let perk4: string;
-    const mergedObject = mergeObjectsWithRekey(
-      perkList.perk1List,
-      perkList.perk2List,
-      perkList.perk3List
+  if (perkList) {
+    perks.push(
+      randomListItem(perkList.perk1List).name,
+      randomListItem(perkList.perk2List).name,
+      randomListItem(perkList.perk3List).name
     );
 
-    while (true) {
-      perk4 = randomListItem(mergedObject).name;
-
-      if (!perks.includes(perk4)) {
-        break;
-      }
+    if (isPerkGreed) {
+      const allPerks = mergeObjectsWithRekey(
+        perkList.perk1List,
+        perkList.perk2List,
+        perkList.perk3List
+      );
+      let perk4: string;
+      do {
+        perk4 = randomListItem(allPerks).name;
+      } while (perks.includes(perk4));
+      perks.push(perk4);
     }
-    perks[3] = perk4;
   }
 
   return perks.join(", ");

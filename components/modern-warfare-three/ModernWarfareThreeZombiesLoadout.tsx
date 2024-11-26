@@ -112,14 +112,14 @@ function ModernWarfareThreeZombiesLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
+    let p_attachments;
+    let s_attachments;
     const game = "modern-warfare-three-zombies";
-    //Primary attachment count
-    const attachCount = 5;
     const primaryWeapon = fetchWeapon("all", "black-ops-six");
     //Get Primary Attachments
-    const p_attachments = implodeObject(
-      fetchAttachments(primaryWeapon, attachCount)
-    );
+    if (!primaryWeapon.no_attach) {
+      p_attachments = implodeObject(fetchAttachments(primaryWeapon));
+    }
     //Get secondary Weapon
     const secondaryWeapon = fetchWeapon(
       "all",
@@ -127,9 +127,9 @@ async function fetchLoadoutData(setData, setContainerClass) {
       primaryWeapon.name
     );
     //Get Secondary Attachments
-    const s_attachments = implodeObject(
-      fetchAttachments(secondaryWeapon, attachCount)
-    );
+    if (!secondaryWeapon.no_attach) {
+      s_attachments = implodeObject(fetchAttachments(secondaryWeapon));
+    }
     //Get Equipment
     const tacticalEquip = fetchEquipment("tactical", game);
     const lethalEquip = fetchEquipment("lethal", game);

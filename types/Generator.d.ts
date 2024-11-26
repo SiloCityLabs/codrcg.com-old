@@ -41,3 +41,9 @@ export type ZombiesMap = {
     type: string;
     game: string;
 }
+
+export type MW3Vest = {
+    name: string;
+    type: string;
+    game: string;
+}

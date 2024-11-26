@@ -4,24 +4,26 @@ import Button from "react-bootstrap/Button";
 //Helpers
 import { implodeObject } from "../../helpers/implodeObject";
 import { fetchWeapon } from "../../helpers/fetchWeapon";
+import { fetchPerks } from "../../helpers/fetchPerks";
+import { fetchStreaks } from "../../helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
-import { fetchBO6Gobblegums } from "@/helpers/generator/black-ops-six/fetchBO6Gobblegums";
-import { fetchBO6ZombiesMap } from "@/helpers/generator/black-ops-six/fetchBO6ZombiesMap";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-function BlackOpsSixZombiesLoadout() {
+function ModernWarfareThree() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
+    perks: null,
+    streaks: null,
     primaryWeapon: { name: "", type: "", game: "", no_attach: false },
     p_attachments: "",
-    meleeWeapon: { name: "", type: "", game: "" },
+    secondaryWeapon: { name: "", type: "", game: "", no_attach: false },
+    s_attachments: "",
     tacticalEquip: { name: "", type: "" },
     lethalEquip: { name: "", type: "" },
     fieldUpgrade: { name: "", type: "" },
-    gobblegum: "",
-    zombieMap: "",
+    vest: { name: "", type: "" },
   });
 
   useEffect(() => {
@@ -33,14 +35,16 @@ function BlackOpsSixZombiesLoadout() {
   };
 
   const {
+    perks,
+    streaks,
     primaryWeapon,
     p_attachments,
-    meleeWeapon,
+    secondaryWeapon,
+    s_attachments,
     tacticalEquip,
     lethalEquip,
     fieldUpgrade,
-    gobblegum,
-    zombieMap,
+    vest,
   } = data;
 
   return (
@@ -49,8 +53,8 @@ function BlackOpsSixZombiesLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
-        <Row className="justify-content-md-center mb-4">
-          <Col xs md="8" lg="6" className="text-center">
+        <Row className="justify-content-md-center">
+          <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Primary:</span> <br />
             <span className="text-muted fs-6">{primaryWeapon.name}</span>
             <br />
@@ -68,43 +72,58 @@ function BlackOpsSixZombiesLoadout() {
               </>
             )}
           </Col>
+          <Col sm className="text-center mb-3 mb-md-0">
+            <span className="fw-bolder fs-5">Secondary:</span> <br />
+            <span className="text-muted fs-6">{secondaryWeapon.name}</span>
+            <br />
+            {secondaryWeapon.no_attach ? (
+              <>
+                <span className="fw-bolder fs-5">Secondary Attachments: </span>
+                <br />
+                <span className="text-muted fs-6">No Attachments</span>
+              </>
+            ) : (
+              <>
+                <span className="fw-bolder fs-5">Secondary Attachments:</span>
+                <br />
+                <span className="text-muted fs-6">{s_attachments}</span>
+              </>
+            )}
+          </Col>
         </Row>
         <hr />
-        <Row className="justify-content-md-center mb-4">
-          <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Melee:</span> <br />
-            <span className="text-muted fs-6">{meleeWeapon.name}</span>
-          </Col>
-          <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">{fieldUpgrade.name}</span>
-          </Col>
-        </Row>
-        <hr />
-        <Row className="justify-content-md-center mb-4">
-          <Col xs md="4" lg="3" className="text-center">
+        <Row className="justify-content-md-center">
+          <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
             <span className="text-muted fs-6">{tacticalEquip.name}</span>
           </Col>
-          <Col xs md="4" lg="3" className="text-center">
+          <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
             <span className="text-muted fs-6">{lethalEquip.name}</span>
           </Col>
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Perks:</span> <br />
+            <span className="text-muted fs-6">{perks}</span>
+          </Col>
         </Row>
         <hr />
-        <Row className="justify-content-md-center mb-4">
-          <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Gobblegum:</span> <br />
-            <span className="text-muted fs-6">{gobblegum}</span>
+        <Row className="mb-5">
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Vest:</span> <br />
+            <span className="text-muted fs-6">{vest.name}</span>
           </Col>
-          <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Map:</span> <br />
-            <span className="text-muted fs-6">{zombieMap}</span>
+          <Col sm className="text-center mb-3 mb-md-0">
+            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
+            <span className="text-muted fs-6">{fieldUpgrade.name}</span>
+          </Col>
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Streaks:</span> <br />
+            <span className="text-muted fs-6">{streaks}</span>
           </Col>
         </Row>
-        <Row className="justify-content-md-center">
-          <Col xs md="8" lg="6" className="text-center">
-            <Button variant="black-ops" href="#" onClick={handleClick}>
+        <Row id="button-row">
+          <Col className="text-center">
+            <Button variant="danger" href="#" onClick={handleClick}>
               Generate Loadout
             </Button>
           </Col>
@@ -116,31 +135,39 @@ function BlackOpsSixZombiesLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
+    const game = "modern-warfare-three";
     let p_attachments;
-    const game = "black-ops-six-zombies";
-    //Primary attachment count
-    const primAttachCount = 8;
-    const primaryWeapon = fetchWeapon("all", "black-ops-six");
+    let secondaryWeapon;
+    let s_attachments;
+    const perks = fetchPerks("black-ops-six");
+    const streaks = fetchStreaks(game);
+    const vest = fetchEquipment("vest", game);
+    const primaryWeapon = fetchWeapon("primary", "black-ops-six");
     //Get Primary Attachments
     if (!primaryWeapon.no_attach) {
       p_attachments = implodeObject(fetchAttachments(primaryWeapon));
     }
-    const meleeWeapon = fetchWeapon("melee", "black-ops-six");
+
+    secondaryWeapon = fetchWeapon("secondary", "black-ops-six");
+    //Verify if secondary weapon has attachments
+    if (!secondaryWeapon.no_attach) {
+      s_attachments = implodeObject(fetchAttachments(secondaryWeapon));
+    }
     const tacticalEquip = fetchEquipment("tactical", game);
     const lethalEquip = fetchEquipment("lethal", game);
     const fieldUpgrade = fetchEquipment("field_upgrade", game);
-    const gobblegum = fetchBO6Gobblegums();
-    const zombieMap = fetchBO6ZombiesMap();
 
     setData({
+      perks,
+      streaks,
       primaryWeapon,
       p_attachments,
-      meleeWeapon,
+      secondaryWeapon,
+      s_attachments,
       tacticalEquip,
       lethalEquip,
       fieldUpgrade,
-      gobblegum,
-      zombieMap,
+      vest,
     });
     setContainerClass("");
   } catch (error: any) {
@@ -148,4 +175,4 @@ async function fetchLoadoutData(setData, setContainerClass) {
   }
 }
 
-export default BlackOpsSixZombiesLoadout;
+export default ModernWarfareThree;

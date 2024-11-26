@@ -31,7 +31,7 @@ export default function Home() {
               title="Black Ops VI"
               text=""
               variant="black-ops"
-              btn1Text="MP Generator"
+              btn1Text="Multiplayer Generator"
               link="black-ops-six/generator"
               disabled={false}
               btn2Text="Zombies Generator"
@@ -53,8 +53,9 @@ export default function Home() {
               title="Modern Warfare 3 (2023)"
               text="Coming during the holidays"
               variant="danger"
+              btn1Text="Multiplayer Generator"
               link="modern-warfare-three/generator"
-              disabled={true}
+              disabled={false}
               btn2Text="Zombies Generator"
               link2="modern-warfare-three/zombies-generator"
               disabled2={false}
@@ -65,7 +66,7 @@ export default function Home() {
               title="Black Ops III"
               text="Coming during the holidays"
               variant="black-ops"
-              btn1Text="MP Generator"
+              btn1Text="Multiplayer Generator"
               link="black-ops-three/generator"
               disabled={true}
               btn2Text="Zombies Generator"

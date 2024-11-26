@@ -1,5 +1,6 @@
 import {
   getAssaultRifleAttachments,
+  getBattleRifleAttachments,
   // getSmgAttachments,
   // getLmgAttachments,
   // getMarksmanRifleAttachments,
@@ -11,6 +12,7 @@ import {
 
 const attachmentGetters = {
   assault_rifle: getAssaultRifleAttachments,
+  battle_rifle: getBattleRifleAttachments,
   // smg: getSmgAttachments,
   // lmg: getLmgAttachments,
   // marksman_rifle: getMarksmanRifleAttachments,

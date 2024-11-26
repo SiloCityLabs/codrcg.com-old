@@ -24,7 +24,7 @@ export default function BlackOpsSix() {
           content="call of duty, random class generator, black ops 6, zombies, black ops 6 zombies"
         />
       </Head>
-      <Header className="black-ops-6" navLinks={navLinks} />
+      <Header className="black-ops" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>

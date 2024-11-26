@@ -4,12 +4,13 @@
 }
 
  /* RCG Navbar Changes */
-#cod-header.black-ops-6 {
+#cod-header.black-ops {
   background: #F96800 !important;
 }
 
-#cod-header.black-ops-6 a,
-#cod-header.warzone a {
+#cod-header.black-ops a,
+#cod-header.warzone a,
+#cod-header.modern-warfare a {
   color: white !important;
 }
 
@@ -17,6 +18,6 @@
   background: #198754 !important;
 }
 
-#cod-header.modern-warfare-three {
+#cod-header.modern-warfare {
   background: #DC3545 !important;
 }

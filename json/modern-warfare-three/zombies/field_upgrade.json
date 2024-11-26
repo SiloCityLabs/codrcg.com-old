@@ -1,0 +1,32 @@
+{
+    "0": {
+      "name": "Energy Mine",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "1": {
+      "name": "Frenzied Guard",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "2": {
+      "name": "Healing Aura",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "3": {
+      "name": "Frost Blast",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "4": {
+      "name": "Aether Shroud",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "5": {
+      "name": "Tesla Storm",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    }
+  }

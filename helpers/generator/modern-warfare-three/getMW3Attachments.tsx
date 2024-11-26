@@ -6,7 +6,7 @@ import {
   getMarksmanRifleAttachments,
   // getPistolAttachments,
   getShotgunAttachments,
-  // getSniperAttachments,
+  getSniperAttachments,
   // getSpecialAttachments,
 } from "./attachments";
 
@@ -18,7 +18,7 @@ const attachmentGetters = {
   marksman_rifle: getMarksmanRifleAttachments,
   // pistol: getPistolAttachments,
   shotgun: getShotgunAttachments,
-  // sniper: getSniperAttachments,
+  sniper: getSniperAttachments,
   // special: getSpecialAttachments,
 };
 

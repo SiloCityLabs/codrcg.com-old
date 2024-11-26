@@ -4,3 +4,4 @@ export { getSmgAttachments } from './getSmgAttachments';
 export { getShotgunAttachments } from './getShotgunAttachments';
 export { getLmgAttachments } from './getLmgAttachments';
 export { getMarksmanRifleAttachments } from './getMarksmanRifleAttachments';
+export { getSniperAttachments } from './getSniperAttachments';

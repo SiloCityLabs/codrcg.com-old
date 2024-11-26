@@ -1,26 +1,26 @@
 {
     "0": {
       "name": "Knife",
-      "type": "Melee",
+      "type": "melee",
       "game": "black-ops-six",
       "no_attach": true
     },
     "1": {
       "name": "Baseball Bat",
-      "type": "Melee",
+      "type": "melee",
       "game": "black-ops-six",
       "no_attach": true
     },
     "2": {
       "name": "Power Drill",
-      "type": "Melee",
+      "type": "melee",
       "game": "black-ops-six",
       "no_attach": true,
       "isDlc": true
     },
     "3": {
       "name": "Cleaver",
-      "type": "Melee",
+      "type": "melee",
       "game": "black-ops-six",
       "no_attach": true,
       "isDlc": true

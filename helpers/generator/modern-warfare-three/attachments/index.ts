@@ -1,0 +1,1 @@
+export { getAssaultRifleAttachments } from './getAssaultRifleAttachments';

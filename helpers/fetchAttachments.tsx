@@ -1,4 +1,5 @@
 import { getBO6Attachments } from "./generator/black-ops-six/getBO6Attachments";
+import { getMW3Attachments } from "./generator/modern-warfare-three/getMW3Attachments";
 //Types
 import { Weapon } from "@/types/Generator";
 
@@ -7,6 +8,7 @@ const attachmentGetters: Record<
   (type: string, gun: string, count: number) => any
 > = {
   "black-ops-six": getBO6Attachments,
+  "modern-warfare-three": getMW3Attachments,
 };
 
 export function fetchAttachments(weapon: Weapon, count: number = 5): any {

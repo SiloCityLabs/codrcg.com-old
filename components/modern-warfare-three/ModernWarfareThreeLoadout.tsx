@@ -142,15 +142,19 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const perks = fetchPerks("black-ops-six");
     const streaks = fetchStreaks(game);
     const vest = fetchEquipment("vest", game);
-    const primaryWeapon = fetchWeapon("primary", "black-ops-six");
+    // const primaryWeapon = fetchWeapon("primary", "black-ops-six");
+    const primaryWeapon = {
+      name: "STG44",
+      type: "assault_rifle",
+      game: "modern-warfare-three",
+      no_attach: false,
+    };
     //Get Primary Attachments
-    if (!primaryWeapon.no_attach) {
-      p_attachments = implodeObject(fetchAttachments(primaryWeapon));
-    }
+    p_attachments = implodeObject(fetchAttachments(primaryWeapon));
 
     secondaryWeapon = fetchWeapon("secondary", "black-ops-six");
     //Verify if secondary weapon has attachments
-    if (!secondaryWeapon.no_attach) {
+    if (!secondaryWeapon?.no_attach) {
       s_attachments = implodeObject(fetchAttachments(secondaryWeapon));
     }
     const tacticalEquip = fetchEquipment("tactical", game);

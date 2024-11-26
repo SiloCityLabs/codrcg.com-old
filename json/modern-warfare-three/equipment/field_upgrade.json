@@ -1,0 +1,92 @@
+{
+    "0": {
+      "name": "Inflatable Decoy",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "1": {
+      "name": "Trophy System",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "2": {
+      "name": "Med Box",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "3": {
+      "name": "Tactical Insertion",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "4": {
+      "name": "Comm Scrambler",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "5": {
+      "name": "Heartbeat Sensor",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "6": {
+      "name": "Tactical Camera",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "7": {
+      "name": "Munitions Box",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "8": {
+      "name": "A.C.S.",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "9": {
+      "name": "DDOS",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "10": {
+      "name": "Enhanced Vision Goggles",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "11": {
+      "name": "Recon Drone",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "12": {
+      "name": "Deployable Cover",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "13": {
+      "name": "Dead Silence",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "14": {
+      "name": "Portable Radar",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "15": {
+      "name": "Smoke Airdrop",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "16": {
+      "name": "Suppression Mine",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    },
+    "17": {
+      "name": "Anti-Armor Rounds",
+      "type": "Field Upgrade",
+      "game": "modern-warfare-three"
+    }
+  }

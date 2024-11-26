@@ -115,7 +115,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     let p_attachments;
     let s_attachments;
     const game = "modern-warfare-three-zombies";
-    const primaryWeapon = fetchWeapon("all", "black-ops-six");
+    const primaryWeapon = fetchWeapon("all", "modern-warfare-three");
     //Get Primary Attachments
     if (!primaryWeapon.no_attach) {
       p_attachments = implodeObject(fetchAttachments(primaryWeapon));
@@ -123,7 +123,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     //Get secondary Weapon
     const secondaryWeapon = fetchWeapon(
       "all",
-      "black-ops-six",
+      "modern-warfare-three",
       primaryWeapon.name
     );
     //Get Secondary Attachments

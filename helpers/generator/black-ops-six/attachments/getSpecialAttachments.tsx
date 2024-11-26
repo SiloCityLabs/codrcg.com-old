@@ -5,7 +5,7 @@ const attachmentsList: Record<string, any> = {
   sirin9mm,
 };
 
-export function getSniperAttachments(gun: string, count: number): any {
+export function getSpecialAttachments(gun: string, count: number): any {
   let attachments: any = {};
   const data = attachmentsList[gun];
 

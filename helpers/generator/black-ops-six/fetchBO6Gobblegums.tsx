@@ -7,8 +7,7 @@ import gobblegumLegendaryList from "@/json/black-ops-six/zombies/gobblegum/legen
 import gobblegumUltraList from "@/json/black-ops-six/zombies/gobblegum/ultra.json";
 import gobblegumWhimsicalList from "@/json/black-ops-six/zombies/gobblegum/whimsical.json";
 
-export function fetchBO6Gobblegums() {
-  // Removed async
+export function fetchBO6Gobblegums(): string {
   let count = 0;
   let gobblegum = "";
   const gobblegums = new Set<string>();
@@ -24,7 +23,6 @@ export function fetchBO6Gobblegums() {
     gobblegum = randomListItem(gobblegumList).name;
 
     if (!gobblegums.has(gobblegum)) {
-      // Use Set.has()
       gobblegums.add(gobblegum);
       count++;
     }

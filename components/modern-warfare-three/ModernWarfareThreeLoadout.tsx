@@ -146,7 +146,11 @@ async function fetchLoadoutData(setData, setContainerClass) {
     //Get Primary Attachments
     p_attachments = implodeObject(fetchAttachments(primaryWeapon));
 
-    secondaryWeapon = fetchWeapon("secondary", game);
+    if (vest.name === "Overkill Vest") {
+      secondaryWeapon = fetchWeapon("primary", game, primaryWeapon.name);
+    } else {
+      secondaryWeapon = fetchWeapon("secondary", game);
+    }
     //Verify if secondary weapon has attachments
     if (!secondaryWeapon?.no_attach) {
       s_attachments = implodeObject(fetchAttachments(secondaryWeapon));

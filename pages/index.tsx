@@ -24,14 +24,14 @@ export default function Home() {
         </span>
       </div>
       <Header />
-      <Container fluid>
-        <Row className="justify-content-md-center">
-          <Col xl={3} lg={4} className="text-center">
+      <Container>
+        <Row>
+          <Col xl={3} lg={4} md={6} className="text-center mb-4">
             <GeneratorCard
-              title="Black Ops 6"
+              title="Black Ops VI"
               text=""
               variant="black-ops"
-              btn1Text="MP Generator"
+              btn1Text="Multiplayer Generator"
               link="black-ops-six/generator"
               disabled={false}
               btn2Text="Zombies Generator"
@@ -39,7 +39,7 @@ export default function Home() {
               disabled2={false}
             />
           </Col>
-          <Col xl={3} lg={4} className="text-center">
+          <Col xl={3} lg={4} md={6} className="text-center mb-4">
             <GeneratorCard
               title="Warzone"
               text=""
@@ -48,15 +48,39 @@ export default function Home() {
               disabled={false}
             />
           </Col>
-          <Col xl={3} lg={4} className="text-center">
+          <Col xl={3} lg={4} md={6} className="text-center mb-4">
             <GeneratorCard
               title="Modern Warfare 3 (2023)"
-              text="Coming in 2025"
+              text="Coming during the holidays"
               variant="danger"
+              btn1Text="Multiplayer Generator"
               link="modern-warfare-three/generator"
               disabled={true}
               btn2Text="Zombies Generator"
               link2="modern-warfare-three/zombies-generator"
+              disabled2={true}
+            />
+          </Col>
+          <Col xl={3} lg={4} md={6} className="text-center mb-4">
+            <GeneratorCard
+              title="Modern Warfare 2 (2022)"
+              text="Coming in 2025"
+              variant="danger"
+              btn1Text="Multiplayer Generator"
+              link="modern-warfare-three/generator"
+              disabled={true}
+            />
+          </Col>
+          <Col xl={3} lg={4} md={6} className="text-center mb-4">
+            <GeneratorCard
+              title="Black Ops III"
+              text="Coming during the holidays"
+              variant="black-ops"
+              btn1Text="Multiplayer Generator"
+              link="black-ops-three/generator"
+              disabled={true}
+              btn2Text="Zombies Generator"
+              link2="black-ops-three/zombies-generator"
               disabled2={true}
             />
           </Col>

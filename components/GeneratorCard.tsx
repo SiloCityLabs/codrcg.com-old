@@ -8,12 +8,15 @@ function GeneratorCard(props: CardProps) {
   const btn2IsVisible: boolean = props.link2 ? true : false;
 
   return (
-    <Card style={{ width: "18rem" }} className="mx-auto">
+    <Card
+      style={{ width: "18rem" }}
+      className="mx-auto h-100 d-flex flex-column"
+    >
       <Card.Img variant="top" src="https://placehold.co/100x100" />
-      <Card.Body>
+      <Card.Body className="d-flex flex-column flex-grow-1">
         <Card.Title>{props.title}</Card.Title>
         <Card.Text>{props.text}</Card.Text>
-        <div className="d-grid gap-2">
+        <div className="d-grid gap-2 mt-auto">
           <Button
             variant={props.variant}
             href={props.link}

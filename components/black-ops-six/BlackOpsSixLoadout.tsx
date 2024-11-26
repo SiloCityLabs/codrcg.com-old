@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 //Helpers
-import { implodeObject } from "../helpers/implodeObject";
-import { fetchWeapon } from "../helpers/fetchWeapon";
-import { fetchPerks } from "../helpers/fetchPerks";
-import { fetchStreaks } from "../helpers/fetchStreaks";
+import { implodeObject } from "../../helpers/implodeObject";
+import { fetchWeapon } from "../../helpers/fetchWeapon";
+import { fetchPerks } from "../../helpers/fetchPerks";
+import { fetchStreaks } from "../../helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchWildcard } from "@/helpers/fetchWildcard";
 //Styles
-import "../public/styles/components/Loadout.css";
+import "@/public/styles/components/Loadout.css";
 
 function BlackOpsSixLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
@@ -151,9 +151,10 @@ function BlackOpsSixLoadout() {
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "black-ops-six";
+    let p_attachments;
     let secondaryWeapon;
-    let fieldUpgrade2;
     let s_attachments;
+    let fieldUpgrade2;
     const wildcard = fetchWildcard(game);
     //Figure out primary attachment count
     const primAttachCount = wildcard.name === "Gunfighter" ? 8 : 5;
@@ -165,9 +166,11 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const streaks = fetchStreaks(game, isHighRoller);
     const primaryWeapon = fetchWeapon("primary", game);
     //Get Primary Attachments
-    const p_attachments = implodeObject(
-      fetchAttachments(primaryWeapon, primAttachCount)
-    );
+    if (!primaryWeapon.no_attach) {
+      p_attachments = implodeObject(
+        fetchAttachments(primaryWeapon, primAttachCount)
+      );
+    }
     //Check for overkill
     if (wildcard.name === "Overkill") {
       secondaryWeapon = fetchWeapon("primary", game, primaryWeapon.name);

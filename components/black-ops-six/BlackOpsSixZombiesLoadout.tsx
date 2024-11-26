@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 //Helpers
-import { implodeObject } from "../helpers/implodeObject";
-import { fetchWeapon } from "../helpers/fetchWeapon";
+import { implodeObject } from "../../helpers/implodeObject";
+import { fetchWeapon } from "../../helpers/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchBO6Gobblegums } from "@/helpers/generator/black-ops-six/fetchBO6Gobblegums";
 import { fetchBO6ZombiesMap } from "@/helpers/generator/black-ops-six/fetchBO6ZombiesMap";
 //Styles
-import "../public/styles/components/Loadout.css";
+import "@/public/styles/components/Loadout.css";
 
 function BlackOpsSixZombiesLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
@@ -116,14 +116,15 @@ function BlackOpsSixZombiesLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
+    let p_attachments;
     const game = "black-ops-six-zombies";
     //Primary attachment count
     const primAttachCount = 8;
     const primaryWeapon = fetchWeapon("all", "black-ops-six");
     //Get Primary Attachments
-    const p_attachments = implodeObject(
-      fetchAttachments(primaryWeapon, primAttachCount)
-    );
+    if (!primaryWeapon.no_attach) {
+      p_attachments = implodeObject(fetchAttachments(primaryWeapon));
+    }
     const meleeWeapon = fetchWeapon("melee", "black-ops-six");
     const tacticalEquip = fetchEquipment("tactical", game);
     const lethalEquip = fetchEquipment("lethal", game);

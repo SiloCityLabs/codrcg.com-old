@@ -10,6 +10,18 @@ function Changelog2024() {
         <Row>
           <Col>
             <p>
+              11/30/2024:{" "}
+              <a href="modern-warfare-three/zombies-generator">
+                Modern Warfare Zombies:
+              </a>{" "}
+              Generator is now available!
+            </p>
+            <p>
+              11/29/2024:{" "}
+              <a href="modern-warfare-three/generator">Modern Warfare 3:</a>{" "}
+              Generator is now available!
+            </p>
+            <p>
               11/25/2024:{" "}
               <a href="black-ops-six/zombies-generator">
                 Black Ops VI Zombies:

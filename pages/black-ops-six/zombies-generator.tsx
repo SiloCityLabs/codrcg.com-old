@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-import BlackOpsSixZombiesLoadout from "@/components/BlackOpsSixZombiesLoadout";
+import BlackOpsSixZombiesLoadout from "@/components/black-ops-six/BlackOpsSixZombiesLoadout";
 
 export default function BlackOpsSix() {
   const navLinks = [
@@ -24,7 +24,7 @@ export default function BlackOpsSix() {
           content="call of duty, random class generator, black ops 6, zombies, black ops 6 zombies"
         />
       </Head>
-      <Header className="black-ops-6" navLinks={navLinks} />
+      <Header className="black-ops" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>

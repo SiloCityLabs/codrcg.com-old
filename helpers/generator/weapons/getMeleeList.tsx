@@ -1,10 +1,9 @@
 import bo6List from "@/json/black-ops-six/weapon/melee.json";
 
-export function getMeleeList(game: string) {
-  switch (game) {
-    case "black-ops-six":
-      return bo6List;
-    default:
-      return {};
-  }
+const meleeWeapons: Record<string, any> = {
+  "black-ops-six": bo6List,
+};
+
+export function getMeleeList(game: string): any {
+  return meleeWeapons[game] || {};
 }

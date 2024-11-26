@@ -1,95 +1,65 @@
 {
   "0": {
     "name": "P890",
-    "type": "HANDGUN",
+    "type": "pistol",
     "game": "Modern Warfare 2"
   },
   "1": {
     "name": ".50 GS",
-    "type": "HANDGUN",
+    "type": "pistol",
     "game": "Modern Warfare 2"
   },
   "2": {
     "name": "X12",
-    "type": "HANDGUN",
+    "type": "pistol",
     "game": "Modern Warfare 2"
   },
   "3": {
     "name": "BASILISK",
-    "type": "HANDGUN",
+    "type": "pistol",
     "game": "Modern Warfare 2"
   },
   "4": {
     "name": "FTAC SIEGE",
-    "type": "HANDGUN",
+    "type": "pistol",
     "game": "Modern Warfare 2"
   },
   "5": {
     "name": "GS MAGNA",
-    "type": "HANDGUN",
+    "type": "pistol",
     "game": "Modern Warfare 2"
   },
   "6": {
     "name": "9MM DAEMON",
-    "type": "HANDGUN",
+    "type": "pistol",
     "game": "Modern Warfare 2"
   },
   "7": {
     "name": "X13 AUTO",
-    "type": "HANDGUN",
+    "type": "pistol",
     "game": "Modern Warfare 2"
   },
   "8": {
     "name": "PILA",
-    "type": "LAUNCHER",
+    "type": "launcher",
     "game": "Modern Warfare 2",
     "no_attach": true
   },
   "9": {
     "name": "JOKR",
-    "type": "LAUNCHER",
+    "type": "launcher",
     "game": "Modern Warfare 2",
     "no_attach": true
   },
   "10": {
     "name": "RPG-7",
-    "type": "LAUNCHER",
+    "type": "launcher",
     "game": "Modern Warfare 2",
     "no_attach": true
   },
   "11": {
     "name": "STRELA-P",
-    "type": "LAUNCHER",
-    "game": "Modern Warfare 2",
-    "no_attach": true
-  },
-  "12": {
-    "name": "TONFA",
-    "type": "MELEE",
-    "game": "Modern Warfare 2",
-    "no_attach": true
-  },
-  "13": {
-    "name": "COMBAT KNIFE",
-    "type": "MELEE",
-    "game": "Modern Warfare 2",
-    "no_attach": true
-  },
-  "14": {
-    "name": "DUAL KODACHIS",
-    "type": "MELEE",
-    "game": "Modern Warfare 2",
-    "no_attach": true
-  },
-  "15": {
-    "name": "DUAL KAMAS",
-    "type": "MELEE",
-    "game": "Modern Warfare 2",
-    "no_attach": true
-  },
-  "16": {
-    "name": "PICKAXE",
-    "type": "MELEE",
+    "type": "launcher",
     "game": "Modern Warfare 2",
     "no_attach": true
   }

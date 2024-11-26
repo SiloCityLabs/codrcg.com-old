@@ -1,6 +1,6 @@
 {
   "0": {
-    "name": "BP50",
+    "name": "STG44",
     "type": "assault_rifle",
     "game": "Modern Warfare 3"
   },
@@ -10,206 +10,226 @@
     "game": "Modern Warfare 3"
   },
   "2": {
-    "name": "SVA 545",
-    "type": "assault_rifle",
-    "game": "Modern Warfare 3"
-  },
-  "3": {
     "name": "MTZ-556",
     "type": "assault_rifle",
     "game": "Modern Warfare 3"
   },
-  "4": {
+  "3": {
     "name": "RAM-7",
     "type": "assault_rifle",
     "game": "Modern Warfare 3"
   },
+  "4": {
+    "name": "SVA 545",
+    "type": "assault_rifle",
+    "game": "Modern Warfare 3"
+  },
   "5": {
-    "name": "HOLGER 556",
+    "name": "BP50",
     "type": "assault_rifle",
     "game": "Modern Warfare 3"
   },
   "6": {
-    "name": "MCW",
+    "name": "HOLGER 556",
     "type": "assault_rifle",
     "game": "Modern Warfare 3"
   },
   "7": {
-    "name": "DG-56",
+    "name": "MCW",
     "type": "assault_rifle",
     "game": "Modern Warfare 3"
   },
   "8": {
-    "name": "FR 5.56",
+    "name": "DG-56",
     "type": "assault_rifle",
     "game": "Modern Warfare 3"
   },
   "9": {
-    "name": "SOA SUBVERTER",
-    "type": "Battle Rifle",
+    "name": "FR 5.56",
+    "type": "assault_rifle",
     "game": "Modern Warfare 3"
   },
   "10": {
-    "name": "BAS-B",
-    "type": "Battle Rifle",
+    "name": "DTIR 30-06",
+    "type": "battle_rifle",
     "game": "Modern Warfare 3"
   },
   "11": {
-    "name": "SIDEWINDER",
-    "type": "Battle Rifle",
+    "name": "SOA SUBVERTER",
+    "type": "battle_rifle",
     "game": "Modern Warfare 3"
   },
   "12": {
-    "name": "MTZ-762",
-    "type": "Battle Rifle",
+    "name": "BAS-B",
+    "type": "battle_rifle",
     "game": "Modern Warfare 3"
   },
   "13": {
-    "name": "FJX HORUS",
-    "type": "smg",
+    "name": "SIDEWINDER",
+    "type": "battle_rifle",
     "game": "Modern Warfare 3"
   },
   "14": {
+    "name": "MTZ-762",
+    "type": "battle_rifle",
+    "game": "Modern Warfare 3"
+  },
+  "15": {
     "name": "SUPERI 46",
     "type": "smg",
     "game": "Modern Warfare 3"
   },
-  "15": {
-    "name": "RAM-9",
-    "type": "smg",
-    "game": "Modern Warfare 3"
-  },
   "16": {
-    "name": "AMR9",
+    "name": "Static-HV",
     "type": "smg",
     "game": "Modern Warfare 3"
   },
   "17": {
-    "name": "RIVAL-9",
+    "name": "FJX HORUS",
     "type": "smg",
     "game": "Modern Warfare 3"
   },
   "18": {
-    "name": "HRM-9",
+    "name": "RAM-9",
     "type": "smg",
     "game": "Modern Warfare 3"
   },
   "19": {
-    "name": "STRIKER 9",
+    "name": "AMR9",
     "type": "smg",
     "game": "Modern Warfare 3"
   },
   "20": {
-    "name": "STRIKER",
+    "name": "RIVAL-9",
     "type": "smg",
     "game": "Modern Warfare 3"
   },
   "21": {
-    "name": "WSP-9",
+    "name": "HRM-9",
     "type": "smg",
     "game": "Modern Warfare 3"
   },
   "22": {
-    "name": "WSP SWARM",
+    "name": "STRIKER 9",
     "type": "smg",
     "game": "Modern Warfare 3"
   },
   "23": {
+    "name": "STRIKER",
+    "type": "smg",
+    "game": "Modern Warfare 3"
+  },
+  "24": {
+    "name": "WSP-9",
+    "type": "smg",
+    "game": "Modern Warfare 3"
+  },
+  "25": {
+    "name": "WSP SWARM",
+    "type": "smg",
+    "game": "Modern Warfare 3"
+  },
+  "26": {
     "name": "RECLAIMER 18",
     "type": "shotgun",
     "game": "Modern Warfare 3"
   },
-  "24": {
+  "27": {
     "name": "LOCKWOOD 680",
     "type": "shotgun",
     "game": "Modern Warfare 3"
   },
-  "25": {
+  "28": {
     "name": "HAYMAKER",
     "type": "shotgun",
     "game": "Modern Warfare 3"
   },
-  "26": {
+  "29": {
     "name": "RIVETER",
     "type": "shotgun",
     "game": "Modern Warfare 3"
   },
-  "27": {
+  "30": {
     "name": "BRUEN MK9",
     "type": "lmg",
     "game": "Modern Warfare 3"
   },
-  "28": {
-    "name": "TAQ EVOLVERE",
-    "type": "lmg",
-    "game": "Modern Warfare 3"
-  },
-  "29": {
-    "name": "PULEMYOT 762",
-    "type": "lmg",
-    "game": "Modern Warfare 3"
-  },
-  "30": {
-    "name": "DG-58 LSW",
-    "type": "lmg",
-    "game": "Modern Warfare 3"
-  },
   "31": {
-    "name": "TAQ ERADICATOR",
+    "name": "Kastov Lsw",
     "type": "lmg",
     "game": "Modern Warfare 3"
   },
   "32": {
-    "name": "HOLGER 26",
+    "name": "TAQ EVOLVERE",
     "type": "lmg",
     "game": "Modern Warfare 3"
   },
   "33": {
+    "name": "PULEMYOT 762",
+    "type": "lmg",
+    "game": "Modern Warfare 3"
+  },
+  "34": {
+    "name": "DG-58 LSW",
+    "type": "lmg",
+    "game": "Modern Warfare 3"
+  },
+  "35": {
+    "name": "TAQ ERADICATOR",
+    "type": "lmg",
+    "game": "Modern Warfare 3"
+  },
+  "36": {
+    "name": "HOLGER 26",
+    "type": "lmg",
+    "game": "Modern Warfare 3"
+  },
+  "37": {
     "name": "KAR98K",
     "type": "marksman_rifle",
     "game": "Modern Warfare 3"
   },
-  "34": {
+  "38": {
     "name": "KVD ENFORCER",
     "type": "marksman_rifle",
     "game": "Modern Warfare 3"
   },
-  "35": {
+  "39": {
     "name": "MCW 6.8",
     "type": "marksman_rifle",
     "game": "Modern Warfare 3"
   },
-  "36": {
+  "40": {
     "name": "DM56",
     "type": "marksman_rifle",
     "game": "Modern Warfare 3"
   },
-  "37": {
+  "41": {
     "name": "MTZ INTERCEPTOR",
     "type": "marksman_rifle",
     "game": "Modern Warfare 3"
   },
-  "38": {
+  "42": {
     "name": "XRK STALKER",
     "type": "sniper",
     "game": "Modern Warfare 3"
   },
-  "39": {
+  "43": {
     "name": "MORS",
     "type": "sniper",
     "game": "Modern Warfare 3"
   },
-  "40": {
+  "44": {
     "name": "KATT-AMR",
     "type": "sniper",
     "game": "Modern Warfare 3"
   },
-  "41": {
+  "45": {
     "name": "LONGBOW",
     "type": "sniper",
     "game": "Modern Warfare 3"
   },
-  "42": {
+  "46": {
     "name": "KV INHIBITOR",
     "type": "sniper",
     "game": "Modern Warfare 3"

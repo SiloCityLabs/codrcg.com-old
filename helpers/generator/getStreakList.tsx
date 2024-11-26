@@ -1,10 +1,9 @@
 import bo6List from "@/json/black-ops-six/streaks.json";
 
-export function getStreakList(game: string) {
-  switch (game) {
-    case "black-ops-six":
-      return bo6List;
-    default:
-      return {};
-  }
+const streaks: Record<string, any> = {
+  "black-ops-six": bo6List,
+};
+
+export function getStreakList(game: string): any {
+  return streaks[game] || {};
 }

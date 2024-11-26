@@ -1,25 +1,23 @@
 import { getStreakList } from "@/helpers/generator/getStreakList";
 import { randomListItem } from "./randomListItem";
-import { Streak } from "@/types/Generator";
-//Helpers
-import { implodeObject } from "./implodeObject";
 
-export async function fetchStreaks(
+export function fetchStreaks(
   game: string = "",
   isHighRoller: boolean = false
-) {
-  let count = 0;
-  let streak: Streak;
+): string {
   const streakCount = isHighRoller ? 4 : 3;
-  let streaks: Object = {};
+  const streaks: Record<number, string> = {};
+  const selectedStreaks = new Set<string>();
 
-  while (count < streakCount) {
-    streak = randomListItem(getStreakList(game));
-
-    if (!Object.values(streaks).includes(streak.name)) {
+  while (selectedStreaks.size < streakCount) {
+    const streak = randomListItem(getStreakList(game));
+    if (!selectedStreaks.has(streak.name)) {
       streaks[streak.score] = streak.name;
-      count++;
+      selectedStreaks.add(streak.name);
     }
   }
-  return implodeObject(streaks);
+
+  return Object.entries(streaks)
+    .map(([score, name]) => `${score}: ${name}`)
+    .join(", ");
 }

@@ -76,27 +76,27 @@
   },
   "15": {
     "name": "LACHMANN-762",
-    "type": "Battle Rifle",
+    "type": "battle_rifle",
     "game": "Modern Warfare 2"
   },
   "16": {
     "name": "CRONEN SQUALL",
-    "type": "Battle Rifle",
+    "type": "battle_rifle",
     "game": "Modern Warfare 2"
   },
   "17": {
     "name": "FTAC RECON",
-    "type": "Battle Rifle",
+    "type": "battle_rifle",
     "game": "Modern Warfare 2"
   },
   "18": {
     "name": "TAQ-V",
-    "type": "Battle Rifle",
+    "type": "battle_rifle",
     "game": "Modern Warfare 2"
   },
   "19": {
     "name": "SO-14",
-    "type": "Battle Rifle",
+    "type": "battle_rifle",
     "game": "Modern Warfare 2"
   },
   "20": {
@@ -293,11 +293,5 @@
     "name": "SP-X 80",
     "type": "sniper",
     "game": "Modern Warfare 2"
-  },
-  "59": {
-    "name": "RIOT SHIELD",
-    "type": "Melee",
-    "game": "Modern Warfare 2",
-    "no_attach": true
   }
 }

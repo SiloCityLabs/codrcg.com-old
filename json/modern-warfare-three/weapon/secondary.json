@@ -1,0 +1,41 @@
+{
+  "0": {
+    "name": "RENETTI",
+    "type": "HANDGUN",
+    "game": "Modern Warfare 3"
+  },
+  "1": {
+    "name": "TYR",
+    "type": "HANDGUN",
+    "game": "Modern Warfare 3"
+  },
+  "2": {
+    "name": "WSP STINGER",
+    "type": "HANDGUN",
+    "game": "Modern Warfare 3"
+  },
+  "3": {
+    "name": "STORMENDER",
+    "type": "launcher",
+    "game": "Modern Warfare 3",
+    "no_attach": true
+  },
+  "4": {
+    "name": "RGL-80",
+    "type": "launcher",
+    "game": "Modern Warfare 3",
+    "no_attach": true
+  },
+  "5": {
+    "name": "Torque 35",
+    "type": "launcher",
+    "game": "Modern Warfare 3",
+    "no_attach": true
+  },
+  "6": {
+    "name": "Spear",
+    "type": "launcher",
+    "game": "Modern Warfare 3",
+    "no_attach": true
+  }
+}

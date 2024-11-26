@@ -1,25 +1,19 @@
 import asg89 from "@/json/black-ops-six/attachments/shotgun/asg89.json";
-import marineSp from "@/json/black-ops-six/attachments/shotgun/marineSp.json";
+import marinesp from "@/json/black-ops-six/attachments/shotgun/marineSp.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
-export function getShotgunAttachments(gun: string, count: number) {
+const attachmentsList: Record<string, any> = {
+  asg89,
+  marinesp,
+};
+
+export function getShotgunAttachments(gun: string, count: number): any {
   let attachments: any = {};
-  const data = getGunAttachments(gun);
+  const data = attachmentsList[gun];
 
   if (data) {
     randomizeAttachments(attachments, data, count);
   }
 
   return attachments;
-}
-
-function getGunAttachments(gun: string) {
-  switch (gun) {
-    case "asg89":
-      return asg89;
-    case "marinesp":
-      return marineSp;
-    default:
-      return null;
-  }
 }

@@ -55,9 +55,9 @@ export default function Home() {
               variant="danger"
               link="modern-warfare-three/generator"
               disabled={true}
-              // btn2Text="Zombies Generator"
-              // link2="modern-warfare-three/zombies-generator"
-              // disabled2={true}
+              btn2Text="Zombies Generator"
+              link2="modern-warfare-three/zombies-generator"
+              disabled2={true}
             />
           </Col>
         </Row>

@@ -1,0 +1,72 @@
+{
+    "0": {
+      "name": "Tac Mask",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    },
+    "1": {
+      "name": "Mission Control Comlink",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    },
+    "2": {
+      "name": "Bone Conduction Headset",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    },
+    "3": {
+      "name": "Mag Holster",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    },
+    "4": {
+      "name": "Blacklight Flashlight",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    },
+    "5": {
+      "name": "L/R Detector",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    },
+    "6": {
+      "name": "Threat Identification System",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    },
+    "7": {
+      "name": "Compression Plate",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    },
+    "8": {
+      "name": "Ghost T/V Camo",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    },
+    "9": {
+      "name": "Hijacked IFF Strobe",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    },
+    "10": {
+      "name": "Signal Jammer",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    },
+    "11": {
+      "name": "Data Jacker",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    },
+    "12": {
+      "name": "High-Gain Antenna",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    },
+    "13": {
+      "name": "EOD Padding",
+      "type": "Gear",
+      "game": "modern-warfare-three"
+    }
+}

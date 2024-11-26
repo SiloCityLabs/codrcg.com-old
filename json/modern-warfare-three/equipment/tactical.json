@@ -1,0 +1,67 @@
+{
+    "0": {
+      "name": "Stun Grenade",
+      "type": "Tactical",
+      "game": "modern-warfare-three"
+    },
+    "1": {
+      "name": "Battle Rage",
+      "type": "Tactical",
+      "game": "modern-warfare-three"
+    },
+    "2": {
+      "name": "Smoke Grenade",
+      "type": "Tactical",
+      "game": "modern-warfare-three"
+    },
+    "3": {
+      "name": "Scatter Mine",
+      "type": "Tactical",
+      "game": "modern-warfare-three"
+    },
+    "4": {
+      "name": "Decoy Grenade",
+      "type": "Tactical",
+      "game": "modern-warfare-three"
+    },
+    "5": {
+      "name": "Flash Grenade",
+      "type": "Tactical",
+      "game": "modern-warfare-three"
+    },
+    "6": {
+      "name": "Snapshot Grenade",
+      "type": "Tactical",
+      "game": "modern-warfare-three"
+    },
+    "7": {
+      "name": "Shock Stick",
+      "type": "Tactical",
+      "game": "modern-warfare-three"
+    },
+    "8": {
+      "name": "Stim",
+      "type": "Tactical",
+      "game": "modern-warfare-three"
+    },
+    "9": {
+      "name": "Tear Gas",
+      "type": "Tactical",
+      "game": "modern-warfare-three"
+    },
+    "10": {
+      "name": "EMD Grenade",
+      "type": "Tactical",
+      "game": "modern-warfare-three"
+    },
+    "11": {
+      "name": "EMP Grenade",
+      "type": "Tactical",
+      "game": "modern-warfare-three"
+    },
+    "12": {
+      "name": "EMD Mine",
+      "type": "Tactical",
+      "game": "modern-warfare-three"
+    }
+  }

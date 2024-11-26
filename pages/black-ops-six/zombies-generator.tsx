@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-import BlackOpsSixZombiesLoadout from "@/components/BlackOpsSixZombiesLoadout";
+import BlackOpsSixZombiesLoadout from "@/components/black-ops-six/BlackOpsSixZombiesLoadout";
 
 export default function BlackOpsSix() {
   const navLinks = [

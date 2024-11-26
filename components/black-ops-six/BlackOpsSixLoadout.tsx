@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 //Helpers
-import { implodeObject } from "../helpers/implodeObject";
-import { fetchWeapon } from "../helpers/fetchWeapon";
-import { fetchPerks } from "../helpers/fetchPerks";
-import { fetchStreaks } from "../helpers/fetchStreaks";
+import { implodeObject } from "../../helpers/implodeObject";
+import { fetchWeapon } from "../../helpers/fetchWeapon";
+import { fetchPerks } from "../../helpers/fetchPerks";
+import { fetchStreaks } from "../../helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchWildcard } from "@/helpers/fetchWildcard";
 //Styles
-import "../public/styles/components/Loadout.css";
+import "@/public/styles/components/Loadout.css";
 
 function BlackOpsSixLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");

@@ -25,8 +25,8 @@ export default function Home() {
       </div>
       <Header />
       <Container fluid>
-        <Row className="justify-content-md-center">
-          <Col xl={3} lg={4} className="text-center">
+        <Row>
+          <Col xl={3} lg={4} md={6} className="text-center mb-4">
             <GeneratorCard
               title="Black Ops VI"
               text=""
@@ -39,7 +39,7 @@ export default function Home() {
               disabled2={false}
             />
           </Col>
-          <Col xl={3} lg={4} className="text-center">
+          <Col xl={3} lg={4} md={6} className="text-center mb-4">
             <GeneratorCard
               title="Warzone"
               text=""
@@ -48,7 +48,7 @@ export default function Home() {
               disabled={false}
             />
           </Col>
-          <Col xl={3} lg={4} className="text-center">
+          <Col xl={3} lg={4} md={6} className="text-center mb-4">
             <GeneratorCard
               title="Modern Warfare 3 (2023)"
               text="Coming during the holidays"
@@ -61,7 +61,17 @@ export default function Home() {
               disabled2={false}
             />
           </Col>
-          <Col xl={3} lg={4} className="text-center">
+          <Col xl={3} lg={4} md={6} className="text-center mb-4">
+            <GeneratorCard
+              title="Modern Warfare 2 (2022)"
+              text="Coming in 2025"
+              variant="danger"
+              btn1Text="Multiplayer Generator"
+              link="modern-warfare-three/generator"
+              disabled={true}
+            />
+          </Col>
+          <Col xl={3} lg={4} md={6} className="text-center mb-4">
             <GeneratorCard
               title="Black Ops III"
               text="Coming during the holidays"

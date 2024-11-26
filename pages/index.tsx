@@ -24,7 +24,7 @@ export default function Home() {
         </span>
       </div>
       <Header />
-      <Container fluid>
+      <Container>
         <Row>
           <Col xl={3} lg={4} md={6} className="text-center mb-4">
             <GeneratorCard

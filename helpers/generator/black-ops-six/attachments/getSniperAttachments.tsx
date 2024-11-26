@@ -3,26 +3,19 @@ import lw3a1Frostline from "@/json/black-ops-six/attachments/sniper/lw3a1Frostli
 import svd from "@/json/black-ops-six/attachments/sniper/svd.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
-export function getSniperAttachments(gun: string, count: number) {
+const attachmentsList: Record<string, any> = {
+  lr762,
+  lw3a1frostline: lw3a1Frostline,
+  svd,
+};
+
+export function getSniperAttachments(gun: string, count: number): any {
   let attachments: any = {};
-  const data = getGunAttachments(gun);
+  const data = attachmentsList[gun];
 
   if (data) {
     randomizeAttachments(attachments, data, count);
   }
 
   return attachments;
-}
-
-function getGunAttachments(gun: string) {
-  switch (gun) {
-    case "lr762":
-      return lr762;
-    case "lw3a1frostline":
-      return lw3a1Frostline;
-    case "svd":
-      return svd;
-    default:
-      return null;
-  }
 }

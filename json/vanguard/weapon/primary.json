@@ -1,217 +1,217 @@
 {
-    "0": {
+  "0": {
       "name": "STG44",
       "type": "assault_rifle",
       "game": "vanguard"
-    },
-    "1": {
+  },
+  "1": {
       "name": "Automaton",
       "type": "assault_rifle",
       "game": "vanguard"
-    },
-    "2": {
+  },
+  "2": {
       "name": "Itra Burst",
       "type": "assault_rifle",
       "game": "vanguard"
-    },
-    "3": {
+  },
+  "3": {
       "name": "Bar",
       "type": "assault_rifle",
       "game": "vanguard"
-    },
-    "4": {
+  },
+  "4": {
       "name": "AS44",
       "type": "assault_rifle",
       "game": "vanguard"
-    },
-    "5": {
+  },
+  "5": {
       "name": "NZ-41",
       "type": "assault_rifle",
       "game": "vanguard"
-    },
-    "6": {
+  },
+  "6": {
       "name": "Volk",
       "type": "assault_rifle",
       "game": "vanguard"
-    },
-    "7": {
+  },
+  "7": {
       "name": "Cooper Carbine",
       "type": "assault_rifle",
       "game": "vanguard"
-    },
-    "6": {
+  },
+  "8": {
       "name": "KG M40",
       "type": "assault_rifle",
       "game": "vanguard"
-    },
-    "6": {
+  },
+  "9": {
       "name": "Nikita AVT",
       "type": "assault_rifle",
       "game": "vanguard"
-    },
-    "6": {
+  },
+  "10": {
       "name": "Vargo-S",
       "type": "assault_rifle",
       "game": "vanguard"
-    },
-    "6": {
+  },
+  "11": {
       "name": "EX1",
       "type": "assault_rifle",
       "game": "vanguard"
-    },
-    "6": {
+  },
+  "12": {
       "name": "BP50",
       "type": "assault_rifle",
       "game": "vanguard"
-    },
-    "7": {
+  },
+  "13": {
       "name": "MP-40",
       "type": "smg",
       "game": "vanguard"
-    },
-    "8": {
+  },
+  "14": {
       "name": "Sten",
       "type": "smg",
       "game": "vanguard"
-    },
-    "9": {
+  },
+  "15": {
       "name": "M1928",
       "type": "smg",
       "game": "vanguard"
-    },
-    "10": {
+  },
+  "16": {
       "name": "Owen Gun",
       "type": "smg",
       "game": "vanguard"
-    },
-    "11": {
+  },
+  "17": {
       "name": "Type 100",
       "type": "smg",
       "game": "vanguard"
-    },
-    "12": {
+  },
+  "18": {
       "name": "PPSH-41",
       "type": "smg",
       "game": "vanguard"
-    },
-    "12": {
+  },
+  "19": {
       "name": "Welgun",
       "type": "smg",
       "game": "vanguard"
-    },
-    "12": {
+  },
+  "20": {
       "name": "Armaguerra 43",
       "type": "smg",
       "game": "vanguard"
-    },
-    "12": {
+  },
+  "21": {
       "name": "H4 Blixen",
       "type": "smg",
       "game": "vanguard"
-    },
-    "12": {
+  },
+  "22": {
       "name": "Marco 5",
       "type": "smg",
       "game": "vanguard"
-    },
-    "12": {
+  },
+  "23": {
       "name": "RA 225",
       "type": "smg",
       "game": "vanguard"
-    },
-    "13": {
+  },
+  "24": {
       "name": "Einhorn Revolving",
       "type": "shotgun",
       "game": "vanguard"
-    },
-    "14": {
+  },
+  "25": {
       "name": "Combat Shotgun",
       "type": "shotgun",
       "game": "vanguard"
-    },
-    "14": {
+  },
+  "26": {
       "name": "Gracey Auto",
       "type": "shotgun",
       "game": "vanguard"
-    },
-    "14": {
+  },
+  "27": {
       "name": "Double Barrel",
       "type": "shotgun",
       "game": "vanguard"
-    },
-    "15": {
+  },
+  "28": {
       "name": "Type 99",
       "type": "sniper",
       "game": "vanguard"
-    },
-    "16": {
+  },
+  "29": {
       "name": "3-Line Rifle",
       "type": "sniper",
       "game": "vanguard"
-    },
-    "17": {
+  },
+  "30": {
       "name": "Kar98k",
       "type": "sniper",
       "game": "vanguard"
-    },
-    "17": {
+  },
+  "31": {
       "name": "Gorenko Anti-Tank Rifle",
       "type": "sniper",
       "game": "vanguard"
-    },
-    "18": {
+  },
+  "32": {
       "name": "MG42",
       "type": "lmg",
       "game": "vanguard"
-    },
-    "19": {
+  },
+  "33": {
       "name": "DP27",
       "type": "lmg",
       "game": "vanguard"
-    },
-    "20": {
+  },
+  "34": {
       "name": "Type 11",
       "type": "lmg",
       "game": "vanguard"
-    },
-    "19": {
+  },
+  "35": {
       "name": "Bren",
       "type": "lmg",
       "game": "vanguard"
-    },
-    "19": {
+  },
+  "36": {
       "name": "Whitley",
       "type": "lmg",
       "game": "vanguard"
-    },
-    "19": {
+  },
+  "37": {
       "name": "UGM-8",
       "type": "lmg",
       "game": "vanguard"
-    },
-    "19": {
+  },
+  "38": {
       "name": "Lienna 57",
       "type": "lmg",
       "game": "vanguard"
-    },
-    "21": {
+  },
+  "39": {
       "name": "M1 Garand",
       "type": "marksman_rifle",
       "game": "vanguard"
-    },
-    "22": {
+  },
+  "40": {
       "name": "SVT-40",
       "type": "marksman_rifle",
       "game": "vanguard"
-    },
-    "23": {
+  },
+  "41": {
       "name": "G-43",
       "type": "marksman_rifle",
       "game": "vanguard"
-    },
-    "24": {
+  },
+  "42": {
       "name": "M1916",
       "type": "marksman_rifle",
       "game": "vanguard"
-    }
+  }
 }

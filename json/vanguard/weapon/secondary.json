@@ -1,0 +1,56 @@
+{
+  "0": {
+    "name": "Ratt",
+    "type": "pistol",
+    "game": "vanguard"
+  },
+  "1": {
+    "name": "Top Break",
+    "type": "pistol",
+    "game": "vanguard"
+  },
+  "2": {
+    "name": "1911",
+    "type": "pistol",
+    "game": "vanguard"
+  },
+  "3": {
+    "name": "Klauser",
+    "type": "pistol",
+    "game": "vanguard"
+  },
+  "4": {
+    "name": "Machine Pistol",
+    "type": "pistol",
+    "game": "vanguard"
+  },
+  "5": {
+    "name": "Valois Revolver",
+    "type": "pistol",
+    "game": "vanguard"
+  },
+  "6": {
+    "name": "M1 Bazooka",
+    "type": "launcher",
+    "game": "vanguard",
+    "no_attach": true
+  },
+  "7": {
+    "name": "Panzerschreck",
+    "type": "launcher",
+    "game": "vanguard",
+    "no_attach": true
+  },
+  "8": {
+    "name": "Panzerfaust",
+    "type": "launcher",
+    "game": "vanguard",
+    "no_attach": true
+  },
+  "9": {
+    "name": "Mk11 Launcher",
+    "type": "launcher",
+    "game": "vanguard",
+    "no_attach": true
+  }
+}

@@ -8,9 +8,7 @@
   background: #F96800 !important;
 }
 
-#cod-header.black-ops a,
-#cod-header.warzone a,
-#cod-header.modern-warfare a {
+#cod-header a {
   color: white !important;
 }
 
@@ -20,4 +18,8 @@
 
 #cod-header.modern-warfare {
   background: #DC3545 !important;
+}
+
+#cod-header.mw2 {
+  background: #79C22B !important;
 }

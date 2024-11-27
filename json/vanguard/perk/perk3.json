@@ -1,0 +1,32 @@
+{
+  "0": {
+    "name": "Double Time",
+    "type": "Perk 3",
+    "game": "vanguard"
+  },
+  "1": {
+    "name": "Demolition",
+    "type": "Perk 3",
+    "game": "vanguard"
+  },
+  "2": {
+    "name": "Lightweight",
+    "type": "Perk 3",
+    "game": "vanguard"
+  },
+  "3": {
+    "name": "Overkill",
+    "type": "Perk 3",
+    "game": "vanguard"
+  },
+  "4": {
+    "name": "Tactician",
+    "type": "Perk 3",
+    "game": "vanguard"
+  },
+  "5": {
+    "name": "Scavenger",
+    "type": "Perk 3",
+    "game": "vanguard"
+  }
+}

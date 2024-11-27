@@ -1,0 +1,32 @@
+{
+    "0": {
+      "name": "Fortified",
+      "type": "Perk 1",
+      "game": "vanguard"
+    },
+    "1": {
+      "name": "Survival Training",
+      "type": "Perk 1",
+      "game": "vanguard"
+    },
+    "2": {
+      "name": "Ninja",
+      "type": "Perk 1",
+      "game": "vanguard"
+    },
+    "3": {
+      "name": "Dauntless",
+      "type": "Perk 1",
+      "game": "vanguard"
+    },
+    "4": {
+      "name": "Ghost",
+      "type": "Perk 1",
+      "game": "vanguard"
+    },
+    "5": {
+      "name": "Cold Blooded",
+      "type": "Perk 1",
+      "game": "vanguard"
+    }
+  }

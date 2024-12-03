@@ -212,27 +212,24 @@
         "3": "DEMO Flak Comb"
     },
     "stock": {
-        "0": "MTZ LiteStrike",
-        "1": "MTZ Marauder Stock",
-        "2": "Rival DHM IV",
-        "3": "MTZ Stockless Mod"
+        "0": "Ultra-Light Stock Pad",
+        "1": "Hunker-5 Stock Pad",
+        "2": "HVS 3.4 Pad",
+        "3": "Motion-Tac Pad"
     },
     "laser": {
         "0": "SL Razorhawk Laser Light",
-        "1": "1mW Laser Box",
-        "2": "Canted Vibro-Dot 7",
-        "3": "STOVL DR Laser Box",
+        "1": "STOVL DR Laser Box",
+        "2": "1mW Laser Box",
+        "3": "Corvus PEQ Beam-5",
         "4": "FTAC Grimline Laser",
-        "5": "Corvus PEQ Beam-5",
-        "6": "Luminate-44",
-        "7": "FSS-OLE-V Laser",
-        "8": "Schlager PEQ Box IV",
-        "9": "CS15 Scarlet Box Laser",
-        "10": "Corio LAZ-44 v3",
-        "11": "PRO Sapphire Box Laser",
-        "12": "SZ 1mW PEQ",
-        "13": "Verdant Hook Box Laser",
-        "14": "DXS Flash 90"
+        "5": "Luminate-44",
+        "6": "Canted Vibro-Dot 7",
+        "7": "Corio LAZ-44 v3",
+        "8": "FSS-OLE-V Laser",
+        "9": "SZ 1mW PEQ",
+        "10": "Schlager PEQ Box IV",
+        "11": "DXS Flash 90"
     },
     "ammunition": {
         "0": "5.56 NATO Low Grain Rounds",
@@ -243,7 +240,6 @@
         "5": "5.56 Frangible",
         "6": "5.56 NATO Round Nose",
         "7": "5.56 NATO Mono",
-        "8": "5.56 NATO High Grain Rounds",
-        "9": "5.56 Incendiary"
+        "8": "5.56 NATO High Grain Rounds"
     }
 }

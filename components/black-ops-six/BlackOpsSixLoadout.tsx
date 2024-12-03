@@ -11,8 +11,6 @@ import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchWildcard } from "@/helpers/fetchWildcard";
 //Styles
 import "@/public/styles/components/Loadout.css";
-//Types
-import { Weapon } from "@/types/Generator";
 
 function BlackOpsSixLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
@@ -198,14 +196,14 @@ async function fetchLoadoutData(setData, setContainerClass) {
     //Verify if secondary weapon has attachments
     if (!weapons.secondary.weapon?.no_attach) {
       weapons.secondary.attachments = implodeObject(
-        fetchAttachments(weapons.secondary?.weapon)
+        fetchAttachments(weapons.secondary.weapon)
       );
     }
     let equipment = {
       tactical: fetchEquipment("tactical", game),
       lethal: fetchEquipment("lethal", game),
       fieldUpgrade: fetchEquipment("field_upgrade", game),
-      fieldUpgrade2: {},
+      fieldUpgrade2: { name: "", type: "" },
     };
     if (wildcard.name === "Prepper") {
       //Loop to make sure we don't get the same field upgrade

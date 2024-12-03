@@ -33,5 +33,11 @@
       "name": "Shields Up",
       "type": "Rare",
       "game": "black-ops-six"
+    },
+    "7": {
+      "name": "Power Keg",
+      "type": "Rare",
+      "game": "black-ops-six",
+      "isDLC": true
     }
   }

@@ -40,6 +40,14 @@ export type ZombiesMap = {
     name: string;
     type: string;
     game: string;
+    isDLC: boolean;
+}
+
+export type AmmoMod = {
+    name: string;
+    type: string;
+    game: string;
+    isDLC: boolean;
 }
 
 export type MW3Vest = {

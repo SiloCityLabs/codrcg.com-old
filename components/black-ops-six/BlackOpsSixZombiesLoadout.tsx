@@ -8,18 +8,26 @@ import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchBO6Gobblegums } from "@/helpers/generator/black-ops-six/fetchBO6Gobblegums";
 import { fetchBO6ZombiesMap } from "@/helpers/generator/black-ops-six/fetchBO6ZombiesMap";
+import { fetchBO6AmmoMod } from "@/helpers/generator/black-ops-six/fetchBO6AmmoMod";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
 function BlackOpsSixZombiesLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
-    primaryWeapon: { name: "", type: "", game: "", no_attach: false },
-    p_attachments: "",
-    meleeWeapon: { name: "", type: "", game: "" },
-    tacticalEquip: { name: "", type: "" },
-    lethalEquip: { name: "", type: "" },
-    fieldUpgrade: { name: "", type: "" },
+    weapons: {
+      primary: {
+        weapon: { name: "", type: "", game: "", no_attach: false },
+        attachments: "",
+        ammoMod: "",
+      },
+      melee: { name: "", type: "", game: "" },
+    },
+    equipment: {
+      tacticalEquip: { name: "", type: "" },
+      lethalEquip: { name: "", type: "" },
+      fieldUpgrade: { name: "", type: "" },
+    },
     gobblegum: "",
     zombieMap: "",
   });
@@ -32,16 +40,7 @@ function BlackOpsSixZombiesLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const {
-    primaryWeapon,
-    p_attachments,
-    meleeWeapon,
-    tacticalEquip,
-    lethalEquip,
-    fieldUpgrade,
-    gobblegum,
-    zombieMap,
-  } = data;
+  const { weapons, equipment, gobblegum, zombieMap } = data;
 
   return (
     <>
@@ -52,9 +51,15 @@ function BlackOpsSixZombiesLoadout() {
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="6" className="text-center">
             <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">{primaryWeapon.name}</span>
+            <span className="text-muted fs-6">
+              {weapons.primary.weapon.name}
+            </span>
             <br />
-            {primaryWeapon.no_attach ? (
+            <span className="fw-bolder fs-5">Ammo Mod:</span>
+            <br />
+            <span className="text-muted fs-6">{weapons.primary.ammoMod}</span>
+            <br />
+            {weapons.primary.weapon.no_attach ? (
               <>
                 <span className="fw-bolder fs-5">Primary Attachments: </span>
                 <br />
@@ -64,7 +69,9 @@ function BlackOpsSixZombiesLoadout() {
               <>
                 <span className="fw-bolder fs-5">Primary Attachments:</span>
                 <br />
-                <span className="text-muted fs-6">{p_attachments}</span>
+                <span className="text-muted fs-6">
+                  {weapons.primary.attachments}
+                </span>
               </>
             )}
           </Col>
@@ -73,22 +80,28 @@ function BlackOpsSixZombiesLoadout() {
         <Row className="justify-content-md-center mb-4">
           <Col xs md="4" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Melee:</span> <br />
-            <span className="text-muted fs-6">{meleeWeapon.name}</span>
+            <span className="text-muted fs-6">{weapons.melee.name}</span>
           </Col>
           <Col xs md="4" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">{fieldUpgrade.name}</span>
+            <span className="text-muted fs-6">
+              {equipment.fieldUpgrade.name}
+            </span>
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="4" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">{tacticalEquip.name}</span>
+            <span className="text-muted fs-6">
+              {equipment.tacticalEquip.name}
+            </span>
           </Col>
           <Col xs md="4" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{lethalEquip.name}</span>
+            <span className="text-muted fs-6">
+              {equipment.lethalEquip.name}
+            </span>
           </Col>
         </Row>
         <hr />
@@ -116,29 +129,32 @@ function BlackOpsSixZombiesLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
-    let p_attachments;
     const game = "black-ops-six-zombies";
-    //Primary attachment count
-    const primAttachCount = 8;
-    const primaryWeapon = fetchWeapon("all", "black-ops-six");
+    const weapons = {
+      primary: {
+        weapon: fetchWeapon("all", "black-ops-six"),
+        attachments: "",
+        ammoMod: fetchBO6AmmoMod(),
+      },
+      melee: fetchWeapon("melee", "black-ops-six"),
+    };
     //Get Primary Attachments
-    if (!primaryWeapon.no_attach) {
-      p_attachments = implodeObject(fetchAttachments(primaryWeapon));
+    if (!weapons.primary.weapon.no_attach) {
+      weapons.primary.attachments = implodeObject(
+        fetchAttachments(weapons.primary.weapon)
+      );
     }
-    const meleeWeapon = fetchWeapon("melee", "black-ops-six");
-    const tacticalEquip = fetchEquipment("tactical", game);
-    const lethalEquip = fetchEquipment("lethal", game);
-    const fieldUpgrade = fetchEquipment("field_upgrade", game);
+    const equipment = {
+      tacticalEquip: fetchEquipment("tactical", game),
+      lethalEquip: fetchEquipment("lethal", game),
+      fieldUpgrade: fetchEquipment("field_upgrade", game),
+    };
     const gobblegum = fetchBO6Gobblegums();
     const zombieMap = fetchBO6ZombiesMap();
 
     setData({
-      primaryWeapon,
-      p_attachments,
-      meleeWeapon,
-      tacticalEquip,
-      lethalEquip,
-      fieldUpgrade,
+      weapons,
+      equipment,
       gobblegum,
       zombieMap,
     });

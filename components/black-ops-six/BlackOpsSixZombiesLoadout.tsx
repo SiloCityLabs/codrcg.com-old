@@ -24,8 +24,8 @@ function BlackOpsSixZombiesLoadout() {
       melee: { name: "", type: "", game: "" },
     },
     equipment: {
-      tacticalEquip: { name: "", type: "" },
-      lethalEquip: { name: "", type: "" },
+      tactial: { name: "", type: "" },
+      lethal: { name: "", type: "" },
       fieldUpgrade: { name: "", type: "" },
     },
     gobblegum: "",
@@ -93,15 +93,11 @@ function BlackOpsSixZombiesLoadout() {
         <Row className="justify-content-md-center mb-4">
           <Col xs md="4" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">
-              {equipment.tacticalEquip.name}
-            </span>
+            <span className="text-muted fs-6">{equipment.tactial.name}</span>
           </Col>
           <Col xs md="4" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">
-              {equipment.lethalEquip.name}
-            </span>
+            <span className="text-muted fs-6">{equipment.lethal.name}</span>
           </Col>
         </Row>
         <hr />
@@ -145,8 +141,8 @@ async function fetchLoadoutData(setData, setContainerClass) {
       );
     }
     const equipment = {
-      tacticalEquip: fetchEquipment("tactical", game),
-      lethalEquip: fetchEquipment("lethal", game),
+      tactial: fetchEquipment("tactical", game),
+      lethal: fetchEquipment("lethal", game),
       fieldUpgrade: fetchEquipment("field_upgrade", game),
     };
     const gobblegum = fetchBO6Gobblegums();

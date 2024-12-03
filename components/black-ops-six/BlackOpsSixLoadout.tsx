@@ -11,22 +11,32 @@ import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchWildcard } from "@/helpers/fetchWildcard";
 //Styles
 import "@/public/styles/components/Loadout.css";
+//Types
+import { Weapon } from "@/types/Generator";
 
 function BlackOpsSixLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
     perks: null,
     streaks: null,
-    primaryWeapon: { name: "", type: "", game: "", no_attach: false },
-    p_attachments: "",
-    secondaryWeapon: { name: "", type: "", game: "", no_attach: false },
-    s_attachments: "",
-    meleeWeapon: { name: "", type: "", game: "" },
-    tacticalEquip: { name: "", type: "" },
-    lethalEquip: { name: "", type: "" },
-    fieldUpgrade: { name: "", type: "" },
+    weapons: {
+      primary: {
+        weapon: { name: "", type: "", game: "", no_attach: false },
+        attachments: "",
+      },
+      secondary: {
+        weapon: { name: "", type: "", game: "", no_attach: false },
+        attachments: "",
+      },
+      melee: { name: "", type: "", game: "" },
+    },
+    equipment: {
+      tactical: { name: "", type: "" },
+      lethal: { name: "", type: "" },
+      fieldUpgrade: { name: "", type: "" },
+      fieldUpgrade2: { name: "", type: "" },
+    },
     wildcard: { name: "", type: "" },
-    fieldUpgrade2: { name: "", type: "" },
   });
 
   useEffect(() => {
@@ -37,20 +47,7 @@ function BlackOpsSixLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const {
-    perks,
-    streaks,
-    primaryWeapon,
-    p_attachments,
-    secondaryWeapon,
-    s_attachments,
-    meleeWeapon,
-    tacticalEquip,
-    lethalEquip,
-    fieldUpgrade,
-    wildcard,
-    fieldUpgrade2,
-  } = data;
+  const { perks, streaks, weapons, equipment, wildcard } = data;
 
   return (
     <>
@@ -61,9 +58,11 @@ function BlackOpsSixLoadout() {
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">{primaryWeapon.name}</span>
+            <span className="text-muted fs-6">
+              {weapons.primary.weapon.name}
+            </span>
             <br />
-            {primaryWeapon.no_attach ? (
+            {weapons.primary.weapon.no_attach ? (
               <>
                 <span className="fw-bolder fs-5">Primary Attachments: </span>
                 <br />
@@ -73,15 +72,19 @@ function BlackOpsSixLoadout() {
               <>
                 <span className="fw-bolder fs-5">Primary Attachments:</span>
                 <br />
-                <span className="text-muted fs-6">{p_attachments}</span>
+                <span className="text-muted fs-6">
+                  {weapons.primary.attachments}
+                </span>
               </>
             )}
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Secondary:</span> <br />
-            <span className="text-muted fs-6">{secondaryWeapon.name}</span>
+            <span className="text-muted fs-6">
+              {weapons.secondary.weapon.name}
+            </span>
             <br />
-            {secondaryWeapon.no_attach ? (
+            {weapons.secondary.weapon.no_attach ? (
               <>
                 <span className="fw-bolder fs-5">Secondary Attachments: </span>
                 <br />
@@ -91,24 +94,26 @@ function BlackOpsSixLoadout() {
               <>
                 <span className="fw-bolder fs-5">Secondary Attachments:</span>
                 <br />
-                <span className="text-muted fs-6">{s_attachments}</span>
+                <span className="text-muted fs-6">
+                  {weapons.secondary.attachments}
+                </span>
               </>
             )}
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Melee:</span> <br />
-            <span className="text-muted fs-6">{meleeWeapon.name}</span>
+            <span className="text-muted fs-6">{weapons.melee.name}</span>
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">{tacticalEquip.name}</span>
+            <span className="text-muted fs-6">{equipment.tactical.name}</span>
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{lethalEquip.name}</span>
+            <span className="text-muted fs-6">{equipment.lethal.name}</span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Perks:</span> <br />
@@ -119,11 +124,16 @@ function BlackOpsSixLoadout() {
         <Row className="mb-5">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">{fieldUpgrade.name}</span>
+            <span className="text-muted fs-6">
+              {equipment.fieldUpgrade.name}
+            </span>
             {wildcard.name === "Prepper" && (
               <>
                 <br />
-                <span className="text-muted fs-6"> {fieldUpgrade2.name}</span>
+                <span className="text-muted fs-6">
+                  {" "}
+                  {equipment.fieldUpgrade2.name}
+                </span>
               </>
             )}
           </Col>
@@ -151,10 +161,6 @@ function BlackOpsSixLoadout() {
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "black-ops-six";
-    let p_attachments;
-    let secondaryWeapon;
-    let s_attachments;
-    let fieldUpgrade2;
     const wildcard = fetchWildcard(game);
     //Figure out primary attachment count
     const primAttachCount = wildcard.name === "Gunfighter" ? 8 : 5;
@@ -164,33 +170,49 @@ async function fetchLoadoutData(setData, setContainerClass) {
 
     const perks = fetchPerks(game, isPerkGreed);
     const streaks = fetchStreaks(game, isHighRoller);
-    const primaryWeapon = fetchWeapon("primary", game);
+    let weapons = {
+      primary: {
+        weapon: fetchWeapon("primary", game),
+        attachments: "",
+      },
+      secondary: {
+        weapon: fetchWeapon("secondary", game),
+        attachments: "",
+      },
+      melee: fetchWeapon("melee", game),
+    };
     //Get Primary Attachments
-    if (!primaryWeapon.no_attach) {
-      p_attachments = implodeObject(
-        fetchAttachments(primaryWeapon, primAttachCount)
+    if (!weapons.primary.weapon.no_attach) {
+      weapons.primary.attachments = implodeObject(
+        fetchAttachments(weapons.primary.weapon, primAttachCount)
       );
     }
     //Check for overkill
     if (wildcard.name === "Overkill") {
-      secondaryWeapon = fetchWeapon("primary", game, primaryWeapon.name);
-    } else {
-      secondaryWeapon = fetchWeapon("secondary", game);
+      weapons.secondary.weapon = fetchWeapon(
+        "primary",
+        game,
+        weapons.primary.weapon.name
+      );
     }
     //Verify if secondary weapon has attachments
-    if (!secondaryWeapon.no_attach) {
-      s_attachments = implodeObject(fetchAttachments(secondaryWeapon));
+    if (!weapons.secondary.weapon?.no_attach) {
+      weapons.secondary.attachments = implodeObject(
+        fetchAttachments(weapons.secondary?.weapon)
+      );
     }
-    const meleeWeapon = fetchWeapon("melee", game);
-    const tacticalEquip = fetchEquipment("tactical", game);
-    const lethalEquip = fetchEquipment("lethal", game);
-    const fieldUpgrade = fetchEquipment("field_upgrade", game);
+    let equipment = {
+      tactical: fetchEquipment("tactical", game),
+      lethal: fetchEquipment("lethal", game),
+      fieldUpgrade: fetchEquipment("field_upgrade", game),
+      fieldUpgrade2: {},
+    };
     if (wildcard.name === "Prepper") {
       //Loop to make sure we don't get the same field upgrade
       while (true) {
-        fieldUpgrade2 = fetchEquipment("field_upgrade", game);
+        equipment.fieldUpgrade2 = fetchEquipment("field_upgrade", game);
 
-        if (fieldUpgrade.name !== fieldUpgrade2.name) {
+        if (equipment.fieldUpgrade.name !== equipment.fieldUpgrade2.name) {
           break;
         }
       }
@@ -199,16 +221,9 @@ async function fetchLoadoutData(setData, setContainerClass) {
     setData({
       perks,
       streaks,
-      primaryWeapon,
-      p_attachments,
-      secondaryWeapon,
-      s_attachments,
-      meleeWeapon,
-      tacticalEquip,
-      lethalEquip,
-      fieldUpgrade,
+      weapons,
+      equipment,
       wildcard,
-      fieldUpgrade2,
     });
     setContainerClass("");
   } catch (error: any) {

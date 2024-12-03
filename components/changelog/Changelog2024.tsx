@@ -10,6 +10,21 @@ function Changelog2024() {
         <Row>
           <Col>
             <p>
+              12/6/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
+              Added Season 01 reloaded perk reflexes to the generator
+            </p>
+            <p>
+              12/5/2024:{" "}
+              <a href="black-ops-6/zombies-generator">Black Ops VI Zombies:</a>{" "}
+              Added Citadelle Des Morts
+            </p>
+            <p>
+              12/4/2024:{" "}
+              <a href="black-ops-6/zombies-generator">Black Ops VI Zombies:</a>{" "}
+              Added season 01 reloaded gobblegums &amp; tesla storm field
+              upgrade
+            </p>
+            <p>
               11/30/2024:{" "}
               <a href="modern-warfare-three/zombies-generator">
                 Modern Warfare Zombies:

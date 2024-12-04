@@ -1,61 +1,61 @@
 {
-    "optic": {
-        "0": "Remuda Mini Reflex",
-        "1": "Otero Micro Dot",
-        "2": "Kepler Microflex",
-        "3": "Merlin Mini",
-        "4": "PrismaTech Reflex",
-        "5": "Volzhskiy Reflex",
-        "6": "Dobrych MF Reflex",
-        "7": "Accu-Spot Reflex",
-        "8": "K&S Red Dot",
-        "9": "Kepler Red Dot",
-        "10": "Otero Red Dot",
-        "11": "OM3 '92 Holo",
-        "12": "Accu-Spot Ultra Holo",
-        "13": "Jason Armory 2x",
-        "14": "Willis 3x",
-        "15": "K&S Thermal Holo",
-        "16": "Pinpoint Hybrid"
-    },
-    "muzzle": {
-        "0": "Suppressor",
-        "1": "Full Choke",
-        "2": "Modified Choke",
-        "3": "Muzzle Brake"
-    },
-    "barrel": {
-        "0": "Long Barrel",
-        "1": "Heavy Barrel",
-        "2": "Reinforced Barrel",
-        "3": "Combat Barrel",
-        "4": "Quick Load Barrel"
-    },
-    "underbarrel": {
-        "0": "Weighted Foregrip",
-        "1": "Lightweight Foregrip",
-        "2": "Precision Foregrip",
-        "3": "Ranger Foregrip"
-    },
-    "stock": {
-        "0": "Infiltrator Stock",
-        "1": "Quickdraw Stock",
-        "2": "Agility Stock",
-        "3": "Ergonomic Stock",
-        "4": "Combat Stock",
-        "5": "Balanced Stock",
-        "6": "Light Stock"
-    },
-    "laser": {
-        "0": "Steady Aim Laser",
-        "1": "Fast Motion Laser",
-        "2": "Tactical Laser",
-        "3": "Strelok Laser",
-        "4": "Target Laser"
-    },
-    "fire_mods": {
-        "0": "Rapid Fire",
-        "1": "12 Gauge Slug",
-        "2": "12 Gauge Dragon's Breath"
-    }
+    "optic": [
+        "Remuda Mini Reflex",
+        "Otero Micro Dot",
+        "Kepler Microflex",
+        "Merlin Mini",
+        "PrismaTech Reflex",
+        "Volzhskiy Reflex",
+        "Dobrych MF Reflex",
+        "Accu-Spot Reflex",
+        "K&S Red Dot",
+        "Kepler Red Dot",
+        "Otero Red Dot",
+        "OM3 '92 Holo",
+        "Accu-Spot Ultra Holo",
+        "Jason Armory 2x",
+        "Willis 3x",
+        "K&S Thermal Holo",
+        "Pinpoint Hybrid"
+    ],
+    "muzzle": [
+        "Suppressor",
+        "Full Choke",
+        "Modified Choke",
+        "Muzzle Brake"
+    ],
+    "barrel": [
+        "Long Barrel",
+        "Heavy Barrel",
+        "Reinforced Barrel",
+        "Combat Barrel",
+        "Quick Load Barrel"
+    ],
+    "underbarrel": [
+        "Weighted Foregrip",
+        "Lightweight Foregrip",
+        "Precision Foregrip",
+        "Ranger Foregrip"
+    ],
+    "stock": [
+        "Infiltrator Stock",
+        "Quickdraw Stock",
+        "Agility Stock",
+        "Ergonomic Stock",
+        "Combat Stock",
+        "Balanced Stock",
+        "Light Stock"
+    ],
+    "laser": [
+        "Steady Aim Laser",
+        "Fast Motion Laser",
+        "Tactical Laser",
+        "Strelok Laser",
+        "Target Laser"
+    ],
+    "fire_mods": [
+        "Rapid Fire",
+        "12 Gauge Slug",
+        "12 Gauge Dragon's Breath"
+    ]
 }

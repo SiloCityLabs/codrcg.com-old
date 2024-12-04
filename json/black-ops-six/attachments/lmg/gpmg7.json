@@ -1,81 +1,81 @@
 {
-    "optic": {
-        "0": "Kepler Microflex",
-        "1": "PrismaTech Reflex",
-        "2": "Volzhskiy Reflex",
-        "3": "Merlin Reflex",
-        "4": "Dobrych MF Reflex",
-        "5": "K&S Red Dot",
-        "6": "Kepler Red Dot",
-        "7": "Otero Red Dot",
-        "8": "OM3 '92 Holo",
-        "9": "Pinpoint Holoscout",
-        "10": "Accu-Spot Ultra Holo",
-        "11": "Jason Armory 2x",
-        "12": "Willis 3x",
-        "13": "PrismaTech 4x",
-        "14": "Dobrych 4x",
-        "15": "K&S Thermal Holo",
-        "16": "Pinpoint Hybrid",
-        "17": "PrismaPoint Hybrid",
-        "18": "R&K Multizoom",
-        "19": "Remuda Range Finder",
-        "20": "VMF Variable Scope",
-        "21": "Redwell Custom Zoom",
-        "22": "Otero Thermal 2x"
-    },
-    "muzzle": {
-        "0": "Suppressor",
-        "1": "Compensator",
-        "2": "Muzzle Brake",
-        "3": "Ported Compensator"
-    },
-    "barrel": {
-        "0": "Gain-Twist Barrel",
-        "1": "Long Barrel",
-        "2": "Reinforced Barrel",
-        "3": "Short Barrel",
-        "4": "CHF Barrel"
-    },
-    "underbarrel": {
-        "0": "Vertical Foregrip",
-        "1": "Lightweight Foregrip",
-        "2": "Marksman Foregrip",
-        "3": "Precision Foregrip",
-        "4": "Ranger Foregrip",
-        "5": "Crossbar"
-    },
-    "magazine": {
-        "0": "Extended Mag I",
-        "1": "Extended Mag II",
-        "2": "Extended Mag III",
-        "3": "Extended Mag IV"
-    },
-    "rear_grip": {
-        "0": "Quickdraw Grip",
-        "1": "Assault Grip",
-        "2": "Commando Grip",
-        "3": "Ergonomic Grip",
-        "4": "CQB Grip"
-    },
-    "stock": {
-        "0": "Light Stock",
-        "1": "Infiltrator Stock",
-        "2": "Heavy Stock",
-        "3": "Balanced Stock",
-        "4": "Combat Stock"
-    },
-    "laser": {
-        "0": "Steady Aim Laser",
-        "1": "Fast Motion Laser",
-        "2": "Tactical Laser",
-        "3": "Strelok Laser",
-        "4": "Target Laser"
-    },
-    "fire_mods": {
-        "0": "Rapid Fire",
-        "1": "7.62 NATO Overpressured",
-        "2": "Recoil Springs",
-        "3": "7.62 NATO FMJ"
-    }
+    "optic": [
+        "Kepler Microflex",
+        "PrismaTech Reflex",
+        "Volzhskiy Reflex",
+        "Merlin Reflex",
+        "Dobrych MF Reflex",
+        "K&S Red Dot",
+        "Kepler Red Dot",
+        "Otero Red Dot",
+        "OM3 '92 Holo",
+        "Pinpoint Holoscout",
+        "Accu-Spot Ultra Holo",
+        "Jason Armory 2x",
+        "Willis 3x",
+        "PrismaTech 4x",
+        "Dobrych 4x",
+        "K&S Thermal Holo",
+        "Pinpoint Hybrid",
+        "PrismaPoint Hybrid",
+        "R&K Multizoom",
+        "Remuda Range Finder",
+        "VMF Variable Scope",
+        "Redwell Custom Zoom",
+        "Otero Thermal 2x"
+    ],
+    "muzzle": [
+        "Suppressor",
+        "Compensator",
+        "Muzzle Brake",
+        "Ported Compensator"
+    ],
+    "barrel": [
+        "Gain-Twist Barrel",
+        "Long Barrel",
+        "Reinforced Barrel",
+        "Short Barrel",
+        "CHF Barrel"
+    ],
+    "underbarrel": [
+        "Vertical Foregrip",
+        "Lightweight Foregrip",
+        "Marksman Foregrip",
+        "Precision Foregrip",
+        "Ranger Foregrip",
+        "Crossbar"
+    ],
+    "magazine": [
+        "Extended Mag I",
+        "Extended Mag II",
+        "Extended Mag III",
+        "Extended Mag IV"
+    ],
+    "rear_grip": [
+        "Quickdraw Grip",
+        "Assault Grip",
+        "Commando Grip",
+        "Ergonomic Grip",
+        "CQB Grip"
+    ],
+    "stock": [
+        "Light Stock",
+        "Infiltrator Stock",
+        "Heavy Stock",
+        "Balanced Stock",
+        "Combat Stock"
+    ],
+    "laser": [
+        "Steady Aim Laser",
+        "Fast Motion Laser",
+        "Tactical Laser",
+        "Strelok Laser",
+        "Target Laser"
+    ],
+    "fire_mods": [
+        "Rapid Fire",
+        "7.62 NATO Overpressured",
+        "Recoil Springs",
+        "7.62 NATO FMJ"
+    ]
 }

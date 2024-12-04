@@ -6,12 +6,14 @@ import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
+import { fetchClassName } from "@/helpers/fetchClassName";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
 function ModernWarfareThreeZombiesLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
+    randClassName: "",
     weapons: {
       primary: {
         weapon: { name: "", type: "", game: "", no_attach: false },
@@ -38,7 +40,7 @@ function ModernWarfareThreeZombiesLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { weapons, equipment } = data;
+  const { randClassName, weapons, equipment } = data;
 
   return (
     <>
@@ -46,6 +48,7 @@ function ModernWarfareThreeZombiesLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
+        <h3 className="text-center mb-5">"{randClassName}"</h3>
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="6" className="text-center">
             <span className="fw-bolder fs-5">Primary:</span> <br />
@@ -124,6 +127,7 @@ function ModernWarfareThreeZombiesLoadout() {
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "modern-warfare-three-zombies";
+    const randClassName = fetchClassName();
     let weapons = {
       primary: {
         weapon: fetchWeapon("all", "modern-warfare-three"),
@@ -161,6 +165,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     };
 
     setData({
+      randClassName,
       weapons,
       equipment,
     });

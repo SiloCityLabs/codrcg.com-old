@@ -8,12 +8,14 @@ import { fetchPerks } from "@/helpers/generator/modern-warfare-three/fetchPerks"
 import { fetchStreaks } from "@/helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
+import { fetchClassName } from "@/helpers/fetchClassName";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
 function ModernWarfareThree() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
+    randClassName: "",
     perks: null,
     streaks: null,
     weapons: {
@@ -42,7 +44,7 @@ function ModernWarfareThree() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { perks, streaks, weapons, equipment } = data;
+  const { randClassName, perks, streaks, weapons, equipment } = data;
 
   return (
     <>
@@ -50,6 +52,7 @@ function ModernWarfareThree() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
+        <h3 className="text-center mb-5">"{randClassName}"</h3>
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Primary:</span> <br />
@@ -143,6 +146,7 @@ function ModernWarfareThree() {
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "modern-warfare-three";
+    const randClassName = fetchClassName();
     const perks = fetchPerks();
     const streaks = fetchStreaks(game);
     let equipment = {
@@ -182,6 +186,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     }
 
     setData({
+      randClassName,
       perks,
       streaks,
       weapons,

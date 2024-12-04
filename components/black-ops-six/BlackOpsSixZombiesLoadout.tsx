@@ -2,19 +2,21 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 //Helpers
-import { implodeObject } from "../../helpers/implodeObject";
-import { fetchWeapon } from "../../helpers/fetchWeapon";
+import { implodeObject } from "@/helpers/implodeObject";
+import { fetchWeapon } from "@/helpers/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchBO6Gobblegums } from "@/helpers/generator/black-ops-six/fetchBO6Gobblegums";
 import { fetchBO6ZombiesMap } from "@/helpers/generator/black-ops-six/fetchBO6ZombiesMap";
 import { fetchBO6AmmoMod } from "@/helpers/generator/black-ops-six/fetchBO6AmmoMod";
+import { fetchClassName } from "@/helpers/fetchClassName";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
 function BlackOpsSixZombiesLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
+    randClassName: "",
     weapons: {
       primary: {
         weapon: { name: "", type: "", game: "", no_attach: false },
@@ -40,7 +42,7 @@ function BlackOpsSixZombiesLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { weapons, equipment, gobblegum, zombieMap } = data;
+  const { randClassName, weapons, equipment, gobblegum, zombieMap } = data;
 
   return (
     <>
@@ -48,6 +50,7 @@ function BlackOpsSixZombiesLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
+        <h3 className="text-center mb-4">"{randClassName}"</h3>
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="6" className="text-center">
             <span className="fw-bolder fs-5">Primary:</span> <br />
@@ -126,6 +129,7 @@ function BlackOpsSixZombiesLoadout() {
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "black-ops-six-zombies";
+    const randClassName = fetchClassName();
     const weapons = {
       primary: {
         weapon: fetchWeapon("all", "black-ops-six"),
@@ -137,7 +141,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     //Get Primary Attachments
     if (!weapons.primary.weapon.no_attach) {
       weapons.primary.attachments = implodeObject(
-        fetchAttachments(weapons.primary.weapon)
+        fetchAttachments(weapons.primary.weapon, 8)
       );
     }
     const equipment = {
@@ -149,6 +153,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const zombieMap = fetchBO6ZombiesMap();
 
     setData({
+      randClassName,
       weapons,
       equipment,
       gobblegum,

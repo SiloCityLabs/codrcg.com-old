@@ -2,19 +2,21 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 //Helpers
-import { implodeObject } from "../../helpers/implodeObject";
-import { fetchWeapon } from "../../helpers/fetchWeapon";
-import { fetchPerks } from "../../helpers/fetchPerks";
-import { fetchStreaks } from "../../helpers/fetchStreaks";
+import { implodeObject } from "@/helpers/implodeObject";
+import { fetchWeapon } from "@/helpers/fetchWeapon";
+import { fetchPerks } from "@/helpers/fetchPerks";
+import { fetchStreaks } from "@/helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchWildcard } from "@/helpers/fetchWildcard";
+import { fetchClassName } from "@/helpers/fetchClassName";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
 function BlackOpsSixLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
+    randClassName: "",
     perks: null,
     streaks: null,
     weapons: {
@@ -45,7 +47,7 @@ function BlackOpsSixLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { perks, streaks, weapons, equipment, wildcard } = data;
+  const { randClassName, perks, streaks, weapons, equipment, wildcard } = data;
 
   return (
     <>
@@ -53,6 +55,7 @@ function BlackOpsSixLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
+        <h3 className="text-center mb-5">"{randClassName}"</h3>
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Primary:</span> <br />
@@ -159,6 +162,7 @@ function BlackOpsSixLoadout() {
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "black-ops-six";
+    const randClassName = fetchClassName();
     const wildcard = fetchWildcard(game);
     //Figure out primary attachment count
     const primAttachCount = wildcard.name === "Gunfighter" ? 8 : 5;
@@ -217,6 +221,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     }
 
     setData({
+      randClassName,
       perks,
       streaks,
       weapons,

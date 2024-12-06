@@ -17,7 +17,7 @@ const defaultNavLinks = [
   { label: "Changelog", href: "/changelog", target: "" },
   {
     label: "GitHub",
-    href: "https://github.com/SiloCityLabs/codrcg.com/tree/black-ops-six",
+    href: "https://github.com/SiloCityLabs/codrcg.com",
     target: "_blank",
   },
 ];

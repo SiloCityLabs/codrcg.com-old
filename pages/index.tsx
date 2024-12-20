@@ -55,10 +55,10 @@ export default function Home() {
               variant="danger"
               btn1Text="Multiplayer Generator"
               link="modern-warfare-three/generator"
-              disabled={false}
+              disabled={true}
               btn2Text="Zombies Generator"
               link2="modern-warfare-three/zombies-generator"
-              disabled2={false}
+              disabled2={true}
             />
           </Col>
           <Col xl={3} lg={4} md={6} className="text-center mb-4">

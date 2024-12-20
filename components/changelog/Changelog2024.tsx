@@ -10,6 +10,13 @@ function Changelog2024() {
         <Row>
           <Col>
             <p>
+              12/22/2024:{" "}
+              <a href="black-ops-six/zombies-generator">
+                Black Ops VI Zombies:
+              </a>{" "}
+              Added settings
+            </p>
+            <p>
               12/22/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
               Added 3-Round Burst Mod to Kompakt 92
             </p>

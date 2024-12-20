@@ -55,3 +55,8 @@ export type MW3Vest = {
     type: string;
     game: string;
 }
+
+export type ZombiesSettings = {
+    rollMap: boolean;
+    rollGobblegum: boolean;
+}

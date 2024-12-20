@@ -10,11 +10,30 @@ import { fetchBO6Gobblegums } from "@/helpers/generator/black-ops-six/fetchBO6Go
 import { fetchBO6ZombiesMap } from "@/helpers/generator/black-ops-six/fetchBO6ZombiesMap";
 import { fetchBO6AmmoMod } from "@/helpers/generator/black-ops-six/fetchBO6AmmoMod";
 import { fetchClassName } from "@/helpers/fetchClassName";
+import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
 //Styles
 import "@/public/styles/components/Loadout.css";
+//Types
+import { ZombiesSettings } from "@/types/Generator";
+//Components
+import CustomModal from "@/components/bootstrap/CustomModal";
+import Form from "react-bootstrap/Form";
+
+const defaultSettings: ZombiesSettings = {
+  rollMap: true,
+  rollGobblegum: true,
+};
 
 function BlackOpsSixZombiesLoadout() {
+  const [isLoading, setIsLoading] = useState(true);
   const [containerClass, setContainerClass] = useState("hidden");
+  //Settings
+  const [settings, setSettings] = useState<ZombiesSettings>(defaultSettings);
+  const [rollMap, setRollMap] = useState(settings.rollMap);
+  const [rollGobblegum, setRollGobblegum] = useState(settings.rollGobblegum);
+  const [showModal, setShowModal] = useState(false);
+
+  //Data
   const [data, setData] = useState({
     randClassName: "",
     weapons: {
@@ -35,14 +54,48 @@ function BlackOpsSixZombiesLoadout() {
   });
 
   useEffect(() => {
+    const storedSettings = getLocalStorage("bo6ZombiesSettings") ?? settings;
+    const completeSettings = { ...defaultSettings, ...storedSettings };
+
+    setSettings(completeSettings);
+    setRollMap(completeSettings.rollMap);
+    setRollGobblegum(completeSettings.rollGobblegum);
+
     fetchLoadoutData(setData, setContainerClass);
+
+    setIsLoading(false);
   }, []);
 
   const handleClick = async () => {
     fetchLoadoutData(setData, setContainerClass);
   };
 
+  const handleModal = () => setShowModal(!showModal);
+  const handleSave = () => {
+    setLocalStorage("bo6ZombiesSettings", settings);
+    handleModal();
+  };
+
+  const handleRollMapChange = (event) => {
+    setRollMap(event.target.checked);
+    setSettings({
+      ...settings,
+      rollMap: event.target.checked,
+    });
+  };
+  const handleRollGobblegumChange = (event) => {
+    setRollGobblegum(event.target.checked);
+    setSettings({
+      ...settings,
+      rollGobblegum: event.target.checked,
+    });
+  };
+
   const { randClassName, weapons, equipment, gobblegum, zombieMap } = data;
+
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+  }
 
   return (
     <>
@@ -116,12 +169,54 @@ function BlackOpsSixZombiesLoadout() {
         </Row>
         <Row className="justify-content-md-center">
           <Col xs md="8" lg="6" className="text-center">
-            <Button variant="black-ops" href="#" onClick={handleClick}>
-              Generate Loadout
-            </Button>
+            <div className="d-flex justify-content-center">
+              <Button
+                variant="black-ops"
+                onClick={handleModal}
+                className="w-50 me-2"
+              >
+                Settings
+              </Button>
+              <Button
+                variant="black-ops"
+                onClick={handleClick}
+                className="w-50 me-2"
+              >
+                Generate Loadout
+              </Button>
+            </div>
           </Col>
         </Row>
       </Container>
+
+      <CustomModal
+        variant="black-ops"
+        show={showModal}
+        onClose={handleModal}
+        onSave={handleSave}
+        title="Settings"
+      >
+        <Row>
+          <Col>
+            <Form.Label htmlFor="rollMap">Roll Map:</Form.Label>
+            <Form.Check
+              type="switch"
+              id="rollMap"
+              onChange={handleRollMapChange}
+              checked={rollMap}
+            />
+          </Col>
+          <Col>
+            <Form.Label htmlFor="rollGobblegum">Roll Gobblegum:</Form.Label>
+            <Form.Check
+              type="switch"
+              id="rollGobblegum"
+              onChange={handleRollGobblegumChange}
+              checked={rollGobblegum}
+            />
+          </Col>
+        </Row>
+      </CustomModal>
     </>
   );
 }

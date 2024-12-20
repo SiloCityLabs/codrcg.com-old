@@ -9,6 +9,10 @@ function Changelog2024() {
       >
         <Row>
           <Col>
+            <p>
+              12/20/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
+              Added Maelstrom shotgun
+            </p>
             <p>12/6/2024: Added Loadout names to all generators</p>
             <p>
               12/6/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}

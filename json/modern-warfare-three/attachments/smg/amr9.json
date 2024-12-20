@@ -170,47 +170,49 @@
     ],
     "magazine": [
         "20 Round Mag",
-        "50 Round Mag"
+        "50 Round Mag",
+        "100 Round Drum"
     ],
     "rear_grip": [
-        "Center Mass Grip Tape",
-        "Retort 90 Grip Tape",
-        "Haste XV Grip Tape"
-    ],
-    "comb": [
-        "SAB Comb",
-        "FT Polycomb",
-        "Recon Comb",
-        "DEMO Flak Comb"
+        "Sakin ZX Grip",
+        "Xten Grip",
+        "Harrow Palmrest Grip",
+        "Phantom Grip"
     ],
     "stock": [
-        "HVS 3.4 Pad",
-        "Motion-Tac Pad",
-        "Hunker-5 Stock Pad",
-        "Ultra-Light Stock Pad"
+        "Pipeline Pro LTS",
+        "Demo LTS Stock",
+        "Seraph-14 Heavy Carbine Stock",
+        "Demo D50 Buffer Tape",
+        "DAV15 Light Tactical Stock",
+        "Oort-6 Precision Stock",
+        "TA Venom Stock",
+        "Wolfhound Carbine Stock",
+        "JAK Cutthroat"
     ],
     "laser": [
         "SL Razorhawk Laser Light",
-        "STOVL DR Laser Box",
         "1mW Laser Box",
-        "Corvus PEQ Beam-5",
-        "FTAC Grimline Laser",
-        "Luminate-44",
         "Canted Vibro-Dot 7",
-        "Corio LAZ-44 v3",
+        "STOVL DR Laser Box",
+        "FTAC Grimline Laser",
+        "Corvus PEQ Beam-5",
+        "Luminate-44",
         "FSS-OLE-V Laser",
-        "SZ 1mW PEQ",
         "Schlager PEQ Box IV",
+        "CS15 Scarlet Box Laser",
+        "Corio LAZ-44 v3",
+        "PRO Sapphire Box Laser",
+        "SZ 1mW PEQ",
+        "Verdant Hook Box Laser",
         "DXS Flash 90"
     ],
     "ammunition": [
-        "9mm High Grain Rounds",
-        "9mm Hollowpoint",
-        "9mm Frangible",
+        "9mm Hardened Rounds",
         "9mm Overpressured P+",
         "9mm Armor Piercing",
-        "9mm Low Grain Rounds",
-        "9mm Hardened Rounds",
+        "9mm Hollowpoint",
+        "9mm Frangible",
         "9mm High Velocity"
     ]
 }

@@ -184,7 +184,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       melee: fetchWeapon("melee", game),
     };
     //Get Primary Attachments
-    if (!weapons.primary.weapon.no_attach) {
+    if (!weapons.primary.weapon?.no_attach) {
       weapons.primary.attachments = implodeObject(
         fetchAttachments(weapons.primary.weapon, primAttachCount)
       );

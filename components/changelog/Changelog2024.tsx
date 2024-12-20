@@ -10,6 +10,10 @@ function Changelog2024() {
         <Row>
           <Col>
             <p>
+              12/22/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
+              Added 3-Round Burst Mod to Kompakt 92
+            </p>
+            <p>
               12/21/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
               Added Maelstrom shotgun
             </p>

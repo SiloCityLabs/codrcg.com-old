@@ -156,16 +156,20 @@ function BlackOpsSixZombiesLoadout() {
             <span className="text-muted fs-6">{equipment.lethal.name}</span>
           </Col>
         </Row>
-        <hr />
+        {(rollGobblegum || rollMap) && <hr />}
         <Row className="justify-content-md-center mb-4">
-          <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Gobblegum:</span> <br />
-            <span className="text-muted fs-6">{gobblegum}</span>
-          </Col>
-          <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Map:</span> <br />
-            <span className="text-muted fs-6">{zombieMap}</span>
-          </Col>
+          {rollGobblegum && (
+            <Col xs md="4" lg="3" className="text-center">
+              <span className="fw-bolder fs-5">Gobblegum:</span> <br />
+              <span className="text-muted fs-6">{gobblegum}</span>
+            </Col>
+          )}
+          {rollMap && (
+            <Col xs md="4" lg="3" className="text-center">
+              <span className="fw-bolder fs-5">Map:</span> <br />
+              <span className="text-muted fs-6">{zombieMap}</span>
+            </Col>
+          )}
         </Row>
         <Row className="justify-content-md-center">
           <Col xs md="8" lg="6" className="text-center">

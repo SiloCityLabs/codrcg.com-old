@@ -1,79 +1,79 @@
 {
-    "optic": {
-        "0": "Iron Sight",
-        "1": "Kepler Microflex",
-        "2": "PrismaTech Reflex",
-        "3": "Redwell Reflex",
-        "4": "K&S Red Dot",
-        "5": "Kepler Red Dot",
-        "6": "OM3 '92 Holo",
-        "7": "Accu-Spot Ultra Holo",
-        "8": "Willis 3x",
-        "9": "PrismaTech 4x",
-        "10": "Dobrych 4x",
-        "11": "K&S Thermal Holo",
-        "12": "Pinpoint Hybrid",
-        "13": "PrismaPoint Hybrid",
-        "14": "R&K Multizoom",
-        "15": "Remuda Range Finder",
-        "16": "Blandwell 7x Scope",
-        "17": "Remuda Dual Zoom",
-        "18": "VMF Variable Scope",
-        "19": "Redwell Custom Zoom",
-        "20": "Otero Thermal 2x",
-        "21": "Thermal 6x"
-    },
-    "muzzle": {
-        "0": "Suppressor",
-        "1": "Compensator",
-        "2": "Muzzle Brake",
-        "3": "Ported Compensator"
-    },
-    "barrel": {
-        "0": "Gain-Twist Barrel",
-        "1": "Long Barrel",
-        "2": "Reinforced Barrel",
-        "3": "Short Barrel",
-        "4": "CHF Barrel"
-    },
-    "underbarrel": {
-        "0": "Weighted Handguard",
-        "1": "Lightweight Handguard",
-        "2": "Marksman Handguard",
-        "3": "Precision Handguard",
-        "4": "Ranger Handguard"
-    },
-    "magazine": {
-        "0": "Extended Mag I",
-        "1": "Fast Mag I",
-        "2": "Extended Mag II",
-        "3": "Fast Mag II"
-    },
-    "comb": {
-        "0": "Quickdraw Riser",
-        "1": "Combat Riser",
-        "2": "Commando Riser",
-        "3": "Ergonomic Riser",
-        "4": "CQB Riser"
-    },
-    "stock": {
-        "0": "Light Stock",
-        "1": "Infiltrator Stock",
-        "2": "Heavy Stock",
-        "3": "Balanced Stock",
-        "4": "Combat Stock"
-    },
-    "laser": {
-        "0": "Steady Aim Laser",
-        "1": "Fast Motion Laser",
-        "2": "Tactical Laser",
-        "3": "Strelok Laser",
-        "4": "Target Laser"
-    },
-    "fire_mods": {
-        "0": "Rapid Fire",
-        "1": "7.62x54mmR Overpressured",
-        "2": "Recoil Springs",
-        "3": "7.62x54mmR FMJ"
-    }
+    "optic": [
+        "Iron Sight",
+        "Kepler Microflex",
+        "PrismaTech Reflex",
+        "Redwell Reflex",
+        "K&S Red Dot",
+        "Kepler Red Dot",
+        "OM3 '92 Holo",
+        "Accu-Spot Ultra Holo",
+        "Willis 3x",
+        "PrismaTech 4x",
+        "Dobrych 4x",
+        "K&S Thermal Holo",
+        "Pinpoint Hybrid",
+        "PrismaPoint Hybrid",
+        "R&K Multizoom",
+        "Remuda Range Finder",
+        "Blandwell 7x Scope",
+        "Remuda Dual Zoom",
+        "VMF Variable Scope",
+        "Redwell Custom Zoom",
+        "Otero Thermal 2x",
+        "Thermal 6x"
+    ],
+    "muzzle": [
+        "Suppressor",
+        "Compensator",
+        "Muzzle Brake",
+        "Ported Compensator"
+    ],
+    "barrel": [
+        "Gain-Twist Barrel",
+        "Long Barrel",
+        "Reinforced Barrel",
+        "Short Barrel",
+        "CHF Barrel"
+    ],
+    "underbarrel": [
+        "Weighted Handguard",
+        "Lightweight Handguard",
+        "Marksman Handguard",
+        "Precision Handguard",
+        "Ranger Handguard"
+    ],
+    "magazine": [
+        "Extended Mag I",
+        "Fast Mag I",
+        "Extended Mag II",
+        "Fast Mag II"
+    ],
+    "comb": [
+        "Quickdraw Riser",
+        "Combat Riser",
+        "Commando Riser",
+        "Ergonomic Riser",
+        "CQB Riser"
+    ],
+    "stock": [
+        "Light Stock",
+        "Infiltrator Stock",
+        "Heavy Stock",
+        "Balanced Stock",
+        "Combat Stock"
+    ],
+    "laser": [
+        "Steady Aim Laser",
+        "Fast Motion Laser",
+        "Tactical Laser",
+        "Strelok Laser",
+        "Target Laser"
+    ],
+    "fire_mods": [
+        "Rapid Fire",
+        "7.62x54mmR Overpressured",
+        "Recoil Springs",
+        "7.62x54mmR FMJ"
+    ]
 }

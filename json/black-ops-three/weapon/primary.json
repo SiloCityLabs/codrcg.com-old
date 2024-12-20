@@ -1,0 +1,127 @@
+{
+    "0": {
+      "name": "KN-44",
+      "type": "assault_rifle",
+      "game": "black-ops-three"
+    },
+    "1": {
+      "name": "XR-2",
+      "type": "assault_rifle",
+      "game": "black-ops-three"
+    },
+    "2": {
+      "name": "HVK-30",
+      "type": "assault_rifle",
+      "game": "black-ops-three"
+    },
+    "3": {
+      "name": "ICR-1",
+      "type": "assault_rifle",
+      "game": "black-ops-three"
+    },
+    "4": {
+      "name": "Man-O-War",
+      "type": "assault_rifle",
+      "game": "black-ops-three"
+    },
+    "5": {
+      "name": "Sheiva",
+      "type": "assault_rifle",
+      "game": "black-ops-three"
+    },
+    "6": {
+      "name": "M8A7",
+      "type": "assault_rifle",
+      "game": "black-ops-three"
+    },
+    "7": {
+      "name": "Kuda",
+      "type": "smg",
+      "game": "black-ops-three"
+    },
+    "8": {
+      "name": "VMP",
+      "type": "smg",
+      "game": "black-ops-three"
+    },
+    "9": {
+      "name": "Weevil",
+      "type": "smg",
+      "game": "black-ops-three"
+    },
+    "10": {
+      "name": "Vesper",
+      "type": "smg",
+      "game": "black-ops-three"
+    },
+    "11": {
+      "name": "Pharo",
+      "type": "smg",
+      "game": "black-ops-three"
+    },
+    "12": {
+      "name": "Razorback",
+      "type": "smg",
+      "game": "black-ops-three"
+    },
+    "13": {
+      "name": "KRM-262",
+      "type": "shotgun",
+      "game": "black-ops-three"
+    },
+    "14": {
+      "name": "205 Brecci",
+      "type": "shotgun",
+      "game": "black-ops-three"
+    },
+    "15": {
+      "name": "Haymaker 12",
+      "type": "shotgun",
+      "game": "black-ops-three"
+    },
+    "16": {
+      "name": "Argus",
+      "type": "shotgun",
+      "game": "black-ops-three"
+    },
+    "17": {
+      "name": "BRM",
+      "type": "lmg",
+      "game": "black-ops-three"
+    },
+    "18": {
+      "name": "Dingo",
+      "type": "lmg",
+      "game": "black-ops-three"
+    },
+    "19": {
+      "name": "Gorgon",
+      "type": "lmg",
+      "game": "black-ops-three"
+    },
+    "20": {
+      "name": "48 Dredge",
+      "type": "lmg",
+      "game": "black-ops-three"
+    },
+    "21": {
+      "name": "Drakon",
+      "type": "sniper",
+      "game": "black-ops-three"
+    },
+    "22": {
+      "name": "Locus",
+      "type": "sniper",
+      "game": "black-ops-three"
+    },
+    "23": {
+      "name": "P-06",
+      "type": "sniper",
+      "game": "black-ops-three"
+    },
+    "24": {
+      "name": "SVG-100",
+      "type": "sniper",
+      "game": "black-ops-three"
+    }  
+}

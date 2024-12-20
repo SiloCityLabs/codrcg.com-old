@@ -1,0 +1,32 @@
+{
+    "0": {
+      "name": "MK2 Frag Grenade",
+      "type": "Lethal",
+      "game": "vanguard"
+    },
+    "1": {
+      "name": "Gammon Bomb",
+      "type": "Lethal",
+      "game": "vanguard"
+    },
+    "2": {
+      "name": "Throwing Knife",
+      "type": "Lethal",
+      "game": "vanguard"
+    },
+    "3": {
+      "name": "Thermite",
+      "type": "Lethal",
+      "game": "vanguard"
+    },
+    "4": {
+      "name": "Demolition Charge",
+      "type": "Lethal",
+      "game": "vanguard"
+    },
+    "5": {
+      "name": "Molotov Cocktail",
+      "type": "Lethal",
+      "game": "vanguard"
+    }
+  }

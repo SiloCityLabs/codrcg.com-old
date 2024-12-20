@@ -8,5 +8,11 @@
       "name": "Indiegestion",
       "type": "Whimsical",
       "game": "black-ops-six"
+    },
+    "2": {
+      "name": "Holiday Cheer",
+      "type": "Whimsical",
+      "game": "black-ops-six",
+      "isDLC": true
     }
   }

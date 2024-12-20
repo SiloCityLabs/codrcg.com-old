@@ -65,9 +65,19 @@ export default function Home() {
             <GeneratorCard
               title="Modern Warfare 2 (2022)"
               text="Coming in 2025"
+              variant="mw2"
+              btn1Text="Multiplayer Generator"
+              link="modern-warfare-two/generator"
+              disabled={true}
+            />
+          </Col>
+          <Col xl={3} lg={4} md={6} className="text-center mb-4">
+            <GeneratorCard
+              title="Vanguard"
+              text="Coming in 2025"
               variant="danger"
               btn1Text="Multiplayer Generator"
-              link="modern-warfare-three/generator"
+              link="vanguard/generator"
               disabled={true}
             />
           </Col>

@@ -8,5 +8,10 @@
       "name": "Terminus",
       "type": "Map",
       "game": "black-ops-six"
+    },
+    "2": {
+      "name": "Citadelle Des Morts",
+      "type": "Map",
+      "game": "black-ops-six"
     }
   }

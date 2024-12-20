@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../public/styles/main.css";
+import "../public/styles/material.css";
 
 interface HeaderProps {
   className?: string;

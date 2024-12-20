@@ -40,5 +40,12 @@
       "type": "Perk 1",
       "game": "black-ops-six",
       "color": "Green"
+    },
+    "7": {
+      "name": "Reflexes",
+      "type": "Perk 1",
+      "game": "black-ops-six",
+      "color": "Blue",
+      "isDLC": true
     }
   }

@@ -10,6 +10,41 @@ function Changelog2024() {
         <Row>
           <Col>
             <p>
+              12/22/2024:{" "}
+              <a href="black-ops-six/zombies-generator">
+                Black Ops VI Zombies:
+              </a>{" "}
+              Added settings
+            </p>
+            <p>
+              12/22/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
+              Added 3-Round Burst Mod to Kompakt 92
+            </p>
+            <p>
+              12/21/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
+              Added Maelstrom shotgun
+            </p>
+            <p>
+              12/20/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
+              Added AMR Mod 4 Sniper
+            </p>
+            <p>12/6/2024: Added Loadout names to all generators</p>
+            <p>
+              12/6/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
+              Added Season 01 reloaded perk reflexes to the generator
+            </p>
+            <p>
+              12/5/2024:{" "}
+              <a href="black-ops-6/zombies-generator">Black Ops VI Zombies:</a>{" "}
+              Added Citadelle Des Morts
+            </p>
+            <p>
+              12/4/2024:{" "}
+              <a href="black-ops-6/zombies-generator">Black Ops VI Zombies:</a>{" "}
+              Added season 01 reloaded gobblegums &amp; tesla storm field
+              upgrade
+            </p>
+            <p>
               11/30/2024:{" "}
               <a href="modern-warfare-three/zombies-generator">
                 Modern Warfare Zombies:

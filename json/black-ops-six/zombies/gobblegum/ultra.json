@@ -23,5 +23,11 @@
       "name": "Reign Drops",
       "type": "Ultra",
       "game": "black-ops-six"
+    },
+    "5": {
+      "name": "Time Out",
+      "type": "Ultra",
+      "game": "black-ops-six",
+      "isDLC": true
     }
   }

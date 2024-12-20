@@ -5,24 +5,33 @@ import Button from "react-bootstrap/Button";
 import { implodeObject } from "../helpers/implodeObject";
 import { fetchWeapon } from "../helpers/fetchWeapon";
 import { fetchPerks } from "../helpers/fetchPerks";
-import { fetchStreaks } from "../helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchWildcard } from "@/helpers/fetchWildcard";
+import { fetchClassName } from "@/helpers/fetchClassName";
 //Styles
 import "../public/styles/components/Loadout.css";
 
 function WarzoneLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
+    randClassName: "",
     perks: null,
-    primaryWeapon: { name: "", type: "", game: "", no_attach: false },
-    p_attachments: "",
-    secondaryWeapon: { name: "", type: "", game: "", no_attach: false },
-    s_attachments: "",
-    meleeWeapon: { name: "", type: "", game: "" },
-    tacticalEquip: { name: "", type: "" },
-    lethalEquip: { name: "", type: "" },
+    weapons: {
+      primary: {
+        weapon: { name: "", type: "", game: "", no_attach: false },
+        attachments: "",
+      },
+      secondary: {
+        weapon: { name: "", type: "", game: "", no_attach: false },
+        attachments: "",
+      },
+      melee: { name: "", type: "", game: "" },
+    },
+    equipment: {
+      tactical: { name: "", type: "" },
+      lethal: { name: "", type: "" },
+    },
     wildcard: { name: "", type: "" },
   });
 
@@ -34,17 +43,7 @@ function WarzoneLoadout() {
     await fetchLoadoutData(setData, setContainerClass);
   };
 
-  const {
-    perks,
-    primaryWeapon,
-    p_attachments,
-    secondaryWeapon,
-    s_attachments,
-    meleeWeapon,
-    tacticalEquip,
-    lethalEquip,
-    wildcard,
-  } = data;
+  const { randClassName, perks, weapons, equipment, wildcard } = data;
 
   return (
     <>
@@ -52,12 +51,15 @@ function WarzoneLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
+        <h3 className="text-center mb-5">&ldquo;{randClassName}&rdquo;</h3>
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">{primaryWeapon.name}</span>
+            <span className="text-muted fs-6">
+              {weapons.primary.weapon.name}
+            </span>
             <br />
-            {primaryWeapon.no_attach ? (
+            {weapons.primary.weapon.no_attach ? (
               <>
                 <span className="fw-bolder fs-5">Primary Attachments: </span>
                 <br />
@@ -67,15 +69,19 @@ function WarzoneLoadout() {
               <>
                 <span className="fw-bolder fs-5">Primary Attachments:</span>
                 <br />
-                <span className="text-muted fs-6">{p_attachments}</span>
+                <span className="text-muted fs-6">
+                  {weapons.primary.attachments}
+                </span>
               </>
             )}
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Secondary:</span> <br />
-            <span className="text-muted fs-6">{secondaryWeapon.name}</span>
+            <span className="text-muted fs-6">
+              {weapons.secondary.weapon.name}
+            </span>
             <br />
-            {secondaryWeapon.no_attach ? (
+            {weapons.secondary.weapon.no_attach ? (
               <>
                 <span className="fw-bolder fs-5">Secondary Attachments: </span>
                 <br />
@@ -85,24 +91,26 @@ function WarzoneLoadout() {
               <>
                 <span className="fw-bolder fs-5">Secondary Attachments:</span>
                 <br />
-                <span className="text-muted fs-6">{s_attachments}</span>
+                <span className="text-muted fs-6">
+                  {weapons.secondary.attachments}
+                </span>
               </>
             )}
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Melee:</span> <br />
-            <span className="text-muted fs-6">{meleeWeapon.name}</span>
+            <span className="text-muted fs-6">{weapons.melee.name}</span>
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">{tacticalEquip.name}</span>
+            <span className="text-muted fs-6">{equipment.tactical.name}</span>
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{lethalEquip.name}</span>
+            <span className="text-muted fs-6">{equipment.lethal.name}</span>
           </Col>
         </Row>
         <hr />
@@ -131,45 +139,58 @@ function WarzoneLoadout() {
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "warzone";
-    let secondaryWeapon;
-    let s_attachments;
-    const wildcard = await fetchWildcard(game);
+    const randClassName = fetchClassName();
+    const wildcard = fetchWildcard(game);
     //Figure out primary attachment count
     const primAttachCount = wildcard.name === "Gunfighter" ? 8 : 5;
 
-    const perks = await fetchPerks(game);
-    const primaryWeapon = await fetchWeapon("primary");
+    const perks = fetchPerks(game);
+    let weapons = {
+      primary: {
+        weapon: fetchWeapon("primary"),
+        attachments: "",
+      },
+      secondary: {
+        weapon: fetchWeapon("secondary"),
+        attachments: "",
+      },
+      melee: fetchWeapon("melee"),
+    };
     //Get Primary Attachments
-    const p_attachments = implodeObject(
-      await fetchAttachments(primaryWeapon, primAttachCount)
+    //TODO: I think you can only get gunfighter for BO6 Weapons (8 attachments)
+    weapons.primary.attachments = implodeObject(
+      fetchAttachments(weapons.primary.weapon, primAttachCount)
     );
     //Check for overkill
     if (wildcard.name === "Overkill") {
-      secondaryWeapon = await fetchWeapon("primary", "", primaryWeapon.name);
-    } else {
-      secondaryWeapon = await fetchWeapon("secondary");
+      weapons.secondary.weapon = fetchWeapon(
+        "primary",
+        "",
+        weapons.primary.weapon.name
+      );
     }
     //Verify if secondary weapon has attachments
-    if (!secondaryWeapon.no_attach) {
-      s_attachments = implodeObject(await fetchAttachments(secondaryWeapon));
+    if (!weapons.secondary.weapon?.no_attach) {
+      weapons.secondary.attachments = implodeObject(
+        fetchAttachments(weapons.secondary.weapon)
+      );
     }
-    const meleeWeapon = await fetchWeapon("melee");
-    const tacticalEquip = await fetchEquipment("tactical", game);
-    const lethalEquip = await fetchEquipment("lethal", game);
+
+    let equipment = {
+      tactical: fetchEquipment("tactical", game),
+      lethal: fetchEquipment("lethal", game),
+    };
 
     setData({
+      randClassName,
       perks,
-      primaryWeapon,
-      p_attachments,
-      secondaryWeapon,
-      s_attachments,
-      meleeWeapon,
-      tacticalEquip,
-      lethalEquip,
+      weapons,
+      equipment,
       wildcard,
     });
     setContainerClass("");
   } catch (error: any) {
+    console.error("Error", error); // Handle errors centrally
     console.error(error.message); // Handle errors centrally
   }
 }

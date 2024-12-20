@@ -17,14 +17,8 @@ export function randomizeAttachments(attachArr: any, data: any, count: number) {
   // Reset count if we are asking for more attachments than the weapon has
   count = Math.min(count, keys.length);
 
-  // Shuffle the keys array for random selection
-  for (let i = keys.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [keys[i], keys[j]] = [keys[j], keys[i]];
-  }
-
-  for (let i = 0; i < count && attachCount < count; i++) {
-    const randomKey = keys[i];
+  while (attachCount < count) {
+    const randomKey = keys[Math.floor(Math.random() * keys.length)];
 
     if (!attachArr.hasOwnProperty(randomKey)) {
       const attachment = randomListItem(data[randomKey]);

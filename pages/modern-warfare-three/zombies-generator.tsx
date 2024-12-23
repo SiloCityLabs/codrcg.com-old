@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import ModernWarfareThreeZombiesLoadout from "@/components/modern-warfare-three/ModernWarfareThreeZombiesLoadout";
 
-export default function BlackOpsSix() {
+export default function ModernWarfareThreeZombies() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/modern-warfare-three/generator" },

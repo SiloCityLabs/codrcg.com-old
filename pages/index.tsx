@@ -78,7 +78,10 @@ export default function Home() {
               variant="danger"
               btn1Text="Multiplayer Generator"
               link="vanguard/generator"
-              disabled={true}
+              disabled={false}
+              btn2Text="Zombies Generator"
+              link2="vanguard/zombies-generator"
+              disabled2={false}
             />
           </Col>
           <Col xl={3} lg={4} md={6} className="text-center mb-4">

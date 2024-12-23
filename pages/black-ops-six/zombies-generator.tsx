@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import BlackOpsSixZombiesLoadout from "@/components/black-ops-six/BlackOpsSixZombiesLoadout";
 
-export default function BlackOpsSix() {
+export default function BlackOpsSixZombies() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops-six/generator" },

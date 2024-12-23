@@ -1,0 +1,106 @@
+{
+    "muzzle": [
+        "Scythe Compensator",
+        "MX Silencer",
+        "T1 Flash Hider",
+        "Recoil Booster",
+        "Mercury Silencer",
+        "Chord Muzzle Brake",
+        "F8 Stabilizer"
+        
+    ],
+    "barrel": [
+        "VDD 320MM 02B",
+        "VDD 760MM 05B",
+        "Krausnick 620MM Precision",
+        "Krausnick 220MM Rapid"
+    ],
+    "optic": [
+        "Nydar Model 47",
+        "G16 2.5X",
+        "Slate Reflector",
+        "MK 3 Sunfilter",
+        "ZC2 1.35X Lens",
+        "M19 4.0X Flip",
+        "K98 Scout 10.0X Telescopic",
+        "Monocular Reflector",
+        "1913 Variable 4-8X",
+        "Saturn 1.35X Lens",
+        "ZF4 3.5X Rifle Scope",
+        "Type 99 Mod. 2.7X Telescopic",
+        "M38/Slate 2.5X Custom",
+        "Type 97 5X Telescopic",
+        "MK 3 Mod. 2 Sunfilter",
+        "MK. 12 Night Vision",
+        "MK. 3 Reflector",
+        "1229/Slate 3.25X Custom",
+        "SVT-40 PU Scope 3-6X",
+        "MK 18 Sunfilter",
+        "MK. 8 Reflector",
+        "Krausnick IS01M",
+        "Krausnick IS02M"
+    ],
+    "stock": [
+        "Krausnick S11S Folding",
+        "Konstanz Tactical",
+        "Removed Stock",
+        "VDD 27 Precision",
+        "VDD 34S Weighted"
+    ],
+    "underbarrel": [
+        "Carver Foregrip",
+        "M1941 Hand Stop",
+        "M3 Ready Grip",
+        "Bipod",
+        "GF-59 Flashlight",
+        "SMLE Pistol Grip",
+        "M1930 Strife Angled",
+        "Bayonet",
+        "Mark VI Skeletal"
+    ],
+    "magazine": [
+        "7.62 Gorenko 30 Round Mags",
+        ".30 Russian Short 20 Round Mags",
+        "8MM Kurz 45 Round Drums",
+        ".30 Russian Short 30 Round Mags"
+    ],
+    "ammo_type": [
+        "Subsonic",
+        "FMJ Rounds",
+        "Frangible",
+        "Armor Piercing",
+        "Incendiary",
+        "Lengthened",
+        "Hollow Point"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Pressure",
+        "Acrobatic",
+        "Sleight Of Hand",
+        "Nerves Of Steel",
+        "Focus",
+        "Vital"
+    ],
+    "kit": [
+        "Fast Melee",
+        "Reach",
+        "Surplus",
+        "Deep Breath",
+        "Fully Loaded",
+        "Defender",
+        "Heavy Hitter",
+        "On-Hand"
+    ]
+}

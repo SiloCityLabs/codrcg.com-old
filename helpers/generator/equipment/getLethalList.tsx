@@ -3,6 +3,7 @@ import bo6ZombiesList from "@/json/black-ops-six/zombies/lethal.json";
 import warzoneList from "@/json/warzone/equipment/lethal.json";
 import mw3List from "@/json/modern-warfare-three/equipment/lethal.json";
 import mw3ZombiesList from "@/json/modern-warfare-three/zombies/lethal.json";
+import vanguardList from "@/json/vanguard/equipment/lethal.json";
 
 const equipment: Record<string, any> = {
   "black-ops-six": bo6List,
@@ -10,6 +11,7 @@ const equipment: Record<string, any> = {
   warzone: warzoneList,
   "modern-warfare-three": mw3List,
   "modern-warfare-three-zombies": mw3ZombiesList,
+  vanguard: vanguardList,
 };
 
 export function getLethalList(game: string): any {

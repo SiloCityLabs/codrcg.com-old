@@ -8,7 +8,6 @@ import { fetchPerks } from "@/helpers/fetchPerks";
 import { fetchStreaks } from "@/helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
-import { fetchWildcard } from "@/helpers/fetchWildcard";
 import { fetchClassName } from "@/helpers/fetchClassName";
 //Styles
 import "@/public/styles/components/Loadout.css";
@@ -28,15 +27,11 @@ function VanguardLoadout() {
         weapon: { name: "", type: "", game: "", no_attach: false },
         attachments: "",
       },
-      melee: { name: "", type: "", game: "" },
     },
     equipment: {
       tactical: { name: "", type: "" },
       lethal: { name: "", type: "" },
-      fieldUpgrade: { name: "", type: "" },
-      fieldUpgrade2: { name: "", type: "" },
     },
-    wildcard: { name: "", type: "" },
   });
 
   useEffect(() => {
@@ -47,7 +42,7 @@ function VanguardLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { randClassName, perks, streaks, weapons, equipment, wildcard } = data;
+  const { randClassName, perks, streaks, weapons, equipment } = data;
 
   return (
     <>
@@ -101,10 +96,6 @@ function VanguardLoadout() {
               </>
             )}
           </Col>
-          <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Melee:</span> <br />
-            <span className="text-muted fs-6">{weapons.melee.name}</span>
-          </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center">
@@ -123,25 +114,6 @@ function VanguardLoadout() {
         </Row>
         <hr />
         <Row className="mb-5">
-          <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">
-              {equipment.fieldUpgrade.name}
-            </span>
-            {wildcard.name === "Prepper" && (
-              <>
-                <br />
-                <span className="text-muted fs-6">
-                  {" "}
-                  {equipment.fieldUpgrade2.name}
-                </span>
-              </>
-            )}
-          </Col>
-          <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Wildcard:</span> <br />
-            <span className="text-muted fs-6">{wildcard.name}</span>
-          </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Streaks:</span> <br />
             <span className="text-muted fs-6">{streaks}</span>
@@ -149,7 +121,7 @@ function VanguardLoadout() {
         </Row>
         <Row id="button-row">
           <Col className="text-center">
-            <Button variant="black-ops" href="#" onClick={handleClick}>
+            <Button variant="danger" href="#" onClick={handleClick}>
               Generate Loadout
             </Button>
           </Col>
@@ -161,17 +133,13 @@ function VanguardLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
-    const game = "black-ops-six";
+    const game = "vanguard";
     const randClassName = fetchClassName();
-    const wildcard = fetchWildcard(game);
     //Figure out primary attachment count
-    const primAttachCount = wildcard.name === "Gunfighter" ? 8 : 5;
-    //Figure out if perk greed is done
-    const isPerkGreed = wildcard.name === "Perk Greed" ? true : false;
-    const isHighRoller = wildcard.name === "High Roller" ? true : false;
+    const primAttachCount = 10;
 
-    const perks = fetchPerks(game, isPerkGreed);
-    const streaks = fetchStreaks(game, isHighRoller);
+    const perks = fetchPerks(game);
+    const streaks = fetchStreaks("black-ops-six");
     let weapons = {
       primary: {
         weapon: fetchWeapon("primary", game),
@@ -181,8 +149,9 @@ async function fetchLoadoutData(setData, setContainerClass) {
         weapon: fetchWeapon("secondary", game),
         attachments: "",
       },
-      melee: fetchWeapon("melee", game),
     };
+    //TODO: Remove after i add all attachments
+    weapons.primary.weapon.no_attach = true;
     //Get Primary Attachments
     if (!weapons.primary.weapon?.no_attach) {
       weapons.primary.attachments = implodeObject(
@@ -190,13 +159,15 @@ async function fetchLoadoutData(setData, setContainerClass) {
       );
     }
     //Check for overkill
-    if (wildcard.name === "Overkill") {
+    if (perks.includes("Overkill")) {
       weapons.secondary.weapon = fetchWeapon(
         "primary",
         game,
         weapons.primary.weapon.name
       );
     }
+    //TODO: Remove after i add all attachments
+    weapons.secondary.weapon.no_attach = true;
     //Verify if secondary weapon has attachments
     if (!weapons.secondary.weapon?.no_attach) {
       weapons.secondary.attachments = implodeObject(
@@ -206,19 +177,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     let equipment = {
       tactical: fetchEquipment("tactical", game),
       lethal: fetchEquipment("lethal", game),
-      fieldUpgrade: fetchEquipment("field_upgrade", game),
-      fieldUpgrade2: { name: "", type: "" },
     };
-    if (wildcard.name === "Prepper") {
-      //Loop to make sure we don't get the same field upgrade
-      while (true) {
-        equipment.fieldUpgrade2 = fetchEquipment("field_upgrade", game);
-
-        if (equipment.fieldUpgrade.name !== equipment.fieldUpgrade2.name) {
-          break;
-        }
-      }
-    }
 
     setData({
       randClassName,
@@ -226,7 +185,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       streaks,
       weapons,
       equipment,
-      wildcard,
     });
     setContainerClass("");
   } catch (error: any) {

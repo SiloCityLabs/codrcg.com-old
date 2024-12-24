@@ -1,0 +1,91 @@
+{
+    "muzzle": [
+        "Coil Amp",
+        "TLL Disk Trim",
+        "Magnified Relay"
+        
+    ],
+    "barrel": [
+        "SD Instant Grat",
+        "Burst AC1-4",
+        "Dim Uproot Short",
+        "PWN Beam Condenser",
+        "Charge AMP PV"
+    ],
+    "optic": [
+        "Monocular Reflector",
+        "MK 3 MOD. 2 Sunfilter",
+        "LVL-X IS",
+        "ZF41 7.0 Telescopic",
+        "MK. 8 Reflector",
+        "MK. 3 Reflector",
+        "G16 2.5X",
+        "1913 Variable 4-8X",
+        "Saturn 1.35X Lens",
+        "Nydar Model 47",
+        "Slate Reflector",
+        "MK 3 Sunfilter",
+        "Type 99 10.0X Telescopic",
+        "ZC2 1.35X Lens",
+        "ZF4 3.5X Rifle Scope",
+        "M38/Slate 2.5X Custom",
+        "MK. 12 Night Vision",
+        "1229/Slate 3.25X Custom",
+        "MK 18 Sunfilter",
+        "Goblet IS",
+        "M19 4.0X Flip",
+        "Type 97 5X Telescopic",
+        "SVT-40 PU Scope 3-6X"
+    ],
+    "stock": [
+        "AC-Steady Mas",
+        "Ion Alloy",
+        "AC-Titanium Anchor",
+        "Removed Stock"
+    ],
+    "underbarrel": [
+        "Carver Foregrip",
+        "SMLE Pistol Grip",
+        "Low Temp Laser",
+        "Ion Hand Stop"
+    ],
+    "magazine": [
+        "PWN Quick Current Battery",
+        "Dim X-Circuit Battery",
+        "Royal-PV Cell Reserve Battery",
+        "Quantum High Voltage Battery"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Spotter",
+        "Fleet",
+        "Steady",
+        "Pinned",
+        "Sleight Of Hand",
+        "Disable",
+        "Shrouded",
+        "Focus",
+        "Frenzy"
+    ],
+    "kit": [
+        "Fast Melee",
+        "Reach",
+        "Surplus",
+        "Deep Breath",
+        "Fully Loaded",
+        "Defender",
+        "Heavy Hitter",
+        "On-Hand"
+    ]
+}

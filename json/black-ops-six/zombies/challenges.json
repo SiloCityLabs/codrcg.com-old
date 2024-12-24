@@ -1,0 +1,34 @@
+{
+    "0": {
+        "name": "2 Box Challenge",
+        "description": "The 2 box challenge consist of you only getting 2 box spins the entire game. Which ever guns you get from the box you have to take. You can't not take them. You have to. Once you hit the box you can no longer buy guns off the wall. Before that you can just to get enough money to get the box and doors, perks, etc. After that you have the choice to Pack-a-Punch or not to Pack-a-Punch. You are allowed to PAP twice on the gun as many times as you want. But you may not get rid of that gun until you die and the game ends completely."
+    },
+    "1": {
+        "name": "Starting Room Challenge",
+        "description": ""
+    },
+    "2": {
+        "name": "1 Box Challenge",
+        "description": " The 1 Box Challenge consist of you hitting the box one time each round. What ever gun you get at the end of the previous round you must use for the entire next round. Once that round is over you hit the box and get a different gun. You can PAP the weapons, however; you still have to get rid of the gun at the end of the round once you get to the end of the round. You cannot keep the PAPed weapon what so ever."
+    },
+    "3": {
+        "name": "No power challenge",
+        "description": "You cannot turn the power on"
+    },
+    "4": {
+        "name": "No box challenge",
+        "description": ""
+    },
+    "5": {
+        "name": "No perks challenge",
+        "description": ""
+    },
+    "6": {
+        "name": "Melee Only",
+        "description": "You can only use your melee weapon. You are allowed to POP the weapon"
+    },
+    "": {
+        "name": "",
+        "description": ""
+    }
+}

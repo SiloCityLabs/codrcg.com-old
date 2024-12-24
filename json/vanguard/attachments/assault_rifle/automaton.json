@@ -1,0 +1,103 @@
+{
+    "muzzle": [
+        "G28 Compensator",
+        "MX Silencer",
+        "T1 Flash Hider",
+        "Recoil Booster",
+        "Mercury Silencer",
+        "Chord Muzzle Brake",
+        "F8 Stabilizer"
+        
+    ],
+    "barrel": [
+        "Zac 600MM BFA",
+        "Zac FA Short",
+        "Zac 320MM Burst",
+        "Empress 620MM Precision",
+        "Anastasia Sniper"
+    ],
+    "optic": [
+        "Nydar Model 47",
+        "G16 2.5X",
+        "Slate Reflector",
+        "MK 3 Sunfilter",
+        "ZC2 1.35X Lens",
+        "M19 4.0X Flip",
+        "Type 99 10.0X Telescopic",
+        "Monocular Reflector",
+        "1913 Variable 4-8X",
+        "Saturn 1.35X Lens",
+        "ZF4 3.5X Rifle Scope",
+        "ZF41 7.0X Telescopic",
+        "M38/Slate 2.5X Custom",
+        "Type 97 5X Telescopic",
+        "MK 3 Mod. 2 Sunfilter",
+        "MK. 12 Night Vision",
+        "MK. 3 Reflector",
+        "1229/Slate 3.25X Custom",
+        "SVT-40 PU Scope 3-6X",
+        "MK 18 Sunfilter",
+        "MK. 8 Reflector"
+    ],
+    "stock": [
+        "Empress Broadsword",
+        "Anastasia Padded",
+        "Zac Skeletal"
+    ],
+    "underbarrel": [
+        "Carver Foregrip",
+        "M3 Ready Grip",
+        "Bipod",
+        "GF-59 Flashlight",
+        "M1915 Steady",
+        "Bayonet",
+        "Mark VI Skeletal",
+        "M1941 Hand Stop"
+    ],
+    "magazine": [
+        "6.5MM Sakura 45 Round Mags",
+        "5.6MM 30 Round Mags",
+        "6.5MM Sakura 90 Round Drums",
+        "8MM Klauser Rifle 60 Round Mags"
+    ],
+    "ammo_type": [
+        "Subsonic",
+        "FMJ Rounds",
+        "Frangible",
+        "Armor Piercing",
+        "Incendiary",
+        "Lengthened",
+        "Hollow Point"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Spotter",
+        "Pressure",
+        "Steady",
+        "Sleight Of Hand",
+        "Dismantle",
+        "Tight Grip",
+        "Frenzy"
+    ],
+    "kit": [
+        "Fast Melee",
+        "Reach",
+        "Surplus",
+        "Deep Breath",
+        "Fully Loaded",
+        "Defender",
+        "Heavy Hitter",
+        "On-Hand"
+    ]
+}

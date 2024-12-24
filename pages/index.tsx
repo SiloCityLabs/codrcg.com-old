@@ -51,14 +51,14 @@ export default function Home() {
           <Col xl={3} lg={4} md={6} className="text-center mb-4">
             <GeneratorCard
               title="Modern Warfare 3 (2023)"
-              text="Coming during the holidays"
+              text=""
               variant="danger"
               btn1Text="Multiplayer Generator"
               link="modern-warfare-three/generator"
-              disabled={true}
+              disabled={false}
               btn2Text="Zombies Generator"
               link2="modern-warfare-three/zombies-generator"
-              disabled2={true}
+              disabled2={false}
             />
           </Col>
           <Col xl={3} lg={4} md={6} className="text-center mb-4">
@@ -74,11 +74,14 @@ export default function Home() {
           <Col xl={3} lg={4} md={6} className="text-center mb-4">
             <GeneratorCard
               title="Vanguard"
-              text="Coming in 2025"
+              text=""
               variant="danger"
               btn1Text="Multiplayer Generator"
               link="vanguard/generator"
-              disabled={true}
+              disabled={false}
+              btn2Text="Zombies Generator"
+              link2="vanguard/zombies-generator"
+              disabled2={false}
             />
           </Col>
           <Col xl={3} lg={4} md={6} className="text-center mb-4">

@@ -1,0 +1,22 @@
+{
+  "0": {
+    "name": "The Archon",
+    "type": "Map",
+    "game": "vanguard"
+  },
+  "1": {
+    "name": "Shi No Numa",
+    "type": "Map",
+    "game": "vanguard"
+  },
+  "2": {
+    "name": "Terra Maledicta",
+    "type": "Map",
+    "game": "vanguard"
+  },
+  "3": {
+    "name": "Der Anfang",
+    "type": "Map",
+    "game": "vanguard"
+  }
+}

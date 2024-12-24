@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import WarzoneLoadout from "@/components/WarzoneLoadout";
 
-export default function WarzoneTwo() {
+export default function Warzone() {
   return (
     <>
       <Head>

@@ -28,5 +28,10 @@
     "name": "Piercing Vision",
     "type": "Perk 2",
     "game": "vanguard"
+  },
+  "6": {
+    "name": "Intuition",
+    "type": "Perk 2",
+    "game": "vanguard"
   }
 }

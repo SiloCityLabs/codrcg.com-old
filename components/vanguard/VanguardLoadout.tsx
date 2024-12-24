@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetchWeapon";
-import { fetchPerks } from "@/helpers/generator/modern-warfare-three/fetchPerks";
+import { fetchPerks } from "@/helpers/fetchPerks";
 import { fetchStreaks } from "@/helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
@@ -12,7 +12,7 @@ import { fetchClassName } from "@/helpers/fetchClassName";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-function ModernWarfareThreeLoadout() {
+function VanguardLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
     randClassName: "",
@@ -31,8 +31,6 @@ function ModernWarfareThreeLoadout() {
     equipment: {
       tactical: { name: "", type: "" },
       lethal: { name: "", type: "" },
-      fieldUpgrade: { name: "", type: "" },
-      vest: { name: "", type: "" },
     },
   });
 
@@ -117,16 +115,6 @@ function ModernWarfareThreeLoadout() {
         <hr />
         <Row className="mb-5">
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Vest:</span> <br />
-            <span className="text-muted fs-6">{equipment.vest.name}</span>
-          </Col>
-          <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">
-              {equipment.fieldUpgrade.name}
-            </span>
-          </Col>
-          <Col sm className="text-center">
             <span className="fw-bolder fs-5">Streaks:</span> <br />
             <span className="text-muted fs-6">{streaks}</span>
           </Col>
@@ -145,17 +133,13 @@ function ModernWarfareThreeLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
-    const game = "modern-warfare-three";
+    const game = "vanguard";
     const randClassName = fetchClassName();
-    const perks = fetchPerks();
-    const streaks = fetchStreaks(game);
-    let equipment = {
-      tactical: fetchEquipment("tactical", game),
-      lethal: fetchEquipment("lethal", game),
-      fieldUpgrade: fetchEquipment("field_upgrade", game),
-      vest: fetchEquipment("vest", game),
-    };
+    //Figure out primary attachment count
+    const primAttachCount = 10;
 
+    const perks = fetchPerks(game);
+    const streaks = fetchStreaks(game);
     let weapons = {
       primary: {
         weapon: fetchWeapon("primary", game),
@@ -166,27 +150,34 @@ async function fetchLoadoutData(setData, setContainerClass) {
         attachments: "",
       },
     };
-    //TODO: ISSUE-54 - uncomment when done
+    //TODO: Remove after i add all attachments
     weapons.primary.weapon.no_attach = true;
-    weapons.secondary.weapon.no_attach = true;
-    // weapons.primary.attachments = implodeObject(
-    //   fetchAttachments(weapons.primary.weapon)
-    // );
-
-    if (equipment.vest.name === "Overkill Vest") {
+    //Get Primary Attachments
+    if (!weapons.primary.weapon?.no_attach) {
+      weapons.primary.attachments = implodeObject(
+        fetchAttachments(weapons.primary.weapon, primAttachCount)
+      );
+    }
+    //Check for overkill
+    if (perks.includes("Overkill")) {
       weapons.secondary.weapon = fetchWeapon(
         "primary",
         game,
         weapons.primary.weapon.name
       );
     }
-
+    //TODO: Remove after i add all attachments
+    weapons.secondary.weapon.no_attach = true;
     //Verify if secondary weapon has attachments
     if (!weapons.secondary.weapon?.no_attach) {
       weapons.secondary.attachments = implodeObject(
         fetchAttachments(weapons.secondary.weapon)
       );
     }
+    let equipment = {
+      tactical: fetchEquipment("tactical", game),
+      lethal: fetchEquipment("lethal", game),
+    };
 
     setData({
       randClassName,
@@ -201,4 +192,4 @@ async function fetchLoadoutData(setData, setContainerClass) {
   }
 }
 
-export default ModernWarfareThreeLoadout;
+export default VanguardLoadout;

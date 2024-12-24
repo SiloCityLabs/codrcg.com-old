@@ -3,7 +3,7 @@
   text-align: center;
 }
 
- /* RCG Navbar Changes */
+/* RCG Navbar Changes */
 #cod-header.black-ops {
   background: #F96800 !important;
 }
@@ -16,7 +16,8 @@
   background: #198754 !important;
 }
 
-#cod-header.modern-warfare {
+#cod-header.modern-warfare,
+#cod-header.vanguard {
   background: #DC3545 !important;
 }
 

@@ -1,16 +1,16 @@
 {
     "0": {
-      "name": "Fortified",
+      "name": "Armory",
       "type": "Perk 1",
       "game": "vanguard"
     },
     "1": {
-      "name": "Survival Training",
+      "name": "Serpentine",
       "type": "Perk 1",
       "game": "vanguard"
     },
     "2": {
-      "name": "Ninja",
+      "name": "Fortified",
       "type": "Perk 1",
       "game": "vanguard"
     },
@@ -26,6 +26,11 @@
     },
     "5": {
       "name": "Cold Blooded",
+      "type": "Perk 1",
+      "game": "vanguard"
+    },
+    "6": {
+      "name": "Overkill",
       "type": "Perk 1",
       "game": "vanguard"
     }

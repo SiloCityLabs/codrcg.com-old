@@ -1,0 +1,108 @@
+{
+    "muzzle": [
+        "G28 Compensator",
+        "MX Silencer",
+        "T1 Flash Hider",
+        "Recoil Booster",
+        "Mercury Silencer",
+        "Chord Muzzle Brake",
+        "F8 Stabilizer"
+        
+    ],
+    "barrel": [
+        "Zac 358MM Rapid",
+        "Empress 613MM BFA",
+        "Kovalevskaya 546MM Sniper",
+        "Zac 444MM Short",
+        "Kovalevskaya 548MM Precision"
+    ],
+    "optic": [
+        "Nydar Model 47",
+        "G16 2.5X",
+        "Slate Reflector",
+        "MK 3 Sunfilter",
+        "ZC2 1.35X Lens",
+        "M19 4.0X Flip",
+        "K98 Scout 10.0X Telescopic",
+        "Monocular Reflector",
+        "1913 Variable 4-8X",
+        "Saturn 1.35X Lens",
+        "ZF4 3.5X Rifle Scope",
+        "Type 99 Mod. 2.7X Telescopic",
+        "M38/Slate 2.5X Custom",
+        "Type 97 5X Telescopic",
+        "MK 3 Mod. 2 Sunfilter",
+        "MK. 12 Night Vision",
+        "MK. 3 Reflector",
+        "1229/Slate 3.25X Custom",
+        "SVT-40 PU Scope 3-6X",
+        "MK 18 Sunfilter",
+        "MK. 8 Reflector",
+        "Krausnick IS01M",
+        "Krausnick IS02M"
+    ],
+    "stock": [
+        "Empress AVT RS",
+        "Empress Notch",
+        "Kovalevskaya Folding",
+        "Zac MS",
+        "Zac Padded"
+    ],
+    "underbarrel": [
+        "Mark VI Skeletal",
+        "Carver Foregrip",
+        "SMLE Pistol Grip",
+        "M1930 Strife Angled",
+        "M3 Ready Grip",
+        "GF-59 Flashlight",
+        "Bipod",
+        "Bayonet",
+        "M1941 Hand Stop"
+    ],
+    "magazine": [
+        "7.62X54MMR 45 Round Mags",
+        ".03-06 25 Round Fast Mags",
+        "7.62X54MMR 25 Round Fast Mags",
+        "6.5 Sakura 60 Round Drums"
+    ],
+    "ammo_type": [
+        "Subsonic",
+        "FMJ Rounds",
+        "Frangible",
+        "Armor Piercing",
+        "Incendiary",
+        "Lengthened",
+        "Hollow Point"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Brace",
+        "Sleight Of Hand",
+        "Driller",
+        "Disable",
+        "Fleet",
+        "Perfectionist",
+        "Icy Veins"
+    ],
+    "kit": [
+        "Fast Melee",
+        "Reach",
+        "Surplus",
+        "Deep Breath",
+        "Fully Loaded",
+        "Defender",
+        "Heavy Hitter",
+        "On-Hand"
+    ]
+}

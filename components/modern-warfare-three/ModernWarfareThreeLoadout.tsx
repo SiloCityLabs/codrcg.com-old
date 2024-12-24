@@ -12,7 +12,7 @@ import { fetchClassName } from "@/helpers/fetchClassName";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-function ModernWarfareThree() {
+function ModernWarfareThreeLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
     randClassName: "",
@@ -166,9 +166,12 @@ async function fetchLoadoutData(setData, setContainerClass) {
         attachments: "",
       },
     };
-    weapons.primary.attachments = implodeObject(
-      fetchAttachments(weapons.primary.weapon)
-    );
+    //TODO: ISSUE-54 - uncomment when done
+    weapons.primary.weapon.no_attach = true;
+    weapons.secondary.weapon.no_attach = true;
+    // weapons.primary.attachments = implodeObject(
+    //   fetchAttachments(weapons.primary.weapon)
+    // );
 
     if (equipment.vest.name === "Overkill Vest") {
       weapons.secondary.weapon = fetchWeapon(
@@ -198,4 +201,4 @@ async function fetchLoadoutData(setData, setContainerClass) {
   }
 }
 
-export default ModernWarfareThree;
+export default ModernWarfareThreeLoadout;

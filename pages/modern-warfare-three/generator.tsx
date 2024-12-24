@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-import ModernWarfareThree from "@/components/modern-warfare-three/ModernWarfareThreeLoadout";
+import ModernWarfareThreeLoadout from "@/components/modern-warfare-three/ModernWarfareThreeLoadout";
 
 export default function ModernWarfareThree() {
   const navLinks = [
@@ -33,7 +33,7 @@ export default function ModernWarfareThree() {
           <Col>
             <h2>Modern Warfare 3 - Random Class Generator</h2>
 
-            <ModernWarfareThree />
+            <ModernWarfareThreeLoadout />
           </Col>
         </Row>
       </Container>

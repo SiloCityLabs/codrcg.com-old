@@ -51,7 +51,7 @@ export default function Home() {
           <Col xl={3} lg={4} md={6} className="text-center mb-4">
             <GeneratorCard
               title="Modern Warfare 3 (2023)"
-              text="Coming during the holidays"
+              text=""
               variant="danger"
               btn1Text="Multiplayer Generator"
               link="modern-warfare-three/generator"

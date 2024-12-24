@@ -139,7 +139,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const primAttachCount = 10;
 
     const perks = fetchPerks(game);
-    const streaks = fetchStreaks("black-ops-six");
+    const streaks = fetchStreaks(game);
     let weapons = {
       primary: {
         weapon: fetchWeapon("primary", game),

@@ -1,0 +1,107 @@
+{
+    "muzzle": [
+        "Chord Muzzle Brake",
+        "M9 Flash Hider",
+        "Mercury Silencer",
+        "Recoil Booster",
+        "MX Silencer",
+        "F8 Stabilizer",
+        "G28 Compensator"
+        
+    ],
+    "barrel": [
+        "VDD 500MM LS",
+        "Krausnick 700MM 01V",
+        "Reisdorf 720MM Shrouded",
+        "VDD 390MM Rapid",
+        "Nilsson 515MM Burst"
+    ],
+    "optic": [
+        "Nydar Model 47",
+        "G16 2.5X",
+        "Slate Reflector",
+        "MK 3 Sunfilter",
+        "ZC2 1.35X Lens",
+        "M19 4.0X Flip",
+        "K98 Scout 10.0X Telescopic",
+        "Monocular Reflector",
+        "1913 Variable 4-8X",
+        "Saturn 1.35X Lens",
+        "ZF4 3.5X Rifle Scope",
+        "Type 99 Mod. 2.7X Telescopic",
+        "M38/Slate 2.5X Custom",
+        "Type 97 5X Telescopic",
+        "MK 3 Mod. 2 Sunfilter",
+        "MK. 12 Night Vision",
+        "MK. 3 Reflector",
+        "1229/Slate 3.25X Custom",
+        "SVT-40 PU Scope 3-6X",
+        "MK 18 Sunfilter",
+        "MK. 8 Reflector",
+        "Krausnick IS01M",
+        "Krausnick IS02M"
+    ],
+    "stock": [
+        "VDD 24SZ Adjustable",
+        "VDD 22G Padded",
+        "Krausnick 12V",
+        "Reisdorf 36SK"
+    ],
+    "underbarrel": [
+        "Carver Foregrip",
+        "M1941 Hand Stop",
+        "M3 Ready Grip",
+        "Bipod",
+        "GF-59 Flashlight",
+        "SMLE Pistol Grip",
+        "M1930 Strife Angled",
+        "Bayonet",
+        "Mark VI Skeletal"
+    ],
+    "magazine": [
+        "6.5MM Sakura 35 Round Mags",
+        "8MM Klauser 30 Round Mags",
+        "8MM Klauser 50 Round Drums",
+        ".30-06 50 Round Drums"
+    ],
+    "ammo_type": [
+        "Subsonic",
+        "FMJ Rounds",
+        "Frangible",
+        "Armor Piercing",
+        "Incendiary",
+        "Lengthened",
+        "Hollow Point"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Discard",
+        "Tight Grip",
+        "Acrobatic",
+        "Sleight Of Hand",
+        "Brace",
+        "Gung-Ho",
+        "Vital"
+    ],
+    "kit": [
+        "Fast Melee",
+        "Reach",
+        "Surplus",
+        "Deep Breath",
+        "Fully Loaded",
+        "Defender",
+        "Heavy Hitter",
+        "On-Hand"
+    ]
+}

@@ -28,5 +28,15 @@
       "name": "Molotov Cocktail",
       "type": "Lethal",
       "game": "vanguard"
+    },
+    "6": {
+      "name": "Incendiary Grenade",
+      "type": "Lethal",
+      "game": "vanguard"
+    },
+    "7": {
+      "name": "Sticky Bomb",
+      "type": "Lethal",
+      "game": "vanguard"
     }
   }

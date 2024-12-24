@@ -74,7 +74,7 @@ export default function Home() {
           <Col xl={3} lg={4} md={6} className="text-center mb-4">
             <GeneratorCard
               title="Vanguard"
-              text="Coming in 2025"
+              text=""
               variant="danger"
               btn1Text="Multiplayer Generator"
               link="vanguard/generator"

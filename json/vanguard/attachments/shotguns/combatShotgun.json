@@ -1,0 +1,94 @@
+{
+    "muzzle": [
+        "M97 Full Choke",
+        "G28 Compensator",
+        "A5 Smoothbore",
+        "SUHL 16 Brake"
+        
+    ],
+    "barrel": [
+        "Chariot 16\" Short",
+        "Framble 23\" No. 4M",
+        "Framble 18\" Precision",
+        "Sawed-Off",
+        "Framble No. 3"
+    ],
+    "optic": [
+        "ZC2 1.35X Lens",
+        "MK. 8 Reflector",
+        "MK 3 Sunfilter",
+        "Monocular Reflector",
+        "G16 2.5X",
+        "Nydar Model 47",
+        "Slate Reflector",
+        "Saturn 1.35X Lens",
+        "1913 Variable 4-8X",
+        "M38/Slate 2.5X Custom",
+        "1229/Slate 3.25X Custom",
+        "ZF4 3.5X Rifle Scope",
+        "MK 3 Mod. 2 Sunfilter",
+        "MK. 3 Reflector",
+        "SVT-40 PU Scope 3-6X",
+        "MK 18 Sunfilter"
+    ],
+    "stock": [
+        "Wire Custom",
+        "CGC 2M Wire",
+        "CGC 3M Adjustable",
+        "Framble Big-Game"
+    ],
+    "underbarrel": [
+        "M1930 Strife Angled",
+        "Carver Foregrip",
+        "Mark VI Skeletal",
+        "GF-59 Flashlight",
+        "SMLE Pistol Grip",
+        "M1941 Hand Stop",
+        "M1915 Steady"
+    ],
+    "magazine": [
+        "16 Gauge 5 Round Mags",
+        "16 Gauge 7 Round Drums",
+        "16 Gauge 10 Round Drums",
+        "12 Gauge 5 Round Tube"
+    ],
+    "ammo_type": [
+        "Reduced Powder",
+        "Slug",
+        "Incendiary",
+        "Packed Powder",
+        "Hollow Point",
+        "Frangible",
+        "Buck and Slug"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Wreck",
+        "Disable",
+        "Steady",
+        "Vital",
+        "Sleight Of Hand",
+        "Momentum",
+        "Frenzy"
+    ],
+    "kit": [
+        "Fast Melee",
+        "On-Hand",
+        "Quick",
+        "Surplus",
+        "Fully Loaded",
+        "Heavy Hitter",
+        "Reach"
+    ]
+}

@@ -23,7 +23,7 @@ export default function Vanguard() {
           name="keywords"
           content="call of duty, random class generator, vanguard"
         />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
         {/* Each generator has icons in the icon folder, not vanguard yet */}
       </Head>
       <Header className="vanguard" navLinks={navLinks} />

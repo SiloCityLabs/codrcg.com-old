@@ -8,17 +8,41 @@
 	<url>
 		<loc>https://codrcg.com/</loc>
 	</url>
+	<url>
+		<loc>https://codrcg.com/changelog</loc>
+	</url>
+	<!-- Generators -->
+	<!-- Black Ops 6 -->
+	<url>
+		<loc>https://codrcg.com/black-ops-six/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-six/zombies-generator</loc>
+	</url>
+	<!-- Warzone -->
+	<url>
+		<loc>https://codrcg.com/warzone/generator</loc>
+	</url>
+	<!-- Modern Warfare 3 -->
+	<url>
+		<loc>https://codrcg.com/modern-warfare-three/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare-three/zombies-generator</loc>
+	</url>
+	<!-- Vanguard -->
+	<url>
+		<loc>https://codrcg.com/vanguard/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/vanguard/zombies-generator</loc>
+	</url>
+
 	<!-- <url>
 		<loc>https://codrcg.com/aboutus</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/changelog</loc>
-	</url>
-	<url>
 		<loc>https://codrcg.com/contactus</loc>
-	</url>
-	<url>
-		<loc>https://codrcg.com/login</loc>
 	</url>
 	<url>
 		<loc>https://codrcg.com/privacy</loc>
@@ -31,45 +55,5 @@
 	</url>
 	<url>
 		<loc>https://codrcg.com/terms</loc>
-	</url> -->
-
-	<!-- black ops section -->
-	<!-- <url>
-		<loc>https://codrcg.com/black-ops/</loc>
-	</url> -->
-
-	<!-- black ops 2 section -->
-	<!-- <url>
-		<loc>https://codrcg.com/black-ops-2/</loc>
-	</url> -->
-
-	<!-- black ops 3 section -->
-	<!-- <url>
-		<loc>https://codrcg.com/bo3/</loc>
-	</url> -->
-
-	<!-- Modern Warfare Section -->
-	<!-- <url>
-		<loc>https://codrcg.com/modern-warfare/</loc>
-	</url> -->
-
-	<!-- Modern Warfare 2 Section -->
-	<!-- <url>
-		<loc>https://codrcg.com/modern-warfare-2/</loc>
-	</url> -->
-
-	<!-- Modern Warfare 3 Section -->
-	<!-- <url>
-		<loc>https://codrcg.com/modern-warfare-3/</loc>
-	</url> -->
-
-	<!-- Infinite Warfare Section -->
-	<!-- <url>
-		<loc>https://codrcg.com/infinite-warfare/</loc>
-	</url> -->
-
-	<!-- World War 2 Section -->
-	<!-- <url>
-		<loc>https://codrcg.com/world-war-2/</loc>
 	</url> -->
 </urlset>

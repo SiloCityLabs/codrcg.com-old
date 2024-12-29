@@ -1,0 +1,105 @@
+{
+    "muzzle": [
+        "F8 Stabilizer",
+        "Iscove Flash Hider",
+        "L Brake",
+        "Mercury Silencer",
+        "Recoil Booster",
+        "MX Silencer",
+        "G28 Compensator"
+        
+    ],
+    "barrel": [
+        "28\" Gracey MK. 9",
+        "16\" CGC Shrouded",
+        "20\" Ragdoll RE2",
+        "26\" Gracey Rapid"
+    ],
+    "optic": [
+        "Saturn 1.35X Lens",
+        "MK. 8 Reflector",
+        "Monocular Reflector",
+        "ZF4 3.5X Rifle Scope",
+        "Slate Reflector",
+        "Nydar Model 47",
+        "G16 2.5X",
+        "ZF41 7.0X Telescopic",
+        "M38/Slate 2.5X Custom",
+        "SVT-40 PU Scope 3-6X",
+        "ZC2 1.35X Lens",
+        "M19 4.0X Flip",
+        "MK 3 Sunfilter",
+        "MK. 3 Reflector",
+        "MK. 12 Night Vision",
+        "Type 99 10.0X Telescopic",
+        "MK 18 Sunfilter",
+        "IS Pinpoint",
+        "1913 Variable 4-8X",
+        "Type 97 5X Telescopic",
+        "MK 3 Mod. 2 Sunfilter",
+        "IS 5V",
+        "1229/Slate 3.25X Custom"
+    ],
+    "stock": [
+        "Gracey EM3",
+        "Cooper Adjustable",
+        "Gracey EK8",
+        "CGC R4",
+        "CGC R2 Padded"
+    ],
+    "underbarrel": [
+        "Carver Foregrip",
+        "M1930 Strife Angled",
+        "SMLE Pistol Grip",
+        "Heavy Foregrip",
+        "GF-59 Flashlight",
+        "Bipod",
+        "Mark VI Skeletal",
+        "M1941 Hand Stop"
+    ],
+    "magazine": [
+        ".303 British 45 Round Mags",
+        ".50 BMG 150 Round Boxes",
+        ".30-06 45 Round Mags",
+        ".30-06 120 Round Boxes"
+    ],
+    "ammo_type": [
+        "Subsonic",
+        "FMJ Rounds",
+        "Frangible",
+        "Armor Piercing",
+        "Incendiary",
+        "Lengthened",
+        "Hollow Point"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Discard",
+        "Hardscope",
+        "Dismantle",
+        "Sleight Of Hand",
+        "Icy Veins",
+        "Frenzy"
+    ],
+    "kit": [
+        "Fast Melee",
+        "Reach",
+        "Surplus",
+        "Deep Breath",
+        "Fully Loaded",
+        "Defender",
+        "Heavy Hitter",
+        "On-Hand"
+    ]
+}

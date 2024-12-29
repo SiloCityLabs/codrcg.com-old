@@ -1,0 +1,106 @@
+{
+    "muzzle": [
+        "F8 Stabilizer",
+        "Iscove Flash Hider",
+        "L Brake",
+        "Mercury Silencer",
+        "Recoil Booster",
+        "MX Silencer",
+        "G28 Compensator"
+        
+    ],
+    "barrel": [
+        "VDD 680MM 31M",
+        "Krausnick 450MM B42MG",
+        "VDD 890MM 32M Luftschutz",
+        "Krausnick 355MM Rapid"
+    ],
+    "optic": [
+        "Nydar Model 47",
+        "G16 2.5X",
+        "MK 3 Sunfilter",
+        "VDD IS75M",
+        "K98 Scout 10.0X Telescopic",
+        "Slate Reflector",
+        "M19 4.0X Flip",
+        "1913 Variable 4-8X",
+        "Monocular Reflector",
+        "Type 99 Mod. 2.7X Telescopic",
+        "MK 3 Mod. 2 Sunfilter",
+        "M38/Slate 2.5X Custom",
+        "ZC2 1.35X Lens",
+        "MK. 3 Reflector",
+        "Type 97 5X Telescopic",
+        "MK 18 Sunfilter",
+        "1229/Slate 3.25X Custom",
+        "MK. 12 Night Vision",
+        "ZF4 3.5X Rifle Scope",
+        "SVT-40 PU Scope 3-6X",
+        "Saturn 1.35X Lens",
+        "MK. 8 Reflector",
+        "Krausnick IS89MG",
+        "Krausnick IS88MG"
+    ],
+    "stock": [
+        "Removed Stock",
+        "VDD Skeletal",
+        "Krausnick S91 Padded",
+        "VDD 64M",
+        "Krausnick S91MG"
+    ],
+    "underbarrel": [
+        "Carver Foregrip",
+        "M1930 Strife Angled",
+        "SMLE Pistol Grip",
+        "Heavy Foregrip",
+        "GF-59 Flashlight",
+        "Bipod",
+        "Mark VI Skeletal",
+        "M1941 Hand Stop"
+    ],
+    "magazine": [
+        "6.5 Sakura 125 Round Drums",
+        "8MM Klauser 100 Round Fast Mags",
+        "13MM Anti-Material 125 Round Drums",
+        "8MM Klauser 250 Round Box"
+    ],
+    "ammo_type": [
+        "Subsonic",
+        "FMJ Rounds",
+        "Frangible",
+        "Armor Piercing",
+        "Incendiary",
+        "Lengthened",
+        "Hollow Point"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Steady",
+        "Disable",
+        "Wreck",
+        "Nerves Of Steel",
+        "Tight Grip",
+        "Frenzy"
+    ],
+    "kit": [
+        "Fast Melee",
+        "Reach",
+        "Surplus",
+        "Deep Breath",
+        "Fully Loaded",
+        "Defender",
+        "Heavy Hitter",
+        "On-Hand"
+    ]
+}

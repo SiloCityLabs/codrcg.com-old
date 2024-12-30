@@ -1,7 +1,26 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
+import Image from "next/image";
 
 function Footer() {
+  const images = [
+    {
+      src: "https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1",
+      alt: "CC",
+    },
+    {
+      src: "https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1",
+      alt: "BY",
+    },
+    {
+      src: "https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1",
+      alt: "NC",
+    },
+    {
+      src: "https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1",
+      alt: "SA",
+    },
+  ];
   return (
     <>
       <footer className="bg-light text-center">
@@ -49,42 +68,19 @@ function Footer() {
             }}
           >
             CC BY-NC-SA 4.0
-            <img
-              style={{
-                height: "22px",
-                marginLeft: "3px",
-                verticalAlign: "text-bottom",
-              }}
-              src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
-              alt=""
-            />
-            <img
-              style={{
-                height: "22px",
-                marginLeft: "3px",
-                verticalAlign: "text-bottom",
-              }}
-              src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
-              alt=""
-            />
-            <img
-              style={{
-                height: "22px",
-                marginLeft: "3px",
-                verticalAlign: "text-bottom",
-              }}
-              src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
-              alt=""
-            />
-            <img
-              style={{
-                height: "22px",
-                marginLeft: "3px",
-                verticalAlign: "text-bottom",
-              }}
-              src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"
-              alt=""
-            />
+            {images.map((image, index) => (
+              <Image
+                key={index}
+                src={image.src}
+                alt={image.alt}
+                width={22}
+                height={22}
+                style={{
+                  marginLeft: "3px",
+                  verticalAlign: "text-bottom",
+                }}
+              />
+            ))}
           </a>
         </div>
       </footer>

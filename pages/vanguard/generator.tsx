@@ -21,7 +21,10 @@ export default function Vanguard() {
         />
         <meta
           name="keywords"
-          content="call of duty, random class generator, vanguard"
+          content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
+          free, mp, multiplayer, call of duty random class generator, COD Vanguard RCG, vanguard random class generator,
+          vanguard, vanguard rcg, vanguard random class generator, class generator, zombies, treyarch zombies,
+          vanguard zombies, vanguard rcg, vanguard random class generator"
         />
         {/* <link rel="icon" href="/favicon.ico" /> */}
         {/* Each generator has icons in the icon folder, not vanguard yet */}

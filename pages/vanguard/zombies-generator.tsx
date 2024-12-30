@@ -21,7 +21,10 @@ export default function VanguardZombies() {
         />
         <meta
           name="keywords"
-          content="call of duty, random class generator, vanguard, zombies, vanguard zombies"
+          content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
+          free, mp, multiplayer, call of duty random class generator, COD Vanguard RCG, vanguard random class generator,
+          vanguard, vanguard rcg, vanguard random class generator, class generator, zombies, treyarch zombies,
+          vanguard zombies, vanguard rcg, vanguard random class generator"
         />
       </Head>
       <Header className="vanguard" navLinks={navLinks} />

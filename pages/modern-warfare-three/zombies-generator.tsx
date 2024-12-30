@@ -21,7 +21,10 @@ export default function ModernWarfareThreeZombies() {
         />
         <meta
           name="keywords"
-          content="call of duty, random class generator, modern warfare 3, zombies, modern warfare zombies"
+          content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
+          free, mp, multiplayer, call of duty random class generator, COD Modern Warfare 3 RCG, COD MW3 RCG, mw3 random class generator,
+          mw3, modern warfare 3, modern warfare 3 rcg, modern warfare 3 random class generator, class generator, zombies, Infinity Ward zombies,
+          modern warfare zombies, modern warfare 3 zombies, modern warfare rcg, modern warfare random class generator"
         />
       </Head>
       <Header className="modern-warfare" navLinks={navLinks} />

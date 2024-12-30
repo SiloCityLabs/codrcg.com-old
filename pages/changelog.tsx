@@ -7,7 +7,7 @@ export default function Changelog() {
   return (
     <>
       <Head>
-        <title>Call Of Duty Random Class Generator - Changelog</title>
+        <title>Changelog - Call Of Duty Random Class Generator</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"

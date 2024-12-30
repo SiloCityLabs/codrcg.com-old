@@ -15,9 +15,8 @@ function Changelog2024() {
               Generator is now available!
             </p>
             <p>
-              12/25/2024:{" "}
-              <a href="vanguard/generator">Vanguard:</a>{" "}
-              Generator is now available!
+              12/25/2024: <a href="vanguard/generator">Vanguard:</a> Generator
+              is now available!
             </p>
             <p>
               12/22/2024:{" "}

@@ -15,7 +15,10 @@ export default function Warzone() {
         />
         <meta
           name="keywords"
-          content="call of duty, random class generator, black ops 6"
+          content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
+          free, mp, multiplayer, call of duty random class generator, COD Warzone RCG, warzone random class generator,
+          warzone, warzone rcg, warzone random class generator, class generator, warzone rcg, warzone random class generator,
+          black ops 6, modern warfare 3, modern warfare 2"
         />
         {/* <link rel="icon" href="/favicon.ico" /> */}
         {/* Each generator has icons in the icon folder, not bo6 yet */}

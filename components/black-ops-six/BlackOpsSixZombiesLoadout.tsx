@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetchWeapon";
@@ -17,7 +16,8 @@ import "@/public/styles/components/Loadout.css";
 import { ZombiesSettings } from "@/types/Generator";
 //Components
 import CustomModal from "@/components/bootstrap/CustomModal";
-import Form from "react-bootstrap/Form";
+//Utils
+import { sendEvent } from "@/utils/gtag";
 
 const defaultSettings: ZombiesSettings = {
   rollMap: true,
@@ -226,6 +226,12 @@ function BlackOpsSixZombiesLoadout() {
 }
 
 async function fetchLoadoutData(setData, setContainerClass) {
+  sendEvent("button_click", {
+    button_id: "bo6Zombies_fetchLoadoutData",
+    label: "BlackOpsSixZombies",
+    category: "COD_Loadouts",
+  });
+
   try {
     const game = "black-ops-six-zombies";
     const randClassName = fetchClassName();

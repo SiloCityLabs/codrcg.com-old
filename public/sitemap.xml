@@ -11,6 +11,15 @@
 	<url>
 		<loc>https://codrcg.com/changelog</loc>
 	</url>
+	<url>
+		<loc>https://codrcg.com/aboutus</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/privacy</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/terms</loc>
+	</url>
 	<!-- Generators -->
 	<!-- Black Ops 6 -->
 	<url>
@@ -37,23 +46,13 @@
 	<url>
 		<loc>https://codrcg.com/vanguard/zombies-generator</loc>
 	</url>
-
 	<!-- <url>
-		<loc>https://codrcg.com/aboutus</loc>
-	</url>
-	<url>
 		<loc>https://codrcg.com/contactus</loc>
-	</url>
-	<url>
-		<loc>https://codrcg.com/privacy</loc>
 	</url>
 	<url>
 		<loc>https://codrcg.com/shoutouts</loc>
 	</url>
 	<url>
 		<loc>https://codrcg.com/statistics</loc>
-	</url>
-	<url>
-		<loc>https://codrcg.com/terms</loc>
 	</url> -->
 </urlset>

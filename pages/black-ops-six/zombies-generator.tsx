@@ -21,7 +21,10 @@ export default function BlackOpsSixZombies() {
         />
         <meta
           name="keywords"
-          content="call of duty, random class generator, black ops 6, zombies, black ops 6 zombies"
+          content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
+          free, mp, zombies, call of duty random class generator, COD Black Ops 6 RCG, COD Blops 6 RCG, blops 6 random class generator,
+          blops 6, black ops 6, ops 6 rcg, ops 6 random class generator, black ops 6 random class generator, zombies, treyarch zombies,
+          black ops zombies, black ops 6 zombies, black ops rcg, black ops random class generator"
         />
       </Head>
       <Header className="black-ops" navLinks={navLinks} />

@@ -6,33 +6,37 @@ import {
   faYoutube,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+//Styles
+import "../public/styles/components/TeamCards.css";
 
 function TeamCards() {
   const members = [
     {
       name: "Andrew Elbaneh",
-      image: "https://placehold.co/25x25",
+      image: "",
       psn: "Bana0615",
       steam: "Bana0615",
       twitter: "https://twitter.com/AndrewElbaneh",
       youtube: "https://www.youtube.com/channel/UC3MbriiZ8-0YMN2MGCHrx4Q",
-      instagram: "https://instagram.com/andrewelbaneh",
+      instagram: "https://instagram.com/elbaneh",
     },
     {
       name: "Luis Rodriguez",
-      image: "https://placehold.co/25x25",
+      image: "",
       psn: "Ldrrp",
       steam: "Ldrrp",
     },
   ];
 
   return (
-    <Row xs={1} sm={2} md={3} lg={4} className="g-4">
+    <Row id="team-cards" xs={1} md={2} lg={4} className="g-4 mb-3">
       {members.map((member, idx) => (
         <Col key={idx}>
-          <Card>
-            <Card.Img variant="top" src={member.image} alt={member.name} />
-            <Card.Body>
+          <Card className="h-100">
+            {member.image && (
+              <Card.Img variant="top" src={member.image} alt={member.name} />
+            )}
+            <Card.Body className="d-flex flex-column">
               <Card.Title>{member.name}</Card.Title>
               <Card.Text>
                 {member.psn && (
@@ -50,18 +54,18 @@ function TeamCards() {
               {member.twitter || member.youtube || member.instagram ? (
                 <div className="social">
                   {member.twitter && (
-                    <a href={member.twitter}>
-                      <FontAwesomeIcon icon={faTwitterSquare} />
+                    <a href={member.twitter} target="_blank" rel="noopener">
+                      <FontAwesomeIcon icon={faTwitterSquare} size="2x" />
                     </a>
                   )}
                   {member.youtube && (
-                    <a href={member.youtube}>
-                      <FontAwesomeIcon icon={faYoutube} />
+                    <a href={member.youtube} target="_blank" rel="noopener">
+                      <FontAwesomeIcon icon={faYoutube} size="2x" />
                     </a>
                   )}
                   {member.instagram && (
-                    <a href={member.instagram}>
-                      <FontAwesomeIcon icon={faInstagram} />
+                    <a href={member.instagram} target="_blank" rel="noopener">
+                      <FontAwesomeIcon icon={faInstagram} size="2x" />
                     </a>
                   )}
                 </div>

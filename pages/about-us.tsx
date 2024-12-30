@@ -27,8 +27,8 @@ export default function Changelog() {
                 id="about-us"
                 className="shadow-lg p-3 mb-5 bg-body rounded text-center"
               >
-                <Row className="mb-2">
-                  <Col>
+                <Row className="justify-content-md-center">
+                  <Col lg={8}>
                     <h3>Why we started this site?</h3>
                     <p>
                       Do you enjoy playing Call Of Duty? We all know that after
@@ -40,6 +40,7 @@ export default function Changelog() {
                     </p>
                   </Col>
                 </Row>
+                <hr />
                 <TeamCards />
               </Container>
             </Col>

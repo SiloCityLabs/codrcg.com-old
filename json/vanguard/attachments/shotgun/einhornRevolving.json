@@ -1,0 +1,96 @@
+{
+    "muzzle": [
+        "M97 Full Choke",
+        "G28 Compensator",
+        "A5 Smoothbore",
+        "SUHL 16 Brake"
+        
+    ],
+    "barrel": [
+        "Sawed-Off",
+        "Klauser 610MM Light",
+        "Klauser 560MM Rapid",
+        "Klauser 710MM 02B"
+    ],
+    "optic": [
+        "ZC2 1.35X Lens",
+        "MK. 8 Reflector",
+        "MK 3 Sunfilter",
+        "Monocular Reflector",
+        "G16 2.5X",
+        "Nydar Model 47",
+        "Slate Reflector",
+        "1913 Variable 4-8X",
+        "M38/Slate 2.5X Custom",
+        "MK 3 Mod. 2 Sunfilter",
+        "Saturn 1.35X Lens",
+        "ZF4 3.5X Rifle Scope",
+        "MK. 3 Reflector",
+        "1229/Slate 3.25X Custom",
+        "SVT-40 PU Scope 3-6X",
+        "Medium Iron Sights",
+        "MK 18 Sunfilter",
+        "Large Iron Sights"
+    ],
+    "stock": [
+        "Reisdorf Folding",
+        "Removed Stock",
+        "VDD Hunter",
+        "VDD 33B",
+        "Klauser S2"
+    ],
+    "underbarrel": [
+        "M1930 Strife Angled",
+        "Carver Foregrip",
+        "Mark VI Skeletal",
+        "GF-59 Flashlight",
+        "SMLE Pistol Grip",
+        "M1941 Hand Stop",
+        "M1915 Steady"
+    ],
+    "magazine": [
+        "16 Gauge 5 Round Fast Mags",
+        "Birdshot 5 Round Cylinder",
+        "16 Gauge 7 Round Cylinder",
+        "12 Gauge 5 Round Cylinder"
+    ],
+    "ammo_type": [
+        "Reduced Powder",
+        "Slug",
+        "Incendiary",
+        "Packed Powder",
+        "Hollow Point",
+        "Frangible",
+        "Buck and Slug"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Wreck",
+        "Nerves Of Steel",
+        "Acrobatic",
+        "Gung-Ho",
+        "Disable",
+        "Sleight Of Hand",
+        "Momentum"
+    ],
+    "kit": [
+        "Fast Melee",
+        "On-Hand",
+        "Quick",
+        "Surplus",
+        "Fully Loaded",
+        "Heavy Hitter",
+        "Reach"
+    ]
+}

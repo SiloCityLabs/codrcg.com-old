@@ -1,0 +1,107 @@
+{
+    "muzzle": [
+        "F8 Stabilizer",
+        "Iscove Flash Hider",
+        "L Brake",
+        "Mercury Silencer",
+        "Recoil Booster",
+        "MX Silencer",
+        "G28 Compensator"
+        
+    ],
+    "barrel": [
+        "Baumann 317MM LS",
+        "Wenger 480MM 09D2",
+        "FREI 432MM Shrouded",
+        "Wenger 406MM Rapid"
+    ],
+    "optic": [
+        "Nydar Model 47",
+        "Saturn 1.35X Lens",
+        "MK 3 Sunfilter",
+        "Type 99 10.0X Telescopic",
+        "Slate Reflector",
+        "Van IS",
+        "1913 Variable 4-8X",
+        "Monocular Reflector",
+        "ZF41 7.0X Telescopic",
+        "MK 3 Mod. 2 Sunfilter",
+        "M38/Slate 2.5X Custom",
+        "ZC2 1.35X Lens",
+        "Type 97 5X Telescopic",
+        "MK 18 Sunfilter",
+        "MK. 3 Reflector",
+        "1229/Slate 3.25X Custom",
+        "MK. 12 Night Vision",
+        "ZF4 3.5X Rifle Scope",
+        "M19 4.0X Flip",
+        "SVT-40 PU Scope 3-6X",
+        "G16 2.5X",
+        "Kreis IS",
+        "MK. 8 Reflector"
+    ],
+    "stock": [
+        "Baumann GMK-2",
+        "Frei Smol",
+        "Baumann 88 Padded",
+        "Wenger NH Adjustable",
+        "Removed Stock"
+    ],
+    "underbarrel": [
+        "Carver Foregrip",
+        "M1930 Strife Angled",
+        "SMLE Pistol Grip",
+        "Heavy Foregrip",
+        "GF-59 Flashlight",
+        "Bipod",
+        "Mark VI Skeletal",
+        "M1941 Hand Stop"
+    ],
+    "magazine": [
+        "5.6MM 36 Round Mags",
+        "8MM Klauser 36 Round Mags",
+        ".30 Russian Short 72 Round Drums",
+        "8MM Klauser 54 Round Drums",
+        "5.6MM 30 Round Fast Mags"
+    ],
+    "ammo_type": [
+        "Subsonic",
+        "FMJ Rounds",
+        "Frangible",
+        "Armor Piercing",
+        "Incendiary",
+        "Lengthened",
+        "Hollow Point"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Fleet",
+        "Icy Veins",
+        "Driller",
+        "Discard",
+        "Tight Grip",
+        "Hardscope",
+        "Frenzy"
+    ],
+    "kit": [
+        "Fast Melee",
+        "Reach",
+        "Surplus",
+        "Deep Breath",
+        "Fully Loaded",
+        "Defender",
+        "Heavy Hitter",
+        "On-Hand"
+    ]
+}

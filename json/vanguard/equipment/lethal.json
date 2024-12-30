@@ -1,42 +1,10 @@
-{
-    "0": {
-      "name": "MK2 Frag Grenade",
-      "type": "Lethal",
-      "game": "vanguard"
-    },
-    "1": {
-      "name": "Gammon Bomb",
-      "type": "Lethal",
-      "game": "vanguard"
-    },
-    "2": {
-      "name": "Throwing Knife",
-      "type": "Lethal",
-      "game": "vanguard"
-    },
-    "3": {
-      "name": "Thermite",
-      "type": "Lethal",
-      "game": "vanguard"
-    },
-    "4": {
-      "name": "Demolition Charge",
-      "type": "Lethal",
-      "game": "vanguard"
-    },
-    "5": {
-      "name": "Molotov Cocktail",
-      "type": "Lethal",
-      "game": "vanguard"
-    },
-    "6": {
-      "name": "Incendiary Grenade",
-      "type": "Lethal",
-      "game": "vanguard"
-    },
-    "7": {
-      "name": "Sticky Bomb",
-      "type": "Lethal",
-      "game": "vanguard"
-    }
-  }
+[
+  "MK2 Frag Grenade",
+  "Gammon Bomb",
+  "Throwing Knife",
+  "Thermite",
+  "Demolition Charge",
+  "Molotov Cocktail",
+  "Incendiary Grenade",
+  "Sticky Bomb"
+]

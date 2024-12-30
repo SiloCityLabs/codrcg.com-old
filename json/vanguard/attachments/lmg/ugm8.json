@@ -1,0 +1,103 @@
+{
+    "muzzle": [
+        "F8 Stabilizer",
+        "Iscove Flash Hider",
+        "L Brake",
+        "Mercury Silencer",
+        "Recoil Booster",
+        "MX Silencer",
+        "G28 Compensator"
+        
+    ],
+    "barrel": [
+        "Bernard XL214 736MM",
+        "Romuald 560MM DA",
+        "Mercier Port 635MM"
+    ],
+    "optic": [
+        "Slate Reflector",
+        "Saturn 1.35X Lens",
+        "G16 2.5X",
+        "MK 3 Sunfilter",
+        "Monocular Reflector",
+        "SVT-40 PU Scope 3-6X",
+        "Romuald MD",
+        "M38/Slate 2.5X Custom",
+        "Nydar Model 47",
+        "ZC2 1.35X Lens",
+        "ZF41 7.0X Telescopic",
+        "MK. 8 Reflector",
+        "MK. 12 Night Vision",
+        "Type 97 5X Telescopic",
+        "MK 18 Sunfilter",
+        "M19 4.0X Flip",
+        "MK 3 Mod. 2 Sunfilter",
+        "ZF4 3.5X Rifle Scope",
+        "Type 99 10.0X Telescopic",
+        "1913 Variable 4-8X",
+        "1229/Slate 3.25X Custom"
+    ],
+    "stock": [
+        "Mercier WT Ancre",
+        "Romuald Tac Yr",
+        "Bernard Forte VII",
+        "Removed Stock"
+    ],
+    "underbarrel": [
+        "Carver Foregrip",
+        "M1930 Strife Angled",
+        "SMLE Pistol Grip",
+        "Heavy Foregrip",
+        "GF-59 Flashlight",
+        "Bipod",
+        "Mark VI Skeletal",
+        "M1941 Hand Stop"
+    ],
+    "magazine": [
+        "7.62X54MMR 100 Round Box",
+        ".303 British 75 Round Box",
+        ".50 BMG 50 Round Box",
+        ".50 BMG 75 Round Box",
+        "6.5MM Sakura 125 Round Box",
+        ".303 British 50 Round Fast Mags"
+    ],
+    "ammo_type": [
+        "Subsonic",
+        "FMJ Rounds",
+        "Frangible",
+        "Armor Piercing",
+        "Incendiary",
+        "Lengthened",
+        "Hollow Point"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Tight Grip",
+        "Driller",
+        "Surveil",
+        "Brace",
+        "Nerves Of Steel",
+        "Gung-Ho"
+    ],
+    "kit": [
+        "Fast Melee",
+        "Reach",
+        "Surplus",
+        "Deep Breath",
+        "Fully Loaded",
+        "Defender",
+        "Heavy Hitter",
+        "On-Hand"
+    ]
+}

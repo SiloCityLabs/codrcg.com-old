@@ -29,8 +29,9 @@ function VanguardLoadout() {
       },
     },
     equipment: {
-      tactical: { name: "", type: "" },
-      lethal: { name: "", type: "" },
+      tactical: "",
+      lethal: "",
+      field_upgrade: "",
     },
   });
 
@@ -101,11 +102,11 @@ function VanguardLoadout() {
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">{equipment.tactical.name}</span>
+            <span className="text-muted fs-6">{equipment.tactical}</span>
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{equipment.lethal.name}</span>
+            <span className="text-muted fs-6">{equipment.lethal}</span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Perks:</span> <br />
@@ -114,6 +115,10 @@ function VanguardLoadout() {
         </Row>
         <hr />
         <Row className="mb-5">
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
+            <span className="text-muted fs-6">{equipment.field_upgrade}</span>
+          </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Streaks:</span> <br />
             <span className="text-muted fs-6">{streaks}</span>
@@ -135,8 +140,8 @@ async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "vanguard";
     const randClassName = fetchClassName();
-    //Figure out primary attachment count
-    const primAttachCount = 10;
+    //Set attach count too 100 to know its max
+    const attachCount = 100;
 
     const perks = fetchPerks(game);
     const streaks = fetchStreaks(game);
@@ -150,12 +155,10 @@ async function fetchLoadoutData(setData, setContainerClass) {
         attachments: "",
       },
     };
-    //TODO: Remove after i add all attachments
-    weapons.primary.weapon.no_attach = true;
     //Get Primary Attachments
     if (!weapons.primary.weapon?.no_attach) {
       weapons.primary.attachments = implodeObject(
-        fetchAttachments(weapons.primary.weapon, primAttachCount)
+        fetchAttachments(weapons.primary.weapon, attachCount)
       );
     }
     //Check for overkill
@@ -166,17 +169,17 @@ async function fetchLoadoutData(setData, setContainerClass) {
         weapons.primary.weapon.name
       );
     }
-    //TODO: Remove after i add all attachments
-    weapons.secondary.weapon.no_attach = true;
+
     //Verify if secondary weapon has attachments
     if (!weapons.secondary.weapon?.no_attach) {
       weapons.secondary.attachments = implodeObject(
-        fetchAttachments(weapons.secondary.weapon)
+        fetchAttachments(weapons.secondary.weapon, attachCount)
       );
     }
     let equipment = {
       tactical: fetchEquipment("tactical", game),
       lethal: fetchEquipment("lethal", game),
+      field_upgrade: fetchEquipment("field_upgrade", game),
     };
 
     setData({

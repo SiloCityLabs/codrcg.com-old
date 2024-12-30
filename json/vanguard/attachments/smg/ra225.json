@@ -1,0 +1,102 @@
+{
+    "muzzle": [
+        "F8 Stabilizer",
+        "Marauder Flash Hider",
+        "Mercury Silencer",
+        "No. 3 Rifle Brake",
+        "Strife Compensator",
+        "M1929 Silencer",
+        "Recoil Booster"
+        
+    ],
+    "barrel": [
+        "Urban THM 12.5\"",
+        "Moravec Surge 16\"",
+        "Moravec 18\" Needle",
+        "Urban 14\" Pat",
+        "Urban Rapid 11\""
+    ],
+    "optic": [
+        "Nydar Model 47",
+        "G16 2.5X",
+        "MK 3 Sunfilter",
+        "1913 Variable 4-8X",
+        "Slate Reflector",
+        "M19 4.0X Flip",
+        "MK. 12 Night Vision",
+        "Monocular Reflector",
+        "MK 3 Mod. 2 Sunfilter",
+        "ZC2 1.35X Lens",
+        "ZF4 3.5X Rifle Scope",
+        "M38/Slate 2.5X Custom",
+        "SVT-40 PU Scope 3-6X",
+        "MK. 3 Reflector",
+        "Saturn 1.35X Lens",
+        "MK 18 Sunfilter",
+        "1229/Slate 3.25X Custom",
+        "MK. 8 Reflector",
+        "Krausnick IS01M",
+        "Krausnick IS02M"
+    ],
+    "stock": [
+        "Valenta Kotva",
+        "Valenta LDB",
+        "Urban TAC",
+        "Moravec MB",
+        "Valenta Padded"
+    ],
+    "underbarrel": [
+        "M1930 Strife Angled",
+        "Carver Foregrip",
+        "SG98 Compact",
+        "M1915 Steady",
+        "Mark VI Skeletal",
+        "M1941 Hand Stop",
+        "GF-59 Flashlight",
+        "SMLE Pistol Grip"
+    ],
+    "magazine": [
+        ".45 ACP 32 Round Mags",
+        "7.62 Gorenko 32 Round Mags",
+        "9MM 48 Round Drums"
+    ],
+    "ammo_type": [
+        "FMJ Rounds",
+        "Subsonic",
+        "Incendiary",
+        "Hollow Point",
+        "Frangible",
+        "Lengthened"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Spotter",
+        "Steady",
+        "Unmarked",
+        "Sleight Of Hand",
+        "Tight Grip",
+        "Momentum",
+        "Vital"
+    ],
+    "kit": [
+        "Fast Melee",
+        "Reach",
+        "Surplus",
+        "Deep Breath",
+        "Fully Loaded",
+        "Defender",
+        "Heavy Hitter",
+        "On-Hand"
+    ]
+}

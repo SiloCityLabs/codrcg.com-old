@@ -1,0 +1,104 @@
+{
+    "muzzle": [
+        "T1 Flash Hider",
+        "F8 Stabilizer",
+        "Mercury Silencer",
+        "G28 Compensator",
+        "MX Silencer",
+        "L Brake"
+        
+    ],
+    "barrel": [
+        "Sakura 776MM",
+        "Shiraishi 712MM Sniper",
+        "Shiraishi Short"
+    ],
+    "optic": [
+        "Nydar Model 47",
+        "M19 4.0X Flip",
+        "1913 Variable 4-8X",
+        "Type 99 10.0X Telescopic",
+        "Factory Iron Sights",
+        "Slate Reflector",
+        "MK. 8 Reflector",
+        "MK 3 Sunfilter",
+        "Saturn 1.35X Lens",
+        "Shiraishi Custom Type 15",
+        "ZF4 3.5X Rifle Scope",
+        "MK 18 Sunfilter",
+        "Monocular Reflector",
+        "M38/Slate 2.5X Custom",
+        "G16 2.5X",
+        "ZC2 1.35X Lens",
+        "SVT-40 PU Scope 3-6X",
+        "MK 3 Mod. 2 Sunfilter",
+        "1229/Slate 3.25X Custom",
+        "MK. 12 Night Vision",
+        "MK. 3 Reflector",
+        "Type 97 5X Telescopic",
+        "Shiraishi Large Type 05"
+    ],
+    "stock": [
+        "Sakura Wire",
+        "Shiraishi Precision",
+        "Warubachi Type 40",
+        "Sakura Cvr Custom",
+        "Removed Stock",
+        "Warubachi Padded"
+    ],
+    "underbarrel": [
+        "M1930 Strife Angled",
+        "Carver Foregrip",
+        "Bayonet",
+        "Bipod",
+        "GF-59 Flashlight",
+        "Heavy Foregrip",
+        "SMLE Pistol Grip",
+        "M1941 Hand Stop"
+    ],
+    "magazine": [
+        "5.6MM 8 Round Mags",
+        "6.5MM Sakura 5 Round Fast Mags",
+        "8MM Klauser 5 Round Mags",
+        "6.5MM Sakura 20 Round Drums"
+    ],
+    "ammo_type": [
+        "Subsonic",
+        "FMJ Rounds",
+        "Frangible",
+        "Armor Piercing",
+        "Incendiary",
+        "Lengthened",
+        "Hollow Point"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Discard",
+        "Spotter",
+        "Hardscope",
+        "Perfectionist",
+        "Focus",
+        "Vital"
+    ],
+    "kit": [
+        "Fast Melee",
+        "Reach",
+        "Surplus",
+        "Deep Breath",
+        "Fully Loaded",
+        "Defender",
+        "Heavy Hitter",
+        "On-Hand"
+    ]
+}

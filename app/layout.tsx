@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import 'bootstrap/dist/css/bootstrap.min.css';
-//TODO: Figure out why the css files arent loading
-
-const inter = Inter({ subsets: ["latin"] });
+//Styles
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../public/styles/main.css";
+import "../public/styles/material.css";
 
 export const metadata: Metadata = {
   title: "Call of Duty Random Class Generator",
@@ -17,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

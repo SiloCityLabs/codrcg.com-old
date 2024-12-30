@@ -1,5 +1,5 @@
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import { Card, Button } from "react-bootstrap";
+//Styles
 import "../public/styles/components/GeneratorCard.css";
 //Types
 import { CardProps } from "@/types/GeneratorCard";

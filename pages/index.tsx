@@ -16,6 +16,22 @@ export default function Home() {
         />
         <meta
           name="keywords"
+          content="call of duty, cod, random class generator, rcg, multiplayer, call of duty random class generator,
+          Morden Warfare 2 RCG, MW2 RCG, mw2 random class generator, modern warfare 2, modern warfare 2 random class generator,
+          Black Ops RCG, blops, black ops, ops rcg, black ops random class generator,
+          Morden Warfare 3 RCG, MW3 RCG, mw3 random class generator, modern warfare 3, modern warfare 3 random class generator,
+          Black Ops 2 RCG, blops 2, black ops 2, ops 2 rcg, black ops 2 random class generator,
+          Ghost random class generator, Ghost,
+          Black Ops 3 RCG, blops 3, black ops 3, ops 3 rcg, black ops 3 random class generator
+          Call of Duty: WWII, World War II RCG, WWII, world war II random class generator
+          Call of Duty: WW2, World War 2 RCG, WW2, world war 2 random class generator,
+          Black Ops 4 RCG, blops 4, black ops 4, ops 4 rcg, black ops 4 random class generator,
+          Black Ops 6 RCG, blops 6, black ops 6, ops 6 rcg, black ops 6 random class generator,
+          Vanguard random class generator, Vanguard,
+          Warzone random class generator, Warzone"
+        />
+        <meta
+          name="keywords"
           content="call of duty, cod, random class generator, rcg, multiplayer, call of duty random class generator, Morden Warfare 2 RCG, MW2 RCG, mw2 random class generator, modern warfare 2, modern warfare 2 random class generator, Black Ops RCG, blops, black ops, ops rcg, black ops random class generator, Morden Warfare 3 RCG, MW3 RCG, mw3 random class generator, modern warfare 3, modern warfare 3 random class generator, Black Ops 2 RCG, blops 2, black ops 2, ops 2 rcg, black ops 2 random class generator, Ghost random class generator, Ghost, Advanced Warfare RCG, advanced warfare random class generator, Black Ops 3 RCG, blops 3, black ops 3, ops 3 rcg, black ops 3 random class generator, Call of Duty: WWII, World War II RCG, WWII, world war II random class generator, Call of Duty: WW2, World War 2 RCG, WW2, world war 2 random class generator, black ops 6, zombies, black ops 6 zombies, warzone, modern warfare 3 (2023)"
         />
       </Head>

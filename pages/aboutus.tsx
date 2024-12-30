@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TeamCards from "@/components/TeamCards";
 
-export default function Changelog() {
+export default function AboutUs() {
   return (
     <>
       <Head>

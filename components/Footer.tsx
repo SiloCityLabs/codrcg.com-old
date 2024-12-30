@@ -1,10 +1,28 @@
 import React from "react";
+import { Nav } from "react-bootstrap";
 
 function Footer() {
   return (
     <>
-      <footer className="bg-light text-center text-lg-start">
-        <div className="text-center p-3">©2024 Copyright: SiloCityLabs</div>
+      <footer className="bg-light text-center">
+        <Nav className="justify-content-center flex-column flex-md-row">
+          <Nav.Item
+            style={{
+              padding: "7px",
+            }}
+          >
+            ©2024 Copyright: SiloCityLabs
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/about-us">About Us</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link eventKey="/terms">Terms</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link eventKey="/privacy-policy">Privacy Policy</Nav.Link>
+          </Nav.Item>
+        </Nav>
         <div className="text-center p-3">
           <a
             property="dct:title"

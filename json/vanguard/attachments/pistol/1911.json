@@ -1,0 +1,84 @@
+{
+    "muzzle": [
+        "Marauder Flash Hider",
+        "F8 Stabilizer",
+        "Mercury Silencer",
+        "No. 3 Rifle Brake",
+        "Strife Compensator",
+        "M1929 Silencer"
+        
+    ],
+    "barrel": [
+        "Cooper 6.5\"",
+        "Gracey #1",
+        "Gracey Short No. #2",
+        "Cooper Full-Auto"
+    ],
+    "optic": [
+        "Nydar Model 47",
+        "MK 3 Sunfilter",
+        "G16 2.5X",
+        "Slate Reflector",
+        "Monocular Reflector",
+        "1913 Variable 4-8X",
+        "ZC2 1.35X Lens",
+        "MK 3 Mod. 2 Sunfilter",
+        "ZF4 3.5X Rifle Scope",
+        "MK. 3 Reflector",
+        "1229/Slate 3.25X Custom",
+        "MK. 8 Reflector",
+        "MK 18 Sunfilter",
+        "M38/Slate 2.5X Custom",
+        "SVT-40 PU Scope 3-6X"
+    ],
+    "trigger_action": [
+        "Lightweight Trigger",
+        "Steady Trigger",
+        "Heavy Trigger",
+        "Rapid Action",
+        "Hair Trigger"
+    ],
+    "magazine": [
+        ".45 ACP 8 Round Fast Mags",
+        "9MM 12 Round Mags",
+        ".45 ACP 18 Round Mags",
+        ".30 Russian Short 8 Round Mags"
+    ],
+    "ammo_type": [
+        "Subsonic",
+        "FMJ Rounds",
+        "Lengthened",
+        "Frangible",
+        "Incendiary",
+        "Hollow Point"
+    ],
+    "rear_grip": [
+        "Rubber Grip",
+        "Taped Grip",
+        "Leather Grip",
+        "Fabric Grip",
+        "Grooved Grip",
+        "Hatched Grip",
+        "Polymer Grip",
+        "Pine Tar Grip",
+        "Granular Grip",
+        "Stippled Grip"
+    ],
+    "proficiency": [
+        "Fleet",
+        "Nerves Of Steel",
+        "Sleight Of Hand",
+        "Vital",
+        "Pinned",
+        "Akimbo"
+    ],
+    "kit": [
+        "Heavy Hitter",
+        "Quick",
+        "Fully Loaded",
+        "On-Hand",
+        "Surplus",
+        "Fast Melee",
+        "Reach"
+    ]
+}

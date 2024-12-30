@@ -110,8 +110,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
         attachments: "",
       },
     };
-    //TODO: Remove this once all the attachments are added
-    weapons.primary.weapon.no_attach = true;
     //Get Primary Attachments
     if (!weapons.primary.weapon.no_attach) {
       weapons.primary.attachments = implodeObject(

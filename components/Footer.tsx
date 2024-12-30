@@ -14,13 +14,13 @@ function Footer() {
             ©2024 Copyright: SiloCityLabs
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/about-us">About Us</Nav.Link>
+            <Nav.Link href="/aboutus">About Us</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="/terms">Terms</Nav.Link>
+            <Nav.Link href="/terms">Terms</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="/privacy-policy">Privacy Policy</Nav.Link>
+            <Nav.Link href="/privacy">Privacy Policy</Nav.Link>
           </Nav.Item>
         </Nav>
         <div className="text-center p-3">

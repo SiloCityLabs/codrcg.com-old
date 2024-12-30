@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -34,10 +35,11 @@ export default function Privacy() {
                     <p>
                       This Privacy Policy governs the manner in which
                       Techreanimate collects, uses, maintains and discloses
-                      information collected from users (each, a "User") of the
-                      https://codrcg.com website ("Site"). This privacy policy
-                      applies to the Site and all products and services offered
-                      by Techreanimate.
+                      information collected from users (each, a
+                      &quot;User&quot;) of the https://codrcg.com website
+                      (&quot;Site&quot;). This privacy policy applies to the
+                      Site and all products and services offered by
+                      Techreanimate.
                     </p>
                     <br />
                     <h1>What information do we collect?</h1>
@@ -179,7 +181,7 @@ export default function Privacy() {
                       As part of the California Online Privacy Protection Act,
                       all users of our site may make any changes to their
                       information at anytime by logging into their account and
-                      going to the 'My Account' page.
+                      going to the &apos;My Account&apos; page.
                     </p>
                     <br />
                     <h1>Childrens Online Privacy Protection Act Compliance</h1>
@@ -203,7 +205,7 @@ export default function Privacy() {
                       Please also visit our Terms and Conditions section
                       establishing the use, disclaimers, and limitations of
                       liability governing the use of our website at{" "}
-                      <a href="/terms">https://codrcg.com/terms</a>
+                      <Link href="/terms">https://codrcg.com/terms</Link>
                     </p>
                     <br />
                     <h1>Your Consent</h1>

@@ -140,8 +140,8 @@ async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "vanguard";
     const randClassName = fetchClassName();
-    //Figure out primary attachment count
-    const primAttachCount = 10;
+    //Set attach count too 100 to know its max
+    const attachCount = 100;
 
     const perks = fetchPerks(game);
     const streaks = fetchStreaks(game);
@@ -155,12 +155,10 @@ async function fetchLoadoutData(setData, setContainerClass) {
         attachments: "",
       },
     };
-    //TODO: Remove after i add all attachments
-    weapons.primary.weapon.no_attach = true;
     //Get Primary Attachments
     if (!weapons.primary.weapon?.no_attach) {
       weapons.primary.attachments = implodeObject(
-        fetchAttachments(weapons.primary.weapon, primAttachCount)
+        fetchAttachments(weapons.primary.weapon, attachCount)
       );
     }
     //Check for overkill
@@ -171,12 +169,11 @@ async function fetchLoadoutData(setData, setContainerClass) {
         weapons.primary.weapon.name
       );
     }
-    //TODO: Remove after i add all attachments
-    weapons.secondary.weapon.no_attach = true;
+
     //Verify if secondary weapon has attachments
     if (!weapons.secondary.weapon?.no_attach) {
       weapons.secondary.attachments = implodeObject(
-        fetchAttachments(weapons.secondary.weapon)
+        fetchAttachments(weapons.secondary.weapon, attachCount)
       );
     }
     let equipment = {

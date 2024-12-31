@@ -1,0 +1,99 @@
+{
+    "0": {
+      "name": "MR6",
+      "type": "pistol",
+      "game": "black-ops-three"
+    },
+    "1": {
+      "name": "RK5",
+      "type": "pistol",
+      "game": "black-ops-three"
+    },
+    "2": {
+      "name": "L-Car 9",
+      "type": "pistol",
+      "game": "black-ops-three"
+    },
+    "3": {
+      "name": "Rift E9",
+      "type": "pistol",
+      "game": "black-ops-three"
+    },
+    "4": {
+      "name": "XM-53",
+      "type": "launcher",
+      "game": "black-ops-three",
+      "no_attach": true
+    },
+    "5": {
+      "name": "BlackCell",
+      "type": "launcher",
+      "game": "black-ops-three",
+      "no_attach": true
+    },
+    "6": {
+      "name": "Combat Knife",
+      "type": "melee",
+      "game": "black-ops-three",
+      "no_attach": true
+    },
+    "7": {
+      "name": "Brass Knuckles",
+      "type": "melee",
+      "game": "black-ops-three",
+      "no_attach": true
+    },
+    "8": {
+      "name": "Malice",
+      "type": "melee",
+      "game": "black-ops-three",
+      "no_attach": true
+    },
+    "9": {
+      "name": "Carver",
+      "type": "melee",
+      "game": "black-ops-three",
+      "no_attach": true
+    },
+    "10": {
+      "name": "Skull Splitter",
+      "type": "melee",
+      "game": "black-ops-three",
+      "no_attach": true
+    },
+    "11": {
+      "name": "Slash N' Burn",
+      "type": "melee",
+      "game": "black-ops-three",
+      "no_attach": true
+    },
+    "12": {
+      "name": "Nightbreaker",
+      "type": "melee",
+      "game": "black-ops-three",
+      "no_attach": true
+    },
+    "13": {
+      "name": "Enforcer",
+      "type": "melee",
+      "game": "black-ops-three",
+      "no_attach": true
+    },
+    "14": {
+      "name": "Prizefighters",
+      "type": "melee",
+      "game": "black-ops-three",
+      "no_attach": true
+    },
+    "NX ShadowClaw": {
+      "name": "",
+      "type": "melee",
+      "game": "black-ops-three"
+    },
+    "": {
+      "name": "D13 Sector",
+      "type": "melee",
+      "game": "black-ops-three",
+      "no_attach": true
+    }
+}

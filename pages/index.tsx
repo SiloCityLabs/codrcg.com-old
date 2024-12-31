@@ -105,14 +105,11 @@ export default function Home() {
             <Col xl={3} lg={4} md={6} className="text-center mb-4">
               <GeneratorCard
                 title="Black Ops III"
-                text="Coming during the holidays"
+                text=""
                 variant="black-ops"
                 btn1Text="Multiplayer Generator"
                 link="black-ops-three/generator"
-                disabled={true}
-                btn2Text="Zombies Generator"
-                link2="black-ops-three/zombies-generator"
-                disabled2={true}
+                disabled={false}
               />
             </Col>
           </Row>

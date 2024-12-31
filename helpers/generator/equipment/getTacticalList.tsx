@@ -4,6 +4,7 @@ import warzoneList from "@/json/warzone/equipment/tactical.json";
 import mw3List from "@/json/modern-warfare-three/equipment/tactical.json";
 import mw3ZombiesList from "@/json/modern-warfare-three/zombies/tactical.json";
 import vanguardList from "@/json/vanguard/equipment/tactical.json";
+import bo3List from "@/json/black-ops-three/equipment/tactical.json";
 
 const equipment: Record<string, any> = {
   "black-ops-six": bo6List,
@@ -12,6 +13,7 @@ const equipment: Record<string, any> = {
   "modern-warfare-three": mw3List,
   "modern-warfare-three-zombies": mw3ZombiesList,
   vanguard: vanguardList,
+  "black-ops-three": bo3List,
 };
 
 export function getTacticalList(game: string): any {

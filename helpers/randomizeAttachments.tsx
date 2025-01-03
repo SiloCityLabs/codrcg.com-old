@@ -20,8 +20,14 @@ export function randomizeAttachments(attachArr: any, data: any, count: number) {
   while (attachCount < count) {
     const randomKey = keys[Math.floor(Math.random() * keys.length)];
 
-    if (!attachArr.hasOwnProperty(randomKey)) {
+    if (typeof data[randomKey] === "string") {
+      if (!attachArr.includes(data[randomKey])) {
+        attachArr.push(data[randomKey]);
+        attachCount++;
+      }
+    } else if (!attachArr.hasOwnProperty(randomKey)) {
       const attachment = randomListItem(data[randomKey]);
+      //TODO: Make this only run on black ops 6 guns
       const addAttachment = verifyBO6Attachments(
         data,
         attachArr,

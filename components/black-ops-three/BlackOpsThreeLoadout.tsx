@@ -1,42 +1,44 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import { Container, Row, Col, Button } from "react-bootstrap";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetchWeapon";
-import { fetchPerks } from "@/helpers/fetchPerks";
 import { fetchStreaks } from "@/helpers/fetchStreaks";
-import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
-import { fetchWildcard } from "@/helpers/fetchWildcard";
 import { fetchClassName } from "@/helpers/fetchClassName";
+import { fetchPerk } from "@/helpers/generator/black-ops-three/fetchPerk";
+import { fetchAttachments } from "@/helpers/generator/black-ops-three/fetchAttachments";
 //Styles
 import "@/public/styles/components/Loadout.css";
+
+const defaultWeapon = { name: "", type: "", game: "", no_attach: false };
 
 function BlackOpsThreeLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
     randClassName: "",
-    perks: null,
+    perks: {
+      perk1: "",
+      perk2: "",
+      perk3: "",
+    },
     streaks: null,
     weapons: {
       primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
+        weapon: defaultWeapon,
+        optic: "",
         attachments: "",
       },
       secondary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
+        weapon: defaultWeapon,
+        optic: "",
         attachments: "",
       },
-      melee: { name: "", type: "", game: "" },
     },
     equipment: {
-      tactical: { name: "", type: "" },
-      lethal: { name: "", type: "" },
-      fieldUpgrade: { name: "", type: "" },
-      fieldUpgrade2: { name: "", type: "" },
+      tactical: "",
+      lethal: "",
     },
-    wildcard: { name: "", type: "" },
   });
 
   useEffect(() => {
@@ -47,7 +49,7 @@ function BlackOpsThreeLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { randClassName, perks, streaks, weapons, equipment, wildcard } = data;
+  const { randClassName, perks, streaks, weapons, equipment } = data;
 
   return (
     <>
@@ -60,88 +62,94 @@ function BlackOpsThreeLoadout() {
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Primary:</span> <br />
             <span className="text-muted fs-6">
-              {weapons.primary.weapon.name}
+              {weapons.primary.weapon.name
+                ? weapons.primary.weapon.name
+                : "None"}
             </span>
             <br />
-            {weapons.primary.weapon.no_attach ? (
-              <>
-                <span className="fw-bolder fs-5">Primary Attachments: </span>
-                <br />
-                <span className="text-muted fs-6">No Attachments</span>
-              </>
-            ) : (
-              <>
-                <span className="fw-bolder fs-5">Primary Attachments:</span>
-                <br />
-                <span className="text-muted fs-6">
-                  {weapons.primary.attachments}
-                </span>
-              </>
-            )}
+            <span className="fw-bolder fs-5">Primary Optic:</span>
+            <br />
+            <span className="text-muted fs-6">
+              <span className="text-muted fs-6">
+                {weapons.primary.optic ? weapons.primary.optic : "None"}
+              </span>
+            </span>
+            <br />
+            <span className="fw-bolder fs-5">Primary Attachments:</span>
+            <br />
+            <span className="text-muted fs-6">
+              <span className="text-muted fs-6">
+                {weapons.primary.attachments
+                  ? weapons.primary.attachments
+                  : "None"}
+              </span>
+            </span>
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Secondary:</span> <br />
             <span className="text-muted fs-6">
-              {weapons.secondary.weapon.name}
+              {weapons.secondary.weapon.name
+                ? weapons.secondary.weapon.name
+                : "None"}
             </span>
             <br />
-            {weapons.secondary.weapon.no_attach ? (
-              <>
-                <span className="fw-bolder fs-5">Secondary Attachments: </span>
-                <br />
-                <span className="text-muted fs-6">No Attachments</span>
-              </>
-            ) : (
-              <>
-                <span className="fw-bolder fs-5">Secondary Attachments:</span>
-                <br />
-                <span className="text-muted fs-6">
-                  {weapons.secondary.attachments}
-                </span>
-              </>
-            )}
-          </Col>
-          <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Melee:</span> <br />
-            <span className="text-muted fs-6">{weapons.melee.name}</span>
+            <span className="fw-bolder fs-5">Secondary Optic:</span>
+            <br />
+            <span className="text-muted fs-6">
+              <span className="text-muted fs-6">
+                {weapons.secondary.optic ? weapons.secondary.optic : "None"}
+              </span>
+            </span>
+            <br />
+            <span className="fw-bolder fs-5">Secondary Attachments:</span>
+            <br />
+            <span className="text-muted fs-6">
+              <span className="text-muted fs-6">
+                {weapons.secondary.attachments
+                  ? weapons.secondary.attachments
+                  : "None"}
+              </span>
+            </span>
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">{equipment.tactical.name}</span>
+            <span className="text-muted fs-6">
+              {equipment.tactical ? equipment.tactical : "None"}
+            </span>
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{equipment.lethal.name}</span>
+            <span className="text-muted fs-6">
+              {equipment.lethal ? equipment.lethal : "None"}
+            </span>
+          </Col>
+        </Row>
+        <hr />
+        <Row className="justify-content-md-center">
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Perk 1:</span> <br />
+            <span className="text-muted fs-6">
+              {perks.perk1 ? perks.perk1 : "None"}
+            </span>
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perks:</span> <br />
-            <span className="text-muted fs-6">{perks}</span>
+            <span className="fw-bolder fs-5">Perk 2:</span> <br />
+            <span className="text-muted fs-6">
+              {perks.perk2 ? perks.perk2 : "None"}
+            </span>
+          </Col>
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Perk 3:</span> <br />
+            <span className="text-muted fs-6">
+              {perks.perk3 ? perks.perk3 : "None"}
+            </span>
           </Col>
         </Row>
         <hr />
         <Row className="mb-5">
-          <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">
-              {equipment.fieldUpgrade.name}
-            </span>
-            {wildcard.name === "Prepper" && (
-              <>
-                <br />
-                <span className="text-muted fs-6">
-                  {" "}
-                  {equipment.fieldUpgrade2.name}
-                </span>
-              </>
-            )}
-          </Col>
-          <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Wildcard:</span> <br />
-            <span className="text-muted fs-6">{wildcard.name}</span>
-          </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Streaks:</span> <br />
             <span className="text-muted fs-6">{streaks}</span>
@@ -159,66 +167,104 @@ function BlackOpsThreeLoadout() {
   );
 }
 
+function getLoadoutFrame() {
+  //TODO: Randomize this. Always use 10 points
+  return {
+    primary: true,
+    primary_optic: true,
+    primary_attach: 2,
+    secondary: true,
+    secondary_optic: false,
+    secondary_attach: 0,
+    tactical: 1, //0-2
+    lethal: true,
+    perk1: true,
+    perk2: true,
+    perk3: true,
+  };
+}
+
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
-    const game = "black-ops-six";
+    const loadoutFrame = getLoadoutFrame();
+    const game = "black-ops-three";
     const randClassName = fetchClassName();
-    const wildcard = fetchWildcard(game);
-    //Figure out primary attachment count
-    const primAttachCount = wildcard.name === "Gunfighter" ? 8 : 5;
-    //Figure out if perk greed is done
-    const isPerkGreed = wildcard.name === "Perk Greed" ? true : false;
-    const isHighRoller = wildcard.name === "High Roller" ? true : false;
 
-    const perks = fetchPerks(game, isPerkGreed);
-    const streaks = fetchStreaks(game, isHighRoller);
+    const perks = {
+      perk1: loadoutFrame.perk1 ? fetchPerk("perk1") : "",
+      perk2: loadoutFrame.perk2 ? fetchPerk("perk2") : "",
+      perk3: loadoutFrame.perk3 ? fetchPerk("perk3") : "",
+    };
+    const streaks = fetchStreaks(game);
     let weapons = {
       primary: {
-        weapon: fetchWeapon("primary", game),
+        weapon: loadoutFrame.primary
+          ? fetchWeapon("primary", game)
+          : defaultWeapon,
+        optic: "",
         attachments: "",
       },
       secondary: {
-        weapon: fetchWeapon("secondary", game),
+        weapon: loadoutFrame.secondary
+          ? fetchWeapon("secondary", game)
+          : defaultWeapon,
+        optic: "",
         attachments: "",
       },
-      melee: fetchWeapon("melee", game),
     };
+
+    if (loadoutFrame.primary_optic) {
+      weapons.primary.optic = fetchAttachments(
+        weapons.primary.weapon,
+        "optic"
+      )[0];
+    }
+
     //Get Primary Attachments
-    if (!weapons.primary.weapon?.no_attach) {
+    if (!weapons.primary.weapon?.no_attach && loadoutFrame.primary_attach > 0) {
       weapons.primary.attachments = implodeObject(
-        fetchAttachments(weapons.primary.weapon, primAttachCount)
+        fetchAttachments(
+          weapons.primary.weapon,
+          "attachments",
+          loadoutFrame.primary_attach
+        )
       );
     }
     //Check for overkill
-    if (wildcard.name === "Overkill") {
-      weapons.secondary.weapon = fetchWeapon(
-        "primary",
-        game,
-        weapons.primary.weapon.name
-      );
-    }
-    //Verify if secondary weapon has attachments
-    if (!weapons.secondary.weapon?.no_attach) {
-      weapons.secondary.attachments = implodeObject(
-        fetchAttachments(weapons.secondary.weapon)
-      );
-    }
-    let equipment = {
-      tactical: fetchEquipment("tactical", game),
-      lethal: fetchEquipment("lethal", game),
-      fieldUpgrade: fetchEquipment("field_upgrade", game),
-      fieldUpgrade2: { name: "", type: "" },
-    };
-    if (wildcard.name === "Prepper") {
-      //Loop to make sure we don't get the same field upgrade
-      while (true) {
-        equipment.fieldUpgrade2 = fetchEquipment("field_upgrade", game);
+    // if (wildcard.name === "Overkill") {
+    //   weapons.secondary.weapon = fetchWeapon(
+    //     "primary",
+    //     game,
+    //     weapons.primary.weapon.name
+    //   );
+    // }
 
-        if (equipment.fieldUpgrade.name !== equipment.fieldUpgrade2.name) {
-          break;
-        }
-      }
+    if (!weapons.secondary.weapon?.no_attach && loadoutFrame.secondary_optic) {
+      weapons.secondary.optic = fetchAttachments(
+        weapons.secondary.weapon,
+        "optic"
+      )[0];
     }
+
+    //Verify if secondary weapon has attachments
+    if (
+      !weapons.secondary.weapon?.no_attach &&
+      loadoutFrame.secondary_attach > 0
+    ) {
+      weapons.secondary.attachments = implodeObject(
+        fetchAttachments(
+          weapons.secondary.weapon,
+          "attachments",
+          loadoutFrame.secondary_attach
+        )
+      );
+    }
+
+    let equipment = {
+      tactical:
+        loadoutFrame.tactical > 0 ? fetchEquipment("tactical", game) : "",
+      lethal: loadoutFrame.lethal ? fetchEquipment("lethal", game) : "",
+    };
 
     setData({
       randClassName,
@@ -226,7 +272,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       streaks,
       weapons,
       equipment,
-      wildcard,
     });
     setContainerClass("");
   } catch (error: any) {

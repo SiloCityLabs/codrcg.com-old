@@ -12,7 +12,6 @@ const attachmentsList: Record<string, any> = {
 };
 
 export function getSniperAttachments(gun: string, count: number): any {
-  console.log("getSniperAttachments gun", gun);
   let attachments: any = {};
   const data = attachmentsList[gun];
 

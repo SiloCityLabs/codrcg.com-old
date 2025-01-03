@@ -107,7 +107,7 @@ export default function Home() {
                 title="Black Ops III"
                 text=""
                 variant="black-ops"
-                btn1Text="Multiplayer Generator"
+                btn1Text="Generator"
                 link="black-ops-three/generator"
                 disabled={false}
               />

@@ -1,0 +1,62 @@
+{
+    "0": {
+      "name": "Perk 1 Greed",
+      "type": "Wildcard",
+      "game": "black-ops-three",
+      "description": "Take a second perk 1"
+    },
+    "1": {
+      "name": "Perk 2 Greed",
+      "type": "Wildcard",
+      "game": "black-ops-three",
+      "description": "Take a second perk 2"
+    },
+    "2": {
+      "name": "Perk 3 Greed",
+      "type": "Wildcard",
+      "game": "black-ops-three",
+      "description": "Take a second perk 3"
+    },
+    "3": {
+      "name": "Primary Gunfighter 1",
+      "type": "Wildcard",
+      "game": "black-ops-three",
+      "description": "Get 1 additional attachment for primary weapon"
+    },
+    "4": {
+      "name": "Overkill",
+      "type": "Wildcard",
+      "game": "black-ops-three",
+      "description": "Get a primary as your second weapon"
+    },
+    "5": {
+      "name": "Secondary Gunfighter",
+      "type": "Wildcard",
+      "game": "black-ops-three",
+      "description": "Take a 2nd attachment for your second weapon"
+    },
+    "6": {
+      "name": "Tactician",
+      "type": "Wildcard",
+      "game": "black-ops-three",
+      "description": "Take a tactical grenade in place of your lethal grenade"
+    },
+    "7": {
+      "name": "Primary Gunfighter 2",
+      "type": "Wildcard",
+      "game": "black-ops-three",
+      "description": "Get 1 additional attachment for primary weapon"
+    },
+    "8": {
+      "name": "Danger Close",
+      "type": "Wildcard",
+      "game": "black-ops-three",
+      "description": "Take a second lethal grenade"
+    },
+    "9": {
+      "name": "Primary Gunfighter 3",
+      "type": "Wildcard",
+      "game": "black-ops-three",
+      "description": "Get 1 additional attachment for primary weapon"
+    }
+}

@@ -8,6 +8,9 @@ import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetchClassName";
 import { fetchPerk } from "@/helpers/generator/black-ops-three/fetchPerk";
 import { fetchAttachments } from "@/helpers/generator/black-ops-three/fetchAttachments";
+import { getLoadoutFrame } from "@/helpers/generator/black-ops-three/frame/getLoadoutFrame";
+//Types
+import { LoadoutFrame } from "@/types/BlackOps3";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
@@ -21,6 +24,9 @@ function BlackOpsThreeLoadout() {
       perk1: "",
       perk2: "",
       perk3: "",
+      perk1Greed: "",
+      perk2Greed: "",
+      perk3Greed: "",
     },
     streaks: null,
     weapons: {
@@ -39,6 +45,7 @@ function BlackOpsThreeLoadout() {
       tactical: "",
       lethal: "",
     },
+    wildcards: "",
   });
 
   useEffect(() => {
@@ -49,7 +56,7 @@ function BlackOpsThreeLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { randClassName, perks, streaks, weapons, equipment } = data;
+  const { randClassName, perks, streaks, weapons, equipment, wildcards } = data;
 
   return (
     <>
@@ -133,23 +140,47 @@ function BlackOpsThreeLoadout() {
             <span className="fw-bolder fs-5">Perk 1:</span> <br />
             <span className="text-muted fs-6">
               {perks.perk1 ? perks.perk1 : "None"}
+              {perks.perk1Greed ? (
+                <>
+                  <br />
+                  {perks.perk1Greed}
+                </>
+              ) : null}
             </span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Perk 2:</span> <br />
             <span className="text-muted fs-6">
               {perks.perk2 ? perks.perk2 : "None"}
+              {perks.perk2Greed ? (
+                <>
+                  <br />
+                  {perks.perk2Greed}
+                </>
+              ) : null}
             </span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Perk 3:</span> <br />
             <span className="text-muted fs-6">
               {perks.perk3 ? perks.perk3 : "None"}
+              {perks.perk3Greed ? (
+                <>
+                  <br />
+                  {perks.perk3Greed}
+                </>
+              ) : null}
             </span>
           </Col>
         </Row>
         <hr />
         <Row className="mb-5">
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Wildcards:</span> <br />
+            <span className="text-muted fs-6">
+              {wildcards ? wildcards : "None"}
+            </span>
+          </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Streaks:</span> <br />
             <span className="text-muted fs-6">{streaks}</span>
@@ -167,35 +198,32 @@ function BlackOpsThreeLoadout() {
   );
 }
 
-function getLoadoutFrame() {
-  //TODO: Randomize this. Always use 10 points
-  return {
-    primary: true,
-    primary_optic: true,
-    primary_attach: 2,
-    overkill: false,
-    secondary: true,
-    secondary_optic: false,
-    secondary_attach: 0,
-    tactical: 1, //0-2
-    lethal: true,
-    perk1: true,
-    perk2: true,
-    perk3: true,
-  };
-}
-
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
-    const loadoutFrame = getLoadoutFrame();
+    const loadoutFrame: LoadoutFrame = getLoadoutFrame();
     const game = "black-ops-three";
     const randClassName = fetchClassName();
 
-    const perks = {
+    const initialPerks = {
       perk1: loadoutFrame.perk1 ? fetchPerk("perk1") : "",
       perk2: loadoutFrame.perk2 ? fetchPerk("perk2") : "",
       perk3: loadoutFrame.perk3 ? fetchPerk("perk3") : "",
     };
+
+    const perkGreed = {
+      perk1Greed: loadoutFrame.perk1Greed
+        ? fetchPerk("perk1", initialPerks.perk1)
+        : "",
+      perk2Greed: loadoutFrame.perk2Greed
+        ? fetchPerk("perk2", initialPerks.perk2)
+        : "",
+      perk3Greed: loadoutFrame.perk3Greed
+        ? fetchPerk("perk3", initialPerks.perk3)
+        : "",
+    };
+
+    const perks = { ...initialPerks, ...perkGreed };
+
     const streaks = fetchStreaks(game);
     let weapons = {
       primary: {
@@ -222,7 +250,10 @@ async function fetchLoadoutData(setData, setContainerClass) {
     }
 
     //Get Primary Attachments
-    if (!weapons.primary.weapon?.no_attach && loadoutFrame.primary_attach > 0) {
+    if (
+      !weapons.primary.weapon?.no_attach &&
+      loadoutFrame?.primary_attach > 0
+    ) {
       weapons.primary.attachments = implodeObject(
         fetchAttachments(
           weapons.primary.weapon,
@@ -268,12 +299,15 @@ async function fetchLoadoutData(setData, setContainerClass) {
       lethal: loadoutFrame.lethal ? fetchEquipment("lethal", game) : "",
     };
 
+    const wildcards = loadoutFrame?.wildcards.join(", ");
+
     setData({
       randClassName,
       perks,
       streaks,
       weapons,
       equipment,
+      wildcards,
     });
     setContainerClass("");
   } catch (error: any) {

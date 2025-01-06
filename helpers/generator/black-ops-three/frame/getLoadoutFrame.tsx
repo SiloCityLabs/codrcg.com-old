@@ -30,7 +30,6 @@ export function getLoadoutFrame(): LoadoutFrame {
     console.log("piece", piece);
 
     if (piece === "tactical") {
-      console.log("THIS IS SDHJSDFJSDFJDSJFD");
       if (frame[piece] < 2) {
         frame[piece] += 1;
         points--;
@@ -38,16 +37,18 @@ export function getLoadoutFrame(): LoadoutFrame {
       continue;
     } else if (frame[piece]) {
       //Wildcard Check
-      const cost = wildcardCheck(piece, frame);
-      points -= cost;
-      console.log(piece + " - wildcard - cost: ", cost);
+      if (points > 2) {
+        const cost = wildcardCheck(piece, frame);
+        points -= cost;
+        console.log(piece + " - wildcard - cost: ", cost);
+      }
       continue;
     } else {
       frame[piece] = true;
       points--;
     }
 
-    if (piece === "primary" || piece === "secondary") {
+    if (points > 1 && (piece === "primary" || piece === "secondary")) {
       const hasOptic = getOptic();
       frame[`${piece}_optic`] = hasOptic;
 
@@ -110,6 +111,10 @@ const wildcardMap = {
   perk3: {
     property: "perk3Greed",
     wildcard: "Perk 3 Greed",
+  },
+  lethal: {
+    property: "dangerClose",
+    wildcard: "Danger Close",
   },
   //   primary: {
   //     property: "overkill",

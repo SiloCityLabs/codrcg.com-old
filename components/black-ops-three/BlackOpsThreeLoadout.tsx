@@ -298,6 +298,8 @@ async function fetchLoadoutData(setData, setContainerClass) {
         loadoutFrame.tactical > 0 ? fetchEquipment("tactical", game) : "",
       lethal: loadoutFrame.lethal ? fetchEquipment("lethal", game) : "",
     };
+    //Check for danger close
+    equipment.lethal += loadoutFrame.dangerClose ? " x2" : "";
 
     const wildcards = loadoutFrame?.wildcards.join(", ");
 

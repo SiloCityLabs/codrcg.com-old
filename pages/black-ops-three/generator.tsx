@@ -6,7 +6,6 @@ import BlackOpsThreeLoadout from "@/components/black-ops-three/BlackOpsThreeLoad
 export default function BlackOpsThree() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Zombies Generator", href: "/black-ops-three/zombies-generator" },
     { label: "Changelog", href: "/changelog" },
   ];
 

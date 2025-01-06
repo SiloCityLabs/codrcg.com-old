@@ -173,6 +173,7 @@ function getLoadoutFrame() {
     primary: true,
     primary_optic: true,
     primary_attach: 2,
+    overkill: false,
     secondary: true,
     secondary_optic: false,
     secondary_attach: 0,
@@ -230,14 +231,15 @@ async function fetchLoadoutData(setData, setContainerClass) {
         )
       );
     }
+
     //Check for overkill
-    // if (wildcard.name === "Overkill") {
-    //   weapons.secondary.weapon = fetchWeapon(
-    //     "primary",
-    //     game,
-    //     weapons.primary.weapon.name
-    //   );
-    // }
+    if (loadoutFrame.overkill) {
+      weapons.secondary.weapon = fetchWeapon(
+        "primary",
+        game,
+        weapons.primary.weapon.name
+      );
+    }
 
     if (!weapons.secondary.weapon?.no_attach && loadoutFrame.secondary_optic) {
       weapons.secondary.optic = fetchAttachments(

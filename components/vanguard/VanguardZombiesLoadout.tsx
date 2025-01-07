@@ -8,8 +8,6 @@ import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchVanguardZombiesMap } from "@/helpers/generator/vanguard/fetchVanguardZombiesMap";
 import { fetchVanguardZombiesArtifact } from "@/helpers/generator/vanguard/fetchVanguardZombiesArtifact";
 import { fetchClassName } from "@/helpers/fetchClassName";
-//Styles
-import "@/public/styles/components/Loadout.css";
 
 function VanguardZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);

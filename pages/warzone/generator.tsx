@@ -2,6 +2,8 @@ import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import WarzoneLoadout from "@/components/WarzoneLoadout";
+//Styles
+import "@/public/styles/components/Loadout.css";
 
 export default function Warzone() {
   return (

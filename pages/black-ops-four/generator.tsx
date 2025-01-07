@@ -1,11 +1,11 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-import BlackOpsThreeLoadout from "@/components/black-ops-three/BlackOpsThreeLoadout";
+// import BlackOpsFourLoadout from "@/components/black-ops-four/BlackOpsFourLoadout";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsThree() {
+export default function BlackOpsFour() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Changelog", href: "/changelog" },
@@ -14,18 +14,18 @@ export default function BlackOpsThree() {
   return (
     <>
       <Head>
-        <title>Black Ops 3 Random Class Generator</title>
+        <title>Black Ops 4 Random Class Generator</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Spice up your COD gameplay! Generate unique random loadouts for Black Ops 3. Discover new weapons, perks, and gear combinations."
+          content="Spice up your COD gameplay! Generate unique random loadouts for Black Ops 4. Discover new weapons, perks, and gear combinations."
         />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
-          free, mp, multiplayer, call of duty random class generator, COD Black Ops 3 RCG, COD Blops 3 RCG, blops 3 random class generator,
-          blops 3, black ops 3, ops 3 rcg, ops 3 random class generator, black ops 3 random class generator, zombies, treyarch zombies,
-          black ops zombies, black ops 3 zombies, black ops rcg, black ops random class generator"
+          free, mp, multiplayer, call of duty random class generator, COD Black Ops 4 RCG, COD Blops 4 RCG, blops 4 random class generator,
+          blops 4, black ops 4, ops 4 rcg, ops 4 random class generator, black ops 4 random class generator, zombies, treyarch zombies,
+          black ops zombies, black ops 4 zombies, black ops rcg, black ops random class generator"
         />
         {/* <link rel="icon" href="/favicon.ico" /> */}
         {/* Each generator has icons in the icon folder, not bo3 yet */}
@@ -34,9 +34,9 @@ export default function BlackOpsThree() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 3 - Random Class Generator</h2>
+            <h2>Black Ops 4 - Random Class Generator</h2>
 
-            <BlackOpsThreeLoadout />
+            {/* <BlackOpsFourLoadout /> */}
           </Col>
         </Row>
       </Container>

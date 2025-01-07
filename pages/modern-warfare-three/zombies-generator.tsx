@@ -2,6 +2,8 @@ import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import ModernWarfareThreeZombiesLoadout from "@/components/modern-warfare-three/ModernWarfareThreeZombiesLoadout";
+//Styles
+import "@/public/styles/components/Loadout.css";
 
 export default function ModernWarfareThreeZombies() {
   const navLinks = [

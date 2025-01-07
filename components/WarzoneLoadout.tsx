@@ -8,8 +8,6 @@ import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchWildcard } from "@/helpers/fetchWildcard";
 import { fetchClassName } from "@/helpers/fetchClassName";
-//Styles
-import "../public/styles/components/Loadout.css";
 
 function WarzoneLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");

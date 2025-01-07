@@ -10,8 +10,6 @@ import { fetchBO6ZombiesMap } from "@/helpers/generator/black-ops-six/fetchBO6Zo
 import { fetchBO6AmmoMod } from "@/helpers/generator/black-ops-six/fetchBO6AmmoMod";
 import { fetchClassName } from "@/helpers/fetchClassName";
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
-//Styles
-import "@/public/styles/components/Loadout.css";
 //Types
 import { ZombiesSettings } from "@/types/Generator";
 //Components

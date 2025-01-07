@@ -7,6 +7,7 @@ import { fetchStreaks } from "@/helpers/fetchStreaks";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetchClassName";
 import { fetchPerk } from "@/helpers/generator/black-ops-three/fetchPerk";
+import { fetchSpecialist } from "@/helpers/generator/black-ops-three/fetchSpecialist";
 import { fetchAttachments } from "@/helpers/generator/black-ops-three/fetchAttachments";
 import { getLoadoutFrame } from "@/helpers/generator/black-ops-three/frame/getLoadoutFrame";
 //Types
@@ -46,6 +47,7 @@ function BlackOpsThreeLoadout() {
       lethal: "",
     },
     wildcards: "",
+    specialist: "",
   });
 
   useEffect(() => {
@@ -56,7 +58,15 @@ function BlackOpsThreeLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { randClassName, perks, streaks, weapons, equipment, wildcards } = data;
+  const {
+    randClassName,
+    perks,
+    streaks,
+    weapons,
+    equipment,
+    wildcards,
+    specialist,
+  } = data;
 
   return (
     <>
@@ -122,15 +132,15 @@ function BlackOpsThreeLoadout() {
         <hr />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">
-              {equipment.tactical ? equipment.tactical : "None"}
-            </span>
-          </Col>
-          <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
             <span className="text-muted fs-6">
               {equipment.lethal ? equipment.lethal : "None"}
+            </span>
+          </Col>
+          <Col sm className="text-center mb-3 mb-md-0">
+            <span className="fw-bolder fs-5">Tactical:</span> <br />
+            <span className="text-muted fs-6">
+              {equipment.tactical ? equipment.tactical : "None"}
             </span>
           </Col>
         </Row>
@@ -176,6 +186,12 @@ function BlackOpsThreeLoadout() {
         <hr />
         <Row className="mb-5">
           <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Specialist:</span> <br />
+            <span className="text-muted fs-6">
+              {specialist ? specialist : "None"}
+            </span>
+          </Col>
+          <Col sm className="text-center">
             <span className="fw-bolder fs-5">Wildcards:</span> <br />
             <span className="text-muted fs-6">
               {wildcards ? wildcards : "None"}
@@ -207,7 +223,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       loadoutFrame.secondary_optic || loadoutFrame.secondary_attach > 0
         ? true
         : false;
-    console.log("secondaryNeedsAttach", secondaryNeedsAttach);
 
     const initialPerks = {
       perk1: loadoutFrame.perk1 ? fetchPerk("perk1") : "",
@@ -309,6 +324,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     equipment.lethal += loadoutFrame.dangerClose ? " x2" : "";
 
     const wildcards = loadoutFrame?.wildcards.join(", ");
+    const specialist = fetchSpecialist();
 
     setData({
       randClassName,
@@ -317,6 +333,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       weapons,
       equipment,
       wildcards,
+      specialist,
     });
     setContainerClass("");
   } catch (error: any) {

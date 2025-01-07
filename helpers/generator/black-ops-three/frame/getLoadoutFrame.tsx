@@ -12,8 +12,8 @@ export function getLoadoutFrame(): LoadoutFrame {
     primary: false,
     primary_optic: false,
     primary_attach: 0,
-    secondary: true,
-    secondary_optic: true,
+    secondary: false,
+    secondary_optic: false,
     secondary_attach: 0,
     tactical: 0,
     lethal: false,
@@ -24,16 +24,11 @@ export function getLoadoutFrame(): LoadoutFrame {
   };
 
   let frame: LoadoutFrame = defaultLoadoutFrame;
-  let points = 8;
+  let points = 10;
   let maxCount = 0;
-
-  console.log("getLoadoutFrame frame", frame);
-  console.log("starting points", points);
 
   while (points > 0 && maxCount < 50) {
     const piece = getPiece();
-    console.log("points", points);
-    console.log("piece", piece);
 
     if (piece === "tactical") {
       if (frame[piece] < 2) {
@@ -56,7 +51,6 @@ export function getLoadoutFrame(): LoadoutFrame {
       if (points > 2) {
         const cost = wildcardCheck(piece, frame);
         points -= cost;
-        console.log(piece + " - wildcard - cost: ", cost);
       }
       continue;
     } else {
@@ -64,17 +58,23 @@ export function getLoadoutFrame(): LoadoutFrame {
       points--;
     }
 
-    if (points > 1 && (piece === "primary" || piece === "secondary")) {
+    if (
+      points > 1 &&
+      (piece === "primary" || piece === "secondary" || isset(frame["overkill"]))
+    ) {
+      const weapon_type = isset(frame["overkill"]) ? "secondary" : piece;
       const hasOptic = getOptic();
-      frame[`${piece}_optic`] = hasOptic;
+      frame[`${weapon_type}_optic`] = hasOptic;
 
       if (hasOptic) {
         points--;
       }
 
-      const attachInfo: AttachmentInfo = getAttachments(piece, points);
-      const type = `${piece.charAt(0).toUpperCase()}${piece.slice(1)}`;
-      frame[`${piece}_attach`] = attachInfo.attachments;
+      const attachInfo: AttachmentInfo = getAttachments(weapon_type, points);
+      const type = `${weapon_type.charAt(0).toUpperCase()}${weapon_type.slice(
+        1
+      )}`;
+      frame[`${weapon_type}_attach`] = attachInfo.attachments;
       points -= attachInfo.attachments + attachInfo.wildcardCost;
 
       if (attachInfo.wildcardCost >= 1) {
@@ -98,8 +98,6 @@ export function getLoadoutFrame(): LoadoutFrame {
       points: points,
     });
   }
-  console.log("frame", frame);
-  console.log("last points", points);
 
   return frame;
 }
@@ -112,9 +110,9 @@ function wildcardCheck(piece: string, frame: LoadoutFrame): number {
     !frame.wildcards.includes(wildcardMap[piece].wildcard)
   ) {
     //Overkill specific Check
-    // if (wildcardMap[piece].property === "overkill") {
-    //   frame.secondary = true;
-    // }
+    if (wildcardMap[piece].property === "overkill") {
+      frame.secondary = true;
+    }
 
     frame[wildcardMap[piece].property] = true;
     frame.wildcards.push(wildcardMap[piece].wildcard);
@@ -141,8 +139,8 @@ const wildcardMap = {
     property: "dangerClose",
     wildcard: "Danger Close",
   },
-  //   primary: {
-  //     property: "overkill",
-  //     wildcard: "Overkill",
-  //   },
+  primary: {
+    property: "overkill",
+    wildcard: "Overkill",
+  },
 };

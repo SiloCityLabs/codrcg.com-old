@@ -7,22 +7,22 @@ import { isset } from "@/helpers/isset";
 //Types
 import { AttachmentInfo, LoadoutFrame } from "@/types/BlackOps3";
 
-const defaultLoadoutFrame = {
-  primary: false,
-  primary_optic: false,
-  primary_attach: 0,
-  secondary: false,
-  secondary_optic: false,
-  secondary_attach: 0,
-  tactical: 0,
-  lethal: false,
-  perk1: false,
-  perk2: false,
-  perk3: false,
-  wildcards: [],
-};
-
 export function getLoadoutFrame(): LoadoutFrame {
+  const defaultLoadoutFrame = {
+    primary: false,
+    primary_optic: false,
+    primary_attach: 0,
+    secondary: true,
+    secondary_optic: true,
+    secondary_attach: 0,
+    tactical: 0,
+    lethal: false,
+    perk1: false,
+    perk2: false,
+    perk3: false,
+    wildcards: [],
+  };
+
   let frame: LoadoutFrame = defaultLoadoutFrame;
   let points = 8;
   let maxCount = 0;

@@ -12,8 +12,6 @@ import { fetchAttachments } from "@/helpers/generator/black-ops-three/fetchAttac
 import { getLoadoutFrame } from "@/helpers/generator/black-ops-three/frame/getLoadoutFrame";
 //Types
 import { LoadoutFrame } from "@/types/BlackOps3";
-//Styles
-import "@/public/styles/components/Loadout.css";
 
 const defaultWeapon = { name: "", type: "", game: "", no_attach: false };
 

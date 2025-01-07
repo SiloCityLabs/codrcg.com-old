@@ -27,6 +27,7 @@ export default function Home() {
           Call of Duty: WW2, World War 2 RCG, WW2, world war 2 random class generator,
           Black Ops 4 RCG, blops 4, black ops 4, ops 4 rcg, black ops 4 random class generator,
           Black Ops 6 RCG, blops 6, black ops 6, ops 6 rcg, black ops 6 random class generator,
+          Cold War random class generator, Cold War,
           Vanguard random class generator, Vanguard,
           Warzone random class generator, Warzone"
         />
@@ -104,8 +105,21 @@ export default function Home() {
             </Col>
             <Col xl={3} lg={4} md={6} className="text-center mb-4">
               <GeneratorCard
+                title="Cold War"
+                text=" Coming in 2025"
+                variant="danger"
+                btn1Text="Multiplayer Generator"
+                link="cold-war/generator"
+                disabled={true}
+                btn2Text="Zombies Generator"
+                link2="cold-war/zombies-generator"
+                disabled2={true}
+              />
+            </Col>
+            <Col xl={3} lg={4} md={6} className="text-center mb-4">
+              <GeneratorCard
                 title="Black Ops IV"
-                text="Coming Soon"
+                text="Coming in 2025"
                 variant="black-ops"
                 btn1Text="Generator"
                 link="black-ops-four/generator"

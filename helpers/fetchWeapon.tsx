@@ -18,16 +18,26 @@ const weaponListGetters: Record<string, (game: string) => any> = {
 export function fetchWeapon(
   type: string = "",
   game: string = "",
-  excludeWeapon: string = ""
+  excludeWeapon: string = "",
+  needsAttachments: boolean = false
 ): Weapon {
   game = game === "" ? fetchGame() : game;
   const getWeaponList = weaponListGetters[type];
+  let rollAgain = false;
 
   if (getWeaponList) {
     let data: Weapon;
+
     do {
+      rollAgain = false;
       data = randomListItem(getWeaponList(game));
-    } while (data.name === excludeWeapon);
+
+      //Roll a weapon that has attachments\
+      if (needsAttachments && data.no_attach) {
+        rollAgain = true;
+      }
+    } while (data.name === excludeWeapon || rollAgain);
+
     return data;
   } else {
     return {} as Weapon;

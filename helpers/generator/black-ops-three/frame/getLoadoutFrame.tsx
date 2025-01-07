@@ -2,6 +2,8 @@
 import { getAttachments } from "@/helpers/generator/black-ops-three/frame/getAttachments";
 import { getPiece } from "@/helpers/generator/black-ops-three/frame/getPiece";
 import { getOptic } from "@/helpers/generator/black-ops-three/frame/getOptic";
+//Helpers
+import { isset } from "@/helpers/isset";
 //Types
 import { AttachmentInfo, LoadoutFrame } from "@/types/BlackOps3";
 
@@ -22,17 +24,31 @@ const defaultLoadoutFrame = {
 
 export function getLoadoutFrame(): LoadoutFrame {
   let frame: LoadoutFrame = defaultLoadoutFrame;
-  let points = 10;
+  let points = 8;
+  let maxCount = 0;
 
-  while (points > 0) {
-    console.log("points", points);
+  console.log("getLoadoutFrame frame", frame);
+  console.log("starting points", points);
+
+  while (points > 0 && maxCount < 50) {
     const piece = getPiece();
+    console.log("points", points);
     console.log("piece", piece);
 
     if (piece === "tactical") {
       if (frame[piece] < 2) {
         frame[piece] += 1;
         points--;
+      } else if (frame[piece] === 2) {
+        //Setup Tactician
+        if (points > 2 && !isset(frame["tactician"])) {
+          frame["tactician"] = 1;
+          frame.wildcards.push("Tactician");
+          points -= 2;
+        } else if (isset(frame["tactician"]) && frame["tactician"] === 1) {
+          frame["tactician"] += 1;
+          points--;
+        }
       }
       continue;
     } else if (frame[piece]) {
@@ -71,8 +87,17 @@ export function getLoadoutFrame(): LoadoutFrame {
         }
       }
     }
+
+    //Stop infinite loops
+    maxCount++;
   }
 
+  if (maxCount > 100) {
+    console.error("Max Count Reached, Please Refresh Page", {
+      frame: frame,
+      points: points,
+    });
+  }
   console.log("frame", frame);
   console.log("last points", points);
 

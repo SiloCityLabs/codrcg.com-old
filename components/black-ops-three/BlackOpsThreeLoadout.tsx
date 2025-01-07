@@ -203,6 +203,11 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const loadoutFrame: LoadoutFrame = getLoadoutFrame();
     const game = "black-ops-three";
     const randClassName = fetchClassName();
+    const secondaryNeedsAttach =
+      loadoutFrame.secondary_optic || loadoutFrame.secondary_attach > 0
+        ? true
+        : false;
+    console.log("secondaryNeedsAttach", secondaryNeedsAttach);
 
     const initialPerks = {
       perk1: loadoutFrame.perk1 ? fetchPerk("perk1") : "",
@@ -235,7 +240,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       },
       secondary: {
         weapon: loadoutFrame.secondary
-          ? fetchWeapon("secondary", game)
+          ? fetchWeapon("secondary", game, "", secondaryNeedsAttach)
           : defaultWeapon,
         optic: "",
         attachments: "",

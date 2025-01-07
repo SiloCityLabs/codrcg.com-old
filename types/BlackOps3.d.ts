@@ -21,4 +21,5 @@ export type LoadoutFrame = {
   perk2Greed?: boolean;
   perk3Greed?: boolean;
   dangerClose?: boolean;
+  tactician?: number;
 };

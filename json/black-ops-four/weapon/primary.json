@@ -103,5 +103,12 @@
       "name": "Koshka",
       "type": "sniper",
       "game": "black-ops-four"
-    } 
+    },
+    "21": {
+      "name": "Peacekeeper",
+      "type": "assault_rifle",
+      "game": "black-ops-four",
+      "isDlc": true
+    }
+
 }

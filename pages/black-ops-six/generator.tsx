@@ -9,6 +9,7 @@ export default function BlackOpsSix() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Zombies Generator", href: "/black-ops-six/zombies-generator" },
+    { label: "Loadout Info", href: "/black-ops-six/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 

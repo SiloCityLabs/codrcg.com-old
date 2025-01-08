@@ -1,43 +1,43 @@
 {
-    "0": {
-      "name": "Stock Option",
-      "type": "Rare",
-      "game": "black-ops-six"
-    },
-    "1": {
-      "name": "Killjoy",
-      "type": "Rare",
-      "game": "black-ops-six"
-    },
-    "2": {
-      "name": "Anywhere But Here",
-      "type": "Rare",
-      "game": "black-ops-six"
-    },
-    "3": {
-      "name": "Cache Back",
-      "type": "Rare",
-      "game": "black-ops-six"
-    },
-    "4": {
-      "name": "Temporal Gift",
-      "type": "Rare",
-      "game": "black-ops-six"
-    },
-    "5": {
-      "name": "Arsenal Accelerator",
-      "type": "Rare",
-      "game": "black-ops-six"
-    },
-    "6": {
-      "name": "Shields Up",
-      "type": "Rare",
-      "game": "black-ops-six"
-    },
-    "7": {
-      "name": "Power Keg",
-      "type": "Rare",
-      "game": "black-ops-six",
-      "isDLC": true
-    }
+  "0": {
+    "name": "Stock Option",
+    "type": "Rare",
+    "game": "black-ops-six"
+  },
+  "1": {
+    "name": "Killjoy",
+    "type": "Rare",
+    "game": "black-ops-six"
+  },
+  "2": {
+    "name": "Anywhere But Here",
+    "type": "Rare",
+    "game": "black-ops-six"
+  },
+  "3": {
+    "name": "Cache Back",
+    "type": "Rare",
+    "game": "black-ops-six"
+  },
+  "4": {
+    "name": "Temporal Gift",
+    "type": "Rare",
+    "game": "black-ops-six"
+  },
+  "5": {
+    "name": "Arsenal Accelerator",
+    "type": "Rare",
+    "game": "black-ops-six"
+  },
+  "6": {
+    "name": "Shields Up",
+    "type": "Rare",
+    "game": "black-ops-six"
+  },
+  "7": {
+    "name": "Power Keg",
+    "type": "Rare",
+    "game": "black-ops-six",
+    "isDlc": true
   }
+}

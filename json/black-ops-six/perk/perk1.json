@@ -1,51 +1,51 @@
 {
-    "0": {
-      "name": "Gung-Ho",
-      "type": "Perk 1",
-      "game": "black-ops-six",
-      "color": "Red"
-    },
-    "1": {
-      "name": "Dexterity",
-      "type": "Perk 1",
-      "game": "black-ops-six",
-      "color": "Red"
-    },
-    "2": {
-      "name": "Scavenger",
-      "type": "Perk 1",
-      "game": "black-ops-six",
-      "color": "Red"
-    },
-    "3": {
-      "name": "Ghost",
-      "type": "Perk 1",
-      "game": "black-ops-six",
-      "color": "Blue"
-    },
-    "4": {
-      "name": "Ninja",
-      "type": "Perk 1",
-      "game": "black-ops-six",
-      "color": "Blue"
-    },
-    "5": {
-      "name": "Flak Jacket",
-      "type": "Perk 1",
-      "game": "black-ops-six",
-      "color": "Green"
-    },
-    "6": {
-      "name": "Tac Mask",
-      "type": "Perk 1",
-      "game": "black-ops-six",
-      "color": "Green"
-    },
-    "7": {
-      "name": "Reflexes",
-      "type": "Perk 1",
-      "game": "black-ops-six",
-      "color": "Blue",
-      "isDLC": true
-    }
+  "0": {
+    "name": "Gung-Ho",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Red"
+  },
+  "1": {
+    "name": "Dexterity",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Red"
+  },
+  "2": {
+    "name": "Scavenger",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Red"
+  },
+  "3": {
+    "name": "Ghost",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Blue"
+  },
+  "4": {
+    "name": "Ninja",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Blue"
+  },
+  "5": {
+    "name": "Flak Jacket",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Green"
+  },
+  "6": {
+    "name": "Tac Mask",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Green"
+  },
+  "7": {
+    "name": "Reflexes",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Blue",
+    "isDlc": true
   }
+}

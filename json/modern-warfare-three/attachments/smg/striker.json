@@ -69,38 +69,144 @@
         "XRK On-Point Optic",
         "Teplo Clear Shot"
     ],
-    "muzzle": {
-        "0": "Quartermaster Suppressor",
-        "1": "RF Crown 50"
-    },
-    "barrel": {
-        "0": "Prime MNX Barrel",
-        "1": "Prowl-IV Barrel"
-    },
-    "underbarrel": {
-        "0": "XRK Edge BW-4 Handstop",
-        "1": "Bruen Tactical Vertical Grip"
-    },
-    "magazine": {
-        "0": "40 Round Mag",
-        "1": "60 Round Mag"
-    },
-    "rear_grip": {
-        "0": "Channel-M Grip",
-        "1": "Tidal Tac Grip"
-    },
-    "stock": {
-        "0": "Clarent Light Stock",
-        "1": "Ardent Tac Stock",
-        "2": "Sandbar Heavy Stock"
-    },
-    "laser": {
-        "0": "SL Razorhawk Laser Light",
-        "1": "1mW Laser Box",
-        "2": "Canted Vibro-Dot 7"
-    },
-    "ammunition": {
-        "0": "5.7x28mm Frangible",
-        "1": "5.7x28mm Overpressured P+"
-    }
+    "muzzle": [
+        "Quartermaster Suppressor",
+        "JAK BFB",
+        "ZEHMN35 Compensated Flash Hider",
+        "Bruen Pendulum",
+        "AVR-T90 Comp",
+        "Trebuchet Brake",
+        "VP27 Mini Brake S",
+        "Endless 30 Compensator",
+        "Purifier Muzzle Brake S",
+        "T51R Billeted Brake S",
+        "Lacerta Compensator",
+        "Xten Razor Comp",
+        "XRK Knockout Breach",
+        "TA Hul-Breach",
+        "L4R Flash Hider",
+        "FTAC Castle Comp",
+        "S-37C DL Breacher Device S",
+        "Lockshot KT85",
+        "Bruen Cubic Comp",
+        "XRK Sandstorm",
+        "Spiral v3.5 Flash Hider",
+        "T4LR Saber Compensator S",
+        "ELR Blackfire Compensator S",
+        "Sonic Suppressor S",
+        "Colossus Suppressor S",
+        "Colossus Suppressor",
+        "Xten RR-40",
+        "Monolithic Suppressor S",
+        "Shadowstrike Suppressor S",
+        "HMRES Mod Suppressor S",
+        "ECS Requieter Suppressor",
+        "Wrathguard Compensator S",
+        "Forge DX90-F",
+        "Singuard MKV",
+        "Shredder U40 Comp",
+        "STER45 Skyfury Compensator S",
+        "SA Schalldampfer 99",
+        "Xten Black Kite",
+        "FSS Covert IV",
+        "EXF Huntress-90",
+        "Fox-202 Flash Hider"
+    ],
+    "barrel": [
+        "Striker Stubby Barrel",
+        "Striker Elite Long Barrel",
+        "Striker Recon Long Barrel"
+    ],
+    "underbarrel": [
+        "XRK Edge BW-4 Handstop",
+        "Holger Vertical Grip",
+        "Bruen Tactical Vertical Grip",
+        "Bruen Pivot Vertical Grip",
+        "Merc Foregrip",
+        "SL Skeletal Vertical Grip",
+        "Kimura RYN-03 Vertical Grip",
+        "Kimura Seraphic Vertical Grip",
+        "JAK Slash",
+        "Bruen Heavy Support Grip",
+        "Phase-3 Grip",
+        "Lockgrip Precision-40",
+        "Schlager Tango",
+        "TV Wrecker Grip",
+        "Bruen Tilt Grip",
+        "Cronen Grooveshot Grip",
+        "HEX-40 Grip",
+        "XRK Bowbreaker Grip",
+        "Operator Foregrip",
+        "VX Pineapple",
+        "Op-X9 Foregrip",
+        "EXF Backdraft Grip",
+        "XTen Nexus Grip",
+        "Bruen Sync Shot Grip",
+        "FTAC SP-10 Angles Grip",
+        "FTAC RS-9 Stealth Angled Grip",
+        "Bruen Bastion Angled Grip",
+        "Chewk Angled Grip",
+        "Paracord Grip",
+        "XTEN Phantom-5 Handstop",
+        "XTEN TX-12 Handstop",
+        "FTAC MSP-98 Handstop",
+        "DR-6 Handstop",
+        "XTen Drop Grip",
+        "Commando Foregrip",
+        "Edge-47 Grip",
+        "Demo Firm Grip",
+        "FSS Sharkfin 90",
+        "Agent Grip",
+        "Demo Imp-44 Grip",
+        "FTAC Tiger Grip",
+        "Bruen Warrior Grip",
+        "XTen Gravedigger",
+        "DEMO Cleanshot 40",
+        "FTAC Ripper 56",
+        "GRV-Z Short Grip"
+    ],
+    "magazine": [
+        "20 Round Mag",
+        "48 Round Mag",
+        "60 Round Drum"
+    ],
+    "rear_grip": [
+        "Sakin ZX Grip",
+        "TacGrip",
+        "FTAC G-5 Exo"
+    ],
+    "stock": [
+        "FSS Priority Tactical Stock",
+        "RB Crotalus Assault Stock",
+        "Lachmann Nemesis-10 Stock",
+        "Lachmann Mk2 Light Stock",
+        "Lachmann Recon Series Stock",
+        "No Stock"
+    ],
+    "laser": [
+        "SL Razorhawk Laser Light",
+        "1mW Laser Box",
+        "Canted Vibro-Dot 7",
+        "STOVL DR Laser Box",
+        "FTAC Grimline Laser",
+        "Corvus PEQ Beam-5",
+        "Luminate-44",
+        "FSS-OLE-V Laser",
+        "Schlager PEQ Box IV",
+        "CS15 Scarlet Box Laser",
+        "Corio LAZ-44 v3",
+        "PRO Sapphire Box Laser",
+        "SZ 1mW PEQ",
+        "Verdant Hook Box Laser",
+        "DXS Flash 90"
+    ],
+    "ammunition": [
+        ".45 Auto High Grain Rounds",
+        ".45 Auto Hollowpoint",
+        ".45 Auto Armor Piercing",
+        ".45 Auto Frangible",
+        ".45 Auto Low Grain Rounds",
+        ".45 Auto Hardened Rounds",
+        ".45 Auto Overpressured P+"
+    ]
 }

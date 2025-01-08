@@ -1,33 +1,33 @@
 {
-    "0": {
-      "name": "Energy Mine",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "1": {
-      "name": "Frenzied Guard",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "2": {
-      "name": "Dark Flare",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "3": {
-      "name": "Healing Aura",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "4": {
-      "name": "Aether Shroud",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "5": {
-      "name": "Tesla Storm",
-      "type": "Field Upgrade",
-      "game": "black-ops-six",
-      "isDLC": true
-    }
+  "0": {
+    "name": "Energy Mine",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  "1": {
+    "name": "Frenzied Guard",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  "2": {
+    "name": "Dark Flare",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  "3": {
+    "name": "Healing Aura",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  "4": {
+    "name": "Aether Shroud",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  "5": {
+    "name": "Tesla Storm",
+    "type": "Field Upgrade",
+    "game": "black-ops-six",
+    "isDlc": true
   }
+}

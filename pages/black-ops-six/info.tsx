@@ -13,6 +13,39 @@ export default function BlackOpsSixInfo() {
     { label: "Changelog", href: "/changelog" },
   ];
 
+  const infoCards = [
+    {
+      title: "Weapons",
+      text: "",
+      link: "/black-ops-six/info/weapons",
+    },
+    {
+      title: "Perks",
+      text: "",
+      link: "/black-ops-six/info/perks",
+    },
+    {
+      title: "Equipment",
+      text: "",
+      link: "/black-ops-six/info/equipment",
+    },
+    {
+      title: "Wildcards",
+      text: "",
+      link: "/black-ops-six/info/wildcards",
+    },
+    {
+      title: "Streaks",
+      text: "",
+      link: "/black-ops-six/info/streaks",
+    },
+    {
+      title: "Zombies Maps",
+      text: "",
+      link: "/black-ops-six/info/zombies-maps",
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -36,56 +69,18 @@ export default function BlackOpsSixInfo() {
       <Container className="information">
         <h2 className="text-center mb-4">Black Ops 6 - Loadout Information</h2>
         <Row>
-          <Col xl={3} lg={4} md={6} className="text-center mb-4">
-            <GeneratorCard
-              title="Weapons"
-              text=""
-              variant="black-ops"
-              btn1Text="View"
-              link="/black-ops-six/info/weapons"
-              disabled={false}
-            />
-          </Col>
-          <Col xl={3} lg={4} md={6} className="text-center mb-4">
-            <GeneratorCard
-              title="Perks"
-              text=""
-              variant="black-ops"
-              btn1Text="View"
-              link="/black-ops-six/info/perks"
-              disabled={false}
-            />
-          </Col>
-          <Col xl={3} lg={4} md={6} className="text-center mb-4">
-            <GeneratorCard
-              title="Equipment"
-              text=""
-              variant="black-ops"
-              btn1Text="View"
-              link="/black-ops-six/info/equipment"
-              disabled={false}
-            />
-          </Col>
-          <Col xl={3} lg={4} md={6} className="text-center mb-4">
-            <GeneratorCard
-              title="Wildcards"
-              text=""
-              variant="black-ops"
-              btn1Text="View"
-              link="/black-ops-six/info/wildcards"
-              disabled={false}
-            />
-          </Col>
-          <Col xl={3} lg={4} md={6} className="text-center mb-4">
-            <GeneratorCard
-              title="Streaks"
-              text=""
-              variant="black-ops"
-              btn1Text="View"
-              link="/black-ops-six/info/streaks"
-              disabled={false}
-            />
-          </Col>
+          {infoCards.map((card, index) => (
+            <Col key={index} xl={3} lg={4} md={6} className="text-center mb-4">
+              <GeneratorCard
+                title={card.title}
+                text={card.text}
+                variant="black-ops"
+                btn1Text="View"
+                link={card.link}
+                disabled={false}
+              />
+            </Col>
+          ))}
         </Row>
       </Container>
     </>

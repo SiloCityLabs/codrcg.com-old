@@ -48,28 +48,30 @@ function WildcardList({ game }: InfoListProps) {
                 onChange={handleSearchChange}
               />
             </Form>
-            <Table striped bordered hover size="sm">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Description</th>
-                  <th>Type</th>
-                  <th>Game</th>
-                  <th>DLC</th>
-                </tr>
-              </thead>
-              <tbody>
-                {Object.keys(filteredData).map((key) => (
-                  <tr key={key}>
-                    <td>{filteredData[key].name}</td>
-                    <td>{filteredData[key].description}</td>
-                    <td>{filteredData[key].type}</td>
-                    <td>{filteredData[key].game}</td>
-                    <td>{filteredData[key]?.isDlc ? "true" : "false"}</td>
+            <div className="table-responsive">
+              <Table striped bordered hover size="sm">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Game</th>
+                    <th>DLC</th>
                   </tr>
-                ))}
-              </tbody>
-            </Table>
+                </thead>
+                <tbody>
+                  {Object.keys(filteredData).map((key) => (
+                    <tr key={key}>
+                      <td>{filteredData[key].name}</td>
+                      <td>{filteredData[key].description}</td>
+                      <td>{filteredData[key].type}</td>
+                      <td>{filteredData[key].game}</td>
+                      <td>{filteredData[key]?.isDlc ? "true" : "false"}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            </div>
           </Col>
         </Row>
       </Container>

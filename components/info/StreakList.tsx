@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Table, Form, FormControl } from "react-bootstrap";
 //Helpers
-import { getEquipment } from "@/helpers/info/getEquipment";
+import { getStreaks } from "@/helpers/info/getStreaks";
 //Types
 import { InfoListProps } from "@/types/Info";
 
-function EquipmentList({ game }: InfoListProps) {
+function StreakList({ game }: InfoListProps) {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({});
   const [filteredData, setFilteredData] = useState({});
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    const dataList = getEquipment(game);
+    const dataList = getStreaks(game);
     setData(dataList);
     setFilteredData(dataList);
 
@@ -52,6 +52,7 @@ function EquipmentList({ game }: InfoListProps) {
               <thead>
                 <tr>
                   <th>Name</th>
+                  <th>Score</th>
                   <th>Type</th>
                   <th>Game</th>
                   <th>DLC</th>
@@ -61,6 +62,7 @@ function EquipmentList({ game }: InfoListProps) {
                 {Object.keys(filteredData).map((key) => (
                   <tr key={key}>
                     <td>{filteredData[key].name}</td>
+                    <td>{filteredData[key].score}</td>
                     <td>{filteredData[key].type}</td>
                     <td>{filteredData[key].game}</td>
                     <td>{filteredData[key]?.isDlc ? "true" : "false"}</td>
@@ -75,4 +77,4 @@ function EquipmentList({ game }: InfoListProps) {
   );
 }
 
-export default EquipmentList;
+export default StreakList;

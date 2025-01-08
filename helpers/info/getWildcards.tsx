@@ -6,7 +6,6 @@ export function getWildcards(
   perk: string = ""
 ): Wildcard | Wildcard[] {
   const data = getWildcardList(game) as Wildcard[];
-  console.log(data);
 
   return data;
 }

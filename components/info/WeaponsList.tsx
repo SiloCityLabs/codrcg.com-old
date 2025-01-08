@@ -55,7 +55,7 @@ function WeaponsList({ game }: InfoListProps) {
                   <th>Type</th>
                   <th>Game</th>
                   <th>Has Attachments?</th>
-                  <th>DLC Weapon</th>
+                  <th>DLC</th>
                 </tr>
               </thead>
               <tbody>

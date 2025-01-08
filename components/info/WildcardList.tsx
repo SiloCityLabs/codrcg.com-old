@@ -55,7 +55,7 @@ function WildcardList({ game }: InfoListProps) {
                   <th>Description</th>
                   <th>Type</th>
                   <th>Game</th>
-                  <th>DLC Wildcard</th>
+                  <th>DLC</th>
                 </tr>
               </thead>
               <tbody>

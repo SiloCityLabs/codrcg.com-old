@@ -54,7 +54,7 @@ function PerkList({ game }: InfoListProps) {
                   <th>Name</th>
                   <th>Type</th>
                   <th>Game</th>
-                  <th>DLC Perk</th>
+                  <th>DLC</th>
                 </tr>
               </thead>
               <tbody>

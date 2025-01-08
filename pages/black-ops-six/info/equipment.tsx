@@ -2,11 +2,11 @@ import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 //Components
 import Header from "@/components/Header";
-import PerkList from "@/components/info/PerkList";
+import EquipmentList from "@/components/info/EquipmentList";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsSixPerks() {
+export default function BlackOpsSixEquipment() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops-six/generator" },
@@ -18,9 +18,12 @@ export default function BlackOpsSixPerks() {
   return (
     <>
       <Head>
-        <title>Black Ops 6 Perks</title>
+        <title>Black Ops 6 Equipment</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="description" content="View all perks in Black Ops 6." />
+        <meta
+          name="description"
+          content="View all equipment in Black Ops 6."
+        />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
@@ -35,9 +38,9 @@ export default function BlackOpsSixPerks() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 6 - Perks</h2>
+            <h2>Black Ops 6 - Equipment</h2>
 
-            <PerkList game="black-ops-six" />
+            <EquipmentList game="black-ops-six" />
           </Col>
         </Row>
       </Container>

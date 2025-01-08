@@ -28,6 +28,33 @@
 	<url>
 		<loc>https://codrcg.com/black-ops-six/zombies-generator</loc>
 	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-six/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-six/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-six/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-six/info/streaks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-six/info/weapons</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-six/info/wildcards</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-six/info/zombies/ammo-mods</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-six/info/zombies/gobblegums</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-six/info/zombies/maps</loc>
+	</url>
 	<!-- Warzone -->
 	<url>
 		<loc>https://codrcg.com/warzone/generator</loc>

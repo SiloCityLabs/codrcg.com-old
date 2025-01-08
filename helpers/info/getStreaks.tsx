@@ -6,7 +6,6 @@ export function getStreaks(
   value: string = ""
 ): Streak | Streak[] {
   const data = getStreakList(game) as Streak[];
-  console.log(data);
 
   return data;
 }

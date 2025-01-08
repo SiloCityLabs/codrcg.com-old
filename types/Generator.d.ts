@@ -50,6 +50,13 @@ export type AmmoMod = {
   isDlc: boolean;
 };
 
+export type Gobblegum = {
+  name: string;
+  type: string;
+  game: string;
+  isDlc: boolean;
+};
+
 export type MW3Vest = {
   name: string;
   type: string;

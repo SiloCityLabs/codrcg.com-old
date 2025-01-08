@@ -49,6 +49,11 @@ export default function BlackOpsSixInfo() {
       text: "",
       link: "/black-ops-six/info/zombies/ammo-mods",
     },
+    {
+      title: "Zombies Gobblegums",
+      text: "",
+      link: "/black-ops-six/info/zombies/gobblegums",
+    },
   ];
 
   return (

@@ -85,12 +85,12 @@
       "game": "black-ops-three",
       "no_attach": true
     },
-    "NX ShadowClaw": {
-      "name": "",
+    "15": {
+      "name": "NX ShadowClaw",
       "type": "melee",
       "game": "black-ops-three"
     },
-    "": {
+    "16": {
       "name": "D13 Sector",
       "type": "melee",
       "game": "black-ops-three",

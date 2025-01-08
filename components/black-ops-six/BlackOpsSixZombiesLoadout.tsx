@@ -5,9 +5,9 @@ import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
-import { fetchBO6Gobblegums } from "@/helpers/generator/black-ops-six/fetchBO6Gobblegums";
 import { fetchZombiesAmmoMod } from "@/helpers/fetchZombiesAmmoMod";
 import { fetchZombiesMap } from "@/helpers/fetchZombiesMap";
+import { fetchZombiesGobblegum } from "@/helpers/fetchZombiesGobblegum";
 import { fetchClassName } from "@/helpers/fetchClassName";
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
 //Types
@@ -252,7 +252,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       lethal: fetchEquipment("lethal", game),
       fieldUpgrade: fetchEquipment("field_upgrade", game),
     };
-    const gobblegum = fetchBO6Gobblegums();
+    const gobblegum = fetchZombiesGobblegum("black-ops-six");
     const zombieMap = fetchZombiesMap("black-ops-six");
 
     setData({

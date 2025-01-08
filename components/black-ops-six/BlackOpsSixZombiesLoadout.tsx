@@ -6,7 +6,7 @@ import { fetchWeapon } from "@/helpers/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchBO6Gobblegums } from "@/helpers/generator/black-ops-six/fetchBO6Gobblegums";
-import { fetchBO6AmmoMod } from "@/helpers/generator/black-ops-six/fetchBO6AmmoMod";
+import { fetchZombiesAmmoMod } from "@/helpers/fetchZombiesAmmoMod";
 import { fetchZombiesMap } from "@/helpers/fetchZombiesMap";
 import { fetchClassName } from "@/helpers/fetchClassName";
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
@@ -237,7 +237,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       primary: {
         weapon: fetchWeapon("all", "black-ops-six"),
         attachments: "",
-        ammoMod: fetchBO6AmmoMod(),
+        ammoMod: fetchZombiesAmmoMod("black-ops-six"),
       },
       melee: fetchWeapon("melee", "black-ops-six"),
     };

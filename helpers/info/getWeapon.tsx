@@ -7,7 +7,7 @@ import { Weapon } from "@/types/Generator";
 
 export function getWeapon(
   game: string = "all",
-  gun: string = ""
+  value: string = ""
 ): Weapon | Weapon[] {
   const data = mergeObjectsWithRekey(
     getPrimaryList(game),

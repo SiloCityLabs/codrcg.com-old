@@ -42,7 +42,12 @@ export default function BlackOpsSixInfo() {
     {
       title: "Zombies Maps",
       text: "",
-      link: "/black-ops-six/info/zombies-maps",
+      link: "/black-ops-six/info/zombies/maps",
+    },
+    {
+      title: "Zombies Ammo Mods",
+      text: "",
+      link: "/black-ops-six/info/zombies/ammo-mods",
     },
   ];
 

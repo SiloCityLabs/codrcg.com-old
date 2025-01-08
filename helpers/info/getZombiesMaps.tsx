@@ -3,7 +3,7 @@ import { ZombiesMap } from "@/types/Generator";
 
 export function getZombiesMaps(
   game: string = "all",
-  perk: string = ""
+  value: string = ""
 ): ZombiesMap | ZombiesMap[] {
   const data = getMapList(game) as ZombiesMap[];
 

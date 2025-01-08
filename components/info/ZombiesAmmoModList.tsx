@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Table, Form, FormControl } from "react-bootstrap";
 //Helpers
-import { getZombiesMaps } from "@/helpers/info/getZombiesMaps";
+import { getZombiesAmmoMods } from "@/helpers/info/getZombiesAmmoMods";
 //Types
 import { InfoListProps } from "@/types/Info";
 
-function ZombiesMapList({ game }: InfoListProps) {
+function ZombiesAmmoModList({ game }: InfoListProps) {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({});
   const [filteredData, setFilteredData] = useState({});
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    const dataList = getZombiesMaps(game);
+    const dataList = getZombiesAmmoMods(game);
     setData(dataList);
     setFilteredData(dataList);
 
@@ -75,4 +75,4 @@ function ZombiesMapList({ game }: InfoListProps) {
   );
 }
 
-export default ZombiesMapList;
+export default ZombiesAmmoModList;

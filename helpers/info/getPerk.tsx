@@ -5,7 +5,7 @@ import { Perk } from "@/types/Generator";
 
 export function getPerk(
   game: string = "all",
-  perk: string = ""
+  value: string = ""
 ): Perk | Perk[] {
   const perks = getPerkList(game);
   const data = mergeObjectsWithRekey(

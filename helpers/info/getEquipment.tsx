@@ -7,7 +7,7 @@ import { Equipment } from "@/types/Generator";
 
 export function getEquipment(
   game: string = "all",
-  perk: string = ""
+  value: string = ""
 ): Equipment | Equipment[] {
   const data = mergeObjectsWithRekey(
     getLethalList(game),

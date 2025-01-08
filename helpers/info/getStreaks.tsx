@@ -3,7 +3,7 @@ import { Streak } from "@/types/Generator";
 
 export function getStreaks(
   game: string = "all",
-  perk: string = ""
+  value: string = ""
 ): Streak | Streak[] {
   const data = getStreakList(game) as Streak[];
   console.log(data);

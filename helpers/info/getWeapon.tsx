@@ -9,11 +9,11 @@ export function getWeapon(
   game: string = "all",
   gun: string = ""
 ): Weapon | Weapon[] {
-  const allWeapons = mergeObjectsWithRekey(
+  const data = mergeObjectsWithRekey(
     getPrimaryList(game),
     getSecondaryList(game),
     getMeleeList(game)
   ) as Weapon[];
 
-  return allWeapons;
+  return data;
 }

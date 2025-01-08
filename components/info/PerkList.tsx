@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Table, Form, FormControl } from "react-bootstrap";
 //Helpers
-import { getWeapon } from "@/helpers/info/getWeapon";
+import { getPerk } from "@/helpers/info/getPerk";
 //Types
 import { InfoListProps } from "@/types/Info";
 
-function WeaponsList({ game }: InfoListProps) {
+function PerkList({ game }: InfoListProps) {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({});
   const [filteredData, setFilteredData] = useState({});
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    const dataList = getWeapon(game);
+    const dataList = getPerk(game);
     setData(dataList);
     setFilteredData(dataList);
 
@@ -54,8 +54,7 @@ function WeaponsList({ game }: InfoListProps) {
                   <th>Name</th>
                   <th>Type</th>
                   <th>Game</th>
-                  <th>Has Attachments?</th>
-                  <th>DLC Weapon</th>
+                  <th>DLC Perk</th>
                 </tr>
               </thead>
               <tbody>
@@ -64,7 +63,6 @@ function WeaponsList({ game }: InfoListProps) {
                     <td>{filteredData[key].name}</td>
                     <td>{filteredData[key].type}</td>
                     <td>{filteredData[key].game}</td>
-                    <td>{filteredData[key]?.no_attach ? "true" : "false"}</td>
                     <td>{filteredData[key]?.isDlc ? "true" : "false"}</td>
                   </tr>
                 ))}
@@ -77,4 +75,4 @@ function WeaponsList({ game }: InfoListProps) {
   );
 }
 
-export default WeaponsList;
+export default PerkList;

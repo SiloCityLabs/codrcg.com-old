@@ -1,3 +1,3 @@
-export interface WeaponListProps {
+export interface InfoListProps {
   game: string;
 }

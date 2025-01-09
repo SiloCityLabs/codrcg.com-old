@@ -1,42 +1,42 @@
-{
-    "0": {
-      "name": "Stun Grenade",
-      "type": "Tactical",
-      "game": "modern-warfare-three"
-    },
-    "1": {
-      "name": "Smoke Grenade",
-      "type": "Tactical",
-      "game": "modern-warfare-three"
-    },
-    "2": {
-      "name": "Scatter Mine",
-      "type": "Tactical",
-      "game": "modern-warfare-three"
-    },
-    "3": {
-      "name": "Decoy Grenade",
-      "type": "Tactical",
-      "game": "modern-warfare-three"
-    },
-    "4": {
-      "name": "Snapshot Grenade",
-      "type": "Tactical",
-      "game": "modern-warfare-three"
-    },
-    "5": {
-      "name": "Shock Stick",
-      "type": "Tactical",
-      "game": "modern-warfare-three"
-    },
-    "6": {
-      "name": "Stim",
-      "type": "Tactical",
-      "game": "modern-warfare-three"
-    },
-    "7": {
-      "name": "Experimental Gas",
-      "type": "Tactical",
-      "game": "modern-warfare-three"
-    }
+[
+  {
+    "name": "Stun Grenade",
+    "type": "Tactical",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Smoke Grenade",
+    "type": "Tactical",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Scatter Mine",
+    "type": "Tactical",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Decoy Grenade",
+    "type": "Tactical",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Snapshot Grenade",
+    "type": "Tactical",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Shock Stick",
+    "type": "Tactical",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Stim",
+    "type": "Tactical",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Experimental Gas",
+    "type": "Tactical",
+    "game": "modern-warfare-three"
   }
+]

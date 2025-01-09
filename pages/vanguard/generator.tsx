@@ -9,6 +9,7 @@ export default function Vanguard() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Zombies Generator", href: "/vanguard/zombies-generator" },
+    { label: "Loadout Info", href: "/vanguard/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 

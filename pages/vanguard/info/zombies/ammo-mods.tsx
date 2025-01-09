@@ -1,27 +1,40 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
+//Components
 import Header from "@/components/Header";
-import VanguardZombiesLoadout from "@/components/vanguard/VanguardZombiesLoadout";
+import InfoList from "@/components/info/InfoList";
+//Helpers
+import { getZombiesAmmoMods } from "@/helpers/info/getZombiesAmmoMods";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function VanguardZombies() {
+export default function BlackOpsSixZombiesAmmoMods() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/vanguard/generator" },
+    { label: "Zombies Generator", href: "/vanguard/zombies-generator" },
     { label: "Loadout Info", href: "/vanguard/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState({});
+  const dataKeys = ["name", "type", "game", "isDlc"];
+
+  useEffect(() => {
+    const dataList = getZombiesAmmoMods("vanguard");
+    setData(dataList);
+
+    setIsLoading(false);
+  }, []);
+
   return (
     <>
       <Head>
-        <title>Vanguard Zombies Random Class Generator</title>
+        <title>Vanguard Zombies Ammo Mods</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="Spice up your COD Zombies gameplay! Generate unique random loadouts for Call of Duty Vanguard Zombies. Discover new weapons, perks, and gear combinations."
-        />
+        <meta name="description" content="View all zombies maps in Vanguard." />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
@@ -29,14 +42,16 @@ export default function VanguardZombies() {
           vanguard, vanguard rcg, vanguard random class generator, class generator, zombies, treyarch zombies,
           vanguard zombies, vanguard rcg, vanguard random class generator"
         />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
+        {/* Each generator has icons in the icon folder, not bo6 yet */}
       </Head>
-      <Header className="vanguard" navLinks={navLinks} />
+      <Header className="black-ops" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Vanguard Zombies - Random Class Generator</h2>
+            <h2>Vanguard - Zombies Ammo Mods</h2>
 
-            <VanguardZombiesLoadout />
+            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>
         </Row>
       </Container>

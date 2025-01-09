@@ -92,7 +92,7 @@ export function getLoadoutFrame(): LoadoutFrame {
     maxCount++;
   }
 
-  if (maxCount > 100) {
+  if (maxCount > 50) {
     console.error("Max Count Reached, Please Refresh Page", {
       frame: frame,
       points: points,

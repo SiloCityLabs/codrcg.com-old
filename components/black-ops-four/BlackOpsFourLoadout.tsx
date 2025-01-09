@@ -219,6 +219,11 @@ async function fetchLoadoutData(setData, setContainerClass) {
     console.log("loadoutFrame", loadoutFrame);
     const game = "black-ops-four";
     const randClassName = fetchClassName();
+    //For underkill
+    const primaryNeedsAttach =
+      loadoutFrame.primary_optic || loadoutFrame.primary_attach > 0
+        ? true
+        : false;
     const secondaryNeedsAttach =
       loadoutFrame.secondary_optic || loadoutFrame.secondary_attach > 0
         ? true
@@ -229,25 +234,22 @@ async function fetchLoadoutData(setData, setContainerClass) {
       perk2: loadoutFrame.perk2 ? fetchPerk("perk2") : "",
       perk3: loadoutFrame.perk3 ? fetchPerk("perk3") : "",
     };
-    console.log("initialPerks", initialPerks);
 
-    // const perkGreed = {
-    //   perk1Greed: loadoutFrame.perk1Greed
-    //     ? fetchPerk("perk1", initialPerks.perk1)
-    //     : "",
-    //   perk2Greed: loadoutFrame.perk2Greed
-    //     ? fetchPerk("perk2", initialPerks.perk2)
-    //     : "",
-    //   perk3Greed: loadoutFrame.perk3Greed
-    //     ? fetchPerk("perk3", initialPerks.perk3)
-    //     : "",
-    // };
+    const perkGreed = {
+      perk1Greed: loadoutFrame.perk1Greed
+        ? fetchPerk("perk1", initialPerks.perk1)
+        : "",
+      perk2Greed: loadoutFrame.perk2Greed
+        ? fetchPerk("perk2", initialPerks.perk2)
+        : "",
+      perk3Greed: loadoutFrame.perk3Greed
+        ? fetchPerk("perk3", initialPerks.perk3)
+        : "",
+    };
 
-    const perks = initialPerks;
-    // const perks = { ...initialPerks, ...perkGreed };
+    const perks = { ...initialPerks, ...perkGreed };
 
     const streaks = fetchStreaks(game);
-    console.log("streaks", streaks);
     let weapons = {
       primary: {
         weapon: loadoutFrame.primary
@@ -265,6 +267,16 @@ async function fetchLoadoutData(setData, setContainerClass) {
       },
     };
     console.log("weapons 1", weapons);
+
+    //Check for underkill
+    if (loadoutFrame.underkill) {
+      weapons.primary.weapon = fetchWeapon(
+        "secondary",
+        game,
+        weapons.secondary.weapon.name,
+        primaryNeedsAttach
+      );
+    }
 
     if (loadoutFrame.primary_optic) {
       weapons.primary.optic = fetchAttachments(
@@ -288,13 +300,13 @@ async function fetchLoadoutData(setData, setContainerClass) {
     }
 
     //Check for overkill
-    // if (loadoutFrame.overkill) {
-    //   weapons.secondary.weapon = fetchWeapon(
-    //     "primary",
-    //     game,
-    //     weapons.primary.weapon.name
-    //   );
-    // }
+    if (loadoutFrame.overkill) {
+      weapons.secondary.weapon = fetchWeapon(
+        "primary",
+        game,
+        weapons.primary.weapon.name
+      );
+    }
 
     if (!weapons.secondary.weapon?.no_attach && loadoutFrame.secondary_optic) {
       weapons.secondary.optic = fetchAttachments(

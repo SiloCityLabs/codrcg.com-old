@@ -1,29 +1,30 @@
 //Frame Helpers
-import { getAttachments } from "@/helpers/generator/black-ops-three/frame/getAttachments";
-import { getPiece } from "@/helpers/generator/black-ops-three/frame/getPiece";
-import { getOptic } from "@/helpers/generator/black-ops-three/frame/getOptic";
+import { getAttachments } from "@/helpers/generator/black-ops-four/frame/getAttachments";
+import { getPiece } from "@/helpers/generator/black-ops-four/frame/getPiece";
+import { getOptic } from "@/helpers/generator/black-ops-four/frame/getOptic";
 //Helpers
 import { isset } from "@/helpers/isset";
 //Types
 import { AttachmentInfo, LoadoutFrame } from "@/types/BlackOps4";
+import { getSecondaryList } from "../../weapons/getSecondaryList";
 
 export function getLoadoutFrame(): LoadoutFrame {
   const defaultLoadoutFrame = {
-    primary: true,
-    primary_optic: true,
+    primary: false,
+    primary_optic: false,
     primary_attach: 0,
-    secondary: true,
-    secondary_optic: true,
+    secondary: false,
+    secondary_optic: false,
     secondary_attach: 0,
-    gear: 1,
-    equipment: true,
-    perk1: true,
-    perk2: true,
-    perk3: true,
+    gear: 0,
+    equipment: false,
+    perk1: false,
+    perk2: false,
+    perk3: false,
     wildcards: [],
   };
 
-  return defaultLoadoutFrame;
+  // return defaultLoadoutFrame;
 
   let frame: LoadoutFrame = defaultLoadoutFrame;
   let points = 10;
@@ -31,22 +32,14 @@ export function getLoadoutFrame(): LoadoutFrame {
 
   while (points > 0 && maxCount < 50) {
     const piece = getPiece();
+    console.log("getLoadoutFrame piece: ", piece);
+    console.log("getLoadoutFrame points: ", points);
+    console.log("getLoadoutFrame frame: ", frame);
 
-    if (piece === "tactical") {
+    if (piece === "gear") {
       if (frame[piece] < 2) {
         frame[piece] += 1;
         points--;
-      } else if (frame[piece] === 2) {
-        //Setup Tactician
-        if (points > 2 && !isset(frame["tactician"])) {
-          frame["tactician"] = 1;
-          frame.wildcards.push("Tactician");
-          points -= 2;
-        }
-        //  else if (isset(frame["tactician"]) && frame["tactician"] === 1) {
-        //   frame["tactician"] += 1;
-        //   points--;
-        // }
       }
       continue;
     } else if (frame[piece]) {
@@ -63,9 +56,16 @@ export function getLoadoutFrame(): LoadoutFrame {
 
     if (
       points > 1 &&
-      (piece === "primary" || piece === "secondary" || isset(frame["overkill"]))
+      (piece === "primary" ||
+        piece === "secondary" ||
+        isset(frame["overkill"]) ||
+        isset(frame["underkill"]))
     ) {
-      const weapon_type = isset(frame["overkill"]) ? "secondary" : piece;
+      const weapon_type = isset(frame["overkill"])
+        ? "secondary"
+        : isset(frame["underkill"])
+        ? "primary"
+        : piece;
       const hasOptic = getOptic();
       frame[`${weapon_type}_optic`] = hasOptic;
 
@@ -95,7 +95,7 @@ export function getLoadoutFrame(): LoadoutFrame {
     maxCount++;
   }
 
-  if (maxCount > 100) {
+  if (maxCount > 50) {
     console.error("Max Count Reached, Please Refresh Page", {
       frame: frame,
       points: points,
@@ -109,12 +109,22 @@ function wildcardCheck(piece: string, frame: LoadoutFrame): number {
   let wildcardCost = 0;
 
   if (
+    (piece === "primary" && frame.wildcards.includes("Underkill")) ||
+    (piece === "secondary" && frame.wildcards.includes("Overkill"))
+  ) {
+    return wildcardCost;
+  }
+
+  if (
     wildcardMap[piece] &&
     !frame.wildcards.includes(wildcardMap[piece].wildcard)
   ) {
     //Overkill specific Check
     if (wildcardMap[piece].property === "overkill") {
       frame.secondary = true;
+    } else if (wildcardMap[piece].property === "overkill") {
+      //Underkill specific Check
+      frame.primary = true;
     }
 
     frame[wildcardMap[piece].property] = true;
@@ -138,12 +148,12 @@ const wildcardMap = {
     property: "perk3Greed",
     wildcard: "Perk 3 Greed",
   },
-  lethal: {
-    property: "dangerClose",
-    wildcard: "Danger Close",
-  },
   primary: {
     property: "overkill",
     wildcard: "Overkill",
+  },
+  secondary: {
+    property: "underkill",
+    wildcard: "Underkill",
   },
 };

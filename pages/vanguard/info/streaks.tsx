@@ -45,7 +45,7 @@ export default function BlackOpsSixStreaks() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
         {/* Each generator has icons in the icon folder, not bo6 yet */}
       </Head>
-      <Header className="black-ops" navLinks={navLinks} />
+      <Header className="vanguard" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>

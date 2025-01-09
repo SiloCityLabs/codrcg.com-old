@@ -5,11 +5,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getZombiesGobblegums } from "@/helpers/info/getZombiesGobblegums";
+import { getZombiesArtifacts } from "@/helpers/info/getZombiesArtifacts";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsSixZombiesGobblegums() {
+export default function BlackOpsSixZombiesArtifacts() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/vanguard/generator" },
@@ -23,7 +23,7 @@ export default function BlackOpsSixZombiesGobblegums() {
   const dataKeys = ["name", "type", "game", "isDlc"];
 
   useEffect(() => {
-    const dataList = getZombiesGobblegums("vanguard");
+    const dataList = getZombiesArtifacts("vanguard");
     setData(dataList);
 
     setIsLoading(false);
@@ -32,11 +32,11 @@ export default function BlackOpsSixZombiesGobblegums() {
   return (
     <>
       <Head>
-        <title>Vanguard Zombies Gobblegums</title>
+        <title>Vanguard Zombies Artifacts</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="View all zombies gobblegums in Black Ops 6."
+          content="View all zombies artifacts in Vanguard."
         />
         <meta
           name="keywords"
@@ -48,11 +48,11 @@ export default function BlackOpsSixZombiesGobblegums() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
         {/* Each generator has icons in the icon folder, not bo6 yet */}
       </Head>
-      <Header className="black-ops" navLinks={navLinks} />
+      <Header className="vanguard" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Vanguard - Zombies Gobblegums</h2>
+            <h2>Vanguard - Zombies Artifacts</h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

@@ -20,7 +20,7 @@ export default function BlackOpsSixZombiesMaps() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game", "isDlc"];
+  const dataKeys = ["name", "type", "game"];
 
   useEffect(() => {
     const dataList = getZombiesMaps("vanguard");
@@ -45,7 +45,7 @@ export default function BlackOpsSixZombiesMaps() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
         {/* Each generator has icons in the icon folder, not bo6 yet */}
       </Head>
-      <Header className="black-ops" navLinks={navLinks} />
+      <Header className="vanguard" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>

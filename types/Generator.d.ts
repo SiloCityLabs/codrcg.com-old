@@ -57,6 +57,12 @@ export type Gobblegum = {
   isDlc: boolean;
 };
 
+export type Artifact = {
+  name: string;
+  type: string;
+  game: string;
+};
+
 export type MW3Vest = {
   name: string;
   type: string;

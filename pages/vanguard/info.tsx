@@ -40,14 +40,9 @@ export default function BlackOpsSixInfo() {
       link: "/vanguard/info/zombies/maps",
     },
     {
-      title: "Zombies Ammo Mods",
+      title: "Zombies Artifacts",
       text: "",
-      link: "/vanguard/info/zombies/ammo-mods",
-    },
-    {
-      title: "Zombies Gobblegums",
-      text: "",
-      link: "/vanguard/info/zombies/gobblegums",
+      link: "/vanguard/info/zombies/artifacts",
     },
   ];
 

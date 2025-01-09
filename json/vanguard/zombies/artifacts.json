@@ -1,7 +1,27 @@
 [
-    "Healing Aura",
-    "Aether Shroud",
-    "Ring Of Fire",
-    "Energy Mine",
-    "Frost Blast"
+    {
+        "name": "Healing Aura",
+        "type": "Artifact",
+        "game": "vanguard"
+    },
+    {
+        "name": "Aether Shroud",
+        "type": "Artifact",
+        "game": "vanguard"
+    },
+    {
+        "name": "Ring Of Fire",
+        "type": "Artifact",
+        "game": "vanguard"
+    },
+    {
+        "name": "Energy Mine",
+        "type": "Artifact",
+        "game": "vanguard"
+    },
+    {
+        "name": "Frost Blast",
+        "type": "Artifact",
+        "game": "vanguard"
+    }
 ]

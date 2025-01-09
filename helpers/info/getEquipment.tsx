@@ -15,5 +15,7 @@ export function getEquipment(
     getFieldUpgradeList(game)
   ) as Record<string, Equipment>;
 
+  console.log("getEquipment", data);
+
   return data;
 }

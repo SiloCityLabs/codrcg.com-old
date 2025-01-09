@@ -54,6 +54,11 @@ export default function BlackOpsSixInfo() {
       text: "",
       link: "/black-ops-six/info/zombies/gobblegums",
     },
+    {
+      title: "Zombies Field Upgrades",
+      text: "",
+      link: "/black-ops-six/info/zombies/field-upgrade",
+    },
   ];
 
   return (

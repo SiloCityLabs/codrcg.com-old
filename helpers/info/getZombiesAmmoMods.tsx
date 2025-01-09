@@ -4,8 +4,8 @@ import { AmmoMod } from "@/types/Generator";
 export function getZombiesAmmoMods(
   game: string = "all",
   value: string = ""
-): AmmoMod | AmmoMod[] {
-  const data = getAmmoModList(game) as AmmoMod[];
+): AmmoMod | Record<string, AmmoMod> {
+  const data = getAmmoModList(game) as Record<string, AmmoMod>;
 
   return data;
 }

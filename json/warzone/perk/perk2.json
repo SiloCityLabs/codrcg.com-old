@@ -1,38 +1,38 @@
-{
-  "0": {
+[
+  {
     "name": "Quartermaster",
     "type": "Perk 2",
     "game": "warzone",
     "color": "Red"
   },
-  "1": {
+  {
     "name": "Bomb Squad",
     "type": "Perk 2",
     "game": "warzone",
     "color": "Red"
   },
-  "2": {
+  {
     "name": "Tracker",
     "type": "Perk 2",
     "game": "warzone",
     "color": "Red"
   },
-  "3": {
+  {
     "name": "Sprinter",
     "type": "Perk 2",
     "game": "warzone",
     "color": "Red"
   },
-  "4": {
+  {
     "name": "Cold-Blooded",
     "type": "Perk 2",
     "game": "warzone",
     "color": "Red"
   },
-  "5": {
+  {
     "name": "Quick Fix",
     "type": "Perk 2",
     "game": "warzone",
     "color": "Red"
   }
-}
+]

@@ -1,43 +1,43 @@
-{
-    "0": {
-      "name": "Strife",
-      "type": "pistol",
-      "game": "black-ops-four"
-    },
-    "1": {
-      "name": "RK 7 Garrison",
-      "type": "pistol",
-      "game": "black-ops-four"
-    },
-    "2": {
-      "name": "Mozu",
-      "type": "pistol",
-      "game": "black-ops-four"
-    },
-    "3": {
-      "name": "Kap 45 MKII",
-      "type": "pistol",
-      "game": "black-ops-four"
-    },
-    "4": {
-      "name": "MOG 12",
-      "type": "shotgun",
-      "game": "black-ops-four"
-    },
-    "5": {
-      "name": "SG12",
-      "type": "shotgun",
-      "game": "black-ops-four"
-    },
-    "6": {
-      "name": "Hellion Salvo",
-      "type": "launcher",
-      "game": "black-ops-four"
-    },
-    "7": {
-      "name": "Combat Knife",
-      "type": "melee",
-      "game": "black-ops-four",
-      "no_attach": true
-    }
-}
+[
+  {
+    "name": "Strife",
+    "type": "pistol",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "RK 7 Garrison",
+    "type": "pistol",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Mozu",
+    "type": "pistol",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Kap 45 MKII",
+    "type": "pistol",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "MOG 12",
+    "type": "shotgun",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "SG12",
+    "type": "shotgun",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Hellion Salvo",
+    "type": "launcher",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Combat Knife",
+    "type": "melee",
+    "game": "black-ops-four",
+    "no_attach": true
+  }
+]

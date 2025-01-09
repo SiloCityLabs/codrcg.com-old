@@ -1,5 +1,10 @@
 {
-  "optic": ["Reflex", "Threat Detector", "NVIR", "ELO"],
+  "optic": [
+    "Reflex",
+    "Threat Detector",
+    "NVIR",
+    "ELO"
+  ],
   "attachments": [
     "Stock I",
     "Stock II",

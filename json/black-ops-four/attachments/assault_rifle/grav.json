@@ -1,5 +1,9 @@
 {
-  "optic": ["Reflex", "Recon", "NVIR"],
+  "optic": [
+    "Reflex",
+    "Recon",
+    "NVIR"
+  ],
   "attachments": [
     "Grip I",
     "Long Barrel",

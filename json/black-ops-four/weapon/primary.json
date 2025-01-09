@@ -1,114 +1,113 @@
-{
-    "0": {
-      "name": "ICR-7",
-      "type": "assault_rifle",
-      "game": "black-ops-four"
-    },
-    "1": {
-      "name": "Rampart 17",
-      "type": "assault_rifle",
-      "game": "black-ops-four"
-    },
-    "2": {
-      "name": "KN-57",
-      "type": "assault_rifle",
-      "game": "black-ops-four"
-    },
-    "3": {
-      "name": "Vapr-Xkg",
-      "type": "assault_rifle",
-      "game": "black-ops-four"
-    },
-    "4": {
-      "name": "Maddox RFB",
-      "type": "assault_rifle",
-      "game": "black-ops-four"
-    },
-    "5": {
-      "name": "Grav",
-      "type": "assault_rifle",
-      "game": "black-ops-four"
-    },
-    "6": {
-      "name": "MX9",
-      "type": "smg",
-      "game": "black-ops-four"
-    },
-    "7": {
-      "name": "GKS",
-      "type": "smg",
-      "game": "black-ops-four"
-    },
-    "8": {
-      "name": "Spitfire",
-      "type": "smg",
-      "game": "black-ops-four"
-    },
-    "9": {
-      "name": "Cordite",
-      "type": "smg",
-      "game": "black-ops-four"
-    },
-    "10": {
-      "name": "Saug 9MM",
-      "type": "smg",
-      "game": "black-ops-four"
-    },
-    "11": {
-      "name": "Auger DMR",
-      "type": "tactical_rifle",
-      "game": "black-ops-four"
-    },
-    "12": {
-      "name": "ABR 223",
-      "type": "tactical_rifle",
-      "game": "black-ops-four"
-    },
-    "13": {
-      "name": "Swordfish",
-      "type": "tactical_rifle",
-      "game": "black-ops-four"
-    },
-    "14": {
-      "name": "Titan",
-      "type": "lmg",
-      "game": "black-ops-four"
-    },
-    "15": {
-      "name": "Hades",
-      "type": "lmg",
-      "game": "black-ops-four"
-    },
-    "16": {
-      "name": "VKM 750",
-      "type": "lmg",
-      "game": "black-ops-four"
-    },
-    "17": {
-      "name": "Paladin HB50",
-      "type": "sniper",
-      "game": "black-ops-four"
-    },
-    "18": {
-      "name": "Outlaw",
-      "type": "sniper",
-      "game": "black-ops-four"
-    },
-    "19": {
-      "name": "SDM",
-      "type": "sniper",
-      "game": "black-ops-four"
-    },
-    "20": {
-      "name": "Koshka",
-      "type": "sniper",
-      "game": "black-ops-four"
-    },
-    "21": {
-      "name": "Peacekeeper",
-      "type": "assault_rifle",
-      "game": "black-ops-four",
-      "isDlc": true
-    }
-
-}
+[
+  {
+    "name": "ICR-7",
+    "type": "assault_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Rampart 17",
+    "type": "assault_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "KN-57",
+    "type": "assault_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Vapr-Xkg",
+    "type": "assault_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Maddox RFB",
+    "type": "assault_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Grav",
+    "type": "assault_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "MX9",
+    "type": "smg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "GKS",
+    "type": "smg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Spitfire",
+    "type": "smg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Cordite",
+    "type": "smg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Saug 9MM",
+    "type": "smg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Auger DMR",
+    "type": "tactical_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "ABR 223",
+    "type": "tactical_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Swordfish",
+    "type": "tactical_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Titan",
+    "type": "lmg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Hades",
+    "type": "lmg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "VKM 750",
+    "type": "lmg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Paladin HB50",
+    "type": "sniper",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Outlaw",
+    "type": "sniper",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "SDM",
+    "type": "sniper",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Koshka",
+    "type": "sniper",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Peacekeeper",
+    "type": "assault_rifle",
+    "game": "black-ops-four",
+    "isDlc": true
+  }
+]

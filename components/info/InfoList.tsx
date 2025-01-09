@@ -1,23 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Table, Form, FormControl } from "react-bootstrap";
-//Helpers
-import { getWeapon } from "@/helpers/info/getWeapon";
 //Types
 import { InfoListProps } from "@/types/Info";
 
-function WeaponsList({ game }: InfoListProps) {
-  const [containerClass, setContainerClass] = useState("hidden");
-  const [data, setData] = useState({});
-  const [filteredData, setFilteredData] = useState({});
+function InfoList({ game = "", data, dataKeys }: InfoListProps) {
+  const [filteredData, setFilteredData] = useState(data);
   const [searchTerm, setSearchTerm] = useState("");
-
-  useEffect(() => {
-    const dataList = getWeapon(game);
-    setData(dataList);
-    setFilteredData(dataList);
-
-    setContainerClass("");
-  }, [game]);
 
   useEffect(() => {
     const results = Object.keys(data).filter((key) =>
@@ -34,10 +22,7 @@ function WeaponsList({ game }: InfoListProps) {
 
   return (
     <>
-      <Container
-        id="data-list"
-        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
-      >
+      <Container id="data-list" className="shadow-lg p-3 bg-body rounded">
         <Row className="justify-content-md-center">
           <Col sm className="text-center">
             <Form className="mb-3">
@@ -52,21 +37,35 @@ function WeaponsList({ game }: InfoListProps) {
               <Table striped bordered hover size="sm">
                 <thead>
                   <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Game</th>
-                    <th>Has Attachments?</th>
-                    <th>DLC</th>
+                    {dataKeys.includes("name") && <th>Name</th>}
+                    {dataKeys.includes("type") && <th>Type</th>}
+                    {dataKeys.includes("game") && <th>Game</th>}
+                    {dataKeys.includes("no_attach") && (
+                      <th>Has Attachments?</th>
+                    )}
+                    {dataKeys.includes("isDlc") && <th>DLC</th>}
                   </tr>
                 </thead>
                 <tbody>
                   {Object.keys(filteredData).map((key) => (
                     <tr key={key}>
-                      <td>{filteredData[key].name}</td>
-                      <td>{filteredData[key].type}</td>
-                      <td>{filteredData[key].game}</td>
-                      <td>{filteredData[key]?.no_attach ? "true" : "false"}</td>
-                      <td>{filteredData[key]?.isDlc ? "true" : "false"}</td>
+                      {dataKeys.includes("name") && (
+                        <td>{filteredData[key].name}</td>
+                      )}
+                      {dataKeys.includes("type") && (
+                        <td>{filteredData[key].type}</td>
+                      )}
+                      {dataKeys.includes("game") && (
+                        <td>{filteredData[key].game}</td>
+                      )}
+                      {dataKeys.includes("no_attach") && (
+                        <td>
+                          {filteredData[key]?.no_attach ? "true" : "false"}
+                        </td>
+                      )}
+                      {dataKeys.includes("isDlc") && (
+                        <td>{filteredData[key]?.isDlc ? "true" : "false"}</td>
+                      )}
                     </tr>
                   ))}
                 </tbody>
@@ -79,4 +78,4 @@ function WeaponsList({ game }: InfoListProps) {
   );
 }
 
-export default WeaponsList;
+export default InfoList;

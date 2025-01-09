@@ -7,16 +7,16 @@ import { fetchStreaks } from "@/helpers/fetchStreaks";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetchClassName";
 import { fetchSpecialist } from "@/helpers/fetchSpecialist";
-//Ops 3
-import { fetchPerk } from "@/helpers/generator/black-ops-three/fetchPerk";
-import { fetchAttachments } from "@/helpers/generator/black-ops-three/fetchAttachments";
-import { getLoadoutFrame } from "@/helpers/generator/black-ops-three/frame/getLoadoutFrame";
+//Ops 4
+import { fetchPerk } from "@/helpers/generator/black-ops-four/fetchPerk";
+import { fetchAttachments } from "@/helpers/generator/black-ops-four/fetchAttachments";
+import { getLoadoutFrame } from "@/helpers/generator/black-ops-four/frame/getLoadoutFrame";
 //Types
-import { LoadoutFrame } from "@/types/BlackOps3";
+import { LoadoutFrame } from "@/types/BlackOps4";
 
 const defaultWeapon = { name: "", type: "", game: "", no_attach: false };
 
-function BlackOpsThreeLoadout() {
+function BlackOpsFourLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
     randClassName: "",
@@ -42,8 +42,8 @@ function BlackOpsThreeLoadout() {
       },
     },
     equipment: {
-      tactical: "",
-      lethal: "",
+      gear: "",
+      equipment: "",
     },
     wildcards: "",
     specialist: "",
@@ -131,15 +131,15 @@ function BlackOpsThreeLoadout() {
         <hr />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Lethal:</span> <br />
+            <span className="fw-bolder fs-5">Gear:</span> <br />
             <span className="text-muted fs-6">
-              {equipment.lethal ? equipment.lethal : "None"}
+              {equipment.gear ? equipment.gear : "None"}
             </span>
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Tactical:</span> <br />
+            <span className="fw-bolder fs-5">Equipment:</span> <br />
             <span className="text-muted fs-6">
-              {equipment.tactical ? equipment.tactical : "None"}
+              {equipment.equipment ? equipment.equipment : "None"}
             </span>
           </Col>
         </Row>
@@ -216,7 +216,8 @@ function BlackOpsThreeLoadout() {
 async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const loadoutFrame: LoadoutFrame = getLoadoutFrame();
-    const game = "black-ops-three";
+    console.log("loadoutFrame", loadoutFrame);
+    const game = "black-ops-four";
     const randClassName = fetchClassName();
     const secondaryNeedsAttach =
       loadoutFrame.secondary_optic || loadoutFrame.secondary_attach > 0
@@ -228,22 +229,25 @@ async function fetchLoadoutData(setData, setContainerClass) {
       perk2: loadoutFrame.perk2 ? fetchPerk("perk2") : "",
       perk3: loadoutFrame.perk3 ? fetchPerk("perk3") : "",
     };
+    console.log("initialPerks", initialPerks);
 
-    const perkGreed = {
-      perk1Greed: loadoutFrame.perk1Greed
-        ? fetchPerk("perk1", initialPerks.perk1)
-        : "",
-      perk2Greed: loadoutFrame.perk2Greed
-        ? fetchPerk("perk2", initialPerks.perk2)
-        : "",
-      perk3Greed: loadoutFrame.perk3Greed
-        ? fetchPerk("perk3", initialPerks.perk3)
-        : "",
-    };
+    // const perkGreed = {
+    //   perk1Greed: loadoutFrame.perk1Greed
+    //     ? fetchPerk("perk1", initialPerks.perk1)
+    //     : "",
+    //   perk2Greed: loadoutFrame.perk2Greed
+    //     ? fetchPerk("perk2", initialPerks.perk2)
+    //     : "",
+    //   perk3Greed: loadoutFrame.perk3Greed
+    //     ? fetchPerk("perk3", initialPerks.perk3)
+    //     : "",
+    // };
 
-    const perks = { ...initialPerks, ...perkGreed };
+    const perks = initialPerks;
+    // const perks = { ...initialPerks, ...perkGreed };
 
     const streaks = fetchStreaks(game);
+    console.log("streaks", streaks);
     let weapons = {
       primary: {
         weapon: loadoutFrame.primary
@@ -260,6 +264,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
         attachments: "",
       },
     };
+    console.log("weapons 1", weapons);
 
     if (loadoutFrame.primary_optic) {
       weapons.primary.optic = fetchAttachments(
@@ -283,13 +288,13 @@ async function fetchLoadoutData(setData, setContainerClass) {
     }
 
     //Check for overkill
-    if (loadoutFrame.overkill) {
-      weapons.secondary.weapon = fetchWeapon(
-        "primary",
-        game,
-        weapons.primary.weapon.name
-      );
-    }
+    // if (loadoutFrame.overkill) {
+    //   weapons.secondary.weapon = fetchWeapon(
+    //     "primary",
+    //     game,
+    //     weapons.primary.weapon.name
+    //   );
+    // }
 
     if (!weapons.secondary.weapon?.no_attach && loadoutFrame.secondary_optic) {
       weapons.secondary.optic = fetchAttachments(
@@ -311,16 +316,15 @@ async function fetchLoadoutData(setData, setContainerClass) {
         )
       );
     }
+    console.log("weapons 2", weapons);
 
     let equipment = {
-      tactical:
-        loadoutFrame.tactical > 0 ? fetchEquipment("tactical", game) : "",
-      lethal: loadoutFrame.lethal ? fetchEquipment("lethal", game) : "",
+      gear: loadoutFrame.gear > 0 ? fetchEquipment("tactical", game) : "",
+      equipment: loadoutFrame.equipment ? fetchEquipment("lethal", game) : "",
     };
-    //Check for x2 tacticals
-    equipment.tactical += loadoutFrame.tactical == 2 ? " x2" : "";
-    //Check for danger close
-    equipment.lethal += loadoutFrame.dangerClose ? " x2" : "";
+    console.log("equipment", equipment);
+    //Check for x2 gear
+    equipment.gear += loadoutFrame.gear == 2 ? " x2" : "";
 
     const wildcards = loadoutFrame?.wildcards.join(", ");
     const specialist = fetchSpecialist(game);
@@ -340,4 +344,4 @@ async function fetchLoadoutData(setData, setContainerClass) {
   }
 }
 
-export default BlackOpsThreeLoadout;
+export default BlackOpsFourLoadout;

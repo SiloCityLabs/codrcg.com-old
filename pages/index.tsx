@@ -121,9 +121,9 @@ export default function Home() {
                 title="Black Ops IV"
                 text="Coming in 2025"
                 variant="black-ops"
-                btn1Text="Generator"
+                btn1Text="Multiplayer Generator"
                 link="black-ops-four/generator"
-                disabled={true}
+                disabled={false}
                 btn2Text="Zombies Generator"
                 link2="black-ops-four/zombies-generator"
                 disabled2={true}

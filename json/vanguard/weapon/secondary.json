@@ -1,99 +1,99 @@
-{
-  "0": {
+[
+  {
     "name": "Ratt",
     "type": "pistol",
     "game": "vanguard"
   },
-  "1": {
+  {
     "name": "Top Break",
     "type": "pistol",
     "game": "vanguard"
   },
-  "2": {
+  {
     "name": "1911",
     "type": "pistol",
     "game": "vanguard"
   },
-  "3": {
+  {
     "name": "Klauser",
     "type": "pistol",
     "game": "vanguard"
   },
-  "4": {
+  {
     "name": "Machine Pistol",
     "type": "pistol",
     "game": "vanguard"
   },
-  "5": {
+  {
     "name": "Valois Revolver",
     "type": "pistol",
     "game": "vanguard",
     "no_attach": true
   },
-  "6": {
+  {
     "name": "M1 Bazooka",
     "type": "launcher",
     "game": "vanguard",
     "no_attach": true
   },
-  "7": {
+  {
     "name": "Panzerschreck",
     "type": "launcher",
     "game": "vanguard",
     "no_attach": true
   },
-  "8": {
+  {
     "name": "Panzerfaust",
     "type": "launcher",
     "game": "vanguard",
     "no_attach": true
   },
-  "9": {
+  {
     "name": "Mk11 Launcher",
     "type": "launcher",
     "game": "vanguard",
     "no_attach": true
   },
-  "10": {
+  {
     "name": "FS Fighting Knife",
     "type": "melee",
     "game": "vanguard",
     "no_attach": true
   },
-  "11": {
+  {
     "name": "Skal Crusher",
     "type": "melee",
     "game": "vanguard",
     "no_attach": true
   },
-  "12": {
+  {
     "name": "Sledgehammer",
     "type": "melee",
     "game": "vanguard",
     "no_attach": true
   },
-  "13": {
+  {
     "name": "Ice Axe",
     "type": "melee",
     "game": "vanguard",
     "no_attach": true
   },
-  "14": {
+  {
     "name": "Katana",
     "type": "melee",
     "game": "vanguard",
     "no_attach": true
   },
-  "15": {
+  {
     "name": "Sawtooth",
     "type": "melee",
     "game": "vanguard",
     "no_attach": true
   },
-  "16": {
+  {
     "name": "Push Dagger",
     "type": "melee",
     "game": "vanguard",
     "no_attach": true
   }
-}
+]

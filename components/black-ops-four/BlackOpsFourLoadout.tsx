@@ -266,7 +266,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
         attachments: "",
       },
     };
-    console.log("weapons 1", weapons);
 
     //Check for underkill
     if (loadoutFrame.underkill) {
@@ -328,13 +327,12 @@ async function fetchLoadoutData(setData, setContainerClass) {
         )
       );
     }
-    console.log("weapons 2", weapons);
 
     let equipment = {
       gear: loadoutFrame.gear > 0 ? fetchEquipment("tactical", game) : "",
       equipment: loadoutFrame.equipment ? fetchEquipment("lethal", game) : "",
     };
-    console.log("equipment", equipment);
+
     //Check for x2 gear
     equipment.gear += loadoutFrame.gear == 2 ? " x2" : "";
 

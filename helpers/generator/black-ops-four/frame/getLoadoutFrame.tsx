@@ -6,7 +6,6 @@ import { getOptic } from "@/helpers/generator/black-ops-four/frame/getOptic";
 import { isset } from "@/helpers/isset";
 //Types
 import { AttachmentInfo, LoadoutFrame } from "@/types/BlackOps4";
-import { getSecondaryList } from "../../weapons/getSecondaryList";
 
 export function getLoadoutFrame(): LoadoutFrame {
   const defaultLoadoutFrame = {
@@ -23,8 +22,6 @@ export function getLoadoutFrame(): LoadoutFrame {
     perk3: false,
     wildcards: [],
   };
-
-  // return defaultLoadoutFrame;
 
   let frame: LoadoutFrame = defaultLoadoutFrame;
   let points = 10;
@@ -109,8 +106,8 @@ function wildcardCheck(piece: string, frame: LoadoutFrame): number {
   let wildcardCost = 0;
 
   if (
-    (piece === "primary" && frame.wildcards.includes("Underkill")) ||
-    (piece === "secondary" && frame.wildcards.includes("Overkill"))
+    (piece === "primary" && frame["secondary"]) ||
+    (piece === "secondary" && frame["primary"])
   ) {
     return wildcardCost;
   }

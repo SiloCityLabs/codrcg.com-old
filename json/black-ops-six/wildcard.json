@@ -1,45 +1,45 @@
-{
-    "0": {
-      "name": "Tactical Expert",
-      "type": "Wildcard",
-      "game": "black-ops-six",
-      "description": "Spawn with two extra tacticals"
-    },
-    "1": {
-      "name": "Overkill",
-      "type": "Wildcard",
-      "game": "black-ops-six",
-      "description": "Equip any non-melee weapon in Primary and Secondary slots"
-    },
-    "2": {
-      "name": "Gunfighter",
-      "type": "Wildcard",
-      "game": "black-ops-six",
-      "description": "Get 3 extra attachment points for your Primary weapon"
-    },
-    "3": {
-      "name": "Danger Close",
-      "type": "Wildcard",
-      "game": "black-ops-six",
-      "description": "Spawn with an extra lethal"
-    },
-    "4": {
-      "name": "Prepper",
-      "type": "Wildcard",
-      "game": "black-ops-six",
-      "description": "Equip two different field upgrades"
-    },
-    "5": {
-      "name": "Perk Greed",
-      "type": "Wildcard",
-      "game": "black-ops-six",
-      "description": "Equip an extra Perk"
-    },
-    "6": {
-      "name": "High Roller",
-      "type": "Wildcard",
-      "game": "black-ops-six",
-      "description": "Allow 4th Streak",
-      "isDlc": true
-    }
-}
+[
+  {
+    "name": "Tactical Expert",
+    "type": "Wildcard",
+    "game": "black-ops-six",
+    "description": "Spawn with two extra tacticals"
+  },
+  {
+    "name": "Overkill",
+    "type": "Wildcard",
+    "game": "black-ops-six",
+    "description": "Equip any non-melee weapon in Primary and Secondary slots"
+  },
+  {
+    "name": "Gunfighter",
+    "type": "Wildcard",
+    "game": "black-ops-six",
+    "description": "Get 3 extra attachment points for your Primary weapon"
+  },
+  {
+    "name": "Danger Close",
+    "type": "Wildcard",
+    "game": "black-ops-six",
+    "description": "Spawn with an extra lethal"
+  },
+  {
+    "name": "Prepper",
+    "type": "Wildcard",
+    "game": "black-ops-six",
+    "description": "Equip two different field upgrades"
+  },
+  {
+    "name": "Perk Greed",
+    "type": "Wildcard",
+    "game": "black-ops-six",
+    "description": "Equip an extra Perk"
+  },
+  {
+    "name": "High Roller",
+    "type": "Wildcard",
+    "game": "black-ops-six",
+    "description": "Allow 4th Streak",
+    "isDlc": true
+  }
+]

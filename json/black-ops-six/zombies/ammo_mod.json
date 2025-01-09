@@ -1,33 +1,33 @@
-{
-  "0": {
+[
+  {
     "name": "Dead Wire",
     "type": "Ammo Mod",
     "game": "black-ops-six"
   },
-  "1": {
+  {
     "name": "Napalm Burst",
     "type": "Ammo Mod",
     "game": "black-ops-six"
   },
-  "2": {
+  {
     "name": "Cryo Freeze",
     "type": "Ammo Mod",
     "game": "black-ops-six"
   },
-  "3": {
+  {
     "name": "Brain Rot",
     "type": "Ammo Mod",
     "game": "black-ops-six"
   },
-  "4": {
+  {
     "name": "Shadow Rift",
     "type": "Ammo Mod",
     "game": "black-ops-six"
   },
-  "5": {
+  {
     "name": "Light Mend",
     "type": "Ammo Mod",
     "game": "black-ops-six",
     "isDlc": true
   }
-}
+]

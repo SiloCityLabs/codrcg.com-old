@@ -1,27 +1,27 @@
-{
-    "0": {
-      "name": "Concussion",
-      "type": "Tactical",
-      "game": "black-ops-six"
-    },
-    "1": {
-      "name": "Smoke",
-      "type": "Tactical",
-      "game": "black-ops-six"
-    },
-    "2": {
-      "name": "Stim Shot",
-      "type": "Tactical",
-      "game": "black-ops-six"
-    },
-    "3": {
-      "name": "Decoy",
-      "type": "Tactical",
-      "game": "black-ops-six"
-    },
-    "4": {
-      "name": "Shock Charge",
-      "type": "Tactical",
-      "game": "black-ops-six"
-    }
+[
+  {
+    "name": "Concussion",
+    "type": "Tactical",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Smoke",
+    "type": "Tactical",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Stim Shot",
+    "type": "Tactical",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Decoy",
+    "type": "Tactical",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Shock Charge",
+    "type": "Tactical",
+    "game": "black-ops-six"
   }
+]

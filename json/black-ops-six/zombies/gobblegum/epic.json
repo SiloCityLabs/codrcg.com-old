@@ -1,37 +1,37 @@
-{
-    "0": {
-      "name": "Who's Keeping Score?",
-      "type": "Epic",
-      "game": "black-ops-six"
-    },
-    "1": {
-      "name": "Free Fire",
-      "type": "Epic",
-      "game": "black-ops-six"
-    },
-    "2": {
-      "name": "Nowhere But Here",
-      "type": "Epic",
-      "game": "black-ops-six"
-    },
-    "3": {
-      "name": "Soda Fountain",
-      "type": "Epic",
-      "game": "black-ops-six"
-    },
-    "4": {
-      "name": "Profit Sharing",
-      "type": "Epic",
-      "game": "black-ops-six"
-    },
-    "5": {
-      "name": "Respin Cycle",
-      "type": "Epic",
-      "game": "black-ops-six"
-    },
-    "6": {
-      "name": "Exit Strategy",
-      "type": "Epic",
-      "game": "black-ops-six"
-    }
+[
+  {
+    "name": "Who's Keeping Score?",
+    "type": "Epic",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Free Fire",
+    "type": "Epic",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Nowhere But Here",
+    "type": "Epic",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Soda Fountain",
+    "type": "Epic",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Profit Sharing",
+    "type": "Epic",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Respin Cycle",
+    "type": "Epic",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Exit Strategy",
+    "type": "Epic",
+    "game": "black-ops-six"
   }
+]

@@ -1,39 +1,39 @@
-{
-    "0": {
-      "name": "9mm PM",
-      "type": "pistol",
-      "game": "black-ops-six"
-    },
-    "1": {
-      "name": "Grekhova",
-      "type": "pistol",
-      "game": "black-ops-six"
-    },
-    "2": {
-      "name": "GS45",
-      "type": "pistol",
-      "game": "black-ops-six"
-    },
-    "3": {
-      "name": "Stryder .22",
-      "type": "pistol",
-      "game": "black-ops-six"
-    },
-    "4": {
-      "name": "CIGMA 2B",
-      "type": "launcher",
-      "game": "black-ops-six",
-      "no_attach": true
-    },
-    "5": {
-      "name": "HE-1",
-      "type": "launcher",
-      "game": "black-ops-six",
-      "no_attach": true
-    },
-    "6": {
-      "name": "Sirin 9MM",
-      "type": "special",
-      "game": "black-ops-six"
-    }
-}
+[
+  {
+    "name": "9mm PM",
+    "type": "pistol",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Grekhova",
+    "type": "pistol",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "GS45",
+    "type": "pistol",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Stryder .22",
+    "type": "pistol",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "CIGMA 2B",
+    "type": "launcher",
+    "game": "black-ops-six",
+    "no_attach": true
+  },
+  {
+    "name": "HE-1",
+    "type": "launcher",
+    "game": "black-ops-six",
+    "no_attach": true
+  },
+  {
+    "name": "Sirin 9MM",
+    "type": "special",
+    "game": "black-ops-six"
+  }
+]

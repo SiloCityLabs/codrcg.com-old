@@ -1,18 +1,18 @@
-{
-  "0": {
+[
+  {
     "name": "Newtonian Negation",
     "type": "Whimsical",
     "game": "black-ops-six"
   },
-  "1": {
+  {
     "name": "Indiegestion",
     "type": "Whimsical",
     "game": "black-ops-six"
   },
-  "2": {
+  {
     "name": "Holiday Cheer",
     "type": "Whimsical",
     "game": "black-ops-six",
     "isDlc": true
   }
-}
+]

@@ -1,110 +1,110 @@
-{
-    "0": {
-      "name": "HC-XD",
-      "type": "Streak",
-      "score": 400,
-      "game": "black-ops-three"
-    },
-    "1": {
-      "name": "UAV",
-      "type": "Streak",
-      "score": 500,
-      "game": "black-ops-three"
-    },
-    "2": {
-      "name": "Care Package",
-      "type": "Streak",
-      "score": 550,
-      "game": "black-ops-three"
-    },
-    "3": {
-      "name": "Counter-UAV",
-      "type": "Streak",
-      "score": 600,
-      "game": "black-ops-three"
-    },
-    "4": {
-      "name": "Dart",
-      "type": "Streak",
-      "score": 650,
-      "game": "black-ops-three"
-    },
-    "5": {
-      "name": "Guardian",
-      "type": "Streak",
-      "score": 700,
-      "game": "black-ops-three"
-    },
-    "6": {
-      "name": "Lightning Strike",
-      "type": "Streak",
-      "score": 750,
-      "game": "black-ops-three"
-    },
-    "7": {
-      "name": "Hellstorm",
-      "type": "Streak",
-      "score": 800,
-      "game": "black-ops-three"
-    },
-    "8": {
-      "name": "Hardened Sentry",
-      "type": "Streak",
-      "score": 850,
-      "game": "black-ops-three"
-    },
-    "9": {
-      "name": "Cerberus",
-      "type": "Streak",
-      "score": 900,
-      "game": "black-ops-three"
-    },
-    "10": {
-      "name": "Rolling Thunder",
-      "type": "Streak",
-      "score": 950,
-      "game": "black-ops-three"
-    },
-    "11": {
-      "name": "Talon",
-      "type": "Streak",
-      "score": 1050,
-      "game": "black-ops-three"
-    },
-    "12": {
-      "name": "Wraith",
-      "type": "Streak",
-      "score": 1100,
-      "game": "black-ops-three"
-    },
-    "13": {
-      "name": "H.A.T.R.",
-      "type": "Streak",
-      "score": 1200,
-      "game": "black-ops-three"
-    },
-    "14": {
-      "name": "Power Core",
-      "type": "Streak",
-      "score": 1250,
-      "game": "black-ops-three"
-    },
-    "15": {
-      "name": "R.A.P.S.",
-      "type": "Streak",
-      "score": 1300,
-      "game": "black-ops-three"
-    },
-    "16": {
-      "name": "G.I. Unit",
-      "type": "Streak",
-      "score": 1600,
-      "game": "black-ops-three"
-    },
-    "17": {
-      "name": "Mothership",
-      "type": "Streak",
-      "score": 1700,
-      "game": "black-ops-three"
-    }
-}
+[
+  {
+    "name": "HC-XD",
+    "type": "Streak",
+    "score": 400,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "UAV",
+    "type": "Streak",
+    "score": 500,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Care Package",
+    "type": "Streak",
+    "score": 550,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Counter-UAV",
+    "type": "Streak",
+    "score": 600,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Dart",
+    "type": "Streak",
+    "score": 650,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Guardian",
+    "type": "Streak",
+    "score": 700,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Lightning Strike",
+    "type": "Streak",
+    "score": 750,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Hellstorm",
+    "type": "Streak",
+    "score": 800,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Hardened Sentry",
+    "type": "Streak",
+    "score": 850,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Cerberus",
+    "type": "Streak",
+    "score": 900,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Rolling Thunder",
+    "type": "Streak",
+    "score": 950,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Talon",
+    "type": "Streak",
+    "score": 1050,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Wraith",
+    "type": "Streak",
+    "score": 1100,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "H.A.T.R.",
+    "type": "Streak",
+    "score": 1200,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Power Core",
+    "type": "Streak",
+    "score": 1250,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "R.A.P.S.",
+    "type": "Streak",
+    "score": 1300,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "G.I. Unit",
+    "type": "Streak",
+    "score": 1600,
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Mothership",
+    "type": "Streak",
+    "score": 1700,
+    "game": "black-ops-three"
+  }
+]

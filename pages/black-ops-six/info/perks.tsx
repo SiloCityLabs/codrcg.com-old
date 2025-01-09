@@ -1,8 +1,11 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 //Components
 import Header from "@/components/Header";
-import PerkList from "@/components/info/PerkList";
+import InfoList from "@/components/info/InfoList";
+//Helpers
+import { getPerk } from "@/helpers/info/getPerk";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
@@ -14,6 +17,17 @@ export default function BlackOpsSixPerks() {
     { label: "Loadout Info", href: "/black-ops-six/info" },
     { label: "Changelog", href: "/changelog" },
   ];
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState({});
+  const dataKeys = ["name", "type", "game", "isDlc"];
+
+  useEffect(() => {
+    const dataList = getPerk("black-ops-six");
+    setData(dataList);
+
+    setIsLoading(false);
+  }, []);
 
   return (
     <>
@@ -37,7 +51,7 @@ export default function BlackOpsSixPerks() {
           <Col>
             <h2>Black Ops 6 - Perks</h2>
 
-            <PerkList game="black-ops-six" />
+            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>
         </Row>
       </Container>

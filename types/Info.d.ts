@@ -8,6 +8,7 @@ type InfoData = {
   name: string;
   type: string;
   game: string;
+  score?: number;
   description?: string;
   no_attach?: boolean;
   isDlc?: boolean;

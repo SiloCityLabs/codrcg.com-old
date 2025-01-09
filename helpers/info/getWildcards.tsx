@@ -4,8 +4,8 @@ import { Wildcard } from "@/types/Generator";
 export function getWildcards(
   game: string = "all",
   value: string = ""
-): Wildcard | Wildcard[] {
-  const data = getWildcardList(game) as Wildcard[];
+): Wildcard | Record<string, Wildcard> {
+  const data = getWildcardList(game) as Record<string, Wildcard>;
 
   return data;
 }

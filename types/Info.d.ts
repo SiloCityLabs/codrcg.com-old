@@ -1,10 +1,14 @@
-import { Weapon, Perk } from "./Generator";
-
 export interface InfoListProps {
   game?: string;
-  data: WeaponData | PerkData;
+  data: Record<string, InfoData>;
   dataKeys: Array<string>;
 }
 
-type WeaponData = Record<string, Weapon>;
-type PerkData = Record<string, PerkData>;
+type InfoData = {
+  name: string;
+  type: string;
+  game: string;
+  description?: string;
+  no_attach?: boolean;
+  isDlc?: boolean;
+};

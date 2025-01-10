@@ -4,6 +4,7 @@ export type Weapon = {
   game: string;
   no_attach?: boolean;
   isDlc?: boolean;
+  no_attach_info?: boolean;
 };
 
 export type Perk = {

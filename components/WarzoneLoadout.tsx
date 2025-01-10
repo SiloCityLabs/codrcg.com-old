@@ -8,6 +8,8 @@ import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchWildcard } from "@/helpers/fetchWildcard";
 import { fetchClassName } from "@/helpers/fetchClassName";
+//Utils
+import { sendEvent } from "@/utils/gtag";
 
 function WarzoneLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
@@ -134,6 +136,12 @@ function WarzoneLoadout() {
 }
 
 async function fetchLoadoutData(setData, setContainerClass) {
+  sendEvent("button_click", {
+    button_id: "bo4_fetchLoadoutData",
+    label: "BlackOpsFour",
+    category: "COD_Loadouts",
+  });
+
   try {
     const game = "warzone";
     const randClassName = fetchClassName();

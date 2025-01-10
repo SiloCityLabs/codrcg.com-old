@@ -9,6 +9,8 @@ import { fetchStreaks } from "@/helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetchClassName";
+//Utils
+import { sendEvent } from "@/utils/gtag";
 
 function VanguardLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
@@ -137,6 +139,12 @@ function VanguardLoadout() {
 }
 
 async function fetchLoadoutData(setData, setContainerClass) {
+  sendEvent("button_click", {
+    button_id: "vanguard_fetchLoadoutData",
+    label: "Vanguard",
+    category: "COD_Loadouts",
+  });
+
   try {
     const game = "vanguard";
     const randClassName = fetchClassName();

@@ -7,6 +7,8 @@ import { fetchWeapon } from "@/helpers/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetchClassName";
+//Utils
+import { sendEvent } from "@/utils/gtag";
 
 function ModernWarfareThreeZombiesLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
@@ -123,6 +125,12 @@ function ModernWarfareThreeZombiesLoadout() {
 }
 
 async function fetchLoadoutData(setData, setContainerClass) {
+  sendEvent("button_click", {
+    button_id: "mw3Zombies_fetchLoadoutData",
+    label: "ModernWarfareThreeZombies",
+    category: "COD_Loadouts",
+  });
+
   try {
     const game = "modern-warfare-three-zombies";
     const randClassName = fetchClassName();

@@ -13,6 +13,8 @@ import { fetchAttachments } from "@/helpers/generator/black-ops-three/fetchAttac
 import { getLoadoutFrame } from "@/helpers/generator/black-ops-three/frame/getLoadoutFrame";
 //Types
 import { LoadoutFrame } from "@/types/BlackOps3";
+//Utils
+import { sendEvent } from "@/utils/gtag";
 
 const defaultWeapon = { name: "", type: "", game: "", no_attach: false };
 
@@ -214,6 +216,12 @@ function BlackOpsThreeLoadout() {
 }
 
 async function fetchLoadoutData(setData, setContainerClass) {
+  sendEvent("button_click", {
+    button_id: "bo3_fetchLoadoutData",
+    label: "BlackOpsThree",
+    category: "COD_Loadouts",
+  });
+
   try {
     const loadoutFrame: LoadoutFrame = getLoadoutFrame();
     const game = "black-ops-three";

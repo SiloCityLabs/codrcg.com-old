@@ -1,0 +1,15 @@
+{
+  "optic": ["Reflex", "Holographic", "Dual Zoom", "ELO"],
+  "attachments": [
+    "Laser Sight I",
+    "Laser Sight II",
+    "Extended Mags",
+    "Quickdraw",
+    "Fast Mags",
+    "Stock",
+    "FMJ"
+  ],
+  "mod": [
+    "Wild Fire"
+  ]
+}

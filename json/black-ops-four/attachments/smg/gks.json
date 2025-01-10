@@ -1,0 +1,20 @@
+{
+  "optic": [
+    "Reflex",
+    "Recon",
+    "Dual Zoom",
+    "NVIR"
+  ],
+  "attachments": [
+    "Grip I",
+    "Grip II",
+    "Quickdraw",
+    "Extended Mags",
+    "Long Barrel I",
+    "Long Barrel II",
+    "Suppressor"
+  ],
+  "mod": [
+    "Quad Shot"
+  ]
+}

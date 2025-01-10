@@ -1,0 +1,20 @@
+{
+  "optic": [
+    "Reflex",
+    "Holographic",
+    "Threat Detector",
+    "ELO"
+  ],
+  "attachments": [
+    "Extended Mags",
+    "Grip",
+    "Laser Sight",
+    "Rapid Fire",
+    "FMJ I",
+    "FMJ II",
+    "Long Barrel"
+  ],
+  "mod": [
+    "Belt-Feed"
+  ]
+}

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-// import BlackOpsFourZombiesLoadout from "@/components/black-ops-six/BlackOpsFourZombiesLoadout";
+// import BlackOpsFourZombiesLoadout from "@/components/black-ops-four/BlackOpsFourZombiesLoadout";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
@@ -9,6 +9,7 @@ export default function BlackOpsFourZombies() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops-four/generator" },
+    { label: "Loadout Info", href: "/black-ops-four/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 

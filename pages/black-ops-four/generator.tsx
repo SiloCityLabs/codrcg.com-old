@@ -8,13 +8,14 @@ import "@/public/styles/components/Loadout.css";
 export default function BlackOpsFour() {
   const navLinks = [
     { label: "Home", href: "/" },
+    { label: "Loadout Info", href: "/black-ops-four/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
   return (
     <>
       <Head>
-        <title>Black Ops 4 Random Class Generator</title>
+        <title>Black Ops12 4 Random Class Generator</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"

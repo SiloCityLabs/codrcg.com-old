@@ -1,7 +1,5 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-//Hooks
-import useGoogleAnalytics from "../hooks/useGoogleAnalytics";
 //Styles
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../public/styles/main.css";
@@ -24,8 +22,6 @@ const defaultNavLinks = [
 
 function Header(props: HeaderProps) {
   const { className, navLinks = defaultNavLinks } = props;
-  //Implement Analytics
-  useGoogleAnalytics("G-F3RTW20Q7N");
 
   return (
     <Navbar

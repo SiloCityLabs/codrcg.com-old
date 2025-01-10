@@ -39,5 +39,11 @@
     "type": "melee",
     "game": "black-ops-four",
     "no_attach": true
+  },
+  {
+    "name": "Rampage",
+    "type": "shotgun",
+    "game": "black-ops-four",
+    "isDlc": true
   }
 ]

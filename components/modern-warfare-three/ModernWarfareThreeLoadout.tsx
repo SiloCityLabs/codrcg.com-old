@@ -9,6 +9,8 @@ import { fetchStreaks } from "@/helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetchClassName";
+//Utils
+import { sendEvent } from "@/utils/gtag";
 
 function ModernWarfareThreeLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
@@ -142,6 +144,12 @@ function ModernWarfareThreeLoadout() {
 }
 
 async function fetchLoadoutData(setData, setContainerClass) {
+  sendEvent("button_click", {
+    button_id: "mw3_fetchLoadoutData",
+    label: "ModernWarfareThree",
+    category: "COD_Loadouts",
+  });
+
   try {
     const game = "modern-warfare-three";
     const randClassName = fetchClassName();

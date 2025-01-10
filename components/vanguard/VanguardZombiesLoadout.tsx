@@ -8,6 +8,8 @@ import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchVanguardZombiesMap } from "@/helpers/generator/vanguard/fetchVanguardZombiesMap";
 import { fetchVanguardZombiesArtifact } from "@/helpers/generator/vanguard/fetchVanguardZombiesArtifact";
 import { fetchClassName } from "@/helpers/fetchClassName";
+//Utils
+import { sendEvent } from "@/utils/gtag";
 
 function VanguardZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
@@ -100,6 +102,12 @@ function VanguardZombiesLoadout() {
 }
 
 async function fetchLoadoutData(setData, setContainerClass) {
+  sendEvent("button_click", {
+    button_id: "vanguardZombies_fetchLoadoutData",
+    label: "VanguardZombies",
+    category: "COD_Loadouts",
+  });
+
   try {
     const randClassName = fetchClassName();
     const weapons = {

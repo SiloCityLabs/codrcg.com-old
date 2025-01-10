@@ -10,6 +10,8 @@ import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchWildcard } from "@/helpers/fetchWildcard";
 import { fetchClassName } from "@/helpers/fetchClassName";
+//Utils
+import { sendEvent } from "@/utils/gtag";
 
 function BlackOpsSixLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
@@ -158,6 +160,12 @@ function BlackOpsSixLoadout() {
 }
 
 async function fetchLoadoutData(setData, setContainerClass) {
+  sendEvent("button_click", {
+    button_id: "bo6_fetchLoadoutData",
+    label: "BlackOpsSix",
+    category: "COD_Loadouts",
+  });
+
   try {
     const game = "black-ops-six";
     const randClassName = fetchClassName();

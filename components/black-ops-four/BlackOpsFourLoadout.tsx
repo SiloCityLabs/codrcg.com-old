@@ -13,6 +13,8 @@ import { fetchAttachments } from "@/helpers/generator/black-ops-four/fetchAttach
 import { getLoadoutFrame } from "@/helpers/generator/black-ops-four/frame/getLoadoutFrame";
 //Types
 import { LoadoutFrame } from "@/types/BlackOps4";
+//Utils
+import { sendEvent } from "@/utils/gtag";
 
 const defaultWeapon = { name: "", type: "", game: "", no_attach: false };
 
@@ -218,6 +220,12 @@ function BlackOpsFourLoadout() {
 }
 
 async function fetchLoadoutData(setData, setContainerClass) {
+  sendEvent("button_click", {
+    button_id: "warzone_fetchLoadoutData",
+    label: "BlackOpsSixZombies",
+    category: "COD_Loadouts",
+  });
+  
   try {
     const loadoutFrame: LoadoutFrame = getLoadoutFrame();
     console.log("loadoutFrame", loadoutFrame);

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Dart",
+    "type": "Streak",
+    "score": 450,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "RC-XD",
+    "type": "Streak",
+    "score": 500,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "UAV",
+    "type": "Streak",
+    "score": 550,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Care Package",
+    "type": "Streak",
+    "score": 600,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Counter UAV",
+    "type": "Streak",
+    "score": 650,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Lightning Strike",
+    "type": "Streak",
+    "score": 850,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Sentry",
+    "type": "Streak",
+    "score": 900,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Hellstorm",
+    "type": "Streak",
+    "score": 950,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Drone Squad",
+    "type": "Streak",
+    "score": 1000,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Snipers Nest",
+    "type": "Streak",
+    "score": 1050,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Mantis",
+    "type": "Streak",
+    "score": 1100,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Thresher",
+    "type": "Streak",
+    "score": 1200,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Attack Chopper",
+    "type": "Streak",
+    "score": 1300,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Strike Team",
+    "type": "Streak",
+    "score": 1350,
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Gunship",
+    "type": "Streak",
+    "score": 1600,
+    "game": "black-ops-four"
+  }
+]

@@ -4,6 +4,7 @@ export type Weapon = {
   game: string;
   no_attach?: boolean;
   isDlc?: boolean;
+  no_attach_info?: boolean;
 };
 
 export type Perk = {
@@ -55,6 +56,12 @@ export type Gobblegum = {
   type: string;
   game: string;
   isDlc: boolean;
+};
+
+export type Artifact = {
+  name: string;
+  type: string;
+  game: string;
 };
 
 export type MW3Vest = {

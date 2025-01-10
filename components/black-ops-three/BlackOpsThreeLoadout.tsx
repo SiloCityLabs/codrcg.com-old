@@ -6,8 +6,9 @@ import { fetchWeapon } from "@/helpers/fetchWeapon";
 import { fetchStreaks } from "@/helpers/fetchStreaks";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetchClassName";
+import { fetchSpecialist } from "@/helpers/fetchSpecialist";
+//Ops 3
 import { fetchPerk } from "@/helpers/generator/black-ops-three/fetchPerk";
-import { fetchSpecialist } from "@/helpers/generator/black-ops-three/fetchSpecialist";
 import { fetchAttachments } from "@/helpers/generator/black-ops-three/fetchAttachments";
 import { getLoadoutFrame } from "@/helpers/generator/black-ops-three/frame/getLoadoutFrame";
 //Types
@@ -322,7 +323,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     equipment.lethal += loadoutFrame.dangerClose ? " x2" : "";
 
     const wildcards = loadoutFrame?.wildcards.join(", ");
-    const specialist = fetchSpecialist();
+    const specialist = fetchSpecialist(game);
 
     setData({
       randClassName,

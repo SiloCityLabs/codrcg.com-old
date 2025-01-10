@@ -1,57 +1,57 @@
-{
-    "0": {
-      "name": "Frag Grenade",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "1": {
-      "name": "Claymore",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "2": {
-      "name": "Throwing Knife",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "3": {
-      "name": "Thermite",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "4": {
-      "name": "Thermobaric Grenade",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "5": {
-      "name": "Proximity Mine",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "6": {
-      "name": "Drill Charge",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "7": {
-      "name": "Sticky Grenade",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "8": {
-      "name": "C4",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "9": {
-      "name": "Throwing Star",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "10": {
-      "name": "Breacher Drone",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    }
+[
+  {
+    "name": "Frag Grenade",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Claymore",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Throwing Knife",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Thermite",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Thermobaric Grenade",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Proximity Mine",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Drill Charge",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Sticky Grenade",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "C4",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Throwing Star",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Breacher Drone",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
   }
+]

@@ -1,32 +1,32 @@
-{
-    "0": {
-      "name": "Sledgehammer",
-      "type": "melee",
-      "game": "modern-warfare-three",
-      "no_attach": true
-    },
-    "1": {
-      "name": "Gladiator",
-      "type": "melee",
-      "game": "modern-warfare-three",
-      "no_attach": true
-    },
-    "2": {
-      "name": "Karambit",
-      "type": "melee",
-      "game": "modern-warfare-three",
-      "no_attach": true
-    },
-    "3": {
-      "name": "Gutter Knife",
-      "type": "melee",
-      "game": "modern-warfare-three",
-      "no_attach": true
-    },
-    "4": {
-      "name": "Soulrender",
-      "type": "melee",
-      "game": "modern-warfare-three",
-      "no_attach": true
-    }
-}
+[
+  {
+    "name": "Sledgehammer",
+    "type": "melee",
+    "game": "modern-warfare-three",
+    "no_attach": true
+  },
+  {
+    "name": "Gladiator",
+    "type": "melee",
+    "game": "modern-warfare-three",
+    "no_attach": true
+  },
+  {
+    "name": "Karambit",
+    "type": "melee",
+    "game": "modern-warfare-three",
+    "no_attach": true
+  },
+  {
+    "name": "Gutter Knife",
+    "type": "melee",
+    "game": "modern-warfare-three",
+    "no_attach": true
+  },
+  {
+    "name": "Soulrender",
+    "type": "melee",
+    "game": "modern-warfare-three",
+    "no_attach": true
+  }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Scavenger",
+        "description": "Replenish ammo from fallen players.",
+        "type": "Perk 1",
+        "game": "black-ops-four"
+    },
+    {
+        "name": "Engineer",
+        "description": "Detect enemy equipment and scorestreaks through walls. Re-roll and booby trap care packages",
+        "type": "Perk 1",
+        "game": "black-ops-four"
+    },
+    {
+        "name": "Flak Jacket",
+        "description": "Take less damage from enemy explosives, fire and radiation. Recover more quickly when wounded.",
+        "type": "Perk 1",
+        "game": "black-ops-four"
+    },
+    {
+        "name": "Tactical Mask",
+        "description": "Increased resistance to 9-Bang, Concussion, Razor Wire, Reactor Core, Seeker, Tempest, EMP Disruptor, Counter UAV, and Strobe Light.",
+        "type": "Perk 1",
+        "game": "black-ops-four"
+    }
+]

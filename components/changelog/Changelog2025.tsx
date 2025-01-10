@@ -6,6 +6,10 @@ function Changelog2024() {
       <Row>
         <Col>
           <p>
+            01/12/2025:{" "}
+            <a href="vanguard/info">Vanguard Generator Information</a>
+          </p>
+          <p>
             01/11/2025:{" "}
             <a href="black-ops-six/info">Black Ops 6 Generator Information</a>
           </p>

@@ -1,0 +1,21 @@
+{
+  "optic": [
+    "Recon",
+    "Threat Detector",
+    "Iron Sights",
+    "Reflex"
+  ],
+  "attachments": [
+    "Rapid Fire",
+    "Quickdraw",
+    "Suppressor",
+    "Grip",
+    "High Caliber",
+    "Stabilizer",
+    "Stock",
+    "Hybrid Mags"
+  ],
+  "mod": [
+    "Bolt Cylinder"
+  ]
+}

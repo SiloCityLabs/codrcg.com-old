@@ -55,6 +55,9 @@
 	<url>
 		<loc>https://codrcg.com/black-ops-six/info/zombies/maps</loc>
 	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-six/info/zombies/field-upgrades</loc>
+	</url>
 	<!-- Warzone -->
 	<url>
 		<loc>https://codrcg.com/warzone/generator</loc>
@@ -72,6 +75,35 @@
 	</url>
 	<url>
 		<loc>https://codrcg.com/vanguard/zombies-generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/vanguard/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/vanguard/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/vanguard/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/vanguard/info/streaks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/vanguard/info/weapons</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/vanguard/info/zombies/maps</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/vanguard/info/zombies/artifacts</loc>
+	</url>
+	<!-- Black Ops 4 -->
+	<url>
+		<loc>https://codrcg.com/black-ops-four/generator</loc>
+	</url>
+	<!-- Black Ops 3 -->
+	<url>
+		<loc>https://codrcg.com/black-ops-three/generator</loc>
 	</url>
 	<!-- <url>
 		<loc>https://codrcg.com/contactus</loc>

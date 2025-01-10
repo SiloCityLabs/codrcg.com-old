@@ -1,0 +1,21 @@
+{
+  "optic": [
+    "Reflex",
+    "Holographic",
+    "Dual Zoom",
+    "Threat Detector",
+    "ELO"
+  ],
+  "attachments": [
+    "Laser Sight I",
+    "Laser Sight II",
+    "Steady Grip",
+    "Suppressor",
+    "FMJ",
+    "Rapid Fire",
+    "Hybrid Mags"
+  ],
+  "mod": [
+    "Cross Bar"
+  ]
+}

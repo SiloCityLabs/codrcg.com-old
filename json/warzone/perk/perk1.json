@@ -1,38 +1,38 @@
-{
-    "0": {
-      "name": "Reflexes",
-      "type": "Perk 1",
-      "game": "warzone",
-      "color": "Blue"
-    },
-    "1": {
-      "name": "Veteran",
-      "type": "Perk 1",
-      "game": "warzone",
-      "color": "Blue"
-    },
-    "2": {
-      "name": "Grenadier",
-      "type": "Perk 1",
-      "game": "warzone",
-      "color": "Blue"
-    },
-    "3": {
-      "name": "Dexterity",
-      "type": "Perk 1",
-      "game": "warzone",
-      "color": "Blue"
-    },
-    "4": {
-      "name": "Scavenger",
-      "type": "Perk 1",
-      "game": "warzone",
-      "color": "Blue"
-    },
-    "5": {
-      "name": "Survivor",
-      "type": "Perk 1",
-      "game": "warzone",
-      "color": "Blue"
-    }
+[
+  {
+    "name": "Reflexes",
+    "type": "Perk 1",
+    "game": "warzone",
+    "color": "Blue"
+  },
+  {
+    "name": "Veteran",
+    "type": "Perk 1",
+    "game": "warzone",
+    "color": "Blue"
+  },
+  {
+    "name": "Grenadier",
+    "type": "Perk 1",
+    "game": "warzone",
+    "color": "Blue"
+  },
+  {
+    "name": "Dexterity",
+    "type": "Perk 1",
+    "game": "warzone",
+    "color": "Blue"
+  },
+  {
+    "name": "Scavenger",
+    "type": "Perk 1",
+    "game": "warzone",
+    "color": "Blue"
+  },
+  {
+    "name": "Survivor",
+    "type": "Perk 1",
+    "game": "warzone",
+    "color": "Blue"
   }
+]

@@ -1,32 +1,32 @@
-{
-    "0": {
-      "name": "Quick-Grip Gloves",
-      "type": "Gloves",
-      "game": "modern-warfare-three"
-    },
-    "1": {
-      "name": "Ordnance Gloves",
-      "type": "Gloves",
-      "game": "modern-warfare-three"
-    },
-    "2": {
-      "name": "Commando Gloves",
-      "type": "Gloves",
-      "game": "modern-warfare-three"
-    },
-    "3": {
-      "name": "Scavenger Gloves",
-      "type": "Gloves",
-      "game": "modern-warfare-three"
-    },
-    "4": {
-      "name": "Marksman Gloves",
-      "type": "Gloves",
-      "game": "modern-warfare-three"
-    },
-    "5": {
-      "name": "Assault Gloves",
-      "type": "Gloves",
-      "game": "modern-warfare-three"
-    }
-}
+[
+  {
+    "name": "Quick-Grip Gloves",
+    "type": "Gloves",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Ordnance Gloves",
+    "type": "Gloves",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Commando Gloves",
+    "type": "Gloves",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Scavenger Gloves",
+    "type": "Gloves",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Marksman Gloves",
+    "type": "Gloves",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Assault Gloves",
+    "type": "Gloves",
+    "game": "modern-warfare-three"
+  }
+]

@@ -1,12 +1,52 @@
 [
-  "Supply Box",
-  "Goliath",
-  "Dead Silence",
-  "Jammer",
-  "Deployable Cover",
-  "Armor Plates",
-  "Field Mic",
-  "Tactical Insertion",
-  "Dead Drop",
-  "Trophy System"
+  {
+    "name": "Supply Box",
+    "type": "Field Upgrade",
+    "game": "vanguard"
+  },
+  {
+    "name": "Goliath",
+    "type": "Field Upgrade",
+    "game": "vanguard"
+  },
+  {
+    "name": "Dead Silence",
+    "type": "Field Upgrade",
+    "game": "vanguard"
+  },
+  {
+    "name": "Jammer",
+    "type": "Field Upgrade",
+    "game": "vanguard"
+  },
+  {
+    "name": "Deployable Cover",
+    "type": "Field Upgrade",
+    "game": "vanguard"
+  },
+  {
+    "name": "Armor Plates",
+    "type": "Field Upgrade",
+    "game": "vanguard"
+  },
+  {
+    "name": "Field Mic",
+    "type": "Field Upgrade",
+    "game": "vanguard"
+  },
+  {
+    "name": "Tactical Insertion",
+    "type": "Field Upgrade",
+    "game": "vanguard"
+  },
+  {
+    "name": "Dead Drop",
+    "type": "Field Upgrade",
+    "game": "vanguard"
+  },
+  {
+    "name": "Trophy System",
+    "type": "Field Upgrade",
+    "game": "vanguard"
+  }
 ]

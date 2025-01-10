@@ -1,0 +1,21 @@
+{
+  "optic": [
+    "Reflex",
+    "Recon",
+    "Holographic",
+    "Dual Zoom",
+    "Threat Detector",
+    "NVIR"
+  ],
+  "attachments": [
+    "Extended Mags I",
+    "Extended Mags II",
+    "FMJ I",
+    "FMJ II",
+    "Quickdraw",
+    "Stock"
+  ],
+  "mod": [
+    "Oppressor"
+  ]
+}

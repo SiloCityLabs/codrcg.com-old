@@ -6,13 +6,13 @@ import { Perk } from "@/types/Generator";
 export function getPerk(
   game: string = "all",
   value: string = ""
-): Perk | Perk[] {
+): Perk | Record<string, Perk> {
   const perks = getPerkList(game);
   const data = mergeObjectsWithRekey(
     perks.perk1List,
     perks.perk2List,
     perks.perk3List
-  ) as Perk[];
+  ) as Record<string, Perk>;
 
   return data;
 }

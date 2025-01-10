@@ -1,32 +1,32 @@
-{
-    "0": {
-      "name": "Tonfa",
-      "type": "melee",
-      "game": "modern-warfare-two",
-      "no_attach": true
-    },
-    "1": {
-      "name": "Combat Knife",
-      "type": "melee",
-      "game": "modern-warfare-two",
-      "no_attach": true
-    },
-    "2": {
-      "name": "Dual Kodachis",
-      "type": "melee",
-      "game": "modern-warfare-two",
-      "no_attach": true
-    },
-    "3": {
-      "name": "Dual Kamas",
-      "type": "melee",
-      "game": "modern-warfare-two",
-      "no_attach": true
-    },
-    "4": {
-      "name": "Pickaxe",
-      "type": "melee",
-      "game": "modern-warfare-two",
-      "no_attach": true
-    }
-}
+[
+  {
+    "name": "Tonfa",
+    "type": "melee",
+    "game": "modern-warfare-two",
+    "no_attach": true
+  },
+  {
+    "name": "Combat Knife",
+    "type": "melee",
+    "game": "modern-warfare-two",
+    "no_attach": true
+  },
+  {
+    "name": "Dual Kodachis",
+    "type": "melee",
+    "game": "modern-warfare-two",
+    "no_attach": true
+  },
+  {
+    "name": "Dual Kamas",
+    "type": "melee",
+    "game": "modern-warfare-two",
+    "no_attach": true
+  },
+  {
+    "name": "Pickaxe",
+    "type": "melee",
+    "game": "modern-warfare-two",
+    "no_attach": true
+  }
+]

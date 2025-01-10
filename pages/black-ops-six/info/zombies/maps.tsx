@@ -1,8 +1,11 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 //Components
 import Header from "@/components/Header";
-import ZombiesMapList from "@/components/info/ZombiesMapList";
+import InfoList from "@/components/info/InfoList";
+//Helpers
+import { getZombiesMaps } from "@/helpers/info/getZombiesMaps";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
@@ -14,6 +17,17 @@ export default function BlackOpsSixZombiesMaps() {
     { label: "Loadout Info", href: "/black-ops-six/info" },
     { label: "Changelog", href: "/changelog" },
   ];
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState({});
+  const dataKeys = ["name", "type", "game", "isDlc"];
+
+  useEffect(() => {
+    const dataList = getZombiesMaps("black-ops-six");
+    setData(dataList);
+
+    setIsLoading(false);
+  }, []);
 
   return (
     <>
@@ -40,7 +54,7 @@ export default function BlackOpsSixZombiesMaps() {
           <Col>
             <h2>Black Ops 6 - Zombies Maps</h2>
 
-            <ZombiesMapList game="black-ops-six" />
+            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>
         </Row>
       </Container>

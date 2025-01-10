@@ -1,37 +1,37 @@
-{
-  "0": {
+[
+  {
     "name": "Tracker",
     "type": "Perk 2",
     "game": "vanguard"
   },
-  "1": {
+  {
     "name": "Radar",
     "type": "Perk 2",
     "game": "vanguard"
   },
-  "2": {
+  {
     "name": "High Alert",
     "type": "Perk 2",
     "game": "vanguard"
   },
-  "3": {
+  {
     "name": "Engineer",
     "type": "Perk 2",
     "game": "vanguard"
   },
-  "4": {
+  {
     "name": "Forward Intel",
     "type": "Perk 2",
     "game": "vanguard"
   },
-  "5": {
+  {
     "name": "Piercing Vision",
     "type": "Perk 2",
     "game": "vanguard"
   },
-  "6": {
+  {
     "name": "Intuition",
     "type": "Perk 2",
     "game": "vanguard"
   }
-}
+]

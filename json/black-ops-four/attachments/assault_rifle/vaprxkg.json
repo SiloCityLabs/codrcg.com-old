@@ -1,0 +1,20 @@
+{
+  "optic": [
+    "Reflex",
+    "Recon",
+    "ELO",
+    "NVIR"
+  ],
+  "attachments": [
+    "Suppressor",
+    "Long Barrel",
+    "Stock I",
+    "Fast Mags",
+    "Rapid Fire",
+    "High Caliber",
+    "Stock II"
+  ],
+  "mod": [
+    "Bayonet"
+  ]
+}

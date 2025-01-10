@@ -1,8 +1,11 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 //Components
 import Header from "@/components/Header";
-import EquipmentList from "@/components/info/EquipmentList";
+import InfoList from "@/components/info/InfoList";
+//Helpers
+import { getEquipment } from "@/helpers/info/getEquipment";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
@@ -15,15 +18,23 @@ export default function BlackOpsSixEquipment() {
     { label: "Changelog", href: "/changelog" },
   ];
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState({});
+  const dataKeys = ["name", "type", "game", "isDlc"];
+
+  useEffect(() => {
+    const dataList = getEquipment("black-ops-six");
+    setData(dataList);
+
+    setIsLoading(false);
+  }, []);
+
   return (
     <>
       <Head>
         <title>Black Ops 6 Equipment</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="View all equipment in Black Ops 6."
-        />
+        <meta name="description" content="View all equipment in Black Ops 6." />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
@@ -40,7 +51,7 @@ export default function BlackOpsSixEquipment() {
           <Col>
             <h2>Black Ops 6 - Equipment</h2>
 
-            <EquipmentList game="black-ops-six" />
+            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>
         </Row>
       </Container>

@@ -1,0 +1,20 @@
+{
+  "optic": [
+    "Reflex",
+    "Holographic",
+    "Threat Detector",
+    "ELO"
+  ],
+  "attachments": [
+    "Stock I",
+    "Stock II",
+    "Fast Mags I",
+    "Fast Mags II",
+    "Quickdraw",
+    "Suppressor",
+    "Grip"
+  ],
+  "mod": [
+    "Dual Wield"
+  ]
+}

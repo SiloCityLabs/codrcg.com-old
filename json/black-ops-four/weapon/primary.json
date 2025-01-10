@@ -1,0 +1,148 @@
+[
+  {
+    "name": "ICR-7",
+    "type": "assault_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Rampart 17",
+    "type": "assault_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "KN-57",
+    "type": "assault_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Vapr-Xkg",
+    "type": "assault_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Maddox RFB",
+    "type": "assault_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Grav",
+    "type": "assault_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "MX9",
+    "type": "smg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "GKS",
+    "type": "smg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Spitfire",
+    "type": "smg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Cordite",
+    "type": "smg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Saug 9MM",
+    "type": "smg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Auger DMR",
+    "type": "tactical_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "ABR 223",
+    "type": "tactical_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Swordfish",
+    "type": "tactical_rifle",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Titan",
+    "type": "lmg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Hades",
+    "type": "lmg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "VKM 750",
+    "type": "lmg",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Paladin HB50",
+    "type": "sniper",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Outlaw",
+    "type": "sniper",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "SDM",
+    "type": "sniper",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Koshka",
+    "type": "sniper",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Peacekeeper",
+    "type": "assault_rifle",
+    "game": "black-ops-four",
+    "isDlc": true
+  },
+  {
+    "name": "Swat RFT",
+    "type": "assault_rifle",
+    "game": "black-ops-four",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "MP-40",
+    "type": "smg",
+    "game": "black-ops-four",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Daemon 3XB",
+    "type": "smg",
+    "game": "black-ops-four",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Essex Model 07",
+    "type": "tactical_rifle",
+    "game": "black-ops-four",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Zweihander",
+    "type": "lmg",
+    "game": "black-ops-four",
+    "isDlc": true,
+    "no_attach_info": true
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Strife",
+    "type": "pistol",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "RK 7 Garrison",
+    "type": "pistol",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Mozu",
+    "type": "pistol",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Kap 45 MKII",
+    "type": "pistol",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "MOG 12",
+    "type": "shotgun",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "SG12",
+    "type": "shotgun",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Hellion Salvo",
+    "type": "launcher",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Combat Knife",
+    "type": "melee",
+    "game": "black-ops-four",
+    "no_attach": true
+  },
+  {
+    "name": "Rampage",
+    "type": "shotgun",
+    "game": "black-ops-four",
+    "isDlc": true
+  }
+]

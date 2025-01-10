@@ -1,26 +1,26 @@
-{
-    "0": {
-      "name": "Overkill",
-      "type": "Wildcard",
-      "game": "warzone",
-      "description": "Equip any non-melee weapon in Primary and Secondary slots"
-    },
-    "1": {
-      "name": "Gunfighter",
-      "type": "Wildcard",
-      "game": "warzone",
-      "description": "Get 3 extra attachment points for your Primary weapon"
-    },
-    "2": {
-      "name": "Bandolier",
-      "type": "Wildcard",
-      "game": "warzone",
-      "description": "Your loadout provides a Munitions Satchel"
-    },
-    "3": {
-      "name": "Battle Ready",
-      "type": "Wildcard",
-      "game": "warzone",
-      "description": "Your loadout provides a UAV and Utility Box"
-    }
-}
+[
+  {
+    "name": "Overkill",
+    "type": "Wildcard",
+    "game": "warzone",
+    "description": "Equip any non-melee weapon in Primary and Secondary slots"
+  },
+  {
+    "name": "Gunfighter",
+    "type": "Wildcard",
+    "game": "warzone",
+    "description": "Get 3 extra attachment points for your Primary weapon"
+  },
+  {
+    "name": "Bandolier",
+    "type": "Wildcard",
+    "game": "warzone",
+    "description": "Your loadout provides a Munitions Satchel"
+  },
+  {
+    "name": "Battle Ready",
+    "type": "Wildcard",
+    "game": "warzone",
+    "description": "Your loadout provides a UAV and Utility Box"
+  }
+]

@@ -1,42 +1,42 @@
-{
-  "0": {
+[
+  {
     "name": "Double Time",
     "type": "Perk 3",
     "game": "vanguard"
   },
-  "1": {
+  {
     "name": "Survival Training",
     "type": "Perk 3",
     "game": "vanguard"
   },
-  "2": {
+  {
     "name": "Demolition",
     "type": "Perk 3",
     "game": "vanguard"
   },
-  "3": {
+  {
     "name": "Ninja",
     "type": "Perk 3",
     "game": "vanguard"
   },
-  "4": {
+  {
     "name": "Lightweight",
     "type": "Perk 3",
     "game": "vanguard"
   },
-  "5": {
+  {
     "name": "Tactician",
     "type": "Perk 3",
     "game": "vanguard"
   },
-  "6": {
+  {
     "name": "Scavenger",
     "type": "Perk 3",
     "game": "vanguard"
   },
-  "7": {
+  {
     "name": "Mechanic",
     "type": "Perk 3",
     "game": "vanguard"
   }
-}
+]

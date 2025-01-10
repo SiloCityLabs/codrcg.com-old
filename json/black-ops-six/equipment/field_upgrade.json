@@ -1,57 +1,57 @@
-{
-    "0": {
-      "name": "Assault Pack",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "1": {
-      "name": "Spring Mine",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "2": {
-      "name": "Trophy System",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "3": {
-      "name": "Scrambler",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "4": {
-      "name": "Signal Lure",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "5": {
-      "name": "War Cry",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "6": {
-      "name": "Tactical Insertion",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "7": {
-      "name": "Acoustic Amp",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "8": {
-      "name": "Morphine Injector",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "9": {
-      "name": "Neurogas",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    },
-    "10": {
-      "name": "Sleeper Agent",
-      "type": "Field Upgrade",
-      "game": "black-ops-six"
-    }
+[
+  {
+    "name": "Assault Pack",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Spring Mine",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Trophy System",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Scrambler",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Signal Lure",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "War Cry",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Tactical Insertion",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Acoustic Amp",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Morphine Injector",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Neurogas",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Sleeper Agent",
+    "type": "Field Upgrade",
+    "game": "black-ops-six"
   }
+]

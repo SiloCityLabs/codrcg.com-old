@@ -1,52 +1,52 @@
-{
-    "0": {
-      "name": "Claymore",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "1": {
-      "name": "Throwing Knife",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "2": {
-      "name": "Thermite",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "3": {
-      "name": "Proximity Mine",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "4": {
-      "name": "Drill Charge",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "5": {
-      "name": "Sticky Grenade",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "6": {
-      "name": "C4",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "7": {
-      "name": "Molotov Cocktail",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "8": {
-      "name": "Breacher Drone",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    },
-    "9": {
-      "name": "Frag Grenade",
-      "type": "Lethal",
-      "game": "modern-warfare-three"
-    }
+[
+  {
+    "name": "Claymore",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Throwing Knife",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Thermite",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Proximity Mine",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Drill Charge",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Sticky Grenade",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "C4",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Molotov Cocktail",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Breacher Drone",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Frag Grenade",
+    "type": "Lethal",
+    "game": "modern-warfare-three"
   }
+]

@@ -8,12 +8,12 @@ import { Weapon } from "@/types/Generator";
 export function getWeapon(
   game: string = "all",
   value: string = ""
-): Weapon | Weapon[] {
+): Weapon | Record<string, Weapon> {
   const data = mergeObjectsWithRekey(
     getPrimaryList(game),
     getSecondaryList(game),
     getMeleeList(game)
-  ) as Weapon[];
+  ) as Record<string, Weapon>;
 
   return data;
 }

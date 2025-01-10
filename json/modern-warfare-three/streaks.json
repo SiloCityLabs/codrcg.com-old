@@ -1,170 +1,170 @@
-{
-    "0": {
-      "name": "UAV",
-      "type": "Streak",
-      "score": 500,
-      "game": "modern-warfare-three"
-    },
-    "1": {
-      "name": "Mosquito Drone",
-      "type": "Streak",
-      "score": 500,
-      "game": "modern-warfare-three"
-    },
-    "2": {
-      "name": "SAM Turret",
-      "type": "Streak",
-      "score": 500,
-      "game": "modern-warfare-three"
-    },
-    "3": {
-      "name": "Bomb Drone",
-      "type": "Streak",
-      "score": 500,
-      "game": "modern-warfare-three"
-    },
-    "4": {
-      "name": "Care Package",
-      "type": "Streak",
-      "score": 625,
-      "game": "modern-warfare-three"
-    },
-    "5": {
-      "name": "Guardian-SC",
-      "type": "Streak",
-      "score": 625,
-      "game": "modern-warfare-three"
-    },
-    "6": {
-      "name": "Counter UAV",
-      "type": "Streak",
-      "score": 625,
-      "game": "modern-warfare-three"
-    },
-    "7": {
-      "name": "Precision Airstrike",
-      "type": "Streak",
-      "score": 750,
-      "game": "modern-warfare-three"
-    },
-    "8": {
-      "name": "Cruise Missle",
-      "type": "Streak",
-      "score": 750,
-      "game": "modern-warfare-three"
-    },
-    "9": {
-      "name": "Cluster Mine",
-      "type": "Streak",
-      "score": 750,
-      "game": "modern-warfare-three"
-    },
-    "10": {
-      "name": "I.M.S.",
-      "type": "Streak",
-      "score": 875,
-      "game": "modern-warfare-three"
-    },
-    "11": {
-      "name": "SAE",
-      "type": "Streak",
-      "score": 875,
-      "game": "modern-warfare-three"
-    },
-    "12": {
-      "name": "Mortar Strike",
-      "type": "Streak",
-      "score": 875,
-      "game": "modern-warfare-three"
-    },
-    "13": {
-      "name": "Remote Turrent",
-      "type": "Streak",
-      "score": 1000,
-      "game": "modern-warfare-three"
-    },
-    "14": {
-      "name": "Loitering Munition",
-      "type": "Streak",
-      "score": 1000,
-      "game": "modern-warfare-three"
-    },
-    "15": {
-      "name": "Juggernaut Recon",
-      "type": "Streak",
-      "score": 1000,
-      "game": "modern-warfare-three"
-    },
-    "16": {
-      "name": "Carpet Bomb",
-      "type": "Streak",
-      "score": 1000,
-      "game": "modern-warfare-three"
-    },
-    "17": {
-      "name": "Overwatch Helo",
-      "type": "Streak",
-      "score": 1125,
-      "game": "modern-warfare-three"
-    },
-    "18": {
-      "name": "Emergency Airdrop",
-      "type": "Streak",
-      "score": 1125,
-      "game": "modern-warfare-three"
-    },
-    "19": {
-      "name": "Wheelson-HS",
-      "type": "Streak",
-      "score": 1125,
-      "game": "modern-warfare-three"
-    },
-    "20": {
-      "name": "Missile Drone",
-      "type": "Streak",
-      "score": 1375,
-      "game": "modern-warfare-three"
-    },
-    "21": {
-      "name": "VTOL Jet",
-      "type": "Streak",
-      "score": 1375,
-      "game": "modern-warfare-three"
-    },
-    "22": {
-      "name": "EMP",
-      "type": "Streak",
-      "score": 1500,
-      "game": "modern-warfare-three"
-    },
-    "23": {
-      "name": "Advanced UAV",
-      "type": "Streak",
-      "score": 1500,
-      "game": "modern-warfare-three"
-    },
-    "24": {
-      "name": "Gunship",
-      "type": "Streak",
-      "score": 1625,
-      "game": "modern-warfare-three"
-    },
-    "25": {
-      "name": "Chopper Gunner",
-      "type": "Streak",
-      "score": 1625,
-      "game": "modern-warfare-three"
-    },
-    "26": {
-      "name": "Swarm",
-      "type": "Streak",
-      "score": 1875,
-      "game": "modern-warfare-three"
-    },
-    "27": {
-      "name": "Juggernaut",
-      "type": "Streak",
-      "score": 1875,
-      "game": "modern-warfare-three"
-    }
-}
+[
+  {
+    "name": "UAV",
+    "type": "Streak",
+    "score": 500,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Mosquito Drone",
+    "type": "Streak",
+    "score": 500,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "SAM Turret",
+    "type": "Streak",
+    "score": 500,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Bomb Drone",
+    "type": "Streak",
+    "score": 500,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Care Package",
+    "type": "Streak",
+    "score": 625,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Guardian-SC",
+    "type": "Streak",
+    "score": 625,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Counter UAV",
+    "type": "Streak",
+    "score": 625,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Precision Airstrike",
+    "type": "Streak",
+    "score": 750,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Cruise Missle",
+    "type": "Streak",
+    "score": 750,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Cluster Mine",
+    "type": "Streak",
+    "score": 750,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "I.M.S.",
+    "type": "Streak",
+    "score": 875,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "SAE",
+    "type": "Streak",
+    "score": 875,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Mortar Strike",
+    "type": "Streak",
+    "score": 875,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Remote Turrent",
+    "type": "Streak",
+    "score": 1000,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Loitering Munition",
+    "type": "Streak",
+    "score": 1000,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Juggernaut Recon",
+    "type": "Streak",
+    "score": 1000,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Carpet Bomb",
+    "type": "Streak",
+    "score": 1000,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Overwatch Helo",
+    "type": "Streak",
+    "score": 1125,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Emergency Airdrop",
+    "type": "Streak",
+    "score": 1125,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Wheelson-HS",
+    "type": "Streak",
+    "score": 1125,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Missile Drone",
+    "type": "Streak",
+    "score": 1375,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "VTOL Jet",
+    "type": "Streak",
+    "score": 1375,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "EMP",
+    "type": "Streak",
+    "score": 1500,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Advanced UAV",
+    "type": "Streak",
+    "score": 1500,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Gunship",
+    "type": "Streak",
+    "score": 1625,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Chopper Gunner",
+    "type": "Streak",
+    "score": 1625,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Swarm",
+    "type": "Streak",
+    "score": 1875,
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Juggernaut",
+    "type": "Streak",
+    "score": 1875,
+    "game": "modern-warfare-three"
+  }
+]

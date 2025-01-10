@@ -7,7 +7,6 @@ export function getPiece(): string {
     "perk1",
     "perk2",
     "perk3",
-    // "tactician",
   ];
 
   return pieces[Math.floor(Math.random() * pieces.length)];

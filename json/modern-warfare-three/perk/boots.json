@@ -1,37 +1,37 @@
-{
-    "0": {
-      "name": "All-Terrain Boots",
-      "type": "Boots",
-      "game": "modern-warfare-three"
-    },
-    "1": {
-      "name": "Running Sneakers",
-      "type": "Boots",
-      "game": "modern-warfare-three"
-    },
-    "2": {
-      "name": "Tactical Pads",
-      "type": "Boots",
-      "game": "modern-warfare-three"
-    },
-    "3": {
-      "name": "Stalker Boots",
-      "type": "Boots",
-      "game": "modern-warfare-three"
-    },
-    "4": {
-      "name": "Covert Sneakers",
-      "type": "Boots",
-      "game": "modern-warfare-three"
-    },
-    "5": {
-      "name": "Reinforced Boots",
-      "type": "Boots",
-      "game": "modern-warfare-three"
-    },
-    "6": {
-      "name": "Lightweight Boots",
-      "type": "Boots",
-      "game": "modern-warfare-three"
-    }
-}
+[
+  {
+    "name": "All-Terrain Boots",
+    "type": "Boots",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Running Sneakers",
+    "type": "Boots",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Tactical Pads",
+    "type": "Boots",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Stalker Boots",
+    "type": "Boots",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Covert Sneakers",
+    "type": "Boots",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Reinforced Boots",
+    "type": "Boots",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Lightweight Boots",
+    "type": "Boots",
+    "game": "modern-warfare-three"
+  }
+]

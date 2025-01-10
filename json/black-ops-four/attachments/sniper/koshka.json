@@ -1,0 +1,21 @@
+{
+  "optic": [
+    "Recon",
+    "Iron Sights",
+    "ELO",
+    "NVIR"
+  ],
+  "attachments": [
+    "Quickdraw I",
+    "Quickdraw II",
+    "Laser Sight I",
+    "Laser Sight II",
+    "Fast Mags",
+    "Stock",
+    "FMJ",
+    "High Caliber"
+  ],
+  "mod": [
+    "Strelok"
+  ]
+}

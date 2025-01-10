@@ -1,8 +1,11 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 //Components
 import Header from "@/components/Header";
-import ZombiesAmmoModList from "@/components/info/ZombiesAmmoModList";
+import InfoList from "@/components/info/InfoList";
+//Helpers
+import { getZombiesAmmoMods } from "@/helpers/info/getZombiesAmmoMods";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
@@ -15,6 +18,17 @@ export default function BlackOpsSixZombiesAmmoMods() {
     { label: "Changelog", href: "/changelog" },
   ];
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState({});
+  const dataKeys = ["name", "type", "game", "isDlc"];
+
+  useEffect(() => {
+    const dataList = getZombiesAmmoMods("black-ops-six");
+    setData(dataList);
+
+    setIsLoading(false);
+  }, []);
+
   return (
     <>
       <Head>
@@ -22,7 +36,7 @@ export default function BlackOpsSixZombiesAmmoMods() {
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="View all zombies maps in Black Ops 6."
+          content="View all zombies ammo mods in Black Ops 6."
         />
         <meta
           name="keywords"
@@ -40,7 +54,7 @@ export default function BlackOpsSixZombiesAmmoMods() {
           <Col>
             <h2>Black Ops 6 - Zombies Ammo Mods</h2>
 
-            <ZombiesAmmoModList game="black-ops-six" />
+            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>
         </Row>
       </Container>

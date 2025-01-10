@@ -1,8 +1,32 @@
 [
-  "NO 69 Stun Grenade",
-  "Smoke Grenade",
-  "Stim",
-  "MK V Gas",
-  "S-Mine 44",
-  "Decoy Grenade"
+  {
+    "name": "NO 69 Stun Grenade",
+    "type": "Tactical",
+    "game": "vanguard"
+  },
+  {
+    "name": "Smoke Grenade",
+    "type": "Tactical",
+    "game": "vanguard"
+  },
+  {
+    "name": "Stim",
+    "type": "Tactical",
+    "game": "vanguard"
+  },
+  {
+    "name": "MK V Gas",
+    "type": "Tactical",
+    "game": "vanguard"
+  },
+  {
+    "name": "S-Mine 44",
+    "type": "Tactical",
+    "game": "vanguard"
+  },
+  {
+    "name": "Decoy Grenade",
+    "type": "Tactical",
+    "game": "vanguard"
+  }
 ]

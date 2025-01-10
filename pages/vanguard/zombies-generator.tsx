@@ -9,6 +9,7 @@ export default function VanguardZombies() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/vanguard/generator" },
+    { label: "Loadout Info", href: "/vanguard/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 

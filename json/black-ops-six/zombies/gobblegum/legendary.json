@@ -1,37 +1,37 @@
-{
-    "0": {
-      "name": "Idle Eyes",
-      "type": "Legendary",
-      "game": "black-ops-six"
-    },
-    "1": {
-      "name": "Wall Power",
-      "type": "Legendary",
-      "game": "black-ops-six"
-    },
-    "2": {
-      "name": "Phoenix Up",
-      "type": "Legendary",
-      "game": "black-ops-six"
-    },
-    "3": {
-      "name": "Crate Power",
-      "type": "Legendary",
-      "game": "black-ops-six"
-    },
-    "4": {
-      "name": "On The House",
-      "type": "Legendary",
-      "game": "black-ops-six"
-    },
-    "5": {
-      "name": "Wall to Wall Clearance",
-      "type": "Legendary",
-      "game": "black-ops-six"
-    },
-    "6": {
-      "name": "Immolation Liquidation",
-      "type": "Legendary",
-      "game": "black-ops-six"
-    }
+[
+  {
+    "name": "Idle Eyes",
+    "type": "Legendary",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Wall Power",
+    "type": "Legendary",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Phoenix Up",
+    "type": "Legendary",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Crate Power",
+    "type": "Legendary",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "On The House",
+    "type": "Legendary",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Wall to Wall Clearance",
+    "type": "Legendary",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Immolation Liquidation",
+    "type": "Legendary",
+    "game": "black-ops-six"
   }
+]

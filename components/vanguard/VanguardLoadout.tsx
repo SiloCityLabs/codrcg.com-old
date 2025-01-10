@@ -27,9 +27,9 @@ function VanguardLoadout() {
       },
     },
     equipment: {
-      tactical: "",
-      lethal: "",
-      field_upgrade: "",
+      tactical: { name: "", type: "" },
+      lethal: { name: "", type: "" },
+      field_upgrade: { name: "", type: "" },
     },
   });
 
@@ -100,11 +100,11 @@ function VanguardLoadout() {
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">{equipment.tactical}</span>
+            <span className="text-muted fs-6">{equipment.tactical.name}</span>
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{equipment.lethal}</span>
+            <span className="text-muted fs-6">{equipment.lethal.name}</span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Perks:</span> <br />
@@ -115,7 +115,9 @@ function VanguardLoadout() {
         <Row className="mb-5">
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">{equipment.field_upgrade}</span>
+            <span className="text-muted fs-6">
+              {equipment.field_upgrade.name}
+            </span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Streaks:</span> <br />

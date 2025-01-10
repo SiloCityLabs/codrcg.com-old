@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Lightweight",
+    "description": "Move faster while sprinting and take no damage when falling.",
+    "type": "Perk 2",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Skulker",
+    "description": "Move faster while crouched and prone.",
+    "type": "Perk 2",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Cold Blooded",
+    "description": "AI Scorestreaks and Hawk tagging will be delayed when targeting you. Player-controlled scorestreaks will not highlight you with a target reticle. Immune to Thermal. K-9 unit and seeker have reduced detection range against you.",
+    "type": "Perk 2",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Gun-Ho",
+    "description": "Fire your weapon and use equipment while sprinting, recover from sprint faster. Move at full speed when reloading.",
+    "type": "Perk 2",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Dexterity",
+    "description": "Mantle, cimb, slide, and swap weapons faster. Increased weapon accuracy when jumping or mantling.",
+    "type": "Perk 2",
+    "game": "black-ops-four"
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Overkill",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Replace secondary with any primary not in use."
+  },
+  {
+    "name": "Primary Gunfighter 1",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Unlocks 1 additional attachment slot for your primary weapon."
+  },
+  {
+    "name": "Primary Gunfighter 2",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Unlocks 1 additional attachment slot for your primary weapon."
+  },
+  {
+    "name": "Primary Gunfighter 3",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Unlocks 1 additional attachment slot for your primary weapon."
+  },
+  {
+    "name": "Primary Operator Mod",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Unlocks the Operator Mod slot for your primary weapon."
+  },
+  {
+    "name": "Underkill",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Replace primary with any secondary not in use."
+  },
+  {
+    "name": "Secondary Gunfighter 1",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Unlocks 1 additional attachment slot for your secondary weapon."
+  },
+  {
+    "name": "Secondary Gunfighter 2",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Unlocks 1 additional attachment slot for your secondary weapon."
+  },
+  {
+    "name": "Secondary Gunfighter 3",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Unlocks 1 additional attachment slot for your secondary weapon."
+  },
+  {
+    "name": "Secondary Operator Mod",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Unlocks the Operator Mod slot for your secondary weapon."
+  },
+  {
+    "name": "Perk 1 Gluttony",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Use all three perk slots to select perks from Perk 1."
+  },
+  {
+    "name": "Perk 2 Gluttony",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Use all three perk slots to select perks from Perk 2."
+  },
+  {
+    "name": "Perk 3 Gluttony",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Use all three perk slots to select perks from Perk 3."
+  },
+  {
+    "name": "Perk 1 Greed",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Take a second Perk 1."
+  },
+  {
+    "name": "Perk 2 Greed",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Take a second Perk 2."
+  },
+  {
+    "name": "Perk 3 Greed",
+    "type": "Wildcard",
+    "game": "black-ops-four",
+    "description": "Take a second Perk 3."
+  }
+]

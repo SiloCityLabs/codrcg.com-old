@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Ghost",
+        "description": "Undetectable by enemy UAVs while moving, planting or defusing bombs, or controlling scorestreaks.",
+        "type": "Perk 3",
+        "game": "black-ops-four"
+    },
+    {
+        "name": "Team Link",
+        "description": "See friendly teammates through walls and reveal a Fog of War circle around you and your teammates.",
+        "type": "Perk 3",
+        "game": "black-ops-four"
+    },
+    {
+        "name": "Dead Silence",
+        "description": "Move quietly and resist detection from Acoustic Sensor.",
+        "type": "Perk 3",
+        "game": "black-ops-four"
+    },
+    {
+        "name": "Tracker",
+        "description": "See digital imprint of enemy footsteps and recieve an alert on your HUD when revealed in the enemy Fog of War.",
+        "type": "Perk 3",
+        "game": "black-ops-four"
+    }
+]

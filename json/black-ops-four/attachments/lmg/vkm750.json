@@ -1,0 +1,21 @@
+{
+  "optic": [
+    "Reflex",
+    "Recon",
+    "Holographic",
+    "Dual Zoom",
+    "NVIR"
+  ],
+  "attachments": [
+    "High Caliber I",
+    "High Caliber II",
+    "Grip",
+    "Quickdraw",
+    "Extended Mags",
+    "Rapid Fire",
+    "Fast Mags"
+  ],
+  "mods": [
+    "Fat Barrel"
+  ]
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Table, Form, FormControl } from "react-bootstrap";
 //Types
-import { InfoListProps } from "@/types/Info";
+import { InfoListProps, InfoData } from "@/types/Info";
 
 function InfoList({ game = "", data, dataKeys }: InfoListProps) {
   const [filteredData, setFilteredData] = useState(data);
@@ -12,7 +12,11 @@ function InfoList({ game = "", data, dataKeys }: InfoListProps) {
       data[key].name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    const filteredObjects = results.map((key) => data[key]);
+    const filteredObjects = results.reduce((obj, key) => {
+      obj[key] = data[key];
+      return obj;
+    }, {} as Record<string, InfoData>);
+
     setFilteredData(filteredObjects);
   }, [searchTerm, data]);
 

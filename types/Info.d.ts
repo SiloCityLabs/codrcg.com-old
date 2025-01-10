@@ -4,7 +4,7 @@ export interface InfoListProps {
   dataKeys: Array<string>;
 }
 
-type InfoData = {
+export type InfoData = {
   name: string;
   type: string;
   game: string;

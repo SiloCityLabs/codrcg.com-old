@@ -46,7 +46,7 @@ function BlackOpsFourLoadout() {
       equipment: "",
     },
     wildcards: "",
-    specialist: "",
+    specialist: { name: "", weapon: "", equipment: "" },
   });
 
   useEffect(() => {
@@ -139,7 +139,9 @@ function BlackOpsFourLoadout() {
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Equipment:</span> <br />
             <span className="text-muted fs-6">
-              {equipment.equipment ? equipment.equipment : "None"}
+              {equipment.equipment
+                ? equipment.equipment
+                : `Special Issue (${specialist?.equipment})`}
             </span>
           </Col>
         </Row>
@@ -187,7 +189,9 @@ function BlackOpsFourLoadout() {
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Specialist:</span> <br />
             <span className="text-muted fs-6">
-              {specialist ? specialist : "None"}
+              {specialist
+                ? `${specialist?.name} - ${specialist?.weapon}`
+                : "None"}
             </span>
           </Col>
           <Col sm className="text-center">

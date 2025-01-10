@@ -28,6 +28,8 @@ export function getLoadoutFrame(): LoadoutFrame {
   let maxCount = 0;
 
   while (points > 0 && maxCount < 50) {
+    //Stop infinite loops
+    maxCount++;
     const piece = getPiece();
 
     if (piece === "tactical") {
@@ -87,9 +89,6 @@ export function getLoadoutFrame(): LoadoutFrame {
         }
       }
     }
-
-    //Stop infinite loops
-    maxCount++;
   }
 
   if (maxCount > 50) {

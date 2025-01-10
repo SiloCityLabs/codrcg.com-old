@@ -28,10 +28,9 @@ export function getLoadoutFrame(): LoadoutFrame {
   let maxCount = 0;
 
   while (points > 0 && maxCount < 50) {
+    //Stop infinite loops
+    maxCount++;
     const piece = getPiece();
-    console.log("getLoadoutFrame piece: ", piece);
-    console.log("getLoadoutFrame points: ", points);
-    console.log("getLoadoutFrame frame: ", frame);
 
     if (piece === "gear") {
       if (frame[piece] < 2) {
@@ -87,9 +86,6 @@ export function getLoadoutFrame(): LoadoutFrame {
         }
       }
     }
-
-    //Stop infinite loops
-    maxCount++;
   }
 
   if (maxCount > 50) {

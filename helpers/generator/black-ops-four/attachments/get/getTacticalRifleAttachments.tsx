@@ -1,16 +1,16 @@
-import mog12 from "@/json/black-ops-four/attachments/shotgun/mog12.json";
-import rampage from "@/json/black-ops-four/attachments/shotgun/rampage.json";
-import sg12 from "@/json/black-ops-four/attachments/shotgun/sg12.json";
+import abr223 from "@/json/black-ops-four/attachments/tactical_rifle/abr223.json";
+import augerdmr from "@/json/black-ops-four/attachments/tactical_rifle/augerdmr.json";
+import swordfish from "@/json/black-ops-four/attachments/tactical_rifle/swordfish.json";
 //Helpers
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {
-  mog12,
-  rampage,
-  sg12,
+  abr223,
+  augerdmr,
+  swordfish,
 };
 
-export function getShotgunAttachments(
+export function getTacticalRifleAttachments(
   type: string,
   gun: string,
   count: number

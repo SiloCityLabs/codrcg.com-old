@@ -1,6 +1,14 @@
+import hades from "@/json/black-ops-four/attachments/lmg/hades.json";
+import titan from "@/json/black-ops-four/attachments/lmg/titan.json";
+import vkm750 from "@/json/black-ops-four/attachments/lmg/vkm750.json";
+//Helpers
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
-const attachmentsList: Record<string, any> = {};
+const attachmentsList: Record<string, any> = {
+  hades,
+  titan,
+  vkm750,
+};
 
 export function getLmgAttachments(
   type: string,
@@ -9,9 +17,10 @@ export function getLmgAttachments(
 ): any {
   const attachments: any = [];
   const data = attachmentsList[gun];
+  const dataList = data[type];
 
   if (data) {
-    randomizeAttachments(attachments, data, count);
+    randomizeAttachments(attachments, dataList, count);
   }
 
   return attachments;

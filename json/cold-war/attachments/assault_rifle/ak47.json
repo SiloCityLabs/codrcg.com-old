@@ -1,0 +1,72 @@
+{
+    "optic": [
+        "Millstop Reflex",
+        "Visiontech 2x",
+        "Kobra Red Dot",
+        "Quickdot LED",
+        "Axial Arms 3X",
+        "Sillix Holoscout",
+        "Microflex LED",
+        "Hawksmoor",
+        "Royal & Kross 4X",
+        "Susat Multizoom",
+        "Diamondback Reflex",
+        "Noch Sova Thermal"
+    ],
+    "muzzle": [
+        "Muzzle Brake 7.62",
+        "Flash Guard 7.62",
+        "Suppressor",
+        "Spetsnaz Compensator",
+        "KGB Eliminator",
+        "GRU Suppressor"
+    ],
+    "barrel": [
+        "15.5\" Ultralight",
+        "16.5\" Cavalry Lancer",
+        "18.2\" VDV Reinforced",
+        "20\" Liberator",
+        "18.2\" Takedown",
+        "20\" Spetsnaz RPK Barrel"
+    ],
+    "body": [
+        "Steady Aim Laser",
+        "Mounted Flashlight",
+        "KGB Target Designator",
+        "GRU 5mw Laser Sight",
+        "Tiger Team Spotlight",
+        "Ember Sighting Point"
+    ],
+    "underbarrel": [
+        "Foregrip",
+        "Infiltrator Grip",
+        "Patrol Grip",
+        "Bruiser Grip",
+        "Spetsnaz Grip",
+        "Spetsnaz Speedgrip"
+    ],
+    "magazine": [
+        "40 Rnd",
+        "Taped Mag",
+        "40 Rnd Speed Mag",
+        "Bakelite 50 Rnd",
+        "GRU Mag Clamp",
+        "VDV 50 Rnd Fast Mag"
+    ],
+    "handle": [
+        "Speed Tape",
+        "Dropshot Wrap",
+        "Field Tape",
+        "Spetsnaz Field Grip",
+        "Serpent Wrap",
+        "GRU Elastic Wrap"
+    ],
+    "stock": [
+        "Tactical Stock",
+        "Wire Stock",
+        "Duster Stock",
+        "Buffer Tube",
+        "Spetsnaz Pkm Stock",
+        "KGB Skeletal Stock"
+    ]
+}

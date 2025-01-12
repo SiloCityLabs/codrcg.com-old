@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Proximity Mine",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  },
+  {
+    "name": "Field Mic",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  },
+  {
+    "name": "Trophy System",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  },
+  {
+    "name": "Assault Pack",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  },
+  {
+    "name": "Sam Turret",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  },
+  {
+    "name": "Jammer",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  },
+  {
+    "name": "Gas Mine",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  }
+]

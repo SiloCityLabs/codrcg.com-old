@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Engineer",
+    "type": "Perk 1",
+    "game": "cold-war"
+  },
+  {
+    "name": "Paranoia",
+    "type": "Perk 1",
+    "game": "cold-war"
+  },
+  {
+    "name": "Flak Jacket",
+    "type": "Perk 1",
+    "game": "cold-war"
+  },
+  {
+    "name": "Tactical Mask",
+    "type": "Perk 1",
+    "game": "cold-war"
+  },
+  {
+    "name": "Forward Intel",
+    "type": "Perk 1",
+    "game": "cold-war"
+  }
+]

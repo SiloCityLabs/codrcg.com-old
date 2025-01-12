@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Assassin",
+    "type": "Perk 2",
+    "game": "cold-war"
+  },
+  {
+    "name": "Hearhead",
+    "type": "Perk 2",
+    "game": "cold-war"
+  },
+  {
+    "name": "Scavenger",
+    "type": "Perk 2",
+    "game": "cold-war"
+  },
+  {
+    "name": "Quartermaster",
+    "type": "Perk 2",
+    "game": "cold-war"
+  },
+  {
+    "name": "Tracker",
+    "type": "Perk 2",
+    "game": "cold-war"
+  }
+]

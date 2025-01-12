@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Frost Blast",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  },
+  {
+    "name": "Energy Mine",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  },
+  {
+    "name": "Aether Shroud",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  },
+  {
+    "name": "Healing Aura",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  },
+  {
+    "name": "Ring Of Fire",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  },
+  {
+    "name": "Frenzied Guard",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  },
+  {
+    "name": "Toxic Growth",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  },
+  {
+    "name": "Tesla Storm",
+    "type": "Field Upgrade",
+    "game": "cold-war"
+  }
+]

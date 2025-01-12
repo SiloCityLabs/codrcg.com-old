@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Combat Bow",
+    "type": "Streak",
+    "score": 500,
+    "game": "cold-war"
+  },
+  {
+    "name": "RC-XD",
+    "type": "Streak",
+    "score": 800,
+    "game": "cold-war"
+  },
+  {
+    "name": "Spy Plane",
+    "type": "Streak",
+    "score": 1000,
+    "game": "cold-war"
+  },
+  {
+    "name": "Counter Spy Plane",
+    "type": "Streak",
+    "score": 1400,
+    "game": "cold-war"
+  },
+  {
+    "name": "Flamethrower",
+    "type": "Streak",
+    "score": 1500,
+    "game": "cold-war"
+  },
+  {
+    "name": "Armor",
+    "type": "Streak",
+    "score": 1600,
+    "game": "cold-war"
+  },
+  {
+    "name": "Sentry Turret",
+    "type": "Streak",
+    "score": 1800,
+    "game": "cold-war"
+  },
+  {
+    "name": "Care Package",
+    "type": "Streak",
+    "score": 2000,
+    "game": "cold-war"
+  },
+  {
+    "name": "Death Machine",
+    "type": "Streak",
+    "score": 2200,
+    "game": "cold-war"
+  },
+  {
+    "name": "Air Patrol",
+    "type": "Streak",
+    "score": 2400,
+    "game": "cold-war"
+  },
+  {
+    "name": "Napalm Strike",
+    "type": "Streak",
+    "score": 2500,
+    "game": "cold-war"
+  },
+  {
+    "name": "Hand Cannon",
+    "type": "Streak",
+    "score": 2800,
+    "game": "cold-war"
+  },
+  {
+    "name": "Artillery",
+    "type": "Streak",
+    "score": 3000,
+    "game": "cold-war"
+  },
+  {
+    "name": "Cruise Missile",
+    "type": "Streak",
+    "score": 3500,
+    "game": "cold-war"
+  },
+  {
+    "name": "Attack Helicopter",
+    "type": "Streak",
+    "score": 3800,
+    "game": "cold-war"
+  },
+  {
+    "name": "War Machine",
+    "type": "Streak",
+    "score":4000,
+    "game": "cold-war"
+  },
+  {
+    "name": "Strafe Run",
+    "type": "Streak",
+    "score": 5000,
+    "game": "cold-war"
+  },
+  {
+    "name": "H.A.R.P.",
+    "type": "Streak",
+    "score": 6000,
+    "game": "cold-war"
+  },
+  {
+    "name": "VTOL Escort",
+    "type": "Streak",
+    "score": 6200,
+    "game": "cold-war"
+  },
+  {
+    "name": "Chopper Gunner",
+    "type": "Streak",
+    "score": 8000,
+    "game": "cold-war"
+  },
+  {
+    "name": "Gunship",
+    "type": "Streak",
+    "score": 10000,
+    "game": "cold-war"
+  }
+]

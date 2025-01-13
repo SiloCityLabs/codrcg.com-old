@@ -132,21 +132,25 @@
   {
     "name": "M79",
     "type": "special",
-    "game": "cold-war"
+    "game": "cold-war",
+    "no_attach": true
   },
   {
     "name": "R1 Shadowhunter",
     "type": "special",
-    "game": "cold-war"
+    "game": "cold-war",
+    "no_attach_info": true
   },
   {
     "name": "Ballistic Knife",
     "type": "special",
-    "game": "cold-war"
+    "game": "cold-war",
+    "no_attach": true
   },
   {
     "name": "Nail Gun",
     "type": "special",
-    "game": "cold-war"
+    "game": "cold-war",
+    "no_attach_info": true
   }
 ]

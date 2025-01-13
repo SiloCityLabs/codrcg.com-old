@@ -37,7 +37,8 @@
   {
     "name": "Streetsweeper",
     "type": "shotgun",
-    "game": "cold-war"
+    "game": "cold-war",
+    "no_attach_info": true
   },
   {
     "name": ".410 Ironhide",

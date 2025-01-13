@@ -137,7 +137,8 @@
   {
     "name": "Carv.2",
     "type": "tactical_rifle",
-    "game": "cold-war"
+    "game": "cold-war",
+    "no_attach_info": true
   },
   {
     "name": "Pelington 703",

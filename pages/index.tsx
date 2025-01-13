@@ -118,15 +118,12 @@ export default function Home() {
             </Col>
             <Col xl={3} lg={4} md={6} className="text-center mb-4">
               <GeneratorCard
-                title="Black Ops IV"
+                title="Infinite Warfare"
                 text="Coming in 2025"
-                variant="black-ops"
-                btn1Text="Multiplayer Generator"
-                link="black-ops-four/generator"
-                disabled={false}
-                btn2Text="Zombies Generator"
-                link2="black-ops-four/zombies-generator"
-                disabled2={true}
+                variant="infinite-warfare"
+                btn1Text="Generator"
+                link="infinite-warfare/generator"
+                disabled={true}
               />
             </Col>
             <Col xl={3} lg={4} md={6} className="text-center mb-4">

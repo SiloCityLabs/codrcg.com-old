@@ -158,7 +158,8 @@
   {
     "name": "ZRG 20mm",
     "type": "sniper",
-    "game": "cold-war"
+    "game": "cold-war",
+    "no_attach_info": true
   },
   {
     "name": "Swiss K31",

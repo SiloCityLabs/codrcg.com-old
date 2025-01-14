@@ -364,8 +364,8 @@ async function fetchLoadoutData(setData, setContainerClass) {
     }
 
     let equipment = {
-      gear: loadoutFrame.gear > 0 ? fetchEquipment("tactical", game) : "",
-      equipment: loadoutFrame.equipment ? fetchEquipment("lethal", game) : "",
+      gear: loadoutFrame.gear > 0 ? fetchEquipment("tactical", game).name : "",
+      equipment: loadoutFrame.equipment ? fetchEquipment("lethal", game).name : "",
     };
 
     //Check for x2 gear

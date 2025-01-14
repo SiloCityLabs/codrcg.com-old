@@ -6,7 +6,7 @@ import Changelog2024 from "@/components/changelog/Changelog2024";
 import Changelog2025 from "@/components/changelog/Changelog2025";
 
 export default function Changelog() {
-  const [key, setKey] = useState<string>("2024");
+  const [key, setKey] = useState<string>("2025");
 
   return (
     <>

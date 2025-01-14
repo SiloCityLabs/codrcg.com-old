@@ -1,10 +1,14 @@
 import { Row, Col } from "react-bootstrap";
 
-function Changelog2024() {
+function Changelog2025() {
   return (
     <>
       <Row>
         <Col>
+          <p>
+            01/15/2025:{" "}
+            <a href="black-ops-four/info">Black Ops 4 Generator Information</a>
+          </p>
           <p>
             01/12/2025:{" "}
             <a href="vanguard/info">Vanguard Generator Information</a>
@@ -32,4 +36,4 @@ function Changelog2024() {
   );
 }
 
-export default Changelog2024;
+export default Changelog2025;

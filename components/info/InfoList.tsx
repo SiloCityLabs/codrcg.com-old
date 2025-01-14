@@ -46,6 +46,8 @@ function InfoList({ game = "", data, dataKeys }: InfoListProps) {
                     {dataKeys.includes("description") && <th>Description</th>}
                     {dataKeys.includes("equipment") && <th>Equipment</th>}
                     {dataKeys.includes("weapon") && <th>Weapon</th>}
+                    {dataKeys.includes("mode") && <th>Mode</th>}
+                    {dataKeys.includes("story") && <th>Story</th>}
                     {dataKeys.includes("type") && <th>Type</th>}
                     {dataKeys.includes("game") && <th>Game</th>}
                     {dataKeys.includes("no_attach") && (
@@ -71,6 +73,12 @@ function InfoList({ game = "", data, dataKeys }: InfoListProps) {
                       )}
                       {dataKeys.includes("weapon") && (
                         <td>{filteredData[key].weapon}</td>
+                      )}
+                      {dataKeys.includes("mode") && (
+                        <td>{filteredData[key].mode}</td>
+                      )}
+                      {dataKeys.includes("story") && (
+                        <td>{filteredData[key].story}</td>
                       )}
                       {dataKeys.includes("type") && (
                         <td>{filteredData[key].type}</td>

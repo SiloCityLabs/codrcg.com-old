@@ -2,28 +2,28 @@
   {
     "name": "Blood Of The Dead",
     "type": "Map",
-    "mode": "Classic",
+    "mode": "Classic/Rush",
     "story": "Aether Story",
     "game": "black-ops-4"
   },
   {
     "name": "Classified",
     "type": "Map",
-    "mode": "Classic",
+    "mode": "Classic/Rush",
     "story": "Aether Story",
     "game": "black-ops-4"
   },
   {
     "name": "Alpha Omega",
     "type": "Map",
-    "mode": "Classic",
+    "mode": "Classic/Rush",
     "story": "Aether Story",
     "game": "black-ops-4"
   },
   {
     "name": "Tag Der Toten",
     "type": "Map",
-    "mode": "Classic",
+    "mode": "Classic/Rush",
     "story": "Aether Story",
     "game": "black-ops-4"
   },

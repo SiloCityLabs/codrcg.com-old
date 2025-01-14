@@ -254,14 +254,12 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const talisman = fetchZombiesGobblegum(`${game}-talismans`, 1);
     let zombieMap = fetchZombiesMap(`${story_key}-${game}`);
 
-    if (zombieMap?.mode === "Classic") {
+    if (zombieMap?.mode === "Classic/Rush") {
       const zombiesMode = fetchZombiesMode();
-      console.log("zombiesMode", zombiesMode);
 
       zombieMap.difficulty = zombiesMode.difficulty;
       zombieMap.mode = zombiesMode.mode;
     }
-    console.log("zombieMap2", zombieMap);
 
     setData({
       randClassName,
@@ -285,7 +283,7 @@ function fetchZombiesStory() {
 }
 
 function fetchZombiesMode() {
-  const isRush = Math.random() < 0.25; //25% Chance of Rush mode
+  const isRush = Math.random() < 0.3; //30% Chance of Rush mode
   const difficulties = ["Casual", "Normal", "Hardcore", "Realistic"];
 
   return {

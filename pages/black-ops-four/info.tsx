@@ -54,6 +54,11 @@ export default function BlackOpsSixInfo() {
       text: "",
       link: "/black-ops-four/info/zombies/talismans",
     },
+    {
+      title: "Zombies - Maps",
+      text: "",
+      link: "/black-ops-four/info/zombies/maps",
+    },
   ];
 
   return (

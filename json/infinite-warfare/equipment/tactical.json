@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Personal Radar",
+    "type": "Tactical",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Cryo Mine",
+    "type": "Tactical",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Jammer Grenade",
+    "type": "Tactical",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Dome Shield",
+    "type": "Tactical",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Trophy System",
+    "type": "Tactical",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Smoke Grenade",
+    "type": "Tactical",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Blackout Grenade",
+    "type": "Tactical",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Nano Shot",
+    "type": "Tactical",
+    "game": "infinite-warfare"
+  }
+]

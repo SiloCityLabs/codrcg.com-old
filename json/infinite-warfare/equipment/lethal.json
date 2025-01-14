@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Cluster Grenade",
+    "type": "Lethal",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Exploding Drone",
+    "type": "Lethal",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Plasma Grenade",
+    "type": "Lethal",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Seeker Grenade",
+    "type": "Lethal",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Trip Mine",
+    "type": "Lethal",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "T.A.R.",
+    "type": "Lethal",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Flechette Grenade",
+    "type": "Lethal",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Black Hole Projector",
+    "type": "Lethal",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "C4",
+    "type": "Lethal",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Bio Spike",
+    "type": "Lethal",
+    "game": "infinite-warfare"
+  }
+]

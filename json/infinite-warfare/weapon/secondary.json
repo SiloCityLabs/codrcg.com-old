@@ -1,0 +1,81 @@
+[
+  {
+    "name": "Oni",
+    "type": "pistol",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Kendall 44",
+    "type": "pistol",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Hailstorm",
+    "type": "pistol",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "UDM",
+    "type": "pistol",
+    "game": "infinite-warfare",
+    "no_attach_info": true
+  },
+  {
+    "name": "Stallion .44",
+    "type": "pistol",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Spartan SA3",
+    "type": "launcher",
+    "game": "infinite-warfare",
+    "no_attach": true
+  },
+  {
+    "name": "P-Law",
+    "type": "launcher",
+    "game": "infinite-warfare",
+    "no_attach": true
+  },
+  {
+    "name": "Howitzer",
+    "type": "launcher",
+    "game": "infinite-warfare",
+    "no_attach": true
+  },
+  {
+    "name": "Venom-X",
+    "type": "launcher",
+    "game": "infinite-warfare",
+    "no_attach": true
+  },
+  {
+    "name": "Combat Knife",
+    "type": "melee",
+    "game": "infinite-warfare",
+    "no_attach": true
+  },
+  {
+    "name": "Axe",
+    "type": "melee",
+    "game": "infinite-warfare",
+    "no_attach": true
+  },
+  {
+    "name": "Katana",
+    "type": "melee",
+    "game": "infinite-warfare",
+    "no_attach": true
+  },
+  {
+    "name": "Nunchucks",
+    "type": "melee",
+    "game": "infinite-warfare",
+    "no_attach": true
+  },
+  {
+    "name": "Hornet",
+    "type": "classic",
+    "game": "infinite-warfare"
+  }
+]

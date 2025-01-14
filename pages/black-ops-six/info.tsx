@@ -40,22 +40,22 @@ export default function BlackOpsSixInfo() {
       link: "/black-ops-six/info/streaks",
     },
     {
-      title: "Zombies Maps",
+      title: "Zombies - Maps",
       text: "",
       link: "/black-ops-six/info/zombies/maps",
     },
     {
-      title: "Zombies Ammo Mods",
+      title: "Zombies - Ammo Mods",
       text: "",
       link: "/black-ops-six/info/zombies/ammo-mods",
     },
     {
-      title: "Zombies Gobblegums",
+      title: "Zombies - Gobblegums",
       text: "",
       link: "/black-ops-six/info/zombies/gobblegums",
     },
     {
-      title: "Zombies Field Upgrades",
+      title: "Zombies - Field Upgrades",
       text: "",
       link: "/black-ops-six/info/zombies/field-upgrades",
     },

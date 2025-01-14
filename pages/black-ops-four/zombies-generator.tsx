@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-// import BlackOpsFourZombiesLoadout from "@/components/black-ops-four/BlackOpsFourZombiesLoadout";
+import BlackOpsFourZombiesLoadout from "@/components/black-ops-four/BlackOpsFourZombiesLoadout";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
@@ -35,7 +35,7 @@ export default function BlackOpsFourZombies() {
         <Row>
           <Col>
             <h2>Black Ops 4 Zombies - Random Class Generator</h2>
-            {/* <BlackOpsFourZombiesLoadout /> */}
+            <BlackOpsFourZombiesLoadout />
           </Col>
         </Row>
       </Container>

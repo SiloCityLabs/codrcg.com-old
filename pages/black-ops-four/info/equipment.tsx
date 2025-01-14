@@ -13,7 +13,7 @@ export default function BlackOpsSixEquipment() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops-four/generator" },
-    // { label: "Zombies Generator", href: "/black-ops-four/zombies-generator" },
+    { label: "Zombies Generator", href: "/black-ops-four/zombies-generator" },
     { label: "Loadout Info", href: "/black-ops-four/info" },
     { label: "Changelog", href: "/changelog" },
   ];

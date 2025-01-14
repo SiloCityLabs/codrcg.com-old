@@ -8,6 +8,7 @@ import "@/public/styles/components/Loadout.css";
 export default function BlackOpsFour() {
   const navLinks = [
     { label: "Home", href: "/" },
+    { label: "Zombies Generator", href: "/black-ops-four/zombies-generator" },
     { label: "Loadout Info", href: "/black-ops-four/info" },
     { label: "Changelog", href: "/changelog" },
   ];

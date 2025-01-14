@@ -44,6 +44,11 @@ export default function BlackOpsSixInfo() {
       text: "",
       link: "/black-ops-four/info/specialists",
     },
+    {
+      title: "Zombies - Elixers",
+      text: "",
+      link: "/black-ops-four/info/zombies/elixers",
+    },
   ];
 
   return (

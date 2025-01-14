@@ -82,3 +82,8 @@ export type ZombiesSettings = {
   rollMap: boolean;
   rollGobblegum: boolean;
 };
+
+export type Bo4ZombiesSettings = {
+  rollMap: boolean;
+  rollElixers: boolean;
+};

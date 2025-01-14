@@ -252,7 +252,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       lethal: fetchEquipment("lethal", game),
       fieldUpgrade: fetchEquipment("field_upgrade", game),
     };
-    const gobblegum = fetchZombiesGobblegum("black-ops-six");
+    const gobblegum = fetchZombiesGobblegum(game);
     const zombieMap = fetchZombiesMap("black-ops-six");
 
     setData({

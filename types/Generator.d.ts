@@ -37,6 +37,14 @@ export type Equipment = {
   isDlc?: boolean;
 };
 
+export type Specialist = {
+  name: string;
+  equipment: string;
+  weapon: string;
+  type: string;
+  game: string;
+};
+
 export type ZombiesMap = {
   name: string;
   type: string;

@@ -39,6 +39,11 @@ export default function BlackOpsSixInfo() {
       text: "",
       link: "/black-ops-four/info/streaks",
     },
+    {
+      title: "Specialists",
+      text: "",
+      link: "/black-ops-four/info/specialists",
+    },
   ];
 
   return (

@@ -32,22 +32,22 @@ export default function BlackOpsSixStreaks() {
   return (
     <>
       <Head>
-        <title>Black Ops 6 Streaks</title>
+        <title>Black Ops 4 Streaks</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="description" content="View all streaks in Black Ops 6." />
+        <meta name="description" content="View all streaks in Black Ops 4." />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
-          free, mp, multiplayer, call of duty random class generator, COD Black Ops 6 RCG, COD Blops 6 RCG, blops 6 random class generator,
-          blops 6, black ops 6, ops 6 rcg, ops 6 random class generator, black ops 6 random class generator, zombies, treyarch zombies,
-          black ops zombies, black ops 6 zombies, black ops rcg, black ops random class generator"
+          free, mp, multiplayer, call of duty random class generator, COD Black Ops 4 RCG, COD Blops 4 RCG, blops 4 random class generator,
+          blops 4, black ops 4, ops 4 rcg, ops 4 random class generator, black ops 4 random class generator, zombies, treyarch zombies,
+          black ops zombies, black ops 4 zombies, black ops rcg, black ops random class generator"
         />
       </Head>
       <Header className="black-ops" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 6 - Streaks</h2>
+            <h2>Black Ops 4 - Streaks</h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

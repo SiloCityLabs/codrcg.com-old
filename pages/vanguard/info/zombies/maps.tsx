@@ -23,7 +23,7 @@ export default function BlackOpsSixZombiesMaps() {
   const dataKeys = ["name", "type", "game"];
 
   useEffect(() => {
-    const dataList = getZombiesMaps("vanguard");
+    const dataList = getZombiesMaps("vanguard-zombies");
     setData(dataList);
 
     setIsLoading(false);

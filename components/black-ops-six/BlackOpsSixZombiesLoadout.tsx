@@ -253,7 +253,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       fieldUpgrade: fetchEquipment("field_upgrade", game),
     };
     const gobblegum = fetchZombiesGobblegum(game);
-    const zombieMap = fetchZombiesMap("black-ops-six");
+    const zombieMap = fetchZombiesMap(game).name;
 
     setData({
       randClassName,

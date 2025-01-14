@@ -49,6 +49,9 @@ export type ZombiesMap = {
   name: string;
   type: string;
   game: string;
+  mode?: string;
+  difficulty?: string;
+  story?: string;
   isDlc?: boolean;
 };
 

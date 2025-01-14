@@ -42,7 +42,7 @@ function BlackOpsFourZombiesLoadout() {
     equipment: "",
     elixers: "",
     talisman: "",
-    zombieMap: "",
+    zombieMap: { name: "", type: "", game: "", mode: "", difficulty: "" },
   });
 
   useEffect(() => {
@@ -127,7 +127,7 @@ function BlackOpsFourZombiesLoadout() {
             <span className="text-muted fs-6">{weapons.starting.name}</span>
           </Col>
         </Row>
-        {(rollElixers || rollMap || rollTalisman) && <hr />}
+        {(rollElixers || rollTalisman) && <hr />}
         <Row className="justify-content-md-center mb-4">
           {rollTalisman && (
             <Col xs md="4" lg="3" className="text-center">
@@ -141,13 +141,30 @@ function BlackOpsFourZombiesLoadout() {
               <span className="text-muted fs-6">{elixers}</span>
             </Col>
           )}
-          {rollMap && (
-            <Col xs md="4" lg="3" className="text-center">
-              <span className="fw-bolder fs-5">Map:</span> <br />
-              <span className="text-muted fs-6">{zombieMap}</span>
-            </Col>
-          )}
         </Row>
+        {rollMap && (
+          <>
+            <hr />
+            <Row className="justify-content-md-center mb-4">
+              <Col xs md="4" lg="3" className="text-center">
+                <span className="fw-bolder fs-5">Mode:</span> <br />
+                <span className="text-muted fs-6">{zombieMap?.mode}</span>
+              </Col>
+              <Col xs md="4" lg="3" className="text-center">
+                <span className="fw-bolder fs-5">Map:</span> <br />
+                <span className="text-muted fs-6">{zombieMap.name}</span>
+              </Col>
+              {zombieMap?.mode === "Classic" && (
+                <Col xs md="4" lg="3" className="text-center">
+                  <span className="fw-bolder fs-5">Difficulty:</span> <br />
+                  <span className="text-muted fs-6">
+                    {zombieMap.difficulty}
+                  </span>
+                </Col>
+              )}
+            </Row>
+          </>
+        )}
         <Row className="justify-content-md-center">
           <Col xs md="8" lg="6" className="text-center">
             <div className="d-flex justify-content-center">
@@ -235,7 +252,16 @@ async function fetchLoadoutData(setData, setContainerClass) {
 
     const elixers = fetchZombiesGobblegum(game);
     const talisman = fetchZombiesGobblegum(`${game}-talismans`, 1);
-    const zombieMap = fetchZombiesMap("black-ops-six");
+    let zombieMap = fetchZombiesMap(`${story_key}-${game}`);
+
+    if (zombieMap?.mode === "Classic") {
+      const zombiesMode = fetchZombiesMode();
+      console.log("zombiesMode", zombiesMode);
+
+      zombieMap.difficulty = zombiesMode.difficulty;
+      zombieMap.mode = zombiesMode.mode;
+    }
+    console.log("zombieMap2", zombieMap);
 
     setData({
       randClassName,
@@ -256,6 +282,16 @@ function fetchZombiesStory() {
   const stories = ["aether_story", "chaos_story"];
 
   return stories[Math.floor(Math.random() * stories.length)];
+}
+
+function fetchZombiesMode() {
+  const isRush = Math.random() < 0.25; //25% Chance of Rush mode
+  const difficulties = ["Casual", "Normal", "Hardcore", "Realistic"];
+
+  return {
+    mode: isRush ? "Rush" : "Classic",
+    difficulty: difficulties[Math.floor(Math.random() * difficulties.length)],
+  };
 }
 
 export default BlackOpsFourZombiesLoadout;

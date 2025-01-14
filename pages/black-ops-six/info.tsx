@@ -77,8 +77,6 @@ export default function BlackOpsSixInfo() {
           blops 6, black ops 6, ops 6 rcg, ops 6 random class generator, black ops 6 random class generator, zombies, treyarch zombies,
           black ops zombies, black ops 6 zombies, black ops rcg, black ops random class generator"
         />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
-        {/* Each generator has icons in the icon folder, not bo6 yet */}
       </Head>
       <Header className="black-ops" navLinks={navLinks} />
       <Container className="information">

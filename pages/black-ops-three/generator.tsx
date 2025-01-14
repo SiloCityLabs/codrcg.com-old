@@ -27,8 +27,6 @@ export default function BlackOpsThree() {
           blops 3, black ops 3, ops 3 rcg, ops 3 random class generator, black ops 3 random class generator, zombies, treyarch zombies,
           black ops zombies, black ops 3 zombies, black ops rcg, black ops random class generator"
         />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
-        {/* Each generator has icons in the icon folder, not bo3 yet */}
       </Head>
       <Header className="black-ops" navLinks={navLinks} />
       <Container className="generator" fluid>

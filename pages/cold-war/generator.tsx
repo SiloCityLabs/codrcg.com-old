@@ -28,8 +28,6 @@ export default function ColdWar() {
           cold war, cold war rcg, cold war random class generator, class generator, zombies, treyarch zombies,
           cold war zombies, cold war rcg, cold war random class generator"
         />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
-        {/* Each generator has icons in the icon folder, not cold war yet */}
       </Head>
       <Header className="cold-war" navLinks={navLinks} />
       <Container className="generator" fluid>

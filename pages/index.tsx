@@ -75,7 +75,7 @@ export default function Home() {
       disabled: false,
       btn2Text: "Zombies Generator",
       link2: "black-ops-four/zombies-generator",
-      disabled2: true,
+      disabled2: false,
     },
     {
       title: "Infinite Warfare",

@@ -10,6 +10,8 @@ export type InfoData = {
   game: string;
   score?: number;
   description?: string;
+  mode?: string;
+  story?: string;
   equipment?: string;
   weapon?: string;
   no_attach?: boolean;

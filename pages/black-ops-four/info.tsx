@@ -59,6 +59,11 @@ export default function BlackOpsSixInfo() {
       text: "",
       link: "/black-ops-four/info/zombies/maps",
     },
+    {
+      title: "Zombies - Perks",
+      text: "",
+      link: "/black-ops-four/info/zombies/perks",
+    },
   ];
 
   return (

@@ -3,7 +3,7 @@ import { Container, Row, Col, Table, Form, FormControl } from "react-bootstrap";
 //Types
 import { InfoListProps, InfoData } from "@/types/Info";
 
-function InfoList({ game = "", data, dataKeys }: InfoListProps) {
+function InfoList({ data, dataKeys }: InfoListProps) {
   const [filteredData, setFilteredData] = useState(data);
   const [searchTerm, setSearchTerm] = useState("");
 

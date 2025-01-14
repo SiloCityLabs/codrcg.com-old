@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 //Helpers
-import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetchWeapon";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchZombiesMap } from "@/helpers/fetchZombiesMap";
 import { fetchZombiesGobblegum } from "@/helpers/fetchZombiesGobblegum";
+import { fetchZombiesPerks } from "@/helpers/fetchZombiesPerks";
 import { fetchClassName } from "@/helpers/fetchClassName";
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
 //Types
@@ -34,7 +34,7 @@ function BlackOpsFourZombiesLoadout() {
   //Data
   const [data, setData] = useState({
     randClassName: "",
-    story: "",
+    story: { key: "", display: "" },
     weapons: {
       special: { name: "", type: "", game: "", no_attach: false },
       starting: { name: "", type: "", game: "", no_attach: false },
@@ -43,6 +43,7 @@ function BlackOpsFourZombiesLoadout() {
     elixers: "",
     talisman: "",
     zombieMap: { name: "", type: "", game: "", mode: "", difficulty: "" },
+    zombiePerks: [],
   });
 
   useEffect(() => {
@@ -99,6 +100,7 @@ function BlackOpsFourZombiesLoadout() {
     elixers,
     talisman,
     zombieMap,
+    zombiePerks,
   } = data;
 
   if (isLoading) {
@@ -112,8 +114,11 @@ function BlackOpsFourZombiesLoadout() {
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
         <h3 className="text-center mb-5">&ldquo;{randClassName}&rdquo;</h3>
-        <h5 className="text-center mb-5">Story - {story}</h5>
         <Row className="justify-content-md-center mb-4">
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Story:</span> <br />
+            <span className="text-muted fs-6">{story.display}</span>
+          </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Special Weapon:</span> <br />
             <span className="text-muted fs-6">{weapons.special.name}</span>
@@ -127,20 +132,36 @@ function BlackOpsFourZombiesLoadout() {
             <span className="text-muted fs-6">{weapons.starting.name}</span>
           </Col>
         </Row>
-        {(rollElixers || rollTalisman) && <hr />}
+        <hr />
         <Row className="justify-content-md-center mb-4">
-          {rollTalisman && (
-            <Col xs md="4" lg="3" className="text-center">
-              <span className="fw-bolder fs-5">Talisman:</span> <br />
-              <span className="text-muted fs-6">{talisman}</span>
-            </Col>
-          )}
-          {rollElixers && (
-            <Col xs md="4" lg="3" className="text-center">
-              <span className="fw-bolder fs-5">Elixers:</span> <br />
-              <span className="text-muted fs-6">{elixers}</span>
-            </Col>
-          )}
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">
+              {story.key === "chaos_story" ? "DANU" : "BREW"}:
+            </span>
+            <br />
+            <span className="text-muted fs-6">{zombiePerks[0]}</span>
+          </Col>
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">
+              {story.key === "chaos_story" ? "RA" : "COLA"}:
+            </span>
+            <br />
+            <span className="text-muted fs-6">{zombiePerks[1]}</span>
+          </Col>
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">
+              {story.key === "chaos_story" ? "ZEUS" : "SODA"}:
+            </span>
+            <br />
+            <span className="text-muted fs-6">{zombiePerks[2]}</span>
+          </Col>
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">
+              {story.key === "chaos_story" ? "ODIN" : "TONIC"}:
+            </span>
+            <br />
+            <span className="text-muted fs-6">{zombiePerks[3]}</span>
+          </Col>
         </Row>
         {rollMap && (
           <>
@@ -165,6 +186,21 @@ function BlackOpsFourZombiesLoadout() {
             </Row>
           </>
         )}
+        {(rollElixers || rollTalisman) && <hr />}
+        <Row className="justify-content-md-center mb-4">
+          {rollTalisman && (
+            <Col xs md="4" lg="3" className="text-center">
+              <span className="fw-bolder fs-5">Talisman:</span> <br />
+              <span className="text-muted fs-6">{talisman}</span>
+            </Col>
+          )}
+          {rollElixers && (
+            <Col xs md="4" lg="3" className="text-center">
+              <span className="fw-bolder fs-5">Elixers:</span> <br />
+              <span className="text-muted fs-6">{elixers}</span>
+            </Col>
+          )}
+        </Row>
         <Row className="justify-content-md-center">
           <Col xs md="8" lg="6" className="text-center">
             <div className="d-flex justify-content-center">
@@ -239,10 +275,13 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const game = "black-ops-four-zombies";
     const randClassName = fetchClassName();
     const story_key = fetchZombiesStory();
-    const story = story_key
-      .split("_")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
+    const story = {
+      key: story_key,
+      display: story_key
+        .split("_")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" "),
+    };
     const weapons = {
       starting: fetchWeapon("all", game),
       special: fetchWeapon("all", `${story_key}-${game}`),
@@ -261,6 +300,8 @@ async function fetchLoadoutData(setData, setContainerClass) {
       zombieMap.mode = zombiesMode.mode;
     }
 
+    const zombiePerks = fetchZombiesPerks(game);
+
     setData({
       randClassName,
       story,
@@ -269,6 +310,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       elixers,
       talisman,
       zombieMap,
+      zombiePerks,
     });
     setContainerClass("");
   } catch (error: any) {

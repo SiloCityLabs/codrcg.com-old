@@ -228,7 +228,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
 
   try {
     const loadoutFrame: LoadoutFrame = getLoadoutFrame();
-    console.log("loadoutFrame", loadoutFrame);
     const game = "black-ops-four";
     const randClassName = fetchClassName();
     //For underkill

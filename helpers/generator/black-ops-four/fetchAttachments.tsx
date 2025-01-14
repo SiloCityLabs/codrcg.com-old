@@ -7,6 +7,10 @@ export function fetchAttachments(
   type: string,
   count: number = 1
 ): any {
+  if (weapon?.no_attach_info) {
+    return [`No attachment info. Randomly select ${count}.`];
+  }
+
   const gun = weapon.name.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
   const data = getBO4Attachments(weapon.type, type, gun, count);
 

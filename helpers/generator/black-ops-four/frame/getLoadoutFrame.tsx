@@ -2,6 +2,7 @@
 import { getAttachments } from "@/helpers/generator/black-ops-four/frame/getAttachments";
 import { getPiece } from "@/helpers/generator/black-ops-four/frame/getPiece";
 import { getOptic } from "@/helpers/generator/black-ops-four/frame/getOptic";
+import { getPerkGluttony } from "@/helpers/generator/black-ops-four/frame/getPerkGluttony";
 //Helpers
 import { isset } from "@/helpers/isset";
 //Types
@@ -26,6 +27,16 @@ export function getLoadoutFrame(): LoadoutFrame {
   let frame: LoadoutFrame = defaultLoadoutFrame;
   let points = 10;
   let maxCount = 0;
+  const perkGluttony = getPerkGluttony();
+
+  if (perkGluttony.gluttony !== "") {
+    (frame.wildcards as string[]).push(perkGluttony.gluttony);
+    frame.perk1 = true;
+    frame.perk2 = true;
+    frame.perk3 = true;
+    frame[perkGluttony.wildcard] = true;
+    points -= 4;
+  }
 
   while (points > 0 && maxCount < 50) {
     //Stop infinite loops
@@ -101,11 +112,26 @@ export function getLoadoutFrame(): LoadoutFrame {
 function wildcardCheck(piece: string, frame: LoadoutFrame): number {
   let wildcardCost = 0;
 
+  //Dont allow overkill & underkill
   if (
     (piece === "primary" && frame["secondary"]) ||
     (piece === "secondary" && frame["primary"])
   ) {
     return wildcardCost;
+  }
+
+  //Dont alllow multiple perk greeds if there is a perk gluttony
+  const gluttonyKey = frame.wildcards.find((wildcard) =>
+    wildcard.includes("Gluttony")
+  );
+  if (gluttonyKey && piece.includes("perk")) {
+    const pieceWithSpace = piece.replace(/(\d)/, " $1");
+    const perkString =
+      pieceWithSpace.charAt(0).toUpperCase() + pieceWithSpace.slice(1);
+
+    if (!gluttonyKey.includes(perkString)) {
+      return wildcardCost;
+    }
   }
 
   if (

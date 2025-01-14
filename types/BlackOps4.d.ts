@@ -23,4 +23,7 @@ export type LoadoutFrame = {
   perk1Greed?: boolean;
   perk2Greed?: boolean;
   perk3Greed?: boolean;
+  perk1Gluttony?: boolean;
+  perk2Gluttony?: boolean;
+  perk3Gluttony?: boolean;
 };

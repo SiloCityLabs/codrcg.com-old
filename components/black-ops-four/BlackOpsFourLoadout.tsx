@@ -225,7 +225,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     label: "BlackOpsSixZombies",
     category: "COD_Loadouts",
   });
-  
+
   try {
     const loadoutFrame: LoadoutFrame = getLoadoutFrame();
     console.log("loadoutFrame", loadoutFrame);
@@ -240,22 +240,45 @@ async function fetchLoadoutData(setData, setContainerClass) {
       loadoutFrame.secondary_optic || loadoutFrame.secondary_attach > 0
         ? true
         : false;
+    let perkGluttonySlot = "";
+    let perk1 = "";
+    let perk2 = "";
+    let perk3 = "";
+
+    if (loadoutFrame.perk1Gluttony) {
+      perkGluttonySlot = "perk1";
+    } else if (loadoutFrame.perk2Gluttony) {
+      perkGluttonySlot = "perk2";
+    } else if (loadoutFrame.perk3Gluttony) {
+      perkGluttonySlot = "perk3";
+    }
+
+    if (perkGluttonySlot) {
+      // Check if a slot was found
+      perk1 = fetchPerk(perkGluttonySlot);
+      perk2 = fetchPerk(perkGluttonySlot, perk1);
+      perk3 = fetchPerk(perkGluttonySlot, [perk1, perk2]);
+    } else {
+      perk1 = loadoutFrame.perk1 ? fetchPerk("perk1") : "";
+      perk2 = loadoutFrame.perk2 ? fetchPerk("perk2") : "";
+      perk3 = loadoutFrame.perk3 ? fetchPerk("perk3") : "";
+    }
 
     const initialPerks = {
-      perk1: loadoutFrame.perk1 ? fetchPerk("perk1") : "",
-      perk2: loadoutFrame.perk2 ? fetchPerk("perk2") : "",
-      perk3: loadoutFrame.perk3 ? fetchPerk("perk3") : "",
+      perk1: perk1,
+      perk2: perk2,
+      perk3: perk3,
     };
 
     const perkGreed = {
       perk1Greed: loadoutFrame.perk1Greed
-        ? fetchPerk("perk1", initialPerks.perk1)
+        ? fetchPerk("perk1", [perk1, perk2, perk3])
         : "",
       perk2Greed: loadoutFrame.perk2Greed
-        ? fetchPerk("perk2", initialPerks.perk2)
+        ? fetchPerk("perk2", [perk1, perk2, perk3])
         : "",
       perk3Greed: loadoutFrame.perk3Greed
-        ? fetchPerk("perk3", initialPerks.perk3)
+        ? fetchPerk("perk3", [perk1, perk2, perk3])
         : "",
     };
 

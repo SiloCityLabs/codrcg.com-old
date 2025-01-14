@@ -49,6 +49,11 @@ export default function BlackOpsSixInfo() {
       text: "",
       link: "/black-ops-four/info/zombies/elixers",
     },
+    {
+      title: "Zombies - Talismans",
+      text: "",
+      link: "/black-ops-four/info/zombies/talismans",
+    },
   ];
 
   return (

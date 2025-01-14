@@ -1,11 +1,36 @@
 [
   {
-    "name": "",
+    "name": "Grand Token of Superiority",
     "type": "Epic",
     "game": "black-ops-4"
   },
   {
-    "name": "",
+    "name": "Sigil of the 1st Circle",
+    "type": "Epic",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Sigil of the 2nd Circle",
+    "type": "Epic",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Sigil of the 3rd Circle",
+    "type": "Epic",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Sigil of the 4th Circle",
+    "type": "Epic",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Glowing Phylactery",
+    "type": "Epic",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Supercharged Crystal",
     "type": "Epic",
     "game": "black-ops-4"
   }

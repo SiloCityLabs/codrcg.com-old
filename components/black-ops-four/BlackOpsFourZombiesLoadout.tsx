@@ -18,6 +18,7 @@ import { sendEvent } from "@/utils/gtag";
 const defaultSettings: Bo4ZombiesSettings = {
   rollMap: true,
   rollElixers: true,
+  rollTalisman: true,
 };
 
 function BlackOpsFourZombiesLoadout() {
@@ -27,6 +28,7 @@ function BlackOpsFourZombiesLoadout() {
   const [settings, setSettings] = useState<Bo4ZombiesSettings>(defaultSettings);
   const [rollMap, setRollMap] = useState(settings.rollMap);
   const [rollElixers, setRollElixer] = useState(settings.rollElixers);
+  const [rollTalisman, setRollTalisman] = useState(settings.rollTalisman);
   const [showModal, setShowModal] = useState(false);
 
   //Data
@@ -39,6 +41,7 @@ function BlackOpsFourZombiesLoadout() {
     },
     equipment: "",
     elixers: "",
+    talisman: "",
     zombieMap: "",
   });
 
@@ -49,6 +52,7 @@ function BlackOpsFourZombiesLoadout() {
     setSettings(completeSettings);
     setRollMap(completeSettings.rollMap);
     setRollElixer(completeSettings.rollElixers);
+    setRollTalisman(completeSettings.rollTalisman);
 
     fetchLoadoutData(setData, setContainerClass);
 
@@ -79,8 +83,23 @@ function BlackOpsFourZombiesLoadout() {
       rollElixers: event.target.checked,
     });
   };
+  const handleRollTalismanChange = (event) => {
+    setRollTalisman(event.target.checked);
+    setSettings({
+      ...settings,
+      rollTalisman: event.target.checked,
+    });
+  };
 
-  const { randClassName, story, weapons, equipment, elixers, zombieMap } = data;
+  const {
+    randClassName,
+    story,
+    weapons,
+    equipment,
+    elixers,
+    talisman,
+    zombieMap,
+  } = data;
 
   if (isLoading) {
     return <div className="text-center">Loading...</div>;
@@ -108,8 +127,14 @@ function BlackOpsFourZombiesLoadout() {
             <span className="text-muted fs-6">{weapons.starting.name}</span>
           </Col>
         </Row>
-        {(rollElixers || rollMap) && <hr />}
+        {(rollElixers || rollMap || rollTalisman) && <hr />}
         <Row className="justify-content-md-center mb-4">
+          {rollTalisman && (
+            <Col xs md="4" lg="3" className="text-center">
+              <span className="fw-bolder fs-5">Talisman:</span> <br />
+              <span className="text-muted fs-6">{talisman}</span>
+            </Col>
+          )}
           {rollElixers && (
             <Col xs md="4" lg="3" className="text-center">
               <span className="fw-bolder fs-5">Elixers:</span> <br />
@@ -171,6 +196,15 @@ function BlackOpsFourZombiesLoadout() {
               checked={rollElixers}
             />
           </Col>
+          <Col>
+            <Form.Label htmlFor="rollTalisman">Roll Talisman:</Form.Label>
+            <Form.Check
+              type="switch"
+              id="rollTalisman"
+              onChange={handleRollTalismanChange}
+              checked={rollTalisman}
+            />
+          </Col>
         </Row>
       </CustomModal>
     </>
@@ -200,6 +234,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const equipment = fetchEquipment("lethal", game).name;
 
     const elixers = fetchZombiesGobblegum(game);
+    const talisman = fetchZombiesGobblegum(`${game}-talismans`, 1);
     const zombieMap = fetchZombiesMap("black-ops-six");
 
     setData({
@@ -208,6 +243,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       weapons,
       equipment,
       elixers,
+      talisman,
       zombieMap,
     });
     setContainerClass("");

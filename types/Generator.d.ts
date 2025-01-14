@@ -86,4 +86,5 @@ export type ZombiesSettings = {
 export type Bo4ZombiesSettings = {
   rollMap: boolean;
   rollElixers: boolean;
+  rollTalisman: boolean;
 };

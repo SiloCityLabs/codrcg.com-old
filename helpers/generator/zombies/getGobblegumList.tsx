@@ -11,6 +11,11 @@ import bo4ElixerCommonList from "@/json/black-ops-four/zombies/elixers/common.js
 import bo4ElixerEpicList from "@/json/black-ops-four/zombies/elixers/epic.json";
 import bo4ElixerLegendaryList from "@/json/black-ops-four/zombies/elixers/legendary.json";
 import bo4ElixerRareList from "@/json/black-ops-four/zombies/elixers/rare.json";
+//Black Ops 4 Talismans
+import bo4TalismanCommonList from "@/json/black-ops-four/zombies/talismans/common.json";
+import bo4TalismanEpicList from "@/json/black-ops-four/zombies/talismans/epic.json";
+import bo4TalismanLegendaryList from "@/json/black-ops-four/zombies/talismans/legendary.json";
+import bo4TalismanRareList from "@/json/black-ops-four/zombies/talismans/rare.json";
 
 const data = {
   "black-ops-six-zombies": mergeObjectsWithRekey(
@@ -26,6 +31,12 @@ const data = {
     bo4ElixerEpicList,
     bo4ElixerLegendaryList,
     bo4ElixerRareList
+  ),
+  "black-ops-four-zombies-talismans": mergeObjectsWithRekey(
+    bo4TalismanCommonList,
+    bo4TalismanEpicList,
+    bo4TalismanLegendaryList,
+    bo4TalismanRareList
   ),
 };
 

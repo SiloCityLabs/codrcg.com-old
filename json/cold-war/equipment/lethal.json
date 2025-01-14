@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Frag",
+    "type": "Lethal",
+    "game": "cold-war"
+  },
+  {
+    "name": "C4",
+    "type": "Lethal",
+    "game": "cold-war"
+  },
+  {
+    "name": "Semtex",
+    "type": "Lethal",
+    "game": "cold-war"
+  },
+  {
+    "name": "Molotov",
+    "type": "Lethal",
+    "game": "cold-war"
+  },
+  {
+    "name": "Tomahawk",
+    "type": "Lethal",
+    "game": "cold-war"
+  }
+]

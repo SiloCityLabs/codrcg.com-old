@@ -5,6 +5,96 @@ import Footer from "@/components/Footer";
 import GeneratorCard from "@/components/GeneratorCard";
 
 export default function Home() {
+  const infoCards = [
+    {
+      title: "Black Ops VI",
+      text: "",
+      variant: "black-ops",
+      btn1Text: "Multiplayer Generator",
+      link: "black-ops-six/generator",
+      disabled: false,
+      btn2Text: "Zombies Generator",
+      link2: "black-ops-six/zombies-generator",
+      disabled2: false,
+    },
+    {
+      title: "Warzone",
+      text: "",
+      variant: "success",
+      btn1Text: "Generator",
+      link: "warzone/generator",
+      disabled: false,
+    },
+    {
+      title: "Modern Warfare 3 (2023)",
+      text: "",
+      variant: "danger",
+      btn1Text: "Multiplayer Generator",
+      link: "modern-warfare-three/generator",
+      disabled: false,
+      btn2Text: "Zombies Generator",
+      link2: "modern-warfare-three/zombies-generator",
+      disabled2: false,
+    },
+    {
+      title: "Modern Warfare 2 (2022)",
+      text: "Coming in 2025",
+      variant: "mw2",
+      btn1Text: "Generator",
+      link: "modern-warfare-two/generator",
+      disabled: true,
+    },
+    {
+      title: "Vanguard",
+      text: "",
+      variant: "danger",
+      btn1Text: "Multiplayer Generator",
+      link: "vanguard/generator",
+      disabled: false,
+      btn2Text: "Zombies Generator",
+      link2: "vanguard/zombies-generator",
+      disabled2: false,
+    },
+    {
+      title: "Cold War",
+      text: "Coming in 2025",
+      variant: "danger",
+      btn1Text: "Multiplayer Generator",
+      link: "cold-war/generator",
+      disabled: true,
+      btn2Text: "Zombies Generator",
+      link2: "cold-war/zombies-generator",
+      disabled2: true,
+    },
+    {
+      title: "Black Ops IV",
+      text: "",
+      variant: "black-ops",
+      btn1Text: "Multiplayer Generator",
+      link: "black-ops-four/generator",
+      disabled: false,
+      btn2Text: "Zombies Generator",
+      link2: "black-ops-four/zombies-generator",
+      disabled2: false,
+    },
+    {
+      title: "Infinite Warfare",
+      text: "Coming in 2025",
+      variant: "infinite-warfare",
+      btn1Text: "Generator",
+      link: "infinite-warfare/generator",
+      disabled: true,
+    },
+    {
+      title: "Black Ops III",
+      text: "",
+      variant: "black-ops",
+      btn1Text: "Generator",
+      link: "black-ops-three/generator",
+      disabled: false,
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -29,6 +119,7 @@ export default function Home() {
           Black Ops 6 RCG, blops 6, black ops 6, ops 6 rcg, black ops 6 random class generator,
           Cold War random class generator, Cold War,
           Vanguard random class generator, Vanguard,
+          Infinite Warfare random class generator, Infinite Warfare,
           Warzone random class generator, Warzone"
         />
         <meta
@@ -45,100 +136,27 @@ export default function Home() {
         <Header />
         <Container className="main-content">
           <Row>
-            <Col xl={3} lg={4} md={6} className="text-center mb-4">
-              <GeneratorCard
-                title="Black Ops VI"
-                text=""
-                variant="black-ops"
-                btn1Text="Multiplayer Generator"
-                link="black-ops-six/generator"
-                disabled={false}
-                btn2Text="Zombies Generator"
-                link2="black-ops-six/zombies-generator"
-                disabled2={false}
-              />
-            </Col>
-            <Col xl={3} lg={4} md={6} className="text-center mb-4">
-              <GeneratorCard
-                title="Warzone"
-                text=""
-                variant="success"
-                link="warzone/generator"
-                disabled={false}
-              />
-            </Col>
-            <Col xl={3} lg={4} md={6} className="text-center mb-4">
-              <GeneratorCard
-                title="Modern Warfare 3 (2023)"
-                text=""
-                variant="danger"
-                btn1Text="Multiplayer Generator"
-                link="modern-warfare-three/generator"
-                disabled={false}
-                btn2Text="Zombies Generator"
-                link2="modern-warfare-three/zombies-generator"
-                disabled2={false}
-              />
-            </Col>
-            <Col xl={3} lg={4} md={6} className="text-center mb-4">
-              <GeneratorCard
-                title="Modern Warfare 2 (2022)"
-                text="Coming in 2025"
-                variant="mw2"
-                btn1Text="Multiplayer Generator"
-                link="modern-warfare-two/generator"
-                disabled={true}
-              />
-            </Col>
-            <Col xl={3} lg={4} md={6} className="text-center mb-4">
-              <GeneratorCard
-                title="Vanguard"
-                text=""
-                variant="danger"
-                btn1Text="Multiplayer Generator"
-                link="vanguard/generator"
-                disabled={false}
-                btn2Text="Zombies Generator"
-                link2="vanguard/zombies-generator"
-                disabled2={false}
-              />
-            </Col>
-            <Col xl={3} lg={4} md={6} className="text-center mb-4">
-              <GeneratorCard
-                title="Cold War"
-                text=" Coming in 2025"
-                variant="danger"
-                btn1Text="Multiplayer Generator"
-                link="cold-war/generator"
-                disabled={true}
-                btn2Text="Zombies Generator"
-                link2="cold-war/zombies-generator"
-                disabled2={true}
-              />
-            </Col>
-            <Col xl={3} lg={4} md={6} className="text-center mb-4">
-              <GeneratorCard
-                title="Black Ops IV"
-                text="Coming in 2025"
-                variant="black-ops"
-                btn1Text="Multiplayer Generator"
-                link="black-ops-four/generator"
-                disabled={false}
-                btn2Text="Zombies Generator"
-                link2="black-ops-four/zombies-generator"
-                disabled2={true}
-              />
-            </Col>
-            <Col xl={3} lg={4} md={6} className="text-center mb-4">
-              <GeneratorCard
-                title="Black Ops III"
-                text=""
-                variant="black-ops"
-                btn1Text="Generator"
-                link="black-ops-three/generator"
-                disabled={false}
-              />
-            </Col>
+            {infoCards.map((card, index) => (
+              <Col
+                key={index}
+                xl={3}
+                lg={4}
+                md={6}
+                className="text-center mb-4"
+              >
+                <GeneratorCard
+                  title={card.title}
+                  text={card.text}
+                  variant={card.variant}
+                  btn1Text={card.btn1Text}
+                  link={card.link}
+                  disabled={card.disabled}
+                  btn2Text={card.btn2Text}
+                  link2={card.link2}
+                  disabled2={card.disabled2}
+                />
+              </Col>
+            ))}
           </Row>
         </Container>
         <Footer />

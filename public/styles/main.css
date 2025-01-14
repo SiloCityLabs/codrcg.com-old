@@ -124,3 +124,51 @@ fieldset[disabled] .btn-mw2.active {
   color: #79C22B;
   background-color: #ffffff;
 }
+
+/* Infinite Warfare - #FFFF02 */
+.btn-infinite-warfare {
+  color: #000;
+  background-color: #FFFF02;
+  border-color: #FFFF02;
+}
+
+.btn-infinite-warfare:hover,
+.btn-infinite-warfare:focus,
+.btn-infinite-warfare:active,
+.btn-infinite-warfare.active,
+.open .dropdown-toggle.btn-infinite-warfare {
+  color: #000;
+  background-color: #E6E600;
+  /* New yellow */
+  border-color: #FFFF02;
+}
+
+.btn-infinite-warfare:active,
+.btn-infinite-warfare.active,
+.open .dropdown-toggle.btn-infinite-warfare {
+  background-image: none;
+}
+
+.btn-infinite-warfare.disabled,
+.btn-infinite-warfare[disabled],
+fieldset[disabled] .btn-infinite-warfare,
+.btn-infinite-warfare.disabled:hover,
+.btn-infinite-warfare[disabled]:hover,
+fieldset[disabled] .btn-infinite-warfare:hover,
+.btn-infinite-warfare.disabled:focus,
+.btn-infinite-warfare[disabled]:focus,
+fieldset[disabled] .btn-infinite-warfare:focus,
+.btn-infinite-warfare.disabled:active,
+.btn-infinite-warfare[disabled]:active,
+fieldset[disabled] .btn-infinite-warfare:active,
+.btn-infinite-warfare.disabled.active,
+.btn-infinite-warfare[disabled].active,
+fieldset[disabled] .btn-infinite-warfare.active {
+  background-color: #FFFF02;
+  border-color: #FFFF02;
+}
+
+.btn-infinite-warfare .badge {
+  color: #FFFF02;
+  background-color: #000;
+}

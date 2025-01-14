@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Blood Of The Dead",
+    "type": "Map",
+    "mode": "Classic/Rush",
+    "story": "Aether Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Classified",
+    "type": "Map",
+    "mode": "Classic/Rush",
+    "story": "Aether Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Alpha Omega",
+    "type": "Map",
+    "mode": "Classic/Rush",
+    "story": "Aether Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Tag Der Toten",
+    "type": "Map",
+    "mode": "Classic/Rush",
+    "story": "Aether Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Death-Con Five",
+    "type": "Map",
+    "mode": "Gauntlet",
+    "story": "Aether Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Hellcatraz",
+    "type": "Map",
+    "mode": "Gauntlet",
+    "story": "Aether Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Duck and Cover",
+    "type": "Map",
+    "mode": "Gauntlet",
+    "story": "Aether Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "An Ice Day In Hell",
+    "type": "Map",
+    "mode": "Gauntlet",
+    "story": "Aether Story",
+    "game": "black-ops-4"
+  }
+]

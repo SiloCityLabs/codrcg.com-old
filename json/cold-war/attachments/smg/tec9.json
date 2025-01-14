@@ -1,0 +1,72 @@
+{
+  "optic": [
+    "Quickdot LED",
+    "Millstop Reflex",
+    "Kobra Red Dot",
+    "Visiontech 2x",
+    "Microflex LED",
+    "Hawksmoor",
+    "Snappoint",
+    "Diamondback Reflex",
+    "Sillix Holoscout",
+    "Fastpoint Reflex",
+    "Axial Arms 3X",
+    "AN/PVS-4 Thermal"
+  ],
+  "muzzle": [
+    "Muzzle Brake 9",
+    "Flash Guard 9",
+    "Burst Fire Repeater",
+    "Infantry Compensator",
+    "Socom Eliminator",
+    "Full Autp Repeater"
+  ],
+  "barrel": [
+    "5.8\" Extended",
+    "5.4\" Cavalry Lancer",
+    "7.3\" Reinforced Heavy",
+    "6.7\" Ranger",
+    "7.7\" Rifled",
+    "8.1\" Task Force"
+  ],
+  "body": [
+    "Steady Aim Laser",
+    "Mounted Flashlight",
+    "SOF Target Designator",
+    "Swat 5mw Laser Sight",
+    "Tiger Team Spotlight",
+    "Ember Sighting Point"
+  ],
+  "underbarrel": [
+    "Foregrip",
+    "Red Cell Grip",
+    "Patrol Grip",
+    "Bruiser Grip",
+    "Field Agent Grip",
+    "SFOD Speedgrip"
+  ],
+  "magazine": [
+    "30 Rnd",
+    "Fast Mag",
+    "27 Rnd Speed Mag",
+    "Stanag 39 Rnd",
+    "Vandal Speed Loader",
+    "Salvo 33 Rnd Fast Mag"
+  ],
+  "handle": [
+    "Speed Tape",
+    "Dropshot Wrap",
+    "Field Tape",
+    "SASR Jungle Grip",
+    "Serpent Wrap",
+    "Airborne Elastic Wrap"
+  ],
+  "stock": [
+    "Tactical Stock",
+    "Collapsed Stock",
+    "Duster Stock",
+    "No Stock",
+    "SAS Combat Stock",
+    "Raider Stock"
+  ]
+}

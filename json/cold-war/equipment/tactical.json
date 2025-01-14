@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Stun Grenade",
+    "type": "Tactical",
+    "game": "cold-war"
+  },
+  {
+    "name": "Smoke Grenade",
+    "type": "Tactical",
+    "game": "cold-war"
+  },
+  {
+    "name": "Stimshot",
+    "type": "Tactical",
+    "game": "cold-war"
+  },
+  {
+    "name": "Flashbang",
+    "type": "Tactical",
+    "game": "cold-war"
+  },
+  {
+    "name": "Decoy",
+    "type": "Tactical",
+    "game": "cold-war"
+  }
+]

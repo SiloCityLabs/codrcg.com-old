@@ -1,0 +1,72 @@
+{
+  "optic": [
+    "Kobra Red Dot",
+    "Axial Arms 3X",
+    "Visiontech 2x",
+    "Millstop Reflex",
+    "Sillix Holoscout",
+    "Royal & Kross 4X",
+    "Susat Multizoom",
+    "Quickdot LED",
+    "Hawksmoor",
+    "Hangman RF",
+    "Vulture Custom Zoom",
+    "AN/PVS-4 Thermal"
+  ],
+  "muzzle": [
+    "Muzzle Brake 5.56",
+    "Flash Guard 5.56",
+    "Suppressor",
+    "Infantry Compensator",
+    "Socom Eliminator",
+    "Agency Suppressor"
+  ],
+  "barrel": [
+    "14.7\" Cut Down",
+    "17.5\" Cavalry Lancer",
+    "14.5\" Division",
+    "13.4\" Sor Cut Down",
+    "17.1\" Match Grade",
+    "16.4\" Task Force"
+  ],
+  "body": [
+    "Steady Aim Laser",
+    "Mounted Flashlight",
+    "SOF Target Designator",
+    "Swat 5mw Laser Sight",
+    "Tiger Team Spotlight",
+    "Ember Sighting Point"
+  ],
+  "underbarrel": [
+    "Foregrip",
+    "Infiltrator Grip",
+    "Patrol Grip",
+    "Bruiser Grip",
+    "Field Agent Grip",
+    "SFOD Speedgrip"
+  ],
+  "magazine": [
+    "125 Rnd",
+    "Fast Mag",
+    "125 Rnd Speed Mag",
+    "Stanag 150 Rnd",
+    "Vandal Speed Loader",
+    "Salvo 150 Rnd Fast Mag"
+  ],
+  "handle": [
+    "Speed Tape",
+    "Dropshot Wrap",
+    "Field Tape",
+    "SASR Jungle Grip",
+    "Serpent Wrap",
+    "Airborne Elastic Wrap"
+  ],
+  "stock": [
+    "Tactical Stock",
+    "Marathon Stock",
+    "Duster Stock",
+    "No Stock",
+    "SAS Combat Stock",
+    "Raider Stock"
+  ]
+}

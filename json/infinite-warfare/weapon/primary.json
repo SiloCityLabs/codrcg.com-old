@@ -1,0 +1,187 @@
+[
+  {
+    "name": "NV4",
+    "type": "assault_rifle",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "R3K",
+    "type": "assault_rifle",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "KBAR-32",
+    "type": "assault_rifle",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Type-2",
+    "type": "assault_rifle",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Volk",
+    "type": "assault_rifle",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "R-VN",
+    "type": "assault_rifle",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "X-Eon",
+    "type": "assault_rifle",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "G-Rail",
+    "type": "assault_rifle",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Erad",
+    "type": "smg",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "FHR-40",
+    "type": "smg",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Karma-45",
+    "type": "smg",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "RPR Evo",
+    "type": "smg",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "HVR",
+    "type": "smg",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "VPR",
+    "type": "smg",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Trencher",
+    "type": "smg",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Raijin-EMX",
+    "type": "smg",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Reaver",
+    "type": "shotgun",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Banshee",
+    "type": "shotgun",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "DCM-8",
+    "type": "shotgun",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Rack-9",
+    "type": "shotgun",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "M.2187",
+    "type": "shotgun",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "KBS Longbow",
+    "type": "sniper",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "EBR-800",
+    "type": "sniper",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Widowmaker",
+    "type": "sniper",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "DMR-1",
+    "type": "sniper",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Trek-50",
+    "type": "sniper",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Proteus",
+    "type": "sniper",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "R.A.W.",
+    "type": "lmg",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Mauler",
+    "type": "lmg",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Titan",
+    "type": "lmg",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Auger",
+    "type": "lmg",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Atlas",
+    "type": "lmg",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "OSA",
+    "type": "classic",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "MacTav-45",
+    "type": "classic",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "TF-141",
+    "type": "classic",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "S-Ravage",
+    "type": "classic",
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "M1",
+    "type": "classic",
+    "game": "infinite-warfare"
+  }
+]

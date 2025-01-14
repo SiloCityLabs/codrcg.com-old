@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Suag 9MM",
+    "type": "smg",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Essex Model 07",
+    "type": "tactical_rifle",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Welling",
+    "type": "pistol",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Strife",
+    "type": "pistol",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "RK 7 Garrison",
+    "type": "pistol",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Mog 12",
+    "type": "shotgun",
+    "game": "black-ops-4"
+  }
+]

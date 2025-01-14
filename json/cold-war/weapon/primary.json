@@ -1,0 +1,189 @@
+[
+  {
+    "name": "XM4",
+    "type": "assault_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "AK-47",
+    "type": "assault_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "Krig 6",
+    "type": "assault_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "QBZ-83",
+    "type": "assault_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "FFAR 1",
+    "type": "assault_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "Groza",
+    "type": "assault_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "Fara 83",
+    "type": "assault_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "C58",
+    "type": "assault_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "EM2",
+    "type": "assault_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "Grav",
+    "type": "assault_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "Vargo 52",
+    "type": "assault_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "MP5",
+    "type": "smg",
+    "game": "cold-war"
+  },
+  {
+    "name": "Milano 821",
+    "type": "smg",
+    "game": "cold-war"
+  },
+  {
+    "name": "AK-74u",
+    "type": "smg",
+    "game": "cold-war"
+  },
+  {
+    "name": "KSP 45",
+    "type": "smg",
+    "game": "cold-war"
+  },
+  {
+    "name": "Bullfrog",
+    "type": "smg",
+    "game": "cold-war"
+  },
+  {
+    "name": "Mac-10",
+    "type": "smg",
+    "game": "cold-war"
+  },
+  {
+    "name": "LC10",
+    "type": "smg",
+    "game": "cold-war"
+  },
+  {
+    "name": "Ppsh-41",
+    "type": "smg",
+    "game": "cold-war"
+  },
+  {
+    "name": "Ots 9",
+    "type": "smg",
+    "game": "cold-war"
+  },
+  {
+    "name": "Tec-9",
+    "type": "smg",
+    "game": "cold-war"
+  },
+  {
+    "name": "Lapa",
+    "type": "smg",
+    "game": "cold-war"
+  },
+  {
+    "name": "UGR",
+    "type": "smg",
+    "game": "cold-war"
+  },
+  {
+    "name": "Type 63",
+    "type": "tactical_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "M16",
+    "type": "tactical_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "Aug",
+    "type": "tactical_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "DMR 14",
+    "type": "tactical_rifle",
+    "game": "cold-war"
+  },
+  {
+    "name": "Carv.2",
+    "type": "tactical_rifle",
+    "game": "cold-war",
+    "no_attach_info": true
+  },
+  {
+    "name": "Pelington 703",
+    "type": "sniper",
+    "game": "cold-war"
+  },
+  {
+    "name": "LW3 - Tundra",
+    "type": "sniper",
+    "game": "cold-war"
+  },
+  {
+    "name": "M82",
+    "type": "sniper",
+    "game": "cold-war"
+  },
+  {
+    "name": "ZRG 20mm",
+    "type": "sniper",
+    "game": "cold-war",
+    "no_attach_info": true
+  },
+  {
+    "name": "Swiss K31",
+    "type": "sniper",
+    "game": "cold-war"
+  },
+  {
+    "name": "Stoner 63",
+    "type": "lmg",
+    "game": "cold-war"
+  },
+  {
+    "name": "RPD",
+    "type": "lmg",
+    "game": "cold-war"
+  },
+  {
+    "name": "M60",
+    "type": "lmg",
+    "game": "cold-war"
+  },
+  {
+    "name": "MG 82",
+    "type": "lmg",
+    "game": "cold-war"
+  }
+]

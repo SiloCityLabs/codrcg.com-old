@@ -1,0 +1,51 @@
+{
+  "optic": [
+    "Millstop Reflex",
+    "Quickdot LED",
+    "Microflex LED"
+  ],
+  "muzzle": [
+    "Duckbill Choke",
+    "Flash Cone 12 GA",
+    "Sound Suppressor",
+    "Infantry V-Choke",
+    "Socom Blast Mitigator",
+    "Agency Choke"
+  ],
+  "barrel": [
+    "22\" Extended",
+    "20.4\" Cavalry Lancer",
+    "21.6\" Reinforced Heavy",
+    "24.1\" Ranger",
+    "19.3\" Hammer Forged",
+    "25.2\" Task Force"
+  ],
+  "body": [
+    "Steady Aim Laser",
+    "Mounted Flashlight",
+    "SOF Target Designator",
+    "Swat 5mw Laser Sight",
+    "Tiger Team Spotlight",
+    "Ember Sighting Point"
+  ],
+  "magazine": [
+    "6 Rnd Tube",
+    "Stanag 8 Rnd Tube"
+  ],
+  "handle": [
+    "Speed Tape",
+    "Dropshot Wrap",
+    "Field Tape",
+    "SASR Jungle Grip",
+    "Serpent Wrap",
+    "Airborne Elastic Wrap"
+  ],
+  "stock": [
+    "Tactical Stock",
+    "Shotgun Stock",
+    "Duster Pad",
+    "No Stock",
+    "SAS Combat Stock",
+    "Marathon Pad"
+  ]
+}

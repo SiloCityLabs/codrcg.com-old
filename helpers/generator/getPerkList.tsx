@@ -9,11 +9,22 @@ import warzonePerk3List from "@/json/warzone/perk/perk3.json";
 import vanguardPerk1List from "@/json/vanguard/perk/perk1.json";
 import vanguardPerk2List from "@/json/vanguard/perk/perk2.json";
 import vanguardPerk3List from "@/json/vanguard/perk/perk3.json";
+//Black Ops 4
+import bo4Perk1List from "@/json/black-ops-four/perks/perk1.json";
+import bo4Perk2List from "@/json/black-ops-four/perks/perk2.json";
+import bo4Perk3List from "@/json/black-ops-four/perks/perk3.json";
+//Black Ops 4 Zombies
+import bo4ZombiesList from "@/json/black-ops-four/zombies/perks.json";
 
 const perks: Record<
   string,
   { perk1List: any; perk2List: any; perk3List: any }
 > = {
+  "black-ops-four": {
+    perk1List: bo4Perk1List,
+    perk2List: bo4Perk2List,
+    perk3List: bo4Perk3List,
+  },
   "black-ops-six": {
     perk1List: bo6Perk1List,
     perk2List: bo6Perk2List,
@@ -28,6 +39,11 @@ const perks: Record<
     perk1List: vanguardPerk1List,
     perk2List: vanguardPerk2List,
     perk3List: vanguardPerk3List,
+  },
+  "black-ops-four-zombies": {
+    perk1List: bo4ZombiesList,
+    perk2List: {},
+    perk3List: {},
   },
 };
 

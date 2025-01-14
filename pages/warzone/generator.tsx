@@ -22,8 +22,6 @@ export default function Warzone() {
           warzone, warzone rcg, warzone random class generator, class generator, warzone rcg, warzone random class generator,
           black ops 6, modern warfare 3, modern warfare 2"
         />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
-        {/* Each generator has icons in the icon folder, not bo6 yet */}
       </Head>
       <Header className="warzone" />
       <Container className="generator" fluid>

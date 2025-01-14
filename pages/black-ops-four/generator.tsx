@@ -8,6 +8,8 @@ import "@/public/styles/components/Loadout.css";
 export default function BlackOpsFour() {
   const navLinks = [
     { label: "Home", href: "/" },
+    { label: "Zombies Generator", href: "/black-ops-four/zombies-generator" },
+    { label: "Loadout Info", href: "/black-ops-four/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -27,8 +29,6 @@ export default function BlackOpsFour() {
           blops 4, black ops 4, ops 4 rcg, ops 4 random class generator, black ops 4 random class generator, zombies, treyarch zombies,
           black ops zombies, black ops 4 zombies, black ops rcg, black ops random class generator"
         />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
-        {/* Each generator has icons in the icon folder, not bo3 yet */}
       </Head>
       <Header className="black-ops" navLinks={navLinks} />
       <Container className="generator" fluid>

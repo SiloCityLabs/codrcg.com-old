@@ -23,7 +23,7 @@ export default function BlackOpsSixZombiesGobblegums() {
   const dataKeys = ["name", "type", "game", "isDlc"];
 
   useEffect(() => {
-    const dataList = getZombiesGobblegums("black-ops-six");
+    const dataList = getZombiesGobblegums("black-ops-six-zombies");
     setData(dataList);
 
     setIsLoading(false);
@@ -45,8 +45,6 @@ export default function BlackOpsSixZombiesGobblegums() {
           blops 6, black ops 6, ops 6 rcg, ops 6 random class generator, black ops 6 random class generator, zombies, treyarch zombies,
           black ops zombies, black ops 6 zombies, black ops rcg, black ops random class generator"
         />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
-        {/* Each generator has icons in the icon folder, not bo6 yet */}
       </Head>
       <Header className="black-ops" navLinks={navLinks} />
       <Container className="generator" fluid>

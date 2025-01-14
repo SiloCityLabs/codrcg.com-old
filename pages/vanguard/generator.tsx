@@ -29,8 +29,6 @@ export default function Vanguard() {
           vanguard, vanguard rcg, vanguard random class generator, class generator, zombies, treyarch zombies,
           vanguard zombies, vanguard rcg, vanguard random class generator"
         />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
-        {/* Each generator has icons in the icon folder, not vanguard yet */}
       </Head>
       <Header className="vanguard" navLinks={navLinks} />
       <Container className="generator" fluid>

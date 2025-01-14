@@ -1,0 +1,72 @@
+{
+  "optic": [
+    "Visiontech 2x",
+    "Kobra Red Dot",
+    "Axial Arms 3X",
+    "Iron Sights",
+    "Sillix Holoscout",
+    "Royal & Kross 4X",
+    "Susat Multizoom",
+    "Vulture Custom Zoom",
+    "Millstop Reflex",
+    "Hangman RF",
+    "Ultrazoom Custom",
+    "AN/PVS-4 Thermal"
+  ],
+  "muzzle": [
+    "Stabilizer .50 BMG",
+    "Flash Hider .50 BMG",
+    "Sound Moderator",
+    "Infantry Stabilizer",
+    "Task Force Shroud",
+    "Wrapped Suppressor"
+  ],
+  "barrel": [
+    "22.2\" Extended",
+    "21.8\" Cavalry Lancer",
+    "20.6\" Rapid Fire",
+    "22.6\" Combat Recon",
+    "19.5\" Ultralight",
+    "22.6\" Tiger Team"
+  ],
+  "body": [
+    "Steady Aim Laser",
+    "Mounted Flashlight",
+    "SOF Target Designator",
+    "Swat 5mw Laser Sight",
+    "Tiger Team Spotlight",
+    "Ember Sighting Point"
+  ],
+  "underbarrel": [
+    "Front Grip",
+    "Infiltrator Grip",
+    "Patrol Grip",
+    "Bruiser Grip",
+    "Bipod",
+    "SFOD Speedgrip"
+  ],
+  "magazine": [
+    "7 Rnd",
+    "Fast Loader",
+    "7 Rnd Speed Mag",
+    "Stanag 9 Rnd",
+    "Vandal Speed Loader",
+    "Salvo 9 Rnd Fast Mag"
+  ],
+  "handle": [
+    "Speed Tape",
+    "Dropshot Wrap",
+    "Field Tape",
+    "SASR Jungle Grip",
+    "Serpent Wrap",
+    "Airborne Elastic Wrap"
+  ],
+  "stock": [
+    "Tactical Stock",
+    "Marathon Pad",
+    "Duster Pad",
+    "CQB Pad",
+    "SAS Combat Stock",
+    "Raider Pad"
+  ]
+}

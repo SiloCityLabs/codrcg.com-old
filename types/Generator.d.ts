@@ -4,7 +4,7 @@ export type Weapon = {
   game: string;
   no_attach?: boolean;
   isDlc?: boolean;
-  no_attach_info?: boolean;
+  no_attach_info?: boolean; //When we dont have access to the attachments for the weapon
 };
 
 export type Perk = {
@@ -37,10 +37,21 @@ export type Equipment = {
   isDlc?: boolean;
 };
 
+export type Specialist = {
+  name: string;
+  equipment: string;
+  weapon: string;
+  type: string;
+  game: string;
+};
+
 export type ZombiesMap = {
   name: string;
   type: string;
   game: string;
+  mode?: string;
+  difficulty?: string;
+  story?: string;
   isDlc?: boolean;
 };
 
@@ -73,4 +84,10 @@ export type MW3Vest = {
 export type ZombiesSettings = {
   rollMap: boolean;
   rollGobblegum: boolean;
+};
+
+export type Bo4ZombiesSettings = {
+  rollMap: boolean;
+  rollElixers: boolean;
+  rollTalisman: boolean;
 };

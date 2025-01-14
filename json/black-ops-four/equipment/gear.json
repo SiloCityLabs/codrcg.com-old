@@ -1,7 +1,27 @@
 [
-  "Equipment Charge",
-  "Stim Shot",
-  "COMSEC Device",
-  "Body Armor",
-  "Acoustic Sensor"
+  {
+    "name": "Gear Charge",
+    "type": "Gear",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Stim Shot",
+    "type": "Gear",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "COMSEC Device",
+    "type": "Gear",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Body Armor",
+    "type": "Gear",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Acoustic Sensor",
+    "type": "Gear",
+    "game": "black-ops-four"
+  }
 ]

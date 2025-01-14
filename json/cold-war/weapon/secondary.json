@@ -1,0 +1,156 @@
+[
+  {
+    "name": "1911",
+    "type": "pistol",
+    "game": "cold-war"
+  },
+  {
+    "name": "Magnum",
+    "type": "pistol",
+    "game": "cold-war"
+  },
+  {
+    "name": "Diamatti",
+    "type": "pistol",
+    "game": "cold-war"
+  },
+  {
+    "name": "AMP63",
+    "type": "pistol",
+    "game": "cold-war"
+  },
+  {
+    "name": "Marshal",
+    "type": "pistol",
+    "game": "cold-war"
+  },
+  {
+    "name": "Hauer 77",
+    "type": "shotgun",
+    "game": "cold-war"
+  },
+  {
+    "name": "Gallo SA12",
+    "type": "shotgun",
+    "game": "cold-war"
+  },
+  {
+    "name": "Streetsweeper",
+    "type": "shotgun",
+    "game": "cold-war",
+    "no_attach_info": true
+  },
+  {
+    "name": ".410 Ironhide",
+    "type": "shotgun",
+    "game": "cold-war"
+  },
+  {
+    "name": "Cigma 2",
+    "type": "launcher",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "RPG-7",
+    "type": "launcher",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "Knife",
+    "type": "melee",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "Wakizashi",
+    "type": "melee",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "Sledgehammer",
+    "type": "melee",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "E-Tool",
+    "type": "melee",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "Machete",
+    "type": "melee",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "Baseball Bat",
+    "type": "melee",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "Mace",
+    "type": "melee",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "Cane",
+    "type": "melee",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "Sai",
+    "type": "melee",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "Battle Axe",
+    "type": "melee",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "Hammer and Sickle",
+    "type": "melee",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "Scythe",
+    "type": "melee",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "M79",
+    "type": "special",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "R1 Shadowhunter",
+    "type": "special",
+    "game": "cold-war",
+    "no_attach_info": true
+  },
+  {
+    "name": "Ballistic Knife",
+    "type": "special",
+    "game": "cold-war",
+    "no_attach": true
+  },
+  {
+    "name": "Nail Gun",
+    "type": "special",
+    "game": "cold-war",
+    "no_attach_info": true
+  }
+]

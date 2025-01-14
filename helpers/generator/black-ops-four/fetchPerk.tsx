@@ -9,11 +9,18 @@ const perks: Record<string, any> = {
   perk3: perk3,
 };
 
-export function fetchPerk(perk: string, currentPerk: string = ""): string {
+export function fetchPerk(
+  perk: string,
+  currentPerks: string | string[] = ""
+): string {
   let randPerk: string;
+  if (typeof currentPerks === "string") {
+    currentPerks = [currentPerks]; // Convert single string to an array
+  }
+
   do {
     randPerk = randomListItem(perks[perk]).name;
-  } while (currentPerk === randPerk);
+  } while (currentPerks.includes(randPerk));
 
   return randPerk;
 }

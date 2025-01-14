@@ -1,0 +1,72 @@
+{
+    "optic": [
+        "Millstop Reflex",
+        "Visiontech 2x",
+        "Kobra Red Dot",
+        "Quickdot LED",
+        "Axial Arms 3X",
+        "Sillix Holoscout",
+        "Hawksmoor",
+        "Royal & Kross 4X",
+        "Susat Multizoom",
+        "Noch Sova Thermal",
+        "Hangman RF",
+        "Vulture Custom Zoom"
+    ],
+    "muzzle": [
+        "Muzzle Brake 7.62",
+        "Flash Guard 7.62",
+        "Silencer",
+        "Spetsnaz Compensator",
+        "KGB Eliminator",
+        "Gru Silencer"
+    ],
+    "barrel": [
+        "16.4\" Rapid Fire",
+        "18.3\" Cavalry Lancer",
+        "18.3\" Strike Team",
+        "16.4\" Titanium",
+        "21.5\" Match Grade",
+        "21.5\" Task Force"
+    ],
+    "body": [
+        "Steady Aim Laser",
+        "Mounted Flashlight",
+        "KGB Target Designator",
+        "Gru 5mw Laser Sight",
+        "Tiger Team Spotlight",
+        "Ember Sighting Point"
+    ],
+    "underbarrel": [
+        "Front Grip",
+        "Infiltrator Grip",
+        "Patrol Grip",
+        "Bruiser Grip",
+        "Spetsnaz Grip",
+        "VDV Speedgrip"
+    ],
+    "magazine": [
+        "30 Rnd",
+        "Taped Mag",
+        "30 Rnd Speed Mag",
+        "Bakelite 35 Rnd",
+        "Gru Mag Clamp",
+        "VDV 35 Rnd Fast Mag"
+    ],
+    "handle": [
+        "Speed Grip",
+        "Dropshot Wrap",
+        "Field Tape",
+        "Spetsnaz Field Grip",
+        "Serpent Wrap",
+        "Gru Elastic Wrap"
+    ],
+    "stock": [
+        "Tactical Stock",
+        "Wire Stock",
+        "Duster Pad",
+        "No Stock",
+        "Raider Stock",
+        "KGB Pad"
+    ]
+}

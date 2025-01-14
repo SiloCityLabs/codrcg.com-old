@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Voyage Of Despair",
+    "type": "Map",
+    "mode": "Classic/Rush",
+    "story": "Chaos Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "IX",
+    "type": "Map",
+    "mode": "Classic/Rush",
+    "story": "Chaos Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Dead Of The Night",
+    "type": "Map",
+    "mode": "Classic/Rush",
+    "story": "Chaos Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Ancient Evil",
+    "type": "Map",
+    "mode": "Classic/Rush",
+    "story": "Chaos Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Unsinkable",
+    "type": "Map",
+    "mode": "Gauntlet",
+    "story": "Chaos Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Veni, Vidi, Zombie!",
+    "type": "Map",
+    "mode": "Gauntlet",
+    "story": "Chaos Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Super Blood Wolf Moon",
+    "type": "Map",
+    "mode": "Gauntlet",
+    "story": "Chaos Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Labours Of Hercules",
+    "type": "Map",
+    "mode": "Gauntlet",
+    "story": "Chaos Story",
+    "game": "black-ops-4"
+  },
+  {
+    "name": "Unsinkable (Hard)",
+    "type": "Map",
+    "mode": "Gauntlet",
+    "story": "Chaos Story",
+    "game": "black-ops-4"
+  }
+]

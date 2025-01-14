@@ -1,0 +1,50 @@
+{
+  "optic": [
+    "Quickdot LED",
+    "Otero Mini Reflex",
+    "Microflex LED"
+  ],
+  "muzzle": [
+    "Muzzle Brake .45 APC",
+    "Flash Guard .45 APC",
+    "Sound Suppressor",
+    "Infantry Compensator",
+    "Socom Eliminator",
+    "Agency Choke"
+  ],
+  "barrel": [
+    "7.2\" Extended",
+    "5.9\" Cavalry Lancer",
+    "6.4\" Reinforced Heavy",
+    "7.5\" Chrome Lined",
+    "4.7\" Tight Snub",
+    "7.2\" Task Force"
+  ],
+  "body": [
+    "Steady Aim Laser",
+    "Mounted Flashlight",
+    "SOF Target Designator",
+    "Swat 5mw Laser Sight",
+    "Tiger Team Spotlight",
+    "Ember Sighting Point"
+  ],
+  "magazine": [
+    "9 Rnd",
+    "Fast Mag",
+    "9 Rnd Speed Mag",
+    "Stanag 12 Rnd",
+    "Vandal Speed Loader",
+    "Salvo 12 Rnd Fast Mag"
+  ],
+  "handle": [
+    "Speed Tape",
+    "Dropshot Wrap",
+    "Field Tape",
+    "SASR Jungle Grip",
+    "Serpent Wrap",
+    "Airborne Elastic Wrap"
+  ],
+  "stock": [
+    "Dual Wield"
+  ]
+}

@@ -62,6 +62,21 @@ export type AmmoMod = {
   isDlc: boolean;
 };
 
+export type Augment = {
+  name: string;
+  description: string;
+  major: Augments[];
+  minor: Augments[];
+  type: string;
+  game: string;
+  isDlc: boolean;
+};
+
+export type Augments = {
+  name: string;
+  description: string;
+};
+
 export type Gobblegum = {
   name: string;
   type: string;

@@ -59,6 +59,11 @@ export default function BlackOpsSixInfo() {
       text: "",
       link: "/black-ops-six/info/zombies/field-upgrades",
     },
+    {
+      title: "Zombies - Augments",
+      text: "",
+      link: "/black-ops-six/info/zombies/augments",
+    },
   ];
 
   return (

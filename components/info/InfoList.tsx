@@ -48,6 +48,8 @@ function InfoList({ data, dataKeys }: InfoListProps) {
                     {dataKeys.includes("weapon") && <th>Weapon</th>}
                     {dataKeys.includes("mode") && <th>Mode</th>}
                     {dataKeys.includes("story") && <th>Story</th>}
+                    {dataKeys.includes("minor") && <th>Minor</th>}
+                    {dataKeys.includes("major") && <th>Major</th>}
                     {dataKeys.includes("type") && <th>Type</th>}
                     {dataKeys.includes("game") && <th>Game</th>}
                     {dataKeys.includes("no_attach") && (
@@ -80,11 +82,17 @@ function InfoList({ data, dataKeys }: InfoListProps) {
                       {dataKeys.includes("story") && (
                         <td>{filteredData[key].story}</td>
                       )}
+                      {dataKeys.includes("minor") && (
+                        <td>{filteredData[key].minor}</td>
+                      )}
+                      {dataKeys.includes("major") && (
+                        <td>{filteredData[key].major}</td>
+                      )}
                       {dataKeys.includes("type") && (
                         <td>{filteredData[key].type}</td>
                       )}
                       {dataKeys.includes("game") && (
-                        <td>{filteredData[key].game}</td>
+                        <td>{formatTitle(filteredData[key].game)}</td>
                       )}
                       {dataKeys.includes("no_attach") && (
                         <td>
@@ -104,6 +112,19 @@ function InfoList({ data, dataKeys }: InfoListProps) {
       </Container>
     </>
   );
+}
+
+function formatTitle(str) {
+  // Split the string by hyphens
+  const words = str.split("-");
+
+  // Capitalize the first letter of each word
+  const capitalizedWords = words.map((word) => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+
+  // Join the words with spaces
+  return capitalizedWords.join(" ");
 }
 
 export default InfoList;

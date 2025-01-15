@@ -61,7 +61,7 @@ export default function Home() {
       variant: "danger",
       btn1Text: "Multiplayer Generator",
       link: "cold-war/generator",
-      disabled: true,
+      disabled: false,
       btn2Text: "Zombies Generator",
       link2: "cold-war/zombies-generator",
       disabled2: false,

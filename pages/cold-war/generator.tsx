@@ -9,6 +9,7 @@ export default function ColdWar() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Zombies Generator", href: "/cold-war/zombies-generator" },
+    { label: "Loadout Info", href: "/cold-war/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 

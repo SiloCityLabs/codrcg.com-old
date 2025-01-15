@@ -9,7 +9,7 @@ import { getZombiesGobblegums } from "@/helpers/info/getZombiesGobblegums";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsSixZombiesElixers() {
+export default function BlackOpsFourZombiesElixers() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops-four/generator" },

@@ -9,7 +9,7 @@ import { getSpecialists } from "@/helpers/info/getSpecialists";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsSixSpecialists() {
+export default function BlackOpsFourSpecialists() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops-four/generator" },

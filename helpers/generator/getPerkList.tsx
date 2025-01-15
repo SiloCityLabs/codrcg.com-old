@@ -15,6 +15,10 @@ import bo4Perk2List from "@/json/black-ops-four/perks/perk2.json";
 import bo4Perk3List from "@/json/black-ops-four/perks/perk3.json";
 //Black Ops 4 Zombies
 import bo4ZombiesList from "@/json/black-ops-four/zombies/perks.json";
+//Cold War
+import coldWarPerk1List from "@/json/cold-war/perk/perk1.json";
+import coldWarPerk2List from "@/json/cold-war/perk/perk2.json";
+import coldWarPerk3List from "@/json/cold-war/perk/perk3.json";
 
 const perks: Record<
   string,
@@ -44,6 +48,11 @@ const perks: Record<
     perk1List: bo4ZombiesList,
     perk2List: {},
     perk3List: {},
+  },
+  "cold-war": {
+    perk1List: coldWarPerk1List,
+    perk2List: coldWarPerk2List,
+    perk3List: coldWarPerk3List,
   },
 };
 

@@ -21,6 +21,6 @@
     "name": "Perk Greed",
     "type": "Wildcard",
     "game": "cold-war",
-    "description": "Equip an extra Perk fro each Perk Category."
+    "description": "Equip an extra Perk from each Perk Category."
   }
 ]

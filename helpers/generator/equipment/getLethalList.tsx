@@ -8,6 +8,7 @@ import bo3List from "@/json/black-ops-three/equipment/lethal.json";
 //BO4 had weird names
 import bo4List from "@/json/black-ops-four/equipment/gear.json";
 import bo4ZombiesList from "@/json/black-ops-four/zombies/equipment.json";
+import coldWarList from "@/json/cold-war/equipment/lethal.json";
 
 const equipment: Record<string, any> = {
   "black-ops-six": bo6List,
@@ -19,6 +20,7 @@ const equipment: Record<string, any> = {
   "black-ops-three": bo3List,
   "black-ops-four": bo4List,
   "black-ops-four-zombies": bo4ZombiesList,
+  "cold-war": coldWarList,
 };
 
 export function getLethalList(game: string): any {

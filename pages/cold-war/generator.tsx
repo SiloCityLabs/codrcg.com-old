@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-// import ColdWarLoadout from "@/components/cold-war/ColdWarLoadout";
+import ColdWarLoadout from "@/components/cold-war/ColdWarLoadout";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
@@ -35,7 +35,7 @@ export default function ColdWar() {
           <Col>
             <h2>Cold War - Random Class Generator</h2>
 
-            {/* <ColdWarLoadout /> */}
+            <ColdWarLoadout />
           </Col>
         </Row>
       </Container>

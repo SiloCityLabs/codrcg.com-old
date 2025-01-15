@@ -1,5 +1,5 @@
 import { getPerkList } from "@/helpers/generator/zombies/getPerkList";
-import { randomListItem } from "./randomListItem";
+import { randomListItem } from "../../randomListItem";
 import { Perk } from "@/types/Generator";
 
 export function fetchZombiesPerks(

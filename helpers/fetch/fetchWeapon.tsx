@@ -1,8 +1,8 @@
 import { getPrimaryList } from "@/helpers/generator/weapons/getPrimaryList";
 import { getSecondaryList } from "@/helpers/generator/weapons/getSecondaryList";
 import { getMeleeList } from "@/helpers/generator/weapons/getMeleeList";
-import { randomListItem } from "./randomListItem";
-import { fetchGame } from "@/helpers/fetchGame";
+import { randomListItem } from "../randomListItem";
+import { fetchGame } from "@/helpers/fetch/fetchGame";
 import { mergeObjectsWithRekey } from "@/helpers/mergeObjectsWithRekey";
 //Types
 import { Weapon } from "@/types/Generator";

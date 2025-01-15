@@ -1,5 +1,5 @@
 import { getSpecialistList } from "@/helpers/generator/getSpecialistList";
-import { randomListItem } from "./randomListItem";
+import { randomListItem } from "../randomListItem";
 import { Wildcard } from "@/types/Generator";
 
 export function fetchSpecialist(game: string = ""): Wildcard {

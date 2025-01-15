@@ -20,7 +20,7 @@ export default function BlackOpsSixStreaks() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "score", "type", "game", "isDlc"];
+  const dataKeys = ["name", "score", "type", "game"];
 
   useEffect(() => {
     const dataList = getStreaks("vanguard");

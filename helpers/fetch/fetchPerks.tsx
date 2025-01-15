@@ -1,6 +1,6 @@
 import { getPerkList } from "@/helpers/generator/getPerkList";
 import { mergeObjectsWithRekey } from "@/helpers/mergeObjectsWithRekey";
-import { randomListItem } from "./randomListItem";
+import { randomListItem } from "../randomListItem";
 
 export function fetchPerks(
   game: string = "",

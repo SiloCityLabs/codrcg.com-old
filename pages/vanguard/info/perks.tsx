@@ -20,7 +20,7 @@ export default function BlackOpsSixPerks() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game", "isDlc"];
+  const dataKeys = ["name", "type", "game"];
 
   useEffect(() => {
     const dataList = getPerk("vanguard");

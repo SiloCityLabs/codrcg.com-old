@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
-import { fetchWeapon } from "@/helpers/fetchWeapon";
-import { fetchAttachments } from "@/helpers/fetchAttachments";
-import { fetchEquipment } from "@/helpers/fetchEquipment";
-import { fetchZombiesAmmoMod } from "@/helpers/fetchZombiesAmmoMod";
-import { fetchZombiesMap } from "@/helpers/fetchZombiesMap";
-import { fetchZombiesGobblegum } from "@/helpers/fetchZombiesGobblegum";
-import { fetchZombiesAugments } from "@/helpers/fetchZombiesAugments";
-import { fetchClassName } from "@/helpers/fetchClassName";
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
+import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
+import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
+import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
+import { fetchClassName } from "@/helpers/fetch/fetchClassName";
+//Zombies Specific
+import { fetchZombiesAmmoMod } from "@/helpers/fetch/zombies/fetchZombiesAmmoMod";
+import { fetchZombiesMap } from "@/helpers/fetch/zombies/fetchZombiesMap";
+import { fetchZombiesGobblegum } from "@/helpers/fetch/zombies/fetchZombiesGobblegum";
+import { fetchZombiesAugments } from "@/helpers/fetch/zombies/fetchZombiesAugments";
 //Types
 import { Bo6ZombiesSettings } from "@/types/Generator";
 //Components

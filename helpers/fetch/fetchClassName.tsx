@@ -1,6 +1,6 @@
-import adList from "../json/cod/adjectives.json";
-import nounList from "../json/cod/nouns.json";
-import { randomListItem } from "./randomListItem";
+import adList from "../../json/cod/adjectives.json";
+import nounList from "../../json/cod/nouns.json";
+import { randomListItem } from "../randomListItem";
 
 export function fetchClassName(): string {
   let adjective = randomListItem(adList);

@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
-import { fetchWeapon } from "@/helpers/fetchWeapon";
-import { fetchStreaks } from "@/helpers/fetchStreaks";
-import { fetchEquipment } from "@/helpers/fetchEquipment";
-import { fetchClassName } from "@/helpers/fetchClassName";
-import { fetchSpecialist } from "@/helpers/fetchSpecialist";
+import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
+import { fetchStreaks } from "@/helpers/fetch/fetchStreaks";
+import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
+import { fetchClassName } from "@/helpers/fetch/fetchClassName";
+import { fetchSpecialist } from "@/helpers/fetch/fetchSpecialist";
 //Ops 3
 import { fetchPerk } from "@/helpers/generator/black-ops-three/fetchPerk";
 import { fetchAttachments } from "@/helpers/generator/black-ops-three/fetchAttachments";

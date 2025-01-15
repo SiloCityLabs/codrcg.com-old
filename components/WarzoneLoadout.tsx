@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 //Helpers
 import { implodeObject } from "../helpers/implodeObject";
-import { fetchWeapon } from "../helpers/fetchWeapon";
-import { fetchPerks } from "../helpers/fetchPerks";
-import { fetchAttachments } from "@/helpers/fetchAttachments";
-import { fetchEquipment } from "@/helpers/fetchEquipment";
-import { fetchWildcard } from "@/helpers/fetchWildcard";
-import { fetchClassName } from "@/helpers/fetchClassName";
+import { fetchWeapon } from "../helpers/fetch/fetchWeapon";
+import { fetchPerks } from "../helpers/fetch/fetchPerks";
+import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
+import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
+import { fetchWildcard } from "@/helpers/fetch/fetchWildcard";
+import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 

@@ -3,11 +3,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
-import { fetchWeapon } from "@/helpers/fetchWeapon";
-import { fetchAttachments } from "@/helpers/fetchAttachments";
-import { fetchZombiesMap } from "@/helpers/fetchZombiesMap";
-import { fetchEquipment } from "@/helpers/fetchEquipment";
-import { fetchClassName } from "@/helpers/fetchClassName";
+import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
+import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
+import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
+import { fetchClassName } from "@/helpers/fetch/fetchClassName";
+//Zombies Specific
+import { fetchZombiesMap } from "@/helpers/fetch/zombies/fetchZombiesMap";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 

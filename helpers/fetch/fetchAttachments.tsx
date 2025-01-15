@@ -1,8 +1,8 @@
-import { getBO6Attachments } from "./generator/black-ops-six/getBO6Attachments";
-import { getMW3Attachments } from "./generator/modern-warfare-three/getMW3Attachments";
-import { getMW2Attachments } from "./generator/modern-warfare-two/getMW2Attachments";
-import { getVanguardAttachments } from "./generator/vanguard/getVanguardAttachments";
-import { getColdWarAttachments } from "./generator/cold-war/getColdWarAttachments";
+import { getBO6Attachments } from "../generator/black-ops-six/getBO6Attachments";
+import { getMW3Attachments } from "../generator/modern-warfare-three/getMW3Attachments";
+import { getMW2Attachments } from "../generator/modern-warfare-two/getMW2Attachments";
+import { getVanguardAttachments } from "../generator/vanguard/getVanguardAttachments";
+import { getColdWarAttachments } from "../generator/cold-war/getColdWarAttachments";
 //Types
 import { Weapon } from "@/types/Generator";
 

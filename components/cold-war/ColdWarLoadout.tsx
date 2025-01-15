@@ -3,13 +3,13 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
-import { fetchWeapon } from "@/helpers/fetchWeapon";
-import { fetchStreaks } from "@/helpers/fetchStreaks";
-import { fetchAttachments } from "@/helpers/fetchAttachments";
-import { fetchEquipment } from "@/helpers/fetchEquipment";
-import { fetchClassName } from "@/helpers/fetchClassName";
-import { fetchWildcard } from "@/helpers/fetchWildcard";
-//Ops 3
+import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
+import { fetchStreaks } from "@/helpers/fetch/fetchStreaks";
+import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
+import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
+import { fetchClassName } from "@/helpers/fetch/fetchClassName";
+import { fetchWildcard } from "@/helpers/fetch/fetchWildcard";
+//Cold War
 import { fetchPerk } from "@/helpers/generator/cold-war/fetchPerk";
 //Utils
 import { sendEvent } from "@/utils/gtag";

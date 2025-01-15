@@ -1,6 +1,6 @@
 import { getStreakList } from "@/helpers/generator/getStreakList";
 import { isset } from "@/helpers/isset";
-import { randomListItem } from "./randomListItem";
+import { randomListItem } from "../randomListItem";
 
 export function fetchStreaks(
   game: string = "",

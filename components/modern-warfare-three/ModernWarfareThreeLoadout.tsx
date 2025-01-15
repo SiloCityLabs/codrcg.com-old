@@ -3,12 +3,13 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
-import { fetchWeapon } from "@/helpers/fetchWeapon";
+import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
+import { fetchStreaks } from "@/helpers/fetch/fetchStreaks";
+import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
+import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
+import { fetchClassName } from "@/helpers/fetch/fetchClassName";
+//MW3 Specific
 import { fetchPerks } from "@/helpers/generator/modern-warfare-three/fetchPerks";
-import { fetchStreaks } from "@/helpers/fetchStreaks";
-import { fetchAttachments } from "@/helpers/fetchAttachments";
-import { fetchEquipment } from "@/helpers/fetchEquipment";
-import { fetchClassName } from "@/helpers/fetchClassName";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 

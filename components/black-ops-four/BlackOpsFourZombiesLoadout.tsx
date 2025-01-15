@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 //Helpers
-import { fetchWeapon } from "@/helpers/fetchWeapon";
-import { fetchEquipment } from "@/helpers/fetchEquipment";
-import { fetchZombiesMap } from "@/helpers/fetchZombiesMap";
-import { fetchZombiesGobblegum } from "@/helpers/fetchZombiesGobblegum";
-import { fetchZombiesPerks } from "@/helpers/fetchZombiesPerks";
-import { fetchClassName } from "@/helpers/fetchClassName";
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
+import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
+import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
+import { fetchClassName } from "@/helpers/fetch/fetchClassName";
+//Zombies Specific
+import { fetchZombiesMap } from "@/helpers/fetch/zombies/fetchZombiesMap";
+import { fetchZombiesGobblegum } from "@/helpers/fetch/zombies/fetchZombiesGobblegum";
+import { fetchZombiesPerks } from "@/helpers/fetch/zombies/fetchZombiesPerks";
 //Types
 import { Bo4ZombiesSettings } from "@/types/Generator";
 //Components

@@ -4,11 +4,13 @@ import Button from "react-bootstrap/Button";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetchWeapon";
-import { fetchPerks } from "@/helpers/fetchPerks";
 import { fetchStreaks } from "@/helpers/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetchClassName";
+import { fetchWildcard } from "@/helpers/fetchWildcard";
+//Ops 3
+import { fetchPerk } from "@/helpers/generator/cold-war/fetchPerk";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 
@@ -16,7 +18,14 @@ function ColdWarLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
     randClassName: "",
-    perks: null,
+    perks: {
+      perk1: "",
+      perk2: "",
+      perk3: "",
+      perk1Greed: "",
+      perk2Greed: "",
+      perk3Greed: "",
+    },
     streaks: null,
     weapons: {
       primary: {
@@ -33,6 +42,7 @@ function ColdWarLoadout() {
       lethal: { name: "", type: "" },
       field_upgrade: { name: "", type: "" },
     },
+    wildcard: { name: "", type: "" },
   });
 
   useEffect(() => {
@@ -43,7 +53,7 @@ function ColdWarLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { randClassName, perks, streaks, weapons, equipment } = data;
+  const { randClassName, perks, streaks, weapons, equipment, wildcard } = data;
 
   return (
     <>
@@ -100,6 +110,45 @@ function ColdWarLoadout() {
         </Row>
         <hr />
         <Row className="justify-content-md-center">
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Perk 1:</span> <br />
+            <span className="text-muted fs-6">
+              {perks.perk1 ? perks.perk1 : "None"}
+              {perks.perk1Greed ? (
+                <>
+                  <br />
+                  {perks.perk1Greed}
+                </>
+              ) : null}
+            </span>
+          </Col>
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Perk 2:</span> <br />
+            <span className="text-muted fs-6">
+              {perks.perk2 ? perks.perk2 : "None"}
+              {perks.perk2Greed ? (
+                <>
+                  <br />
+                  {perks.perk2Greed}
+                </>
+              ) : null}
+            </span>
+          </Col>
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Perk 3:</span> <br />
+            <span className="text-muted fs-6">
+              {perks.perk3 ? perks.perk3 : "None"}
+              {perks.perk3Greed ? (
+                <>
+                  <br />
+                  {perks.perk3Greed}
+                </>
+              ) : null}
+            </span>
+          </Col>
+        </Row>
+        <hr />
+        <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
             <span className="text-muted fs-6">{equipment.tactical.name}</span>
@@ -108,13 +157,13 @@ function ColdWarLoadout() {
             <span className="fw-bolder fs-5">Lethal:</span> <br />
             <span className="text-muted fs-6">{equipment.lethal.name}</span>
           </Col>
-          <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perks:</span> <br />
-            <span className="text-muted fs-6">{perks}</span>
-          </Col>
         </Row>
         <hr />
         <Row className="mb-5">
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Wildcard:</span> <br />
+            <span className="text-muted fs-6">{wildcard.name}</span>
+          </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
             <span className="text-muted fs-6">
@@ -148,12 +197,40 @@ async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "cold-war";
     const randClassName = fetchClassName();
-    const attachCount = 5;
+    const wildcard = fetchWildcard(game);
+    wildcard.name = "Law Breaker";
+    const isGreed = wildcard.name === "Perk Greed";
+    const isLawBreaker = wildcard.name === "Law Breaker";
+    const primAttachCount = wildcard.name === "Gunfighter" ? 8 : 5;
+    let perk1 = "";
+    let perk2 = "";
+    let perk3 = "";
 
-    const perks = fetchPerks(game);
-    console.log("perks", perks);
+    if (isLawBreaker) {
+      // Check if a slot was found
+      perk1 = fetchPerk("all");
+      perk2 = fetchPerk("all", perk1);
+      perk3 = fetchPerk("all", [perk1, perk2]);
+    } else {
+      perk1 = fetchPerk("perk1");
+      perk2 = fetchPerk("perk2");
+      perk3 = fetchPerk("perk3");
+    }
+
+    const initialPerks = {
+      perk1: perk1,
+      perk2: perk2,
+      perk3: perk3,
+    };
+
+    const perkGreed = {
+      perk1Greed: isGreed ? fetchPerk("perk1", initialPerks.perk1) : "",
+      perk2Greed: isGreed ? fetchPerk("perk2", initialPerks.perk2) : "",
+      perk3Greed: isGreed ? fetchPerk("perk3", initialPerks.perk3) : "",
+    };
+
+    const perks = { ...initialPerks, ...perkGreed };
     const streaks = fetchStreaks(game);
-    console.log("streaks", streaks);
     let weapons = {
       primary: {
         weapon: fetchWeapon("primary", game),
@@ -164,26 +241,28 @@ async function fetchLoadoutData(setData, setContainerClass) {
         attachments: "",
       },
     };
+    //Law Breaker Weapons
+    if (isLawBreaker) {
+      weapons.primary.weapon = fetchWeapon("all", game);
+
+      weapons.secondary.weapon = fetchWeapon(
+        "all",
+        game,
+        weapons.primary.weapon.name
+      );
+    }
+
     //Get Primary Attachments
     if (!weapons.primary.weapon?.no_attach) {
       weapons.primary.attachments = implodeObject(
-        fetchAttachments(weapons.primary.weapon, attachCount)
+        fetchAttachments(weapons.primary.weapon, primAttachCount)
       );
     }
-    //Check for overkill
-    //TODO: Check how overkill is setup
-    // if (perks.includes("Overkill")) {
-    //   weapons.secondary.weapon = fetchWeapon(
-    //     "primary",
-    //     game,
-    //     weapons.primary.weapon.name
-    //   );
-    // }
 
     //Verify if secondary weapon has attachments
     if (!weapons.secondary.weapon?.no_attach) {
       weapons.secondary.attachments = implodeObject(
-        fetchAttachments(weapons.secondary.weapon, attachCount)
+        fetchAttachments(weapons.secondary.weapon)
       );
     }
     let equipment = {
@@ -191,6 +270,10 @@ async function fetchLoadoutData(setData, setContainerClass) {
       lethal: fetchEquipment("lethal", game),
       field_upgrade: fetchEquipment("field_upgrade", game),
     };
+    //Danger Close Check
+
+    equipment.tactical.name += wildcard.name == "Danger Close" ? " x2" : "";
+    equipment.lethal.name += wildcard.name == "Danger Close" ? " x2" : "";
 
     setData({
       randClassName,
@@ -198,6 +281,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       streaks,
       weapons,
       equipment,
+      wildcard,
     });
     setContainerClass("");
   } catch (error: any) {

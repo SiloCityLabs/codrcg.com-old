@@ -9,7 +9,7 @@
     "name": "Law Breaker",
     "type": "Wildcard",
     "game": "cold-war",
-    "description": "Equip any weapon class in either slot. Equip multiple perks from on Perk Category."
+    "description": "Equip any weapon class in either slot. Equip multiple perks from one Perk Category."
   },
   {
     "name": "Gunfighter",

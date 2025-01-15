@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-// import ColdWarLoadout from "@/components/cold-war/ColdWarLoadout";
+import ColdWarLoadout from "@/components/cold-war/ColdWarLoadout";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
@@ -9,6 +9,7 @@ export default function ColdWar() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Zombies Generator", href: "/cold-war/zombies-generator" },
+    { label: "Loadout Info", href: "/cold-war/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -35,7 +36,7 @@ export default function ColdWar() {
           <Col>
             <h2>Cold War - Random Class Generator</h2>
 
-            {/* <ColdWarLoadout /> */}
+            <ColdWarLoadout />
           </Col>
         </Row>
       </Container>

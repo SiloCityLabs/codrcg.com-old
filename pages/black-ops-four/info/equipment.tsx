@@ -9,7 +9,7 @@ import { getEquipment } from "@/helpers/info/getEquipment";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsSixEquipment() {
+export default function BlackOpsFourEquipment() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops-four/generator" },

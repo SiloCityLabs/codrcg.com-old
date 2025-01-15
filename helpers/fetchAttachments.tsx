@@ -2,6 +2,7 @@ import { getBO6Attachments } from "./generator/black-ops-six/getBO6Attachments";
 import { getMW3Attachments } from "./generator/modern-warfare-three/getMW3Attachments";
 import { getMW2Attachments } from "./generator/modern-warfare-two/getMW2Attachments";
 import { getVanguardAttachments } from "./generator/vanguard/getVanguardAttachments";
+import { getColdWarAttachments } from "./generator/cold-war/getColdWarAttachments";
 //Types
 import { Weapon } from "@/types/Generator";
 
@@ -13,9 +14,14 @@ const attachmentGetters: Record<
   "modern-warfare-three": getMW3Attachments,
   "modern-warfare-two": getMW2Attachments,
   vanguard: getVanguardAttachments,
+  "cold-war": getColdWarAttachments,
 };
 
 export function fetchAttachments(weapon: Weapon, count: number = 5): any {
+  if (weapon?.no_attach_info) {
+    return [`No attachment info. Randomly select ${count}.`];
+  }
+
   const gun = weapon.name.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
   const getAttachments = attachmentGetters[weapon.game];
 

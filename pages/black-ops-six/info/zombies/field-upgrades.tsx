@@ -32,11 +32,11 @@ export default function BlackOpsSixZombiesArtifacts() {
   return (
     <>
       <Head>
-        <title>Black Ops 6 Zombies Artifacts</title>
+        <title>Black Ops 6 Zombies Field Upgrades</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="View all zombies artifacts in Black Ops 6."
+          content="View all zombies field upgrades in Black Ops 6."
         />
         <meta
           name="keywords"
@@ -50,7 +50,7 @@ export default function BlackOpsSixZombiesArtifacts() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 6 - Zombies Artifacts</h2>
+            <h2>Black Ops 6 - Zombies Field Upgrades</h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

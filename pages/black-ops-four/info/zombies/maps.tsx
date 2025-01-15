@@ -9,7 +9,7 @@ import { getZombiesMaps } from "@/helpers/info/getZombiesMaps";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsSixZombiesMaps() {
+export default function BlackOpsFourZombiesMaps() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops-four/generator" },

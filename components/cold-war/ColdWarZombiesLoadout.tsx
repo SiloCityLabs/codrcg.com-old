@@ -5,8 +5,8 @@ import Button from "react-bootstrap/Button";
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetchAttachments";
-import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchZombiesMap } from "@/helpers/fetchZombiesMap";
+import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetchClassName";
 //Utils
 import { sendEvent } from "@/utils/gtag";
@@ -24,8 +24,8 @@ function VanguardZombiesLoadout() {
         attachments: "",
       },
     },
-    artifact: "",
-    zombieMap: "",
+    field_upgrade: "",
+    zombieMap: { name: "", type: "", mode: "", game: "" },
   });
 
   useEffect(() => {
@@ -37,7 +37,7 @@ function VanguardZombiesLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { randClassName, weapons, artifact, zombieMap } = data;
+  const { randClassName, weapons, field_upgrade, zombieMap } = data;
 
   if (isLoading) {
     return <div className="text-center">Loading...</div>;
@@ -76,13 +76,17 @@ function VanguardZombiesLoadout() {
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
-          <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Artifact:</span> <br />
-            <span className="text-muted fs-6">{artifact}</span>
+          <Col xs="12" md="4" lg="3" className="text-center mb-2">
+            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
+            <span className="text-muted fs-6">{field_upgrade}</span>
           </Col>
-          <Col xs md="4" lg="3" className="text-center">
+          <Col xs="12" md="4" lg="3" className="text-center mb-2">
+            <span className="fw-bolder fs-5">Mode:</span> <br />
+            <span className="text-muted fs-6">{zombieMap.mode}</span>
+          </Col>
+          <Col xs="12" md="4" lg="3" className="text-center mb-2">
             <span className="fw-bolder fs-5">Map:</span> <br />
-            <span className="text-muted fs-6">{zombieMap}</span>
+            <span className="text-muted fs-6">{zombieMap.name}</span>
           </Col>
         </Row>
         <Row className="justify-content-md-center">
@@ -103,17 +107,17 @@ function VanguardZombiesLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   sendEvent("button_click", {
-    button_id: "vanguardZombies_fetchLoadoutData",
-    label: "VanguardZombies",
+    button_id: "coldWarZombies_fetchLoadoutData",
+    label: "ColdWarZombies",
     category: "COD_Loadouts",
   });
 
   try {
-    const game = "vanguard-zombies";
+    const game = "cold-war-zombies";
     const randClassName = fetchClassName();
     const weapons = {
       primary: {
-        weapon: fetchWeapon("all", "vanguard"),
+        weapon: fetchWeapon("all", "cold-war"),
         attachments: "",
       },
     };
@@ -123,13 +127,13 @@ async function fetchLoadoutData(setData, setContainerClass) {
         fetchAttachments(weapons.primary.weapon, 8)
       );
     }
-    const artifact = fetchEquipment("field_upgrade", game).name;
-    const zombieMap = fetchZombiesMap(game).name;
+    const field_upgrade = fetchEquipment("field_upgrade", game).name;
+    const zombieMap = fetchZombiesMap(game);
 
     setData({
       randClassName,
       weapons,
-      artifact,
+      field_upgrade,
       zombieMap,
     });
     setContainerClass("");

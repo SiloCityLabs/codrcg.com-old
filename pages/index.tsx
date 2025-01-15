@@ -57,14 +57,14 @@ export default function Home() {
     },
     {
       title: "Cold War",
-      text: "Coming in 2025",
+      text: "",
       variant: "danger",
       btn1Text: "Multiplayer Generator",
       link: "cold-war/generator",
-      disabled: true,
+      disabled: false,
       btn2Text: "Zombies Generator",
       link2: "cold-war/zombies-generator",
-      disabled2: true,
+      disabled2: false,
     },
     {
       title: "Black Ops IV",

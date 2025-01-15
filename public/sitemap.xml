@@ -144,6 +144,37 @@
 	<url>
 		<loc>https://codrcg.com/black-ops-three/generator</loc>
 	</url>
+	<!-- Cold War -->
+	<url>
+		<loc>https://codrcg.com/cold-war/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/cold-war/zombies-generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/cold-war/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/cold-war/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/cold-war/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/cold-war/info/streaks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/cold-war/info/weapons</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/cold-war/info/wildcards</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/cold-war/info/zombies/maps</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/cold-war/info/zombies/field-upgrades</loc>
+	</url>
 	<!-- <url>
 		<loc>https://codrcg.com/contactus</loc>
 	</url>

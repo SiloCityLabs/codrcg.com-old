@@ -1,27 +1,40 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
+//Components
 import Header from "@/components/Header";
-import ColdWarZombiesLoadout from "@/components/cold-war/ColdWarZombiesLoadout";
+import InfoList from "@/components/info/InfoList";
+//Helpers
+import { getWildcards } from "@/helpers/info/getWildcards";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function ColdWarZombies() {
+export default function ColdWarWildcards() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/cold-war/generator" },
+    { label: "Zombies Generator", href: "/cold-war/zombies-generator" },
     { label: "Loadout Info", href: "/cold-war/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState({});
+  const dataKeys = ["name", "description", "type", "game"];
+
+  useEffect(() => {
+    const dataList = getWildcards("cold-war");
+    setData(dataList);
+
+    setIsLoading(false);
+  }, []);
+
   return (
     <>
       <Head>
-        <title>Cold War Zombies Random Class Generator</title>
+        <title>Cold War Wildcards</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="Spice up your COD Zombies gameplay! Generate unique random loadouts for Call of Duty Cold War Zombies. Discover new weapons, perks, and gear combinations."
-        />
+        <meta name="description" content="View all wildcards in Cold War." />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
@@ -34,9 +47,9 @@ export default function ColdWarZombies() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Cold War Zombies - Random Class Generator</h2>
+            <h2>Cold War - Wildcards</h2>
 
-            <ColdWarZombiesLoadout />
+            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>
         </Row>
       </Container>

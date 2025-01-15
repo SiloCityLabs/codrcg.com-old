@@ -1,26 +1,42 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
+//Components
 import Header from "@/components/Header";
-import ColdWarZombiesLoadout from "@/components/cold-war/ColdWarZombiesLoadout";
+import InfoList from "@/components/info/InfoList";
+//Helpers
+import { getWeapon } from "@/helpers/info/getWeapon";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function ColdWarZombies() {
+export default function ColdWarWeapons() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/cold-war/generator" },
+    { label: "Zombies Generator", href: "/cold-war/zombies-generator" },
     { label: "Loadout Info", href: "/cold-war/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState({});
+  const dataKeys = ["name", "type", "game", "no_attach"];
+
+  useEffect(() => {
+    const dataList = getWeapon("cold-war");
+    setData(dataList);
+
+    setIsLoading(false);
+  }, []);
+
   return (
     <>
       <Head>
-        <title>Cold War Zombies Random Class Generator</title>
+        <title>Cold War Weapons</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Spice up your COD Zombies gameplay! Generate unique random loadouts for Call of Duty Cold War Zombies. Discover new weapons, perks, and gear combinations."
+          content="View information for weapons in Cold War. View all attachments."
         />
         <meta
           name="keywords"
@@ -34,9 +50,9 @@ export default function ColdWarZombies() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Cold War Zombies - Random Class Generator</h2>
+            <h2>Cold War - Weapons</h2>
 
-            <ColdWarZombiesLoadout />
+            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>
         </Row>
       </Container>

@@ -1,0 +1,207 @@
+[
+    {
+        "name": "Dead Wire",
+        "description": "Bullets deal electric damage. Each bullet has a chance to stun a normal or special enemy, causing them to generate an electric damage field.",
+        "major": [
+            {
+                "name": "Chain Lightning",
+                "description": "The stunned enemy can spread the stun to others."
+            },
+            {
+                "name": "Big Game",
+                "description": "Dead wire can stun elite enemies."
+            },
+            {
+                "name": "Lightning Strike",
+                "description": "A bolt of lightning strikes from above, stunning all normal & special enemies in the area."
+            }
+        ],
+        "minor": [
+            {
+                "name": "High Voltage",
+                "description": "Dead wire deal slightly more damage."
+            },
+            {
+                "name": "Haste",
+                "description": "Dead wire cooldown is slightly reduced."
+            },
+            {
+                "name": "Extension",
+                "description": "The stun & electric field last longer."
+            }
+        ],
+        "type": "Ammo Mods",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Napalm Burst",
+        "description": "Bullets deal fire damage. Each bullet has a chance to apply a burn effect on normal & special enemies, dealing damage over time.",
+        "major": [
+            {
+                "name": "Big Game",
+                "description": "Napalm burst can burn elite enemies"
+            },
+            {
+                "name": "Thermite",
+                "description": "Increase burn effect damage."
+            },
+            {
+                "name": "Firebomb",
+                "description": "Burned enemies explode on death, spreading the fire to neaby enemies."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Extension",
+                "description": "Increase the burn duration."
+            },
+            {
+                "name": "Incendiary",
+                "description": "Each damage tick has a small chance to spread to a nearby enemy."
+            },
+            {
+                "name": "Contact Burn",
+                "description": "Initial burn effect deals more damage."
+            }
+        ],
+        "type": "Ammo Mods",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Cryo Freeze",
+        "description": "Bullets deal frost damage. Each bullet has a chance to slow a normal or special enemy and increase the damage they recieve.",
+        "major": [
+            {
+                "name": "Big Game",
+                "description": "Cryo freeze can slow elite enemies."
+            },
+            {
+                "name": "Ice Cloud",
+                "description": "Enemies that are killed while frozen may leave a cloud that slows enemies."
+            },
+            {
+                "name": "Frozen Stiff",
+                "description": "Enemies are frozen in place."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Extension",
+                "description": "Slightly increase the slow duration."
+            },
+            {
+                "name": "Freezer Burn",
+                "description": "Slightly increase damage to frozen enemies."
+            },
+            {
+                "name": "Liquid Nitrogen",
+                "description": "Significantly increase your chance for Cryo freeze to activate."
+            }
+        ],
+        "type": "Ammo Mods",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Brain Rot",
+        "description": "Bullets deal toxic damage. Each bullet has a chance to turn a normal or special enemy into an ally.",
+        "major": [
+            {
+                "name": "Plague",
+                "description": "The charmed enemy has a chance to turn other enemies"
+            },
+            {
+                "name": "Pheromone",
+                "description": "The charmed enemy distracts nearby normal & special enemies for a short time."
+            },
+            {
+                "name": "Big Game",
+                "description": "Brain rot can charm elite enemies."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Extension",
+                "description": "Brain rot duration is slightly increased."
+            },
+            {
+                "name": "Haste",
+                "description": "Brain rot cooldown is slightly reduced."
+            },
+            {
+                "name": "Explosive",
+                "description": "Charmed enemies explode at the end of Brain rots duration, dealing toxic damage."
+            }
+        ],
+        "type": "Ammo Mods",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Shadow Rift",
+        "description": "Bullets deal shadow damage. Each bullet has a chance to spawn a black hole on a normal or special enemy, warping some away & dropping others from the air.",
+        "major": [
+            {
+                "name": "Big Game",
+                "description": "Shadow rift can activate on elite enemies."
+            },
+            {
+                "name": "Topple Danger",
+                "description": "Warp 1 enemy that deals shadow damage to others neaby. Normal enemies are knocked down while special enemies are stunned."
+            },
+            {
+                "name": "Explosive Rain",
+                "description": "Enemies that are dropped from portals will explode on contact with the ground."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Haste",
+                "description": "Shadow rift cooldown is reduced."
+            },
+            {
+                "name": "Targeted",
+                "description": "Dropped enemies will fall on other enemies."
+            },
+            {
+                "name": "Supermassive",
+                "description": "The singularitys lethal radius is increased & can kill more enemies."
+            }
+        ],
+        "type": "Ammo Mods",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Light Mend",
+        "description": "Bullets deal light damage. Each bullet has a chance to transform a normal or special enemy into a healing glyph that moves to nearby injured allies.",
+        "major": [
+            {
+                "name": "Antibiotic",
+                "description": "The healing glyph now damages enemies that touch it, but its lifetime is reduced."
+            },
+            {
+                "name": "Big Game",
+                "description": "Light mend can activate on elite enemies, dropping 3 more healing glyphs."
+            },
+            {
+                "name": "Dual Action",
+                "description": "Consuming a healing glyph will temporarily allow you to heal faster."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Longer Life",
+                "description": "The healing glyph's lifetime is increased."
+            },
+            {
+                "name": "Extra Strength",
+                "description": "The healing glyph replenishes more health when consumed."
+            },
+            {
+                "name": "Express Remedy",
+                "description": "Increase the range that the glyph will move to an ally."
+            }
+        ],
+        "type": "Ammo Mods",
+        "game": "black-ops-six",
+        "isDlc": true
+    }
+]

@@ -8,26 +8,29 @@ import { fetchEquipment } from "@/helpers/fetchEquipment";
 import { fetchZombiesAmmoMod } from "@/helpers/fetchZombiesAmmoMod";
 import { fetchZombiesMap } from "@/helpers/fetchZombiesMap";
 import { fetchZombiesGobblegum } from "@/helpers/fetchZombiesGobblegum";
+import { fetchZombiesAugments } from "@/helpers/fetchZombiesAugments";
 import { fetchClassName } from "@/helpers/fetchClassName";
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
 //Types
-import { ZombiesSettings } from "@/types/Generator";
+import { Bo6ZombiesSettings } from "@/types/Generator";
 //Components
 import CustomModal from "@/components/bootstrap/CustomModal";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 
-const defaultSettings: ZombiesSettings = {
+const defaultSettings: Bo6ZombiesSettings = {
   rollMap: true,
   rollGobblegum: true,
+  rollAugments: true,
 };
 
 function BlackOpsSixZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
   const [containerClass, setContainerClass] = useState("hidden");
   //Settings
-  const [settings, setSettings] = useState<ZombiesSettings>(defaultSettings);
+  const [settings, setSettings] = useState<Bo6ZombiesSettings>(defaultSettings);
   const [rollMap, setRollMap] = useState(settings.rollMap);
+  const [rollAugments, setRollAugments] = useState(settings.rollAugments);
   const [rollGobblegum, setRollGobblegum] = useState(settings.rollGobblegum);
   const [showModal, setShowModal] = useState(false);
 
@@ -49,6 +52,7 @@ function BlackOpsSixZombiesLoadout() {
     },
     gobblegum: "",
     zombieMap: "",
+    augments: { "0": { name: "", major: "", minor: "" } },
   });
 
   useEffect(() => {
@@ -58,6 +62,7 @@ function BlackOpsSixZombiesLoadout() {
     setSettings(completeSettings);
     setRollMap(completeSettings.rollMap);
     setRollGobblegum(completeSettings.rollGobblegum);
+    setRollAugments(completeSettings.rollAugments);
 
     fetchLoadoutData(setData, setContainerClass);
 
@@ -88,8 +93,16 @@ function BlackOpsSixZombiesLoadout() {
       rollGobblegum: event.target.checked,
     });
   };
+  const handleRollAugmentsChange = (event) => {
+    setRollAugments(event.target.checked);
+    setSettings({
+      ...settings,
+      rollAugments: event.target.checked,
+    });
+  };
 
-  const { randClassName, weapons, equipment, gobblegum, zombieMap } = data;
+  const { randClassName, weapons, equipment, gobblegum, zombieMap, augments } =
+    data;
 
   if (isLoading) {
     return <div className="text-center">Loading...</div>;
@@ -132,24 +145,21 @@ function BlackOpsSixZombiesLoadout() {
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
-          <Col xs md="4" lg="3" className="text-center">
+          <Col xs={6} sm={6} md="3" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Melee:</span> <br />
             <span className="text-muted fs-6">{weapons.melee.name}</span>
           </Col>
-          <Col xs md="4" lg="3" className="text-center">
+          <Col xs={6} sm={6} md="3" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
             <span className="text-muted fs-6">
               {equipment.fieldUpgrade.name}
             </span>
           </Col>
-        </Row>
-        <hr />
-        <Row className="justify-content-md-center mb-4">
-          <Col xs md="4" lg="3" className="text-center">
+          <Col xs={6} md="3" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
             <span className="text-muted fs-6">{equipment.tactial.name}</span>
           </Col>
-          <Col xs md="4" lg="3" className="text-center">
+          <Col xs={6} md="3" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
             <span className="text-muted fs-6">{equipment.lethal.name}</span>
           </Col>
@@ -169,6 +179,34 @@ function BlackOpsSixZombiesLoadout() {
             </Col>
           )}
         </Row>
+        {rollAugments && (
+          <>
+            <hr />
+            <Row className="mb-4">
+              {Object.values(augments).map((item) => (
+                <Col
+                  key={item?.name}
+                  xs={12}
+                  md="4"
+                  lg="3"
+                  className="text-center mb-3"
+                >
+                  <span className="fw-bolder fs-5">{item?.name}:</span>
+                  <br />
+                  <span className="text-muted fs-6">
+                    <span className="fw-bolder">Major Augment:</span>{" "}
+                    {item?.major}
+                  </span>
+                  <br />
+                  <span className="text-muted fs-6">
+                    <span className="fw-bolder">Minor Augment:</span>{" "}
+                    {item?.minor}
+                  </span>
+                </Col>
+              ))}
+            </Row>
+          </>
+        )}
         <Row className="justify-content-md-center">
           <Col xs md="8" lg="6" className="text-center">
             <div className="d-flex justify-content-center">
@@ -217,6 +255,15 @@ function BlackOpsSixZombiesLoadout() {
               checked={rollGobblegum}
             />
           </Col>
+          <Col>
+            <Form.Label htmlFor="rollAugments">Roll Augments:</Form.Label>
+            <Form.Check
+              type="switch"
+              id="rollAugments"
+              onChange={handleRollAugmentsChange}
+              checked={rollAugments}
+            />
+          </Col>
         </Row>
       </CustomModal>
     </>
@@ -254,6 +301,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     };
     const gobblegum = fetchZombiesGobblegum(game);
     const zombieMap = fetchZombiesMap(game).name;
+    const augments = fetchZombiesAugments(game);
 
     setData({
       randClassName,
@@ -261,6 +309,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       equipment,
       gobblegum,
       zombieMap,
+      augments,
     });
     setContainerClass("");
   } catch (error: any) {

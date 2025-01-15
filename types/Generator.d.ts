@@ -62,6 +62,21 @@ export type AmmoMod = {
   isDlc: boolean;
 };
 
+export type Augment = {
+  name: string;
+  description: string;
+  major: Augments[];
+  minor: Augments[];
+  type: string;
+  game: string;
+  isDlc: boolean;
+};
+
+export type Augments = {
+  name: string;
+  description: string;
+};
+
 export type Gobblegum = {
   name: string;
   type: string;
@@ -81,9 +96,10 @@ export type MW3Vest = {
   game: string;
 };
 
-export type ZombiesSettings = {
+export type Bo6ZombiesSettings = {
   rollMap: boolean;
   rollGobblegum: boolean;
+  rollAugments: boolean;
 };
 
 export type Bo4ZombiesSettings = {

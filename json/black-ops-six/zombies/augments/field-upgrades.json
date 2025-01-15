@@ -1,0 +1,207 @@
+[
+    {
+        "name": "Energy Mine",
+        "description": "Create a mine of pure energy that detonates 3x, dealing lethal damage.",
+        "major": [
+            {
+                "name": "Scatter",
+                "description": "The energy mine will split into 3 mines that scatter & detonate 1 time each."
+            },
+            {
+                "name": "Turret",
+                "description": "Instead of detonating, energy mine becomes a turret that shoots target one at a time."
+            },
+            {
+                "name": "Carousel",
+                "description": "3 energy mines will float around you, detonating when an enemy is nearby."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Frequency Boost",
+                "description": "Increase detonation count & duration of energy mine."
+            },
+            {
+                "name": "Extra Charge",
+                "description": "Increase max charges by 1."
+            },
+            {
+                "name": "Siren",
+                "description": "Energy mine now attracts nearby normal enemies for a short time."
+            }
+        ],
+        "type": "Field Upgrade",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Frenzied Guard",
+        "description": "Repair armor to full & force all enemies in the area to temporarily target you. Armor takes all damage during this time & kills repair armor.",
+        "major": [
+            {
+                "name": "Phalanx",
+                "description": "Allies can also repair armor from kills while near you."
+            },
+            {
+                "name": "Retribution",
+                "description": "Trigger an explosion on activation. Normal enemies that melee you are damaged & knocked down."
+            },
+            {
+                "name": "Frenzy Fire",
+                "description": "Use ammo from stock."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Repair Boost",
+                "description": "Repair more armor per kill."
+            },
+            {
+                "name": "Extension",
+                "description": "Increase Frenzied guard duration."
+            },
+            {
+                "name": "Rally",
+                "description": "On activation, repair all nearby allies' armor to full"
+            }
+        ],
+        "type": "Field Upgrade",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Dark Flare",
+        "description": "Generate an energy beam that deals lethal shadow damage & penetrates everything in its path.",
+        "major": [
+            {
+                "name": "Extension",
+                "description": "Significantly increase Dark flare duration."
+            },
+            {
+                "name": "Supernova",
+                "description": "The beam is replaced with a sphere that damages nearby enemies as it travels. The ball detonates at the end of Dark flares duration."
+            },
+            {
+                "name": "Dark Pact",
+                "description": "Beam heals & revives other players on contact."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Broad Beam",
+                "description": "Significantly increases the size of the beam."
+            },
+            {
+                "name": "Heavy Shadow",
+                "description": "The beam slows enemies on contact."
+            },
+            {
+                "name": "Extra Charge",
+                "description": "Increase max charges by 1."
+            }
+        ],
+        "type": "Field Upgrade",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Healing Aura",
+        "description": "Heal all nearby players immediately.",
+        "major": [
+            {
+                "name": "Resilience",
+                "description": "All affected players have their health regen delay reduced & their rate of healing increased temporarily."
+            },
+            {
+                "name": "Enduring Radiance",
+                "description": "The beams & their healing effects persist for a short time after leaving the area of effect."
+            },
+            {
+                "name": "Persistence",
+                "description": "Revived players keep all perks on their bleed-out bar."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Inner Strength",
+                "description": "Affected player damage is slightly increased for a short time."
+            },
+            {
+                "name": "Protection",
+                "description": "Healed players have damage slightly mitigated for a short time."
+            },
+            {
+                "name": "Stoic Presence",
+                "description": "On activation, special & elite enemies are stunned while normal enemies are knocked down."
+            }
+        ],
+        "type": "Field Upgrade",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Aether Shroud",
+        "description": "Phase into the dark aether & become temporarily hidden from enemy detection.",
+        "major": [
+            {
+                "name": "Group Shroud",
+                "description": "Nearby players are also cloaked."
+            },
+            {
+                "name": "Burst Dash",
+                "description": "Warp forward a short distance, killing all normal enemies in your path."
+            },
+            {
+                "name": "Void Sheath",
+                "description": "Swap to your dedicated melee weapon as its imbued with dark aether energy. Kills allow you to stay in Aether shroud for longer."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Instand Reload",
+                "description": "Activation instantly reloads your currently held weapon."
+            },
+            {
+                "name": "Extra Charge",
+                "description": "Increase max charges by 1."
+            },
+            {
+                "name": "Extension",
+                "description": "Aether shroud duration is significantly increased."
+            }
+        ],
+        "type": "Field Upgrade",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Tesla Storm",
+        "description": "For 10 seconds lightning connects to other players, stunning & damaging normal enemies.",
+        "major": [
+            {
+                "name": "Transformer",
+                "description": "The fields damage is increased by the number of allies that are connected."
+            },
+            {
+                "name": "Shockwave",
+                "description": "On activation, stun & damage all nearby enemies."
+            },
+            {
+                "name": "Static Discharge",
+                "description": "On activation, create a lethal surge of electricity around you."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Power Grid",
+                "description": "Increase the range the electric tether can connect to allies"
+            },
+            {
+                "name": "Overclocked",
+                "description": "Your movement speed is increased during Tesla storm."
+            },
+            {
+                "name": "Lithium Charged",
+                "description": "Increase Tesla storm duration."
+            }
+        ],
+        "type": "Field Upgrade",
+        "game": "black-ops-six",
+        "isDlc": true
+    }
+]

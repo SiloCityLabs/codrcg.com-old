@@ -14,6 +14,8 @@ export type InfoData = {
   story?: string;
   equipment?: string;
   weapon?: string;
+  minor?: string;
+  major?: string;
   no_attach?: boolean;
   isDlc?: boolean;
 };

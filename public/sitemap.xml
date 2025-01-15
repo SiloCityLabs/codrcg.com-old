@@ -47,6 +47,9 @@
 		<loc>https://codrcg.com/black-ops-six/info/wildcards</loc>
 	</url>
 	<url>
+		<loc>https://codrcg.com/black-ops-six/info/zombies/augments</loc>
+	</url>
+	<url>
 		<loc>https://codrcg.com/black-ops-six/info/zombies/ammo-mods</loc>
 	</url>
 	<url>
@@ -124,6 +127,18 @@
 	</url>
 	<url>
 		<loc>https://codrcg.com/black-ops-four/info/wildcards</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-four/info/zombies/elixers</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-four/info/zombies/maps</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-four/info/zombies/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops-four/info/zombies/talismans</loc>
 	</url>
 	<!-- Black Ops 3 -->
 	<url>

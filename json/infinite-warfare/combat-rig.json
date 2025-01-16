@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Warfighter",
+        "type": "Combat Rig",
+        "game": "infinite-warfare",
+        "payload": [
+            "Claw",
+            "Combat Focus",
+            "Overdrive"
+        ],
+        "trait": [
+            "Ping",
+            "Persistence",
+            "Resupply"
+        ]
+    },
+    {
+        "name": "Merc",
+        "type": "Combat Rig",
+        "game": "infinite-warfare",
+        "payload": [
+            "Steel Dragon",
+            "Bull Charge",
+            "Reactive Armor"
+        ],
+        "trait": [
+            "Infusion",
+            "Man-at-Arms",
+            "Shockwave"
+        ]
+    },
+    {
+        "name": "Synaptic",
+        "type": "Combat Rig",
+        "game": "infinite-warfare",
+        "payload": [
+            "Equalizer",
+            "Rewind",
+            "Reaper"
+        ],
+        "trait": [
+            "Combat Burst",
+            "Propulsion",
+            "Rushdown"
+        ]
+    },
+    {
+        "name": "FTL",
+        "type": "Combat Rig",
+        "game": "infinite-warfare",
+        "payload": [
+            "Eraser",
+            "FTL Jump",
+            "Phase Shift"
+        ],
+        "trait": [
+            "Supercharge",
+            "Perception",
+            "Power Slide"
+        ]
+    },
+    {
+        "name": "Stryker",
+        "type": "Combat Rig",
+        "game": "infinite-warfare",
+        "payload": [
+            "Gravity Vortex Gun",
+            "Micro Turret",
+            "Centurion"
+        ],
+        "trait": [
+            "Relay",
+            "Trophy Drone",
+            "Hardened"
+        ]
+    },
+    {
+        "name": "Phantom",
+        "type": "Combat Rig",
+        "game": "infinite-warfare",
+        "payload": [
+            "Ballista EM3",
+            "Pulsar",
+            "Active Camo"
+        ],
+        "trait": [
+            "Marked Target",
+            "Rearguard",
+            "Heightened Senses"
+        ]
+    }
+]

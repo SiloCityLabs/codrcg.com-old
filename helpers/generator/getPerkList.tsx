@@ -10,9 +10,9 @@ import vanguardPerk1List from "@/json/vanguard/perk/perk1.json";
 import vanguardPerk2List from "@/json/vanguard/perk/perk2.json";
 import vanguardPerk3List from "@/json/vanguard/perk/perk3.json";
 //Black Ops 4
-import bo4Perk1List from "@/json/black-ops-four/perks/perk1.json";
-import bo4Perk2List from "@/json/black-ops-four/perks/perk2.json";
-import bo4Perk3List from "@/json/black-ops-four/perks/perk3.json";
+import bo4Perk1List from "@/json/black-ops-four/perk/perk1.json";
+import bo4Perk2List from "@/json/black-ops-four/perk/perk2.json";
+import bo4Perk3List from "@/json/black-ops-four/perk/perk3.json";
 //Black Ops 4 Zombies
 import bo4ZombiesList from "@/json/black-ops-four/zombies/perks.json";
 //Cold War

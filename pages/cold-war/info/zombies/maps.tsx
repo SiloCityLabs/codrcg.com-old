@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getZombiesMaps } from "@/helpers/info/getZombiesMaps";
+import { getZombiesMaps } from "@/helpers/info/zombies/getZombiesMaps";
 //Styles
 import "@/public/styles/components/Loadout.css";
 

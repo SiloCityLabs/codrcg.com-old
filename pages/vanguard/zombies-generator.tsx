@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-import VanguardZombiesLoadout from "@/components/vanguard/VanguardZombiesLoadout";
+import VanguardZombiesLoadout from "@/components/generators/vanguard/VanguardZombiesLoadout";
 //Styles
 import "@/public/styles/components/Loadout.css";
 

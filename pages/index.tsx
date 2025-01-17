@@ -78,6 +78,17 @@ export default function Home() {
       disabled2: false,
     },
     {
+      title: "World War II",
+      text: "Coming in 2025",
+      variant: "ww2",
+      btn1Text: "Multiplayer Generator",
+      link: "world-war-two/generator",
+      disabled: true,
+      btn2Text: "Zombies Generator",
+      link2: "world-war-two/zombies-generator",
+      disabled2: true,
+    },
+    {
       title: "Infinite Warfare",
       text: "Coming in 2025",
       variant: "infinite-warfare",

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "MK 2 Fragmentation",
+    "type": "Lethal",
+    "game": "world-war-two"
+  },
+  {
+    "name": "N 74 ST",
+    "type": "Lethal",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Throwing Knife",
+    "type": "Lethal",
+    "game": "world-war-two"
+  },
+  {
+    "name": "S-Mine 44",
+    "type": "Lethal",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Satchel Charge",
+    "type": "Lethal",
+    "game": "world-war-two"
+  }
+]

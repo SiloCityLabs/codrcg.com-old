@@ -1,0 +1,212 @@
+[
+    {
+        "name": "Espionage",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Launched",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Requisitions",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Saboteur",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Clandestine",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Blitzkrieg",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Escalation",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Wanderlust",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Catalyst",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Instincts",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Rifleman",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Hustle",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Lookout",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Gunslinger",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Ordnance",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Undercover",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Serrated",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Duelist",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Forage",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Flanker",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Scoped",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Energetic",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Hunker",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Inconspicuous",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Concussed",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Shifty",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Specialist",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Remedy",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Danger Close",
+        "type": "Basic Training",
+        "training_type": "Throwback",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Commando Pro",
+        "type": "Basic Training",
+        "training_type": "Throwback",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Double Tap",
+        "type": "Basic Training",
+        "training_type": "Throwback",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Martydom",
+        "type": "Basic Training",
+        "training_type": "Throwback",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Stun x3",
+        "type": "Basic Training",
+        "training_type": "Throwback",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Stopping Power",
+        "type": "Basic Training",
+        "training_type": "Throwback",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Juggernaut",
+        "type": "Basic Training",
+        "training_type": "Throwback",
+        "game": "world-war-two"
+    }
+]

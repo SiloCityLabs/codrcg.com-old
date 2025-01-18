@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import WheelComponent from "react-wheel-of-prizes-react19";
+//Json
+import urzikstanSpots from "@/json/warzone/drop_spots/urzikstan.json";
 
 function WarzoneDropSpot() {
   const [isClient, setIsClient] = useState(false);
-  const [spinResult, setSpinResult] = useState("");
+  const [spinResult, setSpinResult] = useState("None");
   const segments = [
     "Test 1",
     "Test 2",
@@ -49,27 +51,31 @@ function WarzoneDropSpot() {
         id="where-we-dropping"
         className={`shadow-lg p-3 bg-body rounded`}
       >
-        <h3 className="text-center mb-5">Where We Droppin?</h3>
-
-        {isClient && (
-          <>
-            <span>Winner: {spinResult}</span>
-            <WheelComponent
-              segments={segments}
-              segColors={segColors}
-              winningSegment="Test 1"
-              onFinished={(winner) => onFinished(winner)}
-              primaryColor="black"
-              contrastColor="white"
-              buttonText="Spin"
-              isOnlyOnce={false}
-              size={290}
-              upDuration={300}
-              downDuration={1000}
-              randomWinningSegment={true}
-            />
-          </>
-        )}
+        <Row className="justify-content-md-center">
+          <Col lg={12} className="d-flex justify-content-center">
+            {isClient && (
+              <>
+                <span className="fw-bold">Winner: </span>
+                {"  "}
+                <span> {spinResult}</span>
+                <WheelComponent
+                  segments={urzikstanSpots}
+                  segColors={segColors}
+                  winningSegment="Test 1"
+                  onFinished={(winner) => onFinished(winner)}
+                  primaryColor="black"
+                  contrastColor="white"
+                  buttonText="Spin"
+                  isOnlyOnce={false}
+                  size={300}
+                  upDuration={200}
+                  downDuration={600}
+                  randomWinningSegment={true}
+                />
+              </>
+            )}
+          </Col>
+        </Row>
       </Container>
     </>
   );

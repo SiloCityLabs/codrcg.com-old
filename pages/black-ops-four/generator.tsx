@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-import BlackOpsFourLoadout from "@/components/generators/black-ops-four/BlackOpsFourLoadout";
+import BlackOpsFourLoadout from "@/components/generators/black-ops/four/BlackOpsFourLoadout";
 //Styles
 import "@/public/styles/components/Loadout.css";
 

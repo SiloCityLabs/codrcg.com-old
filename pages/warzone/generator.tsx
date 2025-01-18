@@ -8,7 +8,7 @@ import "@/public/styles/components/Loadout.css";
 export default function Warzone() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Where We Droppin?", href: "/warzone/where-we-droppin" },
+    // { label: "Where We Droppin?", href: "/warzone/where-we-droppin" },
     { label: "Changelog", href: "/changelog" },
   ];
 

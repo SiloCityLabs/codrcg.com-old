@@ -12,6 +12,7 @@ import bo4List from "@/json/black-ops/four/weapon/primary.json";
 import bo4ZombieList from "@/json/black-ops/four/zombies/start_weapon.json";
 import bo4ZombieAetherSpecialList from "@/json/black-ops/four/zombies/aether_story/special_weapon.json";
 import bo4ZombieChaosSpecialList from "@/json/black-ops/four/zombies/chaos_story/special_weapon.json";
+import mwrList from "@/json/modern-warfare/remastered/weapon/primary.json";
 
 const primaryWeapons: Record<string, any> = {
   warzone: mergeObjectsWithRekey(bo6List, mw3List, mw2List),
@@ -25,6 +26,7 @@ const primaryWeapons: Record<string, any> = {
   "black-ops-four-zombies": bo4ZombieList,
   "aether_story-black-ops-four-zombies": bo4ZombieAetherSpecialList,
   "chaos_story-black-ops-four-zombies": bo4ZombieChaosSpecialList,
+  "modern-warfare-remastered": mwrList,
 };
 
 export function getPrimaryList(game: string): any {

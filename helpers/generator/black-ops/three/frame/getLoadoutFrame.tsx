@@ -1,12 +1,11 @@
 //Frame Helpers
-import { getAttachments } from "@/helpers/generator/black-ops-four/frame/getAttachments";
-import { getPiece } from "@/helpers/generator/black-ops-four/frame/getPiece";
-import { getOptic } from "@/helpers/generator/black-ops-four/frame/getOptic";
-import { getPerkGluttony } from "@/helpers/generator/black-ops-four/frame/getPerkGluttony";
+import { getAttachments } from "@/helpers/generator/black-ops/three/frame/getAttachments";
+import { getPiece } from "@/helpers/generator/black-ops/three/frame/getPiece";
+import { getOptic } from "@/helpers/generator/black-ops/three/frame/getOptic";
 //Helpers
 import { isset } from "@/helpers/isset";
 //Types
-import { AttachmentInfo, LoadoutFrame } from "@/types/BlackOps4";
+import { AttachmentInfo, LoadoutFrame } from "@/types/BlackOps3";
 
 export function getLoadoutFrame(): LoadoutFrame {
   const defaultLoadoutFrame = {
@@ -16,8 +15,8 @@ export function getLoadoutFrame(): LoadoutFrame {
     secondary: false,
     secondary_optic: false,
     secondary_attach: 0,
-    gear: 0,
-    equipment: false,
+    tactical: 0,
+    lethal: false,
     perk1: false,
     perk2: false,
     perk3: false,
@@ -27,26 +26,26 @@ export function getLoadoutFrame(): LoadoutFrame {
   let frame: LoadoutFrame = defaultLoadoutFrame;
   let points = 10;
   let maxCount = 0;
-  const perkGluttony = getPerkGluttony();
-
-  if (perkGluttony.gluttony !== "") {
-    (frame.wildcards as string[]).push(perkGluttony.gluttony);
-    frame.perk1 = true;
-    frame.perk2 = true;
-    frame.perk3 = true;
-    frame[perkGluttony.wildcard] = true;
-    points -= 4;
-  }
 
   while (points > 0 && maxCount < 50) {
     //Stop infinite loops
     maxCount++;
     const piece = getPiece();
 
-    if (piece === "gear") {
+    if (piece === "tactical") {
       if (frame[piece] < 2) {
         frame[piece] += 1;
         points--;
+      } else if (frame[piece] === 2) {
+        //Setup Tactician
+        if (points > 2 && !isset(frame["tactician"])) {
+          frame["tactician"] = 1;
+          frame.wildcards.push("Tactician");
+          points -= 2;
+        } else if (isset(frame["tactician"]) && frame["tactician"] === 1) {
+          frame["tactician"] += 1;
+          points--;
+        }
       }
       continue;
     } else if (frame[piece]) {
@@ -63,16 +62,9 @@ export function getLoadoutFrame(): LoadoutFrame {
 
     if (
       points > 1 &&
-      (piece === "primary" ||
-        piece === "secondary" ||
-        isset(frame["overkill"]) ||
-        isset(frame["underkill"]))
+      (piece === "primary" || piece === "secondary" || isset(frame["overkill"]))
     ) {
-      const weapon_type = isset(frame["overkill"])
-        ? "secondary"
-        : isset(frame["underkill"])
-        ? "primary"
-        : piece;
+      const weapon_type = isset(frame["overkill"]) ? "secondary" : piece;
       const hasOptic = getOptic();
       frame[`${weapon_type}_optic`] = hasOptic;
 
@@ -112,28 +104,6 @@ export function getLoadoutFrame(): LoadoutFrame {
 function wildcardCheck(piece: string, frame: LoadoutFrame): number {
   let wildcardCost = 0;
 
-  //Dont allow overkill & underkill
-  if (
-    (piece === "primary" && frame["secondary"]) ||
-    (piece === "secondary" && frame["primary"])
-  ) {
-    return wildcardCost;
-  }
-
-  //Dont alllow multiple perk greeds if there is a perk gluttony
-  const gluttonyKey = frame.wildcards.find((wildcard) =>
-    wildcard.includes("Gluttony")
-  );
-  if (gluttonyKey && piece.includes("perk")) {
-    const pieceWithSpace = piece.replace(/(\d)/, " $1");
-    const perkString =
-      pieceWithSpace.charAt(0).toUpperCase() + pieceWithSpace.slice(1);
-
-    if (!gluttonyKey.includes(perkString)) {
-      return wildcardCost;
-    }
-  }
-
   if (
     wildcardMap[piece] &&
     !frame.wildcards.includes(wildcardMap[piece].wildcard)
@@ -141,9 +111,6 @@ function wildcardCheck(piece: string, frame: LoadoutFrame): number {
     //Overkill specific Check
     if (wildcardMap[piece].property === "overkill") {
       frame.secondary = true;
-    } else if (wildcardMap[piece].property === "overkill") {
-      //Underkill specific Check
-      frame.primary = true;
     }
 
     frame[wildcardMap[piece].property] = true;
@@ -167,12 +134,12 @@ const wildcardMap = {
     property: "perk3Greed",
     wildcard: "Perk 3 Greed",
   },
+  lethal: {
+    property: "dangerClose",
+    wildcard: "Danger Close",
+  },
   primary: {
     property: "overkill",
     wildcard: "Overkill",
-  },
-  secondary: {
-    property: "underkill",
-    wildcard: "Underkill",
   },
 };

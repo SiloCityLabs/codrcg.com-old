@@ -102,7 +102,7 @@ export default function Home() {
       variant: "success",
       btn1Text: "Generator",
       link: "modern-warfare/remastered/generator",
-      disabled: true,
+      disabled: false,
     },
     {
       title: "Black Ops III",

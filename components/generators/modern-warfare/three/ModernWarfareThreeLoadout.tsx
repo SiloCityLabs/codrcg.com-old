@@ -9,7 +9,7 @@ import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 //MW3 Specific
-import { fetchPerks } from "@/helpers/generator/modern-warfare-three/fetchPerks";
+import { fetchPerks } from "@/helpers/generator/modern-warfare/three/fetchPerks";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 

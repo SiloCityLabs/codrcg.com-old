@@ -12,7 +12,8 @@
   color: white !important;
 }
 
-#cod-header.warzone {
+#cod-header.warzone,
+#cod-header.mwr {
   background: #198754 !important;
 }
 

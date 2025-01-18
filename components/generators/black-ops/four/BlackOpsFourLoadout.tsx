@@ -8,9 +8,9 @@ import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 import { fetchSpecialist } from "@/helpers/fetch/fetchSpecialist";
 //Ops 4
-import { fetchPerk } from "@/helpers/generator/black-ops-four/fetchPerk";
-import { fetchAttachments } from "@/helpers/generator/black-ops-four/fetchAttachments";
-import { getLoadoutFrame } from "@/helpers/generator/black-ops-four/frame/getLoadoutFrame";
+import { fetchPerk } from "@/helpers/generator/black-ops/four/fetchPerk";
+import { fetchAttachments } from "@/helpers/generator/black-ops/four/fetchAttachments";
+import { getLoadoutFrame } from "@/helpers/generator/black-ops/four/frame/getLoadoutFrame";
 //Types
 import { LoadoutFrame } from "@/types/BlackOps4";
 //Utils

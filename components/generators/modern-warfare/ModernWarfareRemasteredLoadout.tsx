@@ -4,12 +4,11 @@ import Button from "react-bootstrap/Button";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
-import { fetchStreaks } from "@/helpers/fetch/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 //MW3 Specific
-import { fetchPerks } from "@/helpers/generator/modern-warfare-three/fetchPerks";
+import { fetchPerks } from "@/helpers/generator/modern-warfare/three/fetchPerks";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 
@@ -18,7 +17,6 @@ function ModernWarfareRemasteredLoadout() {
   const [data, setData] = useState({
     randClassName: "",
     perks: null,
-    streaks: null,
     weapons: {
       primary: {
         weapon: { name: "", type: "", game: "", no_attach: false },
@@ -31,9 +29,6 @@ function ModernWarfareRemasteredLoadout() {
     },
     equipment: {
       tactical: { name: "", type: "" },
-      lethal: { name: "", type: "" },
-      fieldUpgrade: { name: "", type: "" },
-      vest: { name: "", type: "" },
     },
   });
 
@@ -45,7 +40,7 @@ function ModernWarfareRemasteredLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { randClassName, perks, streaks, weapons, equipment } = data;
+  const { randClassName, perks, weapons, equipment } = data;
 
   return (
     <>
@@ -101,40 +96,19 @@ function ModernWarfareRemasteredLoadout() {
           </Col>
         </Row>
         <hr />
-        <Row className="justify-content-md-center">
+        <Row className="justify-content-md-center mb-4">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
             <span className="text-muted fs-6">{equipment.tactical.name}</span>
-          </Col>
-          <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{equipment.lethal.name}</span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Perks:</span> <br />
             <span className="text-muted fs-6">{perks}</span>
           </Col>
         </Row>
-        <hr />
-        <Row className="mb-5">
-          <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Vest:</span> <br />
-            <span className="text-muted fs-6">{equipment.vest.name}</span>
-          </Col>
-          <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">
-              {equipment.fieldUpgrade.name}
-            </span>
-          </Col>
-          <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Streaks:</span> <br />
-            <span className="text-muted fs-6">{streaks}</span>
-          </Col>
-        </Row>
         <Row id="button-row">
           <Col className="text-center">
-            <Button variant="danger" href="#" onClick={handleClick}>
+            <Button variant="success" href="#" onClick={handleClick}>
               Generate Loadout
             </Button>
           </Col>
@@ -152,15 +126,11 @@ async function fetchLoadoutData(setData, setContainerClass) {
   });
 
   try {
-    const game = "modern-warfare-three";
+    const game = "modern-warfare-remastered";
     const randClassName = fetchClassName();
     const perks = fetchPerks();
-    const streaks = fetchStreaks(game);
     let equipment = {
       tactical: fetchEquipment("tactical", game),
-      lethal: fetchEquipment("lethal", game),
-      fieldUpgrade: fetchEquipment("field_upgrade", game),
-      vest: fetchEquipment("vest", game),
     };
 
     let weapons = {
@@ -175,28 +145,27 @@ async function fetchLoadoutData(setData, setContainerClass) {
     };
 
     weapons.primary.attachments = implodeObject(
-      fetchAttachments(weapons.primary.weapon)
+      fetchAttachments(weapons.primary.weapon, 1)
     );
 
-    if (equipment.vest.name === "Overkill Vest") {
-      weapons.secondary.weapon = fetchWeapon(
-        "primary",
-        game,
-        weapons.primary.weapon.name
-      );
-    }
+    // if (equipment.vest.name === "Overkill Vest") {
+    //   weapons.secondary.weapon = fetchWeapon(
+    //     "primary",
+    //     game,
+    //     weapons.primary.weapon.name
+    //   );
+    // }
 
     //Verify if secondary weapon has attachments
     if (!weapons.secondary.weapon?.no_attach) {
       weapons.secondary.attachments = implodeObject(
-        fetchAttachments(weapons.secondary.weapon)
+        fetchAttachments(weapons.secondary.weapon, 1)
       );
     }
 
     setData({
       randClassName,
       perks,
-      streaks,
       weapons,
       equipment,
     });

@@ -28,7 +28,7 @@ export default function ModernWarfareRemastered() {
           modern warfare zombies, modern warfare remastered zombies, modern warfare rcg, modern warfare random class generator"
         />
       </Head>
-      <Header className="modern-warfare" navLinks={navLinks} />
+      <Header className="mwr" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>

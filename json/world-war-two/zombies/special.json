@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Camouflage",
+        "type": "Special",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Freefire",
+        "type": "Special",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Frontline",
+        "type": "Special",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Shellshock",
+        "type": "Special",
+        "game": "world-war-two"
+    }
+]

@@ -7,20 +7,20 @@ function Changelog2025() {
         <Col>
           <p>
             01/18/2025:{" "}
-            <a href="cold-war/info">Black Ops Cold War Generator Information</a>
+            <a href="black-ops/cold-warinfo">Black Ops Cold War Generator Information</a>
           </p>
           <p>
             01/17/2025:{" "}
-            <a href="cold-war/zombies-generator">Black Ops Cold War Zombies:</a>{" "}
+            <a href="black-ops/cold-warzombies-generator">Black Ops Cold War Zombies:</a>{" "}
             Generator is now available!
           </p>
           <p>
-            01/16/2025: <a href="cold-war/generator">Black Ops Cold War:</a>{" "}
+            01/16/2025: <a href="black-ops/cold-wargenerator">Black Ops Cold War:</a>{" "}
             Generator is now available!
           </p>
           <p>
             01/15/2025:{" "}
-            <a href="black-ops-four/info">Black Ops 4 Generator Information</a>
+            <a href="black-ops/four/info">Black Ops 4 Generator Information</a>
           </p>
           <p>
             01/12/2025:{" "}
@@ -32,11 +32,11 @@ function Changelog2025() {
           </p>
           <p>
             01/10/2025:{" "}
-            <a href="black-ops-four/zombies-generator">Black Ops 4 Zombies:</a>{" "}
+            <a href="black-ops/four/zombies-generator">Black Ops 4 Zombies:</a>{" "}
             Generator is now available!
           </p>
           <p>
-            01/09/2025: <a href="black-ops-four/generator">Black Ops 4:</a>{" "}
+            01/09/2025: <a href="black-ops/four/generator">Black Ops 4:</a>{" "}
             Generator is now available!
           </p>
           <p>

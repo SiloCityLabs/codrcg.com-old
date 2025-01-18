@@ -2,17 +2,20 @@
   {
     "name": "RENETTI",
     "type": "pistol",
-    "game": "modern-warfare-three"
+    "game": "modern-warfare-three",
+    "no_attach_info": true
   },
   {
     "name": "TYR",
     "type": "pistol",
-    "game": "modern-warfare-three"
+    "game": "modern-warfare-three",
+    "no_attach_info": true
   },
   {
     "name": "WSP STINGER",
     "type": "pistol",
-    "game": "modern-warfare-three"
+    "game": "modern-warfare-three",
+    "no_attach_info": true
   },
   {
     "name": "STORMENDER",

@@ -159,7 +159,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
         weapon: fetchWeapon("secondary"),
         attachments: "",
       },
-      melee: fetchWeapon("melee"),
+      melee: fetchWeapon("melee", "black-ops-six"),
     };
     //Get Primary Attachments
     //TODO: I think you can only get gunfighter for BO6 Weapons (8 attachments)

@@ -173,12 +173,10 @@ async function fetchLoadoutData(setData, setContainerClass) {
         attachments: "",
       },
     };
-    //TODO: ISSUE-54 - uncomment when done
-    weapons.primary.weapon.no_attach = true;
-    weapons.secondary.weapon.no_attach = true;
-    // weapons.primary.attachments = implodeObject(
-    //   fetchAttachments(weapons.primary.weapon)
-    // );
+
+    weapons.primary.attachments = implodeObject(
+      fetchAttachments(weapons.primary.weapon)
+    );
 
     if (equipment.vest.name === "Overkill Vest") {
       weapons.secondary.weapon = fetchWeapon(

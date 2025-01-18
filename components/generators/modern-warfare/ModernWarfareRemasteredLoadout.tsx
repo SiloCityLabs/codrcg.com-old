@@ -4,9 +4,10 @@ import Button from "react-bootstrap/Button";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
-import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
+//MWR Specific
+import { fetchAttachments } from "@/helpers/generator/modern-warfare/remastered/fetchAttachments";
 //MW3 Specific
 import { fetchPerks } from "@/helpers/generator/modern-warfare/three/fetchPerks";
 //Utils
@@ -120,8 +121,8 @@ function ModernWarfareRemasteredLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   sendEvent("button_click", {
-    button_id: "mw3_fetchLoadoutData",
-    label: "ModernWarfareThree",
+    button_id: "mwr_fetchLoadoutData",
+    label: "ModernWarfareRemastered",
     category: "COD_Loadouts",
   });
 

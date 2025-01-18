@@ -2,7 +2,7 @@ import bo6List from "@/json/black-ops/six/wildcard.json";
 import warzoneList from "@/json/warzone/wildcard.json";
 import bo3List from "@/json/black-ops/three/wildcard.json";
 import bo4List from "@/json/black-ops/four/wildcard.json";
-import coldWarList from "@/json/cold-war/wildcard.json";
+import coldWarList from "@/json/black-ops/cold-war/wildcard.json";
 
 const wildcards: Record<string, any> = {
   "black-ops-six": bo6List,

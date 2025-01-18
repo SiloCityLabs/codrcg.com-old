@@ -16,9 +16,9 @@ import bo4Perk3List from "@/json/black-ops/four/perk/perk3.json";
 //Black Ops 4 Zombies
 import bo4ZombiesList from "@/json/black-ops/four/zombies/perks.json";
 //Cold War
-import coldWarPerk1List from "@/json/cold-war/perk/perk1.json";
-import coldWarPerk2List from "@/json/cold-war/perk/perk2.json";
-import coldWarPerk3List from "@/json/cold-war/perk/perk3.json";
+import coldWarPerk1List from "@/json/black-ops/cold-war/perk/perk1.json";
+import coldWarPerk2List from "@/json/black-ops/cold-war/perk/perk2.json";
+import coldWarPerk3List from "@/json/black-ops/cold-war/perk/perk3.json";
 
 const perks: Record<
   string,

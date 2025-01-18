@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-import ModernWarfareThreeLoadout from "@/components/generators/modern-warfare-three/ModernWarfareThreeLoadout";
+import ModernWarfareThreeLoadout from "@/components/generators/modern-warfare/three/ModernWarfareThreeLoadout";
 //Styles
 import "@/public/styles/components/Loadout.css";
 

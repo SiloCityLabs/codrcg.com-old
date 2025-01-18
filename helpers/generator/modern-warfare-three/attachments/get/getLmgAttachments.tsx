@@ -1,10 +1,10 @@
-import bruenmk9 from "@/json/modern-warfare-three/attachments/lmg/bruenMk9.json";
-import kastovlsw from "@/json/modern-warfare-three/attachments/lmg/kastovLsw.json";
-import taqevolvere from "@/json/modern-warfare-three/attachments/lmg/taqEvolvere.json";
-import pulemyot762 from "@/json/modern-warfare-three/attachments/lmg/pulemyot762.json";
-import dg58lsw from "@/json/modern-warfare-three/attachments/lmg/dg58lsw.json";
-import taqeradicator from "@/json/modern-warfare-three/attachments/lmg/taqEradicator.json";
-import holger26 from "@/json/modern-warfare-three/attachments/lmg/holger26.json";
+import bruenmk9 from "@/json/modern-warfare/three/attachments/lmg/bruenMk9.json";
+import kastovlsw from "@/json/modern-warfare/three/attachments/lmg/kastovLsw.json";
+import taqevolvere from "@/json/modern-warfare/three/attachments/lmg/taqEvolvere.json";
+import pulemyot762 from "@/json/modern-warfare/three/attachments/lmg/pulemyot762.json";
+import dg58lsw from "@/json/modern-warfare/three/attachments/lmg/dg58lsw.json";
+import taqeradicator from "@/json/modern-warfare/three/attachments/lmg/taqEradicator.json";
+import holger26 from "@/json/modern-warfare/three/attachments/lmg/holger26.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {

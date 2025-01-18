@@ -152,14 +152,14 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const perks = fetchPerks(game);
     let weapons = {
       primary: {
-        weapon: fetchWeapon("primary"),
+        weapon: fetchWeapon("primary", game),
         attachments: "",
       },
       secondary: {
-        weapon: fetchWeapon("secondary"),
+        weapon: fetchWeapon("secondary", game),
         attachments: "",
       },
-      melee: fetchWeapon("melee", "black-ops-six"),
+      melee: fetchWeapon("melee", game),
     };
     //Get Primary Attachments
     //TODO: I think you can only get gunfighter for BO6 Weapons (8 attachments)

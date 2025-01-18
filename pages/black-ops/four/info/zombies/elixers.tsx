@@ -5,16 +5,16 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getPerk } from "@/helpers/info/getPerk";
+import { getZombiesGobblegums } from "@/helpers/info/zombies/getZombiesGobblegums";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function ColdWarPerks() {
+export default function BlackOpsFourZombiesElixers() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/cold-war/generator" },
-    { label: "Zombies Generator", href: "/cold-war/zombies-generator" },
-    { label: "Loadout Info", href: "/cold-war/info" },
+    { label: "Multiplayer Generator", href: "/black-ops/four/generator" },
+    { label: "Zombies Generator", href: "/black-ops/four/zombies-generator" },
+    { label: "Loadout Info", href: "/black-ops/four/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -23,7 +23,7 @@ export default function ColdWarPerks() {
   const dataKeys = ["name", "type", "game"];
 
   useEffect(() => {
-    const dataList = getPerk("cold-war");
+    const dataList = getZombiesGobblegums("black-ops-four-zombies");
     setData(dataList);
 
     setIsLoading(false);
@@ -32,22 +32,25 @@ export default function ColdWarPerks() {
   return (
     <>
       <Head>
-        <title>Cold War Perks</title>
+        <title>Black Ops 4 Zombies Elixers</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="description" content="View all perks in Cold War." />
+        <meta
+          name="description"
+          content="View all zombies elixers in Black Ops 4."
+        />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
-          free, mp, multiplayer, call of duty random class generator, COD Cold War RCG, cold war random class generator,
-          cold war, cold war rcg, cold war random class generator, class generator, zombies, treyarch zombies,
-          cold war zombies, cold war rcg, cold war random class generator"
+          free, mp, multiplayer, call of duty random class generator, COD Black Ops 4 RCG, COD Blops 4 RCG, blops 4 random class generator,
+          blops 4, black ops 4, ops 4 rcg, ops 4 random class generator, black ops 4 random class generator, zombies, treyarch zombies,
+          black ops zombies, black ops 4 zombies, black ops rcg, black ops random class generator"
         />
       </Head>
-      <Header className="cold-war" navLinks={navLinks} />
+      <Header className="black-ops" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Cold War - Perks</h2>
+            <h2>Black Ops 4 - Zombies Elixers</h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

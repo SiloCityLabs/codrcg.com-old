@@ -5,25 +5,25 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getZombiesMaps } from "@/helpers/info/zombies/getZombiesMaps";
+import { getEquipment } from "@/helpers/info/getEquipment";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsFourZombiesMaps() {
+export default function BlackOpsFourEquipment() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops-four/generator" },
-    { label: "Zombies Generator", href: "/black-ops-four/zombies-generator" },
-    { label: "Loadout Info", href: "/black-ops-four/info" },
+    { label: "Multiplayer Generator", href: "/black-ops/four/generator" },
+    { label: "Zombies Generator", href: "/black-ops/four/zombies-generator" },
+    { label: "Loadout Info", href: "/black-ops/four/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "mode", "story", "type", "game"];
+  const dataKeys = ["name", "type", "game", "isDlc"];
 
   useEffect(() => {
-    const dataList = getZombiesMaps("black-ops-four-zombies");
+    const dataList = getEquipment("black-ops-four");
     setData(dataList);
 
     setIsLoading(false);
@@ -32,12 +32,9 @@ export default function BlackOpsFourZombiesMaps() {
   return (
     <>
       <Head>
-        <title>Black Ops 4 Zombies Maps</title>
+        <title>Black Ops 4 Equipment</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="View all zombies maps in Black Ops 4."
-        />
+        <meta name="description" content="View all equipment in Black Ops 4." />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
@@ -50,7 +47,7 @@ export default function BlackOpsFourZombiesMaps() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 4 - Zombies Maps</h2>
+            <h2>Black Ops 4 - Equipment</h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

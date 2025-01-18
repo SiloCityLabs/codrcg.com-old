@@ -5,25 +5,25 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getWeapon } from "@/helpers/info/getWeapon";
+import { getSpecialists } from "@/helpers/info/getSpecialists";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsFourWeapons() {
+export default function BlackOpsFourSpecialists() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops-four/generator" },
-    { label: "Zombies Generator", href: "/black-ops-four/zombies-generator" },
-    { label: "Loadout Info", href: "/black-ops-four/info" },
+    { label: "Multiplayer Generator", href: "/black-ops/four/generator" },
+    { label: "Zombies Generator", href: "/black-ops/four/zombies-generator" },
+    { label: "Loadout Info", href: "/black-ops/four/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game", "no_attach", "isDlc"];
+  const dataKeys = ["name", "equipment", "weapon", "type", "game"];
 
   useEffect(() => {
-    const dataList = getWeapon("black-ops-four");
+    const dataList = getSpecialists("black-ops-four");
     setData(dataList);
 
     setIsLoading(false);
@@ -32,11 +32,11 @@ export default function BlackOpsFourWeapons() {
   return (
     <>
       <Head>
-        <title>Black Ops 4 Weapons</title>
+        <title>Black Ops 4 Specialists</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="View information for weapons in Black Ops 4. View all attachments."
+          content="View all specialists in Black Ops 4."
         />
         <meta
           name="keywords"
@@ -50,7 +50,7 @@ export default function BlackOpsFourWeapons() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 4 - Weapons</h2>
+            <h2>Black Ops 4 - Specialists</h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

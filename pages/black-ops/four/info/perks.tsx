@@ -5,25 +5,25 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getZombiesGobblegums } from "@/helpers/info/zombies/getZombiesGobblegums";
+import { getPerk } from "@/helpers/info/getPerk";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsFourZombiesElixers() {
+export default function BlackOpsFourPerks() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops-four/generator" },
-    { label: "Zombies Generator", href: "/black-ops-four/zombies-generator" },
-    { label: "Loadout Info", href: "/black-ops-four/info" },
+    { label: "Multiplayer Generator", href: "/black-ops/four/generator" },
+    { label: "Zombies Generator", href: "/black-ops/four/zombies-generator" },
+    { label: "Loadout Info", href: "/black-ops/four/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game"];
+  const dataKeys = ["name", "type", "game", "isDlc"];
 
   useEffect(() => {
-    const dataList = getZombiesGobblegums("black-ops-four-zombies");
+    const dataList = getPerk("black-ops-four");
     setData(dataList);
 
     setIsLoading(false);
@@ -32,12 +32,9 @@ export default function BlackOpsFourZombiesElixers() {
   return (
     <>
       <Head>
-        <title>Black Ops 4 Zombies Elixers</title>
+        <title>Black Ops 4 Perks</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="View all zombies elixers in Black Ops 4."
-        />
+        <meta name="description" content="View all perks in Black Ops 4." />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
@@ -50,7 +47,7 @@ export default function BlackOpsFourZombiesElixers() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 4 - Zombies Elixers</h2>
+            <h2>Black Ops 4 - Perks</h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

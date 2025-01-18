@@ -12,9 +12,12 @@ import "@/public/styles/components/Loadout.css";
 export default function ColdWarWildcards() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/cold-war/generator" },
-    { label: "Zombies Generator", href: "/cold-war/zombies-generator" },
-    { label: "Loadout Info", href: "/cold-war/info" },
+    { label: "Multiplayer Generator", href: "/black-ops/cold-war/generator" },
+    {
+      label: "Zombies Generator",
+      href: "/black-ops/cold-war/zombies-generator",
+    },
+    { label: "Loadout Info", href: "/black-ops/cold-war/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 

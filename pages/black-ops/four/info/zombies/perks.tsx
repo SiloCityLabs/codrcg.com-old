@@ -5,25 +5,25 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getSpecialists } from "@/helpers/info/getSpecialists";
+import { getPerk } from "@/helpers/info/getPerk";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsFourSpecialists() {
+export default function BlackOpsFourPerks() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops-four/generator" },
-    { label: "Zombies Generator", href: "/black-ops-four/zombies-generator" },
-    { label: "Loadout Info", href: "/black-ops-four/info" },
+    { label: "Multiplayer Generator", href: "/black-ops/four/generator" },
+    { label: "Zombies Generator", href: "/black-ops/four/zombies-generator" },
+    { label: "Loadout Info", href: "/black-ops/four/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "equipment", "weapon", "type", "game"];
+  const dataKeys = ["name", "type", "game"];
 
   useEffect(() => {
-    const dataList = getSpecialists("black-ops-four");
+    const dataList = getPerk("black-ops-four-zombies");
     setData(dataList);
 
     setIsLoading(false);
@@ -32,11 +32,11 @@ export default function BlackOpsFourSpecialists() {
   return (
     <>
       <Head>
-        <title>Black Ops 4 Specialists</title>
+        <title>Black Ops 4 Zombies Perks</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="View all specialists in Black Ops 4."
+          content="View all perks in Black Ops 4 Zombies."
         />
         <meta
           name="keywords"
@@ -50,7 +50,7 @@ export default function BlackOpsFourSpecialists() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 4 - Specialists</h2>
+            <h2>Black Ops 4 - Zombies Perks</h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

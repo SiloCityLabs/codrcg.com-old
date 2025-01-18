@@ -1,40 +1,27 @@
-import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
-//Components
 import Header from "@/components/Header";
-import InfoList from "@/components/info/InfoList";
-//Helpers
-import { getStreaks } from "@/helpers/info/getStreaks";
+import ColdWarZombiesLoadout from "@/components/generators/black-ops/cold-war/ColdWarZombiesLoadout";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function ColdWarStreaks() {
+export default function ColdWarZombies() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/cold-war/generator" },
-    { label: "Zombies Generator", href: "/cold-war/zombies-generator" },
-    { label: "Loadout Info", href: "/cold-war/info" },
+    { label: "Multiplayer Generator", href: "/black-ops/cold-war/generator" },
+    { label: "Loadout Info", href: "/black-ops/cold-war/info" },
     { label: "Changelog", href: "/changelog" },
   ];
-
-  const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState({});
-  const dataKeys = ["name", "score", "type", "game"];
-
-  useEffect(() => {
-    const dataList = getStreaks("cold-war");
-    setData(dataList);
-
-    setIsLoading(false);
-  }, []);
 
   return (
     <>
       <Head>
-        <title>Cold War Streaks</title>
+        <title>Cold War Zombies Random Class Generator</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="description" content="View all streaks in Cold War." />
+        <meta
+          name="description"
+          content="Spice up your COD Zombies gameplay! Generate unique random loadouts for Call of Duty Cold War Zombies. Discover new weapons, perks, and gear combinations."
+        />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
@@ -47,9 +34,9 @@ export default function ColdWarStreaks() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Cold War - Streaks</h2>
+            <h2>Cold War Zombies - Random Class Generator</h2>
 
-            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
+            <ColdWarZombiesLoadout />
           </Col>
         </Row>
       </Container>

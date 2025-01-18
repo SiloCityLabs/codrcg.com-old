@@ -8,8 +8,8 @@ import "@/public/styles/components/Loadout.css";
 export default function BlackOpsFourInfo() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops-four/generator" },
-    { label: "Zombies Generator", href: "/black-ops-four/zombies-generator" },
+    { label: "Multiplayer Generator", href: "/black-ops/four/generator" },
+    { label: "Zombies Generator", href: "/black-ops/four/zombies-generator" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -17,52 +17,52 @@ export default function BlackOpsFourInfo() {
     {
       title: "Weapons",
       text: "",
-      link: "/black-ops-four/info/weapons",
+      link: "/black-ops/four/info/weapons",
     },
     {
       title: "Perks",
       text: "",
-      link: "/black-ops-four/info/perks",
+      link: "/black-ops/four/info/perks",
     },
     {
       title: "Equipment",
       text: "",
-      link: "/black-ops-four/info/equipment",
+      link: "/black-ops/four/info/equipment",
     },
     {
       title: "Wildcards",
       text: "",
-      link: "/black-ops-four/info/wildcards",
+      link: "/black-ops/four/info/wildcards",
     },
     {
       title: "Streaks",
       text: "",
-      link: "/black-ops-four/info/streaks",
+      link: "/black-ops/four/info/streaks",
     },
     {
       title: "Specialists",
       text: "",
-      link: "/black-ops-four/info/specialists",
+      link: "/black-ops/four/info/specialists",
     },
     {
       title: "Zombies - Elixers",
       text: "",
-      link: "/black-ops-four/info/zombies/elixers",
+      link: "/black-ops/four/info/zombies/elixers",
     },
     {
       title: "Zombies - Talismans",
       text: "",
-      link: "/black-ops-four/info/zombies/talismans",
+      link: "/black-ops/four/info/zombies/talismans",
     },
     {
       title: "Zombies - Maps",
       text: "",
-      link: "/black-ops-four/info/zombies/maps",
+      link: "/black-ops/four/info/zombies/maps",
     },
     {
       title: "Zombies - Perks",
       text: "",
-      link: "/black-ops-four/info/zombies/perks",
+      link: "/black-ops/four/info/zombies/perks",
     },
   ];
 

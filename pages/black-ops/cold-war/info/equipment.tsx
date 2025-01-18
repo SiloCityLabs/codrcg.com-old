@@ -5,16 +5,19 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getZombiesGobblegums } from "@/helpers/info/zombies/getZombiesGobblegums";
+import { getEquipment } from "@/helpers/info/getEquipment";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsFourZombiesTalisman() {
+export default function ColdWarEquipment() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops-four/generator" },
-    { label: "Zombies Generator", href: "/black-ops-four/zombies-generator" },
-    { label: "Loadout Info", href: "/black-ops-four/info" },
+    { label: "Multiplayer Generator", href: "/black-ops/cold-war/generator" },
+    {
+      label: "Zombies Generator",
+      href: "/black-ops/cold-war/zombies-generator",
+    },
+    { label: "Loadout Info", href: "/black-ops/cold-war/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -23,7 +26,7 @@ export default function BlackOpsFourZombiesTalisman() {
   const dataKeys = ["name", "type", "game"];
 
   useEffect(() => {
-    const dataList = getZombiesGobblegums("black-ops-four-zombies-talismans");
+    const dataList = getEquipment("cold-war");
     setData(dataList);
 
     setIsLoading(false);
@@ -32,25 +35,22 @@ export default function BlackOpsFourZombiesTalisman() {
   return (
     <>
       <Head>
-        <title>Black Ops 4 Zombies Talisman</title>
+        <title>Cold War Equipment</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="View all zombies talismans in Black Ops 4."
-        />
+        <meta name="description" content="View all equipment in Cold War." />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
-          free, mp, multiplayer, call of duty random class generator, COD Black Ops 4 RCG, COD Blops 4 RCG, blops 4 random class generator,
-          blops 4, black ops 4, ops 4 rcg, ops 4 random class generator, black ops 4 random class generator, zombies, treyarch zombies,
-          black ops zombies, black ops 4 zombies, black ops rcg, black ops random class generator"
+          free, mp, multiplayer, call of duty random class generator, COD Cold War RCG, cold war random class generator,
+          cold war, cold war rcg, cold war random class generator, class generator, zombies, treyarch zombies,
+          cold war zombies, cold war rcg, cold war random class generator"
         />
       </Head>
-      <Header className="black-ops" navLinks={navLinks} />
+      <Header className="cold-war" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 4 - Zombies Talisman</h2>
+            <h2>Cold War - Equipment</h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

@@ -5,16 +5,16 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getPerk } from "@/helpers/info/getPerk";
+import { getZombiesGobblegums } from "@/helpers/info/zombies/getZombiesGobblegums";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsFourPerks() {
+export default function BlackOpsFourZombiesTalisman() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops-four/generator" },
-    { label: "Zombies Generator", href: "/black-ops-four/zombies-generator" },
-    { label: "Loadout Info", href: "/black-ops-four/info" },
+    { label: "Multiplayer Generator", href: "/black-ops/four/generator" },
+    { label: "Zombies Generator", href: "/black-ops/four/zombies-generator" },
+    { label: "Loadout Info", href: "/black-ops/four/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -23,7 +23,7 @@ export default function BlackOpsFourPerks() {
   const dataKeys = ["name", "type", "game"];
 
   useEffect(() => {
-    const dataList = getPerk("black-ops-four-zombies");
+    const dataList = getZombiesGobblegums("black-ops-four-zombies-talismans");
     setData(dataList);
 
     setIsLoading(false);
@@ -32,11 +32,11 @@ export default function BlackOpsFourPerks() {
   return (
     <>
       <Head>
-        <title>Black Ops 4 Zombies Perks</title>
+        <title>Black Ops 4 Zombies Talisman</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="View all perks in Black Ops 4 Zombies."
+          content="View all zombies talismans in Black Ops 4."
         />
         <meta
           name="keywords"
@@ -50,7 +50,7 @@ export default function BlackOpsFourPerks() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 4 - Zombies Perks</h2>
+            <h2>Black Ops 4 - Zombies Talisman</h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

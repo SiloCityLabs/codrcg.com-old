@@ -5,16 +5,19 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getEquipment } from "@/helpers/info/getEquipment";
+import { getPerk } from "@/helpers/info/getPerk";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function ColdWarEquipment() {
+export default function ColdWarPerks() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/cold-war/generator" },
-    { label: "Zombies Generator", href: "/cold-war/zombies-generator" },
-    { label: "Loadout Info", href: "/cold-war/info" },
+    { label: "Multiplayer Generator", href: "/black-ops/cold-war/generator" },
+    {
+      label: "Zombies Generator",
+      href: "/black-ops/cold-war/zombies-generator",
+    },
+    { label: "Loadout Info", href: "/black-ops/cold-war/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -23,7 +26,7 @@ export default function ColdWarEquipment() {
   const dataKeys = ["name", "type", "game"];
 
   useEffect(() => {
-    const dataList = getEquipment("cold-war");
+    const dataList = getPerk("cold-war");
     setData(dataList);
 
     setIsLoading(false);
@@ -32,9 +35,9 @@ export default function ColdWarEquipment() {
   return (
     <>
       <Head>
-        <title>Cold War Equipment</title>
+        <title>Cold War Perks</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="description" content="View all equipment in Cold War." />
+        <meta name="description" content="View all perks in Cold War." />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
@@ -47,7 +50,7 @@ export default function ColdWarEquipment() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Cold War - Equipment</h2>
+            <h2>Cold War - Perks</h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

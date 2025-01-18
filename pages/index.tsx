@@ -60,10 +60,10 @@ export default function Home() {
       text: "",
       variant: "danger",
       btn1Text: "Multiplayer Generator",
-      link: "cold-war/generator",
+      link: "black-ops/cold-war/generator",
       disabled: false,
       btn2Text: "Zombies Generator",
-      link2: "cold-war/zombies-generator",
+      link2: "black-ops/cold-war/zombies-generator",
       disabled2: false,
     },
     {
@@ -71,10 +71,10 @@ export default function Home() {
       text: "",
       variant: "black-ops",
       btn1Text: "Multiplayer Generator",
-      link: "black-ops-four/generator",
+      link: "black-ops/four/generator",
       disabled: false,
       btn2Text: "Zombies Generator",
-      link2: "black-ops-four/zombies-generator",
+      link2: "black-ops/four/zombies-generator",
       disabled2: false,
     },
     {
@@ -98,10 +98,10 @@ export default function Home() {
     },
     {
       title: "Modern Warfare Remastered",
-      text: "Coming in 2025",
+      text: "",
       variant: "success",
       btn1Text: "Generator",
-      link: "modern-warfare-remastered/generator",
+      link: "modern-warfare/remastered/generator",
       disabled: true,
     },
     {

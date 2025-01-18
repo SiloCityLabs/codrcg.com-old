@@ -8,8 +8,11 @@ import "@/public/styles/components/Loadout.css";
 export default function ColdWarInfo() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/cold-war/generator" },
-    { label: "Zombies Generator", href: "/cold-war/zombies-generator" },
+    { label: "Multiplayer Generator", href: "/black-ops/cold-war/generator" },
+    {
+      label: "Zombies Generator",
+      href: "/black-ops/cold-war/zombies-generator",
+    },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -17,37 +20,37 @@ export default function ColdWarInfo() {
     {
       title: "Weapons",
       text: "",
-      link: "/cold-war/info/weapons",
+      link: "/black-ops/cold-war/info/weapons",
     },
     {
       title: "Perks",
       text: "",
-      link: "/cold-war/info/perks",
+      link: "/black-ops/cold-war/info/perks",
     },
     {
       title: "Equipment",
       text: "",
-      link: "/cold-war/info/equipment",
+      link: "/black-ops/cold-war/info/equipment",
     },
     {
       title: "Wildcards",
       text: "",
-      link: "/cold-war/info/wildcards",
+      link: "/black-ops/cold-war/info/wildcards",
     },
     {
       title: "Streaks",
       text: "",
-      link: "/cold-war/info/streaks",
+      link: "/black-ops/cold-war/info/streaks",
     },
     {
       title: "Zombies - Maps",
       text: "",
-      link: "/cold-war/info/zombies/maps",
+      link: "/black-ops/cold-war/info/zombies/maps",
     },
     {
       title: "Zombies - Field Upgrades",
       text: "",
-      link: "/cold-war/info/zombies/field-upgrades",
+      link: "/black-ops/cold-war/info/zombies/field-upgrades",
     },
   ];
 

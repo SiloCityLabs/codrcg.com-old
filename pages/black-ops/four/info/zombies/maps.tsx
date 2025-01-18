@@ -5,25 +5,25 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getWildcards } from "@/helpers/info/getWildcards";
+import { getZombiesMaps } from "@/helpers/info/zombies/getZombiesMaps";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsFourWildcards() {
+export default function BlackOpsFourZombiesMaps() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops-four/generator" },
-    { label: "Zombies Generator", href: "/black-ops-four/zombies-generator" },
-    { label: "Loadout Info", href: "/black-ops-four/info" },
+    { label: "Multiplayer Generator", href: "/black-ops/four/generator" },
+    { label: "Zombies Generator", href: "/black-ops/four/zombies-generator" },
+    { label: "Loadout Info", href: "/black-ops/four/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "description", "type", "game", "isDlc"];
+  const dataKeys = ["name", "mode", "story", "type", "game"];
 
   useEffect(() => {
-    const dataList = getWildcards("black-ops-four");
+    const dataList = getZombiesMaps("black-ops-four-zombies");
     setData(dataList);
 
     setIsLoading(false);
@@ -32,9 +32,12 @@ export default function BlackOpsFourWildcards() {
   return (
     <>
       <Head>
-        <title>Black Ops 4 Wildcards</title>
+        <title>Black Ops 4 Zombies Maps</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="description" content="View all wildcards in Black Ops 4." />
+        <meta
+          name="description"
+          content="View all zombies maps in Black Ops 4."
+        />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
@@ -47,7 +50,7 @@ export default function BlackOpsFourWildcards() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 4 - Wildcards</h2>
+            <h2>Black Ops 4 - Zombies Maps</h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

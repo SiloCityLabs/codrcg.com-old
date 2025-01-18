@@ -1,6 +1,6 @@
-import gpmg7 from "@/json/black-ops-six/attachments/lmg/gpmg7.json";
-import pu21 from "@/json/black-ops-six/attachments/lmg/pu21.json";
-import xmg from "@/json/black-ops-six/attachments/lmg/xmg.json";
+import gpmg7 from "@/json/black-ops/six/attachments/lmg/gpmg7.json";
+import pu21 from "@/json/black-ops/six/attachments/lmg/pu21.json";
+import xmg from "@/json/black-ops/six/attachments/lmg/xmg.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {

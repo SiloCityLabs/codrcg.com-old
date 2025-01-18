@@ -1,0 +1,25 @@
+{
+  "weapons": [
+    "r.a.w.",
+    "titan"
+  ],
+  "optic": [
+    "Reflex",
+    "Scout Hybrid",
+    "Trojan",
+    "VMC",
+    "Thermal",
+    "ELO"
+  ],
+  "attachments": [
+    "Foregrip",
+    "Quickdraw",
+    "Particle Amp",
+    "Suppressor",
+    "Stock",
+    "Fusion Mag",
+    "Ram Servo",
+    "Laser Sight",
+    "Faraday Slug"
+  ]
+}

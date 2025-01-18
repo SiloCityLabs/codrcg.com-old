@@ -1,7 +1,7 @@
-import koshka from "@/json/black-ops-four/attachments/sniper/koshka.json";
-import outlaw from "@/json/black-ops-four/attachments/sniper/outlaw.json";
-import paladinHb50 from "@/json/black-ops-four/attachments/sniper/paladinHb50.json";
-import sdm from "@/json/black-ops-four/attachments/sniper/sdm.json";
+import koshka from "@/json/black-ops/four/attachments/sniper/koshka.json";
+import outlaw from "@/json/black-ops/four/attachments/sniper/outlaw.json";
+import paladinHb50 from "@/json/black-ops/four/attachments/sniper/paladinHb50.json";
+import sdm from "@/json/black-ops/four/attachments/sniper/sdm.json";
 //Helpers
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 

@@ -172,3 +172,50 @@ fieldset[disabled] .btn-infinite-warfare.active {
   color: #FFFF02;
   background-color: #000;
 }
+
+/* WW2 */
+.btn-ww2 {
+  color: #FFFFFF;
+  background-color: #9C800F;
+  border-color: #9C800F;
+}
+
+.btn-ww2:hover,
+.btn-ww2:focus,
+.btn-ww2:active,
+.btn-ww2.active,
+.open .dropdown-toggle.btn-ww2 {
+  color: #FFFFFF;
+  background-color: #7D6710;
+  border-color: #9C800F;
+}
+
+.btn-ww2:active,
+.btn-ww2.active,
+.open .dropdown-toggle.btn-ww2 {
+  background-image: none;
+}
+
+.btn-ww2.disabled,
+.btn-ww2[disabled],
+fieldset[disabled] .btn-ww2,
+.btn-ww2.disabled:hover,
+.btn-ww2[disabled]:hover,
+fieldset[disabled] .btn-ww2:hover,
+.btn-ww2.disabled:focus,
+.btn-ww2[disabled]:focus,
+fieldset[disabled] .btn-ww2:focus,
+.btn-ww2.disabled:active,
+.btn-ww2[disabled]:active,
+fieldset[disabled] .btn-ww2:active,
+.btn-ww2.disabled.active,
+.btn-ww2[disabled].active,
+fieldset[disabled] .btn-ww2.active {
+  background-color: #9C800F;
+  border-color: #9C800F;
+}
+
+.btn-ww2 .badge {
+  color: #9C800F;
+  background-color: #FFFFFF;
+}

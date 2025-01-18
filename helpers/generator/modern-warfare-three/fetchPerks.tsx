@@ -1,6 +1,6 @@
-import glovesList from "@/json/modern-warfare-three/perk/gloves.json";
-import bootsList from "@/json/modern-warfare-three/perk/boots.json";
-import gearList from "@/json/modern-warfare-three/perk/gear.json";
+import glovesList from "@/json/modern-warfare/three/perk/gloves.json";
+import bootsList from "@/json/modern-warfare/three/perk/boots.json";
+import gearList from "@/json/modern-warfare/three/perk/gear.json";
 import { randomListItem } from "@/helpers/randomListItem";
 
 export function fetchPerks(): string {

@@ -1,6 +1,6 @@
-import hades from "@/json/black-ops-four/attachments/lmg/hades.json";
-import titan from "@/json/black-ops-four/attachments/lmg/titan.json";
-import vkm750 from "@/json/black-ops-four/attachments/lmg/vkm750.json";
+import hades from "@/json/black-ops/four/attachments/lmg/hades.json";
+import titan from "@/json/black-ops/four/attachments/lmg/titan.json";
+import vkm750 from "@/json/black-ops/four/attachments/lmg/vkm750.json";
 //Helpers
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 

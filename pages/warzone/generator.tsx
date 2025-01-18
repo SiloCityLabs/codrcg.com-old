@@ -1,11 +1,17 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-import WarzoneLoadout from "@/components/WarzoneLoadout";
+import WarzoneLoadout from "@/components/generators/warzone/WarzoneLoadout";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
 export default function Warzone() {
+  const navLinks = [
+    { label: "Home", href: "/" },
+    // { label: "Where We Droppin?", href: "/warzone/where-we-droppin" },
+    { label: "Changelog", href: "/changelog" },
+  ];
+
   return (
     <>
       <Head>
@@ -23,7 +29,7 @@ export default function Warzone() {
           black ops 6, modern warfare 3, modern warfare 2"
         />
       </Head>
-      <Header className="warzone" />
+      <Header className="warzone" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>

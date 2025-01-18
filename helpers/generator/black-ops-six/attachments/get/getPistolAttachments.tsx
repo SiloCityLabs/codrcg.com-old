@@ -1,7 +1,7 @@
-import nineMmPm from "@/json/black-ops-six/attachments/pistol/9mmPm.json";
-import grekhova from "@/json/black-ops-six/attachments/pistol/grekhova.json";
-import gs45 from "@/json/black-ops-six/attachments/pistol/gs45.json";
-import stryder22 from "@/json/black-ops-six/attachments/pistol/stryder22.json";
+import nineMmPm from "@/json/black-ops/six/attachments/pistol/9mmPm.json";
+import grekhova from "@/json/black-ops/six/attachments/pistol/grekhova.json";
+import gs45 from "@/json/black-ops/six/attachments/pistol/gs45.json";
+import stryder22 from "@/json/black-ops/six/attachments/pistol/stryder22.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {

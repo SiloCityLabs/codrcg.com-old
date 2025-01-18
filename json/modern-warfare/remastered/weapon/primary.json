@@ -1,0 +1,193 @@
+[
+  {
+    "name": "M16A4",
+    "type": "assault_rifle",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "AK-47",
+    "type": "assault_rifle",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "M4 Carbine",
+    "type": "assault_rifle",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "G3",
+    "type": "assault_rifle",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "G36C",
+    "type": "assault_rifle",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "M14",
+    "type": "assault_rifle",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "MP44",
+    "type": "assault_rifle",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "XM-Lar",
+    "type": "assault_rifle",
+    "game": "modern-warfare-remastered",
+    "isDlc": true
+  },
+  {
+    "name": "BOS14",
+    "type": "assault_rifle",
+    "game": "modern-warfare-remastered",
+    "isDlc": true
+  },
+  {
+    "name": "Lynx CQ300",
+    "type": "assault_rifle",
+    "game": "modern-warfare-remastered",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "MP5",
+    "type": "smg",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "Skorpion",
+    "type": "smg",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "Mini-Uzi",
+    "type": "smg",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "AK-74u",
+    "type": "smg",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "P90",
+    "type": "smg",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "Mac-10",
+    "type": "smg",
+    "game": "modern-warfare-remastered",
+    "isDlc": true
+  },
+  {
+    "name": "Fang 45",
+    "type": "smg",
+    "game": "modern-warfare-remastered",
+    "isDlc": true
+  },
+  {
+    "name": "PK-PSD9",
+    "type": "smg",
+    "game": "modern-warfare-remastered",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "W1200",
+    "type": "shotgun",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "M1014",
+    "type": "shotgun",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "Kamchatka-12",
+    "type": "shotgun",
+    "game": "modern-warfare-remastered",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Rangers",
+    "type": "shotgun",
+    "game": "modern-warfare-remastered",
+    "isDlc": true,
+    "no_attach": true
+  },
+  {
+    "name": "M40A3",
+    "type": "sniper",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "M21",
+    "type": "sniper",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "Dragunov",
+    "type": "sniper",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "R700",
+    "type": "sniper",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "Barrett .50Cal",
+    "type": "sniper",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "D-25S",
+    "type": "sniper",
+    "game": "modern-warfare-remastered",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "S-Tac Aggressor",
+    "type": "sniper",
+    "game": "modern-warfare-remastered",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "M249 Saw",
+    "type": "lmg",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "RPD",
+    "type": "lmg",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "M60E4",
+    "type": "lmg",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "PKM",
+    "type": "lmg",
+    "game": "modern-warfare-remastered",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Bered MK8",
+    "type": "lmg",
+    "game": "modern-warfare-remastered",
+    "isDlc": true,
+    "no_attach_info": true
+  }
+]

@@ -1,6 +1,6 @@
-import bo6Perk1List from "@/json/black-ops-six/perk/perk1.json";
-import bo6Perk2List from "@/json/black-ops-six/perk/perk2.json";
-import bo6Perk3List from "@/json/black-ops-six/perk/perk3.json";
+import bo6Perk1List from "@/json/black-ops/six/perk/perk1.json";
+import bo6Perk2List from "@/json/black-ops/six/perk/perk2.json";
+import bo6Perk3List from "@/json/black-ops/six/perk/perk3.json";
 //Warzone
 import warzonePerk1List from "@/json/warzone/perk/perk1.json";
 import warzonePerk2List from "@/json/warzone/perk/perk2.json";
@@ -10,15 +10,15 @@ import vanguardPerk1List from "@/json/vanguard/perk/perk1.json";
 import vanguardPerk2List from "@/json/vanguard/perk/perk2.json";
 import vanguardPerk3List from "@/json/vanguard/perk/perk3.json";
 //Black Ops 4
-import bo4Perk1List from "@/json/black-ops-four/perks/perk1.json";
-import bo4Perk2List from "@/json/black-ops-four/perks/perk2.json";
-import bo4Perk3List from "@/json/black-ops-four/perks/perk3.json";
+import bo4Perk1List from "@/json/black-ops/four/perk/perk1.json";
+import bo4Perk2List from "@/json/black-ops/four/perk/perk2.json";
+import bo4Perk3List from "@/json/black-ops/four/perk/perk3.json";
 //Black Ops 4 Zombies
-import bo4ZombiesList from "@/json/black-ops-four/zombies/perks.json";
+import bo4ZombiesList from "@/json/black-ops/four/zombies/perks.json";
 //Cold War
-import coldWarPerk1List from "@/json/cold-war/perk/perk1.json";
-import coldWarPerk2List from "@/json/cold-war/perk/perk2.json";
-import coldWarPerk3List from "@/json/cold-war/perk/perk3.json";
+import coldWarPerk1List from "@/json/black-ops/cold-war/perk/perk1.json";
+import coldWarPerk2List from "@/json/black-ops/cold-war/perk/perk2.json";
+import coldWarPerk3List from "@/json/black-ops/cold-war/perk/perk3.json";
 
 const perks: Record<
   string,

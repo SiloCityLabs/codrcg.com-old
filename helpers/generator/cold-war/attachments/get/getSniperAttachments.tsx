@@ -1,7 +1,7 @@
-import lw3tundra from "@/json/cold-war/attachments/sniper/lw3tundra.json";
-import m82 from "@/json/cold-war/attachments/sniper/m82.json";
-import pelington703 from "@/json/cold-war/attachments/sniper/pelington703.json";
-import swissk31 from "@/json/cold-war/attachments/sniper/swissk31.json";
+import lw3tundra from "@/json/black-ops/cold-war/attachments/sniper/lw3tundra.json";
+import m82 from "@/json/black-ops/cold-war/attachments/sniper/m82.json";
+import pelington703 from "@/json/black-ops/cold-war/attachments/sniper/pelington703.json";
+import swissk31 from "@/json/black-ops/cold-war/attachments/sniper/swissk31.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {

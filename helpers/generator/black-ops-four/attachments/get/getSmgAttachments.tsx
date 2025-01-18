@@ -1,8 +1,8 @@
-import cordite from "@/json/black-ops-four/attachments/smg/cordite.json";
-import gks from "@/json/black-ops-four/attachments/smg/gks.json";
-import mx9 from "@/json/black-ops-four/attachments/smg/mx9.json";
-import saug9mm from "@/json/black-ops-four/attachments/smg/saug9mm.json";
-import spitfire from "@/json/black-ops-four/attachments/smg/spitfire.json";
+import cordite from "@/json/black-ops/four/attachments/smg/cordite.json";
+import gks from "@/json/black-ops/four/attachments/smg/gks.json";
+import mx9 from "@/json/black-ops/four/attachments/smg/mx9.json";
+import saug9mm from "@/json/black-ops/four/attachments/smg/saug9mm.json";
+import spitfire from "@/json/black-ops/four/attachments/smg/spitfire.json";
 //Helpers
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 

@@ -1,0 +1,77 @@
+[
+  {
+    "name": "1911",
+    "type": "pistol",
+    "game": "world-war-two"
+  },
+  {
+    "name": "P-08",
+    "type": "pistol",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Reichsrevolver",
+    "type": "pistol",
+    "game": "world-war-two"
+  },
+  {
+    "name": "9MM SAP",
+    "type": "pistol",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Machine Pistol",
+    "type": "pistol",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Enfield NO. 2",
+    "type": "pistol",
+    "game": "world-war-two"
+  },
+  {
+    "name": "M1 Garand",
+    "type": "assault_rifle",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Gewehr 43",
+    "type": "assault_rifle",
+    "game": "world-war-two"
+  },
+  {
+    "name": "M1A1 Carbine",
+    "type": "assault_rifle",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Kar98k",
+    "type": "sniper",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Combat Shotgun",
+    "type": "shotgun",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Sawed-Off Shotgun",
+    "type": "shotgun",
+    "game": "world-war-two"
+  },
+  {
+    "name": "M30 Luftwaffe Drilling",
+    "type": "shotgun",
+    "game": "world-war-two"
+  },
+  {
+    "name": "MP-40",
+    "type": "smg",
+    "game": "world-war-two"
+  },
+  {
+    "name": "M1928",
+    "type": "smg",
+    "game": "world-war-two"
+  }
+]

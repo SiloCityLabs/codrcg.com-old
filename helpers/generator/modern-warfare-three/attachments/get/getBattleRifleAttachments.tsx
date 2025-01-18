@@ -1,8 +1,8 @@
-import dtir3006 from "@/json/modern-warfare-three/attachments/battle_rifle/dtir3006.json";
-import soasubverter from "@/json/modern-warfare-three/attachments/battle_rifle/soaSubverter.json";
-import basb from "@/json/modern-warfare-three/attachments/battle_rifle/basb.json";
-import sidewinder from "@/json/modern-warfare-three/attachments/battle_rifle/sidewinder.json";
-import mtz762 from "@/json/modern-warfare-three/attachments/battle_rifle/mtz762.json";
+import dtir3006 from "@/json/modern-warfare/three/attachments/battle_rifle/dtir3006.json";
+import soasubverter from "@/json/modern-warfare/three/attachments/battle_rifle/soaSubverter.json";
+import basb from "@/json/modern-warfare/three/attachments/battle_rifle/basb.json";
+import sidewinder from "@/json/modern-warfare/three/attachments/battle_rifle/sidewinder.json";
+import mtz762 from "@/json/modern-warfare/three/attachments/battle_rifle/mtz762.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {

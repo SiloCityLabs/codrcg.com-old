@@ -1,11 +1,11 @@
-import ebr14 from "@/json/modern-warfare-two/attachments/marksman_rifle/ebr14.json";
-import spr208 from "@/json/modern-warfare-two/attachments/marksman_rifle/spr208.json";
-import lockwoodmk2 from "@/json/modern-warfare-two/attachments/marksman_rifle/lockwoodMk2.json";
-import tempustorrent from "@/json/modern-warfare-two/attachments/marksman_rifle/tempusTorrent.json";
-import crossbow from "@/json/modern-warfare-two/attachments/marksman_rifle/crossbow.json";
-import lms from "@/json/modern-warfare-two/attachments/marksman_rifle/lms.json";
-import sab50 from "@/json/modern-warfare-two/attachments/marksman_rifle/sab50.json";
-import taqm from "@/json/modern-warfare-two/attachments/marksman_rifle/taqm.json";
+import ebr14 from "@/json/modern-warfare/two/attachments/marksman_rifle/ebr14.json";
+import spr208 from "@/json/modern-warfare/two/attachments/marksman_rifle/spr208.json";
+import lockwoodmk2 from "@/json/modern-warfare/two/attachments/marksman_rifle/lockwoodMk2.json";
+import tempustorrent from "@/json/modern-warfare/two/attachments/marksman_rifle/tempusTorrent.json";
+import crossbow from "@/json/modern-warfare/two/attachments/marksman_rifle/crossbow.json";
+import lms from "@/json/modern-warfare/two/attachments/marksman_rifle/lms.json";
+import sab50 from "@/json/modern-warfare/two/attachments/marksman_rifle/sab50.json";
+import taqm from "@/json/modern-warfare/two/attachments/marksman_rifle/taqm.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {

@@ -4,7 +4,7 @@ import warzoneList from "@/json/warzone/equipment/lethal.json";
 import mw3List from "@/json/modern-warfare-three/equipment/lethal.json";
 import mw3ZombiesList from "@/json/modern-warfare-three/zombies/lethal.json";
 import vanguardList from "@/json/vanguard/equipment/lethal.json";
-import bo3List from "@/json/black-ops-three/equipment/lethal.json";
+import bo3List from "@/json/black-ops/three/equipment/lethal.json";
 //BO4 had weird names
 import bo4List from "@/json/black-ops/four/equipment/gear.json";
 import bo4ZombiesList from "@/json/black-ops/four/zombies/equipment.json";

@@ -1,0 +1,27 @@
+[
+    {
+        "name": "No Preference",
+        "type": "Character",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Jefferson",
+        "type": "Character",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Drostan",
+        "type": "Character",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Marie",
+        "type": "Character",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Olivia",
+        "type": "Character",
+        "game": "world-war-two"
+    }
+]

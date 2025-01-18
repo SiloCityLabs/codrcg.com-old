@@ -1,0 +1,47 @@
+[
+  {
+    "name": "The Darkest Shore",
+    "type": "Map",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Groesten Haus",
+    "type": "Map",
+    "game": "world-war-two"
+  },
+  {
+    "name": "The Frozen Dawn",
+    "type": "Map",
+    "game": "world-war-two"
+  },
+  {
+    "name": "The Shadowed Throne",
+    "type": "Map",
+    "game": "world-war-two"
+  },
+  {
+    "name": "The Tortured Path",
+    "type": "Map",
+    "game": "world-war-two"
+  },
+  {
+    "name": "U.S.S. Mount Olympus",
+    "type": "Map",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Altar of Blood",
+    "type": "Map",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Bodega Cervantes",
+    "type": "Map",
+    "game": "world-war-two"
+  },
+  {
+    "name": "The Final Reich",
+    "type": "Map",
+    "game": "world-war-two"
+  }
+]

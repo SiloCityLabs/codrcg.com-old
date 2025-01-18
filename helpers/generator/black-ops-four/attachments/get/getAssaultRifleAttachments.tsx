@@ -1,10 +1,10 @@
-import grav from "@/json/black-ops-four/attachments/assault_rifle/grav.json";
-import icr7 from "@/json/black-ops-four/attachments/assault_rifle/icr7.json";
-import kn57 from "@/json/black-ops-four/attachments/assault_rifle/kn57.json";
-import maddoxRfb from "@/json/black-ops-four/attachments/assault_rifle/maddoxRfb.json";
-import peacekeeper from "@/json/black-ops-four/attachments/assault_rifle/peacekeeper.json";
-import rampart17 from "@/json/black-ops-four/attachments/assault_rifle/rampart17.json";
-import vaprxkg from "@/json/black-ops-four/attachments/assault_rifle/vaprxkg.json";
+import grav from "@/json/black-ops/four/attachments/assault_rifle/grav.json";
+import icr7 from "@/json/black-ops/four/attachments/assault_rifle/icr7.json";
+import kn57 from "@/json/black-ops/four/attachments/assault_rifle/kn57.json";
+import maddoxRfb from "@/json/black-ops/four/attachments/assault_rifle/maddoxRfb.json";
+import peacekeeper from "@/json/black-ops/four/attachments/assault_rifle/peacekeeper.json";
+import rampart17 from "@/json/black-ops/four/attachments/assault_rifle/rampart17.json";
+import vaprxkg from "@/json/black-ops/four/attachments/assault_rifle/vaprxkg.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {

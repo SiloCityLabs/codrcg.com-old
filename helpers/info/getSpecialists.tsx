@@ -1,4 +1,4 @@
-import bo4List from "@/json/black-ops-four/specialists.json";
+import bo4List from "@/json/black-ops/four/specialists.json";
 import { Specialist } from "@/types/Generator";
 
 const dataList: Record<string, any> = {

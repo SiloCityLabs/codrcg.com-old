@@ -1,6 +1,6 @@
-import mog12 from "@/json/black-ops-four/attachments/shotgun/mog12.json";
-import rampage from "@/json/black-ops-four/attachments/shotgun/rampage.json";
-import sg12 from "@/json/black-ops-four/attachments/shotgun/sg12.json";
+import mog12 from "@/json/black-ops/four/attachments/shotgun/mog12.json";
+import rampage from "@/json/black-ops/four/attachments/shotgun/rampage.json";
+import sg12 from "@/json/black-ops/four/attachments/shotgun/sg12.json";
 //Helpers
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 

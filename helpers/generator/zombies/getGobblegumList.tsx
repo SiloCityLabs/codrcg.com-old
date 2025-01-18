@@ -6,16 +6,16 @@ import bo6GobblegumLegendaryList from "@/json/black-ops-six/zombies/gobblegum/le
 import bo6GobblegumUltraList from "@/json/black-ops-six/zombies/gobblegum/ultra.json";
 import bo6GobblegumWhimsicalList from "@/json/black-ops-six/zombies/gobblegum/whimsical.json";
 //Black Ops 4 Elixers
-import bo4ElixerClassicList from "@/json/black-ops-four/zombies/elixers/classic.json";
-import bo4ElixerCommonList from "@/json/black-ops-four/zombies/elixers/common.json";
-import bo4ElixerEpicList from "@/json/black-ops-four/zombies/elixers/epic.json";
-import bo4ElixerLegendaryList from "@/json/black-ops-four/zombies/elixers/legendary.json";
-import bo4ElixerRareList from "@/json/black-ops-four/zombies/elixers/rare.json";
+import bo4ElixerClassicList from "@/json/black-ops/four/zombies/elixers/classic.json";
+import bo4ElixerCommonList from "@/json/black-ops/four/zombies/elixers/common.json";
+import bo4ElixerEpicList from "@/json/black-ops/four/zombies/elixers/epic.json";
+import bo4ElixerLegendaryList from "@/json/black-ops/four/zombies/elixers/legendary.json";
+import bo4ElixerRareList from "@/json/black-ops/four/zombies/elixers/rare.json";
 //Black Ops 4 Talismans
-import bo4TalismanCommonList from "@/json/black-ops-four/zombies/talismans/common.json";
-import bo4TalismanEpicList from "@/json/black-ops-four/zombies/talismans/epic.json";
-import bo4TalismanLegendaryList from "@/json/black-ops-four/zombies/talismans/legendary.json";
-import bo4TalismanRareList from "@/json/black-ops-four/zombies/talismans/rare.json";
+import bo4TalismanCommonList from "@/json/black-ops/four/zombies/talismans/common.json";
+import bo4TalismanEpicList from "@/json/black-ops/four/zombies/talismans/epic.json";
+import bo4TalismanLegendaryList from "@/json/black-ops/four/zombies/talismans/legendary.json";
+import bo4TalismanRareList from "@/json/black-ops/four/zombies/talismans/rare.json";
 
 const data = {
   "black-ops-six-zombies": mergeObjectsWithRekey(

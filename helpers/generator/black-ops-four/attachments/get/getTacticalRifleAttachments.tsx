@@ -1,6 +1,6 @@
-import abr223 from "@/json/black-ops-four/attachments/tactical_rifle/abr223.json";
-import augerdmr from "@/json/black-ops-four/attachments/tactical_rifle/augerdmr.json";
-import swordfish from "@/json/black-ops-four/attachments/tactical_rifle/swordfish.json";
+import abr223 from "@/json/black-ops/four/attachments/tactical_rifle/abr223.json";
+import augerdmr from "@/json/black-ops/four/attachments/tactical_rifle/augerdmr.json";
+import swordfish from "@/json/black-ops/four/attachments/tactical_rifle/swordfish.json";
 //Helpers
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 

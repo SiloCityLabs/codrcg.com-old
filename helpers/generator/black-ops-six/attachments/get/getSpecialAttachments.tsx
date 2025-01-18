@@ -1,4 +1,4 @@
-import sirin9mm from "@/json/black-ops-six/attachments/special/sirin9mm.json";
+import sirin9mm from "@/json/black-ops/six/attachments/special/sirin9mm.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {

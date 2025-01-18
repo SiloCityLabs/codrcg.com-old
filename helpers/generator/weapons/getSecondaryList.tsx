@@ -1,4 +1,4 @@
-import bo6List from "@/json/black-ops-six/weapon/secondary.json";
+import bo6List from "@/json/black-ops/six/weapon/secondary.json";
 import mw3List from "@/json/modern-warfare-three/weapon/secondary.json";
 import vanguardList from "@/json/vanguard/weapon/secondary.json";
 import coldWarList from "@/json/cold-war/weapon/secondary.json";

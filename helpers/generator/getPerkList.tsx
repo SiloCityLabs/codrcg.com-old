@@ -1,6 +1,6 @@
-import bo6Perk1List from "@/json/black-ops-six/perk/perk1.json";
-import bo6Perk2List from "@/json/black-ops-six/perk/perk2.json";
-import bo6Perk3List from "@/json/black-ops-six/perk/perk3.json";
+import bo6Perk1List from "@/json/black-ops/six/perk/perk1.json";
+import bo6Perk2List from "@/json/black-ops/six/perk/perk2.json";
+import bo6Perk3List from "@/json/black-ops/six/perk/perk3.json";
 //Warzone
 import warzonePerk1List from "@/json/warzone/perk/perk1.json";
 import warzonePerk2List from "@/json/warzone/perk/perk2.json";

@@ -1,5 +1,5 @@
-import bo6List from "@/json/black-ops-six/equipment/tactical.json";
-import bo6ZombiesList from "@/json/black-ops-six/zombies/tactical.json";
+import bo6List from "@/json/black-ops/six/equipment/tactical.json";
+import bo6ZombiesList from "@/json/black-ops/six/zombies/tactical.json";
 import warzoneList from "@/json/warzone/equipment/tactical.json";
 import mw3List from "@/json/modern-warfare-three/equipment/tactical.json";
 import mw3ZombiesList from "@/json/modern-warfare-three/zombies/tactical.json";

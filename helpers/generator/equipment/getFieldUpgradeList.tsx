@@ -1,5 +1,5 @@
-import bo6List from "@/json/black-ops-six/equipment/field_upgrade.json";
-import bo6ZombiesList from "@/json/black-ops-six/zombies/field_upgrade.json";
+import bo6List from "@/json/black-ops/six/equipment/field_upgrade.json";
+import bo6ZombiesList from "@/json/black-ops/six/zombies/field_upgrade.json";
 import mw3List from "@/json/modern-warfare-three/equipment/field_upgrade.json";
 import mw3ZombiesList from "@/json/modern-warfare-three/zombies/field_upgrade.json";
 import vanguardList from "@/json/vanguard/equipment/field_upgrade.json";

@@ -1,4 +1,4 @@
-import bo6List from "@/json/black-ops-six/wildcard.json";
+import bo6List from "@/json/black-ops/six/wildcard.json";
 import warzoneList from "@/json/warzone/wildcard.json";
 import bo3List from "@/json/black-ops-three/wildcard.json";
 import bo4List from "@/json/black-ops/four/wildcard.json";

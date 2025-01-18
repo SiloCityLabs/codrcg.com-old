@@ -1,10 +1,10 @@
-import default556 from "@/json/black-ops-six/attachments/assault_rifle/default556.json";
-import ak74 from "@/json/black-ops-six/attachments/assault_rifle/ak74.json";
-import asval from "@/json/black-ops-six/attachments/assault_rifle/asVal.json";
-import goblinmk2 from "@/json/black-ops-six/attachments/assault_rifle/goblinMk2.json";
-import xm4 from "@/json/black-ops-six/attachments/assault_rifle/xm4.json";
+import default556 from "@/json/black-ops/six/attachments/assault_rifle/default556.json";
+import ak74 from "@/json/black-ops/six/attachments/assault_rifle/ak74.json";
+import asval from "@/json/black-ops/six/attachments/assault_rifle/asVal.json";
+import goblinmk2 from "@/json/black-ops/six/attachments/assault_rifle/goblinMk2.json";
+import xm4 from "@/json/black-ops/six/attachments/assault_rifle/xm4.json";
 //DLC
-import krigc from "@/json/black-ops-six/attachments/assault_rifle/krigC.json";
+import krigc from "@/json/black-ops/six/attachments/assault_rifle/krigC.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {

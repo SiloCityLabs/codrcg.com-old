@@ -1,4 +1,4 @@
-import bo6List from "@/json/black-ops-six/zombies/field_upgrade.json";
+import bo6List from "@/json/black-ops/six/zombies/field_upgrade.json";
 import vanguardList from "@/json/vanguard/zombies/artifacts.json";
 import coldWarList from "@/json/cold-war/zombies/field_upgrade.json";
 

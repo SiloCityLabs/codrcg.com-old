@@ -1,5 +1,5 @@
 import { mergeObjectsWithRekey } from "@/helpers/mergeObjectsWithRekey";
-import bo6List from "@/json/black-ops-six/zombies/map.json";
+import bo6List from "@/json/black-ops/six/zombies/map.json";
 import vanguardList from "@/json/vanguard/zombies/map.json";
 import coldWarCoreList from "@/json/cold-war/zombies/map/core.json";
 import coldWarOnslaughtList from "@/json/cold-war/zombies/map/onslaught.json";

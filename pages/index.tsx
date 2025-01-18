@@ -97,6 +97,14 @@ export default function Home() {
       disabled: true,
     },
     {
+      title: "Modern Warfare Remastered",
+      text: "Coming in 2025",
+      variant: "success",
+      btn1Text: "Generator",
+      link: "modern-warfare-remastered/generator",
+      disabled: true,
+    },
+    {
       title: "Black Ops III",
       text: "",
       variant: "black-ops",

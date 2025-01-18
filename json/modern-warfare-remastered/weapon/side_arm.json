@@ -1,0 +1,49 @@
+[
+  {
+    "name": "M9",
+    "type": "pistol",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "USP .45",
+    "type": "pistol",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "M1911 .45",
+    "type": "pistol",
+    "game": "modern-warfare-remastered"
+  },
+  {
+    "name": "Desert Eagle",
+    "type": "pistol",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Commander Desert Eagle",
+    "type": "pistol",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": ".44 Magnum",
+    "type": "pistol",
+    "game": "modern-warfare-remastered",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Prokolot",
+    "type": "pistol",
+    "game": "modern-warfare-remastered",
+    "isDlc": true
+  },
+  {
+    "name": "BR9",
+    "type": "pistol",
+    "game": "modern-warfare-remastered",
+    "isDlc": true,
+    "no_attach_info": true
+  }
+]

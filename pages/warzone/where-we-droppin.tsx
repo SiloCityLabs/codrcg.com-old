@@ -1,25 +1,25 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-import WarzoneLoadout from "@/components/generators/warzone/WarzoneLoadout";
+import WarzoneDropSpot from "@/components/generators/warzone/WarzoneDropSpot";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function Warzone() {
+export default function WhereWeDroppin() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Where We Droppin?", href: "/warzone/where-we-droppin" },
+    { label: "Multiplayer Generator", href: "/warzone/generator" },
     { label: "Changelog", href: "/changelog" },
   ];
 
   return (
     <>
       <Head>
-        <title>Warzone Random Class Generator</title>
+        <title>Warzone - Where We Droppin?</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Spice up your COD gameplay! Generate unique random loadouts for Warzone. Discover new weapons, perks, and gear combinations."
+          content="Spice up your COD gameplay! Randomly roll where you should land in warzone. This includes all current maps including regular battle royal and resurgence."
         />
         <meta
           name="keywords"
@@ -33,9 +33,9 @@ export default function Warzone() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Warzone - Random Class Generator</h2>
+            <h2>Warzone - Where We Droppin</h2>
 
-            <WarzoneLoadout />
+            <WarzoneDropSpot />
           </Col>
         </Row>
       </Container>

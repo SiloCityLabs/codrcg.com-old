@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 //Helpers
-import { implodeObject } from "../helpers/implodeObject";
-import { fetchWeapon } from "../helpers/fetch/fetchWeapon";
-import { fetchPerks } from "../helpers/fetch/fetchPerks";
+import { implodeObject } from "../../../helpers/implodeObject";
+import { fetchWeapon } from "../../../helpers/fetch/fetchWeapon";
+import { fetchPerks } from "../../../helpers/fetch/fetchPerks";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchWildcard } from "@/helpers/fetch/fetchWildcard";

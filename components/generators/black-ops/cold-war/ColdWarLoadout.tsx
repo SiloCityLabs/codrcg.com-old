@@ -10,7 +10,7 @@ import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 import { fetchWildcard } from "@/helpers/fetch/fetchWildcard";
 //Cold War
-import { fetchPerk } from "@/helpers/generator/cold-war/fetchPerk";
+import { fetchPerk } from "@/helpers/generator/black-ops/cold-war/fetchPerk";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 

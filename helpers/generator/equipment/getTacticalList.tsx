@@ -3,6 +3,7 @@ import bo6ZombiesList from "@/json/black-ops/six/zombies/tactical.json";
 import warzoneList from "@/json/warzone/equipment/tactical.json";
 import mw3List from "@/json/modern-warfare/three/equipment/tactical.json";
 import mw3ZombiesList from "@/json/modern-warfare/three/zombies/tactical.json";
+import mwrList from "@/json/modern-warfare/remastered/equipment/tactical.json";
 import vanguardList from "@/json/vanguard/equipment/tactical.json";
 import bo3List from "@/json/black-ops/three/equipment/tactical.json";
 //BO4 had weird names
@@ -15,6 +16,7 @@ const equipment: Record<string, any> = {
   warzone: warzoneList,
   "modern-warfare-three": mw3List,
   "modern-warfare-three-zombies": mw3ZombiesList,
+  "modern-warfare-remastered": mwrList,
   vanguard: vanguardList,
   "black-ops-three": bo3List,
   "black-ops-four": bo4List,

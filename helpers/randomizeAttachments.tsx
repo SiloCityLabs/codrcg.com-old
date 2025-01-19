@@ -1,5 +1,5 @@
 import { randomListItem } from "@/helpers/randomListItem";
-import { verifyBO6Attachments } from "@/helpers/generator/black-ops-six/verifyBO6Attachments";
+import { verifyBO6Attachments } from "@/helpers/generator/black-ops/six/verifyBO6Attachments";
 
 /**
  * Randomly selects attachments from a pool of data.

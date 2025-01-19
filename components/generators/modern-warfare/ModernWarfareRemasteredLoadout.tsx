@@ -4,12 +4,11 @@ import Button from "react-bootstrap/Button";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
-import { fetchStreaks } from "@/helpers/fetch/fetchStreaks";
-import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
-//MW3 Specific
-import { fetchPerks } from "@/helpers/generator/modern-warfare-three/fetchPerks";
+//MWR Specific
+import { fetchAttachments } from "@/helpers/generator/modern-warfare/remastered/fetchAttachments";
+import { fetchPerk } from "@/helpers/generator/modern-warfare/remastered/fetchPerk";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 
@@ -17,8 +16,11 @@ function ModernWarfareRemasteredLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
     randClassName: "",
-    perks: null,
-    streaks: null,
+    perks: {
+      perk1: "",
+      perk2: "",
+      perk3: "",
+    },
     weapons: {
       primary: {
         weapon: { name: "", type: "", game: "", no_attach: false },
@@ -28,12 +30,10 @@ function ModernWarfareRemasteredLoadout() {
         weapon: { name: "", type: "", game: "", no_attach: false },
         attachments: "",
       },
+      melee: { name: "", type: "", game: "" },
     },
     equipment: {
       tactical: { name: "", type: "" },
-      lethal: { name: "", type: "" },
-      fieldUpgrade: { name: "", type: "" },
-      vest: { name: "", type: "" },
     },
   });
 
@@ -45,7 +45,7 @@ function ModernWarfareRemasteredLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { randClassName, perks, streaks, weapons, equipment } = data;
+  const { randClassName, perks, weapons, equipment } = data;
 
   return (
     <>
@@ -78,7 +78,7 @@ function ModernWarfareRemasteredLoadout() {
             )}
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Secondary:</span> <br />
+            <span className="fw-bolder fs-5">Side Arm:</span> <br />
             <span className="text-muted fs-6">
               {weapons.secondary.weapon.name}
             </span>
@@ -99,42 +99,39 @@ function ModernWarfareRemasteredLoadout() {
               </>
             )}
           </Col>
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Melee:</span> <br />
+            <span className="text-muted fs-6">{weapons.melee.name}</span>
+          </Col>
         </Row>
         <hr />
-        <Row className="justify-content-md-center">
+        <Row className="justify-content-md-center mb-4">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
             <span className="text-muted fs-6">{equipment.tactical.name}</span>
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{equipment.lethal.name}</span>
-          </Col>
-          <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perks:</span> <br />
-            <span className="text-muted fs-6">{perks}</span>
-          </Col>
-        </Row>
-        <hr />
-        <Row className="mb-5">
-          <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Vest:</span> <br />
-            <span className="text-muted fs-6">{equipment.vest.name}</span>
-          </Col>
-          <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
+            <span className="fw-bolder fs-5">Perk 1:</span> <br />
             <span className="text-muted fs-6">
-              {equipment.fieldUpgrade.name}
+              {perks.perk1 ? perks.perk1 : "None"}
             </span>
           </Col>
-          <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Streaks:</span> <br />
-            <span className="text-muted fs-6">{streaks}</span>
+          <Col sm className="text-center mb-3 mb-md-0">
+            <span className="fw-bolder fs-5">Perk 2:</span> <br />
+            <span className="text-muted fs-6">
+              {perks.perk2 ? perks.perk2 : "None"}
+            </span>
+          </Col>
+          <Col sm className="text-center mb-3 mb-md-0">
+            <span className="fw-bolder fs-5">Perk 3:</span> <br />
+            <span className="text-muted fs-6">
+              {perks.perk3 ? perks.perk3 : "None"}
+            </span>
           </Col>
         </Row>
         <Row id="button-row">
           <Col className="text-center">
-            <Button variant="danger" href="#" onClick={handleClick}>
+            <Button variant="success" href="#" onClick={handleClick}>
               Generate Loadout
             </Button>
           </Col>
@@ -146,21 +143,21 @@ function ModernWarfareRemasteredLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   sendEvent("button_click", {
-    button_id: "mw3_fetchLoadoutData",
-    label: "ModernWarfareThree",
+    button_id: "mwr_fetchLoadoutData",
+    label: "ModernWarfareRemastered",
     category: "COD_Loadouts",
   });
 
   try {
-    const game = "modern-warfare-three";
+    const game = "modern-warfare-remastered";
     const randClassName = fetchClassName();
-    const perks = fetchPerks();
-    const streaks = fetchStreaks(game);
+    const perks = {
+      perk1: fetchPerk("perk1"),
+      perk2: fetchPerk("perk2"),
+      perk3: fetchPerk("perk3"),
+    };
     let equipment = {
       tactical: fetchEquipment("tactical", game),
-      lethal: fetchEquipment("lethal", game),
-      fieldUpgrade: fetchEquipment("field_upgrade", game),
-      vest: fetchEquipment("vest", game),
     };
 
     let weapons = {
@@ -172,13 +169,14 @@ async function fetchLoadoutData(setData, setContainerClass) {
         weapon: fetchWeapon("secondary", game),
         attachments: "",
       },
+      melee: fetchWeapon("melee", game),
     };
 
     weapons.primary.attachments = implodeObject(
-      fetchAttachments(weapons.primary.weapon)
+      fetchAttachments(weapons.primary.weapon, 1)
     );
 
-    if (equipment.vest.name === "Overkill Vest") {
+    if (perks.perk2 === "Overkill") {
       weapons.secondary.weapon = fetchWeapon(
         "primary",
         game,
@@ -189,14 +187,13 @@ async function fetchLoadoutData(setData, setContainerClass) {
     //Verify if secondary weapon has attachments
     if (!weapons.secondary.weapon?.no_attach) {
       weapons.secondary.attachments = implodeObject(
-        fetchAttachments(weapons.secondary.weapon)
+        fetchAttachments(weapons.secondary.weapon, 1)
       );
     }
 
     setData({
       randClassName,
       perks,
-      streaks,
       weapons,
       equipment,
     });

@@ -48,14 +48,14 @@ function Changelog2024() {
           </p>
           <p>
             11/30/2024:{" "}
-            <a href="modern-warfare-three/zombies-generator">
+            <a href="modern-warfare/three/zombies-generator">
               Modern Warfare Zombies:
             </a>{" "}
             Generator is now available!
           </p>
           <p>
             11/29/2024:{" "}
-            <a href="modern-warfare-three/generator">Modern Warfare 3:</a>{" "}
+            <a href="modern-warfare/three/generator">Modern Warfare 3:</a>{" "}
             Generator is now available!
           </p>
           <p>

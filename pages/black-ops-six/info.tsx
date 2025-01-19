@@ -17,52 +17,52 @@ export default function BlackOpsSixInfo() {
     {
       title: "Weapons",
       text: "",
-      link: "/black-ops-six/info/weapons",
+      link: "/black-ops/six/info/weapons",
     },
     {
       title: "Perks",
       text: "",
-      link: "/black-ops-six/info/perks",
+      link: "/black-ops/six/info/perks",
     },
     {
       title: "Equipment",
       text: "",
-      link: "/black-ops-six/info/equipment",
+      link: "/black-ops/six/info/equipment",
     },
     {
       title: "Wildcards",
       text: "",
-      link: "/black-ops-six/info/wildcards",
+      link: "/black-ops/six/info/wildcards",
     },
     {
       title: "Streaks",
       text: "",
-      link: "/black-ops-six/info/streaks",
+      link: "/black-ops/six/info/streaks",
     },
     {
       title: "Zombies - Maps",
       text: "",
-      link: "/black-ops-six/info/zombies/maps",
+      link: "/black-ops/six/info/zombies/maps",
     },
     {
       title: "Zombies - Ammo Mods",
       text: "",
-      link: "/black-ops-six/info/zombies/ammo-mods",
+      link: "/black-ops/six/info/zombies/ammo-mods",
     },
     {
       title: "Zombies - Gobblegums",
       text: "",
-      link: "/black-ops-six/info/zombies/gobblegums",
+      link: "/black-ops/six/info/zombies/gobblegums",
     },
     {
       title: "Zombies - Field Upgrades",
       text: "",
-      link: "/black-ops-six/info/zombies/field-upgrades",
+      link: "/black-ops/six/info/zombies/field-upgrades",
     },
     {
       title: "Zombies - Augments",
       text: "",
-      link: "/black-ops-six/info/zombies/augments",
+      link: "/black-ops/six/info/zombies/augments",
     },
   ];
 

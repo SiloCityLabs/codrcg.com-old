@@ -8,8 +8,7 @@ import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 //MWR Specific
 import { fetchAttachments } from "@/helpers/generator/modern-warfare/remastered/fetchAttachments";
-//MW3 Specific
-import { fetchPerks } from "@/helpers/generator/modern-warfare/three/fetchPerks";
+import { fetchPerk } from "@/helpers/generator/modern-warfare/remastered/fetchPerk";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 
@@ -17,7 +16,11 @@ function ModernWarfareRemasteredLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
     randClassName: "",
-    perks: null,
+    perks: {
+      perk1: "",
+      perk2: "",
+      perk3: "",
+    },
     weapons: {
       primary: {
         weapon: { name: "", type: "", game: "", no_attach: false },
@@ -27,6 +30,7 @@ function ModernWarfareRemasteredLoadout() {
         weapon: { name: "", type: "", game: "", no_attach: false },
         attachments: "",
       },
+      melee: { name: "", type: "", game: "" },
     },
     equipment: {
       tactical: { name: "", type: "" },
@@ -74,7 +78,7 @@ function ModernWarfareRemasteredLoadout() {
             )}
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Secondary:</span> <br />
+            <span className="fw-bolder fs-5">Side Arm:</span> <br />
             <span className="text-muted fs-6">
               {weapons.secondary.weapon.name}
             </span>
@@ -95,6 +99,10 @@ function ModernWarfareRemasteredLoadout() {
               </>
             )}
           </Col>
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Melee:</span> <br />
+            <span className="text-muted fs-6">{weapons.melee.name}</span>
+          </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
@@ -102,9 +110,23 @@ function ModernWarfareRemasteredLoadout() {
             <span className="fw-bolder fs-5">Tactical:</span> <br />
             <span className="text-muted fs-6">{equipment.tactical.name}</span>
           </Col>
-          <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perks:</span> <br />
-            <span className="text-muted fs-6">{perks}</span>
+          <Col sm className="text-center mb-3 mb-md-0">
+            <span className="fw-bolder fs-5">Perk 1:</span> <br />
+            <span className="text-muted fs-6">
+              {perks.perk1 ? perks.perk1 : "None"}
+            </span>
+          </Col>
+          <Col sm className="text-center mb-3 mb-md-0">
+            <span className="fw-bolder fs-5">Perk 2:</span> <br />
+            <span className="text-muted fs-6">
+              {perks.perk2 ? perks.perk2 : "None"}
+            </span>
+          </Col>
+          <Col sm className="text-center mb-3 mb-md-0">
+            <span className="fw-bolder fs-5">Perk 3:</span> <br />
+            <span className="text-muted fs-6">
+              {perks.perk3 ? perks.perk3 : "None"}
+            </span>
           </Col>
         </Row>
         <Row id="button-row">
@@ -129,7 +151,11 @@ async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "modern-warfare-remastered";
     const randClassName = fetchClassName();
-    const perks = fetchPerks();
+    const perks = {
+      perk1: fetchPerk("perk1"),
+      perk2: fetchPerk("perk2"),
+      perk3: fetchPerk("perk3"),
+    };
     let equipment = {
       tactical: fetchEquipment("tactical", game),
     };
@@ -143,19 +169,20 @@ async function fetchLoadoutData(setData, setContainerClass) {
         weapon: fetchWeapon("secondary", game),
         attachments: "",
       },
+      melee: fetchWeapon("melee", game),
     };
 
     weapons.primary.attachments = implodeObject(
       fetchAttachments(weapons.primary.weapon, 1)
     );
 
-    // if (equipment.vest.name === "Overkill Vest") {
-    //   weapons.secondary.weapon = fetchWeapon(
-    //     "primary",
-    //     game,
-    //     weapons.primary.weapon.name
-    //   );
-    // }
+    if (perks.perk2 === "Overkill") {
+      weapons.secondary.weapon = fetchWeapon(
+        "primary",
+        game,
+        weapons.primary.weapon.name
+      );
+    }
 
     //Verify if secondary weapon has attachments
     if (!weapons.secondary.weapon?.no_attach) {

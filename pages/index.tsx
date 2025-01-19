@@ -30,10 +30,10 @@ export default function Home() {
       text: "",
       variant: "danger",
       btn1Text: "Multiplayer Generator",
-      link: "modern-warfare-three/generator",
+      link: "modern-warfare/three/generator",
       disabled: false,
       btn2Text: "Zombies Generator",
-      link2: "modern-warfare-three/zombies-generator",
+      link2: "modern-warfare/three/zombies-generator",
       disabled2: false,
     },
     {

@@ -6,16 +6,28 @@ function Changelog2025() {
       <Row>
         <Col>
           <p>
-            01/18/2025:{" "}
-            <a href="black-ops/cold-warinfo">Black Ops Cold War Generator Information</a>
-          </p>
-          <p>
-            01/17/2025:{" "}
-            <a href="black-ops/cold-warzombies-generator">Black Ops Cold War Zombies:</a>{" "}
+            01/19/2025:{" "}
+            <a href="modern-warfare/remastered/generator">
+              Modern Warfare Remastered
+            </a>{" "}
             Generator is now available!
           </p>
           <p>
-            01/16/2025: <a href="black-ops/cold-wargenerator">Black Ops Cold War:</a>{" "}
+            01/18/2025:{" "}
+            <a href="black-ops/cold-war/info">
+              Black Ops Cold War Generator Information
+            </a>
+          </p>
+          <p>
+            01/17/2025:{" "}
+            <a href="black-ops/cold-war/zombies-generator">
+              Black Ops Cold War Zombies:
+            </a>{" "}
+            Generator is now available!
+          </p>
+          <p>
+            01/16/2025:{" "}
+            <a href="black-ops/cold-war/generator">Black Ops Cold War:</a>{" "}
             Generator is now available!
           </p>
           <p>

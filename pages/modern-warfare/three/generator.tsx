@@ -1,25 +1,28 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-import ModernWarfareThreeZombiesLoadout from "@/components/generators/modern-warfare/three/ModernWarfareThreeZombiesLoadout";
+import ModernWarfareThreeLoadout from "@/components/generators/modern-warfare/three/ModernWarfareThreeLoadout";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function ModernWarfareThreeZombies() {
+export default function ModernWarfareThree() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/modern-warfare-three/generator" },
+    {
+      label: "Zombies Generator",
+      href: "/modern-warfare/three/zombies-generator",
+    },
     { label: "Changelog", href: "/changelog" },
   ];
 
   return (
     <>
       <Head>
-        <title>Modern Warfare Zombies Random Class Generator</title>
+        <title>Modern Warfare 3 Random Class Generator</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Spice up your COD Zombies gameplay! Generate unique random loadouts for Modern Warfare Zombies. Discover new weapons, perks, and gear combinations."
+          content="Spice up your COD Zombies gameplay! Generate unique random loadouts for Modern Warfare 3. Discover new weapons, perks, and gear combinations."
         />
         <meta
           name="keywords"
@@ -33,9 +36,9 @@ export default function ModernWarfareThreeZombies() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Modern Warfare Zombies - Random Class Generator</h2>
+            <h2>Modern Warfare 3 - Random Class Generator</h2>
 
-            <ModernWarfareThreeZombiesLoadout />
+            <ModernWarfareThreeLoadout />
           </Col>
         </Row>
       </Container>

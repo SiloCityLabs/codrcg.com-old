@@ -170,26 +170,37 @@ async function fetchLoadoutData(setData, setContainerClass) {
     };
 
     //Vest Validation
-    if (equipment.vest.name === "Gunner Vest") {
-      allowGear2 = false;
-      secondaryType = "primary";
-    } else if (equipment.vest.name === "CCT Comms Vest") {
-      equipment.lethal = { name: "", type: "", game: "" };
-    } else if (
-      equipment.vest.name === "Ninja Vest" ||
-      equipment.vest.name === "Assassin Vest"
-    ) {
-      allowGear2 = false;
-    } else if (equipment.vest.name === "Overkill Vest") {
-      allowGear2 = false;
-      primaryType = "all";
-      secondaryType = "all";
-    } else if (equipment.vest.name === "Gunslinger Vest") {
-      primaryType = "secondary";
-      secondaryType = "secondary";
-    } else if (equipment.vest.name === "Compression Carrier") {
-      allowGear2 = false;
-      equipment.fieldUpgrade = { name: "", type: "", game: "" };
+    const vestEffects = {
+      "Gunner Vest": () => {
+        allowGear2 = false;
+        secondaryType = "primary";
+      },
+      "CCT Comms Vest": () => {
+        equipment.lethal = { name: "", type: "", game: "" };
+      },
+      "Ninja Vest": () => {
+        allowGear2 = false;
+      },
+      "Assassin Vest": () => {
+        allowGear2 = false;
+      },
+      "Overkill Vest": () => {
+        allowGear2 = false;
+        primaryType = "all";
+        secondaryType = "all";
+      },
+      "Gunslinger Vest": () => {
+        primaryType = "secondary";
+        secondaryType = "secondary";
+      },
+      "Compression Carrier": () => {
+        allowGear2 = false;
+        equipment.fieldUpgrade = { name: "", type: "", game: "" };
+      },
+    };
+
+    if (vestEffects[equipment.vest.name]) {
+      vestEffects[equipment.vest.name]();
     }
 
     const perks = fetchPerks(allowGear2);

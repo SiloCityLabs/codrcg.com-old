@@ -110,31 +110,42 @@ function WarzoneDropSpot() {
         <Row className="justify-content-md-center">
           {isClient && (
             <>
-              <Col lg={12} className="d-flex justify-content-center">
-                <span className="fw-bold me-2">Map: </span>
-                <span className="me-5">{mapInfo[warzoneMap].name}</span>
-                <span className="fw-bold me-2">Winner: </span>
-                <span>{spinResult}</span>
-              </Col>
-              <Col
-                lg={12}
-                className="d-flex justify-content-center d-none d-md-flex"
-              >
-                <WheelComponent
-                  segments={dropspots}
-                  segColors={segColors}
-                  winningSegment="Test 1"
-                  onFinished={(winner) => onFinished(winner)}
-                  primaryColor="black"
-                  contrastColor="white"
-                  buttonText="Spin"
-                  isOnlyOnce={false}
-                  size={300}
-                  upDuration={200}
-                  downDuration={600}
-                  randomWinningSegment={true}
-                />
-              </Col>
+              <Row className="mb-3">
+                <Col sm className="text-center mb-4 mb-md-0">
+                  <span className="fw-bolder fs-5">Map:</span> <br />
+                  <span className="text-muted fs-6">
+                    {mapInfo[warzoneMap].name}
+                  </span>
+                </Col>
+                <Col sm className="text-center">
+                  <span className="fw-bolder fs-5">Winner:</span> <br />
+                  <span className="text-muted fs-6">{spinResult}</span>
+                </Col>
+              </Row>
+              {Object.keys(mapInfo).map((mapKey) => (
+                <Col
+                  key={mapKey}
+                  lg={12}
+                  className="d-flex justify-content-center d-none d-md-flex"
+                >
+                  {mapKey === warzoneMap && ( // Conditionally render based on mapKey
+                    <WheelComponent
+                      segments={mapInfo[mapKey].dropSpots}
+                      segColors={segColors}
+                      winningSegment={mapKey}
+                      onFinished={(winner) => onFinished(winner)}
+                      primaryColor="black"
+                      contrastColor="white"
+                      buttonText="Spin"
+                      isOnlyOnce={false}
+                      size={300}
+                      upDuration={200}
+                      downDuration={600}
+                      randomWinningSegment={true}
+                    />
+                  )}
+                </Col>
+              ))}
               <Col xs md="8" lg="6" className="text-center mt-5 mt-md-0">
                 <div className="d-flex justify-content-center">
                   <Button

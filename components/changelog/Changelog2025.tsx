@@ -6,6 +6,11 @@ function Changelog2025() {
       <Row>
         <Col>
           <p>
+            01/24/2025:{" "}
+            <a href="warzone/where-we-droppin">Warzone - Where We Droppin'</a>{" "}
+            is now available!
+          </p>
+          <p>
             01/19/2025:{" "}
             <a href="modern-warfare/remastered/generator">
               Modern Warfare Remastered

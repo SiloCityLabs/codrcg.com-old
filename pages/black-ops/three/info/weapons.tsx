@@ -1,25 +1,41 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
+//Components
 import Header from "@/components/Header";
-import BlackOpsThreeLoadout from "@/components/generators/black-ops/three/BlackOpsThreeLoadout";
+import InfoList from "@/components/info/InfoList";
+//Helpers
+import { getWeapon } from "@/helpers/info/getWeapon";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsThree() {
+export default function BlackOpsFourWeapons() {
   const navLinks = [
     { label: "Home", href: "/" },
+    { label: "Multiplayer Generator", href: "/black-ops-three/generator" },
     { label: "Loadout Info", href: "/black-ops/three/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState({});
+  const dataKeys = ["name", "type", "game", "no_attach"];
+
+  useEffect(() => {
+    const dataList = getWeapon("black-ops-three");
+    setData(dataList);
+
+    setIsLoading(false);
+  }, []);
+
   return (
     <>
       <Head>
-        <title>Black Ops 3 Random Class Generator</title>
+        <title>Black Ops 3 Weapons</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Spice up your COD gameplay! Generate unique random loadouts for Black Ops 3. Discover new weapons, perks, and gear combinations."
+          content="View information for weapons in Black Ops 3. View all attachments."
         />
         <meta
           name="keywords"
@@ -37,10 +53,10 @@ export default function BlackOpsThree() {
               Black Ops 3
               <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
               <br className="d-block d-sm-none" />
-              Random Class Generator
+              Weapons
             </h2>
 
-            <BlackOpsThreeLoadout />
+            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>
         </Row>
       </Container>

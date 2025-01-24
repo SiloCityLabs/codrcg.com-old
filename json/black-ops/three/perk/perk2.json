@@ -1,8 +1,32 @@
 [
-    "Fast Hands",
-    "Ante Up",
-    "Hard Wired",
-    "Tracker",
-    "Cold Blooded",
-    "Scavenger"
+    {
+        "name": "Fast Hands",
+        "type": "Perk 2",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Ante Up",
+        "type": "Perk 2",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Hard Wired",
+        "type": "Perk 2",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Tracker",
+        "type": "Perk 2",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Cold Blooded",
+        "type": "Perk 2",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Scavenger",
+        "type": "Perk 2",
+        "game": "black-ops-three"
+    }
 ]

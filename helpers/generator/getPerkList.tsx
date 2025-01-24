@@ -9,6 +9,10 @@ import warzonePerk3List from "@/json/warzone/perk/perk3.json";
 import vanguardPerk1List from "@/json/vanguard/perk/perk1.json";
 import vanguardPerk2List from "@/json/vanguard/perk/perk2.json";
 import vanguardPerk3List from "@/json/vanguard/perk/perk3.json";
+//Black Ops 3
+import bo3Perk1List from "@/json/black-ops/three/perk/perk1.json";
+import bo3Perk2List from "@/json/black-ops/three/perk/perk2.json";
+import bo3Perk3List from "@/json/black-ops/three/perk/perk3.json";
 //Black Ops 4
 import bo4Perk1List from "@/json/black-ops/four/perk/perk1.json";
 import bo4Perk2List from "@/json/black-ops/four/perk/perk2.json";
@@ -62,6 +66,11 @@ const perks: Record<
     perk1List: mw3BootsList,
     perk2List: mw3GearList,
     perk3List: mw3GlovesList,
+  },
+  "black-ops-three": {
+    perk1List: bo3Perk1List,
+    perk2List: bo3Perk2List,
+    perk3List: bo3Perk3List,
   },
 };
 

@@ -322,8 +322,8 @@ async function fetchLoadoutData(setData, setContainerClass) {
 
     let equipment = {
       tactical:
-        loadoutFrame.tactical > 0 ? fetchEquipment("tactical", game) : "",
-      lethal: loadoutFrame.lethal ? fetchEquipment("lethal", game) : "",
+        loadoutFrame.tactical > 0 ? fetchEquipment("tactical", game).name : "",
+      lethal: loadoutFrame.lethal ? fetchEquipment("lethal", game).name : "",
     };
     //Check for x2 tacticals
     equipment.tactical += loadoutFrame.tactical == 2 ? " x2" : "";
@@ -331,7 +331,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     equipment.lethal += loadoutFrame.dangerClose ? " x2" : "";
 
     const wildcards = loadoutFrame?.wildcards.join(", ");
-    const specialist = fetchSpecialist(game);
+    const specialist = fetchSpecialist(game).name;
 
     setData({
       randClassName,

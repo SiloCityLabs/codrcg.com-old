@@ -1,26 +1,39 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
+//Components
 import Header from "@/components/Header";
-import BlackOpsThreeLoadout from "@/components/generators/black-ops/three/BlackOpsThreeLoadout";
+import InfoList from "@/components/info/InfoList";
+//Helpers
+import { getEquipment } from "@/helpers/info/getEquipment";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsThree() {
+export default function BlackOpsFourEquipment() {
   const navLinks = [
     { label: "Home", href: "/" },
+    { label: "Multiplayer Generator", href: "/black-ops-three/generator" },
     { label: "Loadout Info", href: "/black-ops/three/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState({});
+  const dataKeys = ["name", "type", "game"];
+
+  useEffect(() => {
+    const dataList = getEquipment("black-ops-three");
+    setData(dataList);
+
+    setIsLoading(false);
+  }, []);
+
   return (
     <>
       <Head>
-        <title>Black Ops 3 Random Class Generator</title>
+        <title>Black Ops 3 Equipment</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="Spice up your COD gameplay! Generate unique random loadouts for Black Ops 3. Discover new weapons, perks, and gear combinations."
-        />
+        <meta name="description" content="View all equipment in Black Ops 3." />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
@@ -37,10 +50,10 @@ export default function BlackOpsThree() {
               Black Ops 3
               <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
               <br className="d-block d-sm-none" />
-              Random Class Generator
+              Equipment
             </h2>
 
-            <BlackOpsThreeLoadout />
+            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>
         </Row>
       </Container>

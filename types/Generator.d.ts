@@ -39,8 +39,8 @@ export type Equipment = {
 
 export type Specialist = {
   name: string;
-  equipment: string;
-  weapon: string;
+  equipment?: string;
+  weapon?: string;
   type: string;
   game: string;
 };

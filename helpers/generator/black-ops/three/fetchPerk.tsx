@@ -12,7 +12,7 @@ const perks: Record<string, any> = {
 export function fetchPerk(perk: string, currentPerk: string = ""): string {
   let randPerk: string;
   do {
-    randPerk = randomListItem(perks[perk]);
+    randPerk = randomListItem(perks[perk]).name;
   } while (currentPerk === randPerk);
 
   return randPerk;

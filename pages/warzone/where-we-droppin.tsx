@@ -9,6 +9,7 @@ export default function WhereWeDroppin() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Warzone Generator", href: "/warzone/generator" },
+    { label: "Loadout Info", href: "/warzone/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 

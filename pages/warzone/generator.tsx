@@ -9,6 +9,7 @@ export default function Warzone() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Where We Droppin?", href: "/warzone/where-we-droppin" },
+    { label: "Loadout Info", href: "/warzone/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 

@@ -9,15 +9,12 @@ import { getWeapon } from "@/helpers/info/getWeapon";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function ColdWarWeapons() {
+export default function WarzoneWeapons() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/modern-warfare/three/generator" },
-    {
-      label: "Zombies Generator",
-      href: "/modern-warfare/three/zombies-generator",
-    },
-    { label: "Loadout Info", href: "/modern-warfare/three/info" },
+    { label: "Warzone Generator", href: "/warzone/generator" },
+    { label: "Where We Droppin?", href: "/warzone/where-we-droppin" },
+    { label: "Loadout Info", href: "/warzone/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -33,7 +30,7 @@ export default function ColdWarWeapons() {
   ];
 
   useEffect(() => {
-    const dataList = getWeapon("modern-warfare-three");
+    const dataList = getWeapon("warzone");
     setData(dataList);
 
     setIsLoading(false);
@@ -42,26 +39,26 @@ export default function ColdWarWeapons() {
   return (
     <>
       <Head>
-        <title>Modern Warfare 3 Weapons</title>
+        <title>Warzone Weapons</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="View information for weapons in Modern Warfare 3. View all attachments."
+          content="View information for weapons in Warzone. View all attachments."
         />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
-          free, mp, multiplayer, call of duty random class generator, COD Modern Warfare 3 RCG, COD MW3 RCG, mw3 random class generator,
-          mw3, modern warfare 3, modern warfare 3 rcg, modern warfare 3 random class generator, class generator, zombies, Infinity Ward zombies,
-          modern warfare zombies, modern warfare 3 zombies, modern warfare rcg, modern warfare random class generator"
+          free, mp, multiplayer, call of duty random class generator, COD Warzone RCG, COD Blops 6 RCG, blops 6 random class generator,
+          blops 6, black ops 6, ops 6 rcg, ops 6 random class generator, black ops 6 random class generator, zombies, treyarch zombies,
+          black ops zombies, black ops 6 zombies, black ops rcg, black ops random class generator"
         />
       </Head>
-      <Header className="modern-warfare" navLinks={navLinks} />
+      <Header className="warzone" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>
             <h2>
-              Modern Warfare 3
+              Warzone
               <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
               <br className="d-block d-sm-none" />
               Weapons

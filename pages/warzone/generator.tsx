@@ -8,7 +8,7 @@ import "@/public/styles/components/Loadout.css";
 export default function Warzone() {
   const navLinks = [
     { label: "Home", href: "/" },
-    // { label: "Where We Droppin?", href: "/warzone/where-we-droppin" },
+    { label: "Where We Droppin?", href: "/warzone/where-we-droppin" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -33,7 +33,12 @@ export default function Warzone() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Warzone - Random Class Generator</h2>
+            <h2>
+              Warzone
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Random Class Generator
+            </h2>
 
             <WarzoneLoadout />
           </Col>

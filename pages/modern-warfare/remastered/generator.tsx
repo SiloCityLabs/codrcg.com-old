@@ -32,7 +32,12 @@ export default function ModernWarfareRemastered() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Modern Warfare Remastered - Random Class Generator</h2>
+            <h2>
+              Modern Warfare Remastered
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Random Class Generator
+            </h2>
 
             <ModernWarfareRemasteredLoadout />
           </Col>

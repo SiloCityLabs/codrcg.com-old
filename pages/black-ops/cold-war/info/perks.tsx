@@ -50,7 +50,12 @@ export default function ColdWarPerks() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Cold War - Perks</h2>
+            <h2>
+              Cold War
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Perks
+            </h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

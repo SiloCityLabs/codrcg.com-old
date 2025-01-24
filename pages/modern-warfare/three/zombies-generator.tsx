@@ -33,7 +33,12 @@ export default function ModernWarfareThreeZombies() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Modern Warfare Zombies - Random Class Generator</h2>
+            <h2>
+              Modern Warfare Zombies
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Random Class Generator
+            </h2>
 
             <ModernWarfareThreeZombiesLoadout />
           </Col>

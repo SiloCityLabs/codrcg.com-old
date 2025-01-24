@@ -24,7 +24,7 @@ export default function Home() {
       btn1Text: "Generator",
       link: "warzone/generator",
       disabled: false,
-      btn2Text: "Where we Droppin'",
+      btn2Text: "Where we Droppin?",
       link2: "warzone/where-we-droppin",
       disabled2: false,
     },
@@ -120,7 +120,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Call Of Duty Random Class Generator</title>
+        <title>Call Of Duty Random Class Generators</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"

@@ -34,7 +34,12 @@ export default function BlackOpsFourZombies() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 4 Zombies - Random Class Generator</h2>
+            <h2>
+              Black Ops 4 Zombies
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Random Class Generator
+            </h2>
             <BlackOpsFourZombiesLoadout />
           </Col>
         </Row>

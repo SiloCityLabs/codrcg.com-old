@@ -9,20 +9,30 @@ import { getWeapon } from "@/helpers/info/getWeapon";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsThreeWeapons() {
+export default function ModernWarfareRemasteredWeapons() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops-three/generator" },
-    { label: "Loadout Info", href: "/black-ops/three/info" },
+    {
+      label: "Multiplayer Generator",
+      href: "/modern-warfare/remastered/generator",
+    },
+    { label: "Loadout Info", href: "/modern-warfare/remastered/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game", "no_attach"];
+  const dataKeys = [
+    "name",
+    "type",
+    "game",
+    "no_attach",
+    "no_attach_info",
+    "isDlc",
+  ];
 
   useEffect(() => {
-    const dataList = getWeapon("black-ops-three");
+    const dataList = getWeapon("modern-warfare-remastered");
     setData(dataList);
 
     setIsLoading(false);
@@ -31,26 +41,26 @@ export default function BlackOpsThreeWeapons() {
   return (
     <>
       <Head>
-        <title>Black Ops 3 Weapons</title>
+        <title>Modern Warfare Remastered Weapons</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="View information for weapons in Black Ops 3. View all attachments."
+          content="View information for weapons in Modern Warfare Remastered. View all attachments."
         />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
-          free, mp, multiplayer, call of duty random class generator, COD Black Ops 3 RCG, COD Blops 3 RCG, blops 3 random class generator,
-          blops 3, black ops 3, ops 3 rcg, ops 3 random class generator, black ops 3 random class generator, zombies, treyarch zombies,
-          black ops zombies, black ops 3 zombies, black ops rcg, black ops random class generator"
+          free, mp, multiplayer, call of duty random class generator, COD Modern Warfare Remastered RCG, COD MW RCG, mw remastered random class generator,
+          mw remastered, modern warfare remastered, modern warfare remastered rcg, modern warfare remastered random class generator, class generator, zombies, Infinity Ward zombies,
+          modern warfare zombies, modern warfare remastered zombies, modern warfare rcg, modern warfare random class generator"
         />
       </Head>
-      <Header className="black-ops" navLinks={navLinks} />
+      <Header className="mwr" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>
             <h2>
-              Black Ops 3
+              Modern Warfare Remastered
               <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
               <br className="d-block d-sm-none" />
               Weapons

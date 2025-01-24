@@ -18,9 +18,9 @@ export default function ModernWarfareThreeInfo() {
 
   const infoCards = [
     {
-      title: "Weapons",
+      title: "Equipment",
       text: "",
-      link: "/modern-warfare/three/info/weapons",
+      link: "/modern-warfare/three/info/equipment",
     },
     {
       title: "Perks",
@@ -28,14 +28,14 @@ export default function ModernWarfareThreeInfo() {
       link: "/modern-warfare/three/info/perks",
     },
     {
-      title: "Equipment",
-      text: "",
-      link: "/modern-warfare/three/info/equipment",
-    },
-    {
       title: "Streaks",
       text: "",
       link: "/modern-warfare/three/info/streaks",
+    },
+    {
+      title: "Weapons",
+      text: "",
+      link: "/modern-warfare/three/info/weapons",
     },
     {
       title: "Zombies - Equipment",

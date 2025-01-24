@@ -15,9 +15,9 @@ export default function BlackOpsSixInfo() {
 
   const infoCards = [
     {
-      title: "Weapons",
+      title: "Equipment",
       text: "",
-      link: "/black-ops/six/info/weapons",
+      link: "/black-ops/six/info/equipment",
     },
     {
       title: "Perks",
@@ -25,9 +25,14 @@ export default function BlackOpsSixInfo() {
       link: "/black-ops/six/info/perks",
     },
     {
-      title: "Equipment",
+      title: "Streaks",
       text: "",
-      link: "/black-ops/six/info/equipment",
+      link: "/black-ops/six/info/streaks",
+    },
+    {
+      title: "Weapons",
+      text: "",
+      link: "/black-ops/six/info/weapons",
     },
     {
       title: "Wildcards",
@@ -35,24 +40,14 @@ export default function BlackOpsSixInfo() {
       link: "/black-ops/six/info/wildcards",
     },
     {
-      title: "Streaks",
-      text: "",
-      link: "/black-ops/six/info/streaks",
-    },
-    {
-      title: "Zombies - Maps",
-      text: "",
-      link: "/black-ops/six/info/zombies/maps",
-    },
-    {
       title: "Zombies - Ammo Mods",
       text: "",
       link: "/black-ops/six/info/zombies/ammo-mods",
     },
     {
-      title: "Zombies - Gobblegums",
+      title: "Zombies - Augments",
       text: "",
-      link: "/black-ops/six/info/zombies/gobblegums",
+      link: "/black-ops/six/info/zombies/augments",
     },
     {
       title: "Zombies - Field Upgrades",
@@ -60,9 +55,14 @@ export default function BlackOpsSixInfo() {
       link: "/black-ops/six/info/zombies/field-upgrades",
     },
     {
-      title: "Zombies - Augments",
+      title: "Zombies - Gobblegums",
       text: "",
-      link: "/black-ops/six/info/zombies/augments",
+      link: "/black-ops/six/info/zombies/gobblegums",
+    },
+    {
+      title: "Zombies - Maps",
+      text: "",
+      link: "/black-ops/six/info/zombies/maps",
     },
   ];
 

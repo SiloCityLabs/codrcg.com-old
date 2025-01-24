@@ -5,10 +5,13 @@ import GeneratorCard from "@/components/GeneratorCard";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsThreeInfo() {
+export default function ModernWarfareRemasteredInfo() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops-three/generator" },
+    {
+      label: "Multiplayer Generator",
+      href: "/modern-warfare/remastered/generator",
+    },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -16,67 +19,52 @@ export default function BlackOpsThreeInfo() {
     {
       title: "Equipment",
       text: "",
-      link: "/black-ops/three/info/equipment",
+      link: "/modern-warfare/remastered/info/equipment",
     },
     {
       title: "Perks",
       text: "",
-      link: "/black-ops/three/info/perks",
-    },
-    {
-      title: "Specialists",
-      text: "",
-      link: "/black-ops/three/info/specialists",
-    },
-    {
-      title: "Streaks",
-      text: "",
-      link: "/black-ops/three/info/streaks",
+      link: "/modern-warfare/remastered/info/perks",
     },
     {
       title: "Weapons",
       text: "",
-      link: "/black-ops/three/info/weapons",
-    },
-    {
-      title: "Wildcards",
-      text: "",
-      link: "/black-ops/three/info/wildcards",
+      link: "/modern-warfare/remastered/info/weapons",
     },
   ];
 
   return (
     <>
       <Head>
-        <title>Black Ops 3 Loadout Information</title>
+        <title>Modern Warfare Remastered Loadout Information</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Loadout Information for Black Ops 3. Checout all the weapons, perks, equipment, wildcards, streaks and specialists."
+          content="Loadout Information for Modern Warfare Remastered. Checout all the weapons, perks, equipment."
         />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
-          free, mp, multiplayer, call of duty random class generator, COD Black Ops 3 RCG, COD Blops 3 RCG, blops 3 random class generator,
-          blops 3, black ops 3, ops 3 rcg, ops 3 random class generator, black ops 3 random class generator, zombies, treyarch zombies,
-          black ops zombies, black ops 3 zombies, black ops rcg, black ops random class generator"
+          free, mp, multiplayer, call of duty random class generator, COD Modern Warfare Remastered RCG, COD MW RCG, mw remastered random class generator,
+          mw remastered, modern warfare remastered, modern warfare remastered rcg, modern warfare remastered random class generator, class generator, zombies, Infinity Ward zombies,
+          modern warfare zombies, modern warfare remastered zombies, modern warfare rcg, modern warfare random class generator"
         />
       </Head>
-      <Header className="black-ops" navLinks={navLinks} />
+      <Header className="mwr" navLinks={navLinks} />
       <Container className="information">
         <h2 className="text-center mb-4">
-          Black Ops 3
+          Modern Warfare Remastered
           <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
           <br className="d-block d-sm-none" />
           Loadout Information
         </h2>
         <Row>
           {infoCards.map((card, index) => (
-            <Col key={index} xl={3} lg={4} md={6} className="text-center mb-4">
+            <Col key={index} xl={4} lg={4} md={6} className="text-center mb-4">
               <GeneratorCard
                 title={card.title}
                 text={card.text}
-                variant="black-ops"
+                variant="success"
                 btn1Text="View"
                 link={card.link}
                 disabled={false}

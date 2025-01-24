@@ -15,9 +15,9 @@ export default function BlackOpsFourInfo() {
 
   const infoCards = [
     {
-      title: "Weapons",
+      title: "Equipment",
       text: "",
-      link: "/black-ops/four/info/weapons",
+      link: "/black-ops/four/info/equipment",
     },
     {
       title: "Perks",
@@ -25,14 +25,9 @@ export default function BlackOpsFourInfo() {
       link: "/black-ops/four/info/perks",
     },
     {
-      title: "Equipment",
+      title: "Specialists",
       text: "",
-      link: "/black-ops/four/info/equipment",
-    },
-    {
-      title: "Wildcards",
-      text: "",
-      link: "/black-ops/four/info/wildcards",
+      link: "/black-ops/four/info/specialists",
     },
     {
       title: "Streaks",
@@ -40,19 +35,19 @@ export default function BlackOpsFourInfo() {
       link: "/black-ops/four/info/streaks",
     },
     {
-      title: "Specialists",
+      title: "Weapons",
       text: "",
-      link: "/black-ops/four/info/specialists",
+      link: "/black-ops/four/info/weapons",
+    },
+    {
+      title: "Wildcards",
+      text: "",
+      link: "/black-ops/four/info/wildcards",
     },
     {
       title: "Zombies - Elixers",
       text: "",
       link: "/black-ops/four/info/zombies/elixers",
-    },
-    {
-      title: "Zombies - Talismans",
-      text: "",
-      link: "/black-ops/four/info/zombies/talismans",
     },
     {
       title: "Zombies - Maps",
@@ -63,6 +58,11 @@ export default function BlackOpsFourInfo() {
       title: "Zombies - Perks",
       text: "",
       link: "/black-ops/four/info/zombies/perks",
+    },
+    {
+      title: "Zombies - Talismans",
+      text: "",
+      link: "/black-ops/four/info/zombies/talismans",
     },
   ];
 

@@ -7,6 +7,12 @@ function Changelog2025() {
         <Col>
           <p>
             01/24/2025:{" "}
+            <a href="modern-warfare/remastered/info">
+              Modern Warfare Remastered Generator Information
+            </a>
+          </p>
+          <p>
+            01/24/2025:{" "}
             <a href="black-ops/three/info">Black Ops 3 Generator Information</a>
           </p>
           <p>

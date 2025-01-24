@@ -15,9 +15,9 @@ export default function BlackOpsSixInfo() {
 
   const infoCards = [
     {
-      title: "Weapons",
+      title: "Equipment",
       text: "",
-      link: "/vanguard/info/weapons",
+      link: "/vanguard/info/equipment",
     },
     {
       title: "Perks",
@@ -25,24 +25,24 @@ export default function BlackOpsSixInfo() {
       link: "/vanguard/info/perks",
     },
     {
-      title: "Equipment",
-      text: "",
-      link: "/vanguard/info/equipment",
-    },
-    {
       title: "Streaks",
       text: "",
       link: "/vanguard/info/streaks",
     },
     {
-      title: "Zombies Maps",
+      title: "Weapons",
       text: "",
-      link: "/vanguard/info/zombies/maps",
+      link: "/vanguard/info/weapons",
     },
     {
       title: "Zombies Artifacts",
       text: "",
       link: "/vanguard/info/zombies/artifacts",
+    },
+    {
+      title: "Zombies Maps",
+      text: "",
+      link: "/vanguard/info/zombies/maps",
     },
   ];
 

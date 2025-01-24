@@ -8,6 +8,7 @@ import "@/public/styles/components/Loadout.css";
 export default function ModernWarfareRemastered() {
   const navLinks = [
     { label: "Home", href: "/" },
+    { label: "Loadout Info", href: "/modern-warfare/remastered/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 

@@ -9,7 +9,7 @@ import { getPerk } from "@/helpers/info/getPerk";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsFourPerks() {
+export default function BlackOpsThreePerks() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops-three/generator" },

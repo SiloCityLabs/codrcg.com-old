@@ -9,7 +9,7 @@ import { getWildcards } from "@/helpers/info/getWildcards";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsFourWildcards() {
+export default function BlackOpsThreeWildcards() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops-three/generator" },

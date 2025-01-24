@@ -18,9 +18,9 @@ export default function ColdWarInfo() {
 
   const infoCards = [
     {
-      title: "Weapons",
+      title: "Equipment",
       text: "",
-      link: "/black-ops/cold-war/info/weapons",
+      link: "/black-ops/cold-war/info/equipment",
     },
     {
       title: "Perks",
@@ -28,9 +28,14 @@ export default function ColdWarInfo() {
       link: "/black-ops/cold-war/info/perks",
     },
     {
-      title: "Equipment",
+      title: "Streaks",
       text: "",
-      link: "/black-ops/cold-war/info/equipment",
+      link: "/black-ops/cold-war/info/streaks",
+    },
+    {
+      title: "Weapons",
+      text: "",
+      link: "/black-ops/cold-war/info/weapons",
     },
     {
       title: "Wildcards",
@@ -38,19 +43,14 @@ export default function ColdWarInfo() {
       link: "/black-ops/cold-war/info/wildcards",
     },
     {
-      title: "Streaks",
+      title: "Zombies - Field Upgrades",
       text: "",
-      link: "/black-ops/cold-war/info/streaks",
+      link: "/black-ops/cold-war/info/zombies/field-upgrades",
     },
     {
       title: "Zombies - Maps",
       text: "",
       link: "/black-ops/cold-war/info/zombies/maps",
-    },
-    {
-      title: "Zombies - Field Upgrades",
-      text: "",
-      link: "/black-ops/cold-war/info/zombies/field-upgrades",
     },
   ];
 

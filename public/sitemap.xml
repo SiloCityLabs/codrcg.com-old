@@ -161,6 +161,27 @@
 	<url>
 		<loc>https://codrcg.com/black-ops-three/generator</loc>
 	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info/specialists</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info/streaks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info/weapons</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info/wildcards</loc>
+	</url>
 	<!-- Cold War -->
 	<url>
 		<loc>https://codrcg.com/black-ops/cold-war/generator</loc>
@@ -195,6 +216,15 @@
 	<!-- Modern Warfare Remastered -->
 	<url>
 		<loc>https://codrcg.com/modern-warfare/remastered/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/remastered/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/remastered/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/remastered/info/weapons</loc>
 	</url>
 	<!-- <url>
 		<loc>https://codrcg.com/contactus</loc>

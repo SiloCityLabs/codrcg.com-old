@@ -27,6 +27,10 @@ import coldWarPerk3List from "@/json/black-ops/cold-war/perk/perk3.json";
 import mw3BootsList from "@/json/modern-warfare/three/perk/boots.json";
 import mw3GearList from "@/json/modern-warfare/three/perk/gear.json";
 import mw3GlovesList from "@/json/modern-warfare/three/perk/gloves.json";
+//Modern Warfare Remastered
+import mwrPerk1List from "@/json/modern-warfare/remastered/perk/perk1.json";
+import mwrPerk2List from "@/json/modern-warfare/remastered/perk/perk2.json";
+import mwrPerk3List from "@/json/modern-warfare/remastered/perk/perk3.json";
 
 const perks: Record<
   string,
@@ -71,6 +75,11 @@ const perks: Record<
     perk1List: bo3Perk1List,
     perk2List: bo3Perk2List,
     perk3List: bo3Perk3List,
+  },
+  "modern-warfare-remastered": {
+    perk1List: mwrPerk1List,
+    perk2List: mwrPerk2List,
+    perk3List: mwrPerk3List,
   },
 };
 

@@ -24,6 +24,9 @@ export default function Home() {
       btn1Text: "Generator",
       link: "warzone/generator",
       disabled: false,
+      btn2Text: "Where we Droppin'",
+      link2: "warzone/where-we-droppin",
+      disabled2: false,
     },
     {
       title: "Modern Warfare 3 (2023)",

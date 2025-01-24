@@ -107,3 +107,7 @@ export type Bo4ZombiesSettings = {
   rollElixers: boolean;
   rollTalisman: boolean;
 };
+
+export type WarzoneDropSpotSettings = {
+  warzoneMap: string;
+};

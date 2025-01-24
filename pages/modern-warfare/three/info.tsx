@@ -42,11 +42,6 @@ export default function ModernWarfareThreeInfo() {
       text: "",
       link: "/modern-warfare/three/info/zombies/equipment",
     },
-    {
-      title: "Zombies - Field Upgrades",
-      text: "",
-      link: "/modern-warfare/three/info/zombies/field-upgrades",
-    },
   ];
 
   return (

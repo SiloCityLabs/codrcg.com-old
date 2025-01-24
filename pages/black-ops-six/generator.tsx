@@ -34,7 +34,12 @@ export default function BlackOpsSix() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 6 - Random Class Generator</h2>
+            <h2>
+              Black Ops 6
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Random Class Generator
+            </h2>
 
             <BlackOpsSixLoadout />
           </Col>

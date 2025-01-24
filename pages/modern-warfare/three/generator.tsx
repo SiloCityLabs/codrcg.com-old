@@ -12,6 +12,7 @@ export default function ModernWarfareThree() {
       label: "Zombies Generator",
       href: "/modern-warfare/three/zombies-generator",
     },
+    { label: "Loadout Info", href: "/modern-warfare/three/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -36,7 +37,12 @@ export default function ModernWarfareThree() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Modern Warfare 3 - Random Class Generator</h2>
+            <h2>
+              Modern Warfare 3
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Random Class Generator
+            </h2>
 
             <ModernWarfareThreeLoadout />
           </Col>

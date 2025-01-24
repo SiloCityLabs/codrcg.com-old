@@ -15,9 +15,9 @@ export default function BlackOpsSixInfo() {
 
   const infoCards = [
     {
-      title: "Weapons",
+      title: "Equipment",
       text: "",
-      link: "/vanguard/info/weapons",
+      link: "/vanguard/info/equipment",
     },
     {
       title: "Perks",
@@ -25,24 +25,24 @@ export default function BlackOpsSixInfo() {
       link: "/vanguard/info/perks",
     },
     {
-      title: "Equipment",
-      text: "",
-      link: "/vanguard/info/equipment",
-    },
-    {
       title: "Streaks",
       text: "",
       link: "/vanguard/info/streaks",
     },
     {
-      title: "Zombies Maps",
+      title: "Weapons",
       text: "",
-      link: "/vanguard/info/zombies/maps",
+      link: "/vanguard/info/weapons",
     },
     {
       title: "Zombies Artifacts",
       text: "",
       link: "/vanguard/info/zombies/artifacts",
+    },
+    {
+      title: "Zombies Maps",
+      text: "",
+      link: "/vanguard/info/zombies/maps",
     },
   ];
 
@@ -65,7 +65,12 @@ export default function BlackOpsSixInfo() {
       </Head>
       <Header className="vanguard" navLinks={navLinks} />
       <Container className="information">
-        <h2 className="text-center mb-4">Black Ops 6 - Loadout Information</h2>
+        <h2 className="text-center mb-4">
+          Vanguard
+          <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+          <br className="d-block d-sm-none" />
+          Loadout Information
+        </h2>
         <Row>
           {infoCards.map((card, index) => (
             <Col key={index} xl={3} lg={4} md={6} className="text-center mb-4">

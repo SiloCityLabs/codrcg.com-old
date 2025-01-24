@@ -50,7 +50,12 @@ export default function BlackOpsSixZombiesArtifacts() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Vanguard - Zombies Artifacts</h2>
+            <h2>
+              Vanguard
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Zombies Artifacts
+            </h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

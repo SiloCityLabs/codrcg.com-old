@@ -37,7 +37,12 @@ export default function ColdWar() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Cold War - Random Class Generator</h2>
+            <h2>
+              Cold War
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Random Class Generator
+            </h2>
 
             <ColdWarLoadout />
           </Col>

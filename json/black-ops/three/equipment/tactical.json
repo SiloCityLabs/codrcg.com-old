@@ -1,9 +1,37 @@
 [
-  "Concussion",
-  "Smoke Screen",
-  "EMP",
-  "Trophy System",
-  "Shock Charge",
-  "Flashbang",
-  "Black Hat"
+  {
+    "name": "Concussion",
+    "type": "Tactical",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Smoke Screen",
+    "type": "Tactical",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "EMP",
+    "type": "Tactical",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Trophy System",
+    "type": "Tactical",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Shock Charge",
+    "type": "Tactical",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Flashbang",
+    "type": "Tactical",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Black Hat",
+    "type": "Tactical",
+    "game": "black-ops-three"
+  }
 ]

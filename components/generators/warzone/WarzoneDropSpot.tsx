@@ -1,24 +1,49 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+//Components
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import WheelComponent from "react-wheel-of-prizes-react19";
+import CustomModal from "@/components/bootstrap/CustomModal";
+//Helpers
+import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
+//Types
+import { WarzoneDropSpotSettings } from "@/types/Generator";
+//Utils
+import { sendEvent } from "@/utils/gtag";
 //Json
+import area99Spots from "@/json/warzone/drop_spots/area99.json";
+import rebirthIslandSpots from "@/json/warzone/drop_spots/rebirth_island.json";
 import urzikstanSpots from "@/json/warzone/drop_spots/urzikstan.json";
+
+const defaultSettings: WarzoneDropSpotSettings = {
+  warzoneMap: "urzikstan",
+};
+
+const mapInfo = {
+  urzikstan: {
+    name: "Urzikstan",
+    dropSpots: urzikstanSpots,
+  },
+  area99: {
+    name: "Area 99",
+    dropSpots: area99Spots,
+  },
+  rebirth_island: {
+    name: "Rebirth Island",
+    dropSpots: rebirthIslandSpots,
+  },
+};
 
 function WarzoneDropSpot() {
   const [isClient, setIsClient] = useState(false);
-  const [spinResult, setSpinResult] = useState("None");
-  const segments = [
-    "Test 1",
-    "Test 2",
-    "Test 3",
-    "Test 4",
-    "Test 5",
-    "Test 6",
-    "Test 7",
-    "Test 8",
-    "Test 9",
-    "Test 10",
-  ];
+  const [spinResult, setSpinResult] = useState("????");
+  //Settings
+  const [settings, setSettings] =
+    useState<WarzoneDropSpotSettings>(defaultSettings);
+  const [warzoneMap, setWarzoneMap] = useState(settings.warzoneMap);
+  const [dropspots, setDropSpots] = useState(
+    mapInfo[settings.warzoneMap].dropSpots
+  );
+  const [showModal, setShowModal] = useState(false);
   const segColors = [
     "#EE4040",
     "#F0CF50",
@@ -36,14 +61,45 @@ function WarzoneDropSpot() {
     "#EC3F3F",
     "#FF9000",
   ];
-  const onFinished = (winner) => {
-    console.log(winner);
+  const onFinished = (winner: string) => {
     setSpinResult(winner);
   };
 
   useEffect(() => {
+    const storedSettings =
+      getLocalStorage("warzoneDropSpotSettings") ?? settings;
+    const completeSettings = { ...defaultSettings, ...storedSettings };
+
+    setSettings(completeSettings);
+    setWarzoneMap(completeSettings.warzoneMap);
+    setDropSpots(mapInfo[completeSettings.warzoneMap].dropSpots);
+
     setIsClient(true);
   }, []);
+
+  const handleClick = async () => {
+    setSpinResult(
+      mapInfo[warzoneMap].dropSpots[
+        Math.floor(Math.random() * mapInfo[warzoneMap].dropSpots.length)
+      ]
+    );
+  };
+
+  const handleMapChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setWarzoneMap(event.target.value);
+    setDropSpots(mapInfo[event.target.value].dropSpots);
+    setSettings({
+      ...settings,
+      warzoneMap: event.target.value,
+    });
+  };
+
+  //Settings
+  const handleModal = () => setShowModal(!showModal);
+  const handleSave = () => {
+    setLocalStorage("warzoneDropSpotSettings", settings);
+    handleModal();
+  };
 
   return (
     <>
@@ -52,29 +108,89 @@ function WarzoneDropSpot() {
         className={`shadow-lg p-3 bg-body rounded`}
       >
         <Row className="justify-content-md-center">
-          <Col lg={12} className="d-flex justify-content-center">
-            {isClient && (
-              <>
-                <span className="fw-bold">Winner: </span>
-                {"  "}
-                <span> {spinResult}</span>
-                <WheelComponent
-                  segments={urzikstanSpots}
-                  segColors={segColors}
-                  winningSegment="Test 1"
-                  onFinished={(winner) => onFinished(winner)}
-                  primaryColor="black"
-                  contrastColor="white"
-                  buttonText="Spin"
-                  isOnlyOnce={false}
-                  size={300}
-                  upDuration={200}
-                  downDuration={600}
-                  randomWinningSegment={true}
-                />
-              </>
-            )}
-          </Col>
+          {isClient && (
+            <>
+              <Row className="mb-3">
+                <Col sm className="text-center mb-4 mb-md-0">
+                  <span className="fw-bolder fs-5">Map:</span> <br />
+                  <span className="text-muted fs-6">
+                    {mapInfo[warzoneMap].name}
+                  </span>
+                </Col>
+                <Col sm className="text-center">
+                  <span className="fw-bolder fs-5">Winner:</span> <br />
+                  <span className="text-muted fs-6">{spinResult}</span>
+                </Col>
+              </Row>
+              {Object.keys(mapInfo).map((mapKey) => (
+                <Col
+                  key={mapKey}
+                  lg={12}
+                  className="d-flex justify-content-center d-none d-md-flex"
+                >
+                  {mapKey === warzoneMap && ( // Conditionally render based on mapKey
+                    <WheelComponent
+                      segments={mapInfo[mapKey].dropSpots}
+                      segColors={segColors}
+                      winningSegment={mapKey}
+                      onFinished={(winner) => onFinished(winner)}
+                      primaryColor="black"
+                      contrastColor="white"
+                      buttonText="Spin"
+                      isOnlyOnce={false}
+                      size={300}
+                      upDuration={200}
+                      downDuration={600}
+                      randomWinningSegment={true}
+                    />
+                  )}
+                </Col>
+              ))}
+              <Col xs md="8" lg="6" className="text-center mt-5 mt-md-0">
+                <div className="d-flex justify-content-center">
+                  <Button
+                    variant="success"
+                    onClick={handleModal}
+                    className="w-50 me-2"
+                  >
+                    Settings
+                  </Button>
+                  <Button
+                    variant="success"
+                    onClick={handleClick}
+                    className="w-50 me-2 d-block d-md-none"
+                  >
+                    Randomize Map
+                  </Button>
+                </div>
+              </Col>
+
+              <CustomModal
+                variant="success"
+                show={showModal}
+                onClose={handleModal}
+                onSave={handleSave}
+                title="Settings"
+              >
+                <Row>
+                  <Col>
+                    <Form.Label htmlFor="warzoneMap">Warzone Map:</Form.Label>
+                    <Form.Select
+                      id="warzoneMap"
+                      onChange={handleMapChange}
+                      value={warzoneMap}
+                    >
+                      {Object.keys(mapInfo).map((mapKey) => (
+                        <option key={mapKey} value={mapKey}>
+                          {mapInfo[mapKey].name}
+                        </option>
+                      ))}
+                    </Form.Select>
+                  </Col>
+                </Row>
+              </CustomModal>
+            </>
+          )}
         </Row>
       </Container>
     </>

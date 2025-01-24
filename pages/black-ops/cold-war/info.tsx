@@ -18,9 +18,9 @@ export default function ColdWarInfo() {
 
   const infoCards = [
     {
-      title: "Weapons",
+      title: "Equipment",
       text: "",
-      link: "/black-ops/cold-war/info/weapons",
+      link: "/black-ops/cold-war/info/equipment",
     },
     {
       title: "Perks",
@@ -28,9 +28,14 @@ export default function ColdWarInfo() {
       link: "/black-ops/cold-war/info/perks",
     },
     {
-      title: "Equipment",
+      title: "Streaks",
       text: "",
-      link: "/black-ops/cold-war/info/equipment",
+      link: "/black-ops/cold-war/info/streaks",
+    },
+    {
+      title: "Weapons",
+      text: "",
+      link: "/black-ops/cold-war/info/weapons",
     },
     {
       title: "Wildcards",
@@ -38,19 +43,14 @@ export default function ColdWarInfo() {
       link: "/black-ops/cold-war/info/wildcards",
     },
     {
-      title: "Streaks",
+      title: "Zombies - Field Upgrades",
       text: "",
-      link: "/black-ops/cold-war/info/streaks",
+      link: "/black-ops/cold-war/info/zombies/field-upgrades",
     },
     {
       title: "Zombies - Maps",
       text: "",
       link: "/black-ops/cold-war/info/zombies/maps",
-    },
-    {
-      title: "Zombies - Field Upgrades",
-      text: "",
-      link: "/black-ops/cold-war/info/zombies/field-upgrades",
     },
   ];
 
@@ -73,7 +73,12 @@ export default function ColdWarInfo() {
       </Head>
       <Header className="cold-war" navLinks={navLinks} />
       <Container className="information">
-        <h2 className="text-center mb-4">Cold War - Loadout Information</h2>
+        <h2 className="text-center mb-4">
+          Cold War
+          <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+          <br className="d-block d-sm-none" />
+          Loadout Information
+        </h2>
         <Row>
           {infoCards.map((card, index) => (
             <Col key={index} xl={3} lg={4} md={6} className="text-center mb-4">

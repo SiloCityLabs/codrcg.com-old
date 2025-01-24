@@ -8,7 +8,8 @@ import "@/public/styles/components/Loadout.css";
 export default function WhereWeDroppin() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/warzone/generator" },
+    { label: "Warzone Generator", href: "/warzone/generator" },
+    { label: "Loadout Info", href: "/warzone/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -33,7 +34,12 @@ export default function WhereWeDroppin() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Warzone - Where We Droppin</h2>
+            <h2>
+              Warzone
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Where We Droppin?
+            </h2>
 
             <WarzoneDropSpot />
           </Col>

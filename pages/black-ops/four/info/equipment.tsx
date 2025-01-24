@@ -47,7 +47,12 @@ export default function BlackOpsFourEquipment() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Black Ops 4 - Equipment</h2>
+            <h2>
+              Black Ops 4
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Equipment
+            </h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

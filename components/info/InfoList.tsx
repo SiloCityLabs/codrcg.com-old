@@ -55,6 +55,9 @@ function InfoList({ data, dataKeys }: InfoListProps) {
                     {dataKeys.includes("no_attach") && (
                       <th>Has Attachments?</th>
                     )}
+                    {dataKeys.includes("no_attach_info") && (
+                      <th>Needs Attachment Info?</th>
+                    )}
                     {dataKeys.includes("isDlc") && <th>DLC</th>}
                   </tr>
                 </thead>
@@ -97,6 +100,11 @@ function InfoList({ data, dataKeys }: InfoListProps) {
                       {dataKeys.includes("no_attach") && (
                         <td>
                           {filteredData[key]?.no_attach ? "true" : "false"}
+                        </td>
+                      )}
+                      {dataKeys.includes("no_attach_info") && (
+                        <td>
+                          {filteredData[key]?.no_attach_info ? "true" : "false"}
                         </td>
                       )}
                       {dataKeys.includes("isDlc") && (

@@ -12,7 +12,8 @@ export function getEquipment(
   const data = mergeObjectsWithRekey(
     getLethalList(game),
     getTacticalList(game),
-    getFieldUpgradeList(game)
+    getFieldUpgradeList(game),
+    getVestList(game)
   ) as Record<string, Equipment>;
 
   return data;

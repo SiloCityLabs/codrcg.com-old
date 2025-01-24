@@ -34,7 +34,12 @@ export default function Vanguard() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Vanguard - Random Class Generator</h2>
+            <h2>
+              Vanguard
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Random Class Generator
+            </h2>
 
             <VanguardLoadout />
           </Col>

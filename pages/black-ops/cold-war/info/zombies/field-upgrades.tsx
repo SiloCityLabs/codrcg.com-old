@@ -9,7 +9,7 @@ import { getZombiesFieldUpgrade } from "@/helpers/info/zombies/getZombiesFieldUp
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsSixZombiesArtifacts() {
+export default function ColdWarZombiesFieldUpgrades() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops/cold-war/generator" },
@@ -39,7 +39,7 @@ export default function BlackOpsSixZombiesArtifacts() {
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="View all zombies artifacts in Cold War."
+          content="View all zombies field upgrades in Cold War."
         />
         <meta
           name="keywords"
@@ -53,7 +53,12 @@ export default function BlackOpsSixZombiesArtifacts() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Cold War - Zombies Field Upgrades</h2>
+            <h2>
+              Cold War
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Zombies Field Upgrades
+            </h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

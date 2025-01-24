@@ -108,7 +108,9 @@ function ModernWarfareThreeLoadout() {
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{equipment.lethal.name}</span>
+            <span className="text-muted fs-6">
+              {equipment.lethal.name ? equipment.lethal.name : "None"}
+            </span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Perks:</span> <br />
@@ -124,7 +126,9 @@ function ModernWarfareThreeLoadout() {
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
             <span className="text-muted fs-6">
-              {equipment.fieldUpgrade.name}
+              {equipment.fieldUpgrade.name
+                ? equipment.fieldUpgrade.name
+                : "None"}
             </span>
           </Col>
           <Col sm className="text-center">
@@ -154,7 +158,9 @@ async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "modern-warfare-three";
     const randClassName = fetchClassName();
-    const perks = fetchPerks();
+    let allowGear2 = true;
+    let primaryType = "primary";
+    let secondaryType = "secondary";
     const streaks = fetchStreaks(game);
     let equipment = {
       tactical: fetchEquipment("tactical", game),
@@ -163,13 +169,49 @@ async function fetchLoadoutData(setData, setContainerClass) {
       vest: fetchEquipment("vest", game),
     };
 
+    //Vest Validation
+    const vestEffects = {
+      "Gunner Vest": () => {
+        allowGear2 = false;
+        secondaryType = "primary";
+      },
+      "CCT Comms Vest": () => {
+        equipment.lethal = { name: "", type: "", game: "" };
+      },
+      "Ninja Vest": () => {
+        allowGear2 = false;
+      },
+      "Assassin Vest": () => {
+        allowGear2 = false;
+      },
+      "Overkill Vest": () => {
+        allowGear2 = false;
+        primaryType = "all";
+        secondaryType = "all";
+      },
+      "Gunslinger Vest": () => {
+        primaryType = "secondary";
+        secondaryType = "secondary";
+      },
+      "Compression Carrier": () => {
+        allowGear2 = false;
+        equipment.fieldUpgrade = { name: "", type: "", game: "" };
+      },
+    };
+
+    if (vestEffects[equipment.vest.name]) {
+      vestEffects[equipment.vest.name]();
+    }
+
+    const perks = fetchPerks(allowGear2);
+
     let weapons = {
       primary: {
-        weapon: fetchWeapon("primary", game),
+        weapon: fetchWeapon(primaryType, game),
         attachments: "",
       },
       secondary: {
-        weapon: fetchWeapon("secondary", game),
+        weapon: fetchWeapon(secondaryType, game),
         attachments: "",
       },
     };
@@ -177,14 +219,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
     weapons.primary.attachments = implodeObject(
       fetchAttachments(weapons.primary.weapon)
     );
-
-    if (equipment.vest.name === "Overkill Vest") {
-      weapons.secondary.weapon = fetchWeapon(
-        "primary",
-        game,
-        weapons.primary.weapon.name
-      );
-    }
 
     //Verify if secondary weapon has attachments
     if (!weapons.secondary.weapon?.no_attach) {

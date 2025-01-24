@@ -50,7 +50,12 @@ export default function ColdWarStreaks() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Cold War - Streaks</h2>
+            <h2>
+              Cold War
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Streaks
+            </h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

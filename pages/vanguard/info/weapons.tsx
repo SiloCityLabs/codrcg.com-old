@@ -50,7 +50,12 @@ export default function BlackOpsSixWeapons() {
       <Container className="generator" fluid>
         <Row>
           <Col>
-            <h2>Vanguard - Weapons</h2>
+            <h2>
+              Vanguard
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Weapons
+            </h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

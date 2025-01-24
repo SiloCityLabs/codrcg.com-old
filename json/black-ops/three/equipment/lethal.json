@@ -1,8 +1,32 @@
 [
-  "Frag",
-  "Semtex",
-  "Trip Mine",
-  "Thermite",
-  "Combat Axe",
-  "C4"
+  {
+    "name": "Frag",
+    "type": "Lethal",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Semtex",
+    "type": "Lethal",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Trip Mine",
+    "type": "Lethal",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Thermite",
+    "type": "Lethal",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Combat Axe",
+    "type": "Lethal",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "C4",
+    "type": "Lethal",
+    "game": "black-ops-three"
+  }
 ]

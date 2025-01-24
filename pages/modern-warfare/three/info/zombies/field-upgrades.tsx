@@ -1,26 +1,45 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
+//Components
 import Header from "@/components/Header";
-import ModernWarfareThreeZombiesLoadout from "@/components/generators/modern-warfare/three/ModernWarfareThreeZombiesLoadout";
+import InfoList from "@/components/info/InfoList";
+//Helpers
+import { getZombiesFieldUpgrade } from "@/helpers/info/zombies/getZombiesFieldUpgrade";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function ModernWarfareThreeZombies() {
+export default function BlackOpsSixZombiesArtifacts() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/modern-warfare/three/generator" },
+    {
+      label: "Zombies Generator",
+      href: "/modern-warfare/three/zombies-generator",
+    },
     { label: "Loadout Info", href: "/modern-warfare/three/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState({});
+  const dataKeys = ["name", "type", "game"];
+
+  useEffect(() => {
+    const dataList = getZombiesFieldUpgrade("modern-warfare-three");
+    setData(dataList);
+
+    setIsLoading(false);
+  }, []);
+
   return (
     <>
       <Head>
-        <title>Modern Warfare Zombies Random Class Generator</title>
+        <title>Modern Warfare 3 Zombies Field Upgrades</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Spice up your COD Zombies gameplay! Generate unique random loadouts for Modern Warfare Zombies. Discover new weapons, perks, and gear combinations."
+          content="View all zombies field upgrades in Modern Warfare 3."
         />
         <meta
           name="keywords"
@@ -35,13 +54,13 @@ export default function ModernWarfareThreeZombies() {
         <Row>
           <Col>
             <h2>
-              Modern Warfare Zombies
+              Modern Warfare 3
               <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
               <br className="d-block d-sm-none" />
-              Random Class Generator
+              Zombies Field Upgrades
             </h2>
 
-            <ModernWarfareThreeZombiesLoadout />
+            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>
         </Row>
       </Container>

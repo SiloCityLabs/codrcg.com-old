@@ -17,5 +17,6 @@ export type InfoData = {
   minor?: string;
   major?: string;
   no_attach?: boolean;
+  no_attach_info?: boolean;
   isDlc?: boolean;
 };

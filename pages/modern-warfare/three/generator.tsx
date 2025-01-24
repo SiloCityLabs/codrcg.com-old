@@ -12,6 +12,7 @@ export default function ModernWarfareThree() {
       label: "Zombies Generator",
       href: "/modern-warfare/three/zombies-generator",
     },
+    { label: "Loadout Info", href: "/modern-warfare/three/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 

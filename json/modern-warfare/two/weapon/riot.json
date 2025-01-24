@@ -1,8 +1,8 @@
 [
     {
         "name": "RIOT SHIELD",
-        "type": "Melee",
-        "game": "Modern Warfare 2",
+        "type": "melee",
+        "game": "Modern Warfare Two",
         "no_attach": true
     }
 ]

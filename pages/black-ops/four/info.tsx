@@ -9,7 +9,11 @@ export default function BlackOpsFourInfo() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops/four/generator" },
-    { label: "Zombies Generator", href: "/black-ops/four/zombies-generator" },
+    { label: "Zombies Generator", href: "/black-ops/four/zombies/generator" },
+    {
+      label: "Zombies Custom Mutations",
+      href: "/black-ops/four/zombies/custom-mutations",
+    },
     { label: "Changelog", href: "/changelog" },
   ];
 

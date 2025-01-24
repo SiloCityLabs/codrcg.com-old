@@ -68,7 +68,7 @@ function Changelog2025() {
           </p>
           <p>
             01/10/2025:{" "}
-            <a href="black-ops/four/zombies-generator">Black Ops 4 Zombies:</a>{" "}
+            <a href="black-ops/four/zombies/generator">Black Ops 4 Zombies:</a>{" "}
             Generator is now available!
           </p>
           <p>

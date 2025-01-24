@@ -122,7 +122,10 @@
 		<loc>https://codrcg.com/black-ops/four/generator</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops/four/zombies-generator</loc>
+		<loc>https://codrcg.com/black-ops/four/zombies/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/four/zombies/custom-mutations</loc>
 	</url>
 	<url>
 		<loc>https://codrcg.com/black-ops/four/info</loc>

@@ -77,7 +77,7 @@ export default function Home() {
       link: "black-ops/four/generator",
       disabled: false,
       btn2Text: "Zombies Generator",
-      link2: "black-ops/four/zombies-generator",
+      link2: "black-ops/four/zombies/generator",
       disabled2: false,
     },
     {

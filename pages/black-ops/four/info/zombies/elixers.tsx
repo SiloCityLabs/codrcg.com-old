@@ -13,7 +13,11 @@ export default function BlackOpsFourZombiesElixers() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops/four/generator" },
-    { label: "Zombies Generator", href: "/black-ops/four/zombies-generator" },
+    { label: "Zombies Generator", href: "/black-ops/four/zombies/generator" },
+    {
+      label: "Zombies Custom Mutations",
+      href: "/black-ops/four/zombies/custom-mutations",
+    },
     { label: "Loadout Info", href: "/black-ops/four/info" },
     { label: "Changelog", href: "/changelog" },
   ];

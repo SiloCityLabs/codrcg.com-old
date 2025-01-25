@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 //Components
-import { Row, Col, Button } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import CustomMutationsSimple from "@/components/generators/black-ops/four/custom-mutations/views/CustomMutationsSimple";
 //Types
 import { CustomMutationsProps } from "@/types/CustomMutations";

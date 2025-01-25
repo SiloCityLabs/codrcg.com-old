@@ -1,19 +1,47 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
-import { Container, Row, Col, Tabs, Tab } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Tabs,
+  Tab,
+  Button,
+  Spinner,
+} from "react-bootstrap";
 import Header from "@/components/Header";
 import CustomMutationsGeneral from "@/components/generators/black-ops/four/custom-mutations/CustomMutationsGeneral";
+//Json
+import generalSettings from "@/json/black-ops/four/zombies/custom-mutations/general.json";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
 export default function Changelog() {
+  const [isLoading, setIsLoading] = useState(true);
   const [key, setKey] = useState<string>("general");
+  const [count, setCount] = useState(0);
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Zombies Generator", href: "/black-ops/four/zombies/generator" },
     { label: "Loadout Info", href: "/black-ops/four/info" },
     { label: "Changelog", href: "/changelog" },
   ];
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  }, []);
+
+  const handleClick = async () => {
+    setIsLoading(true);
+    setCount(count + 1);
+    setKey("general");
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  };
 
   return (
     <>
@@ -43,28 +71,52 @@ export default function Changelog() {
               Random Custom Mutations Generator
             </h2>
             <Container className="shadow-lg p-3 mb-5 bg-body rounded">
-              <Tabs
-                id="controlled-tab-example"
-                activeKey={key}
-                onSelect={(k) => setKey(k ?? "2025")}
-                className="mb-3"
-              >
-                <Tab eventKey="general" title="General">
-                  <CustomMutationsGeneral />
-                </Tab>
-                <Tab eventKey="systems" title="Systems">
-                  Systems
-                </Tab>
-                <Tab eventKey="weapons" title="Weapons">
-                  Weapons
-                </Tab>
-                <Tab eventKey="enemies" title="Enemies">
-                  Enemies
-                </Tab>
-                <Tab eventKey="player" title="Player">
-                  Player
-                </Tab>
-              </Tabs>
+              {isLoading ? ( // Conditional rendering based on isLoading
+                <div className="text-center">
+                  <Spinner animation="border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                  </Spinner>
+                </div>
+              ) : (
+                <>
+                  <Tabs
+                    id="controlled-tab-example"
+                    activeKey={key}
+                    onSelect={(k) => setKey(k ?? "general")}
+                    className="mb-3"
+                  >
+                    <Tab eventKey="general" title="General">
+                      <CustomMutationsGeneral
+                        data={generalSettings}
+                        count={count}
+                      />
+                    </Tab>
+                    <Tab eventKey="systems" title="Systems">
+                      Systems
+                    </Tab>
+                    <Tab eventKey="weapons" title="Weapons">
+                      Weapons
+                    </Tab>
+                    <Tab eventKey="enemies" title="Enemies">
+                      Enemies
+                    </Tab>
+                    <Tab eventKey="player" title="Player">
+                      Player
+                    </Tab>
+                  </Tabs>
+                  <Row id="button-row">
+                    <Col className="text-center">
+                      <Button
+                        variant="black-ops"
+                        href="#"
+                        onClick={handleClick}
+                      >
+                        Generate Loadout
+                      </Button>
+                    </Col>
+                  </Row>
+                </>
+              )}
             </Container>
           </Col>
         </Row>

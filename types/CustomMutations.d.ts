@@ -9,3 +9,8 @@ export type Setting = {
   max?: number;
   increment?: number;
 };
+
+export interface CustomMutationsProps {
+  data: Setting[];
+  count: number;
+}

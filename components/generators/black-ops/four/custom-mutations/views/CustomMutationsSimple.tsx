@@ -1,17 +1,28 @@
 import { useEffect, useState } from "react";
 //Components
 import { Col } from "react-bootstrap";
+//Helpers
+import { createRangeArray } from "@/helpers/createRangeArray";
 //Types
 import { Setting } from "@/types/CustomMutations";
 
-interface CustomMutationsSimpleProps {
+interface CustomMutationsProps {
   data: Setting;
   count: number;
 }
 
-function CustomMutationsSimple({ data, count }: CustomMutationsSimpleProps) {
+function CustomMutationsSimple({ data, count }: CustomMutationsProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [value, setValue] = useState(data.default);
+
+  if (
+    data.min !== undefined &&
+    data.max !== undefined &&
+    data.increment !== undefined
+  ) {
+    const valuesArray = createRangeArray(data.min, data.max, data.increment);
+    data = { ...data, values: valuesArray as number[] };
+  }
 
   useEffect(() => {
     const keepDefaultValue =

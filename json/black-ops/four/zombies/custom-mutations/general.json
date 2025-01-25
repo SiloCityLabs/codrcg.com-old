@@ -1,7 +1,7 @@
 [
     {
         "name": "Starting Round",
-        "type": "number",
+        "type": "simple",
         "defaultChance": "70%",
         "default": 1,
         "unitValue": "Rounds",
@@ -12,7 +12,7 @@
     },
     {
         "name": "Round Cap",
-        "type": "number",
+        "type": "simple",
         "defaultChance": "70%",
         "default": "Off",
         "unitValue": "Rounds",
@@ -23,7 +23,7 @@
     },
     {
         "name": "Time Cap",
-        "type": "number",
+        "type": "simple",
         "defaultChance": "60%",
         "default": "Off",
         "unitValue": "Minutes",

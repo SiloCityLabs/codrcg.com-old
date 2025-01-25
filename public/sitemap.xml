@@ -65,13 +65,35 @@
 	<url>
 		<loc>https://codrcg.com/warzone/generator</loc>
 	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/where-we-droppin</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info/weapons</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info/wildcards</loc>
+	</url>
 	<!-- Modern Warfare 3 -->
 	<url>
 		<loc>https://codrcg.com/modern-warfare/three/generator</loc>
 	</url>
 	<url>
 		<loc>https://codrcg.com/modern-warfare/three/zombies-generator</loc>
-	</url><url>
+	</url>
+	<url>
 		<loc>https://codrcg.com/modern-warfare/three/info</loc>
 	</url>
 	<url>

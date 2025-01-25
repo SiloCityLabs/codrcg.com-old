@@ -137,8 +137,8 @@ function WarzoneLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   sendEvent("button_click", {
-    button_id: "bo4_fetchLoadoutData",
-    label: "BlackOpsFour",
+    button_id: "warzone_fetchLoadoutData",
+    label: "Warzone",
     category: "COD_Loadouts",
   });
 

@@ -34,15 +34,12 @@ const mapInfo = {
 };
 
 function WarzoneDropSpot() {
-  const [isClient, setIsClient] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [spinResult, setSpinResult] = useState("????");
   //Settings
   const [settings, setSettings] =
     useState<WarzoneDropSpotSettings>(defaultSettings);
   const [warzoneMap, setWarzoneMap] = useState(settings.warzoneMap);
-  const [dropspots, setDropSpots] = useState(
-    mapInfo[settings.warzoneMap].dropSpots
-  );
   const [showModal, setShowModal] = useState(false);
   const segColors = [
     "#EE4040",
@@ -62,6 +59,12 @@ function WarzoneDropSpot() {
     "#FF9000",
   ];
   const onFinished = (winner: string) => {
+    sendEvent("button_click", {
+      button_id: "warzoneDropSpot_rollSpot",
+      label: "WarzoneDropSpot",
+      category: "COD_Loadouts",
+    });
+
     setSpinResult(winner);
   };
 
@@ -72,12 +75,17 @@ function WarzoneDropSpot() {
 
     setSettings(completeSettings);
     setWarzoneMap(completeSettings.warzoneMap);
-    setDropSpots(mapInfo[completeSettings.warzoneMap].dropSpots);
 
-    setIsClient(true);
+    setIsLoading(true);
   }, []);
 
   const handleClick = async () => {
+    sendEvent("button_click", {
+      button_id: "warzoneDropSpot_rollSpot",
+      label: "WarzoneDropSpot",
+      category: "COD_Loadouts",
+    });
+
     setSpinResult(
       mapInfo[warzoneMap].dropSpots[
         Math.floor(Math.random() * mapInfo[warzoneMap].dropSpots.length)
@@ -87,7 +95,6 @@ function WarzoneDropSpot() {
 
   const handleMapChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setWarzoneMap(event.target.value);
-    setDropSpots(mapInfo[event.target.value].dropSpots);
     setSettings({
       ...settings,
       warzoneMap: event.target.value,
@@ -108,7 +115,7 @@ function WarzoneDropSpot() {
         className={`shadow-lg p-3 bg-body rounded`}
       >
         <Row className="justify-content-md-center">
-          {isClient && (
+          {isLoading && (
             <>
               <Row className="mb-3">
                 <Col sm className="text-center mb-4 mb-md-0">

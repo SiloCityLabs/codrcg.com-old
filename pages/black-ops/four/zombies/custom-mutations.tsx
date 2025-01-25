@@ -17,6 +17,7 @@ import generalSettings from "@/json/black-ops/four/zombies/custom-mutations/gene
 import systemsSettings from "@/json/black-ops/four/zombies/custom-mutations/systems.json";
 import weaponSettings from "@/json/black-ops/four/zombies/custom-mutations/weapons.json";
 import enemiesSettings from "@/json/black-ops/four/zombies/custom-mutations/enemies.json";
+import playerSettings from "@/json/black-ops/four/zombies/custom-mutations/player.json";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
@@ -114,7 +115,10 @@ export default function Changelog() {
                       />
                     </Tab>
                     <Tab eventKey="player" title="Player">
-                      Player
+                      <CustomMutationsSection
+                        data={playerSettings}
+                        count={count}
+                      />
                     </Tab>
                   </Tabs>
                   <Row id="button-row">

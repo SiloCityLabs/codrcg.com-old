@@ -2,7 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import { Container, Row, Col, Tabs, Tab } from "react-bootstrap";
 import Header from "@/components/Header";
-import Changelog2025 from "@/components/changelog/Changelog2025";
+import CustomMutationsGeneral from "@/components/generators/black-ops/four/custom-mutations/CustomMutationsGeneral";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
@@ -50,19 +50,19 @@ export default function Changelog() {
                 className="mb-3"
               >
                 <Tab eventKey="general" title="General">
-                  <Changelog2025 />
+                  <CustomMutationsGeneral />
                 </Tab>
                 <Tab eventKey="systems" title="Systems">
-                  <Changelog2025 />
+                  Systems
                 </Tab>
                 <Tab eventKey="weapons" title="Weapons">
-                  <Changelog2025 />
+                  Weapons
                 </Tab>
                 <Tab eventKey="enemies" title="Enemies">
-                  <Changelog2025 />
+                  Enemies
                 </Tab>
                 <Tab eventKey="player" title="Player">
-                  <Changelog2025 />
+                  Player
                 </Tab>
               </Tabs>
             </Container>

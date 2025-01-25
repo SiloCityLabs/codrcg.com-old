@@ -10,7 +10,7 @@ interface CustomMutationsProps {
   count: number;
 }
 
-function CustomMutationsSystems({ data, count }: CustomMutationsProps) {
+function CustomMutationsSection({ data, count }: CustomMutationsProps) {
   return (
     <Row className="justify-content-md-center">
       {Object.keys(data).map((outerIndex) => (
@@ -30,4 +30,4 @@ function CustomMutationsSystems({ data, count }: CustomMutationsProps) {
   );
 }
 
-export default CustomMutationsSystems;
+export default CustomMutationsSection;

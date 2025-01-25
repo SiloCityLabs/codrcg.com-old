@@ -11,10 +11,11 @@ import {
 } from "react-bootstrap";
 import Header from "@/components/Header";
 import CustomMutationsGeneral from "@/components/generators/black-ops/four/custom-mutations/CustomMutationsGeneral";
-import CustomMutationsSystems from "@/components/generators/black-ops/four/custom-mutations/CustomMutationsSystems";
+import CustomMutationsSection from "@/components/generators/black-ops/four/custom-mutations/CustomMutationsSection";
 //Json
 import generalSettings from "@/json/black-ops/four/zombies/custom-mutations/general.json";
 import systemsSettings from "@/json/black-ops/four/zombies/custom-mutations/systems.json";
+import weaponSettings from "@/json/black-ops/four/zombies/custom-mutations/weapons.json";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
@@ -94,13 +95,16 @@ export default function Changelog() {
                       />
                     </Tab>
                     <Tab eventKey="systems" title="Systems">
-                      <CustomMutationsSystems
+                      <CustomMutationsSection
                         data={systemsSettings}
                         count={count}
                       />
                     </Tab>
                     <Tab eventKey="weapons" title="Weapons">
-                      Weapons
+                      <CustomMutationsSection
+                        data={weaponSettings}
+                        count={count}
+                      />
                     </Tab>
                     <Tab eventKey="enemies" title="Enemies">
                       Enemies

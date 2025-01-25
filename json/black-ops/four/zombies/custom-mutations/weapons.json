@@ -1,0 +1,191 @@
+{
+    "Standard Weapons": [
+        {
+            "name": "Shotguns",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "SMGs",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Assault Rifles",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Tactical Rifles",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "LMGs",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Sniper Rifles",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Combat Knife",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Melee",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        }
+    ],
+    "Special Weapons": [
+        {
+            "name": "Allow Special Weapons",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Charge Speed",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "Normal",
+            "unitValue": "",
+            "values": [
+                "Slow (.5x)",
+                "Normal",
+                "Fast (2x)"
+            ]
+        }
+    ],
+    "Wonder Weapon": [
+        {
+            "name": "Allow Wonder Weapon",
+            "type": "simple",
+            "defaultChance": "55%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        }
+    ],
+    "Equipment": [
+        {
+            "name": "Equipment",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Charge Speed",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "Normal",
+            "unitValue": "",
+            "values": [
+                "Slow (.5x)",
+                "Normal",
+                "Fast (2x)"
+            ]
+        }
+    ],
+    "Shield": [
+        {
+            "name": "Allow Shield",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Shield Durability",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double"
+            ]
+        },
+        {
+            "name": "Highlight Shield Pieces",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "Off",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "optic": [
+        "Remuda Mini Reflex",
+        "Otero Micro Dot",
+        "Kepler Microflex",
+        "Merlin Mini",
+        "PrismaTech Reflex",
+        "Volzhskiy Reflex",
+        "Merlin Reflex",
+        "Redwell Reflex",
+        "Dobrych MF Reflex",
+        "Accu-Spot Reflex",
+        "K&S Red Dot",
+        "Kepler Red Dot",
+        "Otero Red Dot",
+        "OM3 '92 Holo",
+        "Pinpoint Holoscout",
+        "Accu-Spot Ultra Holo",
+        "Jason Armory 2x",
+        "Willis 3x",
+        "PrismaTech 4x",
+        "Dobrych 4x",
+        "Pinpoint Hybrid",
+        "PrismaPoint Hybrid",
+        "R&K Multizoom",
+        "Blandwell 7x Scope",
+        "Otero Thermal 2x",
+        "Hawker Hybrid"
+    ],
+    "muzzle": [
+        "Suppressor",
+        "Compensator",
+        "Ported Compensator",
+        "Muzzle Brake"
+    ],
+    "barrel": [
+        "Gain-Twist Barrel",
+        "Long Barrel",
+        "Short Barrel",
+        "CHF Barrel",
+        "Reinforced Barrel"
+    ],
+    "underbarrel": [
+        "Vertical Foregrip",
+        "Lightweight Foregrip",
+        "Marksman Foregrip",
+        "Precision Foregrip",
+        "Ranger Foregrip",
+        "Launcher - Standard",
+        "Launcher - Smoke",
+        "Launcher - High Explosive",
+        "Launcher - Drill Charge",
+        "Crossbow"
+    ],
+    "magazine": [
+        "Extended Mag I",
+        "Flip Mag",
+        "Extended Mag II",
+        "Fast Mag I"
+    ],
+    "rear_grip": [
+        "Quickdraw Grip",
+        "Assault Grip",
+        "Commando Grip",
+        "Ergonomic Grip",
+        "CQB Grip"
+    ],
+    "stock": [
+        "Light Stock",
+        "Heavy Stock",
+        "Balanced Stock",
+        "Combat Stock",
+        "Infiltrator Stock"
+    ],
+    "laser": [
+        "Steady Aim Laser",
+        "Fast Motion Laser",
+        "Tactical Laser",
+        "Strelok Laser",
+        "Target Laser"
+    ],
+    "fire_mods": [
+        "Rapid Fire",
+        "7.62x39mm Overpressured",
+        "Recoil Springs",
+        "7.62x39mm FMJ"
+    ]
+}

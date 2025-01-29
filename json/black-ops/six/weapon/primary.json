@@ -147,5 +147,11 @@
     "type": "sniper",
     "game": "black-ops-six",
     "isDlc": true
+  },
+  {
+    "name": "Cypher 091",
+    "type": "assault_rifle",
+    "game": "black-ops-six",
+    "isDlc": true
   }
 ]

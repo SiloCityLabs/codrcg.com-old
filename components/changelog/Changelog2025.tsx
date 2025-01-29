@@ -6,6 +6,13 @@ function Changelog2025() {
       <Row>
         <Col>
           <p>
+            01/10/2025:{" "}
+            <a href="black-ops/four/zombies/custom-mutations">
+              Black Ops 4 Zombies :
+            </a>{" "}
+            Custom Mutations Generator is now available!
+          </p>
+          <p>
             1/29/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
             Slipstream perk &amp; War Machine scorestreak
           </p>

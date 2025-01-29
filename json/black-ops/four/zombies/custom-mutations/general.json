@@ -13,7 +13,7 @@
     {
         "name": "Round Cap",
         "type": "simple",
-        "defaultChance": "70%",
+        "defaultChance": "100%",
         "default": "Off",
         "unitValue": "Rounds",
         "min": 1,

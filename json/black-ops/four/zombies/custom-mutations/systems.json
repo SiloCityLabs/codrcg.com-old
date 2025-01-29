@@ -27,7 +27,7 @@
     ],
     "Barricades": [
         {
-            "name": "Power Doors",
+            "name": "Doors",
             "type": "simple",
             "defaultChance": "0",
             "default": "Default",

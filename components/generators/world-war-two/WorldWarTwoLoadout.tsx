@@ -4,11 +4,12 @@ import Button from "react-bootstrap/Button";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
-import { fetchPerks } from "@/helpers/fetch/fetchPerks";
 import { fetchStreaks } from "@/helpers/fetch/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
+//World War Two
+import { fetchPerk } from "@/helpers/generator/world-war-two/fetchPerk";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 
@@ -31,8 +32,8 @@ function WorldWarTwoLoadout() {
     equipment: {
       tactical: { name: "", type: "" },
       lethal: { name: "", type: "" },
-      field_upgrade: { name: "", type: "" },
     },
+    division: "",
   });
 
   useEffect(() => {
@@ -43,7 +44,7 @@ function WorldWarTwoLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { randClassName, perks, streaks, weapons, equipment } = data;
+  const { randClassName, perks, streaks, weapons, equipment, division } = data;
 
   return (
     <>
@@ -108,18 +109,12 @@ function WorldWarTwoLoadout() {
             <span className="fw-bolder fs-5">Lethal:</span> <br />
             <span className="text-muted fs-6">{equipment.lethal.name}</span>
           </Col>
-          <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perks:</span> <br />
-            <span className="text-muted fs-6">{perks}</span>
-          </Col>
         </Row>
         <hr />
         <Row className="mb-5">
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">
-              {equipment.field_upgrade.name}
-            </span>
+            <span className="fw-bolder fs-5">Division:</span> <br />
+            <span className="text-muted fs-6">{division}</span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Streaks:</span> <br />
@@ -128,7 +123,7 @@ function WorldWarTwoLoadout() {
         </Row>
         <Row id="button-row">
           <Col className="text-center">
-            <Button variant="danger" href="#" onClick={handleClick}>
+            <Button variant="ww2" href="#" onClick={handleClick}>
               Generate Loadout
             </Button>
           </Col>
@@ -146,13 +141,16 @@ async function fetchLoadoutData(setData, setContainerClass) {
   });
 
   try {
-    const game = "vanguard";
+    const game = "world-war-two";
     const randClassName = fetchClassName();
-    //Set attach count too 100 to know its max
-    const attachCount = 100;
-
-    const perks = fetchPerks(game);
+    const perks = [];
+    const all = fetchPerk("all");
+    const division = fetchPerk("division");
+    const basic = fetchPerk("basic-training");
     const streaks = fetchStreaks(game);
+    let primAttactCount = division === "Infantry" ? 4 : 3;
+    let secondaryAttactCount = division === "Infantry" ? 2 : 1;
+
     let weapons = {
       primary: {
         weapon: fetchWeapon("primary", game),
@@ -163,32 +161,61 @@ async function fetchLoadoutData(setData, setContainerClass) {
         attachments: "",
       },
     };
+
+    if (division === "Cavalry") {
+      primAttactCount = 0;
+      secondaryAttactCount = 0;
+
+      //Cavalry
+      weapons.primary.weapon = {
+        name: "Cavalry Shield",
+        type: "Shield",
+        game: "world-war-two",
+        no_attach: true,
+      };
+
+      //Secondary can be all attachments
+      weapons.secondary.weapon = fetchWeapon("all", game);
+      (weapons.secondary.weapon ?? {}).no_attach = true;
+    }
+
     //Get Primary Attachments
     if (!weapons.primary.weapon?.no_attach) {
       weapons.primary.attachments = implodeObject(
-        fetchAttachments(weapons.primary.weapon, attachCount)
+        fetchAttachments(weapons.primary.weapon, primAttactCount)
       );
     }
     //Check for overkill
-    if (perks.includes("Overkill")) {
-      weapons.secondary.weapon = fetchWeapon(
-        "primary",
-        game,
-        weapons.primary.weapon.name
-      );
-    }
+    // if (perks.includes("Overkill")) {
+    //   weapons.secondary.weapon = fetchWeapon(
+    //     "primary",
+    //     game,
+    //     weapons.primary.weapon.name
+    //   );
+    // }
 
     //Verify if secondary weapon has attachments
     if (!weapons.secondary.weapon?.no_attach) {
       weapons.secondary.attachments = implodeObject(
-        fetchAttachments(weapons.secondary.weapon, attachCount)
+        fetchAttachments(weapons.secondary.weapon, secondaryAttactCount)
       );
     }
+
     let equipment = {
       tactical: fetchEquipment("tactical", game),
       lethal: fetchEquipment("lethal", game),
-      field_upgrade: fetchEquipment("field_upgrade", game),
     };
+
+    if (division === "Commando") {
+      equipment = {
+        tactical: {
+          name: "Paratrooper Insert",
+          type: "Special",
+          game: "world-war-two",
+        },
+        lethal: fetchEquipment("lethal_tactical", game),
+      };
+    }
 
     setData({
       randClassName,
@@ -196,6 +223,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       streaks,
       weapons,
       equipment,
+      division,
     });
     setContainerClass("");
   } catch (error: any) {

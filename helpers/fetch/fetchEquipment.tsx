@@ -13,12 +13,19 @@ const equipmentListGetters: Record<string, (game: string) => any> = {
 };
 
 export function fetchEquipment(type: string, game: string = ""): Equipment {
-  const getEquipmentList = equipmentListGetters[type];
-
-  if (getEquipmentList) {
-    const dataList = getEquipmentList(game);
-    return randomListItem(dataList);
+  if (type === "lethal_tactical") {
+    const lethalList = getLethalList(game);
+    const tacticalList = getTacticalList(game);
+    const combinedList = [...lethalList, ...tacticalList]; // Merge the lists
+    return randomListItem(combinedList); // Select a random item from the merged list
   } else {
-    return {} as Equipment; // Provide a default empty Equipment object
+    const getEquipmentList = equipmentListGetters[type];
+
+    if (getEquipmentList) {
+      const dataList = getEquipmentList(game);
+      return randomListItem(dataList);
+    } else {
+      return {} as Equipment;
+    }
   }
 }

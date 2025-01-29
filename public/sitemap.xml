@@ -252,9 +252,9 @@
 		<loc>https://codrcg.com/modern-warfare/remastered/info/weapons</loc>
 	</url>
 	<!-- World War Two -->
-	<!-- <url>
+	<url>
 		<loc>https://codrcg.com/world-war-two/generator</loc>
-	</url> -->
+	</url>
 	<url>
 		<loc>https://codrcg.com/world-war-two/zombies-generator</loc>
 	</url>

@@ -86,7 +86,7 @@ export default function Home() {
       variant: "ww2",
       btn1Text: "Multiplayer Generator",
       link: "world-war-two/generator",
-      disabled: true,
+      disabled: false,
       btn2Text: "Zombies Generator",
       link2: "world-war-two/zombies-generator",
       disabled2: false,

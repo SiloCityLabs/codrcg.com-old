@@ -148,8 +148,7 @@
     "name": "Sten",
     "type": "smg",
     "game": "world-war-two",
-    "isDlc": true,
-    "no_attach_info": true
+    "isDlc": true
   },
   {
     "name": "Orso",

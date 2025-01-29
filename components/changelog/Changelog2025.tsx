@@ -7,7 +7,7 @@ function Changelog2025() {
         <Col>
           <p>
             1/29/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
-            Cypher 091
+            Cypher 091, PPSH-41
           </p>
           <p>
             1/28/2025:{" "}

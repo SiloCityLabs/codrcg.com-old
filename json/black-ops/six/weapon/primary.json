@@ -153,5 +153,11 @@
     "type": "assault_rifle",
     "game": "black-ops-six",
     "isDlc": true
+  },
+  {
+    "name": "Ppsh-41",
+    "type": "smg",
+    "game": "black-ops-six",
+    "isDlc": true
   }
 ]

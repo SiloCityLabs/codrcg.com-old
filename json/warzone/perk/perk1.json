@@ -18,12 +18,6 @@
     "color": "Blue"
   },
   {
-    "name": "Dexterity",
-    "type": "Perk 1",
-    "game": "warzone",
-    "color": "Blue"
-  },
-  {
     "name": "Scavenger",
     "type": "Perk 1",
     "game": "warzone",
@@ -34,5 +28,12 @@
     "type": "Perk 1",
     "game": "warzone",
     "color": "Blue"
+  },
+  {
+    "name": "Mountaineer",
+    "type": "Perk 1",
+    "game": "warzone",
+    "color": "Blue",
+    "isDlc": true
   }
 ]

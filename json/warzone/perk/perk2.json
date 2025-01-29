@@ -34,5 +34,12 @@
     "type": "Perk 2",
     "game": "warzone",
     "color": "Red"
+  },
+  {
+    "name": "Reactive Armor",
+    "type": "Perk 2",
+    "game": "warzone",
+    "color": "Red",
+    "isDlc": true
   }
 ]

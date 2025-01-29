@@ -33,5 +33,12 @@
     "name": "Exit Strategy",
     "type": "Epic",
     "game": "black-ops-six"
+  },
+  {
+    "name": "Dead Drop",
+    "description": "(Lasts 5 Minutes) Drop rates of Salvage and equipment are greatly increased.",
+    "type": "Epic",
+    "game": "black-ops-six",
+    "isDlc": true
   }
 ]

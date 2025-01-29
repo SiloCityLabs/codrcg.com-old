@@ -305,5 +305,40 @@
         ],
         "type": "Perk-A-Cola",
         "game": "black-ops-six"
+    },
+    {
+        "name": "Death Perception",
+        "description": "Obscured enemies are keylined.",
+        "major": [
+            {
+                "name": "Treasure Hunter",
+                "description": "Spot items others can miss from loot containers as well as special and elite kills."
+            },
+            {
+                "name": "Death Stare",
+                "description": "Your Elemental Weakness damage has a chance to kill an enemy that is low on health."
+            },
+            {
+                "name": "Critical Eye",
+                "description": "Small chance that a body shot becomes a critical shot"
+            }
+        ],
+        "minor": [
+            {
+                "name": "Birds Eye View",
+                "description": "The minimap's scan is increased."
+            },
+            {
+                "name": "Extra Change",
+                "description": "Find extra essence under more locations."
+            },
+            {
+                "name": "Further Insight",
+                "description": "Increase Perception radius."
+            }
+        ],
+        "type": "Perk-A-Cola",
+        "game": "black-ops-six",
+        "isDlc": true
     }
 ]

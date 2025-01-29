@@ -26,7 +26,6 @@ export default function ModernWarfareRemasteredPerks() {
 
   useEffect(() => {
     const dataList = getPerk("modern-warfare-remastered");
-    console.log("dataList", dataList);
     setData(dataList);
 
     setIsLoading(false);

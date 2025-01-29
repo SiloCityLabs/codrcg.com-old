@@ -1,0 +1,622 @@
+{
+    "Power": [
+        {
+            "name": "Power",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Off",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "Default",
+                "On"
+            ]
+        },
+        {
+            "name": "Power Doors",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Locked",
+                "Default",
+                "Open"
+            ]
+        }
+    ],
+    "Barricades": [
+        {
+            "name": "Doors",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Locked",
+                "Default",
+                "Open"
+            ]
+        },
+        {
+            "name": "Barricades",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        }
+    ],
+    "Mystery Box": [
+        {
+            "name": "Mystery Box",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "Firesale Only",
+                "Default",
+                "All On"
+            ]
+        },
+        {
+            "name": "# of Uses Before Move",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Default",
+            "unitValue": "Rolls",
+            "min": 1,
+            "max": 10,
+            "increment": 1,
+            "values": []
+        },
+        {
+            "name": "Number of Uses",
+            "type": "simple",
+            "defaultChance": "55%",
+            "default": "Off",
+            "unitValue": "Rolls",
+            "min": 1,
+            "max": 50,
+            "increment": 1,
+            "values": []
+        },
+        {
+            "name": "Number of Uses (Per Round)",
+            "type": "simple",
+            "defaultChance": "55%",
+            "default": "Off",
+            "unitValue": "Rolls",
+            "min": 1,
+            "max": 10,
+            "increment": 1,
+            "values": []
+        }
+    ],
+    "Perks": [
+        {
+            "name": "Perks Active",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Timeslip",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Quick Revive",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Death Perception",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Stamin-Up",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Ethereal Razor",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Blood Wolf Bite",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Zombshell",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Blaze Phase",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Electric Burst",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Dying Wish",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Stone Cold Stronghold",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Victorious Tortoise",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Deadshot Dealer",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Bandolier Bandit",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Winters Wail",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Mule Kick",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "PhD Slider",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Secret Sauce",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        }
+    ],
+    "Pack-A-Punch": [
+        {
+            "name": "Pack-A-Punch",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "Default",
+                "Always On"
+            ]
+        },
+        {
+            "name": "Re-Pack-A-Punch",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        }
+    ],
+    "Power Ups": [
+        {
+            "name": "Power ups Active",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Frequency",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double"
+            ]
+        },
+        {
+            "name": "Limit Power Ups (Per Round)",
+            "type": "simple",
+            "defaultChance": "45%",
+            "default": "Off",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "# of Power ups Allowed (Per Round)",
+            "type": "simple",
+            "defaultChance": "15%",
+            "default": 1,
+            "unitValue": "",
+            "min": 1,
+            "max": 20,
+            "increment": 1,
+            "values": []
+        },
+        {
+            "name": "Allow 2x Points",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Allow Carpenter",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Allow Bonus Points",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Allow Fire Sale",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Allow InstaKill",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Allow Max Ammo",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Allow Nuke",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Allow Special Weapon",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        }
+    ],
+    "Wall Buys": [
+        {
+            "name": "Allow Wall Buys",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        }
+    ],
+    "Elixers": [
+        {
+            "name": "Allow Elixers",
+            "type": "simple",
+            "defaultChance": "50%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Cooldown Speed",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Normal",
+            "unitValue": "",
+            "values": [
+                "Slow (.5x)",
+                "Normal",
+                "Fast (2x)"
+            ]
+        },
+        {
+            "name": "Classic",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Common",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Rare",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Legendary",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Epic",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        }
+    ],
+    "Talismans": [
+        {
+            "name": "Allow Talismans",
+            "type": "simple",
+            "defaultChance": "50%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Common",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Rare",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Legendary",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Epic",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        }
+    ]
+}

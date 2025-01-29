@@ -5,7 +5,7 @@ import GeneratorCard from "@/components/GeneratorCard";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsSixInfo() {
+export default function VanguardInfo() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/vanguard/generator" },

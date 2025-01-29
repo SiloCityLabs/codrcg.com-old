@@ -14,5 +14,12 @@
     "type": "Whimsical",
     "game": "black-ops-six",
     "isDlc": true
+  },
+  {
+    "name": "Quacknarok",
+    "description": "(Lasts 3 Minutes) Zombies have rubber ducky inner tubes.",
+    "type": "Whimsical",
+    "game": "black-ops-six",
+    "isDlc": true
   }
 ]

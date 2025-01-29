@@ -65,13 +65,35 @@
 	<url>
 		<loc>https://codrcg.com/warzone/generator</loc>
 	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/where-we-droppin</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info/weapons</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info/wildcards</loc>
+	</url>
 	<!-- Modern Warfare 3 -->
 	<url>
 		<loc>https://codrcg.com/modern-warfare/three/generator</loc>
 	</url>
 	<url>
 		<loc>https://codrcg.com/modern-warfare/three/zombies-generator</loc>
-	</url><url>
+	</url>
+	<url>
 		<loc>https://codrcg.com/modern-warfare/three/info</loc>
 	</url>
 	<url>
@@ -122,7 +144,10 @@
 		<loc>https://codrcg.com/black-ops/four/generator</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops/four/zombies-generator</loc>
+		<loc>https://codrcg.com/black-ops/four/zombies/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/four/zombies/custom-mutations</loc>
 	</url>
 	<url>
 		<loc>https://codrcg.com/black-ops/four/info</loc>
@@ -225,6 +250,37 @@
 	</url>
 	<url>
 		<loc>https://codrcg.com/modern-warfare/remastered/info/weapons</loc>
+	</url>
+	<!-- World War Two -->
+	<!-- <url>
+		<loc>https://codrcg.com/world-war-two/generator</loc>
+	</url> -->
+	<url>
+		<loc>https://codrcg.com/world-war-two/zombies-generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/vangworld-war-twouard/info/streaks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/weapons</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/zombies/maps</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/zombies/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/zombies/specials</loc>
 	</url>
 	<!-- <url>
 		<loc>https://codrcg.com/contactus</loc>

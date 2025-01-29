@@ -9,7 +9,7 @@ import { getStreaks } from "@/helpers/info/getStreaks";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsSixStreaks() {
+export default function VanguardStreaks() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/vanguard/generator" },

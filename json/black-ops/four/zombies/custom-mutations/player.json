@@ -1,0 +1,224 @@
+{
+    "Health": [
+        {
+            "name": "Starting Health",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "-3 Bars",
+                "-2 Bars",
+                "-1 Bar",
+                "Default",
+                "+3 Bars",
+                "+2 Bars",
+                "+1 Bar"
+            ]
+        },
+        {
+            "name": "Regen Delay",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Medium",
+            "unitValue": "",
+            "values": [
+                "Short",
+                "Medium",
+                "Long"
+            ]
+        },
+        {
+            "name": "Regen Speed",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Medium",
+            "unitValue": "",
+            "values": [
+                "Instant",
+                "Short",
+                "Medium",
+                "Long",
+                "None"
+            ]
+        },
+        {
+            "name": "Kills Give Health",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "Off",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "Small",
+                "Medium",
+                "Large"
+            ]
+        },
+        {
+            "name": "Health Drain",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "Off",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "Small",
+                "Medium",
+                "Large"
+            ]
+        },
+        {
+            "name": "Friendly Fire",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "Disabled",
+            "unitValue": "",
+            "values": [
+                "Disabled",
+                "Enabled",
+                "Reflect",
+                "Shared"
+            ]
+        }
+    ],
+    "Points": [
+        {
+            "name": "Starting Points",
+            "type": "simple",
+            "defaultChance": "50%",
+            "default": 500,
+            "unitValue": "Points",
+            "min": 500,
+            "max": 50000,
+            "increment": 500,
+            "values": []
+        },
+        {
+            "name": "Points Loss When Hit",
+            "type": "simple",
+            "defaultChance": "35%",
+            "default": "Off",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "Percentage",
+                "Value"
+            ]
+        },
+        {
+            "name": "Points Loss %",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": 1,
+            "unitValue": "%",
+            "min": 1,
+            "max": 100,
+            "increment": 1,
+            "values": []
+        },
+        {
+            "name": "Points Loss Value",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": 100,
+            "unitValue": "Points",
+            "min": 100,
+            "max": 10000,
+            "increment": 100,
+            "values": []
+        },
+        {
+            "name": "Points Loss on Down",
+            "type": "simple",
+            "defaultChance": "55%",
+            "default": "Off",
+            "unitValue": "%",
+            "min": 1,
+            "max": 100,
+            "increment": 1,
+            "values": []
+        },
+        {
+            "name": "Points Loss on Death",
+            "type": "simple",
+            "defaultChance": "55%",
+            "default": "Off",
+            "unitValue": "%",
+            "min": 1,
+            "max": 100,
+            "increment": 1,
+            "values": []
+        },
+        {
+            "name": "Points Loss on Teammate Death",
+            "type": "simple",
+            "defaultChance": "55%",
+            "default": "Off",
+            "unitValue": "%",
+            "min": 1,
+            "max": 100,
+            "increment": 1,
+            "values": []
+        }
+    ],
+    "Last Stand": [
+        {
+            "name": "Last Stand Duration",
+            "type": "simple",
+            "defaultChance": "35%",
+            "default": "Medium",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "Short",
+                "Medium",
+                "Long"
+            ]
+        },
+        {
+            "name": "Limited Downs",
+            "type": "simple",
+            "defaultChance": "50%",
+            "default": "Off",
+            "unitValue": "Downs",
+            "min": 1,
+            "max": 99,
+            "increment": 1,
+            "values": []
+        },
+        {
+            "name": "Self-Revive Count",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "Off",
+            "unitValue": "Downs",
+            "min": 1,
+            "max": 99,
+            "increment": 1,
+            "values": []
+        },
+        {
+            "name": "Retain Weapons after Death",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Perk Decay in Last Stand",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Default",
+                "Instant"
+            ]
+        }
+    ]
+}

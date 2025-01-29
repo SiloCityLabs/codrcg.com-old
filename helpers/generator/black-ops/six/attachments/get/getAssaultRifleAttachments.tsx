@@ -5,6 +5,7 @@ import goblinmk2 from "@/json/black-ops/six/attachments/assault_rifle/goblinMk2.
 import xm4 from "@/json/black-ops/six/attachments/assault_rifle/xm4.json";
 //DLC
 import krigc from "@/json/black-ops/six/attachments/assault_rifle/krigC.json";
+import cypher091 from "@/json/black-ops/six/attachments/assault_rifle/cypher091.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {
@@ -16,6 +17,7 @@ const attachmentsList: Record<string, any> = {
   goblinmk2,
   xm4,
   krigc,
+  cypher091,
 };
 
 export function getAssaultRifleAttachments(gun: string, count: number): any {

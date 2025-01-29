@@ -1,0 +1,276 @@
+{
+    "Basic Zombies": [
+        {
+            "name": "Crawlers",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On",
+                "Only"
+            ]
+        },
+        {
+            "name": "Zombie Spread",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Medium",
+            "unitValue": "",
+            "values": [
+                "Tight",
+                "Medium",
+                "Loose"
+            ]
+        },
+        {
+            "name": "Min Speed",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Walk",
+            "unitValue": "",
+            "values": [
+                "Walk",
+                "Run",
+                "Sprint",
+                "Super Sprint"
+            ]
+        },
+        {
+            "name": "Max Speed",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Super Sprint",
+            "unitValue": "",
+            "values": [
+                "Walk",
+                "Run",
+                "Sprint",
+                "Super Sprint"
+            ]
+        },
+        {
+            "name": "Damage Multiplier",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double"
+            ]
+        },
+        {
+            "name": "Health Multiplier",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double"
+            ]
+        }
+    ],
+    "Special Zombies": [
+        {
+            "name": "Heavy",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On",
+                "Only"
+            ]
+        },
+        {
+            "name": "Spawn Frequency",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double",
+                "Quadruple"
+            ]
+        },
+        {
+            "name": "Damage Multiplier",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double"
+            ]
+        },
+        {
+            "name": "Health Multiplier",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double"
+            ]
+        },
+        {
+            "name": "Mini-Boss",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On",
+                "Only"
+            ]
+        },
+        {
+            "name": "Spawn Frequency",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double",
+                "Quadruple"
+            ]
+        },
+        {
+            "name": "Damage Multiplier",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double"
+            ]
+        },
+        {
+            "name": "Health Multiplier",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double"
+            ]
+        },
+        {
+            "name": "Vermin",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On",
+                "Only"
+            ]
+        },
+        {
+            "name": "Spawn Frequency",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double",
+                "Quadruple"
+            ]
+        },
+        {
+            "name": "Damage Multiplier",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double"
+            ]
+        },
+        {
+            "name": "Health Multiplier",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double"
+            ]
+        },
+        {
+            "name": "Enhanced",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On",
+                "Only"
+            ]
+        },
+        {
+            "name": "Spawn Frequency",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double",
+                "Quadruple"
+            ]
+        },
+        {
+            "name": "Damage Multiplier",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double"
+            ]
+        },
+        {
+            "name": "Health Multiplier",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Default",
+            "unitValue": "",
+            "values": [
+                "Half",
+                "Default",
+                "Double"
+            ]
+        }
+    ]
+}

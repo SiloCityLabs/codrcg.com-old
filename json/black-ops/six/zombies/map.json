@@ -14,5 +14,11 @@
     "type": "Map",
     "game": "black-ops-six",
     "isDlc": true
+  },
+  {
+    "name": "The Tomb",
+    "type": "Map",
+    "game": "black-ops-six",
+    "isDlc": true
   }
 ]

@@ -47,5 +47,12 @@
     "game": "black-ops-six",
     "color": "Blue",
     "isDlc": true
+  },
+  {
+    "name": "Slipstream",
+    "type": "Perk 3",
+    "game": "black-ops-six",
+    "color": "Red",
+    "isDlc": true
   }
 ]

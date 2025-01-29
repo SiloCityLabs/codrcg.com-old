@@ -2,29 +2,45 @@
   {
     "name": "Hellfire",
     "type": "Special Weapon",
-    "stages": ["Flamethrower", "Blast Vent", "Infernal Tempest"],
+    "stages": [
+      "Flamethrower",
+      "Blast Vent",
+      "Infernal Tempest"
+    ],
     "story": "Aether Story",
-    "game": "black-ops-4"
+    "game": "black-ops-four"
   },
   {
     "name": "Overkill",
     "type": "Special Weapon",
-    "stages": ["Onslaught", "Grenade Launcher", "Tactical Nuke"],
+    "stages": [
+      "Onslaught",
+      "Grenade Launcher",
+      "Tactical Nuke"
+    ],
     "story": "Aether Story",
-    "game": "black-ops-4"
+    "game": "black-ops-four"
   },
   {
     "name": "Path Of Sorrows",
     "type": "Special Weapon",
-    "stages": ["Kaze Slash", "Merciless Dash", "Shadow Of Death"],
+    "stages": [
+      "Kaze Slash",
+      "Merciless Dash",
+      "Shadow Of Death"
+    ],
     "story": "Aether Story",
-    "game": "black-ops-4"
+    "game": "black-ops-four"
   },
   {
     "name": "Ragnarok DG-5",
     "type": "Special Weapon",
-    "stages": ["Shock Slam", "Electrocute", "Power Plant"],
+    "stages": [
+      "Shock Slam",
+      "Electrocute",
+      "Power Plant"
+    ],
     "story": "Aether Story",
-    "game": "black-ops-4"
+    "game": "black-ops-four"
   }
 ]

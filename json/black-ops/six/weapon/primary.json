@@ -147,5 +147,23 @@
     "type": "sniper",
     "game": "black-ops-six",
     "isDlc": true
+  },
+  {
+    "name": "Cypher 091",
+    "type": "assault_rifle",
+    "game": "black-ops-six",
+    "isDlc": true
+  },
+  {
+    "name": "Ppsh-41",
+    "type": "smg",
+    "game": "black-ops-six",
+    "isDlc": true
+  },
+  {
+    "name": "Feng 82",
+    "type": "lmg",
+    "game": "black-ops-six",
+    "isDlc": true
   }
 ]

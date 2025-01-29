@@ -6,6 +6,7 @@ import vanguardList from "@/json/vanguard/equipment/field_upgrade.json";
 import vanguardZombieList from "@/json/vanguard/zombies/artifacts.json";
 import coldWarZombieList from "@/json/black-ops/cold-war/zombies/field_upgrade.json";
 import coldWarList from "@/json/black-ops/cold-war/equipment/field_upgrade.json";
+import ww2List from "@/json/world-war-two/zombies/special.json";
 
 const equipment: Record<string, any> = {
   "black-ops-six": bo6List,
@@ -16,6 +17,7 @@ const equipment: Record<string, any> = {
   "vanguard-zombies": vanguardZombieList,
   "cold-war-zombies": coldWarZombieList,
   "cold-war": coldWarList,
+  "world-war-two-zombies": ww2List,
 };
 
 export function getFieldUpgradeList(game: string): any {

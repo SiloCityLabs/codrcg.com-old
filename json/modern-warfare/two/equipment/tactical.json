@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Flash Grenade",
+    "type": "Tactical",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Shock Stick",
+    "type": "Tactical",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Smoke Grenade",
+    "type": "Tactical",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Stun Grenade",
+    "type": "Tactical",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Decoy Grenade",
+    "type": "Tactical",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Spotter Scope",
+    "type": "Tactical",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Stim",
+    "type": "Tactical",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Heartbeat Sensor",
+    "type": "Tactical",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Snapshot Grenade",
+    "type": "Tactical",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Tear Gas",
+    "type": "Tactical",
+    "game": "modern-warfare-two"
+  }
+]

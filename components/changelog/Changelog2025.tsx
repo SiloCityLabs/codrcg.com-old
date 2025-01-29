@@ -6,6 +6,40 @@ function Changelog2025() {
       <Row>
         <Col>
           <p>
+            01/30/2025:{" "}
+            <a href="world-war-two/info">World War II Generator Information</a>
+          </p>
+          <p>
+            1/30/2025:{" "}
+            <a href="world-war-two/zombies-generator">World War II Zombies:</a>{" "}
+            Generator is now available!
+          </p>
+          <p>
+            01/10/2025:{" "}
+            <a href="black-ops/four/zombies/custom-mutations">
+              Black Ops 4 Zombies :
+            </a>{" "}
+            Custom Mutations Generator is now available!
+          </p>
+          <p>
+            1/29/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
+            Slipstream perk &amp; War Machine scorestreak
+          </p>
+          <p>
+            1/29/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
+            Cypher 091, PPSH-41 &amp; Feng 82 season 2 weapons
+          </p>
+          <p>
+            1/28/2025:{" "}
+            <a href="black-ops-6/zombies-generator">Black Ops VI Zombies:</a>{" "}
+            Added The Tomb
+          </p>
+          <p>
+            1/28/2024:{" "}
+            <a href="black-ops-6/zombies-generator">Black Ops VI Zombies:</a>{" "}
+            Added season 02 gobblegums &amp; and death perception augments
+          </p>
+          <p>
             01/24/2025: <a href="warzone/info">Warzone Generator Information</a>
           </p>
           <p>
@@ -68,7 +102,7 @@ function Changelog2025() {
           </p>
           <p>
             01/10/2025:{" "}
-            <a href="black-ops/four/zombies-generator">Black Ops 4 Zombies:</a>{" "}
+            <a href="black-ops/four/zombies/generator">Black Ops 4 Zombies:</a>{" "}
             Generator is now available!
           </p>
           <p>

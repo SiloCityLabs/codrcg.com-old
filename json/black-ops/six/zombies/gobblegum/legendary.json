@@ -33,5 +33,12 @@
     "name": "Immolation Liquidation",
     "type": "Legendary",
     "game": "black-ops-six"
+  },
+  {
+    "name": "Modified Chaos",
+    "description": "(Lasts 2 Minutes) Greatly reduce all ammo mod cooldowns.",
+    "type": "Legendary",
+    "game": "black-ops-six",
+    "isDlc": true
   }
 ]

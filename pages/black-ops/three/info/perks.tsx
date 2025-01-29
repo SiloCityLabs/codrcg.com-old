@@ -23,7 +23,6 @@ export default function BlackOpsThreePerks() {
 
   useEffect(() => {
     const dataList = getPerk("black-ops-three");
-    console.log("dataList", dataList);
     setData(dataList);
 
     setIsLoading(false);

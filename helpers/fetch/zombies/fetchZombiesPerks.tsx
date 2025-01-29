@@ -9,9 +9,6 @@ export function fetchZombiesPerks(
   const perkNames: string[] = []; // Array to store perk names
   const dataList: Perk[] = getPerkList(game);
 
-  console.log("fetchZombiesPerks game", game);
-  console.log("fetchZombiesPerks amount", amount);
-
   while (perkNames.length < amount) {
     const randomPerkName = randomListItem(dataList).name;
     if (!perkNames.includes(randomPerkName)) {

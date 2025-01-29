@@ -128,7 +128,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const mods = fetchZombiesPerks(`${game}-${special.toLowerCase()}`, 3).join(
       ", "
     );
-    console.log("mods", mods);
 
     setData({
       randClassName,

@@ -7,7 +7,7 @@ function Changelog2025() {
         <Col>
           <p>
             01/30/2025:{" "}
-            <a href="warzone/info">World War II Generator Information</a>
+            <a href="world-war-two/info">World War II Generator Information</a>
           </p>
           <p>
             1/30/2025:{" "}

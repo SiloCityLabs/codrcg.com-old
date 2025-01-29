@@ -251,6 +251,37 @@
 	<url>
 		<loc>https://codrcg.com/modern-warfare/remastered/info/weapons</loc>
 	</url>
+	<!-- World War Two -->
+	<!-- <url>
+		<loc>https://codrcg.com/world-war-two/generator</loc>
+	</url> -->
+	<url>
+		<loc>https://codrcg.com/world-war-two/zombies-generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/vangworld-war-twouard/info/streaks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/weapons</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/zombies/maps</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/zombies/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/zombies/specials</loc>
+	</url>
 	<!-- <url>
 		<loc>https://codrcg.com/contactus</loc>
 	</url>

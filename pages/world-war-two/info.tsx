@@ -34,6 +34,21 @@ export default function WorldWarTwoInfo() {
       text: "",
       link: "/world-war-two/info/weapons",
     },
+    {
+      title: "Zombies Maps",
+      text: "",
+      link: "/world-war-two/info/zombies/maps",
+    },
+    {
+      title: "Zombies Perks",
+      text: "",
+      link: "/world-war-two/info/zombies/perks",
+    },
+    {
+      title: "Zombies Specials",
+      text: "",
+      link: "/world-war-two/info/zombies/specials",
+    },
   ];
 
   return (

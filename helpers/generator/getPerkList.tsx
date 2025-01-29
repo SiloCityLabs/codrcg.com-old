@@ -1,3 +1,4 @@
+import { mergeObjectsWithRekey } from "@/helpers/mergeObjectsWithRekey";
 import bo6Perk1List from "@/json/black-ops/six/perk/perk1.json";
 import bo6Perk2List from "@/json/black-ops/six/perk/perk2.json";
 import bo6Perk3List from "@/json/black-ops/six/perk/perk3.json";
@@ -34,11 +35,22 @@ import mwrPerk3List from "@/json/modern-warfare/remastered/perk/perk3.json";
 //World War Two
 import ww2DivisionList from "@/json/world-war-two/division.json";
 import ww2BasicTrainingList from "@/json/world-war-two/basic-training.json";
+//World War Two Zombies
+import ww2CamouflageList from "@/json/world-war-two/zombies/mods/camouflage.json";
+import ww2FreefireList from "@/json/world-war-two/zombies/mods/freefire.json";
+import ww2FrontlineList from "@/json/world-war-two/zombies/mods/frontline.json";
+import ww2ShellshockList from "@/json/world-war-two/zombies/mods/shellshock.json";
+import ww2UniversalList from "@/json/world-war-two/zombies/mods/universal.json";
 
 const perks: Record<
   string,
   { perk1List: any; perk2List: any; perk3List: any }
 > = {
+  "world-war-two-zombies": {
+    perk1List: mergeObjectsWithRekey(ww2UniversalList, ww2CamouflageList),
+    perk2List: mergeObjectsWithRekey(ww2FreefireList, ww2FrontlineList),
+    perk3List: ww2ShellshockList,
+  },
   "black-ops-four": {
     perk1List: bo4Perk1List,
     perk2List: bo4Perk2List,

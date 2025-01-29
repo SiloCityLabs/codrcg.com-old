@@ -5,18 +5,16 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getPerk } from "@/helpers/info/getPerk";
+import { getZombiesMaps } from "@/helpers/info/zombies/getZombiesMaps";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function ModernWarfareRemasteredPerks() {
+export default function WorldWarTwoZombiesMaps() {
   const navLinks = [
     { label: "Home", href: "/" },
-    {
-      label: "Multiplayer Generator",
-      href: "/modern-warfare/remastered/generator",
-    },
-    { label: "Loadout Info", href: "/modern-warfare/remastered/info" },
+    // { label: "Multiplayer Generator", href: "/world-war-two/generator" },
+    { label: "Zombies Generator", href: "/world-war-two/zombies-generator" },
+    { label: "Loadout Info", href: "/world-war-two/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -25,7 +23,7 @@ export default function ModernWarfareRemasteredPerks() {
   const dataKeys = ["name", "type", "game"];
 
   useEffect(() => {
-    const dataList = getPerk("modern-warfare-remastered");
+    const dataList = getZombiesMaps("world-war-two-zombies");
     setData(dataList);
 
     setIsLoading(false);
@@ -34,29 +32,29 @@ export default function ModernWarfareRemasteredPerks() {
   return (
     <>
       <Head>
-        <title>Modern Warfare Remastered Perks</title>
+        <title>World War Two Zombies Maps</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="View all perks in Modern Warfare Remastered."
+          content="View all zombies maps in World War Two."
         />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
-          free, mp, multiplayer, call of duty random class generator, COD Modern Warfare Remastered RCG, COD MW RCG, mw remastered random class generator,
-          mw remastered, modern warfare remastered, modern warfare remastered rcg, modern warfare remastered random class generator, class generator, zombies, Infinity Ward zombies,
-          modern warfare zombies, modern warfare remastered zombies, modern warfare rcg, modern warfare random class generator"
+          free, mp, multiplayer, call of duty random class generator, COD World War 2 RCG, world war two random class generator,
+          world war two, world war two rcg, world war two random class generator, class generator, zombies, treyarch zombies,
+          world war two zombies, world war two rcg, world war two random class generator"
         />
       </Head>
-      <Header className="mwr" navLinks={navLinks} />
+      <Header className="ww2" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>
             <h2>
-              Modern Warfare Remastered
+              World War Two
               <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
               <br className="d-block d-sm-none" />
-              Perks
+              Zombies Maps
             </h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}

@@ -7,7 +7,11 @@ function Changelog2025() {
         <Col>
           <p>
             1/29/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
-            Cypher 091, PPSH-41
+            Slipstream perk &amp; War Machine scorestreak
+          </p>
+          <p>
+            1/29/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
+            Cypher 091, PPSH-41 &amp; Feng 82 season 2 weapons
           </p>
           <p>
             1/28/2025:{" "}

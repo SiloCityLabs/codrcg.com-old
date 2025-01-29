@@ -113,5 +113,12 @@
     "score": 900,
     "game": "black-ops-six",
     "isDlc": true
+  },
+  {
+    "name": "War Machine",
+    "type": "Streak",
+    "score": 1300,
+    "game": "black-ops-six",
+    "isDlc": true
   }
 ]

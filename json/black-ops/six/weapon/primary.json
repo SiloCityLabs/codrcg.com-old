@@ -159,5 +159,11 @@
     "type": "smg",
     "game": "black-ops-six",
     "isDlc": true
+  },
+  {
+    "name": "Feng 82",
+    "type": "lmg",
+    "game": "black-ops-six",
+    "isDlc": true
   }
 ]

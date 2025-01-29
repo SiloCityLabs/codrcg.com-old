@@ -140,8 +140,8 @@ function WorldWarTwoLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   sendEvent("button_click", {
-    button_id: "vanguard_fetchLoadoutData",
-    label: "Vanguard",
+    button_id: "ww2_fetchLoadoutData",
+    label: "WorldWarTwo",
     category: "COD_Loadouts",
   });
 

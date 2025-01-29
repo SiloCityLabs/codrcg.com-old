@@ -6,6 +6,7 @@ import coldWarOnslaughtList from "@/json/black-ops/cold-war/zombies/map/onslaugh
 //Black Ops 4 Zombies
 import bo4AetherList from "@/json/black-ops/four/zombies/aether_story/map.json";
 import bo4ChaosList from "@/json/black-ops/four/zombies/chaos_story/map.json";
+import ww2List from "@/json/world-war-two/zombies/map.json";
 
 const list: Record<string, any> = {
   "black-ops-six-zombies": bo6List,
@@ -19,6 +20,7 @@ const list: Record<string, any> = {
   ),
   "core-cold-war-zombies": coldWarCoreList,
   "onslaught-cold-war-zombies": coldWarOnslaughtList,
+  "world-war-two-zombies": ww2List,
 };
 
 export function getMapList(game: string): any {

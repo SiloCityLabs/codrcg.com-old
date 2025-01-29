@@ -41,7 +41,7 @@ export default function WorldWarTwoZombies() {
               Random Class Generator
             </h2>
 
-            {/* <WorldWarTwoZombiesLoadout /> */}
+            <WorldWarTwoZombiesLoadout />
           </Col>
         </Row>
       </Container>

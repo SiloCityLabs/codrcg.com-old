@@ -41,7 +41,7 @@ export default function WorldWarTwo() {
               Random Class Generator
             </h2>
 
-            <WorldWarTwoLoadout />
+            {/* <WorldWarTwoLoadout /> */}
           </Col>
         </Row>
       </Container>

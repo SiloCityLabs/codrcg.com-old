@@ -4,11 +4,12 @@ import Button from "react-bootstrap/Button";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
-import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
-//Zombies Specific
+//Zombies
+import { fetchZombiesCharacter } from "@/helpers/fetch/zombies/fetchZombiesCharacter";
 import { fetchZombiesMap } from "@/helpers/fetch/zombies/fetchZombiesMap";
+import { fetchZombiesPerks } from "@/helpers/fetch/zombies/fetchZombiesPerks";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 
@@ -22,11 +23,13 @@ function WorldWarTwoZombiesLoadout() {
     weapons: {
       primary: {
         weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
       },
     },
-    artifact: "",
+    lethal: "",
+    special: "",
+    character: "",
     zombieMap: "",
+    mods: "",
   });
 
   useEffect(() => {
@@ -38,7 +41,15 @@ function WorldWarTwoZombiesLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { randClassName, weapons, artifact, zombieMap } = data;
+  const {
+    randClassName,
+    weapons,
+    lethal,
+    special,
+    character,
+    zombieMap,
+    mods,
+  } = data;
 
   if (isLoading) {
     return <div className="text-center">Loading...</div>;
@@ -52,34 +63,30 @@ function WorldWarTwoZombiesLoadout() {
       >
         <h3 className="text-center mb-5">&ldquo;{randClassName}&rdquo;</h3>
         <Row className="justify-content-md-center mb-4">
-          <Col xs md="8" lg="6" className="text-center">
+          <Col xs md="8" lg="4" className="text-center">
+            <span className="fw-bolder fs-5">Character:</span> <br />
+            <span className="text-muted fs-6">{character}</span>
+          </Col>
+          <Col xs md="8" lg="4" className="text-center">
             <span className="fw-bolder fs-5">Primary:</span> <br />
             <span className="text-muted fs-6">
               {weapons.primary.weapon.name}
             </span>
-            <br />
-            {weapons.primary.weapon.no_attach ? (
-              <>
-                <span className="fw-bolder fs-5">Primary Attachments: </span>
-                <br />
-                <span className="text-muted fs-6">No Attachments</span>
-              </>
-            ) : (
-              <>
-                <span className="fw-bolder fs-5">Primary Attachments:</span>
-                <br />
-                <span className="text-muted fs-6">
-                  {weapons.primary.attachments}
-                </span>
-              </>
-            )}
+          </Col>
+          <Col xs md="8" lg="4" className="text-center">
+            <span className="fw-bolder fs-5">Special:</span> <br />
+            <span className="text-muted fs-6">{special}</span>
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Artifact:</span> <br />
-            <span className="text-muted fs-6">{artifact}</span>
+            <span className="fw-bolder fs-5">Mods:</span> <br />
+            <span className="text-muted fs-6">{mods}</span>
+          </Col>
+          <Col xs md="4" lg="3" className="text-center">
+            <span className="fw-bolder fs-5">Lethal:</span> <br />
+            <span className="text-muted fs-6">{lethal}</span>
           </Col>
           <Col xs md="4" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Map:</span> <br />
@@ -88,11 +95,7 @@ function WorldWarTwoZombiesLoadout() {
         </Row>
         <Row className="justify-content-md-center">
           <Col xs md="8" lg="6" className="text-center">
-            <Button
-              variant="danger"
-              onClick={handleClick}
-              className="w-50 me-2"
-            >
+            <Button variant="ww2" onClick={handleClick} className="w-50 me-2">
               Generate Loadout
             </Button>
           </Col>
@@ -104,34 +107,37 @@ function WorldWarTwoZombiesLoadout() {
 
 async function fetchLoadoutData(setData, setContainerClass) {
   sendEvent("button_click", {
-    button_id: "vanguardZombies_fetchLoadoutData",
-    label: "VanguardZombies",
+    button_id: "ww2Zombies_fetchLoadoutData",
+    label: "WorldWarTwoZombies",
     category: "COD_Loadouts",
   });
 
   try {
-    const game = "vanguard-zombies";
+    const game = "world-war-two-zombies";
     const randClassName = fetchClassName();
     const weapons = {
       primary: {
-        weapon: fetchWeapon("all", "vanguard"),
-        attachments: "",
+        weapon: fetchWeapon("primary", game),
       },
     };
-    //Get Primary Attachments
-    if (!weapons.primary.weapon.no_attach) {
-      weapons.primary.attachments = implodeObject(
-        fetchAttachments(weapons.primary.weapon, 8)
-      );
-    }
-    const artifact = fetchEquipment("field_upgrade", game).name;
+
+    const lethal = fetchEquipment("lethal", "world-war-two").name;
+    const special = fetchEquipment("field_upgrade", game).name;
+    const character = fetchZombiesCharacter(game).name;
     const zombieMap = fetchZombiesMap(game).name;
+    const mods = fetchZombiesPerks(`${game}-${special.toLowerCase()}`, 3).join(
+      ", "
+    );
+    console.log("mods", mods);
 
     setData({
       randClassName,
       weapons,
-      artifact,
+      lethal,
+      special,
+      character,
       zombieMap,
+      mods,
     });
     setContainerClass("");
   } catch (error: any) {

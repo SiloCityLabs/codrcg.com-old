@@ -167,7 +167,7 @@ function WarzoneDropSpot() {
                     onClick={handleClick}
                     className="w-50 me-2 d-block d-md-none"
                   >
-                    Randomize Map
+                    Randomize Spot
                   </Button>
                 </div>
               </Col>

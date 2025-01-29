@@ -45,6 +45,12 @@ export type Specialist = {
   game: string;
 };
 
+export type ZombiesCharacter = {
+  name: string;
+  type: string;
+  game: string;
+};
+
 export type ZombiesMap = {
   name: string;
   type: string;

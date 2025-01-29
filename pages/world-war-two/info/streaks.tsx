@@ -9,12 +9,12 @@ import { getStreaks } from "@/helpers/info/getStreaks";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function VanguardStreaks() {
+export default function WorldWarTwoStreaks() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/vanguard/generator" },
-    { label: "Zombies Generator", href: "/vanguard/zombies-generator" },
-    { label: "Loadout Info", href: "/vanguard/info" },
+    // { label: "Multiplayer Generator", href: "/world-war-two/generator" },
+    { label: "Zombies Generator", href: "/world-war-two/zombies-generator" },
+    { label: "Loadout Info", href: "/world-war-two/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -23,7 +23,7 @@ export default function VanguardStreaks() {
   const dataKeys = ["name", "score", "type", "game"];
 
   useEffect(() => {
-    const dataList = getStreaks("vanguard");
+    const dataList = getStreaks("world-war-two");
     setData(dataList);
 
     setIsLoading(false);
@@ -32,23 +32,23 @@ export default function VanguardStreaks() {
   return (
     <>
       <Head>
-        <title>Vanguard Streaks</title>
+        <title>World War Two Streaks</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="description" content="View all streaks in Vanguard." />
+        <meta name="description" content="View all streaks in World War Two." />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
-          free, mp, multiplayer, call of duty random class generator, COD Vanguard RCG, vanguard random class generator,
-          vanguard, vanguard rcg, vanguard random class generator, class generator, zombies, treyarch zombies,
-          vanguard zombies, vanguard rcg, vanguard random class generator"
+          free, mp, multiplayer, call of duty random class generator, COD World War 2 RCG, world war two random class generator,
+          world war two, world war two rcg, world war two random class generator, class generator, zombies, treyarch zombies,
+          world war two zombies, world war two rcg, world war two random class generator"
         />
       </Head>
-      <Header className="vanguard" navLinks={navLinks} />
+      <Header className="ww2" navLinks={navLinks} />
       <Container className="generator" fluid>
         <Row>
           <Col>
             <h2>
-              Vanguard
+              World War Two
               <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
               <br className="d-block d-sm-none" />
               Streaks

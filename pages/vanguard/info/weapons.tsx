@@ -9,7 +9,7 @@ import { getWeapon } from "@/helpers/info/getWeapon";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsSixWeapons() {
+export default function VanguardWeapons() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/vanguard/generator" },

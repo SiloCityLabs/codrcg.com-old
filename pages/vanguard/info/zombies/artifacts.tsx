@@ -9,7 +9,7 @@ import { getZombiesFieldUpgrade } from "@/helpers/info/zombies/getZombiesFieldUp
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function BlackOpsSixZombiesArtifacts() {
+export default function VanguardZombiesArtifacts() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/vanguard/generator" },

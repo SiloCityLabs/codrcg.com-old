@@ -5,11 +5,11 @@ import GeneratorCard from "@/components/GeneratorCard";
 //Styles
 import "@/public/styles/components/Loadout.css";
 
-export default function VanguardInfo() {
+export default function WorldWarTwoInfo() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/vanguard/generator" },
-    { label: "Zombies Generator", href: "/vanguard/zombies-generator" },
+    // { label: "Multiplayer Generator", href: "/world-war-two/generator" },
+    { label: "Zombies Generator", href: "/world-war-two/zombies-generator" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -17,56 +17,43 @@ export default function VanguardInfo() {
     {
       title: "Equipment",
       text: "",
-      link: "/vanguard/info/equipment",
+      link: "/world-war-two/info/equipment",
     },
     {
       title: "Perks",
       text: "",
-      link: "/vanguard/info/perks",
+      link: "/world-war-two/info/perks",
     },
     {
       title: "Streaks",
       text: "",
-      link: "/vanguard/info/streaks",
+      link: "/world-war-two/info/streaks",
     },
     {
       title: "Weapons",
       text: "",
-      link: "/vanguard/info/weapons",
-    },
-    {
-      title: "Zombies Artifacts",
-      text: "",
-      link: "/vanguard/info/zombies/artifacts",
-    },
-    {
-      title: "Zombies Maps",
-      text: "",
-      link: "/vanguard/info/zombies/maps",
+      link: "/world-war-two/info/weapons",
     },
   ];
 
   return (
     <>
       <Head>
-        <title>Vanguard Loadout Information</title>
+        <title>World War 2 Loadout Information</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="Loadout Information for Call of Duty: Vanguard. Checout all the weapons, perks, equipment, wildcards, streaks and zombies maps, ammo mods and gobblegums."
-        />
+        <meta name="description" content="" />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
-          free, mp, multiplayer, call of duty random class generator, COD Vanguard RCG, vanguard random class generator,
-          vanguard, vanguard rcg, vanguard random class generator, class generator, zombies, treyarch zombies,
-          vanguard zombies, vanguard rcg, vanguard random class generator"
+          free, mp, multiplayer, call of duty random class generator, COD World War 2 RCG, world war two random class generator,
+          world war two, world war two rcg, world war two random class generator, class generator, zombies, treyarch zombies,
+          world war two zombies, world war two rcg, world war two random class generator"
         />
       </Head>
-      <Header className="vanguard" navLinks={navLinks} />
+      <Header className="ww2" navLinks={navLinks} />
       <Container className="information">
         <h2 className="text-center mb-4">
-          Vanguard
+          World War 2
           <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
           <br className="d-block d-sm-none" />
           Loadout Information
@@ -77,7 +64,7 @@ export default function VanguardInfo() {
               <GeneratorCard
                 title={card.title}
                 text={card.text}
-                variant="danger"
+                variant="ww2"
                 btn1Text="View"
                 link={card.link}
                 disabled={false}

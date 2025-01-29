@@ -89,7 +89,7 @@ export default function Home() {
       disabled: true,
       btn2Text: "Zombies Generator",
       link2: "world-war-two/zombies-generator",
-      disabled2: true,
+      disabled2: false,
     },
     {
       title: "Infinite Warfare",

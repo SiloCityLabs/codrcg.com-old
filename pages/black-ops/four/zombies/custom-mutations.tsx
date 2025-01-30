@@ -45,7 +45,7 @@ export default function Changelog() {
 
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1000);
   };
 
   return (

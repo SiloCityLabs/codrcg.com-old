@@ -1,5 +1,22 @@
 [
     {
+        "name": "Bots",
+        "type": "simple",
+        "defaultChance": "0",
+        "default": "0",
+        "unitValue": "",
+        "values": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "0",
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
         "name": "Starting Round",
         "type": "simple",
         "defaultChance": "70%",

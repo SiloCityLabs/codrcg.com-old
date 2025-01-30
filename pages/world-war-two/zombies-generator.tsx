@@ -8,7 +8,7 @@ import "@/public/styles/components/Loadout.css";
 export default function WorldWarTwoZombies() {
   const navLinks = [
     { label: "Home", href: "/" },
-    // { label: "Multiplayer Generator", href: "/world-war-two/generator" },
+    { label: "Multiplayer Generator", href: "/world-war-two/generator" },
     { label: "Loadout Info", href: "/world-war-two/info" },
     { label: "Changelog", href: "/changelog" },
   ];

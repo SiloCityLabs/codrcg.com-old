@@ -11,6 +11,7 @@ import bo3List from "@/json/black-ops/three/weapon/secondary.json";
 import bo4List from "@/json/black-ops/four/weapon/secondary.json";
 import mwrList from "@/json/modern-warfare/remastered/weapon/side_arm.json";
 import ww2List from "@/json/world-war-two/weapon/secondary.json";
+import ww2MeleeList from "@/json/world-war-two/weapon/melee.json";
 
 const secondaryWeapons: Record<string, any> = {
   warzone: mergeObjectsWithRekey(bo6List, mw3List),
@@ -27,7 +28,7 @@ const secondaryWeapons: Record<string, any> = {
   "black-ops-four": bo4List,
   "cold-war": coldWarList,
   "modern-warfare-remastered": mwrList,
-  "world-war-two": ww2List,
+  "world-war-two": mergeObjectsWithRekey(ww2List, ww2MeleeList),
 };
 
 export function getSecondaryList(game: string): any {

@@ -1,0 +1,64 @@
+[
+  {
+    "name": "US Shovel",
+    "type": "melee",
+    "game": "world-war-two",
+    "no_attach": true
+  },
+  {
+    "name": "Ice Pick",
+    "type": "melee",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach": true
+  },
+  {
+    "name": "Trench Knife",
+    "type": "melee",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach": true
+  },
+  {
+    "name": "Combat Knife",
+    "type": "melee",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach": true
+  },
+  {
+    "name": "Baseball Bat",
+    "type": "melee",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach": true
+  },
+  {
+    "name": "Fire Axe",
+    "type": "melee",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach": true
+  },
+  {
+    "name": "Claymore",
+    "type": "melee",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach": true
+  },
+  {
+    "name": "Push Dagger",
+    "type": "melee",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach": true
+  },
+  {
+    "name": "Sledgehammer",
+    "type": "melee",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach": true
+  }
+]

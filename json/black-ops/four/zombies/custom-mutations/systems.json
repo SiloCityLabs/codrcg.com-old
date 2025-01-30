@@ -560,6 +560,567 @@
                 "Off",
                 "On"
             ]
+        },
+        {
+            "name": "Always Done Swiftly",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Anywhere But Here!",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Burned Out",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Equip Mint",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Head Scan",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Temporal Gift",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Aftertaste",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Point Drops",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Anti-Entrapment",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Nowhere But There!",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Now You See Me",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Arsenal Accelerator",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Pop Shocks",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Stock Option",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Newtonian Negation",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Quacknarok",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Bullet Boost",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Ctrl-Z",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Dead of Nuclear Winter",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "In Plain Sight",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Licensed Contractor",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Phantom Reload",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Sword Flay",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Whos Keeping Score?",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Alchemical Antithesis",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Blood Debt",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Extra Credit",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Immolation Liquidation",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Kill Joy",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Shields Up",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Talkin' Bout Regeneration",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Cache Back",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Dividend Yield",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Free Fire",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Perk Up",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Power Keg",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Wall-to-Wall Clearance",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Undead Man Walking",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Shopping Free",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Head Drama",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Secret Shopper",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Reign Drops",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Power Vacuum",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Near Death Experience",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Phoenix Up",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Conflagration Liquidation",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Join The Party",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Perkaholic",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Refresh Mint",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Suit Up",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Wall Power",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
         }
     ],
     "Talismans": [
@@ -611,6 +1172,413 @@
             "name": "Epic",
             "type": "simple",
             "defaultChance": "40%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Charm Of Impatience",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Charm Of Miser",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Coagulated Crystal",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Dimensional Pocket: Acid Bomb",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Dimensional Pocket: Claymore",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Dimensional Pocket: Frag",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Dimensional Pocket: Wraith Fire",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Energized Amulet",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Frugal Fetish",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Minor Amulet of the 1st Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Minor Amulet of the 2nd Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Minor Amulet of the 3rd Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Minor Amulet of the 4th Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Minor Token of Superiority",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Minor Virtuoso's Charm",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Dimensional Pocket: Sentry",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Major Amulet of the 1st Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Major Amulet of the 2nd Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Major Amulet of the 3rd Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Major Amulet of the 4th Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Major Token of Superiority",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Major Virtuoso's Charm",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Minor Reinforced Charm",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Grand Token of Superiority",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Sigil of the 1st Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Sigil of the 2nd Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Sigil of the 3rd Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Sigil of the 4th Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Glowing Phylactery",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Supercharged Crystal",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Charged Crystal",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Battered Dragon Scale",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Grand Amulet of the 1st Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Grand Amulet of the 2nd Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Grand Amulet of the 3rd Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Grand Amulet of the 4th Circle",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "On",
+            "unitValue": "",
+            "values": [
+                "Off",
+                "On"
+            ]
+        },
+        {
+            "name": "Major Reinforced Charm",
+            "type": "simple",
+            "defaultChance": "30%",
             "default": "On",
             "unitValue": "",
             "values": [

@@ -6,6 +6,11 @@ function Changelog2025() {
       <Row>
         <Col>
           <p>
+            1/31/2025:{" "}
+            <a href="world-war-two/custom-match">World War II Custom Match:</a>{" "}
+            Generator is now available!
+          </p>
+          <p>
             1/30/2025: <a href="world-war-two/generator">World War II:</a>{" "}
             Generator is now available!
           </p>

@@ -20,7 +20,7 @@ import styles from "@/public/styles/components/Loadout.module.css";
 
 export default function CustomMatch() {
   const [isLoading, setIsLoading] = useState(true);
-  const [key, setKey] = useState<string>("rules");
+  const [key, setKey] = useState<string>("general");
   const [count, setCount] = useState(0);
   const navLinks = [
     { label: "Home", href: "/" },
@@ -39,7 +39,7 @@ export default function CustomMatch() {
   const handleClick = async () => {
     setIsLoading(true);
     setCount(count + 1);
-    setKey("rules");
+    setKey("general");
 
     setTimeout(() => {
       setIsLoading(false);

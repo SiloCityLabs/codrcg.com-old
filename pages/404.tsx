@@ -30,6 +30,10 @@ const redirects: Record<string, string> = {
   "/cold-war/generator": "/black-ops/cold-war/generator",
   "/cold-war/zombies-generator": "/black-ops/cold-war/zombies-generator",
   "/cold-war/info": "/black-ops/cold-war/info",
+  //Black Ops 6
+  "/black-ops-six/generator": "/black-ops/six/generator",
+  "/black-ops-six/zombies-generator": "/black-ops/six/zombies-generator",
+  "/black-ops-six/info": "/black-ops/six/info",
 };
 
 export default function NotFoundPage() {

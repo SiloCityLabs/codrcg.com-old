@@ -16,24 +16,24 @@ function Changelog2024() {
           </p>
           <p>
             12/22/2024:{" "}
-            <a href="black-ops-six/zombies-generator">Black Ops VI Zombies:</a>{" "}
+            <a href="black-ops/six/zombies-generator">Black Ops VI Zombies:</a>{" "}
             Added settings
           </p>
           <p>
-            12/22/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
+            12/22/2024: <a href="black-ops/six/generator">Black Ops VI:</a>{" "}
             Added 3-Round Burst Mod to Kompakt 92
           </p>
           <p>
-            12/21/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
+            12/21/2024: <a href="black-ops/six/generator">Black Ops VI:</a>{" "}
             Added Maelstrom shotgun
           </p>
           <p>
-            12/20/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
+            12/20/2024: <a href="black-ops/six/generator">Black Ops VI:</a>{" "}
             Added AMR Mod 4 Sniper
           </p>
           <p>12/6/2024: Added Loadout names to all generators</p>
           <p>
-            12/6/2024: <a href="black-ops-six/generator">Black Ops VI:</a> Added
+            12/6/2024: <a href="black-ops/six/generator">Black Ops VI:</a> Added
             Season 01 reloaded perk reflexes to the generator
           </p>
           <p>
@@ -60,7 +60,7 @@ function Changelog2024() {
           </p>
           <p>
             11/25/2024:{" "}
-            <a href="black-ops-six/zombies-generator">Black Ops VI Zombies:</a>{" "}
+            <a href="black-ops/six/zombies-generator">Black Ops VI Zombies:</a>{" "}
             Added Gobblegums &amp; maps to the generator
           </p>
           <p>
@@ -69,15 +69,15 @@ function Changelog2024() {
           </p>
           <p>
             11/23/2024:{" "}
-            <a href="black-ops-six/zombies-generator">Black Ops VI Zombies:</a>{" "}
+            <a href="black-ops/six/zombies-generator">Black Ops VI Zombies:</a>{" "}
             Generator is now available!
           </p>
           <p>
-            11/22/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
+            11/22/2024: <a href="black-ops/six/generator">Black Ops VI:</a>{" "}
             Added Season 01 perks and weapons to the generator
           </p>
           <p>
-            11/20/2024: <a href="black-ops-six/generator">Black Ops VI:</a>{" "}
+            11/20/2024: <a href="black-ops/six/generator">Black Ops VI:</a>{" "}
             Generator is now available!
           </p>
         </Col>

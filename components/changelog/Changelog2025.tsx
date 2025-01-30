@@ -102,7 +102,7 @@ function Changelog2025() {
           </p>
           <p>
             01/11/2025:{" "}
-            <a href="black-ops-six/info">Black Ops 6 Generator Information</a>
+            <a href="black-ops/six/info">Black Ops 6 Generator Information</a>
           </p>
           <p>
             01/10/2025:{" "}

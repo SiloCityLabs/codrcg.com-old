@@ -11,10 +11,10 @@ export default function Home() {
       text: "",
       variant: "black-ops",
       btn1Text: "Multiplayer Generator",
-      link: "black-ops-six/generator",
+      link: "black-ops/six/generator",
       disabled: false,
       btn2Text: "Zombies Generator",
-      link2: "black-ops-six/zombies-generator",
+      link2: "black-ops/six/zombies-generator",
       disabled2: false,
     },
     {

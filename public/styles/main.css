@@ -28,9 +28,35 @@
   border-bottom: black solid 1px;
 }
 
+/* Custom Header Colors */
+#cod-header.black-ops {
+  background: #F96800 !important;
+}
+
+#cod-header a {
+  color: white !important;
+}
+
+#cod-header.warzone,
+#cod-header.mwr {
+  background: #198754 !important;
+}
+
+#cod-header.modern-warfare,
+#cod-header.cold-war,
+#cod-header.vanguard {
+  background: #DC3545 !important;
+}
+
+#cod-header.mw2 {
+  background: #79C22B !important;
+}
+
+#cod-header.ww2 {
+  background: #9C800F !important;
+}
 
 /* Cutom Button Colors */
-
 /* Black Ops Orange - #F96800 */
 .btn-black-ops {
   color: #ffffff;

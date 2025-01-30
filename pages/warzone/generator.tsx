@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import WarzoneLoadout from "@/components/generators/warzone/WarzoneLoadout";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
 export default function Warzone() {
   const navLinks = [
@@ -31,7 +31,7 @@ export default function Warzone() {
         />
       </Head>
       <Header className="warzone" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
             <h2>

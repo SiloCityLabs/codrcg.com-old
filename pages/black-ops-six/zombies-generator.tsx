@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import BlackOpsSixZombiesLoadout from "@/components/generators/black-ops/six/BlackOpsSixZombiesLoadout";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
 export default function BlackOpsSixZombies() {
   const navLinks = [
@@ -31,7 +31,7 @@ export default function BlackOpsSixZombies() {
         />
       </Head>
       <Header className="black-ops" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
             <h2>

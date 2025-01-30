@@ -1,9 +1,5 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-//Styles
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../public/styles/main.css";
-import "../public/styles/material.css";
 
 interface HeaderProps {
   className?: string;

@@ -7,7 +7,7 @@ import InfoList from "@/components/info/InfoList";
 //Helpers
 import { getZombiesFieldUpgrade } from "@/helpers/info/zombies/getZombiesFieldUpgrade";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
 export default function BlackOpsSixZombiesArtifacts() {
   const navLinks = [
@@ -47,7 +47,7 @@ export default function BlackOpsSixZombiesArtifacts() {
         />
       </Head>
       <Header className="black-ops" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
             <h2>

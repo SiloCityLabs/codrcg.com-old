@@ -7,7 +7,7 @@ import InfoList from "@/components/info/InfoList";
 //Helpers
 import { getStreaks } from "@/helpers/info/getStreaks";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
 export default function ColdWarStreaks() {
   const navLinks = [
@@ -50,7 +50,7 @@ export default function ColdWarStreaks() {
         />
       </Head>
       <Header className="modern-warfare" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
             <h2>

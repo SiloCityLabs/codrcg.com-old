@@ -7,7 +7,7 @@ import InfoList from "@/components/info/InfoList";
 //Helpers
 import { getWildcards } from "@/helpers/info/getWildcards";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
 export default function ColdWarWildcards() {
   const navLinks = [
@@ -47,7 +47,7 @@ export default function ColdWarWildcards() {
         />
       </Head>
       <Header className="cold-war" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
             <h2>

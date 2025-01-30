@@ -7,7 +7,7 @@ import InfoList from "@/components/info/InfoList";
 //Helpers
 import { getWeapon } from "@/helpers/info/getWeapon";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
 export default function BlackOpsFourWeapons() {
   const navLinks = [
@@ -51,7 +51,7 @@ export default function BlackOpsFourWeapons() {
         />
       </Head>
       <Header className="black-ops" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
             <h2>

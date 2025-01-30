@@ -7,7 +7,7 @@ import InfoList from "@/components/info/InfoList";
 //Helpers
 import { getZombiesMaps } from "@/helpers/info/zombies/getZombiesMaps";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
 export default function WorldWarTwoZombiesMaps() {
   const navLinks = [
@@ -47,7 +47,7 @@ export default function WorldWarTwoZombiesMaps() {
         />
       </Head>
       <Header className="ww2" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
             <h2>

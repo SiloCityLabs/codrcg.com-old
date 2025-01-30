@@ -19,7 +19,7 @@ import weaponSettings from "@/json/black-ops/four/zombies/custom-mutations/weapo
 import enemiesSettings from "@/json/black-ops/four/zombies/custom-mutations/enemies.json";
 import playerSettings from "@/json/black-ops/four/zombies/custom-mutations/player.json";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
 export default function Changelog() {
   const [isLoading, setIsLoading] = useState(true);
@@ -66,7 +66,7 @@ export default function Changelog() {
         />
       </Head>
       <Header className="black-ops" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
             <h2>

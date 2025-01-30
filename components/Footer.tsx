@@ -30,7 +30,7 @@ function Footer() {
               padding: "7px",
             }}
           >
-            ©2024 Copyright: SiloCityLabs
+            ©2025 Copyright: SiloCityLabs
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="/aboutus">About Us</Nav.Link>

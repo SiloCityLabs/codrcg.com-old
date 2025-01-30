@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import ModernWarfareThreeZombiesLoadout from "@/components/generators/modern-warfare/three/ModernWarfareThreeZombiesLoadout";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
 export default function ModernWarfareThreeZombies() {
   const navLinks = [
@@ -31,7 +31,7 @@ export default function ModernWarfareThreeZombies() {
         />
       </Head>
       <Header className="modern-warfare" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
             <h2>

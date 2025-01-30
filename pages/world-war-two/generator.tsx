@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import WorldWarTwoLoadout from "@/components/generators/world-war-two/WorldWarTwoLoadout";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
 export default function WorldWarTwo() {
   const navLinks = [
@@ -31,7 +31,7 @@ export default function WorldWarTwo() {
         />
       </Head>
       <Header className="ww2" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
             <h2>

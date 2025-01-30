@@ -7,7 +7,7 @@ import InfoList from "@/components/info/InfoList";
 //Helpers
 import { getWeapon } from "@/helpers/info/getWeapon";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
 export default function WarzoneWeapons() {
   const navLinks = [
@@ -54,7 +54,7 @@ export default function WarzoneWeapons() {
         />
       </Head>
       <Header className="warzone" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
             <h2>

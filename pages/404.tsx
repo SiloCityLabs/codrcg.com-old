@@ -20,10 +20,13 @@ const redirects: Record<string, string> = {
   "/contactus": "https://shop.silocitylabs.com/policies/contact-information",
   "/shoutouts": "/",
   "/statistics": "/",
-  //New Redirects
+  //Black Ops 3
+  "/black-ops-three/generator": "/black-ops/three/generator",
+  //Black Ops 4
   "/black-ops-four/generator": "/black-ops/four/generator",
   "/black-ops-four/zombies-generator": "/black-ops/four/zombies/generator",
   "/black-ops-four/info": "/black-ops/four/info",
+  //Black Ops: Cold War
   "/cold-war/generator": "/black-ops/cold-war/generator",
   "/cold-war/zombies-generator": "/black-ops/cold-war/zombies-generator",
   "/cold-war/info": "/black-ops/cold-war/info",

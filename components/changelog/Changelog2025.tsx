@@ -114,7 +114,7 @@ function Changelog2025() {
             Generator is now available!
           </p>
           <p>
-            01/04/2025: <a href="black-ops-three/generator">Black Ops 3:</a>{" "}
+            01/04/2025: <a href="black-ops/three/generator">Black Ops 3:</a>{" "}
             Generator is now available!
           </p>
         </Col>

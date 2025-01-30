@@ -112,7 +112,7 @@ export default function Home() {
       text: "",
       variant: "black-ops",
       btn1Text: "Generator",
-      link: "black-ops-three/generator",
+      link: "black-ops/three/generator",
       disabled: false,
     },
   ];

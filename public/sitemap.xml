@@ -23,13 +23,13 @@
 	<!-- Generators -->
 	<!-- Black Ops 6 -->
 	<url>
-		<loc>https://codrcg.com/black-ops-six/generator</loc>
+		<loc>https://codrcg.com/black-ops/six/generator</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/zombies-generator</loc>
+		<loc>https://codrcg.com/black-ops/six/zombies-generator</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/info</loc>
+		<loc>https://codrcg.com/black-ops/six/info</loc>
 	</url>
 	<url>
 		<loc>https://codrcg.com/black-ops/six/info/equipment</loc>
@@ -184,7 +184,7 @@
 	</url>
 	<!-- Black Ops 3 -->
 	<url>
-		<loc>https://codrcg.com/black-ops-three/generator</loc>
+		<loc>https://codrcg.com/black-ops/three/generator</loc>
 	</url>
 	<url>
 		<loc>https://codrcg.com/black-ops/three/info</loc>
@@ -257,6 +257,9 @@
 	</url>
 	<url>
 		<loc>https://codrcg.com/world-war-two/zombies-generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/custom-match</loc>
 	</url>
 	<url>
 		<loc>https://codrcg.com/world-war-two/info</loc>

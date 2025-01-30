@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Game Mode",
+        "type": "simple",
+        "defaultChance": "100%",
+        "default": "Any",
+        "unitValue": "",
+        "values": []
+    },
+    {
+        "name": "Map",
+        "type": "simple",
+        "defaultChance": "100%",
+        "default": "Any",
+        "unitValue": "",
+        "values": []
+    },
+    {
+        "name": "Friendly Bot Count",
+        "type": "simple",
+        "defaultChance": "25%",
+        "default": 5,
+        "unitValue": "Bots",
+        "min": 0,
+        "max": 17,
+        "increment": 1,
+        "values": []
+    },
+    {
+        "name": "Friendly Bot Difficulty",
+        "type": "simple",
+        "defaultChance": "25%",
+        "default": "Regular",
+        "unitValue": "",
+        "values": [
+            "Regular",
+            "Hardened",
+            "Veteran",
+            "Mixed",
+            "Recruit"
+        ]
+    },
+    {
+        "name": "Enemy Bot Count",
+        "type": "simple",
+        "defaultChance": "25%",
+        "default": 5,
+        "unitValue": "Bots",
+        "min": 0,
+        "max": 17,
+        "increment": 1,
+        "values": []
+    },
+    {
+        "name": "Enemy Bot Difficulty",
+        "type": "simple",
+        "defaultChance": "25%",
+        "default": "Regular",
+        "unitValue": "",
+        "values": [
+            "Regular",
+            "Hardened",
+            "Veteran",
+            "Mixed",
+            "Recruit"
+        ]
+    }
+]

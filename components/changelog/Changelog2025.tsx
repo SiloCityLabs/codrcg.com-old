@@ -6,6 +6,15 @@ function Changelog2025() {
       <Row>
         <Col>
           <p>
+            1/31/2025:{" "}
+            <a href="world-war-two/custom-match">World War II Custom Match:</a>{" "}
+            Generator is now available!
+          </p>
+          <p>
+            1/30/2025: <a href="world-war-two/generator">World War II:</a>{" "}
+            Generator is now available!
+          </p>
+          <p>
             01/30/2025:{" "}
             <a href="world-war-two/info">World War II Generator Information</a>
           </p>
@@ -98,7 +107,7 @@ function Changelog2025() {
           </p>
           <p>
             01/11/2025:{" "}
-            <a href="black-ops-six/info">Black Ops 6 Generator Information</a>
+            <a href="black-ops/six/info">Black Ops 6 Generator Information</a>
           </p>
           <p>
             01/10/2025:{" "}
@@ -110,7 +119,7 @@ function Changelog2025() {
             Generator is now available!
           </p>
           <p>
-            01/04/2025: <a href="black-ops-three/generator">Black Ops 3:</a>{" "}
+            01/04/2025: <a href="black-ops/three/generator">Black Ops 3:</a>{" "}
             Generator is now available!
           </p>
         </Col>

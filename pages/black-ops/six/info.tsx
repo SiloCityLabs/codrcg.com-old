@@ -8,8 +8,8 @@ import styles from "@/public/styles/components/Loadout.module.css";
 export default function BlackOpsSixInfo() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops-six/generator" },
-    { label: "Zombies Generator", href: "/black-ops-six/zombies-generator" },
+    { label: "Multiplayer Generator", href: "/black-ops/six/generator" },
+    { label: "Zombies Generator", href: "/black-ops/six/zombies-generator" },
     { label: "Changelog", href: "/changelog" },
   ];
 

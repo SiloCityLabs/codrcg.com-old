@@ -14,6 +14,7 @@ export default function WorldWarTwoWeapons() {
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/world-war-two/generator" },
     { label: "Zombies Generator", href: "/world-war-two/zombies-generator" },
+    { label: "Custom Match", href: "/world-war-two/custom-match" },
     { label: "Loadout Info", href: "/world-war-two/info" },
     { label: "Changelog", href: "/changelog" },
   ];

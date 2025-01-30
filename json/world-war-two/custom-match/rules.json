@@ -1,0 +1,365 @@
+{
+    "Game Rules": [
+        {
+            "name": "Time Limit",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "10",
+            "unitValue": "Minutes",
+            "values": [
+                "5",
+                "10",
+                "20",
+                "30",
+                "Unlimited"
+            ]
+        },
+        {
+            "name": "Score Limit",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "75",
+            "unitValue": "Points",
+            "values": [
+                "20",
+                "50",
+                "75",
+                "100",
+                "150",
+                "Unlimited"
+            ]
+        },
+        {
+            "name": "COD Caster",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Enabled",
+            "unitValue": "",
+            "values": [
+                "Enabled",
+                "Disabled"
+            ]
+        }
+    ],
+    "General Settings": [
+        {
+            "name": "Pre-Match Timer",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "15 Seconds",
+            "unitValue": "",
+            "values": [
+                "15 Seconds",
+                "30 Seconds",
+                "45 Seconds",
+                "1 Minute"
+            ]
+        },
+        {
+            "name": "Team Change In-Game",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Enabled",
+            "unitValue": "",
+            "values": [
+                "Enabled",
+                "Disabled"
+            ]
+        },
+        {
+            "name": "Spectating",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Team Only",
+            "unitValue": "",
+            "values": [
+                "Team Only",
+                "Free",
+                "Disabled"
+            ]
+        },
+        {
+            "name": "Spectating POV",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Free",
+            "unitValue": "",
+            "values": [
+                "Free",
+                "First Person Only",
+                "Third Person Only"
+            ]
+        },
+        {
+            "name": "Killcam",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Enabled",
+            "unitValue": "",
+            "values": [
+                "Enabled",
+                "Disabled"
+            ]
+        },
+        {
+            "name": "Mini-Map",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Normal",
+            "unitValue": "",
+            "values": [
+                "Normal",
+                "Sweeping",
+                "Constant"
+            ]
+        },
+        {
+            "name": "Battle Chatter",
+            "type": "simple",
+            "defaultChance": "35%",
+            "default": "Enabled",
+            "unitValue": "",
+            "values": [
+                "Enabled",
+                "Disabled"
+            ]
+        },
+        {
+            "name": "Announcer",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Enabled",
+            "unitValue": "",
+            "values": [
+                "Enabled",
+                "Disabled"
+            ]
+        }
+    ],
+    "Spawn Settings": [
+        {
+            "name": "Respawn Delay",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "None",
+            "unitValue": "",
+            "values": [
+                "1 Seconds",
+                "2.5 Seconds",
+                "5 Seconds",
+                "7.5 Seconds",
+                "10 Seconds",
+                "15 Seconds",
+                "20 Seconds",
+                "30 Seconds",
+                "None"
+            ]
+        },
+        {
+            "name": "Force Respawn",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Enabled",
+            "unitValue": "",
+            "values": [
+                "Enabled",
+                "Disabled"
+            ]
+        },
+        {
+            "name": "Wave Respawn Delay",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "None",
+            "unitValue": "",
+            "values": [
+                "1 Seconds",
+                "2.5 Seconds",
+                "5 Seconds",
+                "7.5 Seconds",
+                "10 Seconds",
+                "15 Seconds",
+                "20 Seconds",
+                "30 Seconds",
+                "None"
+            ]
+        },
+        {
+            "name": "Suicide Penalty",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "None",
+            "unitValue": "",
+            "values": [
+                "1 Seconds",
+                "2.5 Seconds",
+                "5 Seconds",
+                "7.5 Seconds",
+                "10 Seconds",
+                "15 Seconds",
+                "20 Seconds",
+                "30 Seconds",
+                "None"
+            ]
+        }
+    ],
+    "Health And Damage": [
+        {
+            "name": "Hardcore Mode",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "Disabled",
+            "unitValue": "",
+            "values": [
+                "Enabled",
+                "Disabled"
+            ]
+        },
+        {
+            "name": "Health",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Normal",
+            "unitValue": "",
+            "values": [
+                "30%",
+                "50%",
+                "Normal",
+                "130%",
+                "150%",
+                "200%"
+            ]
+        },
+        {
+            "name": "Health Regeneration",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "Normal",
+            "unitValue": "",
+            "values": [
+                "None",
+                "Slow",
+                "Normal",
+                "Fast"
+            ]
+        },
+        {
+            "name": "Friendly Fire",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Disabled",
+            "unitValue": "",
+            "values": [
+                "Enabled",
+                "Disabled",
+                "Reflect",
+                "Shared"
+            ]
+        },
+        {
+            "name": "Number Of Lives",
+            "type": "simple",
+            "defaultChance": "40%",
+            "default": "Unlimited",
+            "unitValue": "",
+            "values": [
+                "Unlimited",
+                "1 Life",
+                "2 Lives",
+                "3 Lives",
+                "4 Lives",
+                "5 Lives",
+                "6 Lives",
+                "7 Lives",
+                "8 Lives",
+                "9 Lives"
+            ]
+        },
+        {
+            "name": "Teamkill Kick Limit",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Unlimited",
+            "unitValue": "",
+            "values": [
+                "Unlimited",
+                "1 Kill",
+                "2 Kills",
+                "3 Kills",
+                "4 Kills",
+                "5 Kills"
+            ]
+        },
+        {
+            "name": "Headshots Only",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Disabled",
+            "unitValue": "",
+            "values": [
+                "Enabled",
+                "Disabled"
+            ]
+        },
+        {
+            "name": "Explosive Delay",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "None",
+            "unitValue": "",
+            "values": [
+                "1 Seconds",
+                "2.5 Seconds",
+                "5 Seconds",
+                "7.5 Seconds",
+                "10 Seconds",
+                "15 Seconds",
+                "20 Seconds",
+                "30 Seconds",
+                "None"
+            ]
+        },
+        {
+            "name": "Scorestreak Delay",
+            "type": "simple",
+            "defaultChance": "20%",
+            "default": "None",
+            "unitValue": "",
+            "values": [
+                "1 Seconds",
+                "2.5 Seconds",
+                "5 Seconds",
+                "7.5 Seconds",
+                "10 Seconds",
+                "15 Seconds",
+                "20 Seconds",
+                "30 Seconds",
+                "None"
+            ]
+        }
+    ],
+    "Lobby Options": [
+        {
+            "name": "Join-In-Progress",
+            "type": "simple",
+            "defaultChance": "0",
+            "default": "Allowed",
+            "unitValue": "",
+            "values": [
+                "Allowed",
+                "Not Allowed"
+            ]
+        },
+        {
+            "name": "Intermission",
+            "type": "simple",
+            "defaultChance": "30%",
+            "default": "Disabled",
+            "unitValue": "",
+            "values": [
+                "Enabled",
+                "Disabled"
+            ]
+        }
+    ]
+}

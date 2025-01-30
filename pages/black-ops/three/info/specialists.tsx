@@ -12,7 +12,7 @@ import styles from "@/public/styles/components/Loadout.module.css";
 export default function BlackOpsThreeSpecialists() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops-three/generator" },
+    { label: "Multiplayer Generator", href: "/black-ops/three/generator" },
     { label: "Loadout Info", href: "/black-ops/three/info" },
     { label: "Changelog", href: "/changelog" },
   ];

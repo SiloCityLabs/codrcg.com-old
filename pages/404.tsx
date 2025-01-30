@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 const redirects: Record<string, string> = {
   //PHP site generators
   //Each of these may have subpages we need to add.
-  // "/black-ops": "/", //This one might interfere with the subfolder path of new setup
+  "/black-ops": "/",
   "/black-ops-2": "/",
   "/bo3": "/black-ops/three",
   "/ghost": "/",
@@ -20,13 +20,20 @@ const redirects: Record<string, string> = {
   "/contactus": "https://shop.silocitylabs.com/policies/contact-information",
   "/shoutouts": "/",
   "/statistics": "/",
-
-  // "/black-ops-four/generator": "/black-ops/four/generator",
-  // "/black-ops-four/zombies-generator": "/black-ops/four/zombies/generator",
-  // "/black-ops-four/info": "/black-ops/four/info",
-  // "/cold-war/generator": "/black-ops/cold-war/generator",
-  // "/cold-war/zombies-generator": "/black-ops/cold-war/zombies-generator",
-  // "/cold-war/info": "/black-ops/cold-war/info",
+  //Black Ops 3
+  "/black-ops-three/generator": "/black-ops/three/generator",
+  //Black Ops 4
+  "/black-ops-four/generator": "/black-ops/four/generator",
+  "/black-ops-four/zombies-generator": "/black-ops/four/zombies/generator",
+  "/black-ops-four/info": "/black-ops/four/info",
+  //Black Ops: Cold War
+  "/cold-war/generator": "/black-ops/cold-war/generator",
+  "/cold-war/zombies-generator": "/black-ops/cold-war/zombies-generator",
+  "/cold-war/info": "/black-ops/cold-war/info",
+  //Black Ops 6
+  "/black-ops-six/generator": "/black-ops/six/generator",
+  "/black-ops-six/zombies-generator": "/black-ops/six/zombies-generator",
+  "/black-ops-six/info": "/black-ops/six/info",
 };
 
 export default function NotFoundPage() {

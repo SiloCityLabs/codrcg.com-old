@@ -8,7 +8,7 @@ import styles from "@/public/styles/components/Loadout.module.css";
 export default function BlackOpsThreeInfo() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops-three/generator" },
+    { label: "Multiplayer Generator", href: "/black-ops/three/generator" },
     { label: "Changelog", href: "/changelog" },
   ];
 

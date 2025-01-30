@@ -17,7 +17,6 @@ function WorldWarTwoLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
   const [data, setData] = useState({
     randClassName: "",
-    perks: null,
     streaks: null,
     weapons: {
       primary: {
@@ -34,6 +33,7 @@ function WorldWarTwoLoadout() {
       lethal: { name: "", type: "" },
     },
     division: "",
+    basic: "",
   });
 
   useEffect(() => {
@@ -44,7 +44,7 @@ function WorldWarTwoLoadout() {
     fetchLoadoutData(setData, setContainerClass);
   };
 
-  const { randClassName, perks, streaks, weapons, equipment, division } = data;
+  const { randClassName, streaks, weapons, equipment, division, basic } = data;
 
   return (
     <>
@@ -103,11 +103,17 @@ function WorldWarTwoLoadout() {
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">{equipment.tactical.name}</span>
+            <span className="text-muted fs-6">
+              {equipment.tactical.name}
+              {basic === "Serrated" || basic === "Concussed" ? " x2" : ""}
+            </span>
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{equipment.lethal.name}</span>
+            <span className="text-muted fs-6">
+              {equipment.lethal.name}
+              {basic === "Saboteur" || basic === "Concussed" ? " x2" : ""}
+            </span>
           </Col>
         </Row>
         <hr />
@@ -115,6 +121,10 @@ function WorldWarTwoLoadout() {
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Division:</span> <br />
             <span className="text-muted fs-6">{division}</span>
+          </Col>
+          <Col sm className="text-center">
+            <span className="fw-bolder fs-5">Basic Training:</span> <br />
+            <span className="text-muted fs-6">{basic}</span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Streaks:</span> <br />
@@ -143,11 +153,11 @@ async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "world-war-two";
     const randClassName = fetchClassName();
-    const perks = [];
-    const all = fetchPerk("all");
     const division = fetchPerk("division");
-    const basic = fetchPerk("basic-training");
-    const streaks = fetchStreaks(game);
+    let basic = fetchPerk("basic-training");
+    const secondaryNeedsAttach = basic === "Shifty" ? true : false;
+    const isBlitzkrieg = basic === "Blitzkrieg" ? true : false;
+    let streaks = fetchStreaks(game, isBlitzkrieg);
     let primAttactCount = division === "Infantry" ? 4 : 3;
     let secondaryAttactCount = division === "Infantry" ? 2 : 1;
 
@@ -157,12 +167,26 @@ async function fetchLoadoutData(setData, setContainerClass) {
         attachments: "",
       },
       secondary: {
-        weapon: fetchWeapon("secondary", game),
+        weapon: fetchWeapon("secondary", game, "", secondaryNeedsAttach),
         attachments: "",
       },
     };
 
-    if (division === "Cavalry") {
+    let equipment = {
+      tactical: fetchEquipment("tactical", game),
+      lethal: fetchEquipment("lethal", game),
+    };
+
+    if (division === "Commando") {
+      equipment = {
+        tactical: {
+          name: "Paratrooper Insert",
+          type: "Special",
+          game: "world-war-two",
+        },
+        lethal: fetchEquipment("lethal_tactical", game),
+      };
+    } else if (division === "Cavalry") {
       primAttactCount = 0;
       secondaryAttactCount = 0;
 
@@ -179,20 +203,64 @@ async function fetchLoadoutData(setData, setContainerClass) {
       (weapons.secondary.weapon ?? {}).no_attach = true;
     }
 
+    //Check for overkill
+    if (basic === "Wanderlust") {
+      weapons.primary.weapon = {
+        name: "Random Weapon",
+        type: "random",
+        game: "world-war-two",
+        no_attach_info: true,
+      };
+      primAttactCount = 6;
+    } else if (basic === "Duelist") {
+      weapons.secondary.weapon = {
+        name: "Akimbo Pistols",
+        type: "pistol",
+        game: "world-war-two",
+        no_attach: true,
+      };
+    } else if (basic === "Rifleman") {
+      weapons.secondary.weapon = fetchWeapon(
+        "primary",
+        game,
+        weapons.primary.weapon.name
+      );
+
+      (weapons.secondary.weapon ?? {}).no_attach = true;
+    } else if (basic === "Serrated") {
+      equipment.lethal = {
+        name: "Throwing Knives x2",
+        type: "Lethal",
+        game: "world-war-two",
+      };
+
+      weapons.primary.weapon = fetchWeapon(
+        "melee",
+        game,
+        weapons.secondary.weapon.name
+      );
+    } else if (basic === "Danger Close") {
+      equipment.lethal = {
+        name: "Frag x3",
+        type: "Lethal",
+        game: "world-war-two",
+      };
+    } else if (basic === "Stun X3") {
+      equipment.tactical = {
+        name: "British N 69 x3",
+        type: "Lethal",
+        game: "world-war-two",
+      };
+    } else if (basic === "Shifty") {
+      secondaryAttactCount = 3;
+    }
+
     //Get Primary Attachments
     if (!weapons.primary.weapon?.no_attach) {
       weapons.primary.attachments = implodeObject(
         fetchAttachments(weapons.primary.weapon, primAttactCount)
       );
     }
-    //Check for overkill
-    // if (perks.includes("Overkill")) {
-    //   weapons.secondary.weapon = fetchWeapon(
-    //     "primary",
-    //     game,
-    //     weapons.primary.weapon.name
-    //   );
-    // }
 
     //Verify if secondary weapon has attachments
     if (!weapons.secondary.weapon?.no_attach) {
@@ -201,29 +269,13 @@ async function fetchLoadoutData(setData, setContainerClass) {
       );
     }
 
-    let equipment = {
-      tactical: fetchEquipment("tactical", game),
-      lethal: fetchEquipment("lethal", game),
-    };
-
-    if (division === "Commando") {
-      equipment = {
-        tactical: {
-          name: "Paratrooper Insert",
-          type: "Special",
-          game: "world-war-two",
-        },
-        lethal: fetchEquipment("lethal_tactical", game),
-      };
-    }
-
     setData({
       randClassName,
-      perks,
       streaks,
       weapons,
       equipment,
       division,
+      basic,
     });
     setContainerClass("");
   } catch (error: any) {

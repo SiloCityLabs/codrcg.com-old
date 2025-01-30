@@ -82,7 +82,7 @@ export default function Home() {
     },
     {
       title: "World War II",
-      text: "Coming in 2025",
+      text: "",
       variant: "ww2",
       btn1Text: "Multiplayer Generator",
       link: "world-war-two/generator",

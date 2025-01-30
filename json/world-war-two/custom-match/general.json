@@ -2,23 +2,67 @@
     {
         "name": "Game Mode",
         "type": "simple",
-        "defaultChance": "0",
-        "default": "Standard Modes",
+        "defaultChance": "100%",
+        "default": "Any",
+        "unitValue": "",
+        "values": []
+    },
+    {
+        "name": "Map",
+        "type": "simple",
+        "defaultChance": "100%",
+        "default": "Any",
+        "unitValue": "",
+        "values": []
+    },
+    {
+        "name": "Friendly Bot Count",
+        "type": "simple",
+        "defaultChance": "25%",
+        "default": 5,
+        "unitValue": "Bots",
+        "min": 0,
+        "max": 17,
+        "increment": 1,
+        "values": []
+    },
+    {
+        "name": "Friendly Bot Difficulty",
+        "type": "simple",
+        "defaultChance": "25%",
+        "default": "Regular",
         "unitValue": "",
         "values": [
-            "Standard Modes",
-            "Esport Modes"
+            "Regular",
+            "Hardened",
+            "Veteran",
+            "Mixed",
+            "Recruit"
         ]
     },
     {
-        "name": "Show Timer",
+        "name": "Enemy Bot Count",
         "type": "simple",
-        "defaultChance": "0",
-        "default": "Off",
+        "defaultChance": "25%",
+        "default": 5,
+        "unitValue": "Bots",
+        "min": 0,
+        "max": 17,
+        "increment": 1,
+        "values": []
+    },
+    {
+        "name": "Enemy Bot Difficulty",
+        "type": "simple",
+        "defaultChance": "25%",
+        "default": "Regular",
         "unitValue": "",
         "values": [
-            "Off",
-            "On"
+            "Regular",
+            "Hardened",
+            "Veteran",
+            "Mixed",
+            "Recruit"
         ]
     }
 ]

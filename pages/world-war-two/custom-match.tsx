@@ -14,6 +14,7 @@ import CustomMutationsGeneral from "@/components/generators/black-ops/four/custo
 import CustomMutationsSection from "@/components/generators/black-ops/four/custom-mutations/CustomMutationsSection";
 //Json
 import generalSettings from "@/json/world-war-two/custom-match/general.json";
+import rulesSettings from "@/json/world-war-two/custom-match/rules.json";
 //Styles
 import styles from "@/public/styles/components/Loadout.module.css";
 
@@ -94,8 +95,8 @@ export default function CustomMatch() {
                       />
                     </Tab>
                     <Tab eventKey="rules" title="Rules">
-                      <CustomMutationsGeneral
-                        data={generalSettings}
+                      <CustomMutationsSection
+                        data={rulesSettings}
                         count={count}
                       />
                     </Tab>

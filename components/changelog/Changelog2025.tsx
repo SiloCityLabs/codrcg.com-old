@@ -6,6 +6,10 @@ function Changelog2025() {
       <Row>
         <Col>
           <p>
+            1/30/2025: <a href="world-war-two/generator">World War II:</a>{" "}
+            Generator is now available!
+          </p>
+          <p>
             01/30/2025:{" "}
             <a href="world-war-two/info">World War II Generator Information</a>
           </p>

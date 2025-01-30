@@ -13,22 +13,19 @@ import Header from "@/components/Header";
 import CustomMutationsGeneral from "@/components/generators/black-ops/four/custom-mutations/CustomMutationsGeneral";
 import CustomMutationsSection from "@/components/generators/black-ops/four/custom-mutations/CustomMutationsSection";
 //Json
-import generalSettings from "@/json/black-ops/four/zombies/custom-mutations/general.json";
-import systemsSettings from "@/json/black-ops/four/zombies/custom-mutations/systems.json";
-import weaponSettings from "@/json/black-ops/four/zombies/custom-mutations/weapons.json";
-import enemiesSettings from "@/json/black-ops/four/zombies/custom-mutations/enemies.json";
-import playerSettings from "@/json/black-ops/four/zombies/custom-mutations/player.json";
+import generalSettings from "@/json/world-war-two/custom-match/general.json";
 //Styles
 import styles from "@/public/styles/components/Loadout.module.css";
 
-export default function CustomMutations() {
+export default function CustomMatch() {
   const [isLoading, setIsLoading] = useState(true);
-  const [key, setKey] = useState<string>("general");
+  const [key, setKey] = useState<string>("rules");
   const [count, setCount] = useState(0);
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Zombies Generator", href: "/black-ops/four/zombies/generator" },
-    { label: "Loadout Info", href: "/black-ops/four/info" },
+    { label: "Multiplayer Generator", href: "/world-war-two/generator" },
+    { label: "Zombies Generator", href: "/world-war-two/zombies-generator" },
+    { label: "Loadout Info", href: "/world-war-two/info" },
     { label: "Changelog", href: "/changelog" },
   ];
 
@@ -41,7 +38,7 @@ export default function CustomMutations() {
   const handleClick = async () => {
     setIsLoading(true);
     setCount(count + 1);
-    setKey("general");
+    setKey("rules");
 
     setTimeout(() => {
       setIsLoading(false);
@@ -51,26 +48,26 @@ export default function CustomMutations() {
   return (
     <>
       <Head>
-        <title>Black Ops 4 Random Custom Mutations Generator</title>
+        <title>World War Two Random Custom Mutations Generator</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Spice up your COD gameplay! Generate unique random custum mutations settings for Black Ops 4 Zombies. Discover new ways to play."
+          content="Spice up your COD gameplay! Generate unique random custum match settings for World War Two. Discover new ways to play."
         />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
-          free, mp, zombies, call of duty random class generator, COD Black Ops 4 RCG, COD Blops 4 RCG, blops 4 random class generator,
-          blops 4, black ops 4, ops 4 rcg, ops 4 random class generator, black ops 4 random class generator, zombies, treyarch zombies,
-          black ops zombies, black ops 4 zombies, black ops rcg, black ops random class generator"
+          free, mp, multiplayer, call of duty random class generator, COD World War 2 RCG, world war two random class generator,
+          world war two, world war two rcg, world war two random class generator, class generator, zombies, treyarch zombies,
+          world war two zombies, world war two rcg, world war two random class generator"
         />
       </Head>
-      <Header className="black-ops" navLinks={navLinks} />
+      <Header className="ww2" navLinks={navLinks} />
       <Container className={styles.generator} fluid>
         <Row>
           <Col>
             <h2>
-              Black Ops 4
+              World War Two
               <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
               <br className="d-block d-sm-none" />
               Random Custom Mutations Generator
@@ -96,38 +93,16 @@ export default function CustomMutations() {
                         count={count}
                       />
                     </Tab>
-                    <Tab eventKey="systems" title="Systems">
-                      <CustomMutationsSection
-                        data={systemsSettings}
-                        count={count}
-                      />
-                    </Tab>
-                    <Tab eventKey="weapons" title="Weapons">
-                      <CustomMutationsSection
-                        data={weaponSettings}
-                        count={count}
-                      />
-                    </Tab>
-                    <Tab eventKey="enemies" title="Enemies">
-                      <CustomMutationsSection
-                        data={enemiesSettings}
-                        count={count}
-                      />
-                    </Tab>
-                    <Tab eventKey="player" title="Player">
-                      <CustomMutationsSection
-                        data={playerSettings}
+                    <Tab eventKey="rules" title="Rules">
+                      <CustomMutationsGeneral
+                        data={generalSettings}
                         count={count}
                       />
                     </Tab>
                   </Tabs>
                   <Row id="button-row">
                     <Col className="text-center">
-                      <Button
-                        variant="black-ops"
-                        href="#"
-                        onClick={handleClick}
-                      >
+                      <Button variant="ww2" href="#" onClick={handleClick}>
                         Generate Loadout
                       </Button>
                     </Col>

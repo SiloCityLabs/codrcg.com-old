@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Game Mode",
+        "type": "simple",
+        "defaultChance": "0",
+        "default": "Standard Modes",
+        "unitValue": "",
+        "values": [
+            "Standard Modes",
+            "Esport Modes"
+        ]
+    },
+    {
+        "name": "Show Timer",
+        "type": "simple",
+        "defaultChance": "0",
+        "default": "Off",
+        "unitValue": "",
+        "values": [
+            "Off",
+            "On"
+        ]
+    }
+]

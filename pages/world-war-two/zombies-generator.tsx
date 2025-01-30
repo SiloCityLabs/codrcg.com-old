@@ -9,6 +9,7 @@ export default function WorldWarTwoZombies() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/world-war-two/generator" },
+    { label: "Custom Match", href: "/world-war-two/custom-match" },
     { label: "Loadout Info", href: "/world-war-two/info" },
     { label: "Changelog", href: "/changelog" },
   ];

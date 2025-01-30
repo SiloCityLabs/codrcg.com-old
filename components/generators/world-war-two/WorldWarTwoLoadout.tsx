@@ -253,6 +253,12 @@ async function fetchLoadoutData(setData, setContainerClass) {
       };
     } else if (basic === "Shifty") {
       secondaryAttactCount = 3;
+    } else if (basic === "Specialist") {
+      const special1 = fetchPerk("basic-training");
+      const special2 = fetchPerk("basic-training", [special1]);
+      const special3 = fetchPerk("basic-training", [special1, special2]);
+
+      streaks = `200: ${special1}, 400: ${special2}, 600: ${special3}, 800: All Perks`;
     }
 
     //Get Primary Attachments

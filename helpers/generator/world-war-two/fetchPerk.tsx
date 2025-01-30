@@ -16,8 +16,6 @@ export function fetchPerk(
   if (typeof currentPerks === "string") {
     currentPerks = [currentPerks]; // Convert single string to an array
   }
-  console.log("fetchPerk", perk);
-  console.log("fetchPerk perks[perk]", perks[perk]);
 
   do {
     randPerk = randomListItem(perks[perk]).name;

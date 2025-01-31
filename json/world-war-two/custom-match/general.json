@@ -2,10 +2,19 @@
     {
         "name": "Game Mode",
         "type": "simple",
-        "defaultChance": "100%",
-        "default": "Any",
+        "defaultChance": "0",
+        "default": "Domination",
         "unitValue": "",
-        "values": []
+        "values": [
+            "Team Deathmatch",
+            "Domination",
+            "Hardpoint",
+            "Capture The Flag",
+            "Search And Destroy",
+            "Kill Confirmed",
+            "Free-For-All",
+            "Gridiron"
+        ]
     },
     {
         "name": "Map",
@@ -13,7 +22,31 @@
         "defaultChance": "100%",
         "default": "Any",
         "unitValue": "",
-        "values": []
+        "values": [
+            "Aachen",
+            "Airship",
+            "Amthropoid",
+            "Ardennes Forest",
+            "Carentan",
+            "Chancellery",
+            "Dunkirk",
+            "Egypt",
+            "Excavation",
+            "Flak Tower",
+            "Gibraltar",
+            "Gustav Cannon",
+            "London Docks",
+            "Market Garden",
+            "Monte Cassino",
+            "Occupation",
+            "Pointe Du Hoc",
+            "Sainte Marie Du Mont",
+            "Shipment 1944",
+            "Stalingrad",
+            "USS Texas",
+            "V2",
+            "Valkyrie"
+        ]
     },
     {
         "name": "Friendly Bot Count",

@@ -128,7 +128,7 @@ export default function CustomMutations() {
                         href="#"
                         onClick={handleClick}
                       >
-                        Generate Loadout
+                        Generate Settings
                       </Button>
                     </Col>
                   </Row>

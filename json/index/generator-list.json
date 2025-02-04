@@ -3,7 +3,7 @@
         "title": "Black Ops VI",
         "text": "",
         "variant": "black-ops",
-        "btn1Text": "Multiplayer Generator",
+        "btn1Text": "Generator",
         "link": "black-ops/six/generator",
         "disabled": false
     },
@@ -22,7 +22,7 @@
         "title": "Modern Warfare 3 (2023)",
         "text": "",
         "variant": "danger",
-        "btn1Text": "Multiplayer Generator",
+        "btn1Text": "Generator",
         "link": "modern-warfare/three/generator",
         "disabled": false
     },
@@ -38,7 +38,7 @@
         "title": "Vanguard",
         "text": "",
         "variant": "danger",
-        "btn1Text": "Multiplayer Generator",
+        "btn1Text": "Generator",
         "link": "vanguard/generator",
         "disabled": false
     },
@@ -46,7 +46,7 @@
         "title": "Cold War",
         "text": "",
         "variant": "danger",
-        "btn1Text": "Multiplayer Generator",
+        "btn1Text": "Generator",
         "link": "black-ops/cold-war/generator",
         "disabled": false
     },
@@ -54,7 +54,7 @@
         "title": "Black Ops IV",
         "text": "",
         "variant": "black-ops",
-        "btn1Text": "Multiplayer Generator",
+        "btn1Text": "Generator",
         "link": "black-ops/four/generator",
         "disabled": false
     },
@@ -62,7 +62,7 @@
         "title": "World War II",
         "text": "",
         "variant": "ww2",
-        "btn1Text": "Multiplayer Generator",
+        "btn1Text": "Generator",
         "link": "world-war-two/generator",
         "disabled": false,
         "btn2Text": "Custom Match Generator",

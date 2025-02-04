@@ -49,6 +49,8 @@ export default function Home() {
         <Header />
         <Container className="main-content">
           <Row>
+            <h3 className="text-center">Multiplayer</h3>
+            <hr />
             {generatorList.map((card, index) => (
               <Col
                 key={index}

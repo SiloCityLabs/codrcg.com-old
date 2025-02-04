@@ -21,7 +21,7 @@ import playerSettings from "@/json/black-ops/four/zombies/custom-mutations/playe
 //Styles
 import styles from "@/public/styles/components/Loadout.module.css";
 
-export default function CustomSettings() {
+export default function CustomMutations() {
   const [isLoading, setIsLoading] = useState(true);
   const [key, setKey] = useState<string>("general");
   const [count, setCount] = useState(0);

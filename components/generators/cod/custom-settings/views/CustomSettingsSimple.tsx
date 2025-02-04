@@ -5,6 +5,8 @@ import { Col } from "react-bootstrap";
 import { createRangeArray } from "@/helpers/createRangeArray";
 //Types
 import { Setting } from "@/types/CustomSettings";
+//Styles
+import styles from "@/public/styles/components/CustomSettings.module.css";
 
 interface CustomSettingsProps {
   data: Setting;
@@ -40,9 +42,15 @@ function CustomSettingsSimple({ data, count }: CustomSettingsProps) {
 
   return (
     isLoading && (
-      <Col xl={3} lg={4} md={6} sm className="text-center mb-4">
-        <span className="fw-bolder fs-5">{data.name}:</span> <br />
-        <span className="text-muted fs-6">{value}</span> <br />
+      <Col xl={3} lg={4} md={6} sm className="text-center mb-3">
+        <span className={`${styles.customSettingName} fw-bolder fs-5`}>
+          {data.name}:
+        </span>{" "}
+        <br className="d-none d-md-block" />
+        <span className={`${styles.customSettingValue} text-muted fs-6`}>
+          {value}
+        </span>{" "}
+        <br />
       </Col>
     )
   );

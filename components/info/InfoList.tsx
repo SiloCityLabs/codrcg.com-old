@@ -50,6 +50,8 @@ function InfoList({ data, dataKeys }: InfoListProps) {
                     {dataKeys.includes("story") && <th>Story</th>}
                     {dataKeys.includes("minor") && <th>Minor</th>}
                     {dataKeys.includes("major") && <th>Major</th>}
+                    {dataKeys.includes("payload") && <th>Payload</th>}
+                    {dataKeys.includes("trait") && <th>Trait</th>}
                     {dataKeys.includes("type") && <th>Type</th>}
                     {dataKeys.includes("game") && <th>Game</th>}
                     {dataKeys.includes("no_attach") && (
@@ -90,6 +92,12 @@ function InfoList({ data, dataKeys }: InfoListProps) {
                       )}
                       {dataKeys.includes("major") && (
                         <td>{filteredData[key].major}</td>
+                      )}
+                      {dataKeys.includes("payload") && (
+                        <td>{filteredData[key].payload}</td>
+                      )}
+                      {dataKeys.includes("trait") && (
+                        <td>{filteredData[key].trait}</td>
                       )}
                       {dataKeys.includes("type") && (
                         <td>{filteredData[key].type}</td>

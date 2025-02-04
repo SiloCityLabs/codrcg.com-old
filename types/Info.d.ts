@@ -16,6 +16,8 @@ export type InfoData = {
   weapon?: string;
   minor?: string;
   major?: string;
+  payload?: string;
+  trait?: string;
   no_attach?: boolean;
   no_attach_info?: boolean;
   isDlc?: boolean;

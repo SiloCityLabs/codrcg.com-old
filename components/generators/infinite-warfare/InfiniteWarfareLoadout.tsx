@@ -187,7 +187,7 @@ function InfiniteWarfareLoadout() {
         <hr />
         <Row className="mb-5">
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Specialist:</span> <br />
+            <span className="fw-bolder fs-5">Combat Rig:</span> <br />
             <span className="text-muted fs-6">
               {specialist ? specialist : "None"}
             </span>
@@ -327,12 +327,15 @@ async function fetchLoadoutData(setData, setContainerClass) {
       lethal: loadoutFrame.lethal ? fetchEquipment("lethal", game).name : "",
     };
     //Check for x2 tacticals
-    equipment.tactical += loadoutFrame.tactical == 2 ? " x2" : "";
+    equipment.tactical += loadoutFrame.tacticalx2 ? " x2" : "";
     //Check for danger close
     equipment.lethal += loadoutFrame.dangerClose ? " x2" : "";
 
     const wildcards = loadoutFrame?.wildcards.join(", ");
-    const specialist = fetchSpecialist(game).name;
+    const rig = fetchSpecialist(game);
+    const payload = rig?.payload?.[Math.floor(Math.random() * 3)] ?? "";
+    const trait = rig?.trait?.[Math.floor(Math.random() * 3)] ?? "";
+    const specialist = `${rig.name} - ${trait} - ${payload}`;
 
     setData({
       randClassName,

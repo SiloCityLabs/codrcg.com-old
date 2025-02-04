@@ -1,6 +1,6 @@
-import perk1 from "@/json/black-ops/three/perk/perk1.json";
-import perk2 from "@/json/black-ops/three/perk/perk2.json";
-import perk3 from "@/json/black-ops/three/perk/perk3.json";
+import perk1 from "@/json/infinite-warfare/perk/perk1.json";
+import perk2 from "@/json/infinite-warfare/perk/perk2.json";
+import perk3 from "@/json/infinite-warfare/perk/perk3.json";
 import { randomListItem } from "@/helpers/randomListItem";
 
 const perks: Record<string, any> = {

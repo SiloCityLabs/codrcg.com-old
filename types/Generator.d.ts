@@ -41,6 +41,8 @@ export type Specialist = {
   name: string;
   equipment?: string;
   weapon?: string;
+  payload?: string;
+  trait?: string;
   type: string;
   game: string;
 };

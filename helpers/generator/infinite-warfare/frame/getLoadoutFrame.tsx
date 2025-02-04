@@ -127,7 +127,7 @@ const wildcardMap = {
     cost: 2,
   },
   tactical: {
-    property: "tactical2",
+    property: "tacticalx2",
     wildcard: "Tactical x2",
     cost: 2,
   },

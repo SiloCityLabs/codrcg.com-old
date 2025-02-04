@@ -45,6 +45,10 @@ import ww2UniversalList from "@/json/world-war-two/zombies/mods/universal.json";
 import mw2BaseList from "@/json/modern-warfare/two/perk/base.json";
 import mw2BonusList from "@/json/modern-warfare/two/perk/bonus.json";
 import mw2UltimateList from "@/json/modern-warfare/two/perk/ultimate.json";
+//Infinite Warfare
+import iwPerk1List from "@/json/infinite-warfare/perk/perk1.json";
+import iwPerk2List from "@/json/infinite-warfare/perk/perk2.json";
+import iwPerk3List from "@/json/infinite-warfare/perk/perk3.json";
 
 const perks: Record<
   string,
@@ -109,6 +113,11 @@ const perks: Record<
     perk1List: mw2BaseList,
     perk2List: mw2BonusList,
     perk3List: mw2UltimateList,
+  },
+  "infinite-warfare": {
+    perk1List: iwPerk1List,
+    perk2List: iwPerk2List,
+    perk3List: iwPerk3List,
   },
 };
 

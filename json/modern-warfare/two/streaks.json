@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Bomb Drone",
+    "type": "Streak",
+    "kills": 4,
+    "score": 500,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "UAV",
+    "type": "Streak",
+    "kills": 4,
+    "score": 500,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Counter-UAV",
+    "type": "Streak",
+    "kills": 5,
+    "score": 625,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Care Package",
+    "type": "Streak",
+    "kills": 5,
+    "score": 625,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Cluster Mine",
+    "type": "Streak",
+    "kills": 5,
+    "score": 625,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Precision Airstrike",
+    "type": "Streak",
+    "kills": 6,
+    "score": 750,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Cruise Missile",
+    "type": "Streak",
+    "kills": 6,
+    "score": 750,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Mortar Strike",
+    "type": "Streak",
+    "kills": 6,
+    "score": 750,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Sentry Gun",
+    "type": "Streak",
+    "kills": 7,
+    "score": 875,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "S.A.E.",
+    "type": "Streak",
+    "kills": 7,
+    "score": 875,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "VTOL Jet",
+    "type": "Streak",
+    "kills": 8,
+    "score": 1000,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Overwatch Helo",
+    "type": "Streak",
+    "kills": 8,
+    "score": 1000,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Wheelson-HS",
+    "type": "Streak",
+    "kills": 8,
+    "score": 1000,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Stealth Bomber",
+    "type": "Streak",
+    "kills": 10,
+    "score": 1250,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Chopper Gunner",
+    "type": "Streak",
+    "kills": 10,
+    "score": 1250,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Emergency Airdrop",
+    "type": "Streak",
+    "kills": 10,
+    "score": 1250,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Gunship",
+    "type": "Streak",
+    "kills": 12,
+    "score": 1500,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Advanced UAV",
+    "type": "Streak",
+    "kills": 12,
+    "score": 1500,
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Juggernaut",
+    "type": "Streak",
+    "kills": 15,
+    "score": 1875,
+    "game": "modern-warfare-two"
+  }
+]

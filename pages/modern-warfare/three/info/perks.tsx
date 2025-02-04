@@ -9,7 +9,7 @@ import { getPerk } from "@/helpers/info/getPerk";
 //Styles
 import styles from "@/public/styles/components/Loadout.module.css";
 
-export default function ColdWarPerks() {
+export default function ModernWarfareThreePerks() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/modern-warfare/three/generator" },

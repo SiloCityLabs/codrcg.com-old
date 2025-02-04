@@ -28,11 +28,11 @@
     },
     {
         "title": "Modern Warfare 2 (2022)",
-        "text": "Coming in 2025",
+        "text": "",
         "variant": "mw2",
         "btn1Text": "Generator",
-        "link": "modern-warfare-two/generator",
-        "disabled": true
+        "link": "modern-warfare/two/generator",
+        "disabled": false
     },
     {
         "title": "Vanguard",

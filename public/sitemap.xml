@@ -304,6 +304,28 @@
 	<url>
 		<loc>https://codrcg.com/modern-warfare/two/info/weapons</loc>
 	</url>
+	<!-- Infinite Warfare -->
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/info/combat-rigs</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/info/streaks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/info/weapons</loc>
+	</url>
 	<!-- <url>
 		<loc>https://codrcg.com/contactus</loc>
 	</url>

@@ -6,6 +6,16 @@ function Changelog2025() {
       <Row>
         <Col>
           <p>
+            2/4/2025: <a href="infinite-warfare/generator">Infinite Warfare:</a>{" "}
+            Generator is now available!
+          </p>
+          <p>
+            2/4/2025:{" "}
+            <a href="infinite-warfare/info">
+              Infinite Warfare Generator Information
+            </a>
+          </p>
+          <p>
             2/4/2025:{" "}
             <a href="modern-warfare/two/generator">Modern Warfare Two:</a>{" "}
             Generator is now available!

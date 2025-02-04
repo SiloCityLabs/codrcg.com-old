@@ -75,7 +75,7 @@
         "variant": "infinite-warfare",
         "btn1Text": "Generator",
         "link": "infinite-warfare/generator",
-        "disabled": true
+        "disabled": false
     },
     {
         "title": "Modern Warfare Remastered",

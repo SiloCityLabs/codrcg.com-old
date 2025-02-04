@@ -31,8 +31,6 @@ function InfoList({ data, dataKeys }: InfoListProps) {
   const boolArr = ["isDlc", "no_attach_info", "no_attach"];
 
   const formatValue = (value, key) => {
-    console.log("test key", key);
-    console.log("test value", value, typeof value);
     if (typeof value === "boolean" || boolArr.includes(key)) {
       return value ? "Yes" : "-";
     }
@@ -48,7 +46,7 @@ function InfoList({ data, dataKeys }: InfoListProps) {
       case "isDlc":
         return "DLC";
       default:
-        return key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, " "); // Convert snake_case to Title Case
+        return key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, " ");
     }
   };
 
@@ -58,6 +56,18 @@ function InfoList({ data, dataKeys }: InfoListProps) {
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(" ");
   };
+
+  const renderTableRow = (item) => (
+    <tr key={item.id || item.name || Math.random()}>
+      {dataKeys.map((key) => (
+        <td key={key}>
+          {key === "game"
+            ? formatTitle(item[key])
+            : formatValue(item[key], key)}
+        </td>
+      ))}
+    </tr>
+  );
 
   return (
     <Container id="data-list" className="shadow-lg p-3 bg-body rounded">
@@ -75,17 +85,15 @@ function InfoList({ data, dataKeys }: InfoListProps) {
             <Table striped bordered hover size="sm">
               {renderTableHeader()}
               <tbody>
-                {Object.values(filteredData).map((item) => (
-                  <tr key={Math.random()}>
-                    {dataKeys.map((key) => (
-                      <td key={key}>
-                        {key === "game"
-                          ? formatTitle(item[key])
-                          : formatValue(item[key], key)}
-                      </td>
-                    ))}
+                {Object.values(filteredData).length > 0 ? ( // Check for data
+                  Object.values(filteredData).map(renderTableRow)
+                ) : (
+                  <tr>
+                    <td colSpan={dataKeys.length} className="text-center">
+                      No data found.
+                    </td>
                   </tr>
-                ))}
+                )}
               </tbody>
             </Table>
           </div>

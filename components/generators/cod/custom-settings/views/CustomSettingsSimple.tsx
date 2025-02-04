@@ -4,14 +4,14 @@ import { Col } from "react-bootstrap";
 //Helpers
 import { createRangeArray } from "@/helpers/createRangeArray";
 //Types
-import { Setting } from "@/types/CustomMutations";
+import { Setting } from "@/types/CustomSettings";
 
-interface CustomMutationsProps {
+interface CustomSettingsProps {
   data: Setting;
   count: number;
 }
 
-function CustomMutationsSimple({ data, count }: CustomMutationsProps) {
+function CustomSettingsSimple({ data, count }: CustomSettingsProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [value, setValue] = useState(data.default);
 
@@ -48,4 +48,4 @@ function CustomMutationsSimple({ data, count }: CustomMutationsProps) {
   );
 }
 
-export default CustomMutationsSimple;
+export default CustomSettingsSimple;

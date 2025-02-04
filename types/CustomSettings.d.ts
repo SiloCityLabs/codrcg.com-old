@@ -10,7 +10,7 @@ export type Setting = {
   increment?: number;
 };
 
-export interface CustomMutationsProps {
+export interface CustomSettingsProps {
   data: Setting[];
   count: number;
 }

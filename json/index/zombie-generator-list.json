@@ -1,0 +1,53 @@
+[
+    {
+        "title": "Black Ops VI",
+        "text": "",
+        "variant": "black-ops",
+        "btn1Text": "Zombies Generator",
+        "link": "black-ops/six/zombies-generator",
+        "disabled": false
+    },
+    {
+        "title": "Modern Warfare (2023)",
+        "text": "",
+        "variant": "danger",
+        "btn1Text": "Zombies Generator",
+        "link": "modern-warfare/three/zombies-generator",
+        "disabled": false
+    },
+    {
+        "title": "Vanguard",
+        "text": "",
+        "variant": "danger",
+        "btn1Text": "Zombies Generator",
+        "link": "vanguard/zombies-generator",
+        "disabled": false
+    },
+    {
+        "title": "Cold War",
+        "text": "",
+        "variant": "danger",
+        "btn1Text": "Zombies Generator",
+        "link": "black-ops/cold-war/zombies-generator",
+        "disabled": false
+    },
+    {
+        "title": "Black Ops IV",
+        "text": "",
+        "variant": "black-ops",
+        "btn1Text": "Zombies Generator",
+        "link": "black-ops/four/zombies/generator",
+        "disabled": false,
+        "btn2Text": "Custom Mutations",
+        "link2": "black-ops/four/zombies/custom-mutations",
+        "disabled2": false
+    },
+    {
+        "title": "World War II",
+        "text": "",
+        "variant": "ww2",
+        "btn1Text": "Zombies Generator",
+        "link": "world-war-two/zombies-generator",
+        "disabled": false
+    }
+]

@@ -1,0 +1,96 @@
+[
+    {
+        "title": "Black Ops VI",
+        "text": "",
+        "variant": "black-ops",
+        "btn1Text": "Multiplayer Generator",
+        "link": "black-ops/six/generator",
+        "disabled": false
+    },
+    {
+        "title": "Warzone",
+        "text": "",
+        "variant": "success",
+        "btn1Text": "Generator",
+        "link": "warzone/generator",
+        "disabled": false,
+        "btn2Text": "Where we Droppin?",
+        "link2": "warzone/where-we-droppin",
+        "disabled2": false
+    },
+    {
+        "title": "Modern Warfare 3 (2023)",
+        "text": "",
+        "variant": "danger",
+        "btn1Text": "Multiplayer Generator",
+        "link": "modern-warfare/three/generator",
+        "disabled": false
+    },
+    {
+        "title": "Modern Warfare 2 (2022)",
+        "text": "Coming in 2025",
+        "variant": "mw2",
+        "btn1Text": "Generator",
+        "link": "modern-warfare-two/generator",
+        "disabled": true
+    },
+    {
+        "title": "Vanguard",
+        "text": "",
+        "variant": "danger",
+        "btn1Text": "Multiplayer Generator",
+        "link": "vanguard/generator",
+        "disabled": false
+    },
+    {
+        "title": "Cold War",
+        "text": "",
+        "variant": "danger",
+        "btn1Text": "Multiplayer Generator",
+        "link": "black-ops/cold-war/generator",
+        "disabled": false
+    },
+    {
+        "title": "Black Ops IV",
+        "text": "",
+        "variant": "black-ops",
+        "btn1Text": "Multiplayer Generator",
+        "link": "black-ops/four/generator",
+        "disabled": false
+    },
+    {
+        "title": "World War II",
+        "text": "",
+        "variant": "ww2",
+        "btn1Text": "Multiplayer Generator",
+        "link": "world-war-two/generator",
+        "disabled": false,
+        "btn2Text": "Custom Match Generator",
+        "link2": "world-war-two/custom-match",
+        "disabled2": false
+    },
+    {
+        "title": "Infinite Warfare",
+        "text": "Coming in 2025",
+        "variant": "infinite-warfare",
+        "btn1Text": "Generator",
+        "link": "infinite-warfare/generator",
+        "disabled": true
+    },
+    {
+        "title": "Modern Warfare Remastered",
+        "text": "",
+        "variant": "success",
+        "btn1Text": "Generator",
+        "link": "modern-warfare/remastered/generator",
+        "disabled": false
+    },
+    {
+        "title": "Black Ops III",
+        "text": "",
+        "variant": "black-ops",
+        "btn1Text": "Generator",
+        "link": "black-ops/three/generator",
+        "disabled": false
+    }
+]

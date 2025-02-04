@@ -1,0 +1,113 @@
+[
+    {
+        "name": "Time Limit",
+        "type": "simple",
+        "defaultChance": "40%",
+        "default": "10 Minutes",
+        "unitValue": "",
+        "values": [
+            "1 Minute",
+            "1 M: 15 S",
+            "1 M: 30 S",
+            "1 M: 45 S",
+            "2 Minutes",
+            "2 M: 30 S",
+            "3 Minutes",
+            "4 Minutes",
+            "5 Minutes",
+            "6 Minutes",
+            "7 Minutes",
+            "8 Minutes",
+            "9 Minutes",
+            "10 Minutes",
+            "11 Minutes",
+            "12 Minutes",
+            "13 Minutes",
+            "14 Minutes",
+            "15 Minutes",
+            "20 Minutes",
+            "30 Minutes",
+            "45 Minutes"
+        ]
+    },
+    {
+        "name": "Score Limit",
+        "type": "simple",
+        "defaultChance": "40%",
+        "default": "100 Points",
+        "unitValue": "",
+        "values": [
+            "5 Points",
+            "10 Points",
+            "15 Points",
+            "20 Points",
+            "25 Points",
+            "30 Points",
+            "35 Points",
+            "40 Points",
+            "45 Points",
+            "50 Points",
+            "55 Points",
+            "60 Points",
+            "65 Points",
+            "70 Points",
+            "75 Points",
+            "80 Points",
+            "85 Points",
+            "90 Points",
+            "95 Points",
+            "100 Points",
+            "150 Points",
+            "200 Points",
+            "250 Points",
+            "300 Points",
+            "350 Points",
+            "400 Points",
+            "450 Points",
+            "500 Points",
+            "550 Points",
+            "600 Points",
+            "650 Points",
+            "700 Points",
+            "750 Points",
+            "800 Points",
+            "850 Points",
+            "900 Points",
+            "950 Points",
+            "1000 Points"
+        ]
+    },
+    {
+        "name": "Match Start Time",
+        "type": "simple",
+        "defaultChance": "30%",
+        "default": "15",
+        "unitValue": "Seconds",
+        "min": 5,
+        "max": 60,
+        "increment": 5,
+        "values": []
+    },
+    {
+        "name": "",
+        "type": "simple",
+        "defaultChance": "0",
+        "default": "Off",
+        "unitValue": "",
+        "values": [
+            "Off",
+            "On"
+        ]
+    },
+    {
+        "name": "",
+        "type": "simple",
+        "defaultChance": "0",
+        "default": "Off",
+        "unitValue": "",
+        "values": [
+            "Off",
+            "On"
+        ]
+    }
+]

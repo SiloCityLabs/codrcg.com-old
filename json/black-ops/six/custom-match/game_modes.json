@@ -1,0 +1,123 @@
+[
+    {
+        "name": "Team Deathmatch",
+        "type": "Standard Mode",
+        "game": "black-ops-six",
+        "map_set": "mp",
+        "game_rule_set": "tdm"
+    },
+    {
+        "name": "Domination",
+        "type": "Standard Mode",
+        "game": "black-ops-six",
+        "map_set": "mp"
+    },
+    {
+        "name": "Search And Destroy",
+        "type": "Standard Mode",
+        "game": "black-ops-six",
+        "map_set": "mp2"
+    },
+    {
+        "name": "Kill Confirmed",
+        "type": "Standard Mode",
+        "game": "black-ops-six",
+        "map_set": "mp"
+    },
+    {
+        "name": "Free-For-All",
+        "type": "Standard Mode",
+        "game": "black-ops-six",
+        "map_set": "mp2"
+    },
+    {
+        "name": "Hardpoint",
+        "type": "Standard Mode",
+        "game": "black-ops-six",
+        "map_set": "mp"
+    },
+    {
+        "name": "Gunfight",
+        "type": "Standard Mode",
+        "game": "black-ops-six",
+        "map_set": "gunfight"
+    },
+    {
+        "name": "Headquarters",
+        "type": "Standard Mode",
+        "game": "black-ops-six",
+        "map_set": "mp2"
+    },
+    {
+        "name": "Kill Order",
+        "type": "Standard Mode",
+        "game": "black-ops-six",
+        "map_set": "mp"
+    },
+    {
+        "name": "Control",
+        "type": "Standard Mode",
+        "game": "black-ops-six",
+        "map_set": "mp2"
+    },
+    {
+        "name": "Prop Hunt",
+        "type": "Standard Mode",
+        "game": "black-ops-six",
+        "map_set": "mp2"
+    },
+    {
+        "name": "Infected",
+        "type": "Alternate Mode",
+        "game": "black-ops-six",
+        "map_set": "infected"
+    },
+    {
+        "name": "Gun Game",
+        "type": "Alternate Mode",
+        "game": "black-ops-six",
+        "map_set": "mp2"
+    },
+    {
+        "name": "Face Off Domination",
+        "type": "Alternate Mode",
+        "game": "black-ops-six",
+        "map_set": "gunfight"
+    },
+    {
+        "name": "Face Off Team Deathmatch",
+        "type": "Alternate Mode",
+        "game": "black-ops-six",
+        "map_set": "gunfight"
+    },
+    {
+        "name": "Face Off Kill Order",
+        "type": "Alternate Mode",
+        "game": "black-ops-six",
+        "map_set": "gunfight"
+    },
+    {
+        "name": "Face Off Kill Confirmed",
+        "type": "Alternate Mode",
+        "game": "black-ops-six",
+        "map_set": "gunfight"
+    },
+    {
+        "name": "CDL Hardpoint",
+        "type": "Call Of Duty League",
+        "game": "black-ops-six",
+        "map_set": "mp2"
+    },
+    {
+        "name": "CDL Control",
+        "type": "Call Of Duty League",
+        "game": "black-ops-six",
+        "map_set": "mp2"
+    },
+    {
+        "name": "CDL Search And Destroy",
+        "type": "Call Of Duty League",
+        "game": "black-ops-six",
+        "map_set": "mp2"
+    }
+]

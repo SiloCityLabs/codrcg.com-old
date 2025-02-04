@@ -24,7 +24,7 @@ export default function BlackOpsFourWildcards() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "description", "type", "game", "isDlc"];
+  const dataKeys = ["name", "description", "type", "game"];
 
   useEffect(() => {
     const dataList = getWildcards("black-ops-four");

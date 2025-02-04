@@ -20,7 +20,7 @@ export default function VanguardWeapons() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game", "no_attach", "isDlc"];
+  const dataKeys = ["name", "type", "game", "no_attach"];
 
   useEffect(() => {
     const dataList = getWeapon("vanguard");

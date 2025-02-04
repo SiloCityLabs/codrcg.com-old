@@ -23,14 +23,7 @@ export default function ModernWarfareThreeWeapons() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = [
-    "name",
-    "type",
-    "game",
-    "no_attach",
-    "no_attach_info",
-    "isDlc",
-  ];
+  const dataKeys = ["name", "type", "game", "no_attach", "no_attach_info"];
 
   useEffect(() => {
     const dataList = getWeapon("modern-warfare-three");

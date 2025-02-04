@@ -24,7 +24,14 @@ export default function BlackOpsFourWeapons() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game", "no_attach", "isDlc"];
+  const dataKeys = [
+    "name",
+    "type",
+    "game",
+    "no_attach_info",
+    "no_attach",
+    "isDlc",
+  ];
 
   useEffect(() => {
     const dataList = getWeapon("black-ops-four");

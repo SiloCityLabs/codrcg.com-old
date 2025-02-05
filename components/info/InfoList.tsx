@@ -1,21 +1,43 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Table, Form, FormControl } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Table,
+  Form,
+  FormControl,
+  Dropdown,
+} from "react-bootstrap";
 import { InfoListProps, InfoData } from "@/types/Info";
 
-function InfoList({ data, dataKeys }: InfoListProps) {
+function InfoList({ data, dataKeys, types }: InfoListProps) {
+  // Allow types to be null
   const [filteredData, setFilteredData] = useState(data);
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedType, setSelectedType] = useState("");
+
+  //Figure out why sometimes shotgun is filtering for melee on type
 
   useEffect(() => {
-    const filtered = Object.entries(data).filter(([key, item]) =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const filtered = Object.entries(data).filter(([key, item]) => {
+      const nameMatch = item.name
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+        
+      const typeMatch = selectedType ? item.type.toLowerCase().trim() === selectedType.toLowerCase().trim() : true;
+        
+      return nameMatch && typeMatch;
+    });
 
     setFilteredData(Object.fromEntries(filtered));
-  }, [searchTerm, data]);
+  }, [searchTerm, data, selectedType]);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
+  };
+
+  const handleTypeSelect = (type) => {
+    setSelectedType(type);
   };
 
   const renderTableHeader = () => (
@@ -73,19 +95,46 @@ function InfoList({ data, dataKeys }: InfoListProps) {
     <Container id="data-list" className="shadow-lg p-3 bg-body rounded">
       <Row className="justify-content-md-center">
         <Col sm className="text-center">
-          <Form className="mb-3">
+          <Form className="mb-3 d-flex">
+            {" "}
+            {/* Add d-flex class */}
             <FormControl
               type="text"
               placeholder="Search"
               value={searchTerm}
               onChange={handleSearchChange}
+              className="me-2" // Add margin to separate elements
             />
+            {types && (
+              <Dropdown>
+                <Dropdown.Toggle
+                  variant="outline-secondary"
+                  id="dropdown-basic"
+                >
+                  {selectedType || "Select Type"}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item onClick={() => handleTypeSelect("")}>
+                    All Types
+                  </Dropdown.Item>
+                  {types.map((type) => (
+                    <Dropdown.Item
+                      key={type}
+                      onClick={() => handleTypeSelect(type)}
+                    >
+                      {type}
+                    </Dropdown.Item>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+            )}
           </Form>
+
           <div className="table-responsive">
             <Table striped bordered hover size="sm">
               {renderTableHeader()}
               <tbody>
-                {Object.values(filteredData).length > 0 ? ( // Check for data
+                {Object.values(filteredData).length > 0 ? (
                   Object.values(filteredData).map(renderTableRow)
                 ) : (
                   <tr>

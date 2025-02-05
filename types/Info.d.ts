@@ -2,6 +2,7 @@ export interface InfoListProps {
   game?: string;
   data: Record<string, InfoData>;
   dataKeys: Array<string>;
+  types?: string[] | null;
 }
 
 export type InfoData = {

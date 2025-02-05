@@ -3,120 +3,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GeneratorCard from "@/components/GeneratorCard";
+//json
+import generatorList from "@/json/index/generator-list.json";
+import zombieGeneratorList from "@/json/index/zombie-generator-list.json";
 
 export default function Home() {
-  const infoCards = [
-    {
-      title: "Black Ops VI",
-      text: "",
-      variant: "black-ops",
-      btn1Text: "Multiplayer Generator",
-      link: "black-ops/six/generator",
-      disabled: false,
-      btn2Text: "Zombies Generator",
-      link2: "black-ops/six/zombies-generator",
-      disabled2: false,
-    },
-    {
-      title: "Warzone",
-      text: "",
-      variant: "success",
-      btn1Text: "Generator",
-      link: "warzone/generator",
-      disabled: false,
-      btn2Text: "Where we Droppin?",
-      link2: "warzone/where-we-droppin",
-      disabled2: false,
-    },
-    {
-      title: "Modern Warfare 3 (2023)",
-      text: "",
-      variant: "danger",
-      btn1Text: "Multiplayer Generator",
-      link: "modern-warfare/three/generator",
-      disabled: false,
-      btn2Text: "Zombies Generator",
-      link2: "modern-warfare/three/zombies-generator",
-      disabled2: false,
-    },
-    {
-      title: "Modern Warfare 2 (2022)",
-      text: "Coming in 2025",
-      variant: "mw2",
-      btn1Text: "Generator",
-      link: "modern-warfare-two/generator",
-      disabled: true,
-    },
-    {
-      title: "Vanguard",
-      text: "",
-      variant: "danger",
-      btn1Text: "Multiplayer Generator",
-      link: "vanguard/generator",
-      disabled: false,
-      btn2Text: "Zombies Generator",
-      link2: "vanguard/zombies-generator",
-      disabled2: false,
-    },
-    {
-      title: "Cold War",
-      text: "",
-      variant: "danger",
-      btn1Text: "Multiplayer Generator",
-      link: "black-ops/cold-war/generator",
-      disabled: false,
-      btn2Text: "Zombies Generator",
-      link2: "black-ops/cold-war/zombies-generator",
-      disabled2: false,
-    },
-    {
-      title: "Black Ops IV",
-      text: "",
-      variant: "black-ops",
-      btn1Text: "Multiplayer Generator",
-      link: "black-ops/four/generator",
-      disabled: false,
-      btn2Text: "Zombies Generator",
-      link2: "black-ops/four/zombies/generator",
-      disabled2: false,
-    },
-    {
-      title: "World War II",
-      text: "",
-      variant: "ww2",
-      btn1Text: "Multiplayer Generator",
-      link: "world-war-two/generator",
-      disabled: false,
-      btn2Text: "Zombies Generator",
-      link2: "world-war-two/zombies-generator",
-      disabled2: false,
-    },
-    {
-      title: "Infinite Warfare",
-      text: "Coming in 2025",
-      variant: "infinite-warfare",
-      btn1Text: "Generator",
-      link: "infinite-warfare/generator",
-      disabled: true,
-    },
-    {
-      title: "Modern Warfare Remastered",
-      text: "",
-      variant: "success",
-      btn1Text: "Generator",
-      link: "modern-warfare/remastered/generator",
-      disabled: false,
-    },
-    {
-      title: "Black Ops III",
-      text: "",
-      variant: "black-ops",
-      btn1Text: "Generator",
-      link: "black-ops/three/generator",
-      disabled: false,
-    },
-  ];
-
   return (
     <>
       <Head>
@@ -158,7 +49,34 @@ export default function Home() {
         <Header />
         <Container className="main-content">
           <Row>
-            {infoCards.map((card, index) => (
+            <h3 className="text-center">Multiplayer</h3>
+            <hr />
+            {generatorList.map((card, index) => (
+              <Col
+                key={index}
+                xl={3}
+                lg={4}
+                md={6}
+                className="text-center mb-4"
+              >
+                <GeneratorCard
+                  title={card.title}
+                  text={card.text}
+                  variant={card.variant}
+                  btn1Text={card.btn1Text}
+                  link={card.link}
+                  disabled={card.disabled}
+                  btn2Text={card.btn2Text}
+                  link2={card.link2}
+                  disabled2={card.disabled2}
+                />
+              </Col>
+            ))}
+          </Row>
+          <Row className="mt-5">
+            <h3 className="text-center">Zombies</h3>
+            <hr />
+            {zombieGeneratorList.map((card, index) => (
               <Col
                 key={index}
                 xl={3}

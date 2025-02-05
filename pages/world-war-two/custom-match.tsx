@@ -10,8 +10,8 @@ import {
   Spinner,
 } from "react-bootstrap";
 import Header from "@/components/Header";
-import CustomMutationsGeneral from "@/components/generators/black-ops/four/custom-mutations/CustomMutationsGeneral";
-import CustomMutationsSection from "@/components/generators/black-ops/four/custom-mutations/CustomMutationsSection";
+import CustomSettingsGeneral from "@/components/generators/cod/custom-settings/CustomSettingsGeneral";
+import CustomSettingsSection from "@/components/generators/cod/custom-settings/CustomSettingsSection";
 //Json
 import generalSettings from "@/json/world-war-two/custom-match/general.json";
 import rulesSettings from "@/json/world-war-two/custom-match/rules.json";
@@ -49,7 +49,7 @@ export default function CustomMatch() {
   return (
     <>
       <Head>
-        <title>World War Two Random Custom Mutations Generator</title>
+        <title>World War Two Random Custom Match Generator</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
@@ -71,7 +71,7 @@ export default function CustomMatch() {
               World War Two
               <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
               <br className="d-block d-sm-none" />
-              Random Custom Mutations Generator
+              Random Custom Match Generator
             </h2>
             <Container className="shadow-lg p-3 mb-5 bg-body rounded">
               {isLoading ? ( // Conditional rendering based on isLoading
@@ -89,13 +89,13 @@ export default function CustomMatch() {
                     className="mb-3"
                   >
                     <Tab eventKey="general" title="General">
-                      <CustomMutationsGeneral
+                      <CustomSettingsGeneral
                         data={generalSettings}
                         count={count}
                       />
                     </Tab>
                     <Tab eventKey="rules" title="Rules">
-                      <CustomMutationsSection
+                      <CustomSettingsSection
                         data={rulesSettings}
                         count={count}
                       />
@@ -104,7 +104,7 @@ export default function CustomMatch() {
                   <Row id="button-row">
                     <Col className="text-center">
                       <Button variant="ww2" href="#" onClick={handleClick}>
-                        Generate Loadout
+                        Generate Settings
                       </Button>
                     </Col>
                   </Row>

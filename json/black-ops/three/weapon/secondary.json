@@ -87,12 +87,12 @@
   },
   {
     "name": "NX ShadowClaw",
-    "type": "melee",
+    "type": "special",
     "game": "black-ops-three"
   },
   {
     "name": "D13 Sector",
-    "type": "melee",
+    "type": "special",
     "game": "black-ops-three",
     "no_attach": true
   }

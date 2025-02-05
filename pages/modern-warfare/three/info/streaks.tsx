@@ -9,7 +9,7 @@ import { getStreaks } from "@/helpers/info/getStreaks";
 //Styles
 import styles from "@/public/styles/components/Loadout.module.css";
 
-export default function ColdWarStreaks() {
+export default function ModernWarfareThreeStreaks() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/modern-warfare/three/generator" },

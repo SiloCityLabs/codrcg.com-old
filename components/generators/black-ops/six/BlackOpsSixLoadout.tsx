@@ -203,6 +203,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
         weapons.primary.weapon.name
       );
     }
+
     //Verify if secondary weapon has attachments
     if (!weapons.secondary.weapon?.no_attach) {
       weapons.secondary.attachments = implodeObject(

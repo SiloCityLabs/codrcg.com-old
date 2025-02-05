@@ -1,16 +1,16 @@
 import React from "react";
 //Components
 import { Row } from "react-bootstrap";
-import CustomMutationsSimple from "@/components/generators/black-ops/four/custom-mutations/views/CustomMutationsSimple";
+import CustomSettingsSimple from "@/components/generators/cod/custom-settings/views/CustomSettingsSimple";
 //Types
-import { Setting } from "@/types/CustomMutations";
+import { Setting } from "@/types/CustomSettings";
 
-interface CustomMutationsProps {
+interface CustomSettingsProps {
   data: Record<string, Setting[]>;
   count: number;
 }
 
-function CustomMutationsSection({ data, count }: CustomMutationsProps) {
+function CustomSettingsSection({ data, count }: CustomSettingsProps) {
   return (
     <Row className="justify-content-md-center">
       {Object.keys(data).map((outerIndex) => (
@@ -18,7 +18,7 @@ function CustomMutationsSection({ data, count }: CustomMutationsProps) {
           <h4 className="text-center">{outerIndex}</h4>
           <hr />
           {data[outerIndex].map((setting, innerIndex) => (
-            <CustomMutationsSimple
+            <CustomSettingsSimple
               data={setting}
               count={count}
               key={innerIndex}
@@ -30,4 +30,4 @@ function CustomMutationsSection({ data, count }: CustomMutationsProps) {
   );
 }
 
-export default CustomMutationsSection;
+export default CustomSettingsSection;

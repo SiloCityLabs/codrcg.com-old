@@ -23,7 +23,7 @@ export default function ColdWarZombiesFieldUpgrades() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game", "isDlc"];
+  const dataKeys = ["name", "type", "game"];
 
   useEffect(() => {
     const dataList = getZombiesFieldUpgrade("cold-war");

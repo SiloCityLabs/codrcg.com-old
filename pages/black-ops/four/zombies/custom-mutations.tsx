@@ -10,8 +10,8 @@ import {
   Spinner,
 } from "react-bootstrap";
 import Header from "@/components/Header";
-import CustomMutationsGeneral from "@/components/generators/black-ops/four/custom-mutations/CustomMutationsGeneral";
-import CustomMutationsSection from "@/components/generators/black-ops/four/custom-mutations/CustomMutationsSection";
+import CustomSettingsGeneral from "@/components/generators/cod/custom-settings/CustomSettingsGeneral";
+import CustomSettingsSection from "@/components/generators/cod/custom-settings/CustomSettingsSection";
 //Json
 import generalSettings from "@/json/black-ops/four/zombies/custom-mutations/general.json";
 import systemsSettings from "@/json/black-ops/four/zombies/custom-mutations/systems.json";
@@ -91,31 +91,31 @@ export default function CustomMutations() {
                     className="mb-3"
                   >
                     <Tab eventKey="general" title="General">
-                      <CustomMutationsGeneral
+                      <CustomSettingsGeneral
                         data={generalSettings}
                         count={count}
                       />
                     </Tab>
                     <Tab eventKey="systems" title="Systems">
-                      <CustomMutationsSection
+                      <CustomSettingsSection
                         data={systemsSettings}
                         count={count}
                       />
                     </Tab>
                     <Tab eventKey="weapons" title="Weapons">
-                      <CustomMutationsSection
+                      <CustomSettingsSection
                         data={weaponSettings}
                         count={count}
                       />
                     </Tab>
                     <Tab eventKey="enemies" title="Enemies">
-                      <CustomMutationsSection
+                      <CustomSettingsSection
                         data={enemiesSettings}
                         count={count}
                       />
                     </Tab>
                     <Tab eventKey="player" title="Player">
-                      <CustomMutationsSection
+                      <CustomSettingsSection
                         data={playerSettings}
                         count={count}
                       />
@@ -128,7 +128,7 @@ export default function CustomMutations() {
                         href="#"
                         onClick={handleClick}
                       >
-                        Generate Loadout
+                        Generate Settings
                       </Button>
                     </Col>
                   </Row>

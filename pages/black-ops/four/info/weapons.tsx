@@ -24,11 +24,30 @@ export default function BlackOpsFourWeapons() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game", "no_attach", "isDlc"];
+  const dataKeys = [
+    "name",
+    "type",
+    "game",
+    "no_attach_info",
+    "no_attach",
+    "isDlc",
+  ];
+  const [types, setTypes] = useState<string[]>([]);
 
   useEffect(() => {
+    const tmp_types: string[] = [];
     const dataList = getWeapon("black-ops-four");
     setData(dataList);
+
+    //Format data
+    for (const key in dataList) {
+      const type = dataList[key].type;
+
+      if (!tmp_types.includes(type)) {
+        tmp_types.push(type);
+      }
+    }
+    setTypes(tmp_types);
 
     setIsLoading(false);
   }, []);
@@ -61,7 +80,9 @@ export default function BlackOpsFourWeapons() {
               Weapons
             </h2>
 
-            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
+            {!isLoading && (
+              <InfoList data={data} dataKeys={dataKeys} types={types} />
+            )}
           </Col>
         </Row>
       </Container>

@@ -24,7 +24,7 @@ export default function BlackOpsFourStreaks() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "score", "type", "game", "isDlc"];
+  const dataKeys = ["name", "score", "type", "game"];
 
   useEffect(() => {
     const dataList = getStreaks("black-ops-four");

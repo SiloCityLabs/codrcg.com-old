@@ -56,6 +56,15 @@
   background: #9C800F !important;
 }
 
+#cod-header.infinite-warfare {
+  background: #FFFF02 !important;
+  color: #000 !important;
+}
+
+#cod-header.infinite-warfare a {
+  color: #000 !important;
+}
+
 /* Cutom Button Colors */
 /* Black Ops Orange - #F96800 */
 .btn-black-ops {

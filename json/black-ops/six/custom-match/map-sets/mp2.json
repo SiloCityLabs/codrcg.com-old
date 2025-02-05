@@ -1,0 +1,97 @@
+[
+    {
+        "name": "Babylon",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Bounty",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Dealership",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Derelict",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Extraction",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Hacienda",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Hideout",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Lowtown",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Nuketown",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Nuketown Holiday",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Payback",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Protocol",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Red Card",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Rewind",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "SCUD",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Skyline",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Subsonic",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Vault",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Vorkuta",
+        "type": "Map",
+        "game": "black-ops-six"
+    }
+]

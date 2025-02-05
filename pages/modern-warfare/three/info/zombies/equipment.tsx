@@ -9,7 +9,7 @@ import { getEquipment } from "@/helpers/info/getEquipment";
 //Styles
 import styles from "@/public/styles/components/Loadout.module.css";
 
-export default function ColdWarEquipment() {
+export default function ModernWarfareThreeEquipment() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/modern-warfare/three/generator" },

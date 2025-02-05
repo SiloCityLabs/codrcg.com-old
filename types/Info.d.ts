@@ -2,6 +2,7 @@ export interface InfoListProps {
   game?: string;
   data: Record<string, InfoData>;
   dataKeys: Array<string>;
+  types?: string[] | null;
 }
 
 export type InfoData = {
@@ -16,6 +17,8 @@ export type InfoData = {
   weapon?: string;
   minor?: string;
   major?: string;
+  payload?: string;
+  trait?: string;
   no_attach?: boolean;
   no_attach_info?: boolean;
   isDlc?: boolean;

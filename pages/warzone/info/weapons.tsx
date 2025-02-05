@@ -28,10 +28,22 @@ export default function WarzoneWeapons() {
     "no_attach_info",
     "isDlc",
   ];
+  const [types, setTypes] = useState<string[]>([]);
 
   useEffect(() => {
+    const tmp_types: string[] = [];
     const dataList = getWeapon("warzone");
     setData(dataList);
+
+    //Format data
+    for (const key in dataList) {
+      const type = dataList[key].type;
+
+      if (!tmp_types.includes(type)) {
+        tmp_types.push(type);
+      }
+    }
+    setTypes(tmp_types);
 
     setIsLoading(false);
   }, []);
@@ -64,7 +76,9 @@ export default function WarzoneWeapons() {
               Weapons
             </h2>
 
-            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
+            {!isLoading && (
+              <InfoList data={data} dataKeys={dataKeys} types={types} />
+            )}
           </Col>
         </Row>
       </Container>

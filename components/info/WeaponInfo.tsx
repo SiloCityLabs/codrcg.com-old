@@ -6,12 +6,12 @@ import { getWeapon } from "@/helpers/info/getWeapon";
 import { WeaponInfoProps } from "@/types/Info";
 import { Weapon } from "@/types/Generator";
 
-function WeaponInfo({ value }: WeaponInfoProps) {
+function WeaponInfo({ value, game }: WeaponInfoProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [weaponName, setWeaponName] = useState("");
 
   useEffect(() => {
-    const dataList = getWeapon("black-ops-six", value);
+    const dataList = getWeapon(game, value);
 
     if (dataList) {
       if (isWeapon(dataList)) {

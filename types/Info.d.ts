@@ -8,6 +8,7 @@ export interface InfoListProps {
 
 export interface WeaponInfoProps {
   value: string;
+  game: string;
 }
 
 export type InfoData = {

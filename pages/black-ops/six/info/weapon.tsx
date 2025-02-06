@@ -63,7 +63,9 @@ export default function BlackOpsSixWeapon() {
               Weapon - {value}
             </h2>
 
-            {!isLoading && value && <WeaponInfo value={value} />}
+            {!isLoading && value && (
+              <WeaponInfo value={value} game="black-ops-six" />
+            )}
           </Col>
         </Row>
       </Container>

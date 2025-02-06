@@ -7,6 +7,7 @@ import {
   Form,
   FormControl,
   Dropdown,
+  Badge,
 } from "react-bootstrap";
 import { InfoListProps } from "@/types/Info";
 
@@ -15,6 +16,7 @@ function InfoList({ data, dataKeys, types, url }: InfoListProps) {
   const [filteredData, setFilteredData] = useState(data);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedType, setSelectedType] = useState("");
+  const [itemCount, setItemCount] = useState(Object.values(data).length);
 
   useEffect(() => {
     const filtered = Object.entries(data).filter(([key, item]) => {
@@ -30,6 +32,7 @@ function InfoList({ data, dataKeys, types, url }: InfoListProps) {
     });
 
     setFilteredData(Object.fromEntries(filtered));
+    setItemCount(Object.values(filtered).length);
   }, [searchTerm, data, selectedType]);
 
   const handleSearchChange = (event) => {
@@ -44,7 +47,10 @@ function InfoList({ data, dataKeys, types, url }: InfoListProps) {
     <thead>
       <tr>
         {dataKeys.map((key) => (
-          <th key={key}>{keyToTitle(key)}</th>
+          <th key={key}>
+            {keyToTitle(key)}{" "}
+            {key === "name" && <Badge bg="dark">{itemCount}</Badge>}
+          </th>
         ))}
       </tr>
     </thead>
@@ -99,14 +105,12 @@ function InfoList({ data, dataKeys, types, url }: InfoListProps) {
       <Row className="justify-content-md-center">
         <Col sm className="text-center">
           <Form className="mb-3 d-flex">
-            {" "}
-            {/* Add d-flex class */}
             <FormControl
               type="text"
               placeholder="Search"
               value={searchTerm}
               onChange={handleSearchChange}
-              className="me-2" // Add margin to separate elements
+              className="me-2"
             />
             {types && (
               <Dropdown>

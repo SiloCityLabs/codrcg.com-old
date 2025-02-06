@@ -8,7 +8,7 @@ import { Weapon } from "@/types/Generator";
 
 function WeaponInfo({ value }: WeaponInfoProps) {
   const [isLoading, setIsLoading] = useState(true);
-  const [weaponName, setWeaponName] = useState(""); // State for just the name
+  const [weaponName, setWeaponName] = useState("");
 
   useEffect(() => {
     const dataList = getWeapon("black-ops-six", value);

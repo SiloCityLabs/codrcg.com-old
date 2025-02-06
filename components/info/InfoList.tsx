@@ -8,24 +8,24 @@ import {
   FormControl,
   Dropdown,
 } from "react-bootstrap";
-import { InfoListProps, InfoData } from "@/types/Info";
+import { InfoListProps } from "@/types/Info";
 
-function InfoList({ data, dataKeys, types }: InfoListProps) {
+function InfoList({ data, dataKeys, types, url }: InfoListProps) {
   // Allow types to be null
   const [filteredData, setFilteredData] = useState(data);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedType, setSelectedType] = useState("");
-
-  //Figure out why sometimes shotgun is filtering for melee on type
 
   useEffect(() => {
     const filtered = Object.entries(data).filter(([key, item]) => {
       const nameMatch = item.name
         .toLowerCase()
         .includes(searchTerm.toLowerCase());
-        
-      const typeMatch = selectedType ? item.type.toLowerCase().trim() === selectedType.toLowerCase().trim() : true;
-        
+
+      const typeMatch = selectedType
+        ? item.type.toLowerCase().trim() === selectedType.toLowerCase().trim()
+        : true;
+
       return nameMatch && typeMatch;
     });
 
@@ -55,7 +55,10 @@ function InfoList({ data, dataKeys, types }: InfoListProps) {
   const formatValue = (value, key) => {
     if (typeof value === "boolean" || boolArr.includes(key)) {
       return value ? "Yes" : "-";
+    } else if (key === "name" && url) {
+      return <a href={`${url}?value=${value}`}>{value}</a>;
     }
+
     return value;
   };
 

@@ -3,6 +3,11 @@ export interface InfoListProps {
   data: Record<string, InfoData>;
   dataKeys: Array<string>;
   types?: string[] | null;
+  url?: string;
+}
+
+export interface WeaponInfoProps {
+  value: string;
 }
 
 export type InfoData = {

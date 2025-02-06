@@ -15,5 +15,24 @@ export function getWeapon(
     getMeleeList(game)
   ) as Record<string, Weapon>;
 
+  if (value) {
+    // Check if value is not empty
+    for (const key in data) {
+      if (data.hasOwnProperty(key)) {
+        const weapon = data[key];
+        if (weapon.name === value) {
+          // Case-sensitive comparison
+          return weapon as Weapon; // Return the matching weapon
+        }
+      }
+    }
+    //Return empty object if no match is found
+    return {
+      name: "",
+      type: "",
+      game: "",
+    } as Weapon;
+  }
+
   return data;
 }

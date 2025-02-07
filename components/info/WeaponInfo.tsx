@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Tabs, Tab } from "react-bootstrap";
 //Helpers
 import { getWeapon } from "@/helpers/info/getWeapon";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
@@ -20,6 +20,7 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [weaponData, setWeponData] = useState({});
   const [attachmentInfo, setAttachmentInfo] = useState({});
+  const [key, setKey] = useState<string>("");
 
   useEffect(() => {
     const dataList = getWeapon(game, value);
@@ -28,6 +29,7 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
       setWeponData(dataList);
       const attachments = fetchAttachments(dataList, -1);
       setAttachmentInfo(attachments);
+      setKey(Object.keys(attachments)[0]);
     } else {
       console.error("No Weapon found in the dataList object");
     }
@@ -65,34 +67,35 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
           <hr className="mt-4" />
           <Row className="justify-content-md-center">
             {attachmentInfo && Object.keys(attachmentInfo).length > 0 ? (
-              <>
+              <Tabs
+                id="controlled-tab-example"
+                activeKey={key}
+                onSelect={(k) => setKey(k ?? "general")}
+                className="mb-3"
+              >
                 {Object.entries(attachmentInfo).map(([key, values]) => (
-                  <Col sm className="text-center mb-3 mb-md-0" key={key}>
-                    <span className="fw-bolder fs-5">{key}:</span> <br />
+                  <Tab eventKey={key} title={key} key={key}>
                     {Array.isArray(values) ? (
                       values.map((value, index) => (
-                        <>
-                          <span key={index} className="text-muted fs-6">
-                            {String(value)}
+                        <React.Fragment key={index}>
+                          <span className="text-muted fs-6">
+                            {typeof value === "string" ? value : String(value)}{" "}
+                            {/* Type check */}
                           </span>
                           <br />
-                        </>
+                        </React.Fragment>
                       ))
+                    ) : typeof values === "string" ? (
+                      <span className="text-muted fs-6">{values}</span>
                     ) : (
-                      <>
-                        <span className="text-muted fs-6">
-                          {String(values)}
-                        </span>
-                        <br />
-                      </>
+                      // Handle other non-array value types
+                      <span className="text-muted fs-6">{String(values)}</span>
                     )}
-                  </Col>
+                  </Tab>
                 ))}
-              </>
+              </Tabs>
             ) : (
-              <>
-                <h3 className="text-center">No attachments</h3>
-              </>
+              <h3 className="text-center">No attachments</h3>
             )}
           </Row>
         </>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 //Helpers
 import { getWeapon } from "@/helpers/info/getWeapon";
+import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
 //types
 import { WeaponInfoProps } from "@/types/Info";
 import { Weapon } from "@/types/Generator";
@@ -23,10 +24,10 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
   useEffect(() => {
     const dataList = getWeapon(game, value);
 
-    if (dataList) {
-      if (isWeapon(dataList)) {
-        setWeponData(dataList);
-      }
+    if (dataList && isWeapon(dataList)) {
+      setWeponData(dataList);
+      const attachments = fetchAttachments(dataList, -1);
+      setAttachmentInfo(attachments);
     } else {
       console.error("No Weapon found in the dataList object");
     }
@@ -48,9 +49,9 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
 
   return (
     <Container id="weapon-info" className="shadow-lg p-3 bg-body rounded">
-      <Row className="justify-content-md-center">
-        {!isLoading && (
-          <>
+      {!isLoading && (
+        <>
+          <Row className="justify-content-md-center">
             {weaponData &&
               Object.entries(weaponData).map(([key, value]) => (
                 <Col sm className="text-center mb-3 mb-md-0" key={key}>
@@ -59,25 +60,43 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
                   <span className="text-muted fs-6">{String(value)}</span>
                 </Col>
               ))}
+          </Row>
 
+          <hr className="mt-4" />
+          <Row className="justify-content-md-center">
             {attachmentInfo && Object.keys(attachmentInfo).length > 0 ? (
-              // Render attachment info here (e.g., loop, display, etc.)
-              Object.entries(attachmentInfo).map(([key, value]) => (
-                <div key={key}>
-                  <p>
-                    {key}: {value}
-                  </p>
-                </div>
-              ))
+              <>
+                {Object.entries(attachmentInfo).map(([key, values]) => (
+                  <Col sm className="text-center mb-3 mb-md-0" key={key}>
+                    <span className="fw-bolder fs-5">{key}:</span> <br />
+                    {Array.isArray(values) ? (
+                      values.map((value, index) => (
+                        <>
+                          <span key={index} className="text-muted fs-6">
+                            {String(value)}
+                          </span>
+                          <br />
+                        </>
+                      ))
+                    ) : (
+                      <>
+                        <span className="text-muted fs-6">
+                          {String(values)}
+                        </span>
+                        <br />
+                      </>
+                    )}
+                  </Col>
+                ))}
+              </>
             ) : (
               <>
-                <hr className="mt-4" />
                 <h3 className="text-center">No attachments</h3>
               </>
             )}
-          </>
-        )}
-      </Row>
+          </Row>
+        </>
+      )}
     </Container>
   );
 }

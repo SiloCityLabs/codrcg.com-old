@@ -16,7 +16,7 @@ const attachmentGetters: Record<
   "modern-warfare-two": getMW2Attachments,
   vanguard: getVanguardAttachments,
   "cold-war": getColdWarAttachments,
-  "world-war-two": getWorldWarTwoAttachments
+  "world-war-two": getWorldWarTwoAttachments,
 };
 
 export function fetchAttachments(weapon: Weapon, count: number = 5): any {

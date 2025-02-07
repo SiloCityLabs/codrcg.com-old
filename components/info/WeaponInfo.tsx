@@ -17,8 +17,8 @@ const titleMap = {
 
 function WeaponInfo({ value, game }: WeaponInfoProps) {
   const [isLoading, setIsLoading] = useState(true);
-  const [weaponName, setWeaponName] = useState("");
   const [weaponData, setWeponData] = useState({});
+  const [attachmentInfo, setAttachmentInfo] = useState({});
 
   useEffect(() => {
     const dataList = getWeapon(game, value);
@@ -26,19 +26,9 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
     if (dataList) {
       if (isWeapon(dataList)) {
         setWeponData(dataList);
-        setWeaponName(dataList.name);
-      } else if (typeof dataList === "object" && dataList !== null) {
-        const firstWeaponKey = Object.keys(dataList)[0];
-        if (firstWeaponKey) {
-          setWeaponName(dataList[firstWeaponKey].name);
-        } else {
-          console.error("No Weapon found in the dataList object");
-          setWeaponName("Unknown");
-        }
       }
     } else {
       console.error("No Weapon found in the dataList object");
-      setWeaponName("Unknown");
     }
 
     setIsLoading(false);
@@ -69,6 +59,22 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
                   <span className="text-muted fs-6">{String(value)}</span>
                 </Col>
               ))}
+
+            {attachmentInfo && Object.keys(attachmentInfo).length > 0 ? (
+              // Render attachment info here (e.g., loop, display, etc.)
+              Object.entries(attachmentInfo).map(([key, value]) => (
+                <div key={key}>
+                  <p>
+                    {key}: {value}
+                  </p>
+                </div>
+              ))
+            ) : (
+              <>
+                <hr className="mt-4" />
+                <h3 className="text-center">No attachments</h3>
+              </>
+            )}
           </>
         )}
       </Row>

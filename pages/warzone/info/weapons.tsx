@@ -77,7 +77,7 @@ export default function WarzoneWeapons() {
             </h2>
 
             {!isLoading && (
-              <InfoList data={data} dataKeys={dataKeys} types={types} />
+              <InfoList data={data} dataKeys={dataKeys} types={types} url="/warzone/info/weapon" />
             )}
           </Col>
         </Row>

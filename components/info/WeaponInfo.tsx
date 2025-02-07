@@ -36,7 +36,7 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
       if (!dataList.no_attach_info && !dataList.no_attach) {
         let attachments = fetchAttachments(dataList, -1);
 
-        if (game = "black-ops-three") {
+        if (game === "black-ops-three") {
           attachments = getBO3Attachments(dataList, "all", -1);
         }
 

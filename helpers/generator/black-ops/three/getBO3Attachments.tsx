@@ -18,7 +18,6 @@ export function getBO3Attachments(
 ): any {
   const gun = weapon.name.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
   if (type === "all") {
-    console.log('hellooo');
     return {
       optic: getOptics(weapon.type, gun, count),
       attachments: getAttachments(weapon.type, gun, count),

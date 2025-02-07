@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Tabs, Tab, Badge } from "react-bootstrap";
+import { Container, Row, Col, Tabs, Tab, Badge, Table } from "react-bootstrap";
 //Helpers
 import { getWeapon } from "@/helpers/info/getWeapon";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
@@ -89,25 +89,36 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
                       }
                       key={key}
                     >
-                      {Array.isArray(values) ? (
-                        values.map((value, index) => (
-                          <React.Fragment key={index}>
-                            <span className="text-muted fs-6">
-                              {typeof value === "string"
-                                ? value
-                                : String(value)}
-                            </span>
-                            <br />
-                          </React.Fragment>
-                        ))
-                      ) : typeof values === "string" ? (
-                        <span className="text-muted fs-6">{values}</span>
-                      ) : (
-                        // Handle other non-array value types
-                        <span className="text-muted fs-6">
-                          {String(values)}
-                        </span>
-                      )}
+                      <div className="table-responsive">
+                        <Table striped bordered hover size="sm">
+                          <thead className="text-center">
+                            <tr>
+                              <th>Value</th>
+                            </tr>
+                          </thead>
+                          <tbody className="text-center">
+                            {Array.isArray(values) ? (
+                              values.map((value, index) => (
+                                <tr key={index}>
+                                  <td>
+                                    {typeof value === "string"
+                                      ? value
+                                      : String(value)}
+                                  </td>
+                                </tr>
+                              ))
+                            ) : typeof values === "string" ? (
+                              <tr>
+                                <td>{values}</td>
+                              </tr>
+                            ) : (
+                              <tr>
+                                <td> {String(values)}</td>
+                              </tr>
+                            )}
+                          </tbody>
+                        </Table>
+                      </div>
                     </Tab>
                   );
                 })}

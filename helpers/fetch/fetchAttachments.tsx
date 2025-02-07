@@ -22,7 +22,7 @@ const attachmentGetters: Record<
   "cold-war": getColdWarAttachments,
   "world-war-two": getWorldWarTwoAttachments,
   "black-ops-four": getBO4Attachments,
-  "infinite-warfare": getIwAttachments,
+  "infinite-warfare": getIwAttachments
 };
 
 export function fetchAttachments(weapon: Weapon, count: number = 5): any {

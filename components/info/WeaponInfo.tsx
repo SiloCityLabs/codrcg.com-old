@@ -3,6 +3,7 @@ import { Container, Row, Col, Tabs, Tab, Badge, Table } from "react-bootstrap";
 //Helpers
 import { getWeapon } from "@/helpers/info/getWeapon";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
+import { getBO3Attachments } from "@/helpers/generator/black-ops/three/getBO3Attachments";
 //types
 import { WeaponInfoProps } from "@/types/Info";
 import { Weapon } from "@/types/Generator";
@@ -33,7 +34,12 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
       setWeponData(dataList);
 
       if (!dataList.no_attach_info && !dataList.no_attach) {
-        const attachments = fetchAttachments(dataList, -1);
+        let attachments = fetchAttachments(dataList, -1);
+
+        if (game = "black-ops-three") {
+          attachments = getBO3Attachments(dataList, "all", -1);
+        }
+
         setAttachmentInfo(attachments);
         setKey(Object.keys(attachments)[0]);
       }

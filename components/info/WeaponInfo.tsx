@@ -59,7 +59,9 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
                 <Col sm className="text-center mb-3 mb-md-0" key={key}>
                   <span className="fw-bolder fs-5">{titleMap[key]}:</span>{" "}
                   <br />
-                  <span className="text-muted fs-6">{String(value)}</span>
+                  <span className="text-muted fs-6">
+                    {formatValue(String(value))}
+                  </span>
                 </Col>
               ))}
           </Row>
@@ -74,14 +76,15 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
                 className="mb-3"
               >
                 {Object.entries(attachmentInfo).map(([key, values]) => {
-                  const itemCount = Array.isArray(values) ? values.length : 1; // Calculate item count
+                  const itemCount = Array.isArray(values) ? values.length : 1;
 
                   return (
                     <Tab
                       eventKey={key}
                       title={
                         <span>
-                          {key} <Badge bg="dark">{itemCount}</Badge>
+                          {formatValue(key)}{" "}
+                          <Badge bg="dark">{itemCount}</Badge>
                         </span>
                       }
                       key={key}
@@ -92,8 +95,7 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
                             <span className="text-muted fs-6">
                               {typeof value === "string"
                                 ? value
-                                : String(value)}{" "}
-                              {/* Type check */}
+                                : String(value)}
                             </span>
                             <br />
                           </React.Fragment>
@@ -118,6 +120,15 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
       )}
     </Container>
   );
+}
+
+function formatValue(label) {
+  return label
+    .replace(/_/g, " ")
+    .replace(/-/g, " ")
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
 
 export default WeaponInfo;

@@ -8,12 +8,15 @@ import WeaponInfo from "@/components/info/WeaponInfo";
 //Styles
 import styles from "@/public/styles/components/Loadout.module.css";
 
-export default function BlackOpsSixWeapon() {
+export default function ModernWarfareThreeWeapon() {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Multiplayer Generator", href: "/black-ops/six/generator" },
-    { label: "Zombies Generator", href: "/black-ops/six/zombies-generator" },
-    { label: "Loadout Info", href: "/black-ops/six/info" },
+    { label: "Multiplayer Generator", href: "/modern-warfare/three/generator" },
+    {
+      label: "Zombies Generator",
+      href: "/modern-warfare/three/zombies-generator",
+    },
+    { label: "Loadout Info", href: "/modern-warfare/three/info" },
     { label: "Changelog", href: "/changelog" },
   ];
   const router = useRouter();
@@ -38,33 +41,33 @@ export default function BlackOpsSixWeapon() {
   return (
     <>
       <Head>
-        <title>Black Ops 6 Weapon - {value}</title>
+        <title>Modern Warfare 3 Weapon - {value}</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="View information for a weapon in Black Ops 6. View all attachments."
+          content="View information for a weapon in Modern Warfare 3. View all attachments."
         />
         <meta
           name="keywords"
           content="Call of duty, call, of, duty, cod, call of duty, random, class, generator, random class generator, rcg,
-          free, mp, multiplayer, call of duty random class generator, COD Black Ops 6 RCG, COD Blops 6 RCG, blops 6 random class generator,
-          blops 6, black ops 6, ops 6 rcg, ops 6 random class generator, black ops 6 random class generator, zombies, treyarch zombies,
-          black ops zombies, black ops 6 zombies, black ops rcg, black ops random class generator"
+          free, mp, multiplayer, call of duty random class generator, COD Modern Warfare 3 RCG, COD MW3 RCG, mw3 random class generator,
+          mw3, modern warfare 3, modern warfare 3 rcg, modern warfare 3 random class generator, class generator, zombies, Infinity Ward zombies,
+          modern warfare zombies, modern warfare 3 zombies, modern warfare rcg, modern warfare random class generator"
         />
       </Head>
-      <Header className="black-ops" navLinks={navLinks} />
+      <Header className="modern-warfare" navLinks={navLinks} />
       <Container className={styles.generator} fluid>
         <Row>
           <Col>
             <h2>
-              Black Ops 6
+              Modern Warfare 3
               <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
               <br className="d-block d-sm-none" />
               Weapon - {value}
             </h2>
 
             {!isLoading && value && (
-              <WeaponInfo value={value} game="black-ops-six" />
+              <WeaponInfo value={value} game="modern-warfare-three" />
             )}
           </Col>
         </Row>

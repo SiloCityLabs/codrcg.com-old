@@ -1,6 +1,7 @@
 import { getBO6Attachments } from "../generator/black-ops/six/getBO6Attachments";
 import { getMW3Attachments } from "../generator/modern-warfare/three/getMW3Attachments";
 import { getMW2Attachments } from "../generator/modern-warfare/two/getMW2Attachments";
+import { getMWRAttachments } from "../generator/modern-warfare/remastered/getMWRAttachments";
 import { getVanguardAttachments } from "../generator/vanguard/getVanguardAttachments";
 import { getColdWarAttachments } from "../generator/black-ops/cold-war/getColdWarAttachments";
 import { getWorldWarTwoAttachments } from "../generator/world-war-two/getWorldWarTwoAttachments";
@@ -16,6 +17,7 @@ const attachmentGetters: Record<
   "black-ops-six": getBO6Attachments,
   "modern-warfare-three": getMW3Attachments,
   "modern-warfare-two": getMW2Attachments,
+  "modern-warfare-remastered": getMWRAttachments,
   vanguard: getVanguardAttachments,
   "cold-war": getColdWarAttachments,
   "world-war-two": getWorldWarTwoAttachments,

@@ -73,7 +73,12 @@ export default function ColdWarWeapons() {
             </h2>
 
             {!isLoading && (
-              <InfoList data={data} dataKeys={dataKeys} types={types} />
+              <InfoList
+                data={data}
+                dataKeys={dataKeys}
+                types={types}
+                url="/black-ops/cold-war/info/weapon"
+              />
             )}
           </Col>
         </Row>

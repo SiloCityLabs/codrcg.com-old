@@ -7,29 +7,32 @@ import {
   Form,
   FormControl,
   Dropdown,
+  Badge,
 } from "react-bootstrap";
-import { InfoListProps, InfoData } from "@/types/Info";
+import { InfoListProps } from "@/types/Info";
 
-function InfoList({ data, dataKeys, types }: InfoListProps) {
+function InfoList({ data, dataKeys, types, url }: InfoListProps) {
   // Allow types to be null
   const [filteredData, setFilteredData] = useState(data);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedType, setSelectedType] = useState("");
-
-  //Figure out why sometimes shotgun is filtering for melee on type
+  const [itemCount, setItemCount] = useState(Object.values(data).length);
 
   useEffect(() => {
     const filtered = Object.entries(data).filter(([key, item]) => {
       const nameMatch = item.name
         .toLowerCase()
         .includes(searchTerm.toLowerCase());
-        
-      const typeMatch = selectedType ? item.type.toLowerCase().trim() === selectedType.toLowerCase().trim() : true;
-        
+
+      const typeMatch = selectedType
+        ? item.type.toLowerCase().trim() === selectedType.toLowerCase().trim()
+        : true;
+
       return nameMatch && typeMatch;
     });
 
     setFilteredData(Object.fromEntries(filtered));
+    setItemCount(Object.values(filtered).length);
   }, [searchTerm, data, selectedType]);
 
   const handleSearchChange = (event) => {
@@ -44,7 +47,10 @@ function InfoList({ data, dataKeys, types }: InfoListProps) {
     <thead>
       <tr>
         {dataKeys.map((key) => (
-          <th key={key}>{keyToTitle(key)}</th>
+          <th key={key}>
+            {keyToTitle(key)}{" "}
+            {key === "name" && <Badge bg="dark">{itemCount}</Badge>}
+          </th>
         ))}
       </tr>
     </thead>
@@ -55,7 +61,10 @@ function InfoList({ data, dataKeys, types }: InfoListProps) {
   const formatValue = (value, key) => {
     if (typeof value === "boolean" || boolArr.includes(key)) {
       return value ? "Yes" : "-";
+    } else if (key === "name" && url) {
+      return <a href={`${url}?value=${value}`}>{value}</a>;
     }
+
     return value;
   };
 
@@ -96,14 +105,12 @@ function InfoList({ data, dataKeys, types }: InfoListProps) {
       <Row className="justify-content-md-center">
         <Col sm className="text-center">
           <Form className="mb-3 d-flex">
-            {" "}
-            {/* Add d-flex class */}
             <FormControl
               type="text"
               placeholder="Search"
               value={searchTerm}
               onChange={handleSearchChange}
-              className="me-2" // Add margin to separate elements
+              className="me-2"
             />
             {types && (
               <Dropdown>

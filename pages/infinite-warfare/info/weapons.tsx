@@ -68,7 +68,8 @@ export default function InfiniteWarfareWeapons() {
             </h2>
 
             {!isLoading && (
-              <InfoList data={data} dataKeys={dataKeys} types={types} />
+              <InfoList data={data} dataKeys={dataKeys} types={types}
+                url="/infinite-warfare/info/weapon" />
             )}
           </Col>
         </Row>

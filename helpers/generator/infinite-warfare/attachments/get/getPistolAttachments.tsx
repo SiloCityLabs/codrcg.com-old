@@ -21,6 +21,9 @@ export function getPistolAttachments(
   const attachments: any = [];
   const data = attachmentsList[gun];
   const dataList = data[type];
+  if (count === -1) {
+    return data;
+  }
 
   if (data) {
     randomizeAttachments(attachments, dataList, count);

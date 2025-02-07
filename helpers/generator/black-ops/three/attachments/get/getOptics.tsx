@@ -26,6 +26,10 @@ export function getOptics(gun: string, type: string, count: number = 1): any {
   const data = attachmentsList[gun] || attachmentsList[type];
 
   if (data) {
+    if (count === -1) {
+      return data;
+    }
+
     randomizeAttachments(attachments, data, count);
   }
 

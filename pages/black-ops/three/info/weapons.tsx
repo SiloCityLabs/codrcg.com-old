@@ -69,7 +69,7 @@ export default function BlackOpsThreeWeapons() {
             </h2>
 
             {!isLoading && (
-              <InfoList data={data} dataKeys={dataKeys} types={types} />
+              <InfoList data={data} dataKeys={dataKeys} types={types} url="/black-ops/three/info/weapon" />
             )}
           </Col>
         </Row>

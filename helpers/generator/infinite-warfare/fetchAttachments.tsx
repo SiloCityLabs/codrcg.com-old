@@ -12,7 +12,7 @@ export function fetchAttachments(
   }
 
   const gun = weapon.name.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-  const data = getIwAttachments(weapon.type, type, gun, count);
+  const data = getIwAttachments(weapon.type, gun, count, type);
 
   return data;
 }

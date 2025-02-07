@@ -21,7 +21,7 @@ export default function WorldWarTwoWeapons() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game", "no_attach"];
+  const dataKeys = ["name", "type", "game", "no_attach", "no_attach_info"];
   const [types, setTypes] = useState<string[]>([]);
 
   useEffect(() => {
@@ -71,7 +71,12 @@ export default function WorldWarTwoWeapons() {
             </h2>
 
             {!isLoading && (
-              <InfoList data={data} dataKeys={dataKeys} types={types} />
+              <InfoList
+                data={data}
+                dataKeys={dataKeys}
+                types={types}
+                url="/world-war-two/info/weapon"
+              />
             )}
           </Col>
         </Row>

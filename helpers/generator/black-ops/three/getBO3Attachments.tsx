@@ -11,16 +11,22 @@ const attachmentGetter: Record<
   attachments: getAttachments,
 };
 
-export function fetchAttachments(
+export function getBO3Attachments(
   weapon: Weapon,
   type: string,
   count: number = 1
 ): any {
   const gun = weapon.name.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-  const getAttachments = attachmentGetter[type];
+  if (type === "all") {
+    return {
+      optic: getOptics(weapon.type, gun, count),
+      attachments: getAttachments(weapon.type, gun, count),
+    };
+  }
+  const getGunAttachments = attachmentGetter[type];
 
-  if (getAttachments) {
-    return getAttachments(weapon.type, gun, count);
+  if (getGunAttachments) {
+    return getGunAttachments(weapon.type, gun, count);
   } else {
     return {};
   }

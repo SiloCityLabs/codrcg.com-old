@@ -81,7 +81,12 @@ export default function BlackOpsFourWeapons() {
             </h2>
 
             {!isLoading && (
-              <InfoList data={data} dataKeys={dataKeys} types={types} />
+              <InfoList
+                data={data}
+                dataKeys={dataKeys}
+                types={types}
+                url="/black-ops/four/info/weapon"
+              />
             )}
           </Col>
         </Row>

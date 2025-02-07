@@ -73,7 +73,12 @@ export default function ModernWarfareThreeWeapons() {
             </h2>
 
             {!isLoading && (
-              <InfoList data={data} dataKeys={dataKeys} types={types} />
+              <InfoList
+                data={data}
+                dataKeys={dataKeys}
+                types={types}
+                url="/modern-warfare/three/info/weapon"
+              />
             )}
           </Col>
         </Row>

@@ -67,7 +67,14 @@ export default function ModernWarfareTwoWeapons() {
               Weapons
             </h2>
 
-            {!isLoading && <InfoList data={data} dataKeys={dataKeys} types={types} />}
+            {!isLoading && (
+              <InfoList
+                data={data}
+                dataKeys={dataKeys}
+                types={types}
+                url="/modern-warfare/two/info/weapon"
+              />
+            )}
           </Col>
         </Row>
       </Container>

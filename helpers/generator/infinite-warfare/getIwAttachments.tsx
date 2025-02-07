@@ -20,9 +20,9 @@ const attachmentGetters = {
 
 export function getIwAttachments(
   type: string,
-  attach_type: string,
   gun: string,
-  count: number
+  count: number,
+  attach_type: string = ""
 ) {
   const getter = attachmentGetters[type];
   return getter ? getter(attach_type, gun, count) : {};

@@ -70,7 +70,12 @@ export default function VanguardWeapons() {
             </h2>
 
             {!isLoading && (
-              <InfoList data={data} dataKeys={dataKeys} types={types} />
+              <InfoList
+                data={data}
+                dataKeys={dataKeys}
+                types={types}
+                url="/vanguard/info/weapon"
+              />
             )}
           </Col>
         </Row>

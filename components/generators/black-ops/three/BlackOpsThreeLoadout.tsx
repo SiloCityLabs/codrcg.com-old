@@ -9,7 +9,7 @@ import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 import { fetchSpecialist } from "@/helpers/fetch/fetchSpecialist";
 //Ops 3
 import { fetchPerk } from "@/helpers/generator/black-ops/three/fetchPerk";
-import { fetchAttachments } from "@/helpers/generator/black-ops/three/fetchAttachments";
+import { getBO3Attachments } from "@/helpers/generator/black-ops/three/getBO3Attachments";
 import { getLoadoutFrame } from "@/helpers/generator/black-ops/three/frame/getLoadoutFrame";
 //Types
 import { LoadoutFrame } from "@/types/BlackOps3";
@@ -270,7 +270,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     };
 
     if (loadoutFrame.primary_optic) {
-      weapons.primary.optic = fetchAttachments(
+      weapons.primary.optic = getBO3Attachments(
         weapons.primary.weapon,
         "optic"
       )[0];
@@ -282,7 +282,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       loadoutFrame?.primary_attach > 0
     ) {
       weapons.primary.attachments = implodeObject(
-        fetchAttachments(
+        getBO3Attachments(
           weapons.primary.weapon,
           "attachments",
           loadoutFrame.primary_attach
@@ -300,7 +300,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     }
 
     if (!weapons.secondary.weapon?.no_attach && loadoutFrame.secondary_optic) {
-      weapons.secondary.optic = fetchAttachments(
+      weapons.secondary.optic = getBO3Attachments(
         weapons.secondary.weapon,
         "optic"
       )[0];
@@ -312,7 +312,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       loadoutFrame.secondary_attach > 0
     ) {
       weapons.secondary.attachments = implodeObject(
-        fetchAttachments(
+        getBO3Attachments(
           weapons.secondary.weapon,
           "attachments",
           loadoutFrame.secondary_attach

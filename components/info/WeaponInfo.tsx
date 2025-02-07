@@ -31,9 +31,9 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
 
     if (dataList && isWeapon(dataList)) {
       setWeponData(dataList);
-      const attachments = fetchAttachments(dataList, -1);
 
       if (!dataList.no_attach_info && !dataList.no_attach) {
+        const attachments = fetchAttachments(dataList, -1);
         setAttachmentInfo(attachments);
         setKey(Object.keys(attachments)[0]);
       }
@@ -129,7 +129,9 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
                 })}
               </Tabs>
             ) : weaponData?.no_attach_info ? (
-              <h3 className="text-center">We have no attachment info for this weapon :(</h3>
+              <h3 className="text-center">
+                We have no attachment info for this weapon :(
+              </h3>
             ) : (
               <h3 className="text-center">No attachments</h3>
             )}

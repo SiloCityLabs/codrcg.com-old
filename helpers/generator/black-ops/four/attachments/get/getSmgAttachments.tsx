@@ -22,8 +22,13 @@ export function getSmgAttachments(
   const attachments: any = [];
   const data = attachmentsList[gun];
   const dataList = data[type];
+  if (count === -1) {
+    return data;
+  }
 
-  data ? randomizeAttachments(attachments, dataList, count) : {};
+  if (data && dataList) {
+    randomizeAttachments(attachments, dataList, count);
+  }
 
   return attachments;
 }

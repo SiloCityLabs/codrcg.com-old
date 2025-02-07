@@ -4,6 +4,7 @@ import { getMW2Attachments } from "../generator/modern-warfare/two/getMW2Attachm
 import { getVanguardAttachments } from "../generator/vanguard/getVanguardAttachments";
 import { getColdWarAttachments } from "../generator/black-ops/cold-war/getColdWarAttachments";
 import { getWorldWarTwoAttachments } from "../generator/world-war-two/getWorldWarTwoAttachments";
+import { getBO4Attachments } from "../generator/black-ops/four/getBO4Attachments";
 //Types
 import { Weapon } from "@/types/Generator";
 
@@ -17,6 +18,7 @@ const attachmentGetters: Record<
   vanguard: getVanguardAttachments,
   "cold-war": getColdWarAttachments,
   "world-war-two": getWorldWarTwoAttachments,
+  "black-ops-four": getBO4Attachments,
 };
 
 export function fetchAttachments(weapon: Weapon, count: number = 5): any {

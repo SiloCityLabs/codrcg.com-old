@@ -1,22 +1,24 @@
 import {
   getAssaultRifleAttachments,
   getBattleRifleAttachments,
-  getSmgAttachments,
+  getLauncherAttachments,
   getLmgAttachments,
   getMarksmanRifleAttachments,
   getPistolAttachments,
   getShotgunAttachments,
+  getSmgAttachments,
   getSniperAttachments,
 } from "./attachments";
 
 const attachmentGetters = {
   assault_rifle: getAssaultRifleAttachments,
   battle_rifle: getBattleRifleAttachments,
-  smg: getSmgAttachments,
+  launcher: getLauncherAttachments,
   lmg: getLmgAttachments,
   marksman_rifle: getMarksmanRifleAttachments,
   pistol: getPistolAttachments,
   shotgun: getShotgunAttachments,
+  smg: getSmgAttachments,
   sniper: getSniperAttachments,
 };
 

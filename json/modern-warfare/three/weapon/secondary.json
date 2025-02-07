@@ -17,20 +17,17 @@
   {
     "name": "STORMENDER",
     "type": "launcher",
-    "game": "modern-warfare-three",
-    "no_attach": true
+    "game": "modern-warfare-three"
   },
   {
     "name": "RGL-80",
     "type": "launcher",
-    "game": "modern-warfare-three",
-    "no_attach": true
+    "game": "modern-warfare-three"
   },
   {
     "name": "Torque 35",
     "type": "launcher",
-    "game": "modern-warfare-three",
-    "no_attach": true
+    "game": "modern-warfare-three"
   },
   {
     "name": "Spear",

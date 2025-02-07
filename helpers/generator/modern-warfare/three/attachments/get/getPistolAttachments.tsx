@@ -1,6 +1,13 @@
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
+import renetti from "@/json/modern-warfare/three/attachments/pistol/renetti.json";
+import tyr from "@/json/modern-warfare/three/attachments/pistol/tyr.json";
+import wspStinger from "@/json/modern-warfare/three/attachments/pistol/wspStinger.json";
 
-const attachmentsList: Record<string, any> = {};
+const attachmentsList: Record<string, any> = {
+  renetti,
+  tyr,
+  wspstinger: wspStinger,
+};
 
 export function getPistolAttachments(gun: string, count: number): any {
   const attachments: any = {};

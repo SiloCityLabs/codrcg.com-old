@@ -36,8 +36,6 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
         const attachments = fetchAttachments(dataList, -1);
         setAttachmentInfo(attachments);
         setKey(Object.keys(attachments)[0]);
-
-        console.log('attachments', attachments);
       }
     } else {
       console.error("No Weapon found in the dataList object");
@@ -75,7 +73,28 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
 
           <hr className="mt-4" />
           <Row className="justify-content-md-center">
-            {attachmentInfo && Object.keys(attachmentInfo).length > 0 ? (
+            {attachmentInfo && Array.isArray(attachmentInfo) ? ( // Correct condition for array
+              <div className="table-responsive">
+                <Table striped bordered hover size="sm">
+                  <thead className="text-center">
+                    <tr>
+                      <th>Attachments</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-center">
+                    {attachmentInfo.map((item, index) => (
+                      <tr key={index}>
+                        <td>
+                          {typeof item === "string" ? item : String(item)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              </div>
+            ) : attachmentInfo &&
+              typeof attachmentInfo === "object" &&
+              Object.keys(attachmentInfo).length > 0 ? ( // Correct condition for object
               <Tabs
                 id="controlled-tab-example"
                 activeKey={key}
@@ -114,13 +133,9 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
                                   </td>
                                 </tr>
                               ))
-                            ) : typeof values === "string" ? (
-                              <tr>
-                                <td>{values}</td>
-                              </tr>
                             ) : (
                               <tr>
-                                <td> {String(values)}</td>
+                                <td>{String(values)}</td>
                               </tr>
                             )}
                           </tbody>
@@ -132,7 +147,7 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
               </Tabs>
             ) : weaponData?.no_attach_info ? (
               <h3 className="text-center">
-                We have no attachment info for this weapon :(
+                We have no attachment info for this weapon:(
               </h3>
             ) : (
               <h3 className="text-center">No attachments</h3>

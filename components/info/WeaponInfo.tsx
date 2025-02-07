@@ -36,6 +36,8 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
         const attachments = fetchAttachments(dataList, -1);
         setAttachmentInfo(attachments);
         setKey(Object.keys(attachments)[0]);
+
+        console.log('attachments', attachments);
       }
     } else {
       console.error("No Weapon found in the dataList object");

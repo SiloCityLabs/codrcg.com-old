@@ -1,0 +1,9 @@
+@media (max-width: 576px) {
+    .customSettingName {
+        float: left;
+    }
+
+    .customSettingValue {
+        float: right;
+    }
+}

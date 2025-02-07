@@ -7,9 +7,9 @@ import InfoList from "@/components/info/InfoList";
 //Helpers
 import { getPerk } from "@/helpers/info/getPerk";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
-export default function BlackOpsSixPerks() {
+export default function VanguardPerks() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/vanguard/generator" },
@@ -20,7 +20,7 @@ export default function BlackOpsSixPerks() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game", "isDlc"];
+  const dataKeys = ["name", "type", "game"];
 
   useEffect(() => {
     const dataList = getPerk("vanguard");
@@ -44,10 +44,15 @@ export default function BlackOpsSixPerks() {
         />
       </Head>
       <Header className="vanguard" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
-            <h2>Vanguard - Perks</h2>
+            <h2>
+              Vanguard
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Perks
+            </h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "British N 69",
+    "type": "Tactical",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Smoke Grenade",
+    "type": "Tactical",
+    "game": "world-war-two"
+  },
+  {
+    "name": "MK. V Gas Grenade",
+    "type": "Tactical",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Signal Flare",
+    "type": "Tactical",
+    "game": "world-war-two"
+  }
+]

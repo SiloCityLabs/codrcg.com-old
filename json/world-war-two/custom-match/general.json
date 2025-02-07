@@ -1,0 +1,101 @@
+[
+    {
+        "name": "Game Mode",
+        "type": "simple",
+        "defaultChance": "0",
+        "default": "Domination",
+        "unitValue": "",
+        "values": [
+            "Team Deathmatch",
+            "Domination",
+            "Hardpoint",
+            "Capture The Flag",
+            "Search And Destroy",
+            "Kill Confirmed",
+            "Free-For-All",
+            "Gridiron"
+        ]
+    },
+    {
+        "name": "Map",
+        "type": "simple",
+        "defaultChance": "100%",
+        "default": "Any",
+        "unitValue": "",
+        "values": [
+            "Aachen",
+            "Airship",
+            "Amthropoid",
+            "Ardennes Forest",
+            "Carentan",
+            "Chancellery",
+            "Dunkirk",
+            "Egypt",
+            "Excavation",
+            "Flak Tower",
+            "Gibraltar",
+            "Gustav Cannon",
+            "London Docks",
+            "Market Garden",
+            "Monte Cassino",
+            "Occupation",
+            "Pointe Du Hoc",
+            "Sainte Marie Du Mont",
+            "Shipment 1944",
+            "Stalingrad",
+            "USS Texas",
+            "V2",
+            "Valkyrie"
+        ]
+    },
+    {
+        "name": "Friendly Bot Count",
+        "type": "simple",
+        "defaultChance": "25%",
+        "default": 5,
+        "unitValue": "Bots",
+        "min": 0,
+        "max": 17,
+        "increment": 1,
+        "values": []
+    },
+    {
+        "name": "Friendly Bot Difficulty",
+        "type": "simple",
+        "defaultChance": "25%",
+        "default": "Regular",
+        "unitValue": "",
+        "values": [
+            "Regular",
+            "Hardened",
+            "Veteran",
+            "Mixed",
+            "Recruit"
+        ]
+    },
+    {
+        "name": "Enemy Bot Count",
+        "type": "simple",
+        "defaultChance": "25%",
+        "default": 5,
+        "unitValue": "Bots",
+        "min": 0,
+        "max": 17,
+        "increment": 1,
+        "values": []
+    },
+    {
+        "name": "Enemy Bot Difficulty",
+        "type": "simple",
+        "defaultChance": "25%",
+        "default": "Regular",
+        "unitValue": "",
+        "values": [
+            "Regular",
+            "Hardened",
+            "Veteran",
+            "Mixed",
+            "Recruit"
+        ]
+    }
+]

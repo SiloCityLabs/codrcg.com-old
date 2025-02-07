@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Idle Eyes",
+    "type": "Legendary",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Wall Power",
+    "type": "Legendary",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Phoenix Up",
+    "type": "Legendary",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Crate Power",
+    "type": "Legendary",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "On The House",
+    "type": "Legendary",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Wall to Wall Clearance",
+    "type": "Legendary",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Immolation Liquidation",
+    "type": "Legendary",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Modified Chaos",
+    "description": "(Lasts 2 Minutes) Greatly reduce all ammo mod cooldowns.",
+    "type": "Legendary",
+    "game": "black-ops-six",
+    "isDlc": true
+  }
+]

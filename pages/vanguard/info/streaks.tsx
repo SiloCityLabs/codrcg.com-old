@@ -7,9 +7,9 @@ import InfoList from "@/components/info/InfoList";
 //Helpers
 import { getStreaks } from "@/helpers/info/getStreaks";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
-export default function BlackOpsSixStreaks() {
+export default function VanguardStreaks() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/vanguard/generator" },
@@ -20,7 +20,7 @@ export default function BlackOpsSixStreaks() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "score", "type", "game", "isDlc"];
+  const dataKeys = ["name", "score", "type", "game"];
 
   useEffect(() => {
     const dataList = getStreaks("vanguard");
@@ -44,10 +44,15 @@ export default function BlackOpsSixStreaks() {
         />
       </Head>
       <Header className="vanguard" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
-            <h2>Vanguard - Streaks</h2>
+            <h2>
+              Vanguard
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Streaks
+            </h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

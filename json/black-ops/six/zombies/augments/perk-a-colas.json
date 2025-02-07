@@ -1,0 +1,344 @@
+[
+    {
+        "name": "Stamina Up",
+        "description": "Increase movement speed",
+        "major": [
+            {
+                "name": "Free Faller",
+                "description": "Become Immune to fall damage."
+            },
+            {
+                "name": "Dasher",
+                "description": "Increase tactical sprint duration."
+            },
+            {
+                "name": "Stalker",
+                "description": "Walk faster while aiming"
+            }
+        ],
+        "minor": [
+            {
+                "name": "Hard Target",
+                "description": "While tactical sprinting, projectile damage is reduced."
+            },
+            {
+                "name": "Quarterback",
+                "description": "Use equipment while sprinting/"
+            },
+            {
+                "name": "Hot Foot",
+                "description": "Gain a speed boost after your equipment kills an enemy."
+            }
+        ],
+        "type": "Perk-A-Cola",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Quick Revive",
+        "description": "Recover health & revive allies faster.",
+        "major": [
+            {
+                "name": "EMT",
+                "description": "Reviving an ally allows them to keep all of the perks on their bleed-out bar."
+            },
+            {
+                "name": "Equivalent Exchange",
+                "description": "If you have quick revive while downed, killing an enemy will revive you and remove quick revive. This can be done up to 3x."
+            },
+            {
+                "name": "Dying Wish",
+                "description": "On lethal damage, become immune to all damage for 2 seconds & keep 1 health. Quick revive is removed on use. This can be done up to 3x."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Swift Recovery",
+                "description": "Reviving an ally increases both of your movement speeds for a short time."
+            },
+            {
+                "name": "Karmic Return",
+                "description": "Reviving an ally heals you to full health."
+            },
+            {
+                "name": "Slow Death",
+                "description": "Increase your time in last stand."
+            }
+        ],
+        "type": "Perk-A-Cola",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Jugger-Nog",
+        "description": "Increase maximum health",
+        "major": [
+            {
+                "name": "Probiotic",
+                "description": "Slightly increase max health with jugger-nog."
+            },
+            {
+                "name": "Turtle Shell",
+                "description": "Armor acts as a shield on your back, completely absorbing damage to your back. No damage mitigation when hit from the front."
+            },
+            {
+                "name": "Reactive Armor",
+                "description": "When an armor plate breaks, nearby normal enemies are stunned for a short time."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Retaliation",
+                "description": "Deal bonus damage while health is low."
+            },
+            {
+                "name": "Hardened Plates",
+                "description": "Armor plates have more damage mitigation."
+            },
+            {
+                "name": "Durable Plates",
+                "description": "Slightly increase armor durability."
+            }
+        ],
+        "type": "Perk-A-Cola",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Melee Macchiato",
+        "description": "Replace weapon gun butt with a deadly punch",
+        "major": [
+            {
+                "name": "Expresso",
+                "description": "All melee attacks are slightly faster."
+            },
+            {
+                "name": "Vampiric Extraction",
+                "description": "Melee attacks heal a small amount of your health."
+            },
+            {
+                "name": "Triple Shot",
+                "description": "Your punch can hit multiple enemies at once."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Stick 'N Move",
+                "description": "Backpedal speed is increased after a successful melee attack."
+            },
+            {
+                "name": "Strength Training",
+                "description": "Your punch can one hit kill normal enemies for more rounds."
+            },
+            {
+                "name": "Hidden Impact",
+                "description": "Melee kills reload a portion of your held weapon."
+            }
+        ],
+        "type": "Perk-A-Cola",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Speed Cola",
+        "description": "Reload weapons & replate armor faster",
+        "major": [
+            {
+                "name": "Supercharged",
+                "description": "Field Upgrades recharge a bit faster."
+            },
+            {
+                "name": "Classic Formula",
+                "description": "Reload speed is even faster."
+            },
+            {
+                "name": "Phantom Reload",
+                "description": "Weapon mags are slowly refilled over time."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Speedy Roulette",
+                "description": "The mystery box settles much faster."
+            },
+            {
+                "name": "Quick Swap",
+                "description": "Swap weapons faster."
+            },
+            {
+                "name": "Fast Pitcher",
+                "description": "Deploy equipment faster."
+            }
+        ],
+        "type": "Perk-A-Cola",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Vulture Aid",
+        "description": "Increase the variety of loot dropped by enemies",
+        "major": [
+            {
+                "name": "Fetid Upgr-Aid",
+                "description": "On death, zombies have a chance to create a gas cloud that charges your field upgrade."
+            },
+            {
+                "name": "Smell Of Death",
+                "description": "On death, zombies have a chance to create a gas cloud that conceals you while standing in it."
+            },
+            {
+                "name": "Parting Gift",
+                "description": "Vulture Aid ammo drops give more ammo to wonder weapons."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Condors Reach",
+                "description": "Auto-pickup loot from farther away."
+            },
+            {
+                "name": "Carrion Luggage",
+                "description": "Critical kills have a chance to drop extra salvage."
+            },
+            {
+                "name": "Picky Eater",
+                "description": "On death, zombies have a higher chance of dropping your current equipment."
+            }
+        ],
+        "type": "Perk-A-Cola",
+        "game": "black-ops-six",
+        "isDlc": true
+    },
+    {
+        "name": "PHD Flopper",
+        "description": "Explosive dive to prone & immunity to self-inflicted explosive damage",
+        "major": [
+            {
+                "name": "Gravity MD",
+                "description": "Just falling from heights creates explosions."
+            },
+            {
+                "name": "DR Ram",
+                "description": "Tactical sprint knocks down & damages base zombies."
+            },
+            {
+                "name": "PHD Slider",
+                "description": "Sliding into enemies triggers explosions."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Environmentalist",
+                "description": "Become immune to environmental damage while sliding."
+            },
+            {
+                "name": "EOD Technician",
+                "description": "Slighty reduce height & distance requirements for explosions."
+            },
+            {
+                "name": "Tribologist",
+                "description": "Sliding distance & speed are increased."
+            }
+        ],
+        "type": "Perk-A-Cola",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Deadshot Daiquiri",
+        "description": "Improve ADS precision & increase critical damage",
+        "major": [
+            {
+                "name": "Dead Head",
+                "description": "Further increase critical damage."
+            },
+            {
+                "name": "Dead First",
+                "description": "Deal double critical damage if an enemy is at full health."
+            },
+            {
+                "name": "Dead Again",
+                "description": "Critical hits have a chance of adding a bullet to your magazine."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Dead Break",
+                "description": "Increase damage to armor pieces."
+            },
+            {
+                "name": "Dead Draw",
+                "description": "Reduce hi-fire spread."
+            },
+            {
+                "name": "Dead Set",
+                "description": "Reduce gun movement while doing advanced movement."
+            }
+        ],
+        "type": "Perk-A-Cola",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Elemental Pop",
+        "description": "Attacks can trigger ammo mods",
+        "major": [
+            {
+                "name": "Citrus Focus",
+                "description": "If a weapon has an ammo mod applied, elemental pop will only activate that one"
+            },
+            {
+                "name": "Imperil Peach",
+                "description": "Enemies that hit you have a chance to trigger a random ammo mod."
+            },
+            {
+                "name": "Electric Cherry",
+                "description": "Reloading creates an electric damage discharge that damages & stuns nearby normal enemies. The more empty the mag, the stronger the damage."
+            }
+        ],
+        "minor": [
+            {
+                "name": "Vulnera Bean",
+                "description": "Slightly increase enemy elemental weakness damage."
+            },
+            {
+                "name": "Pineapple Blast",
+                "description": "Equipment can also trigger a random ammo mod."
+            },
+            {
+                "name": "Chill Berry",
+                "description": "Slightly reduce all ammo mod cooldowns."
+            }
+        ],
+        "type": "Perk-A-Cola",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Death Perception",
+        "description": "Obscured enemies are keylined.",
+        "major": [
+            {
+                "name": "Treasure Hunter",
+                "description": "Spot items others can miss from loot containers as well as special and elite kills."
+            },
+            {
+                "name": "Death Stare",
+                "description": "Your Elemental Weakness damage has a chance to kill an enemy that is low on health."
+            },
+            {
+                "name": "Critical Eye",
+                "description": "Small chance that a body shot becomes a critical shot"
+            }
+        ],
+        "minor": [
+            {
+                "name": "Birds Eye View",
+                "description": "The minimap's scan is increased."
+            },
+            {
+                "name": "Extra Change",
+                "description": "Find extra essence under more locations."
+            },
+            {
+                "name": "Further Insight",
+                "description": "Increase Perception radius."
+            }
+        ],
+        "type": "Perk-A-Cola",
+        "game": "black-ops-six",
+        "isDlc": true
+    }
+]

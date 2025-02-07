@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Field Medic",
+        "type": "Camouflage Mods",
+        "description": "",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Survivalist",
+        "type": "Camouflage Mods",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Mobilization",
+        "type": "Camouflage Mods",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Exfiltration",
+        "type": "Camouflage Mods",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Saboteur",
+        "type": "Camouflage Mods",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Serrated Edge",
+        "type": "Camouflage Mods",
+        "game": "world-war-two"
+    }
+]

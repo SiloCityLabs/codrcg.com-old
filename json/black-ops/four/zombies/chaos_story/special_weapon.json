@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Chakrams Of Vengeance",
+    "type": "Special Weapon",
+    "stages": [
+      "Flawless Vision",
+      "Velocity",
+      "Lacerating Whirlwind"
+    ],
+    "story": "Chaos Story",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Hammer Of Valhalla",
+    "type": "Special Weapon",
+    "stages": [
+      "Thunder Strike",
+      "Storm Barrier",
+      "Lightning Bolt"
+    ],
+    "story": "Chaos Story",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Scepter Of RA",
+    "type": "Special Weapon",
+    "stages": [
+      "Ray Of Life",
+      "Vigor",
+      "Shining Beacon"
+    ],
+    "story": "Chaos Story",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Viper And Dragon",
+    "type": "Special Weapon",
+    "stages": [
+      "Viper Dragon",
+      "Embers",
+      "Viper Bite"
+    ],
+    "story": "Chaos Story",
+    "game": "black-ops-four"
+  }
+]

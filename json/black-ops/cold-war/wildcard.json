@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Danger Close",
+    "type": "Wildcard",
+    "game": "cold-war",
+    "description": "Equip extra lethal and tactical thrown equipment. Start with additional ammo."
+  },
+  {
+    "name": "Law Breaker",
+    "type": "Wildcard",
+    "game": "cold-war",
+    "description": "Equip any weapon class in either slot. Equip multiple perks from one Perk Category."
+  },
+  {
+    "name": "Gunfighter",
+    "type": "Wildcard",
+    "game": "cold-war",
+    "description": "Unlock 3 additional attachment slots for your primary weapon."
+  },
+  {
+    "name": "Perk Greed",
+    "type": "Wildcard",
+    "game": "cold-war",
+    "description": "Equip an extra Perk from each Perk Category."
+  }
+]

@@ -1,0 +1,118 @@
+[
+    {
+        "name": "Bots",
+        "type": "simple",
+        "defaultChance": "0",
+        "default": "0",
+        "unitValue": "",
+        "values": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "0",
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "name": "Starting Round",
+        "type": "simple",
+        "defaultChance": "70%",
+        "default": 1,
+        "unitValue": "Rounds",
+        "min": 1,
+        "max": 50,
+        "increment": 1,
+        "values": []
+    },
+    {
+        "name": "Round Cap",
+        "type": "simple",
+        "defaultChance": "100%",
+        "default": "Off",
+        "unitValue": "Rounds",
+        "min": 1,
+        "max": 99,
+        "increment": 1,
+        "values": []
+    },
+    {
+        "name": "Time Cap",
+        "type": "simple",
+        "defaultChance": "60%",
+        "default": "Off",
+        "unitValue": "Minutes",
+        "min": 1,
+        "max": 99,
+        "increment": 1,
+        "values": []
+    },
+    {
+        "name": "Show Timer",
+        "type": "simple",
+        "defaultChance": "0",
+        "default": "Off",
+        "unitValue": "",
+        "values": [
+            "Off",
+            "On"
+        ]
+    },
+    {
+        "name": "Kill Cap",
+        "type": "simple",
+        "defaultChance": "70%",
+        "default": "Off",
+        "unitValue": "",
+        "min": 50,
+        "max": 2450,
+        "increment": 50,
+        "values": []
+    },
+    {
+        "name": "Special Rounds",
+        "type": "simple",
+        "defaultChance": "0",
+        "default": "Off",
+        "unitValue": "",
+        "values": [
+            "Off",
+            "On"
+        ]
+    },
+    {
+        "name": "Traps",
+        "type": "simple",
+        "defaultChance": "0",
+        "default": "Off",
+        "unitValue": "",
+        "values": [
+            "Off",
+            "On"
+        ]
+    },
+    {
+        "name": "Starting Weapons",
+        "type": "simple",
+        "defaultChance": "0",
+        "default": "Off",
+        "unitValue": "",
+        "values": [
+            "Off",
+            "On"
+        ]
+    },
+    {
+        "name": "Headshots Only",
+        "type": "simple",
+        "defaultChance": "0",
+        "default": "Off",
+        "unitValue": "",
+        "values": [
+            "Off",
+            "On"
+        ]
+    }
+]

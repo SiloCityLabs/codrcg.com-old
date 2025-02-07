@@ -39,8 +39,16 @@ export type Equipment = {
 
 export type Specialist = {
   name: string;
-  equipment: string;
-  weapon: string;
+  equipment?: string;
+  weapon?: string;
+  payload?: string;
+  trait?: string;
+  type: string;
+  game: string;
+};
+
+export type ZombiesCharacter = {
+  name: string;
   type: string;
   game: string;
 };
@@ -106,4 +114,8 @@ export type Bo4ZombiesSettings = {
   rollMap: boolean;
   rollElixers: boolean;
   rollTalisman: boolean;
+};
+
+export type WarzoneDropSpotSettings = {
+  warzoneMap: string;
 };

@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Gala",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Heirloom",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Lifeline",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Pit",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Racket",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Stakeout",
+        "type": "Map",
+        "game": "black-ops-six"
+    },
+    {
+        "name": "Warhead",
+        "type": "Map",
+        "game": "black-ops-six"
+    }
+]

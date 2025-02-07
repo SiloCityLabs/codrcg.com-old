@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Forsaken",
+    "type": "Map",
+    "mode": "Core",
+    "game": "cold-war"
+  },
+  {
+    "name": "Mauer Der Toten",
+    "type": "Map",
+    "mode": "Core",
+    "game": "cold-war"
+  },
+  {
+    "name": "Outbreak Collapse",
+    "type": "Map",
+    "mode": "Core",
+    "game": "cold-war"
+  },
+  {
+    "name": "Outbreak Survival",
+    "type": "Map",
+    "mode": "Core",
+    "game": "cold-war"
+  },
+  {
+    "name": "Outbreak",
+    "type": "Map",
+    "mode": "Core",
+    "game": "cold-war"
+  },
+  {
+    "name": "Cranked 2: No Time to Crank",
+    "type": "Map",
+    "mode": "Core",
+    "game": "cold-war"
+  },
+  {
+    "name": "Firebase Z",
+    "type": "Map",
+    "mode": "Core",
+    "game": "cold-war"
+  },
+  {
+    "name": "Die Maschine",
+    "type": "Map",
+    "mode": "Core",
+    "game": "cold-war"
+  }
+]

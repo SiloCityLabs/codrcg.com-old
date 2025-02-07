@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Gung-Ho",
+    "type": "Perk 3",
+    "game": "cold-war"
+  },
+  {
+    "name": "Ghost",
+    "type": "Perk 3",
+    "game": "cold-war"
+  },
+  {
+    "name": "Cold Blooded",
+    "type": "Perk 3",
+    "game": "cold-war"
+  },
+  {
+    "name": "Ninja",
+    "type": "Perk 3",
+    "game": "cold-war"
+  },
+  {
+    "name": "Spycraft",
+    "type": "Perk 3",
+    "game": "cold-war"
+  }
+]

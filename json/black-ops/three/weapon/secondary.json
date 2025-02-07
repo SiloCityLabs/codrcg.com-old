@@ -1,0 +1,99 @@
+[
+  {
+    "name": "MR6",
+    "type": "pistol",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "RK5",
+    "type": "pistol",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "L-Car 9",
+    "type": "pistol",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "Rift E9",
+    "type": "pistol",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "XM-53",
+    "type": "launcher",
+    "game": "black-ops-three",
+    "no_attach": true
+  },
+  {
+    "name": "BlackCell",
+    "type": "launcher",
+    "game": "black-ops-three",
+    "no_attach": true
+  },
+  {
+    "name": "Combat Knife",
+    "type": "melee",
+    "game": "black-ops-three",
+    "no_attach": true
+  },
+  {
+    "name": "Brass Knuckles",
+    "type": "melee",
+    "game": "black-ops-three",
+    "no_attach": true
+  },
+  {
+    "name": "Malice",
+    "type": "melee",
+    "game": "black-ops-three",
+    "no_attach": true
+  },
+  {
+    "name": "Carver",
+    "type": "melee",
+    "game": "black-ops-three",
+    "no_attach": true
+  },
+  {
+    "name": "Skull Splitter",
+    "type": "melee",
+    "game": "black-ops-three",
+    "no_attach": true
+  },
+  {
+    "name": "Slash N' Burn",
+    "type": "melee",
+    "game": "black-ops-three",
+    "no_attach": true
+  },
+  {
+    "name": "Nightbreaker",
+    "type": "melee",
+    "game": "black-ops-three",
+    "no_attach": true
+  },
+  {
+    "name": "Enforcer",
+    "type": "melee",
+    "game": "black-ops-three",
+    "no_attach": true
+  },
+  {
+    "name": "Prizefighters",
+    "type": "melee",
+    "game": "black-ops-three",
+    "no_attach": true
+  },
+  {
+    "name": "NX ShadowClaw",
+    "type": "special",
+    "game": "black-ops-three"
+  },
+  {
+    "name": "D13 Sector",
+    "type": "special",
+    "game": "black-ops-three",
+    "no_attach": true
+  }
+]

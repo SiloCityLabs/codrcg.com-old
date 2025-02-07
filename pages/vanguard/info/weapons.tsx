@@ -7,9 +7,9 @@ import InfoList from "@/components/info/InfoList";
 //Helpers
 import { getWeapon } from "@/helpers/info/getWeapon";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
-export default function BlackOpsSixWeapons() {
+export default function VanguardWeapons() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/vanguard/generator" },
@@ -20,11 +20,23 @@ export default function BlackOpsSixWeapons() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game", "no_attach", "isDlc"];
+  const dataKeys = ["name", "type", "game", "no_attach"];
+  const [types, setTypes] = useState<string[]>([]);
 
   useEffect(() => {
+    const tmp_types: string[] = [];
     const dataList = getWeapon("vanguard");
     setData(dataList);
+
+    //Format data
+    for (const key in dataList) {
+      const type = dataList[key].type;
+
+      if (!tmp_types.includes(type)) {
+        tmp_types.push(type);
+      }
+    }
+    setTypes(tmp_types);
 
     setIsLoading(false);
   }, []);
@@ -47,12 +59,24 @@ export default function BlackOpsSixWeapons() {
         />
       </Head>
       <Header className="vanguard" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
-            <h2>Vanguard - Weapons</h2>
+            <h2>
+              Vanguard
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Weapons
+            </h2>
 
-            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
+            {!isLoading && (
+              <InfoList
+                data={data}
+                dataKeys={dataKeys}
+                types={types}
+                url="/vanguard/info/weapon"
+              />
+            )}
           </Col>
         </Row>
       </Container>

@@ -1,0 +1,81 @@
+{
+    "optic": [
+        "Slate Reflector",
+        "Cronen Mini Pro",
+        "SZ Sigma-IV Optic",
+        "Cronen Mini Dot",
+        "Slimline Pro",
+        "SZ Mini",
+        "SZ Minitac-40"
+    ],
+    "muzzle": [
+        "HMRES Mod Suppressor XS",
+        "XRK Ventor-900",
+        "Slab-10 Comp",
+        "DZS Open Comp",
+        "ZEHMN35 Compensated Flash Hider",
+        "Comp 905F Pistol",
+        "Corvus Series-D",
+        "Bruen Tri-Port",
+        "Hole Punch Breacher",
+        "XRK QZ-105",
+        "VP27 Mini Brake XS",
+        "STER45 Skyfury Compensator XS",
+        "Colossus Suppressor XS",
+        "Sonic Suppressor XS",
+        "Monolithic Suppressor XS",
+        "ELR Blackfire Compensator XS",
+        "CN30 Suppressor",
+        "FT Steel Fire",
+        "Forge DX90-F",
+        "Forge DX30-S",
+        "SA GF90 Flash Hider"
+    ],
+    "barrel": [
+        "MLX Short Competition Barrel",
+        "MK2 Renetti Long Barrel",
+        "MLX Extended Heavy Barrel"
+    ],
+    "magazine": [
+        "24 Round Mag",
+        "30 Round Mag",
+        "50 Round Drum"
+    ],
+    "rear_grip": [
+        "Akimbo Renetti",
+        "Bruen Onslaught Assault Grip",
+        "Renetti Wood Grain Grip",
+        "EXF Eclipsor Grip"
+    ],
+    "stock": [
+        "Ftac Satus Folding Stock"
+    ],
+    "laser": [
+        "KR HX-15 Laser Light",
+        "FJX Diod-70",
+        "Xten Sidearm-L400",
+        "1mW Pistol Laser",
+        "DZM-1000 L",
+        "Series 710 Pistol Laser",
+        "Pro Sapphire Mounted Laser",
+        "Verdant Hook Mounted Laser",
+        "CS15 Scarlet Mounted Laser",
+        "Ftac Vortex 200"
+    ],
+    "ammunition": [
+        "9mm High Grain Rounds",
+        "9mm Hollowpoint",
+        "9mm Armor Piercing",
+        "9mm Overpressured P+",
+        "9mm Frangible",
+        "9mm AET Rounds",
+        "9mm Hardened Rounds",
+        "9mm Low Grain Rounds",
+        "9mm High Velocity"
+    ],
+    "trigger_action": [
+        "Xrk Heavy V4",
+        "Bruen MG89 Trigger",
+        "Bruen Express"
+    ]
+}

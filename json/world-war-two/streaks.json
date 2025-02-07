@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Molotov Cocktail",
+    "type": "Streak",
+    "score": 300,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Recon Aircraft",
+    "type": "Streak",
+    "score": 500,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Counter Recon Aircraft",
+    "type": "Streak",
+    "score": 525,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Care Package",
+    "type": "Streak",
+    "score": 575,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Fighter Pilot",
+    "type": "Streak",
+    "score": 625,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Glide Bomb",
+    "type": "Streak",
+    "score": 650,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Flamethrower",
+    "type": "Streak",
+    "score": 700,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Mortar Strike",
+    "type": "Streak",
+    "score": 750,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Artillery Barrage",
+    "type": "Streak",
+    "score": 850,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Flak Guns",
+    "type": "Streak",
+    "score": 950,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Emergency Airdrop",
+    "type": "Streak",
+    "score": 1000,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Fire Bombing Run",
+    "type": "Streak",
+    "score": 1050,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Paratroopers",
+    "type": "Streak",
+    "score": 1250,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Carpet Bombing",
+    "type": "Streak",
+    "score": 1400,
+    "game": "world-war-two"
+  },
+  {
+    "name": "Ball Turret Gunner",
+    "type": "Streak",
+    "score": 1700,
+    "game": "world-war-two"
+  }
+]

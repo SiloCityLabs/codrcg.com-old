@@ -1,0 +1,78 @@
+[
+  {
+    "name": "P890",
+    "type": "pistol",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": ".50 GS",
+    "type": "pistol",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "X12",
+    "type": "pistol",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "BASILISK",
+    "type": "pistol",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "FTAC SIEGE",
+    "type": "pistol",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "GS MAGNA",
+    "type": "pistol",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "9MM DAEMON",
+    "type": "pistol",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "X13 AUTO",
+    "type": "pistol",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "PILA",
+    "type": "launcher",
+    "game": "modern-warfare-two",
+    "no_attach_info": true,
+    "no_attach": true
+  },
+  {
+    "name": "JOKR",
+    "type": "launcher",
+    "game": "modern-warfare-two",
+    "no_attach_info": true,
+    "no_attach": true
+  },
+  {
+    "name": "RPG-7",
+    "type": "launcher",
+    "game": "modern-warfare-two",
+    "no_attach_info": true,
+    "no_attach": true
+  },
+  {
+    "name": "STRELA-P",
+    "type": "launcher",
+    "game": "modern-warfare-two",
+    "no_attach_info": true,
+    "no_attach": true
+  }
+]

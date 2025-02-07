@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Gung-Ho",
+        "type": "Perk 3",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Blast Suppressor",
+        "type": "Perk 3",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Awareness",
+        "type": "Perk 3",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Tactical Mask",
+        "type": "Perk 3",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Engineer",
+        "type": "Perk 3",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Dead Silence",
+        "type": "Perk 3",
+        "game": "black-ops-three"
+    }
+]

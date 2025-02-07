@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Cleaver",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Machete",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Thug",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Tidal",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Shamrock Blade",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Sickle",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Brawlers Brew",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Point Knife",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Sarsaparilla",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Sawtooth",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Diabolical",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Bludgeon",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Nauticus",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Danger Close",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Tribal",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Barber",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Cliffhanger",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Omsk Hammer",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Scorpion",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Gravedigger",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Gladiator",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "CQB Bayonet",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Enforce",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Mechanic",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Samurai",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Hatchetman",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Caveman",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  },
+  {
+    "name": "Leprechaun",
+    "type": "melee",
+    "game": "modern-warfare-remastered",
+    "no_attach": true
+  }
+]

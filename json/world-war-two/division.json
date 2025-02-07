@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Infantry",
+        "type": "Division",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Airborne",
+        "type": "Division",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Armored",
+        "type": "Division",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Mountain",
+        "type": "Division",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Expeditionary",
+        "type": "Division",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Resistance",
+        "type": "Division",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Cavalry",
+        "type": "Division",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Commando",
+        "type": "Division",
+        "game": "world-war-two"
+    }
+]

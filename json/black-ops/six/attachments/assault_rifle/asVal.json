@@ -1,0 +1,83 @@
+{
+    "optic": [
+        "Remuda Mini Reflex",
+        "Otero Micro Dot",
+        "Kepler Microflex",
+        "Merlin Mini",
+        "PrismaTech Reflex",
+        "Volzhskiy Reflex",
+        "Merlin Reflex",
+        "Redwell Reflex",
+        "Dobrych MF Reflex",
+        "Accu-Spot Reflex",
+        "K&S Red Dot",
+        "Kepler Red Dot",
+        "Otero Red Dot",
+        "OM3 '92 Holo",
+        "Pinpoint Holoscout",
+        "Accu-Spot Ultra Holo",
+        "Jason Armory 2x",
+        "Willis 3x",
+        "PrismaTech 4x",
+        "Dobrych 4x",
+        "Pinpoint Hybrid",
+        "PrismaPoint Hybrid",
+        "R&K Multizoom",
+        "Blandwell 7x Scope",
+        "Otero Thermal 2x",
+        "SVD Scope",
+        "Hawker Hybrid"
+    ],
+    "barrel": [
+        "Suppressed Gain-Twist Barrel",
+        "Suppressed Long Barrel",
+        "Suppressed Reinforced Barrel",
+        "Suppressed CHF Barrel"
+    ],
+    "underbarrel": [
+        "Vertical Foregrip",
+        "Lightweight Foregrip",
+        "Marksman Foregrip",
+        "Precision Foregrip",
+        "Launcher - Standard",
+        "Launcher - Smoke",
+        "Launcher - High Explosive",
+        "Launcher - Drill Charge",
+        "Ranger Foregrip",
+        "Crossbow"
+    ],
+    "magazine": [
+        "Flip Mag",
+        "Extended Mag I",
+        "Extended Mag II",
+        "Extended Mag III"
+    ],
+    "rear_grip": [
+        "Quickdraw Grip",
+        "Assault Grip",
+        "Commando Grip",
+        "Ergonomic Grip",
+        "CQB Grip"
+    ],
+    "stock": [
+        "No Stock",
+        "Infiltrator Stock",
+        "Heavy Stock",
+        "Balanced Stock",
+        "Combat Stock",
+        "Full Stock"
+    ],
+    "laser": [
+        "Steady Aim Laser",
+        "Fast Motion Laser",
+        "Tactical Laser",
+        "Strelok Laser",
+        "Target Laser"
+    ],
+    "fire_mods": [
+        "Rapid Fire",
+        "9x39mm Soviet Overpressured",
+        "Recoil Springs",
+        "9x39mm Soviet FMJ"
+    ]
+}

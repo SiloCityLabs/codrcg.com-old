@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Overkill",
+    "type": "Base Perk",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Double Time",
+    "type": "Base Perk",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Battle Hardened",
+    "type": "Base Perk",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Scavenger",
+    "type": "Base Perk",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Bomb Squad",
+    "type": "Base Perk",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Tracker",
+    "type": "Base Perk",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Strong Arm",
+    "type": "Base Perk",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Extra Tactical",
+    "type": "Base Perk",
+    "game": "modern-warfare-two"
+  }
+]

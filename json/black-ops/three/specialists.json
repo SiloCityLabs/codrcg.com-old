@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Ruin Overdrive",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Ruin Gravity Spikes",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Outrider Sparrow",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Outrider Vision Pulse",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Prophet Tempest",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Prophet Glitch",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Battery War Machine",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Battery Kinetic Armor",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Seraph Annihilator",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Seraph Combat Focus",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Nomad H.I.V.E.",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Nomad Rejack",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Reaper Scythe",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Reaper Psychosis",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Spectre Ripper",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Spectre Active Camo",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Firebreak Purifier",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Firebreak Heat Wave",
+        "type": "Specialist",
+        "game": "black-ops-three"
+    }
+]

@@ -1,0 +1,356 @@
+[
+  {
+    "name": "TAQ-56",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "M4",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "STB 556",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "KASTOV 762",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "M13B",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "CHIMERA",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "ISO HEMLOCK",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "TEMPUS RAZORBACK",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "FR AVANCER",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "M13C",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "TR-76 GEIST",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "LACHMANN-556",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "M16",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "KASTOV-74U",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "KASTOV 545",
+    "type": "assault_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "LACHMANN-762",
+    "type": "battle_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "CRONEN SQUALL",
+    "type": "battle_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "FTAC RECON",
+    "type": "battle_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "TAQ-V",
+    "type": "battle_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "SO-14",
+    "type": "battle_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "LACHMANN SHROUD",
+    "type": "smg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "ISO 45",
+    "type": "smg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "ISO 9MM",
+    "type": "smg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "PDSW 528",
+    "type": "smg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "VEL 46",
+    "type": "smg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "FENNEC 45",
+    "type": "smg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "BAS-P",
+    "type": "smg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "LACHMANN SUB",
+    "type": "smg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "FSS HURRICANE",
+    "type": "smg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "MX9",
+    "type": "smg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "MINIBAK",
+    "type": "smg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "VAZNEV-9K",
+    "type": "smg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "KV BROADSIDE",
+    "type": "shotgun",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "LOCKWOOD 300",
+    "type": "shotgun",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "EXPEDTITE 12",
+    "type": "shotgun",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "BRYSON 800",
+    "type": "shotgun",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "MX GUARDIAN",
+    "type": "shotgun",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "BRYSON 890",
+    "type": "shotgun",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "SAKIN MG38",
+    "type": "lmg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "RAAL MG",
+    "type": "lmg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "556 ICARUS",
+    "type": "lmg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "RAPP H",
+    "type": "lmg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "HCR 56",
+    "type": "lmg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "RPK",
+    "type": "lmg",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "EBR-14",
+    "type": "marksman_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "SP-R 208",
+    "type": "marksman_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "LOCKWOOD MK2",
+    "type": "marksman_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "TEMPUS TORRENT",
+    "type": "marksman_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "CROSSBOW",
+    "type": "marksman_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "LM-S",
+    "type": "marksman_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "SA-B 50",
+    "type": "marksman_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "TAQ-M",
+    "type": "marksman_rifle",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "MCPR-300",
+    "type": "sniper",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "SIGNAL 50",
+    "type": "sniper",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "VICTUS XMR",
+    "type": "sniper",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "FJX IMPERIUM",
+    "type": "sniper",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "CARRACK .300",
+    "type": "sniper",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "LA-B 330",
+    "type": "sniper",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "SP-X 80",
+    "type": "sniper",
+    "game": "modern-warfare-two",
+    "no_attach_info": true
+  }
+]

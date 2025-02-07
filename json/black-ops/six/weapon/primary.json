@@ -1,0 +1,169 @@
+[
+  {
+    "name": "XM4",
+    "type": "assault_rifle",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "AK-74",
+    "type": "assault_rifle",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "AMES 85",
+    "type": "assault_rifle",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "GPR 91",
+    "type": "assault_rifle",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "MODEL L",
+    "type": "assault_rifle",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "GOBLIN MK 2",
+    "type": "assault_rifle",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "AS VAL",
+    "type": "assault_rifle",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "C9",
+    "type": "smg",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "KSV",
+    "type": "smg",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "TANTO .22",
+    "type": "smg",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "PP-919",
+    "type": "smg",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "JACKAL PDW",
+    "type": "smg",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "KOMPAKT 92",
+    "type": "smg",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Marine SP",
+    "type": "shotgun",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "ASG-89",
+    "type": "shotgun",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "LW3A1 Frostline",
+    "type": "sniper",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "SVD",
+    "type": "sniper",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "LR 7.62",
+    "type": "sniper",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "PU-21",
+    "type": "lmg",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "XMG",
+    "type": "lmg",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "GPMG-7",
+    "type": "lmg",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Swat 5.56",
+    "type": "marksman_rifle",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Tsarkov 7.62",
+    "type": "marksman_rifle",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "AEK-973",
+    "type": "marksman_rifle",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "DM-10",
+    "type": "marksman_rifle",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Krig C",
+    "type": "assault_rifle",
+    "game": "black-ops-six",
+    "isDlc": true
+  },
+  {
+    "name": "Saug",
+    "type": "smg",
+    "game": "black-ops-six",
+    "isDlc": true
+  },
+  {
+    "name": "Maelstrom",
+    "type": "shotgun",
+    "game": "black-ops-six",
+    "isDlc": true
+  },
+  {
+    "name": "AMR Mod 4",
+    "type": "sniper",
+    "game": "black-ops-six",
+    "isDlc": true
+  },
+  {
+    "name": "Cypher 091",
+    "type": "assault_rifle",
+    "game": "black-ops-six",
+    "isDlc": true
+  },
+  {
+    "name": "Ppsh-41",
+    "type": "smg",
+    "game": "black-ops-six",
+    "isDlc": true
+  },
+  {
+    "name": "Feng 82",
+    "type": "lmg",
+    "game": "black-ops-six",
+    "isDlc": true
+  }
+]

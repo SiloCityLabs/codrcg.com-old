@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
-import VanguardLoadout from "@/components/vanguard/VanguardLoadout";
+import VanguardLoadout from "@/components/generators/vanguard/VanguardLoadout";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
 export default function Vanguard() {
   const navLinks = [
@@ -31,10 +31,15 @@ export default function Vanguard() {
         />
       </Head>
       <Header className="vanguard" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
-            <h2>Vanguard - Random Class Generator</h2>
+            <h2>
+              Vanguard
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Random Class Generator
+            </h2>
 
             <VanguardLoadout />
           </Col>

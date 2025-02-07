@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Espionage",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Launched",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Clandestine",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Escalation",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Instincts",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Hustle",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Lookout",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Gunslinger",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Undercover",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Forage",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Flanker",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Scoped",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Energetic",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Hunker",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Inconspicuous",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Remedy",
+        "type": "Basic Training",
+        "training_type": "Base",
+        "game": "world-war-two"
+    }
+]

@@ -1,0 +1,124 @@
+[
+  {
+    "name": "Scout Pulse",
+    "type": "Streak",
+    "score": 400,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "RC-XD",
+    "type": "Streak",
+    "score": 450,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "SAM Turret",
+    "type": "Streak",
+    "score": 550,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "UAV",
+    "type": "Streak",
+    "score": 600,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Archangel Launcher",
+    "type": "Streak",
+    "score": 650,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Counter UAV",
+    "type": "Streak",
+    "score": 700,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Care Package",
+    "type": "Streak",
+    "score": 650,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Napalm Strike",
+    "type": "Streak",
+    "score": 900,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "LDBR",
+    "type": "Streak",
+    "score": 950,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Sentry Turret",
+    "type": "Streak",
+    "score": 1000,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Hellstorm",
+    "type": "Streak",
+    "score": 1050,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Watchdog Helo",
+    "type": "Streak",
+    "score": 1100,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "A.G.R MK 1",
+    "type": "Streak",
+    "score": 1200,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Interceptors",
+    "type": "Streak",
+    "score": 1250,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Strategic Bomber",
+    "type": "Streak",
+    "score": 1300,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "H.A.R.P.",
+    "type": "Streak",
+    "score": 1450,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Chopper Gunner",
+    "type": "Streak",
+    "score": 1600,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Dreadnought",
+    "type": "Streak",
+    "score": 1800,
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Hand Cannon",
+    "type": "Streak",
+    "score": 900,
+    "game": "black-ops-six",
+    "isDlc": true
+  },
+  {
+    "name": "War Machine",
+    "type": "Streak",
+    "score": 1300,
+    "game": "black-ops-six",
+    "isDlc": true
+  }
+]

@@ -5,11 +5,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getZombiesFieldUpgrade } from "@/helpers/info/getZombiesFieldUpgrade";
+import { getZombiesFieldUpgrade } from "@/helpers/info/zombies/getZombiesFieldUpgrade";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
-export default function BlackOpsSixZombiesArtifacts() {
+export default function VanguardZombiesArtifacts() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/vanguard/generator" },
@@ -47,10 +47,15 @@ export default function BlackOpsSixZombiesArtifacts() {
         />
       </Head>
       <Header className="vanguard" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
-            <h2>Vanguard - Zombies Artifacts</h2>
+            <h2>
+              Vanguard
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Zombies Artifacts
+            </h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

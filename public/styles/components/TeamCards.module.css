@@ -1,0 +1,26 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center the cards horizontally */
+}
+
+.col {
+    display: flex;
+    /* Enable flex for the columns */
+}
+
+.card {
+    flex: 1 0 200px;
+    /* Ensure cards take equal width and are flexible */
+    margin: 10px;
+}
+
+.social a {
+    color: black !important;
+}
+
+.social svg {
+    max-width: 2em;
+    max-height: 2em;
+}

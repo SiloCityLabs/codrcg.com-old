@@ -1,0 +1,405 @@
+[
+  {
+    "name": "M1941",
+    "type": "assault_rifle",
+    "game": "world-war-two"
+  },
+  {
+    "name": "M1 Garand",
+    "type": "assault_rifle",
+    "game": "world-war-two"
+  },
+  {
+    "name": "STG44",
+    "type": "assault_rifle",
+    "game": "world-war-two"
+  },
+  {
+    "name": "M1A1 Carbine",
+    "type": "assault_rifle",
+    "game": "world-war-two"
+  },
+  {
+    "name": "FG 42",
+    "type": "assault_rifle",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Bar",
+    "type": "assault_rifle",
+    "game": "world-war-two"
+  },
+  {
+    "name": "SVT-40",
+    "type": "assault_rifle",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Gewehr 43",
+    "type": "assault_rifle",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Volkssturmgewehr",
+    "type": "assault_rifle",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Type 5",
+    "type": "assault_rifle",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "M2 Carbine",
+    "type": "assault_rifle",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Itra Burst",
+    "type": "assault_rifle",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Avs-36",
+    "type": "assault_rifle",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Automaton",
+    "type": "assault_rifle",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "AS-44",
+    "type": "assault_rifle",
+    "game": "world-war-two"
+  },
+  {
+    "name": "NZ-41",
+    "type": "assault_rifle",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "KG M-21",
+    "type": "assault_rifle",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "GBD-79",
+    "type": "assault_rifle",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Wimmersperg SPZ",
+    "type": "assault_rifle",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Grease Gun",
+    "type": "smg",
+    "game": "world-war-two"
+  },
+  {
+    "name": "PPSH-41",
+    "type": "smg",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Type 100",
+    "type": "smg",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Waffe 28",
+    "type": "smg",
+    "game": "world-war-two"
+  },
+  {
+    "name": "M1928",
+    "type": "smg",
+    "game": "world-war-two"
+  },
+  {
+    "name": "MP-40",
+    "type": "smg",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Sten",
+    "type": "smg",
+    "game": "world-war-two",
+    "isDlc": true
+  },
+  {
+    "name": "Orso",
+    "type": "smg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "M-38",
+    "type": "smg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Sterling",
+    "type": "smg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Nambu Type 2",
+    "type": "smg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "ZK-383",
+    "type": "smg",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Ribeyrolles",
+    "type": "smg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Proto-X1",
+    "type": "smg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "EMP44",
+    "type": "smg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Blyskawica",
+    "type": "smg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Erma Emp",
+    "type": "smg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Austen",
+    "type": "smg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "M267",
+    "type": "smg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Bechowiec",
+    "type": "smg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Combat Shotgun",
+    "type": "shotgun",
+    "game": "world-war-two"
+  },
+  {
+    "name": "M30 Luftwaffe Drilling",
+    "type": "shotgun",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Toggle Action",
+    "type": "shotgun",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Sawed-Off Shotgun",
+    "type": "shotgun",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Blunderbuss",
+    "type": "shotgun",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Karabin",
+    "type": "sniper",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Lee Enfield",
+    "type": "sniper",
+    "game": "world-war-two"
+  },
+  {
+    "name": "M1903",
+    "type": "sniper",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Kar98K",
+    "type": "sniper",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Type 38",
+    "type": "sniper",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Lever Action",
+    "type": "sniper",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "PTRS-41",
+    "type": "sniper",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "De Lisle",
+    "type": "sniper",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "3-Line Rifle",
+    "type": "sniper",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "SDK 9MM",
+    "type": "sniper",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "WZ. 35",
+    "type": "sniper",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "M36",
+    "type": "sniper",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Lewis",
+    "type": "lmg",
+    "game": "world-war-two"
+  },
+  {
+    "name": "MG 15",
+    "type": "lmg",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Bren",
+    "type": "lmg",
+    "game": "world-war-two"
+  },
+  {
+    "name": "MG 42",
+    "type": "lmg",
+    "game": "world-war-two"
+  },
+  {
+    "name": "GPMG",
+    "type": "lmg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "MG 81",
+    "type": "lmg",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Stinger",
+    "type": "lmg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "VMG 1927",
+    "type": "lmg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Lad Machine Gun",
+    "type": "lmg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  },
+  {
+    "name": "Chatellerault",
+    "type": "lmg",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  }
+]

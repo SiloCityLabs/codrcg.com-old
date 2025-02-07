@@ -23,54 +23,93 @@
 	<!-- Generators -->
 	<!-- Black Ops 6 -->
 	<url>
-		<loc>https://codrcg.com/black-ops-six/generator</loc>
+		<loc>https://codrcg.com/black-ops/six/generator</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/zombies-generator</loc>
+		<loc>https://codrcg.com/black-ops/six/zombies-generator</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/info</loc>
+		<loc>https://codrcg.com/black-ops/six/info</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/info/equipment</loc>
+		<loc>https://codrcg.com/black-ops/six/info/equipment</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/info/perks</loc>
+		<loc>https://codrcg.com/black-ops/six/info/perks</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/info/streaks</loc>
+		<loc>https://codrcg.com/black-ops/six/info/streaks</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/info/weapons</loc>
+		<loc>https://codrcg.com/black-ops/six/info/weapons</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/info/wildcards</loc>
+		<loc>https://codrcg.com/black-ops/six/info/wildcards</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/info/zombies/augments</loc>
+		<loc>https://codrcg.com/black-ops/six/info/zombies/augments</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/info/zombies/ammo-mods</loc>
+		<loc>https://codrcg.com/black-ops/six/info/zombies/ammo-mods</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/info/zombies/gobblegums</loc>
+		<loc>https://codrcg.com/black-ops/six/info/zombies/gobblegums</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/info/zombies/maps</loc>
+		<loc>https://codrcg.com/black-ops/six/info/zombies/maps</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-six/info/zombies/field-upgrades</loc>
+		<loc>https://codrcg.com/black-ops/six/info/zombies/field-upgrades</loc>
 	</url>
 	<!-- Warzone -->
 	<url>
 		<loc>https://codrcg.com/warzone/generator</loc>
 	</url>
-	<!-- Modern Warfare 3 -->
 	<url>
-		<loc>https://codrcg.com/modern-warfare-three/generator</loc>
+		<loc>https://codrcg.com/warzone/where-we-droppin</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/modern-warfare-three/zombies-generator</loc>
+		<loc>https://codrcg.com/warzone/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info/weapons</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/warzone/info/wildcards</loc>
+	</url>
+	<!-- Modern Warfare 3 -->
+	<url>
+		<loc>https://codrcg.com/modern-warfare/three/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/three/zombies-generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/three/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/three/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/three/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/three/info/streaks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/three/info/weapons</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/three/info/zombies/equipment</loc>
 	</url>
 	<!-- Vanguard -->
 	<url>
@@ -102,47 +141,190 @@
 	</url>
 	<!-- Black Ops 4 -->
 	<url>
-		<loc>https://codrcg.com/black-ops-four/generator</loc>
+		<loc>https://codrcg.com/black-ops/four/generator</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-four/zombies-generator</loc>
+		<loc>https://codrcg.com/black-ops/four/zombies/generator</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-four/info</loc>
+		<loc>https://codrcg.com/black-ops/four/zombies/custom-mutations</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-four/info/equipment</loc>
+		<loc>https://codrcg.com/black-ops/four/info</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-four/info/perks</loc>
+		<loc>https://codrcg.com/black-ops/four/info/equipment</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-four/info/specialists</loc>
+		<loc>https://codrcg.com/black-ops/four/info/perks</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-four/info/streaks</loc>
+		<loc>https://codrcg.com/black-ops/four/info/specialists</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-four/info/weapons</loc>
+		<loc>https://codrcg.com/black-ops/four/info/streaks</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-four/info/wildcards</loc>
+		<loc>https://codrcg.com/black-ops/four/info/weapons</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-four/info/zombies/elixers</loc>
+		<loc>https://codrcg.com/black-ops/four/info/wildcards</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-four/info/zombies/maps</loc>
+		<loc>https://codrcg.com/black-ops/four/info/zombies/elixers</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-four/info/zombies/perks</loc>
+		<loc>https://codrcg.com/black-ops/four/info/zombies/maps</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/black-ops-four/info/zombies/talismans</loc>
+		<loc>https://codrcg.com/black-ops/four/info/zombies/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/four/info/zombies/talismans</loc>
 	</url>
 	<!-- Black Ops 3 -->
 	<url>
-		<loc>https://codrcg.com/black-ops-three/generator</loc>
+		<loc>https://codrcg.com/black-ops/three/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info/specialists</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info/streaks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info/weapons</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/three/info/wildcards</loc>
+	</url>
+	<!-- Cold War -->
+	<url>
+		<loc>https://codrcg.com/black-ops/cold-war/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/cold-war/zombies-generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/cold-war/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/cold-war/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/cold-war/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/cold-war/info/streaks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/cold-war/info/weapons</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/cold-war/info/wildcards</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/cold-war/info/zombies/maps</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/black-ops/cold-war/info/zombies/field-upgrades</loc>
+	</url>
+	<!-- Modern Warfare Remastered -->
+	<url>
+		<loc>https://codrcg.com/modern-warfare/remastered/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/remastered/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/remastered/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/remastered/info/weapons</loc>
+	</url>
+	<!-- World War Two -->
+	<url>
+		<loc>https://codrcg.com/world-war-two/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/zombies-generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/custom-match</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/vangworld-war-twouard/info/streaks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/weapons</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/zombies/maps</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/zombies/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-war-two/info/zombies/specials</loc>
+	</url>
+	<!-- Modern Warfare 2 -->
+	<url>
+		<loc>https://codrcg.com/modern-warfare/two/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/two/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/two/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/two/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/two/info/streaks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/modern-warfare/two/info/weapons</loc>
+	</url>
+	<!-- Infinite Warfare -->
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/generator</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/info</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/info/combat-rigs</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/info/streaks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/infinite-warfare/info/weapons</loc>
 	</url>
 	<!-- <url>
 		<loc>https://codrcg.com/contactus</loc>

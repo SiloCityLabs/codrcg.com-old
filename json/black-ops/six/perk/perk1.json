@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Gung-Ho",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Red"
+  },
+  {
+    "name": "Dexterity",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Red"
+  },
+  {
+    "name": "Scavenger",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Red"
+  },
+  {
+    "name": "Ghost",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Blue"
+  },
+  {
+    "name": "Ninja",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Blue"
+  },
+  {
+    "name": "Flak Jacket",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Green"
+  },
+  {
+    "name": "Tac Mask",
+    "type": "Perk 1",
+    "game": "black-ops-six",
+    "color": "Green"
+  }
+]

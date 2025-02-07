@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Breathing Room",
+        "type": "Shellshock Mods",
+        "description": "",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Protector",
+        "type": "Shellshock Mods",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Sustain Zone",
+        "type": "Shellshock Mods",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Fiery Burst",
+        "type": "Shellshock Mods",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Exploit Weakness",
+        "type": "Shellshock Mods",
+        "game": "world-war-two"
+    },
+    {
+        "name": "Defibrillate",
+        "type": "Shellshock Mods",
+        "game": "world-war-two"
+    }
+]

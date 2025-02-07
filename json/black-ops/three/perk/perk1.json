@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Afterburner",
+        "type": "Perk 1",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Blind Eye",
+        "type": "Perk 1",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Sixth Sense",
+        "type": "Perk 1",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Flak Jacket",
+        "type": "Perk 1",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Overclock",
+        "type": "Perk 1",
+        "game": "black-ops-three"
+    },
+    {
+        "name": "Ghost",
+        "type": "Perk 1",
+        "game": "black-ops-three"
+    }
+]

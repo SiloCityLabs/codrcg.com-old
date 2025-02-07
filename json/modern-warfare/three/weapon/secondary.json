@@ -1,0 +1,38 @@
+[
+  {
+    "name": "RENETTI",
+    "type": "pistol",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "TYR",
+    "type": "pistol",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "WSP STINGER",
+    "type": "pistol",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "STORMENDER",
+    "type": "launcher",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "RGL-80",
+    "type": "launcher",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Torque 35",
+    "type": "launcher",
+    "game": "modern-warfare-three"
+  },
+  {
+    "name": "Spear",
+    "type": "launcher",
+    "game": "modern-warfare-three",
+    "no_attach": true
+  }
+]

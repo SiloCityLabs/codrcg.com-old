@@ -23,7 +23,7 @@ export default function Changelog() {
         />
       </Head>
       <Header />
-      <Container className="generator" fluid>
+      <Container fluid>
         <Row>
           <Col>
             <h2 className="text-center">Changelog</h2>

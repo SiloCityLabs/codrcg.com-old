@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Ajax",
+    "equipment": "9-Bang",
+    "weapon": "Ballistic Shield",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Battery",
+    "equipment": "Cluster Grenade",
+    "weapon": "War Machine",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Crash",
+    "equipment": "Assault Pack",
+    "weapon": "Tak-5",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Firebreak",
+    "equipment": "Reactor Core",
+    "weapon": "Purifier",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Nomad",
+    "equipment": "Mesh Mine",
+    "weapon": "K9-Unit",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Outrider",
+    "equipment": "Hawk",
+    "weapon": "Sparrow",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Prophet",
+    "equipment": "Seeker",
+    "weapon": "Tempest",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Reaper",
+    "equipment": "Radar Shroud",
+    "weapon": "Scythe",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Recon",
+    "equipment": "Sensor Dart",
+    "weapon": "Vision Pulse",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Ruin",
+    "equipment": "Grapple Gun",
+    "weapon": "Grav Slam",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Seraph",
+    "equipment": "Tac-Deploy",
+    "weapon": "Annihilator",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Spectre",
+    "equipment": "Smoke",
+    "weapon": "Shadow Blade",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Torque",
+    "equipment": "Razor Wire",
+    "weapon": "Barricade",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Zero",
+    "equipment": "EMP Disruptor",
+    "weapon": "Ice Pick",
+    "type": "Specialist",
+    "game": "black-ops-four"
+  }
+]

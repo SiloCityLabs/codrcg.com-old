@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Scarab",
+    "type": "Streak",
+    "score": 450,
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "UAV",
+    "type": "Streak",
+    "score": 500,
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Drone Package",
+    "type": "Streak",
+    "score": 550,
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Counter UAV",
+    "type": "Streak",
+    "score": 600,
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Vulture",
+    "type": "Streak",
+    "score": 700,
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Trinity Rocket",
+    "type": "Streak",
+    "score": 750,
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Scorchers",
+    "type": "Streak",
+    "score": 800,
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Bombardment",
+    "type": "Streak",
+    "score": 850,
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Shock Sentry",
+    "type": "Streak",
+    "score": 900,
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Warden",
+    "type": "Streak",
+    "score": 1100,
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "Advanced UAV",
+    "type": "Streak",
+    "score": 1250,
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "T.H.O.R.",
+    "type": "Streak",
+    "score": 1300,
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "R-C8",
+    "type": "Streak",
+    "score": 1450,
+    "game": "infinite-warfare"
+  },
+  {
+    "name": "AP-3X",
+    "type": "Streak",
+    "score": 1550,
+    "game": "infinite-warfare"
+  }
+]

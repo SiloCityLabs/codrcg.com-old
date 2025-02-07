@@ -1,0 +1,76 @@
+{
+    "optic": [
+        "Remuda Mini Reflex",
+        "Otero Micro Dot",
+        "Kepler Microflex",
+        "Merlin Mini",
+        "PrismaTech Reflex",
+        "Volzhskiy Reflex",
+        "Merlin Reflex",
+        "Redwell Reflex",
+        "Dobrych MF Reflex",
+        "Accu-Spot Reflex",
+        "K&S Red Dot",
+        "Kepler Red Dot",
+        "Otero Red Dot",
+        "OM3 '92 Holo",
+        "Pinpoint Holoscout",
+        "Accu-Spot Ultra Holo",
+        "Jason Armory 2x",
+        "Willis 3x",
+        "PrismaTech 4x",
+        "K&S Thermal Holo",
+        "Pinpoint Hybrid",
+        "R&K Multizoom",
+        "VMF Variable Scope",
+        "Otero Thermal 2x"
+    ],
+    "muzzle": [
+        "Suppressor",
+        "Compensator",
+        "Muzzle Brake",
+        "Ported Compensator"
+    ],
+    "barrel": [
+        "Gain-Twist Barrel",
+        "Long Barrel",
+        "Reinforced Barrel",
+        "Short Barrel",
+        "CHF Barrel"
+    ],
+    "underbarrel": [
+        "Vertical Foregrip",
+        "Lightweight Foregrip",
+        "Marksman Foregrip",
+        "Precision Foregrip",
+        "Ranger Foregrip"
+    ],
+    "magazine": [
+        "Extended Mag I",
+        "Flip Mag",
+        "Extended Mag II",
+        "Fast Mag I"
+    ],
+    "stock": [
+        "Ergonomic Stock",
+        "Agility Stock",
+        "Combat Stock",
+        "Quickdraw Stock",
+        "Infiltrator Stock",
+        "Balanced Stock",
+        "Light Stock"
+    ],
+    "laser": [
+        "Steady Aim Laser",
+        "Fast Motion Laser",
+        "Tactical Laser",
+        "Strelok Laser",
+        "Target Laser"
+    ],
+    "fire_mods": [
+        "Rapid Fire",
+        "7.62x25mm Tokarev Overpressured",
+        "Recoil Springs",
+        "7.62x25mm Tokarev FMJ"
+    ]
+}

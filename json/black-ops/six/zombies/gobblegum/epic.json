@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Who's Keeping Score?",
+    "type": "Epic",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Free Fire",
+    "type": "Epic",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Nowhere But Here",
+    "type": "Epic",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Soda Fountain",
+    "type": "Epic",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Profit Sharing",
+    "type": "Epic",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Respin Cycle",
+    "type": "Epic",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Exit Strategy",
+    "type": "Epic",
+    "game": "black-ops-six"
+  },
+  {
+    "name": "Dead Drop",
+    "description": "(Lasts 5 Minutes) Drop rates of Salvage and equipment are greatly increased.",
+    "type": "Epic",
+    "game": "black-ops-six",
+    "isDlc": true
+  }
+]

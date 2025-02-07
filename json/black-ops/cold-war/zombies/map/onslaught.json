@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Deprogram",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Onslaught Elite",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Drive-In",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Onslaught Diminishing Light",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Echelon",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Rush",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Collateral",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Onslaught Mystery Munitions",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Standoff",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Yamantau",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Onslaught Containment",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Apocalypse",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Express",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Raid",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "The Pines",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Nuketown '84",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Onslaught Accelerated",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Cartel",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Checkmate",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Crossroads",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Garrison",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Miami",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Moscow",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  },
+  {
+    "name": "Satellite",
+    "type": "Map",
+    "mode": "Onslaught",
+    "game": "cold-war"
+  }
+]

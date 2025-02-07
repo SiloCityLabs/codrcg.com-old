@@ -1,0 +1,53 @@
+[
+  {
+    "name": "P-08",
+    "type": "pistol",
+    "game": "world-war-two"
+  },
+  {
+    "name": "1911",
+    "type": "pistol",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Machine Pistol",
+    "type": "pistol",
+    "game": "world-war-two"
+  },
+  {
+    "name": "9MM SAP",
+    "type": "pistol",
+    "game": "world-war-two"
+  },
+  {
+    "name": "Enfield NO. 2",
+    "type": "pistol",
+    "game": "world-war-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "Reichsrevolver",
+    "type": "pistol",
+    "game": "world-war-two",
+    "no_attach_info": true
+  },
+  {
+    "name": "M1 Bazooka",
+    "type": "launcher",
+    "game": "world-war-two",
+    "no_attach": true
+  },
+  {
+    "name": "Panzerschreck",
+    "type": "launcher",
+    "game": "world-war-two",
+    "no_attach": true
+  },
+  {
+    "name": "Crossbow",
+    "type": "launcher",
+    "game": "world-war-two",
+    "isDlc": true,
+    "no_attach_info": true
+  }
+]

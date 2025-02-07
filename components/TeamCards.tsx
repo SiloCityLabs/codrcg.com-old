@@ -6,8 +6,8 @@ import {
   faYoutube,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-//Styles
-import "../public/styles/components/TeamCards.css";
+// Styles
+import styles from "@/public/styles/components/TeamCards.module.css";
 
 function TeamCards() {
   const members = [
@@ -29,10 +29,10 @@ function TeamCards() {
   ];
 
   return (
-    <Row id="team-cards" xs={1} md={2} lg={4} className="g-4 mb-3">
+    <Row id="team-cards" xs={1} md={2} lg={4} className={`g-4 mb-3 ${styles.row}`}>
       {members.map((member, idx) => (
-        <Col key={idx}>
-          <Card className="h-100">
+        <Col key={idx} className={styles.col}>
+          <Card className={`h-100 ${styles.card}`}>
             {member.image && (
               <Card.Img variant="top" src={member.image} alt={member.name} />
             )}
@@ -52,7 +52,7 @@ function TeamCards() {
                 )}
               </Card.Text>
               {member.twitter || member.youtube || member.instagram ? (
-                <div className="social">
+                <div className={styles.social}>
                   {member.twitter && (
                     <a href={member.twitter} target="_blank" rel="noopener">
                       <FontAwesomeIcon icon={faTwitterSquare} size="2x" />

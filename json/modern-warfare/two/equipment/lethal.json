@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Frag Grenade",
+    "type": "Lethal",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Proximity Mine",
+    "type": "Lethal",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Drill Charge",
+    "type": "Lethal",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Molotov Cocktail",
+    "type": "Lethal",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Semtex",
+    "type": "Lethal",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "C4",
+    "type": "Lethal",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Claymore",
+    "type": "Lethal",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Throwing Knife",
+    "type": "Lethal",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Thermite",
+    "type": "Lethal",
+    "game": "modern-warfare-two"
+  },
+  {
+    "name": "Throwing Star",
+    "type": "Lethal",
+    "game": "modern-warfare-two"
+  }
+]

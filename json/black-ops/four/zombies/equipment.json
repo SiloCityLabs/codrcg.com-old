@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Frag",
+    "type": "Equipment",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Acid Bomb",
+    "type": "Equipment",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Claymore",
+    "type": "Equipment",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Wraith Fire",
+    "type": "Equipment",
+    "game": "black-ops-four"
+  },
+  {
+    "name": "Sentry",
+    "type": "Equipment",
+    "game": "black-ops-four"
+  }
+]

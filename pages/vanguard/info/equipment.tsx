@@ -7,9 +7,9 @@ import InfoList from "@/components/info/InfoList";
 //Helpers
 import { getEquipment } from "@/helpers/info/getEquipment";
 //Styles
-import "@/public/styles/components/Loadout.css";
+import styles from "@/public/styles/components/Loadout.module.css";
 
-export default function BlackOpsSixEquipment() {
+export default function VanguardEquipment() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/vanguard/generator" },
@@ -20,7 +20,7 @@ export default function BlackOpsSixEquipment() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game", "isDlc"];
+  const dataKeys = ["name", "type", "game"];
 
   useEffect(() => {
     const dataList = getEquipment("vanguard");
@@ -44,10 +44,15 @@ export default function BlackOpsSixEquipment() {
         />
       </Head>
       <Header className="vanguard" navLinks={navLinks} />
-      <Container className="generator" fluid>
+      <Container className={styles.generator} fluid>
         <Row>
           <Col>
-            <h2>Vanguard - Equipment</h2>
+            <h2>
+              Vanguard
+              <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
+              <br className="d-block d-sm-none" />
+              Equipment
+            </h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
           </Col>

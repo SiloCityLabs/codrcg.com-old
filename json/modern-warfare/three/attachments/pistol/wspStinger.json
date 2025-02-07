@@ -1,0 +1,82 @@
+{
+    "muzzle": [
+        "Shadowstrike Suppressor S",
+        "AVR-T90 Comp",
+        "Lacerta Compensator",
+        "Ftac Castle Comp",
+        "Bruen Pendulum",
+        "Endless 30 Compensator",
+        "ZEHMN35 Compensated Flash Hider",
+        "VP27 Mini Brake S",
+        "Purifier Muzzle Brake S",
+        "Xten Razor Comp",
+        "Lockshot KT85",
+        "TA Hul-Breach",
+        "L4R Flash Hider",
+        "XRK Sandstorm",
+        "XRK Knockout Breach",
+        "Bruen Cubic Comp",
+        "S-37C DL Breacher Device S",
+        "Spiral v3.5 Flash Hider",
+        "T51R Billeted Brake S",
+        "ELR Blackfire Compensator S",
+        "Colossus Suppressor S",
+        "Colossus Suppressor",
+        "Xten RR-40",
+        "Sonic Suppressor S",
+        "HMRES Mod Suppressor S",
+        "Monolithic Suppressor S",
+        "T4LR Saber Compensator S",
+        "Forge DX90-F",
+        "Singuard MKV",
+        "Wrathguard Compensator S",
+        "STER45 Skyfury Compensator S",
+        "SA Schalldampfer 99",
+        "FSS Conver IV",
+        "EXF Huntress-90",
+        "Xten Black Kite",
+        "Fox-202 Flash Hider"
+    ],
+    "barrel": [
+        "Hiss Short Light Barrel",
+        "Noxious Short Compensated Barrel",
+        "Pestilence-12 Short Compensated Barrel"
+    ],
+    "magazine": [
+        "25 Round Mag",
+        "32 Round Mag"
+    ],
+    "rear_grip": [
+        "Akimbo WSP Stinger",
+        "Marauder Grip",
+        "WSP Tac-20 Grip",
+        "WSP Hark Rubber Grip"
+    ],
+    "stock": [
+        "WSP Factory Stock",
+        "WSP Rampart-IV Stock"
+    ],
+    "laser": [
+        "KR HX-15 Laser Light",
+        "FJX Diod-70",
+        "Xten Sidearm-L400",
+        "1mW Pistol Laser",
+        "DZM-1000 L",
+        "Series 710 Pistol Laser",
+        "Pro Sapphire Mounted Laser",
+        "Verdant Hook Mounted Laser",
+        "CS15 Scarlet Mounted Laser",
+        "Ftac Vortex 200"
+    ],
+    "ammunition": [
+        "9mm High Grain Rounds",
+        "9mm Hollowpoint",
+        "9mm Armor Piercing",
+        "9mm Overpressured P+",
+        "9mm Frangible",
+        "9mm AET Rounds",
+        "9mm Hardened Rounds",
+        "9mm Low Grain Rounds",
+        "9mm High Velocity"
+    ]
+}

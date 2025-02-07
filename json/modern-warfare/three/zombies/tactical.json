@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Stun Grenade",
+    "type": "Tactical",
+    "game": "Modern Warfare Three Zombies"
+  },
+  {
+    "name": "Smoke Grenade",
+    "type": "Tactical",
+    "game": "Modern Warfare Three Zombies"
+  },
+  {
+    "name": "Scatter Mine",
+    "type": "Tactical",
+    "game": "Modern Warfare Three Zombies"
+  },
+  {
+    "name": "Decoy Grenade",
+    "type": "Tactical",
+    "game": "Modern Warfare Three Zombies"
+  },
+  {
+    "name": "Snapshot Grenade",
+    "type": "Tactical",
+    "game": "Modern Warfare Three Zombies"
+  },
+  {
+    "name": "Shock Stick",
+    "type": "Tactical",
+    "game": "Modern Warfare Three Zombies"
+  },
+  {
+    "name": "Stim",
+    "type": "Tactical",
+    "game": "Modern Warfare Three Zombies"
+  },
+  {
+    "name": "Experimental Gas",
+    "type": "Tactical",
+    "game": "Modern Warfare Three Zombies"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Double Time",
+    "type": "Perk 3",
+    "game": "black-ops-six",
+    "color": "Red"
+  },
+  {
+    "name": "Bankroll",
+    "type": "Perk 3",
+    "game": "black-ops-six",
+    "color": "Red"
+  },
+  {
+    "name": "Vigilance",
+    "type": "Perk 3",
+    "game": "black-ops-six",
+    "color": "Blue"
+  },
+  {
+    "name": "Cold-Blooded",
+    "type": "Perk 3",
+    "game": "black-ops-six",
+    "color": "Blue"
+  },
+  {
+    "name": "Quartermaster",
+    "type": "Perk 3",
+    "game": "black-ops-six",
+    "color": "Green"
+  },
+  {
+    "name": "Guardian",
+    "type": "Perk 3",
+    "game": "black-ops-six",
+    "color": "Green"
+  },
+  {
+    "name": "Gearhead",
+    "type": "Perk 3",
+    "game": "black-ops-six",
+    "color": "Green"
+  },
+  {
+    "name": "Shrapnel Radar",
+    "type": "Perk 3",
+    "game": "black-ops-six",
+    "color": "Blue",
+    "isDlc": true
+  },
+  {
+    "name": "Slipstream",
+    "type": "Perk 3",
+    "game": "black-ops-six",
+    "color": "Red",
+    "isDlc": true
+  }
+]

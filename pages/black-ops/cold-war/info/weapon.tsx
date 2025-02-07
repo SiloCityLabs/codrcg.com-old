@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { Container, Row, Col } from "react-bootstrap";
 //Components
 import Header from "@/components/Header";
-import InfoList from "@/components/info/InfoList";
-//Helpers
-import { getWeapon } from "@/helpers/info/getWeapon";
+import WeaponInfo from "@/components/info/WeaponInfo";
 //Styles
 import styles from "@/public/styles/components/Loadout.module.css";
 
-export default function ColdWarWeapons() {
+export default function ColdWarWeapon() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Multiplayer Generator", href: "/black-ops/cold-war/generator" },
@@ -20,26 +19,21 @@ export default function ColdWarWeapons() {
     { label: "Loadout Info", href: "/black-ops/cold-war/info" },
     { label: "Changelog", href: "/changelog" },
   ];
-
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "game", "no_attach"];
-  const [types, setTypes] = useState<string[]>([]);
+  const [value, setValue] = useState<string | null>(null);
 
   useEffect(() => {
-    const tmp_types: string[] = [];
-    const dataList = getWeapon("cold-war");
-    setData(dataList);
+    const urlParams = new URLSearchParams(window.location.search);
+    const valueParam = urlParams.get("value");
 
-    //Format data
-    for (const key in dataList) {
-      const type = dataList[key].type;
-
-      if (!tmp_types.includes(type)) {
-        tmp_types.push(type);
-      }
+    if (valueParam === null) {
+      // Strictly check for null
+      router.replace("/404");
+      return;
     }
-    setTypes(tmp_types);
+
+    setValue(valueParam);
 
     setIsLoading(false);
   }, []);
@@ -47,11 +41,11 @@ export default function ColdWarWeapons() {
   return (
     <>
       <Head>
-        <title>Cold War Weapons</title>
+        <title>Cold War Weapon - {value}</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="View information for weapons in Cold War. View all attachments."
+          content="View information for a weapon in Cold War. View all attachments."
         />
         <meta
           name="keywords"
@@ -69,16 +63,11 @@ export default function ColdWarWeapons() {
               Cold War
               <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
               <br className="d-block d-sm-none" />
-              Weapons
+              Weapon - {value}
             </h2>
 
-            {!isLoading && (
-              <InfoList
-                data={data}
-                dataKeys={dataKeys}
-                types={types}
-                url="/black-ops/cold-war/info/weapon"
-              />
+            {!isLoading && value && (
+              <WeaponInfo value={value} game="cold-war" />
             )}
           </Col>
         </Row>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Tabs, Tab } from "react-bootstrap";
+import { Container, Row, Col, Tabs, Tab, Badge } from "react-bootstrap";
 //Helpers
 import { getWeapon } from "@/helpers/info/getWeapon";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
@@ -70,29 +70,45 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
               <Tabs
                 id="controlled-tab-example"
                 activeKey={key}
-                onSelect={(k) => setKey(k ?? "general")}
+                onSelect={(k) => setKey(k ?? "")}
                 className="mb-3"
               >
-                {Object.entries(attachmentInfo).map(([key, values]) => (
-                  <Tab eventKey={key} title={key} key={key}>
-                    {Array.isArray(values) ? (
-                      values.map((value, index) => (
-                        <React.Fragment key={index}>
-                          <span className="text-muted fs-6">
-                            {typeof value === "string" ? value : String(value)}{" "}
-                            {/* Type check */}
-                          </span>
-                          <br />
-                        </React.Fragment>
-                      ))
-                    ) : typeof values === "string" ? (
-                      <span className="text-muted fs-6">{values}</span>
-                    ) : (
-                      // Handle other non-array value types
-                      <span className="text-muted fs-6">{String(values)}</span>
-                    )}
-                  </Tab>
-                ))}
+                {Object.entries(attachmentInfo).map(([key, values]) => {
+                  const itemCount = Array.isArray(values) ? values.length : 1; // Calculate item count
+
+                  return (
+                    <Tab
+                      eventKey={key}
+                      title={
+                        <span>
+                          {key} <Badge bg="dark">{itemCount}</Badge>
+                        </span>
+                      }
+                      key={key}
+                    >
+                      {Array.isArray(values) ? (
+                        values.map((value, index) => (
+                          <React.Fragment key={index}>
+                            <span className="text-muted fs-6">
+                              {typeof value === "string"
+                                ? value
+                                : String(value)}{" "}
+                              {/* Type check */}
+                            </span>
+                            <br />
+                          </React.Fragment>
+                        ))
+                      ) : typeof values === "string" ? (
+                        <span className="text-muted fs-6">{values}</span>
+                      ) : (
+                        // Handle other non-array value types
+                        <span className="text-muted fs-6">
+                          {String(values)}
+                        </span>
+                      )}
+                    </Tab>
+                  );
+                })}
               </Tabs>
             ) : (
               <h3 className="text-center">No attachments</h3>

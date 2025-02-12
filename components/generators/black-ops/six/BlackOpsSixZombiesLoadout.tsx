@@ -247,10 +247,11 @@ function BlackOpsSixZombiesLoadout() {
               </Button>
               <Button
                 variant="black-ops"
-                onClick={handleClick}
                 className="w-50 me-2"
+                disabled={isGenerating}
+                onClick={isGenerating ? undefined : handleClick}
               >
-                Generate Loadout
+                {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
               </Button>
             </div>
           </Col>

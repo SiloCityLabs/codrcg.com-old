@@ -61,7 +61,12 @@ function WorldWarTwoZombiesLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
-        <h3 className="text-center mb-5">&ldquo;{randClassName}&rdquo;</h3>
+        {!isGenerating && (
+          <>
+            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
+            <hr />
+          </>
+        )}
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="4" className="text-center">
             <span className="fw-bolder fs-5">Character:</span> <br />

@@ -240,7 +240,8 @@ function BlackOpsSixZombiesLoadout() {
             <div className="d-flex justify-content-center">
               <Button
                 variant="black-ops"
-                onClick={handleModal}
+                disabled={isGenerating}
+                onClick={isGenerating ? undefined : handleModal}
                 className="w-50 me-2"
               >
                 Settings

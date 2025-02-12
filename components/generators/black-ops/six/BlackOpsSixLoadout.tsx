@@ -149,7 +149,6 @@ function BlackOpsSixLoadout() {
           <Col className="text-center">
             <Button
               variant="black-ops"
-              className="me-2"
               disabled={isGenerating}
               onClick={isGenerating ? undefined : handleClick}
             >

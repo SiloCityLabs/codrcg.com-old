@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 //Components
-import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import { Container, Row, Col, Button, Form, Spinner } from "react-bootstrap";
 import WheelComponent from "react-wheel-of-prizes-react19";
 import CustomModal from "@/components/bootstrap/CustomModal";
 import { LoadingLetters } from "@/components/LoadingLetters";
@@ -61,13 +61,18 @@ function WarzoneDropSpot() {
     "#FF9000",
   ];
   const onFinished = (winner: string) => {
+    setSpinResult("");
+    setIsSpinning(true);
     sendEvent("button_click", {
       button_id: "warzoneDropSpot_rollSpot",
       label: "WarzoneDropSpot",
       category: "COD_Loadouts",
     });
 
-    setSpinResult(winner);
+    setTimeout(() => {
+      setSpinResult(winner);
+      setIsSpinning(false);
+    }, 500);
   };
 
   useEffect(() => {
@@ -83,18 +88,23 @@ function WarzoneDropSpot() {
   }, []);
 
   const handleClick = async () => {
+    setSpinResult("");
+    setIsSpinning(true);
     sendEvent("button_click", {
       button_id: "warzoneDropSpot_rollSpot",
       label: "WarzoneDropSpot",
       category: "COD_Loadouts",
     });
 
-    setSpinResult(
-      mapInfo[warzoneMap].dropSpots[
-      Math.floor(Math.random() * mapInfo[warzoneMap].dropSpots.length)
-      ]
-    );
-    // setIsSpinning(true);
+
+    setTimeout(() => {
+      setSpinResult(
+        mapInfo[warzoneMap].dropSpots[
+        Math.floor(Math.random() * mapInfo[warzoneMap].dropSpots.length)
+        ]
+      );
+      setIsSpinning(false);
+    }, 1000);
   };
 
   const handleMapChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -131,12 +141,18 @@ function WarzoneDropSpot() {
                 <Col sm className="text-center">
                   <span className="fw-bolder fs-5">Winner:</span> <br />
                   <span className="text-muted fs-6">
-                    <LoadingLetters
-                      text={spinResult}
-                      loadingDuration={5000}
-                      interval={100}
-                      className="loading-text" //add a css class
-                    />
+                    {!isSpinning ? (
+                      <span className="text-muted fs-6">
+                        <LoadingLetters
+                          text={spinResult}
+                          loadingDuration={5000}
+                          interval={100}
+                          className="loading-text"
+                        />
+                      </span>
+                    ) : (
+                      <Spinner animation="border" />
+                    )}
                   </span>
                 </Col>
               </Row>
@@ -175,10 +191,11 @@ function WarzoneDropSpot() {
                   </Button>
                   <Button
                     variant="success"
-                    onClick={handleClick}
                     className="w-50 me-2 d-block d-md-none"
+                    disabled={isSpinning}
+                    onClick={isSpinning ? undefined : handleClick}
                   >
-                    Randomize Spot
+                    {isSpinning ? 'Choosing Spot...' : 'Randomize Spot'}
                   </Button>
                 </div>
               </Col>

@@ -16,6 +16,7 @@ import { fetchZombiesAugments } from "@/helpers/fetch/zombies/fetchZombiesAugmen
 import { Bo6ZombiesSettings } from "@/types/Generator";
 //Components
 import CustomModal from "@/components/bootstrap/CustomModal";
+import CodPlaceholder from "@/components/CodPlaceholder";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 
@@ -27,6 +28,7 @@ const defaultSettings: Bo6ZombiesSettings = {
 
 function BlackOpsSixZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isGenerating, setIsGenerating] = useState(true);
   const [containerClass, setContainerClass] = useState("hidden");
   //Settings
   const [settings, setSettings] = useState<Bo6ZombiesSettings>(defaultSettings);
@@ -68,10 +70,21 @@ function BlackOpsSixZombiesLoadout() {
     fetchLoadoutData(setData, setContainerClass);
 
     setIsLoading(false);
+    setIsGenerating(false);
   }, []);
 
   const handleClick = async () => {
-    fetchLoadoutData(setData, setContainerClass);
+    setIsGenerating(true);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+
+    setTimeout(() => {
+      fetchLoadoutData(setData, setContainerClass);
+      setIsGenerating(false);
+    }, 1000);
   };
 
   const handleModal = () => setShowModal(!showModal);
@@ -115,17 +128,24 @@ function BlackOpsSixZombiesLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
-        <h3 className="text-center mb-5">&ldquo;{randClassName}&rdquo;</h3>
+        {!isGenerating && (
+          <>
+            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
+            <hr />
+          </>
+        )}
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="6" className="text-center">
             <span className="fw-bolder fs-5">Primary:</span> <br />
             <span className="text-muted fs-6">
-              {weapons.primary.weapon.name}
+              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name} />
             </span>
             <br />
             <span className="fw-bolder fs-5">Ammo Mod:</span>
             <br />
-            <span className="text-muted fs-6">{weapons.primary.ammoMod}</span>
+            <span className="text-muted fs-6">
+              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.ammoMod} />
+            </span>
             <br />
             {weapons.primary.weapon.no_attach ? (
               <>
@@ -138,7 +158,7 @@ function BlackOpsSixZombiesLoadout() {
                 <span className="fw-bolder fs-5">Primary Attachments:</span>
                 <br />
                 <span className="text-muted fs-6">
-                  {weapons.primary.attachments}
+                  <CodPlaceholder isLoading={isGenerating} value={weapons.primary.attachments} />
                 </span>
               </>
             )}
@@ -148,21 +168,26 @@ function BlackOpsSixZombiesLoadout() {
         <Row className="justify-content-md-center mb-4">
           <Col xs={6} sm={6} md="3" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Melee:</span> <br />
-            <span className="text-muted fs-6">{weapons.melee.name}</span>
+            <span className="text-muted fs-6">
+
+              <CodPlaceholder isLoading={isGenerating} value={weapons.melee.name} />
+            </span>
           </Col>
           <Col xs={6} sm={6} md="3" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
             <span className="text-muted fs-6">
-              {equipment.fieldUpgrade.name}
+              <CodPlaceholder isLoading={isGenerating} value={equipment.fieldUpgrade.name} />
             </span>
           </Col>
           <Col xs={6} md="3" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">{equipment.tactial.name}</span>
+            <span className="text-muted fs-6">
+              <CodPlaceholder isLoading={isGenerating} value={equipment.tactial.name} />
+            </span>
           </Col>
           <Col xs={6} md="3" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{equipment.lethal.name}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={equipment.lethal.name} /></span>
           </Col>
         </Row>
         {(rollGobblegum || rollMap) && <hr />}
@@ -170,13 +195,15 @@ function BlackOpsSixZombiesLoadout() {
           {rollGobblegum && (
             <Col xs md="4" lg="3" className="text-center">
               <span className="fw-bolder fs-5">Gobblegum:</span> <br />
-              <span className="text-muted fs-6">{gobblegum}</span>
+              <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={gobblegum} /></span>
             </Col>
           )}
           {rollMap && (
             <Col xs md="4" lg="3" className="text-center">
               <span className="fw-bolder fs-5">Map:</span> <br />
-              <span className="text-muted fs-6">{zombieMap}</span>
+              <span className="text-muted fs-6">
+                <CodPlaceholder isLoading={isGenerating} value={zombieMap} />
+              </span>
             </Col>
           )}
         </Row>
@@ -196,12 +223,12 @@ function BlackOpsSixZombiesLoadout() {
                   <br />
                   <span className="text-muted fs-6">
                     <span className="fw-bolder">Major Augment:</span>{" "}
-                    {item?.major}
+                    <CodPlaceholder isLoading={isGenerating} value={item?.major} />
                   </span>
                   <br />
                   <span className="text-muted fs-6">
                     <span className="fw-bolder">Minor Augment:</span>{" "}
-                    {item?.minor}
+                    <CodPlaceholder isLoading={isGenerating} value={item?.minor} />
                   </span>
                 </Col>
               ))}

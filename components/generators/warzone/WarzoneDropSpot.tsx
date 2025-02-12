@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import WheelComponent from "react-wheel-of-prizes-react19";
 import CustomModal from "@/components/bootstrap/CustomModal";
+import { LoadingLetters } from "@/components/LoadingLetters";
 //Helpers
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
 //Types
@@ -35,6 +36,7 @@ const mapInfo = {
 
 function WarzoneDropSpot() {
   const [isLoading, setIsLoading] = useState(false);
+  const [isSpinning, setIsSpinning] = useState(false);
   const [spinResult, setSpinResult] = useState("????");
   //Settings
   const [settings, setSettings] =
@@ -77,6 +79,7 @@ function WarzoneDropSpot() {
     setWarzoneMap(completeSettings.warzoneMap);
 
     setIsLoading(true);
+    // setIsSpinning(true);
   }, []);
 
   const handleClick = async () => {
@@ -88,9 +91,10 @@ function WarzoneDropSpot() {
 
     setSpinResult(
       mapInfo[warzoneMap].dropSpots[
-        Math.floor(Math.random() * mapInfo[warzoneMap].dropSpots.length)
+      Math.floor(Math.random() * mapInfo[warzoneMap].dropSpots.length)
       ]
     );
+    // setIsSpinning(true);
   };
 
   const handleMapChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -126,7 +130,14 @@ function WarzoneDropSpot() {
                 </Col>
                 <Col sm className="text-center">
                   <span className="fw-bolder fs-5">Winner:</span> <br />
-                  <span className="text-muted fs-6">{spinResult}</span>
+                  <span className="text-muted fs-6">
+                    <LoadingLetters
+                      text={spinResult}
+                      loadingDuration={5000}
+                      interval={100}
+                      className="loading-text" //add a css class
+                    />
+                  </span>
                 </Col>
               </Row>
               {Object.keys(mapInfo).map((mapKey) => (

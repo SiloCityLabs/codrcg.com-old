@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import CodPlaceholder from "@/components/CodPlaceholder";
 //Helpers
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
@@ -25,6 +26,7 @@ const defaultSettings: Bo4ZombiesSettings = {
 function BlackOpsFourZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
   const [containerClass, setContainerClass] = useState("hidden");
+  const [isGenerating, setIsGenerating] = useState(true);
   //Settings
   const [settings, setSettings] = useState<Bo4ZombiesSettings>(defaultSettings);
   const [rollMap, setRollMap] = useState(settings.rollMap);
@@ -59,10 +61,21 @@ function BlackOpsFourZombiesLoadout() {
     fetchLoadoutData(setData, setContainerClass);
 
     setIsLoading(false);
+    setIsGenerating(false);
   }, []);
 
   const handleClick = async () => {
-    fetchLoadoutData(setData, setContainerClass);
+    setIsGenerating(true);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+
+    setTimeout(() => {
+      fetchLoadoutData(setData, setContainerClass);
+      setIsGenerating(false);
+    }, 1000);
   };
 
   const handleModal = () => setShowModal(!showModal);
@@ -114,23 +127,28 @@ function BlackOpsFourZombiesLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
-        <h3 className="text-center mb-5">&ldquo;{randClassName}&rdquo;</h3>
+        {!isGenerating && (
+          <>
+            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
+            <hr />
+          </>
+        )}
         <Row className="justify-content-md-center mb-4">
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Story:</span> <br />
-            <span className="text-muted fs-6">{story.display}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={story.display} /></span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Special Weapon:</span> <br />
-            <span className="text-muted fs-6">{weapons.special.name}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={weapons.special.name} /></span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Equipment:</span> <br />
-            <span className="text-muted fs-6">{equipment}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={equipment} /></span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Starting Weapon:</span> <br />
-            <span className="text-muted fs-6">{weapons.starting.name}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={weapons.starting.name} /></span>
           </Col>
         </Row>
         <hr />
@@ -140,28 +158,28 @@ function BlackOpsFourZombiesLoadout() {
               {story.key === "chaos_story" ? "DANU" : "BREW"}:
             </span>
             <br />
-            <span className="text-muted fs-6">{zombiePerks[0]}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombiePerks[0]} /></span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">
               {story.key === "chaos_story" ? "RA" : "COLA"}:
             </span>
             <br />
-            <span className="text-muted fs-6">{zombiePerks[1]}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombiePerks[1]} /></span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">
               {story.key === "chaos_story" ? "ZEUS" : "SODA"}:
             </span>
             <br />
-            <span className="text-muted fs-6">{zombiePerks[2]}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombiePerks[2]} /></span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">
               {story.key === "chaos_story" ? "ODIN" : "TONIC"}:
             </span>
             <br />
-            <span className="text-muted fs-6">{zombiePerks[3]}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombiePerks[3]} /></span>
           </Col>
         </Row>
         {rollMap && (
@@ -170,17 +188,17 @@ function BlackOpsFourZombiesLoadout() {
             <Row className="justify-content-md-center mb-4">
               <Col xs md="4" lg="3" className="text-center">
                 <span className="fw-bolder fs-5">Mode:</span> <br />
-                <span className="text-muted fs-6">{zombieMap?.mode}</span>
+                <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombieMap?.mode} /></span>
               </Col>
               <Col xs md="4" lg="3" className="text-center">
                 <span className="fw-bolder fs-5">Map:</span> <br />
-                <span className="text-muted fs-6">{zombieMap.name}</span>
+                <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombieMap.name} /></span>
               </Col>
               {zombieMap?.mode === "Classic" && (
                 <Col xs md="4" lg="3" className="text-center">
                   <span className="fw-bolder fs-5">Difficulty:</span> <br />
                   <span className="text-muted fs-6">
-                    {zombieMap.difficulty}
+                    <CodPlaceholder isLoading={isGenerating} value={zombieMap.difficulty} />
                   </span>
                 </Col>
               )}
@@ -192,13 +210,13 @@ function BlackOpsFourZombiesLoadout() {
           {rollTalisman && (
             <Col xs md="4" lg="3" className="text-center">
               <span className="fw-bolder fs-5">Talisman:</span> <br />
-              <span className="text-muted fs-6">{talisman}</span>
+              <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={talisman} /></span>
             </Col>
           )}
           {rollElixers && (
             <Col xs md="4" lg="3" className="text-center">
               <span className="fw-bolder fs-5">Elixers:</span> <br />
-              <span className="text-muted fs-6">{elixers}</span>
+              <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={elixers} /></span>
             </Col>
           )}
         </Row>
@@ -207,17 +225,19 @@ function BlackOpsFourZombiesLoadout() {
             <div className="d-flex justify-content-center">
               <Button
                 variant="black-ops"
-                onClick={handleModal}
+                disabled={isGenerating}
+                onClick={isGenerating ? undefined : handleModal}
                 className="w-50 me-2"
               >
                 Settings
               </Button>
               <Button
                 variant="black-ops"
-                onClick={handleClick}
+                disabled={isGenerating}
+                onClick={isGenerating ? undefined : handleClick}
                 className="w-50 me-2"
               >
-                Generate Loadout
+                {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
               </Button>
             </div>
           </Col>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import CodPlaceholder from "@/components/CodPlaceholder";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
@@ -16,6 +16,7 @@ import { sendEvent } from "@/utils/gtag";
 function WorldWarTwoZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
   const [containerClass, setContainerClass] = useState("hidden");
+  const [isGenerating, setIsGenerating] = useState(true);
 
   //Data
   const [data, setData] = useState({
@@ -35,10 +36,21 @@ function WorldWarTwoZombiesLoadout() {
   useEffect(() => {
     fetchLoadoutData(setData, setContainerClass);
     setIsLoading(false);
+    setIsGenerating(false);
   }, []);
 
   const handleClick = async () => {
-    fetchLoadoutData(setData, setContainerClass);
+    setIsGenerating(true);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+
+    setTimeout(() => {
+      fetchLoadoutData(setData, setContainerClass);
+      setIsGenerating(false);
+    }, 1000);
   };
 
   const {
@@ -61,42 +73,51 @@ function WorldWarTwoZombiesLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
-        <h3 className="text-center mb-5">&ldquo;{randClassName}&rdquo;</h3>
+        {!isGenerating && (
+          <>
+            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
+            <hr />
+          </>
+        )}
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="4" className="text-center">
             <span className="fw-bolder fs-5">Character:</span> <br />
-            <span className="text-muted fs-6">{character}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={character} /></span>
           </Col>
           <Col xs md="8" lg="4" className="text-center">
             <span className="fw-bolder fs-5">Primary:</span> <br />
             <span className="text-muted fs-6">
-              {weapons.primary.weapon.name}
+              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name} />
             </span>
           </Col>
           <Col xs md="8" lg="4" className="text-center">
             <span className="fw-bolder fs-5">Special:</span> <br />
-            <span className="text-muted fs-6">{special}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={special} /></span>
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="4" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Mods:</span> <br />
-            <span className="text-muted fs-6">{mods}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={mods} /></span>
           </Col>
           <Col xs md="4" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{lethal}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={lethal} /></span>
           </Col>
           <Col xs md="4" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Map:</span> <br />
-            <span className="text-muted fs-6">{zombieMap}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombieMap} /></span>
           </Col>
         </Row>
         <Row className="justify-content-md-center">
           <Col xs md="8" lg="6" className="text-center">
-            <Button variant="ww2" onClick={handleClick} className="w-50 me-2">
-              Generate Loadout
+            <Button
+              variant="ww2"
+              disabled={isGenerating}
+              onClick={isGenerating ? undefined : handleClick}
+            >
+              {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
             </Button>
           </Col>
         </Row>

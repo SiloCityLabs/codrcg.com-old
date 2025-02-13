@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import CodPlaceholder from "@/components/CodPlaceholder";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
@@ -12,6 +12,7 @@ import { sendEvent } from "@/utils/gtag";
 
 function ModernWarfareThreeZombiesLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
+  const [isGenerating, setIsGenerating] = useState(true);
   const [data, setData] = useState({
     randClassName: "",
     weapons: {
@@ -34,10 +35,21 @@ function ModernWarfareThreeZombiesLoadout() {
 
   useEffect(() => {
     fetchLoadoutData(setData, setContainerClass);
+    setIsGenerating(false);
   }, []);
 
   const handleClick = async () => {
-    fetchLoadoutData(setData, setContainerClass);
+    setIsGenerating(true);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+
+    setTimeout(() => {
+      fetchLoadoutData(setData, setContainerClass);
+      setIsGenerating(false);
+    }, 1000);
   };
 
   const { randClassName, weapons, equipment } = data;
@@ -48,74 +60,63 @@ function ModernWarfareThreeZombiesLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
-        <h3 className="text-center mb-5">&ldquo;{randClassName}&rdquo;</h3>
+        {!isGenerating && (
+          <>
+            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
+            <hr />
+          </>
+        )}
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="6" className="text-center">
             <span className="fw-bolder fs-5">Primary:</span> <br />
             <span className="text-muted fs-6">
-              {weapons.primary.weapon.name}
+              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name} />
             </span>
             <br />
-            {weapons.primary.weapon.no_attach ? (
-              <>
-                <span className="fw-bolder fs-5">Primary Attachments: </span>
-                <br />
-                <span className="text-muted fs-6">No Attachments</span>
-              </>
-            ) : (
-              <>
-                <span className="fw-bolder fs-5">Primary Attachments:</span>
-                <br />
-                <span className="text-muted fs-6">
-                  {weapons.primary.attachments}
-                </span>
-              </>
-            )}
+            <span className="fw-bolder fs-5">Primary Attachments:</span>
+            <br />
+            <span className="text-muted fs-6">
+              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.no_attach ? "No Attachments" : weapons.primary.attachments} />
+            </span>
           </Col>
           <Col xs md="8" lg="6" className="text-center">
             <span className="fw-bolder fs-5">Secondary:</span> <br />
             <span className="text-muted fs-6">
-              {weapons.secondary.weapon.name}
+              <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.weapon.name} />
             </span>
             <br />
-            {weapons.secondary.weapon.no_attach ? (
-              <>
-                <span className="fw-bolder fs-5">Secondary Attachments: </span>
-                <br />
-                <span className="text-muted fs-6">No Attachments</span>
-              </>
-            ) : (
-              <>
-                <span className="fw-bolder fs-5">Secondary Attachments:</span>
-                <br />
-                <span className="text-muted fs-6">
-                  {weapons.secondary.attachments}
-                </span>
-              </>
-            )}
+            <span className="fw-bolder fs-5">Secondary Attachments:</span>
+            <br />
+            <span className="text-muted fs-6">
+              <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.weapon.no_attach ? "No Attachments" : weapons.secondary.attachments} />
+            </span>
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="4" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">{equipment.tactical.name}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={equipment.tactical.name} /></span>
           </Col>
           <Col xs md="4" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">{equipment.lethal.name}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={equipment.lethal.name} /></span>
           </Col>
           <Col xs md="4" lg="3" className="text-center">
             <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
             <span className="text-muted fs-6">
-              {equipment.fieldUpgrade.name}
+              <CodPlaceholder isLoading={isGenerating} value={equipment.fieldUpgrade.name} />
             </span>
           </Col>
         </Row>
         <Row className="justify-content-md-center">
           <Col xs md="8" lg="6" className="text-center">
-            <Button variant="danger" href="#" onClick={handleClick}>
-              Generate Loadout
+            <Button
+              variant="danger"
+              disabled={isGenerating}
+              onClick={isGenerating ? undefined : handleClick}
+            >
+              {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
             </Button>
           </Col>
         </Row>

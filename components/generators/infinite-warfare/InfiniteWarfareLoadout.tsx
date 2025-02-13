@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import CodPlaceholder from "@/components/CodPlaceholder";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
@@ -20,6 +21,7 @@ const defaultWeapon = { name: "", type: "", game: "", no_attach: false };
 
 function InfiniteWarfareLoadout() {
   const [containerClass, setContainerClass] = useState("hidden");
+  const [isGenerating, setIsGenerating] = useState(true);
   const [data, setData] = useState({
     randClassName: "",
     perks: {
@@ -53,10 +55,21 @@ function InfiniteWarfareLoadout() {
 
   useEffect(() => {
     fetchLoadoutData(setData, setContainerClass);
+    setIsGenerating(false);
   }, []);
 
   const handleClick = async () => {
-    fetchLoadoutData(setData, setContainerClass);
+    setIsGenerating(true);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+
+    setTimeout(() => {
+      fetchLoadoutData(setData, setContainerClass);
+      setIsGenerating(false);
+    }, 1000);
   };
 
   const {
@@ -75,21 +88,24 @@ function InfiniteWarfareLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
-        <h3 className="text-center mb-5">&ldquo;{randClassName}&rdquo;</h3>
+        {!isGenerating && (
+          <>
+            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
+            <hr />
+          </>
+        )}
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Primary:</span> <br />
             <span className="text-muted fs-6">
-              {weapons.primary.weapon.name
-                ? weapons.primary.weapon.name
-                : "None"}
+              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name ? weapons.primary.weapon.name : "None"} />
             </span>
             <br />
             <span className="fw-bolder fs-5">Primary Optic:</span>
             <br />
             <span className="text-muted fs-6">
               <span className="text-muted fs-6">
-                {weapons.primary.optic ? weapons.primary.optic : "None"}
+                <CodPlaceholder isLoading={isGenerating} value={weapons.primary.optic ? weapons.primary.optic : "None"} />
               </span>
             </span>
             <br />
@@ -97,25 +113,21 @@ function InfiniteWarfareLoadout() {
             <br />
             <span className="text-muted fs-6">
               <span className="text-muted fs-6">
-                {weapons.primary.attachments
-                  ? weapons.primary.attachments
-                  : "None"}
+                <CodPlaceholder isLoading={isGenerating} value={weapons.primary.attachments ? weapons.primary.attachments : "None"} />
               </span>
             </span>
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Secondary:</span> <br />
             <span className="text-muted fs-6">
-              {weapons.secondary.weapon.name
-                ? weapons.secondary.weapon.name
-                : "None"}
+              <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.weapon.name ? weapons.secondary.weapon.name : "None"} />
             </span>
             <br />
             <span className="fw-bolder fs-5">Secondary Optic:</span>
             <br />
             <span className="text-muted fs-6">
               <span className="text-muted fs-6">
-                {weapons.secondary.optic ? weapons.secondary.optic : "None"}
+                <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.optic ? weapons.secondary.optic : "None"} />
               </span>
             </span>
             <br />
@@ -123,9 +135,7 @@ function InfiniteWarfareLoadout() {
             <br />
             <span className="text-muted fs-6">
               <span className="text-muted fs-6">
-                {weapons.secondary.attachments
-                  ? weapons.secondary.attachments
-                  : "None"}
+                <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.attachments ? weapons.secondary.attachments : "None"} />
               </span>
             </span>
           </Col>
@@ -135,13 +145,13 @@ function InfiniteWarfareLoadout() {
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Lethal:</span> <br />
             <span className="text-muted fs-6">
-              {equipment.lethal ? equipment.lethal : "None"}
+              <CodPlaceholder isLoading={isGenerating} value={equipment.lethal ? equipment.lethal : "None"} />
             </span>
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <span className="fw-bolder fs-5">Tactical:</span> <br />
             <span className="text-muted fs-6">
-              {equipment.tactical ? equipment.tactical : "None"}
+              <CodPlaceholder isLoading={isGenerating} value={equipment.tactical ? equipment.tactical : "None"} />
             </span>
           </Col>
         </Row>
@@ -150,11 +160,11 @@ function InfiniteWarfareLoadout() {
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Perk 1:</span> <br />
             <span className="text-muted fs-6">
-              {perks.perk1 ? perks.perk1 : "None"}
+              <CodPlaceholder isLoading={isGenerating} value={perks.perk1 ? perks.perk1 : "None"} />
               {perks.perk1Greed ? (
                 <>
                   <br />
-                  {perks.perk1Greed}
+                  <CodPlaceholder isLoading={isGenerating} value={perks.perk1Greed} />
                 </>
               ) : null}
             </span>
@@ -162,11 +172,11 @@ function InfiniteWarfareLoadout() {
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Perk 2:</span> <br />
             <span className="text-muted fs-6">
-              {perks.perk2 ? perks.perk2 : "None"}
+              <CodPlaceholder isLoading={isGenerating} value={perks.perk2 ? perks.perk2 : "None"} />
               {perks.perk2Greed ? (
                 <>
                   <br />
-                  {perks.perk2Greed}
+                  <CodPlaceholder isLoading={isGenerating} value={perks.perk2Greed} />
                 </>
               ) : null}
             </span>
@@ -174,11 +184,11 @@ function InfiniteWarfareLoadout() {
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Perk 3:</span> <br />
             <span className="text-muted fs-6">
-              {perks.perk3 ? perks.perk3 : "None"}
+              <CodPlaceholder isLoading={isGenerating} value={perks.perk3 ? perks.perk3 : "None"} />
               {perks.perk3Greed ? (
                 <>
                   <br />
-                  {perks.perk3Greed}
+                  <CodPlaceholder isLoading={isGenerating} value={perks.perk3Greed} />
                 </>
               ) : null}
             </span>
@@ -189,24 +199,28 @@ function InfiniteWarfareLoadout() {
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Combat Rig:</span> <br />
             <span className="text-muted fs-6">
-              {specialist ? specialist : "None"}
+              <CodPlaceholder isLoading={isGenerating} value={specialist ? specialist : "None"} />
             </span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Wildcards:</span> <br />
             <span className="text-muted fs-6">
-              {wildcards ? wildcards : "None"}
+              <CodPlaceholder isLoading={isGenerating} value={wildcards ? wildcards : "None"} />
             </span>
           </Col>
           <Col sm className="text-center">
             <span className="fw-bolder fs-5">Streaks:</span> <br />
-            <span className="text-muted fs-6">{streaks}</span>
+            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={streaks} /></span>
           </Col>
         </Row>
         <Row id="button-row">
           <Col className="text-center">
-            <Button variant="infinite-warfare" href="#" onClick={handleClick}>
-              Generate Loadout
+            <Button
+              variant="infinite-warfare"
+              disabled={isGenerating}
+              onClick={isGenerating ? undefined : handleClick}
+            >
+              {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
             </Button>
           </Col>
         </Row>

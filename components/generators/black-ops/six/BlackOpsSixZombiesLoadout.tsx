@@ -17,6 +17,7 @@ import { Bo6ZombiesSettings } from "@/types/Generator";
 //Components
 import CustomModal from "@/components/bootstrap/CustomModal";
 import CodPlaceholder from "@/components/CodPlaceholder";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 
@@ -49,7 +50,7 @@ function BlackOpsSixZombiesLoadout() {
       melee: { name: "", type: "", game: "" },
     },
     equipment: {
-      tactial: { name: "", type: "" },
+      tactical: { name: "", type: "" },
       lethal: { name: "", type: "" },
       fieldUpgrade: { name: "", type: "" },
     },
@@ -136,74 +137,41 @@ function BlackOpsSixZombiesLoadout() {
         )}
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="6" className="text-center">
-            <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name} />
-            </span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Primary" value={weapons.primary.weapon.name} />
             <br />
-            <span className="fw-bolder fs-5">Ammo Mod:</span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Ammo Mod" value={weapons.primary.ammoMod} />
             <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.ammoMod} />
-            </span>
-            <br />
-            {weapons.primary.weapon.no_attach ? (
-              <>
-                <span className="fw-bolder fs-5">Primary Attachments: </span>
-                <br />
-                <span className="text-muted fs-6">No Attachments</span>
-              </>
-            ) : (
-              <>
-                <span className="fw-bolder fs-5">Primary Attachments:</span>
-                <br />
-                <span className="text-muted fs-6">
-                  <CodPlaceholder isLoading={isGenerating} value={weapons.primary.attachments} />
-                </span>
-              </>
-            )}
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary Attachments"
+              value={weapons.primary.weapon.no_attach ? "No Attachments" : weapons.primary.attachments} />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col xs={6} sm={6} md="3" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Melee:</span> <br />
-            <span className="text-muted fs-6">
-
-              <CodPlaceholder isLoading={isGenerating} value={weapons.melee.name} />
-            </span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Melee" value={weapons.melee.name} />
           </Col>
           <Col xs={6} sm={6} md="3" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={equipment.fieldUpgrade.name} />
-            </span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Field Upgrade" value={equipment.fieldUpgrade.name} />
           </Col>
           <Col xs={6} md="3" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={equipment.tactial.name} />
-            </span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Tactical" value={equipment.tactical.name} />
           </Col>
           <Col xs={6} md="3" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={equipment.lethal.name} /></span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Lethal" value={equipment.lethal.name} />
           </Col>
         </Row>
         {(rollGobblegum || rollMap) && <hr />}
         <Row className="justify-content-md-center mb-4">
           {rollGobblegum && (
             <Col xs md="4" lg="3" className="text-center">
-              <span className="fw-bolder fs-5">Gobblegum:</span> <br />
-              <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={gobblegum} /></span>
+              <SimpleGeneratorView isGenerating={isGenerating} title="Gobblegum" value={gobblegum} />
             </Col>
           )}
           {rollMap && (
             <Col xs md="4" lg="3" className="text-center">
-              <span className="fw-bolder fs-5">Map:</span> <br />
-              <span className="text-muted fs-6">
-                <CodPlaceholder isLoading={isGenerating} value={zombieMap} />
-              </span>
+              <SimpleGeneratorView isGenerating={isGenerating} title="Map" value={zombieMap} />
             </Col>
           )}
         </Row>
@@ -325,7 +293,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       );
     }
     const equipment = {
-      tactial: fetchEquipment("tactical", game),
+      tactical: fetchEquipment("tactical", game),
       lethal: fetchEquipment("lethal", game),
       fieldUpgrade: fetchEquipment("field_upgrade", game),
     };

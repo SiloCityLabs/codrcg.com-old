@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import CodPlaceholder from "@/components/CodPlaceholder";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
@@ -75,58 +76,41 @@ function BlackOpsSixLoadout() {
         )}
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name} />
-            </span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Primary" value={weapons.primary.weapon.name} />
             <br />
-            <span className="fw-bolder fs-5">Primary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.no_attach ? "No Attachments" : weapons.primary.attachments} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary Attachments"
+              value={weapons.primary.weapon.no_attach ? "No Attachments" : weapons.primary.attachments} />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Secondary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.weapon.name} />
-            </span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Secondary" value={weapons.secondary.weapon.name} />
             <br />
-            <span className="fw-bolder fs-5">Secondary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.weapon.no_attach ? "No Attachments" : weapons.secondary.attachments} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Secondary Attachments"
+              value={weapons.secondary.weapon.no_attach ? "No Attachments" : weapons.secondary.attachments} />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Melee:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.melee.name} />
-            </span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Melee" value={weapons.melee.name} />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={equipment.tactical.name} /></span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Tactical" value={equipment.tactical.name} />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={equipment.lethal.name} /></span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Lethal" value={equipment.lethal.name} />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perks:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={perks} /></span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Perks" value={perks} />
           </Col>
         </Row>
         <hr />
         <Row className="mb-5">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={equipment.fieldUpgrade.name} />
-            </span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Field Upgrade" value={equipment.fieldUpgrade.name} />
             {wildcard.name === "Prepper" && (
               <>
                 <br />
@@ -137,12 +121,10 @@ function BlackOpsSixLoadout() {
             )}
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Wildcard:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={wildcard.name} /></span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Wildcard" value={wildcard.name} />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Streaks:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={streaks} /></span>
+            <SimpleGeneratorView isGenerating={isGenerating} title="Streaks" value={streaks} />
           </Col>
         </Row>
         <Row id="button-row">

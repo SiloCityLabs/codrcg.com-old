@@ -79,7 +79,7 @@ function BlackOpsSixZombiesLoadout() {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
 
     setTimeout(() => {
@@ -137,41 +137,78 @@ function BlackOpsSixZombiesLoadout() {
         )}
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="6" className="text-center">
-            <SimpleGeneratorView isGenerating={isGenerating} title="Primary" value={weapons.primary.weapon.name} />
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary"
+              value={weapons.primary.weapon.name}
+            />
             <br />
-            <SimpleGeneratorView isGenerating={isGenerating} title="Ammo Mod" value={weapons.primary.ammoMod} />
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Ammo Mod"
+              value={weapons.primary.ammoMod}
+            />
             <br />
             <SimpleGeneratorView
               isGenerating={isGenerating}
               title="Primary Attachments"
-              value={weapons.primary.weapon.no_attach ? "No Attachments" : weapons.primary.attachments} />
+              value={
+                weapons.primary.weapon.no_attach
+                  ? "No Attachments"
+                  : weapons.primary.attachments
+              }
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col xs={6} sm={6} md="3" lg="3" className="text-center">
-            <SimpleGeneratorView isGenerating={isGenerating} title="Melee" value={weapons.melee.name} />
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Melee"
+              value={weapons.melee.name}
+            />
           </Col>
           <Col xs={6} sm={6} md="3" lg="3" className="text-center">
-            <SimpleGeneratorView isGenerating={isGenerating} title="Field Upgrade" value={equipment.fieldUpgrade.name} />
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Field Upgrade"
+              value={equipment.fieldUpgrade.name}
+            />
           </Col>
           <Col xs={6} md="3" lg="3" className="text-center">
-            <SimpleGeneratorView isGenerating={isGenerating} title="Tactical" value={equipment.tactical.name} />
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Tactical"
+              value={equipment.tactical.name}
+            />
           </Col>
           <Col xs={6} md="3" lg="3" className="text-center">
-            <SimpleGeneratorView isGenerating={isGenerating} title="Lethal" value={equipment.lethal.name} />
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Lethal"
+              value={equipment.lethal.name}
+            />
           </Col>
         </Row>
         {(rollGobblegum || rollMap) && <hr />}
         <Row className="justify-content-md-center mb-4">
           {rollGobblegum && (
             <Col xs md="4" lg="3" className="text-center">
-              <SimpleGeneratorView isGenerating={isGenerating} title="Gobblegum" value={gobblegum} />
+              <SimpleGeneratorView
+                isGenerating={isGenerating}
+                title="Gobblegum"
+                value={gobblegum}
+              />
             </Col>
           )}
           {rollMap && (
             <Col xs md="4" lg="3" className="text-center">
-              <SimpleGeneratorView isGenerating={isGenerating} title="Map" value={zombieMap} />
+              <SimpleGeneratorView
+                isGenerating={isGenerating}
+                title="Map"
+                value={zombieMap}
+              />
             </Col>
           )}
         </Row>
@@ -191,12 +228,18 @@ function BlackOpsSixZombiesLoadout() {
                   <br />
                   <span className="text-muted fs-6">
                     <span className="fw-bolder">Major Augment:</span>{" "}
-                    <CodPlaceholder isLoading={isGenerating} value={item?.major} />
+                    <CodPlaceholder
+                      isLoading={isGenerating}
+                      value={item?.major}
+                    />
                   </span>
                   <br />
                   <span className="text-muted fs-6">
                     <span className="fw-bolder">Minor Augment:</span>{" "}
-                    <CodPlaceholder isLoading={isGenerating} value={item?.minor} />
+                    <CodPlaceholder
+                      isLoading={isGenerating}
+                      value={item?.minor}
+                    />
                   </span>
                 </Col>
               ))}
@@ -220,7 +263,7 @@ function BlackOpsSixZombiesLoadout() {
                 disabled={isGenerating}
                 onClick={isGenerating ? undefined : handleClick}
               >
-                {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
+                {isGenerating ? "Generating Loadout..." : "Generate Loadout"}
               </Button>
             </div>
           </Col>

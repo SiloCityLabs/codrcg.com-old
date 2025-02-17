@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import CodPlaceholder from "@/components/CodPlaceholder";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
@@ -41,7 +42,7 @@ function VanguardZombiesLoadout() {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
 
     setTimeout(() => {
@@ -70,31 +71,45 @@ function VanguardZombiesLoadout() {
         )}
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="6" className="text-center">
-            <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary"
+              value={weapons.primary.weapon.name}
+            />
             <br />
-            <span className="fw-bolder fs-5">Primary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.no_attach ? "No Attachments" : weapons.primary.attachments} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary Attachments"
+              value={
+                weapons.primary.weapon.no_attach
+                  ? "No Attachments"
+                  : weapons.primary.attachments
+              }
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col xs="12" md="4" lg="3" className="text-center mb-2">
-            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={field_upgrade} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Field Upgrade"
+              value={field_upgrade}
+            />
           </Col>
           <Col xs="12" md="4" lg="3" className="text-center mb-2">
-            <span className="fw-bolder fs-5">Mode:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombieMap.mode} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Mode"
+              value={zombieMap.mode}
+            />
           </Col>
           <Col xs="12" md="4" lg="3" className="text-center mb-2">
-            <span className="fw-bolder fs-5">Map:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombieMap.name} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Map"
+              value={zombieMap.name}
+            />
           </Col>
         </Row>
         <Row className="justify-content-md-center">
@@ -104,7 +119,7 @@ function VanguardZombiesLoadout() {
               disabled={isGenerating}
               onClick={isGenerating ? undefined : handleClick}
             >
-              {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
+              {isGenerating ? "Generating Loadout..." : "Generate Loadout"}
             </Button>
           </Col>
         </Row>

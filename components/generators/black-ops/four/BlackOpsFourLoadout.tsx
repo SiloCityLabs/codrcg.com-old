@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import CodPlaceholder from "@/components/CodPlaceholder";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
+import PerkGreedGeneratorView from "@/components/generators/cod/PerkGreedGeneratorView";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
@@ -63,7 +65,7 @@ function BlackOpsFourLoadout() {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
 
     setTimeout(() => {
@@ -96,121 +98,134 @@ function BlackOpsFourLoadout() {
         )}
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name ? weapons.primary.weapon.name : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary"
+              value={
+                weapons.primary.weapon.name
+                  ? weapons.primary.weapon.name
+                  : "None"
+              }
+            />
             <br />
-            <span className="fw-bolder fs-5">Primary Optic:</span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary Optic"
+              value={weapons.primary.optic ? weapons.primary.optic : "None"}
+            />
             <br />
-            <span className="text-muted fs-6">
-              <span className="text-muted fs-6">
-                <CodPlaceholder isLoading={isGenerating} value={weapons.primary.optic ? weapons.primary.optic : "None"} />
-              </span>
-            </span>
-            <br />
-            <span className="fw-bolder fs-5">Primary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <span className="text-muted fs-6">
-                <CodPlaceholder isLoading={isGenerating} value={weapons.primary.attachments ? weapons.primary.attachments : "None"} />
-              </span>
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary Attachments"
+              value={
+                weapons.primary.attachments
+                  ? weapons.primary.attachments
+                  : "None"
+              }
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Secondary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.weapon.name ? weapons.secondary.weapon.name : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Secondary"
+              value={
+                weapons.secondary.weapon.name
+                  ? weapons.secondary.weapon.name
+                  : "None"
+              }
+            />
             <br />
-            <span className="fw-bolder fs-5">Secondary Optic:</span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Secondary Optic"
+              value={weapons.secondary.optic ? weapons.secondary.optic : "None"}
+            />
             <br />
-            <span className="text-muted fs-6">
-              <span className="text-muted fs-6">
-                <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.optic ? weapons.secondary.optic : "None"} />
-              </span>
-            </span>
-            <br />
-            <span className="fw-bolder fs-5">Secondary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <span className="text-muted fs-6">
-                <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.attachments ? weapons.secondary.attachments : "None"} />
-              </span>
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Secondary Attachments"
+              value={
+                weapons.secondary.attachments
+                  ? weapons.secondary.attachments
+                  : "None"
+              }
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Gear:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={equipment.gear ? equipment.gear : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Gear"
+              value={equipment.gear ? equipment.gear : "None"}
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Equipment:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={equipment.equipment ? equipment.equipment : `Special Issue (${specialist?.equipment})`} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Equipment"
+              value={
+                equipment.equipment
+                  ? equipment.equipment
+                  : `Special Issue (${specialist?.equipment})`
+              }
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center">
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perk 1:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={perks.perk1 ? perks.perk1 : "None"} />
-              {perks.perk1Greed ? (
-                <>
-                  <br />
-                  <CodPlaceholder isLoading={isGenerating} value={perks.perk1Greed} />
-                </>
-              ) : null}
-            </span>
+            <PerkGreedGeneratorView
+              isGenerating={isGenerating}
+              title="Perk 1"
+              perk={perks.perk1}
+              perkGreed={perks.perk1Greed}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perk 2:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={perks.perk2 ? perks.perk2 : "None"} />
-              {perks.perk2Greed ? (
-                <>
-                  <br />
-                  <CodPlaceholder isLoading={isGenerating} value={perks.perk2Greed} />
-                </>
-              ) : null}
-            </span>
+            <PerkGreedGeneratorView
+              isGenerating={isGenerating}
+              title="Perk 2"
+              perk={perks.perk2}
+              perkGreed={perks.perk2Greed}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perk 3:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={perks.perk3 ? perks.perk3 : "None"} />
-              {perks.perk3Greed ? (
-                <>
-                  <br />
-                  <CodPlaceholder isLoading={isGenerating} value={perks.perk3Greed} />
-                </>
-              ) : null}
-            </span>
+            <PerkGreedGeneratorView
+              isGenerating={isGenerating}
+              title="Perk 3"
+              perk={perks.perk3}
+              perkGreed={perks.perk3Greed}
+            />
           </Col>
         </Row>
         <hr />
         <Row className="mb-5">
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Specialist:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={specialist ? `${specialist?.name} - ${specialist?.weapon}` : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Specialist"
+              value={
+                specialist
+                  ? `${specialist?.name} - ${specialist?.weapon}`
+                  : "None"
+              }
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Wildcards:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={wildcards ? wildcards : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Wildcards"
+              value={wildcards ? wildcards : "None"}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Streaks:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={streaks} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Streaks"
+              value={streaks}
+            />
           </Col>
         </Row>
         <Row id="button-row">
@@ -220,7 +235,7 @@ function BlackOpsFourLoadout() {
               disabled={isGenerating}
               onClick={isGenerating ? undefined : handleClick}
             >
-              {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
+              {isGenerating ? "Generating Loadout..." : "Generate Loadout"}
             </Button>
           </Col>
         </Row>

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import CodPlaceholder from "@/components/CodPlaceholder";
 import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Helpers
 import { implodeObject } from "../../../helpers/implodeObject";

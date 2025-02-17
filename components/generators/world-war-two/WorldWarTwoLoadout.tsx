@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import CodPlaceholder from "@/components/CodPlaceholder";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
@@ -47,7 +48,7 @@ function WorldWarTwoLoadout() {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
 
     setTimeout(() => {
@@ -72,70 +73,85 @@ function WorldWarTwoLoadout() {
         )}
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary"
+              value={weapons.primary.weapon.name}
+            />
             <br />
-            <span className="fw-bolder fs-5">Primary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.no_attach ? "No Attachments" : weapons.primary.attachments} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary Attachments"
+              value={
+                weapons.primary.weapon.no_attach
+                  ? "No Attachments"
+                  : weapons.primary.attachments
+              }
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Secondary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.weapon.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Secondary"
+              value={weapons.secondary.weapon.name}
+            />
             <br />
-            <span className="fw-bolder fs-5">Secondary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.weapon.no_attach ? "No Attachments" : weapons.secondary.attachments} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Secondary Attachments"
+              value={
+                weapons.secondary.weapon.no_attach
+                  ? "No Attachments"
+                  : weapons.secondary.attachments
+              }
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder
-                isLoading={isGenerating}
-                value={
-                  equipment.tactical.name +
-                  (basic === "Serrated" || basic === "Concussed" ? " x2" : "")
-                }
-              />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Tactical"
+              value={
+                equipment.tactical.name +
+                (basic === "Serrated" || basic === "Concussed" ? " x2" : "")
+              }
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder
-                isLoading={isGenerating}
-                value={
-                  equipment.lethal.name +
-                  (basic === "Saboteur" || basic === "Concussed" ? " x2" : "")
-                }
-              />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Lethal"
+              value={
+                equipment.lethal.name +
+                (basic === "Saboteur" || basic === "Concussed" ? " x2" : "")
+              }
+            />
           </Col>
         </Row>
         <hr />
         <Row className="mb-5">
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Division:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={division} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Division"
+              value={division}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Basic Training:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={basic} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Basic Training"
+              value={basic}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Streaks:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={streaks} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Streaks"
+              value={streaks}
+            />
           </Col>
         </Row>
         <Row id="button-row">
@@ -145,7 +161,7 @@ function WorldWarTwoLoadout() {
               disabled={isGenerating}
               onClick={isGenerating ? undefined : handleClick}
             >
-              {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
+              {isGenerating ? "Generating Loadout..." : "Generate Loadout"}
             </Button>
           </Col>
         </Row>

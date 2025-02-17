@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import CodPlaceholder from "@/components/CodPlaceholder";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Helpers
-import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
@@ -44,7 +43,7 @@ function WorldWarTwoZombiesLoadout() {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
 
     setTimeout(() => {
@@ -81,33 +80,49 @@ function WorldWarTwoZombiesLoadout() {
         )}
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="4" className="text-center">
-            <span className="fw-bolder fs-5">Character:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={character} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Character"
+              value={character}
+            />
           </Col>
           <Col xs md="8" lg="4" className="text-center">
-            <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary"
+              value={weapons.primary.weapon.name}
+            />
           </Col>
           <Col xs md="8" lg="4" className="text-center">
-            <span className="fw-bolder fs-5">Special:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={special} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Special"
+              value={special}
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Mods:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={mods} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Mods"
+              value={mods}
+            />
           </Col>
           <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={lethal} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Lethal"
+              value={lethal}
+            />
           </Col>
           <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Map:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombieMap} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Map"
+              value={zombieMap}
+            />
           </Col>
         </Row>
         <Row className="justify-content-md-center">
@@ -117,7 +132,7 @@ function WorldWarTwoZombiesLoadout() {
               disabled={isGenerating}
               onClick={isGenerating ? undefined : handleClick}
             >
-              {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
+              {isGenerating ? "Generating Loadout..." : "Generate Loadout"}
             </Button>
           </Col>
         </Row>

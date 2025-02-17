@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import CodPlaceholder from "@/components/CodPlaceholder";
 import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 import PerkGreedGeneratorView from "@/components/generators/cod/PerkGreedGeneratorView";
 //Helpers
@@ -147,22 +146,18 @@ function ColdWarLoadout() {
         <hr />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder
-                isLoading={isGenerating}
-                value={equipment.tactical.name}
-              />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Tactical"
+              value={equipment.tactical.name}
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder
-                isLoading={isGenerating}
-                value={equipment.lethal.name}
-              />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Lethal"
+              value={equipment.lethal.name}
+            />
           </Col>
         </Row>
         <hr />

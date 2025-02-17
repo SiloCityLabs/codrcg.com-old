@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
-import CodPlaceholder from "@/components/CodPlaceholder";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Helpers
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
@@ -69,7 +69,7 @@ function BlackOpsFourZombiesLoadout() {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
 
     setTimeout(() => {
@@ -135,51 +135,63 @@ function BlackOpsFourZombiesLoadout() {
         )}
         <Row className="justify-content-md-center mb-4">
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Story:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={story.display} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Story"
+              value={story.display}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Special Weapon:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={weapons.special.name} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Special Weapon"
+              value={weapons.special.name}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Equipment:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={equipment} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Equipment"
+              value={equipment}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Starting Weapon:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={weapons.starting.name} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Starting Weapon"
+              value={weapons.starting.name}
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">
-              {story.key === "chaos_story" ? "DANU" : "BREW"}:
-            </span>
-            <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombiePerks[0]} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title={story.key === "chaos_story" ? "DANU" : "BREW"}
+              value={zombiePerks[0]}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">
-              {story.key === "chaos_story" ? "RA" : "COLA"}:
-            </span>
-            <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombiePerks[1]} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title={story.key === "chaos_story" ? "RA" : "COLA"}
+              value={zombiePerks[1]}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">
-              {story.key === "chaos_story" ? "ZEUS" : "SODA"}:
-            </span>
-            <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombiePerks[2]} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title={story.key === "chaos_story" ? "ZEUS" : "SODA"}
+              value={zombiePerks[2]}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">
-              {story.key === "chaos_story" ? "ODIN" : "TONIC"}:
-            </span>
-            <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombiePerks[3]} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title={story.key === "chaos_story" ? "ODIN" : "TONIC"}
+              value={zombiePerks[3]}
+            />
           </Col>
         </Row>
         {rollMap && (
@@ -187,19 +199,26 @@ function BlackOpsFourZombiesLoadout() {
             <hr />
             <Row className="justify-content-md-center mb-4">
               <Col xs md="4" lg="3" className="text-center">
-                <span className="fw-bolder fs-5">Mode:</span> <br />
-                <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombieMap?.mode} /></span>
+                <SimpleGeneratorView
+                  isGenerating={isGenerating}
+                  title="Mode"
+                  value={zombieMap?.mode}
+                />
               </Col>
               <Col xs md="4" lg="3" className="text-center">
-                <span className="fw-bolder fs-5">Map:</span> <br />
-                <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombieMap.name} /></span>
+                <SimpleGeneratorView
+                  isGenerating={isGenerating}
+                  title="Map"
+                  value={zombieMap.name}
+                />
               </Col>
               {zombieMap?.mode === "Classic" && (
                 <Col xs md="4" lg="3" className="text-center">
-                  <span className="fw-bolder fs-5">Difficulty:</span> <br />
-                  <span className="text-muted fs-6">
-                    <CodPlaceholder isLoading={isGenerating} value={zombieMap.difficulty} />
-                  </span>
+                  <SimpleGeneratorView
+                    isGenerating={isGenerating}
+                    title="Difficulty"
+                    value={zombieMap.difficulty}
+                  />
                 </Col>
               )}
             </Row>
@@ -209,14 +228,20 @@ function BlackOpsFourZombiesLoadout() {
         <Row className="justify-content-md-center mb-4">
           {rollTalisman && (
             <Col xs md="4" lg="3" className="text-center">
-              <span className="fw-bolder fs-5">Talisman:</span> <br />
-              <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={talisman} /></span>
+              <SimpleGeneratorView
+                isGenerating={isGenerating}
+                title="Talisman"
+                value={talisman}
+              />
             </Col>
           )}
           {rollElixers && (
             <Col xs md="4" lg="3" className="text-center">
-              <span className="fw-bolder fs-5">Elixers:</span> <br />
-              <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={elixers} /></span>
+              <SimpleGeneratorView
+                isGenerating={isGenerating}
+                title="Elixers"
+                value={elixers}
+              />
             </Col>
           )}
         </Row>
@@ -237,7 +262,7 @@ function BlackOpsFourZombiesLoadout() {
                 onClick={isGenerating ? undefined : handleClick}
                 className="w-50 me-2"
               >
-                {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
+                {isGenerating ? "Generating Loadout..." : "Generate Loadout"}
               </Button>
             </div>
           </Col>

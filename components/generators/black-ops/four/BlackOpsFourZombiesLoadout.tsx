@@ -3,6 +3,7 @@ import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Helpers
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
@@ -16,6 +17,8 @@ import { Bo4ZombiesSettings } from "@/types/Generator";
 import CustomModal from "@/components/bootstrap/CustomModal";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-zombies-generator-info.json";
 
 const defaultSettings: Bo4ZombiesSettings = {
   rollMap: true,
@@ -35,19 +38,7 @@ function BlackOpsFourZombiesLoadout() {
   const [showModal, setShowModal] = useState(false);
 
   //Data
-  const [data, setData] = useState({
-    randClassName: "",
-    story: { key: "", display: "" },
-    weapons: {
-      special: { name: "", type: "", game: "", no_attach: false },
-      starting: { name: "", type: "", game: "", no_attach: false },
-    },
-    equipment: "",
-    elixers: "",
-    talisman: "",
-    zombieMap: { name: "", type: "", game: "", mode: "", difficulty: "" },
-    zombiePerks: [],
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     const storedSettings = getLocalStorage("bo4ZombiesSettings") ?? settings;
@@ -66,15 +57,11 @@ function BlackOpsFourZombiesLoadout() {
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
 
     setTimeout(() => {
       fetchLoadoutData(setData, setContainerClass);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
@@ -152,7 +139,7 @@ function BlackOpsFourZombiesLoadout() {
             <SimpleGeneratorView
               isGenerating={isGenerating}
               title="Equipment"
-              value={equipment}
+              value={equipment.lethal.name}
             />
           </Col>
           <Col sm className="text-center">
@@ -333,7 +320,9 @@ async function fetchLoadoutData(setData, setContainerClass) {
       special: fetchWeapon("all", `${story_key}-${game}`),
     };
 
-    const equipment = fetchEquipment("lethal", game).name;
+    const equipment = {
+      "lethal": fetchEquipment("lethal", game),
+    };
 
     const elixers = fetchZombiesGobblegum(game);
     const talisman = fetchZombiesGobblegum(`${game}-talismans`, 1);

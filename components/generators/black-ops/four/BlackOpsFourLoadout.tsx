@@ -4,6 +4,7 @@ import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView
 import PerkGreedGeneratorView from "@/components/generators/cod/PerkGreedGeneratorView";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchStreaks } from "@/helpers/fetch/fetchStreaks";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
@@ -17,71 +18,46 @@ import { getLoadoutFrame } from "@/helpers/generator/black-ops/four/frame/getLoa
 import { LoadoutFrame } from "@/types/BlackOps4";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-generator-info.json";
 
 const defaultWeapon = { name: "", type: "", game: "", no_attach: false };
 
 function BlackOpsFourLoadout() {
+  const [isLoading, setIsLoading] = useState(true);
   const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
-  const [data, setData] = useState({
-    randClassName: "",
-    perks: {
-      perk1: "",
-      perk2: "",
-      perk3: "",
-      perk1Greed: "",
-      perk2Greed: "",
-      perk3Greed: "",
-    },
-    streaks: null,
-    weapons: {
-      primary: {
-        weapon: defaultWeapon,
-        optic: "",
-        attachments: "",
-      },
-      secondary: {
-        weapon: defaultWeapon,
-        optic: "",
-        attachments: "",
-      },
-    },
-    equipment: {
-      gear: "",
-      equipment: "",
-    },
-    wildcards: "",
-    specialist: { name: "", weapon: "", equipment: "" },
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     fetchLoadoutData(setData, setContainerClass);
     setIsGenerating(false);
+    setIsLoading(false);
   }, []);
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
 
     setTimeout(() => {
       fetchLoadoutData(setData, setContainerClass);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
   const {
     randClassName,
-    perks,
+    perkObj,
     streaks,
     weapons,
     equipment,
     wildcards,
     specialist,
   } = data;
+
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+  }
 
   return (
     <>
@@ -178,24 +154,24 @@ function BlackOpsFourLoadout() {
             <PerkGreedGeneratorView
               isGenerating={isGenerating}
               title="Perk 1"
-              perk={perks.perk1}
-              perkGreed={perks.perk1Greed}
+              perk={perkObj.perk1}
+              perkGreed={perkObj.perk1Greed}
             />
           </Col>
           <Col sm className="text-center">
             <PerkGreedGeneratorView
               isGenerating={isGenerating}
               title="Perk 2"
-              perk={perks.perk2}
-              perkGreed={perks.perk2Greed}
+              perk={perkObj.perk2}
+              perkGreed={perkObj.perk2Greed}
             />
           </Col>
           <Col sm className="text-center">
             <PerkGreedGeneratorView
               isGenerating={isGenerating}
               title="Perk 3"
-              perk={perks.perk3}
-              perkGreed={perks.perk3Greed}
+              perk={perkObj.perk3}
+              perkGreed={perkObj.perk3Greed}
             />
           </Col>
         </Row>
@@ -305,7 +281,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
         : "",
     };
 
-    const perks = { ...initialPerks, ...perkGreed };
+    const perkObj = { ...initialPerks, ...perkGreed };
 
     const streaks = fetchStreaks(game);
     let weapons = {
@@ -401,7 +377,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
 
     setData({
       randClassName,
-      perks,
+      perkObj,
       streaks,
       weapons,
       equipment,

@@ -1,5 +1,34 @@
 {
+  "augments": {
+    "0": {
+      "name": "",
+      "major": "",
+      "minor": ""
+    }
+  },
+  "elixers": "",
+  "equipment": {
+    "tactical": {
+      "name": "",
+      "type": ""
+    },
+    "lethal": {
+      "name": "",
+      "type": ""
+    },
+    "fieldUpgrade": {
+      "name": "",
+      "type": ""
+    }
+  },
+  "field_upgrade": "",
+  "gobblegum": "",
   "randClassName": "",
+  "story": {
+    "key": "",
+    "display": ""
+  },
+  "talisman": "",
   "weapons": {
     "primary": {
       "weapon": {
@@ -15,35 +44,26 @@
       "name": "",
       "type": "",
       "game": ""
+    },
+    "special": {
+      "name": "",
+      "type": "",
+      "game": "",
+      "no_attach": false
+    },
+    "starting": {
+      "name": "",
+      "type": "",
+      "game": "",
+      "no_attach": false
     }
   },
-  "equipment": {
-    "tactical": {
-      "name": "",
-      "type": ""
-    },
-    "lethal": {
-      "name": "",
-      "type": ""
-    },
-    "fieldUpgrade": {
-      "name": "",
-      "type": ""
-    }
-  },
-  "gobblegum": "",
-  "field_upgrade": "",
   "zombieMap": {
     "name": "",
     "type": "",
     "mode": "",
-    "game": ""
+    "game": "",
+    "difficulty": ""
   },
-  "augments": {
-    "0": {
-      "name": "",
-      "major": "",
-      "minor": ""
-    }
-  }
+  "zombiePerks": []
 }

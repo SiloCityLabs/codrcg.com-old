@@ -18,6 +18,7 @@
         "game": "",
         "no_attach": false
       },
+      "optic": "",
       "attachments": ""
     },
     "secondary": {
@@ -27,6 +28,7 @@
         "game": "",
         "no_attach": false
       },
+      "optic": "",
       "attachments": ""
     },
     "melee": {
@@ -51,10 +53,18 @@
     "fieldUpgrade2": {
       "name": "",
       "type": ""
-    }
+    },
+    "gear": "",
+    "equipment": ""
   },
   "wildcard": {
     "name": "",
     "type": ""
+  },
+  "wildcards": null,
+  "specialist": {
+    "name": "",
+    "weapon": "",
+    "equipment": ""
   }
 }

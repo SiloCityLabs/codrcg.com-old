@@ -4,6 +4,7 @@ import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView
 import PerkGreedGeneratorView from "@/components/generators/cod/PerkGreedGeneratorView";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchStreaks } from "@/helpers/fetch/fetchStreaks";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
@@ -17,71 +18,46 @@ import { getLoadoutFrame } from "@/helpers/generator/infinite-warfare/frame/getL
 import { LoadoutFrame } from "@/types/BlackOps3";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-generator-info.json";
 
 const defaultWeapon = { name: "", type: "", game: "", no_attach: false };
 
 function InfiniteWarfareLoadout() {
+  const [isLoading, setIsLoading] = useState(true);
   const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
-  const [data, setData] = useState({
-    randClassName: "",
-    perks: {
-      perk1: "",
-      perk2: "",
-      perk3: "",
-      perk1Greed: "",
-      perk2Greed: "",
-      perk3Greed: "",
-    },
-    streaks: null,
-    weapons: {
-      primary: {
-        weapon: defaultWeapon,
-        optic: "",
-        attachments: "",
-      },
-      secondary: {
-        weapon: defaultWeapon,
-        optic: "",
-        attachments: "",
-      },
-    },
-    equipment: {
-      tactical: "",
-      lethal: "",
-    },
-    wildcards: "",
-    specialist: "",
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     fetchLoadoutData(setData, setContainerClass);
     setIsGenerating(false);
+    setIsLoading(false);
   }, []);
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
 
     setTimeout(() => {
       fetchLoadoutData(setData, setContainerClass);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
   const {
     randClassName,
-    perks,
+    perkObj,
     streaks,
     weapons,
     equipment,
     wildcards,
-    specialist,
+    combat_rig,
   } = data;
+
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+  }
 
   return (
     <>
@@ -157,14 +133,14 @@ function InfiniteWarfareLoadout() {
             <SimpleGeneratorView
               isGenerating={isGenerating}
               title="Lethal"
-              value={equipment.lethal ? equipment.lethal : "None"}
+              value={equipment.lethal.name ? equipment.lethal.name : "None"}
             />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <SimpleGeneratorView
               isGenerating={isGenerating}
               title="Tactical"
-              value={equipment.tactical ? equipment.tactical : "None"}
+              value={equipment.tactical.name ? equipment.tactical.name : "None"}
             />
           </Col>
         </Row>
@@ -174,24 +150,24 @@ function InfiniteWarfareLoadout() {
             <PerkGreedGeneratorView
               isGenerating={isGenerating}
               title="Perk 1"
-              perk={perks.perk1}
-              perkGreed={perks.perk1Greed}
+              perk={perkObj.perk1}
+              perkGreed={perkObj.perk1Greed}
             />
           </Col>
           <Col sm className="text-center">
             <PerkGreedGeneratorView
               isGenerating={isGenerating}
               title="Perk 2"
-              perk={perks.perk2}
-              perkGreed={perks.perk2Greed}
+              perk={perkObj.perk2}
+              perkGreed={perkObj.perk2Greed}
             />
           </Col>
           <Col sm className="text-center">
             <PerkGreedGeneratorView
               isGenerating={isGenerating}
               title="Perk 3"
-              perk={perks.perk3}
-              perkGreed={perks.perk3Greed}
+              perk={perkObj.perk3}
+              perkGreed={perkObj.perk3Greed}
             />
           </Col>
         </Row>
@@ -201,7 +177,7 @@ function InfiniteWarfareLoadout() {
             <SimpleGeneratorView
               isGenerating={isGenerating}
               title="Combat Rig"
-              value={specialist ? specialist : "None"}
+              value={combat_rig ? combat_rig : "None"}
             />
           </Col>
           <Col sm className="text-center">
@@ -269,7 +245,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
         : "",
     };
 
-    const perks = { ...initialPerks, ...perkGreed };
+    const perkObj = { ...initialPerks, ...perkGreed };
 
     const streaks = fetchStreaks(game);
     let weapons = {
@@ -342,28 +318,34 @@ async function fetchLoadoutData(setData, setContainerClass) {
 
     let equipment = {
       tactical:
-        loadoutFrame.tactical > 0 ? fetchEquipment("tactical", game).name : "",
-      lethal: loadoutFrame.lethal ? fetchEquipment("lethal", game).name : "",
+        loadoutFrame.tactical > 0 ? fetchEquipment("tactical", game) : {
+          "name": "",
+          "type": ""
+        },
+      lethal: loadoutFrame.lethal ? fetchEquipment("lethal", game) : {
+        "name": "",
+        "type": ""
+      },
     };
     //Check for x2 tacticals
-    equipment.tactical += loadoutFrame.tacticalx2 ? " x2" : "";
+    equipment.tactical.name += loadoutFrame.tacticalx2 ? " x2" : "";
     //Check for danger close
-    equipment.lethal += loadoutFrame.dangerClose ? " x2" : "";
+    equipment.lethal.name += loadoutFrame.dangerClose ? " x2" : "";
 
     const wildcards = loadoutFrame?.wildcards.join(", ");
     const rig = fetchSpecialist(game);
     const payload = rig?.payload?.[Math.floor(Math.random() * 3)] ?? "";
     const trait = rig?.trait?.[Math.floor(Math.random() * 3)] ?? "";
-    const specialist = `${rig.name} - ${trait} - ${payload}`;
+    const combat_rig = `${rig.name} - ${trait} - ${payload}`;
 
     setData({
       randClassName,
-      perks,
+      perkObj,
       streaks,
       weapons,
       equipment,
       wildcards,
-      specialist,
+      combat_rig,
     });
     setContainerClass("");
   } catch (error: any) {

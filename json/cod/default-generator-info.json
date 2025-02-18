@@ -1,0 +1,27 @@
+{
+  "randClassName": "",
+  "perks": null,
+  "streaks": null,
+  "weapons": {
+    "primary": {
+      "weapon": { "name": "", "type": "", "game": "", "no_attach": false },
+      "attachments": "",
+      "ammoMod": ""
+    },
+    "secondary": {
+      "weapon": { "name": "", "type": "", "game": "", "no_attach": false },
+      "attachments": ""
+    },
+    "melee": { "name": "", "type": "", "game": "" }
+  },
+  "equipment": {
+    "tactical": { "name": "", "type": "" },
+    "lethal": { "name": "", "type": "" },
+    "fieldUpgrade": { "name": "", "type": "" },
+    "fieldUpgrade2": { "name": "", "type": "" }
+  },
+  "wildcard": { "name": "", "type": "" },
+  "gobblegum": "",
+  "zombieMap": "",
+  "augments": { "0": { "name": "", "major": "", "minor": "" } }
+}

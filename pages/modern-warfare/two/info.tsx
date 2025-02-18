@@ -66,9 +66,13 @@ export default function ModernWarfareTwoInfo() {
                 title={card.title}
                 text={card.text}
                 variant="mw2"
-                btn1Text="View"
-                link={card.link}
-                disabled={false}
+                buttons={[
+                  {
+                    "link": card.link,
+                    "disabled": false,
+                    "btnText": "View"
+                  }
+                ]}
               />
             </Col>
           ))}

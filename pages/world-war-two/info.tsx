@@ -81,9 +81,13 @@ export default function WorldWarTwoInfo() {
                 title={card.title}
                 text={card.text}
                 variant="ww2"
-                btn1Text="View"
-                link={card.link}
-                disabled={false}
+                buttons={[
+                  {
+                    "link": card.link,
+                    "disabled": false,
+                    "btnText": "View"
+                  }
+                ]}
               />
             </Col>
           ))}

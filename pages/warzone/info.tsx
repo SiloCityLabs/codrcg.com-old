@@ -68,9 +68,13 @@ export default function WarzoneInfo() {
                 title={card.title}
                 text={card.text}
                 variant="success"
-                btn1Text="View"
-                link={card.link}
-                disabled={false}
+                buttons={[
+                  {
+                    "link": card.link,
+                    "disabled": false,
+                    "btnText": "View"
+                  }
+                ]}
               />
             </Col>
           ))}

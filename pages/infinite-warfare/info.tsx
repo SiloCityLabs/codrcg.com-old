@@ -71,9 +71,13 @@ export default function InfiniteWarfareInfo() {
                 title={card.title}
                 text={card.text}
                 variant="infinite-warfare"
-                btn1Text="View"
-                link={card.link}
-                disabled={false}
+                buttons={[
+                  {
+                    "link": card.link,
+                    "disabled": false,
+                    "btnText": "View"
+                  }
+                ]}
               />
             </Col>
           ))}

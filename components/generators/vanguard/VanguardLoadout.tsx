@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchPerks } from "@/helpers/fetch/fetchPerks";
 import { fetchStreaks } from "@/helpers/fetch/fetchStreaks";
@@ -11,51 +12,36 @@ import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-generator-info.json";
 
 function VanguardLoadout() {
+  const [isLoading, setIsLoading] = useState(true);
   const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
-  const [data, setData] = useState({
-    randClassName: "",
-    perks: null,
-    streaks: null,
-    weapons: {
-      primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-      secondary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-    },
-    equipment: {
-      tactical: { name: "", type: "" },
-      lethal: { name: "", type: "" },
-      field_upgrade: { name: "", type: "" },
-    },
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     fetchLoadoutData(setData, setContainerClass);
     setIsGenerating(false);
+    setIsLoading(false);
   }, []);
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
 
     setTimeout(() => {
       fetchLoadoutData(setData, setContainerClass);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
   const { randClassName, perks, streaks, weapons, equipment } = data;
+
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+  }
 
   return (
     <>
@@ -135,7 +121,7 @@ function VanguardLoadout() {
             <SimpleGeneratorView
               isGenerating={isGenerating}
               title="Field Upgrade"
-              value={equipment.field_upgrade.name}
+              value={equipment.fieldUpgrade.name}
             />
           </Col>
           <Col sm className="text-center">
@@ -211,7 +197,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     let equipment = {
       tactical: fetchEquipment("tactical", game),
       lethal: fetchEquipment("lethal", game),
-      field_upgrade: fetchEquipment("field_upgrade", game),
+      fieldUpgrade: fetchEquipment("field_upgrade", game),
     };
 
     setData({

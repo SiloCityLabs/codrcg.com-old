@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
@@ -11,24 +12,14 @@ import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 import { fetchZombiesMap } from "@/helpers/fetch/zombies/fetchZombiesMap";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-zombies-generator-info.json";
 
 function VanguardZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
   const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
-
-  //Data
-  const [data, setData] = useState({
-    randClassName: "",
-    weapons: {
-      primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-    },
-    artifact: "",
-    zombieMap: "",
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     fetchLoadoutData(setData, setContainerClass);
@@ -38,15 +29,11 @@ function VanguardZombiesLoadout() {
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
 
     setTimeout(() => {
       fetchLoadoutData(setData, setContainerClass);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
@@ -100,7 +87,7 @@ function VanguardZombiesLoadout() {
             <SimpleGeneratorView
               isGenerating={isGenerating}
               title="Map"
-              value={zombieMap}
+              value={zombieMap.name}
             />
           </Col>
         </Row>
@@ -143,7 +130,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       );
     }
     const artifact = fetchEquipment("field_upgrade", game).name;
-    const zombieMap = fetchZombiesMap(game).name;
+    const zombieMap = fetchZombiesMap(game);
 
     setData({
       randClassName,

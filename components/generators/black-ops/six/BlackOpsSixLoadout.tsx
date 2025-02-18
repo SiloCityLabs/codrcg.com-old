@@ -20,12 +20,11 @@ import defaultData from "@/json/cod/default-generator-info.json";
 
 function BlackOpsSixLoadout() {
   const [isLoading, setIsLoading] = useState(true);
-  const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
   const [data, setData] = useState(defaultData);
 
   useEffect(() => {
-    fetchLoadoutData(setData, setContainerClass);
+    fetchLoadoutData(setData);
     setIsGenerating(false);
     setIsLoading(false);
   }, []);
@@ -34,7 +33,7 @@ function BlackOpsSixLoadout() {
     setIsGenerating(true);
 
     setTimeout(() => {
-      fetchLoadoutData(setData, setContainerClass);
+      fetchLoadoutData(setData);
       setIsGenerating(false);
       scrollToTop();
     }, 1000);
@@ -48,10 +47,7 @@ function BlackOpsSixLoadout() {
 
   return (
     <>
-      <Container
-        id="random-class"
-        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
-      >
+      <Container id="random-class" className="shadow-lg p-3 bg-body rounded">
         <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
@@ -171,7 +167,7 @@ function BlackOpsSixLoadout() {
   );
 }
 
-async function fetchLoadoutData(setData, setContainerClass) {
+async function fetchLoadoutData(setData) {
   sendEvent("button_click", {
     button_id: "bo6_fetchLoadoutData",
     label: "BlackOpsSix",
@@ -247,7 +243,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       equipment,
       wildcard,
     });
-    setContainerClass("");
   } catch (error: any) {
     console.error(error.message); // Handle errors centrally
   }

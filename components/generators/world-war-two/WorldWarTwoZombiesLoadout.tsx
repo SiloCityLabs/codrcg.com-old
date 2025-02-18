@@ -18,12 +18,11 @@ import defaultData from "@/json/cod/default-zombies-generator-info.json";
 
 function WorldWarTwoZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
-  const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
   const [data, setData] = useState(defaultData);
 
   useEffect(() => {
-    fetchLoadoutData(setData, setContainerClass);
+    fetchLoadoutData(setData);
     setIsLoading(false);
     setIsGenerating(false);
   }, []);
@@ -32,7 +31,7 @@ function WorldWarTwoZombiesLoadout() {
     setIsGenerating(true);
 
     setTimeout(() => {
-      fetchLoadoutData(setData, setContainerClass);
+      fetchLoadoutData(setData);
       setIsGenerating(false);
       scrollToTop();
     }, 1000);
@@ -54,10 +53,7 @@ function WorldWarTwoZombiesLoadout() {
 
   return (
     <>
-      <Container
-        id="random-class"
-        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
-      >
+      <Container id="random-class" className="shadow-lg p-3 bg-body rounded">
         <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="4" className="text-center">
@@ -122,7 +118,7 @@ function WorldWarTwoZombiesLoadout() {
   );
 }
 
-async function fetchLoadoutData(setData, setContainerClass) {
+async function fetchLoadoutData(setData) {
   sendEvent("button_click", {
     button_id: "ww2Zombies_fetchLoadoutData",
     label: "WorldWarTwoZombies",
@@ -155,7 +151,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       zombieMap,
       mods,
     });
-    setContainerClass("");
   } catch (error: any) {
     console.error(error.message); // Handle errors centrally
   }

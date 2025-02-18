@@ -34,7 +34,6 @@ const defaultSettings: Bo6ZombiesSettings = {
 function BlackOpsSixZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
   const [isGenerating, setIsGenerating] = useState(true);
-  const [containerClass, setContainerClass] = useState("hidden");
   //Settings
   const [settings, setSettings] = useState<Bo6ZombiesSettings>(defaultSettings);
   const [rollMap, setRollMap] = useState(settings.rollMap);
@@ -54,7 +53,7 @@ function BlackOpsSixZombiesLoadout() {
     setRollGobblegum(completeSettings.rollGobblegum);
     setRollAugments(completeSettings.rollAugments);
 
-    fetchLoadoutData(setData, setContainerClass);
+    fetchLoadoutData(setData);
 
     setIsLoading(false);
     setIsGenerating(false);
@@ -64,7 +63,7 @@ function BlackOpsSixZombiesLoadout() {
     setIsGenerating(true);
 
     setTimeout(() => {
-      fetchLoadoutData(setData, setContainerClass);
+      fetchLoadoutData(setData);
       setIsGenerating(false);
       scrollToTop();
     }, 1000);
@@ -107,10 +106,7 @@ function BlackOpsSixZombiesLoadout() {
 
   return (
     <>
-      <Container
-        id="random-class"
-        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
-      >
+      <Container id="random-class" className="shadow-lg p-3 bg-body rounded">
         <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="6" className="text-center">
@@ -288,7 +284,7 @@ function BlackOpsSixZombiesLoadout() {
   );
 }
 
-async function fetchLoadoutData(setData, setContainerClass) {
+async function fetchLoadoutData(setData) {
   sendEvent("button_click", {
     button_id: "bo6Zombies_fetchLoadoutData",
     label: "BlackOpsSixZombies",
@@ -329,7 +325,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       zombieMap,
       augments,
     });
-    setContainerClass("");
   } catch (error: any) {
     console.error(error.message); // Handle errors centrally
   }

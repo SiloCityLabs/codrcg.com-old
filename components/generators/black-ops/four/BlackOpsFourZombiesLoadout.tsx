@@ -29,7 +29,6 @@ const defaultSettings: Bo4ZombiesSettings = {
 
 function BlackOpsFourZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
-  const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
   //Settings
   const [settings, setSettings] = useState<Bo4ZombiesSettings>(defaultSettings);
@@ -50,7 +49,7 @@ function BlackOpsFourZombiesLoadout() {
     setRollElixer(completeSettings.rollElixers);
     setRollTalisman(completeSettings.rollTalisman);
 
-    fetchLoadoutData(setData, setContainerClass);
+    fetchLoadoutData(setData);
 
     setIsLoading(false);
     setIsGenerating(false);
@@ -60,7 +59,7 @@ function BlackOpsFourZombiesLoadout() {
     setIsGenerating(true);
 
     setTimeout(() => {
-      fetchLoadoutData(setData, setContainerClass);
+      fetchLoadoutData(setData);
       setIsGenerating(false);
       scrollToTop();
     }, 1000);
@@ -111,10 +110,7 @@ function BlackOpsFourZombiesLoadout() {
 
   return (
     <>
-      <Container
-        id="random-class"
-        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
-      >
+      <Container id="random-class" className="shadow-lg p-3 bg-body rounded">
         <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center mb-4">
           <Col sm className="text-center">
@@ -293,7 +289,7 @@ function BlackOpsFourZombiesLoadout() {
   );
 }
 
-async function fetchLoadoutData(setData, setContainerClass) {
+async function fetchLoadoutData(setData) {
   sendEvent("button_click", {
     button_id: "bo4Zombies_fetchLoadoutData",
     label: "BlackOpsFourZombies",
@@ -343,7 +339,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       zombieMap,
       zombiePerks,
     });
-    setContainerClass("");
   } catch (error: any) {
     console.error(error.message); // Handle errors centrally
   }

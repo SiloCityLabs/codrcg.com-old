@@ -18,14 +18,13 @@ import defaultData from "@/json/cod/default-zombies-generator-info.json";
 
 function VanguardZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
-  const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
 
   //Data
   const [data, setData] = useState(defaultData);
 
   useEffect(() => {
-    fetchLoadoutData(setData, setContainerClass);
+    fetchLoadoutData(setData);
     setIsGenerating(false);
     setIsLoading(false);
   }, []);
@@ -34,7 +33,7 @@ function VanguardZombiesLoadout() {
     setIsGenerating(true);
 
     setTimeout(() => {
-      fetchLoadoutData(setData, setContainerClass);
+      fetchLoadoutData(setData);
       setIsGenerating(false);
       scrollToTop();
     }, 1000);
@@ -48,10 +47,7 @@ function VanguardZombiesLoadout() {
 
   return (
     <>
-      <Container
-        id="random-class"
-        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
-      >
+      <Container id="random-class" className="shadow-lg p-3 bg-body rounded">
         <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="6" className="text-center">
@@ -112,7 +108,7 @@ function VanguardZombiesLoadout() {
   );
 }
 
-async function fetchLoadoutData(setData, setContainerClass) {
+async function fetchLoadoutData(setData) {
   sendEvent("button_click", {
     button_id: "coldWarZombies_fetchLoadoutData",
     label: "ColdWarZombies",
@@ -143,7 +139,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       field_upgrade,
       zombieMap,
     });
-    setContainerClass("");
   } catch (error: any) {
     console.error(error.message); // Handle errors centrally
   }

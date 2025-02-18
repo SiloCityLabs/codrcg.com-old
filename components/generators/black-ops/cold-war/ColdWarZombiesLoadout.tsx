@@ -11,6 +11,8 @@ import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 import { fetchZombiesMap } from "@/helpers/fetch/zombies/fetchZombiesMap";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-zombies-generator-info.json";
 
 function VanguardZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,17 +20,7 @@ function VanguardZombiesLoadout() {
   const [isGenerating, setIsGenerating] = useState(true);
 
   //Data
-  const [data, setData] = useState({
-    randClassName: "",
-    weapons: {
-      primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-    },
-    field_upgrade: "",
-    zombieMap: { name: "", type: "", mode: "", game: "" },
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     fetchLoadoutData(setData, setContainerClass);

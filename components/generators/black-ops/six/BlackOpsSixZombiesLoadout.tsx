@@ -22,7 +22,7 @@ import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView
 //Utils
 import { sendEvent } from "@/utils/gtag";
 //json
-import defaultData from "@/json/cod/default-generator-info.json";
+import defaultData from "@/json/cod/default-zombies-generator-info.json";
 
 const defaultSettings: Bo6ZombiesSettings = {
   rollMap: true,
@@ -188,7 +188,7 @@ function BlackOpsSixZombiesLoadout() {
               <SimpleGeneratorView
                 isGenerating={isGenerating}
                 title="Map"
-                value={zombieMap}
+                value={zombieMap.name}
               />
             </Col>
           )}
@@ -322,7 +322,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       fieldUpgrade: fetchEquipment("field_upgrade", game),
     };
     const gobblegum = fetchZombiesGobblegum(game);
-    const zombieMap = fetchZombiesMap(game).name;
+    const zombieMap = fetchZombiesMap(game);
     const augments = fetchZombiesAugments(game);
 
     setData({

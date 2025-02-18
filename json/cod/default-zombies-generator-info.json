@@ -1,15 +1,5 @@
 {
   "randClassName": "",
-  "perks": null,
-  "perkObj": {
-    "perk1": "",
-    "perk2": "",
-    "perk3": "",
-    "perk1Greed": "",
-    "perk2Greed": "",
-    "perk3Greed": ""
-  },
-  "streaks": null,
   "weapons": {
     "primary": {
       "weapon": {
@@ -18,16 +8,8 @@
         "game": "",
         "no_attach": false
       },
-      "attachments": ""
-    },
-    "secondary": {
-      "weapon": {
-        "name": "",
-        "type": "",
-        "game": "",
-        "no_attach": false
-      },
-      "attachments": ""
+      "attachments": "",
+      "ammoMod": ""
     },
     "melee": {
       "name": "",
@@ -47,14 +29,21 @@
     "fieldUpgrade": {
       "name": "",
       "type": ""
-    },
-    "fieldUpgrade2": {
-      "name": "",
-      "type": ""
     }
   },
-  "wildcard": {
+  "gobblegum": "",
+  "field_upgrade": "",
+  "zombieMap": {
     "name": "",
-    "type": ""
+    "type": "",
+    "mode": "",
+    "game": ""
+  },
+  "augments": {
+    "0": {
+      "name": "",
+      "major": "",
+      "minor": ""
+    }
   }
 }

@@ -7,6 +7,7 @@
       "minor": ""
     }
   },
+  "character": null,
   "elixers": "",
   "equipment": {
     "tactical": {
@@ -24,7 +25,10 @@
   },
   "field_upgrade": "",
   "gobblegum": "",
+  "lethal": null,
+  "mods": null,
   "randClassName": "",
+  "special": null,
   "story": {
     "key": "",
     "display": ""

@@ -71,5 +71,7 @@
     "weapon": "",
     "equipment": ""
   },
-  "combat_rig": null
+  "combat_rig": null,
+  "division": null,
+  "basic": null
 }

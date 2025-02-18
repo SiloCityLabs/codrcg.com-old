@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Helpers
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 //Zombies
@@ -11,26 +12,14 @@ import { fetchZombiesMap } from "@/helpers/fetch/zombies/fetchZombiesMap";
 import { fetchZombiesPerks } from "@/helpers/fetch/zombies/fetchZombiesPerks";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-zombies-generator-info.json";
 
 function WorldWarTwoZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
   const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
-
-  //Data
-  const [data, setData] = useState({
-    randClassName: "",
-    weapons: {
-      primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-      },
-    },
-    lethal: "",
-    special: "",
-    character: "",
-    zombieMap: "",
-    mods: "",
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     fetchLoadoutData(setData, setContainerClass);
@@ -40,15 +29,11 @@ function WorldWarTwoZombiesLoadout() {
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
 
     setTimeout(() => {
       fetchLoadoutData(setData, setContainerClass);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
@@ -121,7 +106,7 @@ function WorldWarTwoZombiesLoadout() {
             <SimpleGeneratorView
               isGenerating={isGenerating}
               title="Map"
-              value={zombieMap}
+              value={zombieMap.name}
             />
           </Col>
         </Row>
@@ -160,7 +145,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const lethal = fetchEquipment("lethal", "world-war-two").name;
     const special = fetchEquipment("field_upgrade", game).name;
     const character = fetchZombiesCharacter(game).name;
-    const zombieMap = fetchZombiesMap(game).name;
+    const zombieMap = fetchZombiesMap(game);
     const mods = fetchZombiesPerks(`${game}-${special.toLowerCase()}`, 3).join(
       ", "
     );

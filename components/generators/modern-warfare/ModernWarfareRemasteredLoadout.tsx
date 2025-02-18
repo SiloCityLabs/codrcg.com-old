@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
@@ -11,53 +12,36 @@ import { fetchAttachments } from "@/helpers/generator/modern-warfare/remastered/
 import { fetchPerk } from "@/helpers/generator/modern-warfare/remastered/fetchPerk";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-generator-info.json";
 
 function ModernWarfareRemasteredLoadout() {
+  const [isLoading, setIsLoading] = useState(true);
   const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
-  const [data, setData] = useState({
-    randClassName: "",
-    perks: {
-      perk1: "",
-      perk2: "",
-      perk3: "",
-    },
-    weapons: {
-      primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-      secondary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-      melee: { name: "", type: "", game: "" },
-    },
-    equipment: {
-      tactical: { name: "", type: "" },
-    },
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     fetchLoadoutData(setData, setContainerClass);
     setIsGenerating(false);
+    setIsLoading(false);
   }, []);
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
 
     setTimeout(() => {
       fetchLoadoutData(setData, setContainerClass);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
-  const { randClassName, perks, weapons, equipment } = data;
+  const { randClassName, perkObj, weapons, equipment } = data;
+
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+  }
 
   return (
     <>
@@ -127,21 +111,21 @@ function ModernWarfareRemasteredLoadout() {
             <SimpleGeneratorView
               isGenerating={isGenerating}
               title="Perk 1"
-              value={perks.perk1 ? perks.perk1 : "None"}
+              value={perkObj.perk1 ? perkObj.perk1 : "None"}
             />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <SimpleGeneratorView
               isGenerating={isGenerating}
               title="Perk 2"
-              value={perks.perk2 ? perks.perk2 : "None"}
+              value={perkObj.perk2 ? perkObj.perk2 : "None"}
             />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <SimpleGeneratorView
               isGenerating={isGenerating}
               title="Perk 3"
-              value={perks.perk3 ? perks.perk3 : "None"}
+              value={perkObj.perk3 ? perkObj.perk3 : "None"}
             />
           </Col>
         </Row>
@@ -171,7 +155,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "modern-warfare-remastered";
     const randClassName = fetchClassName();
-    const perks = {
+    const perkObj = {
       perk1: fetchPerk("perk1"),
       perk2: fetchPerk("perk2"),
       perk3: fetchPerk("perk3"),
@@ -196,7 +180,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       fetchAttachments(weapons.primary.weapon, 1)
     );
 
-    if (perks.perk2 === "Overkill") {
+    if (perkObj.perk2 === "Overkill") {
       weapons.secondary.weapon = fetchWeapon(
         "primary",
         game,
@@ -213,7 +197,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
 
     setData({
       randClassName,
-      perks,
+      perkObj,
       weapons,
       equipment,
     });

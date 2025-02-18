@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import CodPlaceholder from "@/components/CodPlaceholder";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
+import CodClassName from "@/components/CodClassName";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
@@ -11,42 +13,27 @@ import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 import { fetchZombiesMap } from "@/helpers/fetch/zombies/fetchZombiesMap";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-zombies-generator-info.json";
 
 function VanguardZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
-  const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
-
-  //Data
-  const [data, setData] = useState({
-    randClassName: "",
-    weapons: {
-      primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-    },
-    artifact: "",
-    zombieMap: "",
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
-    fetchLoadoutData(setData, setContainerClass);
+    fetchLoadoutData(setData);
     setIsLoading(false);
     setIsGenerating(false);
   }, []);
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
 
     setTimeout(() => {
-      fetchLoadoutData(setData, setContainerClass);
+      fetchLoadoutData(setData);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
@@ -58,39 +45,42 @@ function VanguardZombiesLoadout() {
 
   return (
     <>
-      <Container
-        id="random-class"
-        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
-      >
-        {!isGenerating && (
-          <>
-            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
-            <hr />
-          </>
-        )}
+      <Container id="random-class" className="shadow-lg p-3 bg-body rounded">
+        <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="6" className="text-center">
-            <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary"
+              value={weapons.primary.weapon.name}
+            />
             <br />
-            <span className="fw-bolder fs-5">Primary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.no_attach ? "No Attachments" : weapons.primary.attachments} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary Attachments"
+              value={
+                weapons.primary.weapon.no_attach
+                  ? "No Attachments"
+                  : weapons.primary.attachments
+              }
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Artifact:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={artifact} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Artifact"
+              value={artifact}
+            />
           </Col>
           <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Map:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombieMap} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Map"
+              value={zombieMap.name}
+            />
           </Col>
         </Row>
         <Row className="justify-content-md-center">
@@ -100,7 +90,7 @@ function VanguardZombiesLoadout() {
               disabled={isGenerating}
               onClick={isGenerating ? undefined : handleClick}
             >
-              {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
+              {isGenerating ? "Generating Loadout..." : "Generate Loadout"}
             </Button>
           </Col>
         </Row>
@@ -109,7 +99,7 @@ function VanguardZombiesLoadout() {
   );
 }
 
-async function fetchLoadoutData(setData, setContainerClass) {
+async function fetchLoadoutData(setData) {
   sendEvent("button_click", {
     button_id: "vanguardZombies_fetchLoadoutData",
     label: "VanguardZombies",
@@ -132,7 +122,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       );
     }
     const artifact = fetchEquipment("field_upgrade", game).name;
-    const zombieMap = fetchZombiesMap(game).name;
+    const zombieMap = fetchZombiesMap(game);
 
     setData({
       randClassName,
@@ -140,7 +130,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       artifact,
       zombieMap,
     });
-    setContainerClass("");
   } catch (error: any) {
     console.error(error.message); // Handle errors centrally
   }

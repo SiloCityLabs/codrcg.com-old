@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import CodPlaceholder from "@/components/CodPlaceholder";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
+import PerkGreedGeneratorView from "@/components/generators/cod/PerkGreedGeneratorView";
+import CodClassName from "@/components/CodClassName";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchStreaks } from "@/helpers/fetch/fetchStreaks";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
@@ -16,65 +19,35 @@ import { getLoadoutFrame } from "@/helpers/generator/black-ops/three/frame/getLo
 import { LoadoutFrame } from "@/types/BlackOps3";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-generator-info.json";
 
 const defaultWeapon = { name: "", type: "", game: "", no_attach: false };
 
 function BlackOpsThreeLoadout() {
-  const [containerClass, setContainerClass] = useState("hidden");
+  const [isLoading, setIsLoading] = useState(true);
   const [isGenerating, setIsGenerating] = useState(true);
-  const [data, setData] = useState({
-    randClassName: "",
-    perks: {
-      perk1: "",
-      perk2: "",
-      perk3: "",
-      perk1Greed: "",
-      perk2Greed: "",
-      perk3Greed: "",
-    },
-    streaks: null,
-    weapons: {
-      primary: {
-        weapon: defaultWeapon,
-        optic: "",
-        attachments: "",
-      },
-      secondary: {
-        weapon: defaultWeapon,
-        optic: "",
-        attachments: "",
-      },
-    },
-    equipment: {
-      tactical: "",
-      lethal: "",
-    },
-    wildcards: "",
-    specialist: "",
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
-    fetchLoadoutData(setData, setContainerClass);
+    fetchLoadoutData(setData);
     setIsGenerating(false);
+    setIsLoading(false);
   }, []);
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
 
     setTimeout(() => {
-      fetchLoadoutData(setData, setContainerClass);
+      fetchLoadoutData(setData);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
   const {
     randClassName,
-    perks,
+    perkObj,
     streaks,
     weapons,
     equipment,
@@ -82,135 +55,136 @@ function BlackOpsThreeLoadout() {
     specialist,
   } = data;
 
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+  }
+
   return (
     <>
-      <Container
-        id="random-class"
-        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
-      >
-        {!isGenerating && (
-          <>
-            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
-            <hr />
-          </>
-        )}
+      <Container id="random-class" className="shadow-lg p-3 bg-body rounded">
+        <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name ? weapons.primary.weapon.name : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary"
+              value={
+                weapons.primary.weapon.name
+                  ? weapons.primary.weapon.name
+                  : "None"
+              }
+            />
             <br />
-            <span className="fw-bolder fs-5">Primary Optic:</span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary Optic"
+              value={weapons.primary.optic ? weapons.primary.optic : "None"}
+            />
             <br />
-            <span className="text-muted fs-6">
-              <span className="text-muted fs-6">
-                <CodPlaceholder isLoading={isGenerating} value={weapons.primary.optic ? weapons.primary.optic : "None"} />
-              </span>
-            </span>
-            <br />
-            <span className="fw-bolder fs-5">Primary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <span className="text-muted fs-6">
-                <CodPlaceholder isLoading={isGenerating} value={weapons.primary.attachments ? weapons.primary.attachments : "None"} />
-              </span>
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary Attachments"
+              value={
+                weapons.primary.attachments
+                  ? weapons.primary.attachments
+                  : "None"
+              }
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Secondary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.weapon.name ? weapons.secondary.weapon.name : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Secondary"
+              value={
+                weapons.secondary.weapon.name
+                  ? weapons.secondary.weapon.name
+                  : "None"
+              }
+            />
             <br />
-            <span className="fw-bolder fs-5">Secondary Optic:</span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Secondary Optic"
+              value={weapons.secondary.optic ? weapons.secondary.optic : "None"}
+            />
             <br />
-            <span className="text-muted fs-6">
-              <span className="text-muted fs-6">
-                <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.optic ? weapons.secondary.optic : "None"} />
-              </span>
-            </span>
-            <br />
-            <span className="fw-bolder fs-5">Secondary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <span className="text-muted fs-6">
-                <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.attachments ? weapons.secondary.attachments : "None"} />
-              </span>
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Secondary Attachments"
+              value={
+                weapons.secondary.attachments
+                  ? weapons.secondary.attachments
+                  : "None"
+              }
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={equipment.lethal ? equipment.lethal : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Lethal"
+              value={equipment.lethal.name ? equipment.lethal.name : "None"}
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={equipment.tactical ? equipment.tactical : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Tactical"
+              value={equipment.tactical.name ? equipment.tactical.name : "None"}
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center">
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perk 1:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={perks.perk1 ? perks.perk1 : "None"} />
-              {perks.perk1Greed ? (
-                <>
-                  <br />
-                  <CodPlaceholder isLoading={isGenerating} value={perks.perk1Greed} />
-                </>
-              ) : null}
-            </span>
+            <PerkGreedGeneratorView
+              isGenerating={isGenerating}
+              title="Perk 1"
+              perk={perkObj.perk1}
+              perkGreed={perkObj.perk1Greed}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perk 2:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={perks.perk2 ? perks.perk2 : "None"} />
-              {perks.perk2Greed ? (
-                <>
-                  <br />
-                  <CodPlaceholder isLoading={isGenerating} value={perks.perk2Greed} />
-                </>
-              ) : null}
-            </span>
+            <PerkGreedGeneratorView
+              isGenerating={isGenerating}
+              title="Perk 2"
+              perk={perkObj.perk2}
+              perkGreed={perkObj.perk2Greed}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perk 3:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={perks.perk3 ? perks.perk3 : "None"} />
-              {perks.perk3Greed ? (
-                <>
-                  <br />
-                  <CodPlaceholder isLoading={isGenerating} value={perks.perk3Greed} />
-                </>
-              ) : null}
-            </span>
+            <PerkGreedGeneratorView
+              isGenerating={isGenerating}
+              title="Perk 3"
+              perk={perkObj.perk3}
+              perkGreed={perkObj.perk3Greed}
+            />
           </Col>
         </Row>
         <hr />
         <Row className="mb-5">
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Specialist:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={specialist ? specialist : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Specialist"
+              value={specialist.name ? specialist.name : "None"}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Wildcards:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={wildcards ? wildcards : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Wildcards"
+              value={wildcards ? wildcards : "None"}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Streaks:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={streaks} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Streaks"
+              value={streaks}
+            />
           </Col>
         </Row>
         <Row id="button-row">
@@ -220,7 +194,7 @@ function BlackOpsThreeLoadout() {
               disabled={isGenerating}
               onClick={isGenerating ? undefined : handleClick}
             >
-              {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
+              {isGenerating ? "Generating Loadout..." : "Generate Loadout"}
             </Button>
           </Col>
         </Row>
@@ -229,7 +203,7 @@ function BlackOpsThreeLoadout() {
   );
 }
 
-async function fetchLoadoutData(setData, setContainerClass) {
+async function fetchLoadoutData(setData) {
   sendEvent("button_click", {
     button_id: "bo3_fetchLoadoutData",
     label: "BlackOpsThree",
@@ -263,7 +237,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
         : "",
     };
 
-    const perks = { ...initialPerks, ...perkGreed };
+    const perkObj = { ...initialPerks, ...perkGreed };
 
     const streaks = fetchStreaks(game);
     let weapons = {
@@ -334,29 +308,36 @@ async function fetchLoadoutData(setData, setContainerClass) {
       );
     }
 
+    const lethalType = loadoutFrame.tactician ? "tactical" : "lethal";
+
     let equipment = {
       tactical:
-        loadoutFrame.tactical > 0 ? fetchEquipment("tactical", game).name : "",
-      lethal: loadoutFrame.lethal ? fetchEquipment("lethal", game).name : "",
+        loadoutFrame.tactical > 0 ? fetchEquipment("tactical", game) : {
+          "name": "",
+          "type": ""
+        },
+      lethal: loadoutFrame.lethal || loadoutFrame.tactician ? fetchEquipment(lethalType, game) : {
+        "name": "",
+        "type": ""
+      },
     };
     //Check for x2 tacticals
-    equipment.tactical += loadoutFrame.tactical == 2 ? " x2" : "";
+    equipment.tactical.name += loadoutFrame.tactical === 2 && !equipment.tactical.name.includes("x2") ? " x2" : "";
     //Check for danger close
-    equipment.lethal += loadoutFrame.dangerClose ? " x2" : "";
+    equipment.lethal.name += (loadoutFrame.dangerClose || loadoutFrame.tactician === 2) && !equipment.lethal.name.includes("x2") ? " x2" : "";
 
     const wildcards = loadoutFrame?.wildcards.join(", ");
-    const specialist = fetchSpecialist(game).name;
+    const specialist = fetchSpecialist(game);
 
     setData({
       randClassName,
-      perks,
+      perkObj,
       streaks,
       weapons,
       equipment,
       wildcards,
       specialist,
     });
-    setContainerClass("");
   } catch (error: any) {
     console.error(error.message); // Handle errors centrally
   }

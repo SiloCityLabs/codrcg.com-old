@@ -76,9 +76,13 @@ export default function ModernWarfareThreeInfo() {
                 title={card.title}
                 text={card.text}
                 variant="danger"
-                btn1Text="View"
-                link={card.link}
-                disabled={false}
+                buttons={[
+                  {
+                    "link": card.link,
+                    "disabled": false,
+                    "btnText": "View"
+                  }
+                ]}
               />
             </Col>
           ))}

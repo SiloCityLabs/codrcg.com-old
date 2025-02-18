@@ -1,0 +1,84 @@
+{
+  "artifact": null,
+  "augments": {
+    "0": {
+      "name": "",
+      "major": "",
+      "minor": ""
+    }
+  },
+  "character": null,
+  "elixers": "",
+  "equipment": {
+    "tactical": {
+      "name": "",
+      "type": ""
+    },
+    "lethal": {
+      "name": "",
+      "type": ""
+    },
+    "fieldUpgrade": {
+      "name": "",
+      "type": ""
+    }
+  },
+  "field_upgrade": "",
+  "gobblegum": "",
+  "lethal": null,
+  "mods": null,
+  "randClassName": "",
+  "special": null,
+  "story": {
+    "key": "",
+    "display": ""
+  },
+  "talisman": "",
+  "weapons": {
+    "primary": {
+      "weapon": {
+        "name": "",
+        "type": "",
+        "game": "",
+        "no_attach": false
+      },
+      "attachments": "",
+      "ammoMod": ""
+    },
+    "secondary": {
+      "weapon": {
+        "name": "",
+        "type": "",
+        "game": "",
+        "no_attach": false
+      },
+      "attachments": "",
+      "ammoMod": ""
+    },
+    "melee": {
+      "name": "",
+      "type": "",
+      "game": ""
+    },
+    "special": {
+      "name": "",
+      "type": "",
+      "game": "",
+      "no_attach": false
+    },
+    "starting": {
+      "name": "",
+      "type": "",
+      "game": "",
+      "no_attach": false
+    }
+  },
+  "zombieMap": {
+    "name": "",
+    "type": "",
+    "mode": "",
+    "game": "",
+    "difficulty": ""
+  },
+  "zombiePerks": []
+}

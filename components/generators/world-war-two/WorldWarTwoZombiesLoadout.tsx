@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import CodPlaceholder from "@/components/CodPlaceholder";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
+import CodClassName from "@/components/CodClassName";
 //Helpers
-import { implodeObject } from "@/helpers/implodeObject";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 //Zombies
@@ -12,44 +13,27 @@ import { fetchZombiesMap } from "@/helpers/fetch/zombies/fetchZombiesMap";
 import { fetchZombiesPerks } from "@/helpers/fetch/zombies/fetchZombiesPerks";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-zombies-generator-info.json";
 
 function WorldWarTwoZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
-  const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
-
-  //Data
-  const [data, setData] = useState({
-    randClassName: "",
-    weapons: {
-      primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-      },
-    },
-    lethal: "",
-    special: "",
-    character: "",
-    zombieMap: "",
-    mods: "",
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
-    fetchLoadoutData(setData, setContainerClass);
+    fetchLoadoutData(setData);
     setIsLoading(false);
     setIsGenerating(false);
   }, []);
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
 
     setTimeout(() => {
-      fetchLoadoutData(setData, setContainerClass);
+      fetchLoadoutData(setData);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
@@ -69,45 +53,53 @@ function WorldWarTwoZombiesLoadout() {
 
   return (
     <>
-      <Container
-        id="random-class"
-        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
-      >
-        {!isGenerating && (
-          <>
-            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
-            <hr />
-          </>
-        )}
+      <Container id="random-class" className="shadow-lg p-3 bg-body rounded">
+        <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="4" className="text-center">
-            <span className="fw-bolder fs-5">Character:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={character} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Character"
+              value={character}
+            />
           </Col>
           <Col xs md="8" lg="4" className="text-center">
-            <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary"
+              value={weapons.primary.weapon.name}
+            />
           </Col>
           <Col xs md="8" lg="4" className="text-center">
-            <span className="fw-bolder fs-5">Special:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={special} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Special"
+              value={special}
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Mods:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={mods} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Mods"
+              value={mods}
+            />
           </Col>
           <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={lethal} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Lethal"
+              value={lethal}
+            />
           </Col>
           <Col xs md="4" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Map:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombieMap} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Map"
+              value={zombieMap.name}
+            />
           </Col>
         </Row>
         <Row className="justify-content-md-center">
@@ -117,7 +109,7 @@ function WorldWarTwoZombiesLoadout() {
               disabled={isGenerating}
               onClick={isGenerating ? undefined : handleClick}
             >
-              {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
+              {isGenerating ? "Generating Loadout..." : "Generate Loadout"}
             </Button>
           </Col>
         </Row>
@@ -126,7 +118,7 @@ function WorldWarTwoZombiesLoadout() {
   );
 }
 
-async function fetchLoadoutData(setData, setContainerClass) {
+async function fetchLoadoutData(setData) {
   sendEvent("button_click", {
     button_id: "ww2Zombies_fetchLoadoutData",
     label: "WorldWarTwoZombies",
@@ -145,7 +137,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
     const lethal = fetchEquipment("lethal", "world-war-two").name;
     const special = fetchEquipment("field_upgrade", game).name;
     const character = fetchZombiesCharacter(game).name;
-    const zombieMap = fetchZombiesMap(game).name;
+    const zombieMap = fetchZombiesMap(game);
     const mods = fetchZombiesPerks(`${game}-${special.toLowerCase()}`, 3).join(
       ", "
     );
@@ -159,7 +151,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       zombieMap,
       mods,
     });
-    setContainerClass("");
   } catch (error: any) {
     console.error(error.message); // Handle errors centrally
   }

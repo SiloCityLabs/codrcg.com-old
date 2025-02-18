@@ -63,12 +63,7 @@ export default function Home() {
                   title={card.title}
                   text={card.text}
                   variant={card.variant}
-                  btn1Text={card.btn1Text}
-                  link={card.link}
-                  disabled={card.disabled}
-                  btn2Text={card.btn2Text}
-                  link2={card.link2}
-                  disabled2={card.disabled2}
+                  buttons={card.buttons}
                 />
               </Col>
             ))}
@@ -88,12 +83,7 @@ export default function Home() {
                   title={card.title}
                   text={card.text}
                   variant={card.variant}
-                  btn1Text={card.btn1Text}
-                  link={card.link}
-                  disabled={card.disabled}
-                  btn2Text={card.btn2Text}
-                  link2={card.link2}
-                  disabled2={card.disabled2}
+                  buttons={card.buttons}
                 />
               </Col>
             ))}

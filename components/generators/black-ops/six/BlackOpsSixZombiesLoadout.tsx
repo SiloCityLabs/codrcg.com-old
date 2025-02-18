@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
@@ -17,8 +18,12 @@ import { Bo6ZombiesSettings } from "@/types/Generator";
 //Components
 import CustomModal from "@/components/bootstrap/CustomModal";
 import CodPlaceholder from "@/components/CodPlaceholder";
+import CodClassName from "@/components/CodClassName";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-zombies-generator-info.json";
 
 const defaultSettings: Bo6ZombiesSettings = {
   rollMap: true,
@@ -29,7 +34,6 @@ const defaultSettings: Bo6ZombiesSettings = {
 function BlackOpsSixZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
   const [isGenerating, setIsGenerating] = useState(true);
-  const [containerClass, setContainerClass] = useState("hidden");
   //Settings
   const [settings, setSettings] = useState<Bo6ZombiesSettings>(defaultSettings);
   const [rollMap, setRollMap] = useState(settings.rollMap);
@@ -38,25 +42,7 @@ function BlackOpsSixZombiesLoadout() {
   const [showModal, setShowModal] = useState(false);
 
   //Data
-  const [data, setData] = useState({
-    randClassName: "",
-    weapons: {
-      primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-        ammoMod: "",
-      },
-      melee: { name: "", type: "", game: "" },
-    },
-    equipment: {
-      tactial: { name: "", type: "" },
-      lethal: { name: "", type: "" },
-      fieldUpgrade: { name: "", type: "" },
-    },
-    gobblegum: "",
-    zombieMap: "",
-    augments: { "0": { name: "", major: "", minor: "" } },
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     const storedSettings = getLocalStorage("bo6ZombiesSettings") ?? settings;
@@ -67,7 +53,7 @@ function BlackOpsSixZombiesLoadout() {
     setRollGobblegum(completeSettings.rollGobblegum);
     setRollAugments(completeSettings.rollAugments);
 
-    fetchLoadoutData(setData, setContainerClass);
+    fetchLoadoutData(setData);
 
     setIsLoading(false);
     setIsGenerating(false);
@@ -75,15 +61,11 @@ function BlackOpsSixZombiesLoadout() {
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
 
     setTimeout(() => {
-      fetchLoadoutData(setData, setContainerClass);
+      fetchLoadoutData(setData);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
@@ -124,86 +106,82 @@ function BlackOpsSixZombiesLoadout() {
 
   return (
     <>
-      <Container
-        id="random-class"
-        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
-      >
-        {!isGenerating && (
-          <>
-            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
-            <hr />
-          </>
-        )}
+      <Container id="random-class" className="shadow-lg p-3 bg-body rounded">
+        <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="6" className="text-center">
-            <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary"
+              value={weapons.primary.weapon.name}
+            />
             <br />
-            <span className="fw-bolder fs-5">Ammo Mod:</span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Ammo Mod"
+              value={weapons.primary.ammoMod}
+            />
             <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.ammoMod} />
-            </span>
-            <br />
-            {weapons.primary.weapon.no_attach ? (
-              <>
-                <span className="fw-bolder fs-5">Primary Attachments: </span>
-                <br />
-                <span className="text-muted fs-6">No Attachments</span>
-              </>
-            ) : (
-              <>
-                <span className="fw-bolder fs-5">Primary Attachments:</span>
-                <br />
-                <span className="text-muted fs-6">
-                  <CodPlaceholder isLoading={isGenerating} value={weapons.primary.attachments} />
-                </span>
-              </>
-            )}
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary Attachments"
+              value={
+                weapons.primary.weapon.no_attach
+                  ? "No Attachments"
+                  : weapons.primary.attachments
+              }
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col xs={6} sm={6} md="3" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Melee:</span> <br />
-            <span className="text-muted fs-6">
-
-              <CodPlaceholder isLoading={isGenerating} value={weapons.melee.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Melee"
+              value={weapons.melee.name}
+            />
           </Col>
           <Col xs={6} sm={6} md="3" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={equipment.fieldUpgrade.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Field Upgrade"
+              value={equipment.fieldUpgrade.name}
+            />
           </Col>
           <Col xs={6} md="3" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={equipment.tactial.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Tactical"
+              value={equipment.tactical.name}
+            />
           </Col>
           <Col xs={6} md="3" lg="3" className="text-center">
-            <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={equipment.lethal.name} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Lethal"
+              value={equipment.lethal.name}
+            />
           </Col>
         </Row>
         {(rollGobblegum || rollMap) && <hr />}
         <Row className="justify-content-md-center mb-4">
           {rollGobblegum && (
             <Col xs md="4" lg="3" className="text-center">
-              <span className="fw-bolder fs-5">Gobblegum:</span> <br />
-              <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={gobblegum} /></span>
+              <SimpleGeneratorView
+                isGenerating={isGenerating}
+                title="Gobblegum"
+                value={gobblegum}
+              />
             </Col>
           )}
           {rollMap && (
             <Col xs md="4" lg="3" className="text-center">
-              <span className="fw-bolder fs-5">Map:</span> <br />
-              <span className="text-muted fs-6">
-                <CodPlaceholder isLoading={isGenerating} value={zombieMap} />
-              </span>
+              <SimpleGeneratorView
+                isGenerating={isGenerating}
+                title="Map"
+                value={zombieMap.name}
+              />
             </Col>
           )}
         </Row>
@@ -223,12 +201,18 @@ function BlackOpsSixZombiesLoadout() {
                   <br />
                   <span className="text-muted fs-6">
                     <span className="fw-bolder">Major Augment:</span>{" "}
-                    <CodPlaceholder isLoading={isGenerating} value={item?.major} />
+                    <CodPlaceholder
+                      isLoading={isGenerating}
+                      value={item?.major}
+                    />
                   </span>
                   <br />
                   <span className="text-muted fs-6">
                     <span className="fw-bolder">Minor Augment:</span>{" "}
-                    <CodPlaceholder isLoading={isGenerating} value={item?.minor} />
+                    <CodPlaceholder
+                      isLoading={isGenerating}
+                      value={item?.minor}
+                    />
                   </span>
                 </Col>
               ))}
@@ -252,7 +236,7 @@ function BlackOpsSixZombiesLoadout() {
                 disabled={isGenerating}
                 onClick={isGenerating ? undefined : handleClick}
               >
-                {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
+                {isGenerating ? "Generating Loadout..." : "Generate Loadout"}
               </Button>
             </div>
           </Col>
@@ -300,7 +284,7 @@ function BlackOpsSixZombiesLoadout() {
   );
 }
 
-async function fetchLoadoutData(setData, setContainerClass) {
+async function fetchLoadoutData(setData) {
   sendEvent("button_click", {
     button_id: "bo6Zombies_fetchLoadoutData",
     label: "BlackOpsSixZombies",
@@ -325,12 +309,12 @@ async function fetchLoadoutData(setData, setContainerClass) {
       );
     }
     const equipment = {
-      tactial: fetchEquipment("tactical", game),
+      tactical: fetchEquipment("tactical", game),
       lethal: fetchEquipment("lethal", game),
       fieldUpgrade: fetchEquipment("field_upgrade", game),
     };
     const gobblegum = fetchZombiesGobblegum(game);
-    const zombieMap = fetchZombiesMap(game).name;
+    const zombieMap = fetchZombiesMap(game);
     const augments = fetchZombiesAugments(game);
 
     setData({
@@ -341,7 +325,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       zombieMap,
       augments,
     });
-    setContainerClass("");
   } catch (error: any) {
     console.error(error.message); // Handle errors centrally
   }

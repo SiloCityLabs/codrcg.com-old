@@ -1,53 +1,79 @@
 [
-    {
-        "title": "Black Ops VI",
-        "text": "",
-        "variant": "black-ops",
-        "btn1Text": "Generator",
+  {
+    "title": "Black Ops VI",
+    "text": "",
+    "variant": "black-ops",
+    "buttons": [
+      {
         "link": "black-ops/six/zombies-generator",
-        "disabled": false
-    },
-    {
-        "title": "Modern Warfare (2023)",
-        "text": "",
-        "variant": "danger",
-        "btn1Text": "Generator",
+        "disabled": false,
+        "btnText": "Generator"
+      }
+    ]
+  },
+  {
+    "title": "Modern Warfare (2023)",
+    "text": "",
+    "variant": "danger",
+    "buttons": [
+      {
         "link": "modern-warfare/three/zombies-generator",
-        "disabled": false
-    },
-    {
-        "title": "Vanguard",
-        "text": "",
-        "variant": "danger",
-        "btn1Text": "Generator",
+        "disabled": false,
+        "btnText": "Generator"
+      }
+    ]
+  },
+  {
+    "title": "Vanguard",
+    "text": "",
+    "variant": "danger",
+    "buttons": [
+      {
         "link": "vanguard/zombies-generator",
-        "disabled": false
-    },
-    {
-        "title": "Cold War",
-        "text": "",
-        "variant": "danger",
-        "btn1Text": "Generator",
+        "disabled": false,
+        "btnText": "Generator"
+      }
+    ]
+  },
+  {
+    "title": "Cold War",
+    "text": "",
+    "variant": "danger",
+    "buttons": [
+      {
         "link": "black-ops/cold-war/zombies-generator",
-        "disabled": false
-    },
-    {
-        "title": "Black Ops IV",
-        "text": "",
-        "variant": "black-ops",
-        "btn1Text": "Generator",
+        "disabled": false,
+        "btnText": "Generator"
+      }
+    ]
+  },
+  {
+    "title": "Black Ops IV",
+    "text": "",
+    "variant": "black-ops",
+    "buttons": [
+      {
         "link": "black-ops/four/zombies/generator",
         "disabled": false,
-        "btn2Text": "Custom Mutations",
-        "link2": "black-ops/four/zombies/custom-mutations",
-        "disabled2": false
-    },
-    {
-        "title": "World War II",
-        "text": "",
-        "variant": "ww2",
-        "btn1Text": "Generator",
+        "btnText": "Generator"
+      },
+      {
+        "link": "black-ops/four/zombies/custom-mutations",
+        "disabled": false,
+        "btnText": "Custom Mutations"
+      }
+    ]
+  },
+  {
+    "title": "World War II",
+    "text": "",
+    "variant": "ww2",
+    "buttons": [
+      {
         "link": "world-war-two/zombies-generator",
-        "disabled": false
-    }
+        "disabled": false,
+        "btnText": "Generator"
+      }
+    ]
+  }
 ]

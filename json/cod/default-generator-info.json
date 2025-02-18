@@ -1,0 +1,77 @@
+{
+  "randClassName": "",
+  "perks": null,
+  "perkObj": {
+    "perk1": "",
+    "perk2": "",
+    "perk3": "",
+    "perk1Greed": "",
+    "perk2Greed": "",
+    "perk3Greed": ""
+  },
+  "streaks": null,
+  "weapons": {
+    "primary": {
+      "weapon": {
+        "name": "",
+        "type": "",
+        "game": "",
+        "no_attach": false
+      },
+      "optic": "",
+      "attachments": ""
+    },
+    "secondary": {
+      "weapon": {
+        "name": "",
+        "type": "",
+        "game": "",
+        "no_attach": false
+      },
+      "optic": "",
+      "attachments": ""
+    },
+    "melee": {
+      "name": "",
+      "type": "",
+      "game": ""
+    }
+  },
+  "equipment": {
+    "tactical": {
+      "name": "",
+      "type": ""
+    },
+    "lethal": {
+      "name": "",
+      "type": ""
+    },
+    "fieldUpgrade": {
+      "name": "",
+      "type": ""
+    },
+    "fieldUpgrade2": {
+      "name": "",
+      "type": ""
+    },
+    "vest": {
+      "name": "",
+      "type": ""
+    },
+    "gear": "",
+    "equipment": ""
+  },
+  "wildcard": {
+    "name": "",
+    "type": ""
+  },
+  "wildcards": null,
+  "specialist": {
+    "name": "",
+    "weapon": "",
+    "equipment": ""
+  },
+  "combat_rig": null,
+  "division": null,
+  "basic": null
+}

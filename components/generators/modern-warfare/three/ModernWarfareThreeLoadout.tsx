@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import CodPlaceholder from "@/components/CodPlaceholder";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
+import CodClassName from "@/components/CodClassName";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchStreaks } from "@/helpers/fetch/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
@@ -12,123 +14,126 @@ import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 import { fetchPerks } from "@/helpers/generator/modern-warfare/three/fetchPerks";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-generator-info.json";
 
 function ModernWarfareThreeLoadout() {
-  const [containerClass, setContainerClass] = useState("hidden");
+  const [isLoading, setIsLoading] = useState(true);
   const [isGenerating, setIsGenerating] = useState(true);
-  const [data, setData] = useState({
-    randClassName: "",
-    perks: null,
-    streaks: null,
-    weapons: {
-      primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-      secondary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-    },
-    equipment: {
-      tactical: { name: "", type: "" },
-      lethal: { name: "", type: "" },
-      fieldUpgrade: { name: "", type: "" },
-      vest: { name: "", type: "" },
-    },
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
-    fetchLoadoutData(setData, setContainerClass);
+    fetchLoadoutData(setData);
     setIsGenerating(false);
+    setIsLoading(false);
   }, []);
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
 
     setTimeout(() => {
-      fetchLoadoutData(setData, setContainerClass);
+      fetchLoadoutData(setData);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
   const { randClassName, perks, streaks, weapons, equipment } = data;
 
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+  }
+
   return (
     <>
-      <Container
-        id="random-class"
-        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
-      >
-        {!isGenerating && (
-          <>
-            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
-            <hr />
-          </>
-        )}
+      <Container id="random-class" className="shadow-lg p-3 bg-body rounded">
+        <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary"
+              value={weapons.primary.weapon.name}
+            />
             <br />
-            <span className="fw-bolder fs-5">Primary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.no_attach ? "No Attachments" : weapons.primary.attachments} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary Attachments"
+              value={
+                weapons.primary.weapon.no_attach
+                  ? "No Attachments"
+                  : weapons.primary.attachments
+              }
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Secondary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.weapon.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Secondary"
+              value={weapons.secondary.weapon.name}
+            />
             <br />
-            <span className="fw-bolder fs-5">Secondary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.weapon.no_attach ? "No Attachments" : weapons.secondary.attachments} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Secondary Attachments"
+              value={
+                weapons.secondary.weapon.no_attach
+                  ? "No Attachments"
+                  : weapons.secondary.attachments
+              }
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={equipment.tactical.name} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Tactical"
+              value={equipment.tactical.name}
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Lethal:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={equipment.lethal.name ? equipment.lethal.name : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Lethal"
+              value={equipment.lethal.name}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Perks:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={perks} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Perks"
+              value={perks}
+            />
           </Col>
         </Row>
         <hr />
         <Row className="mb-5">
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Vest:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={equipment.vest.name} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Vest"
+              value={equipment.vest.name}
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Field Upgrade:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={equipment.fieldUpgrade.name ? equipment.fieldUpgrade.name : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Field Upgrade"
+              value={
+                equipment.fieldUpgrade.name
+                  ? equipment.fieldUpgrade.name
+                  : "None"
+              }
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Streaks:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={streaks} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Streaks"
+              value={streaks}
+            />
           </Col>
         </Row>
         <Row id="button-row">
@@ -138,7 +143,7 @@ function ModernWarfareThreeLoadout() {
               disabled={isGenerating}
               onClick={isGenerating ? undefined : handleClick}
             >
-              {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
+              {isGenerating ? "Generating Loadout..." : "Generate Loadout"}
             </Button>
           </Col>
         </Row>
@@ -147,7 +152,7 @@ function ModernWarfareThreeLoadout() {
   );
 }
 
-async function fetchLoadoutData(setData, setContainerClass) {
+async function fetchLoadoutData(setData) {
   sendEvent("button_click", {
     button_id: "mw3_fetchLoadoutData",
     label: "ModernWarfareThree",
@@ -233,7 +238,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       weapons,
       equipment,
     });
-    setContainerClass("");
   } catch (error: any) {
     console.error(error.message); // Handle errors centrally
   }

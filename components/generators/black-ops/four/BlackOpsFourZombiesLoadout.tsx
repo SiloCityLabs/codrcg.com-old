@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
-import CodPlaceholder from "@/components/CodPlaceholder";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
+import CodClassName from "@/components/CodClassName";
 //Helpers
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
@@ -16,6 +18,8 @@ import { Bo4ZombiesSettings } from "@/types/Generator";
 import CustomModal from "@/components/bootstrap/CustomModal";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-zombies-generator-info.json";
 
 const defaultSettings: Bo4ZombiesSettings = {
   rollMap: true,
@@ -25,7 +29,6 @@ const defaultSettings: Bo4ZombiesSettings = {
 
 function BlackOpsFourZombiesLoadout() {
   const [isLoading, setIsLoading] = useState(true);
-  const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
   //Settings
   const [settings, setSettings] = useState<Bo4ZombiesSettings>(defaultSettings);
@@ -35,19 +38,7 @@ function BlackOpsFourZombiesLoadout() {
   const [showModal, setShowModal] = useState(false);
 
   //Data
-  const [data, setData] = useState({
-    randClassName: "",
-    story: { key: "", display: "" },
-    weapons: {
-      special: { name: "", type: "", game: "", no_attach: false },
-      starting: { name: "", type: "", game: "", no_attach: false },
-    },
-    equipment: "",
-    elixers: "",
-    talisman: "",
-    zombieMap: { name: "", type: "", game: "", mode: "", difficulty: "" },
-    zombiePerks: [],
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     const storedSettings = getLocalStorage("bo4ZombiesSettings") ?? settings;
@@ -58,7 +49,7 @@ function BlackOpsFourZombiesLoadout() {
     setRollElixer(completeSettings.rollElixers);
     setRollTalisman(completeSettings.rollTalisman);
 
-    fetchLoadoutData(setData, setContainerClass);
+    fetchLoadoutData(setData);
 
     setIsLoading(false);
     setIsGenerating(false);
@@ -66,15 +57,11 @@ function BlackOpsFourZombiesLoadout() {
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
 
     setTimeout(() => {
-      fetchLoadoutData(setData, setContainerClass);
+      fetchLoadoutData(setData);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
@@ -123,63 +110,67 @@ function BlackOpsFourZombiesLoadout() {
 
   return (
     <>
-      <Container
-        id="random-class"
-        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
-      >
-        {!isGenerating && (
-          <>
-            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
-            <hr />
-          </>
-        )}
+      <Container id="random-class" className="shadow-lg p-3 bg-body rounded">
+        <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center mb-4">
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Story:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={story.display} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Story"
+              value={story.display}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Special Weapon:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={weapons.special.name} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Special Weapon"
+              value={weapons.special.name}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Equipment:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={equipment} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Equipment"
+              value={equipment.lethal.name}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Starting Weapon:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={weapons.starting.name} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Starting Weapon"
+              value={weapons.starting.name}
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">
-              {story.key === "chaos_story" ? "DANU" : "BREW"}:
-            </span>
-            <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombiePerks[0]} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title={story.key === "chaos_story" ? "DANU" : "BREW"}
+              value={zombiePerks[0]}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">
-              {story.key === "chaos_story" ? "RA" : "COLA"}:
-            </span>
-            <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombiePerks[1]} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title={story.key === "chaos_story" ? "RA" : "COLA"}
+              value={zombiePerks[1]}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">
-              {story.key === "chaos_story" ? "ZEUS" : "SODA"}:
-            </span>
-            <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombiePerks[2]} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title={story.key === "chaos_story" ? "ZEUS" : "SODA"}
+              value={zombiePerks[2]}
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">
-              {story.key === "chaos_story" ? "ODIN" : "TONIC"}:
-            </span>
-            <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombiePerks[3]} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title={story.key === "chaos_story" ? "ODIN" : "TONIC"}
+              value={zombiePerks[3]}
+            />
           </Col>
         </Row>
         {rollMap && (
@@ -187,19 +178,26 @@ function BlackOpsFourZombiesLoadout() {
             <hr />
             <Row className="justify-content-md-center mb-4">
               <Col xs md="4" lg="3" className="text-center">
-                <span className="fw-bolder fs-5">Mode:</span> <br />
-                <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombieMap?.mode} /></span>
+                <SimpleGeneratorView
+                  isGenerating={isGenerating}
+                  title="Mode"
+                  value={zombieMap?.mode}
+                />
               </Col>
               <Col xs md="4" lg="3" className="text-center">
-                <span className="fw-bolder fs-5">Map:</span> <br />
-                <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={zombieMap.name} /></span>
+                <SimpleGeneratorView
+                  isGenerating={isGenerating}
+                  title="Map"
+                  value={zombieMap.name}
+                />
               </Col>
               {zombieMap?.mode === "Classic" && (
                 <Col xs md="4" lg="3" className="text-center">
-                  <span className="fw-bolder fs-5">Difficulty:</span> <br />
-                  <span className="text-muted fs-6">
-                    <CodPlaceholder isLoading={isGenerating} value={zombieMap.difficulty} />
-                  </span>
+                  <SimpleGeneratorView
+                    isGenerating={isGenerating}
+                    title="Difficulty"
+                    value={zombieMap.difficulty}
+                  />
                 </Col>
               )}
             </Row>
@@ -209,14 +207,20 @@ function BlackOpsFourZombiesLoadout() {
         <Row className="justify-content-md-center mb-4">
           {rollTalisman && (
             <Col xs md="4" lg="3" className="text-center">
-              <span className="fw-bolder fs-5">Talisman:</span> <br />
-              <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={talisman} /></span>
+              <SimpleGeneratorView
+                isGenerating={isGenerating}
+                title="Talisman"
+                value={talisman}
+              />
             </Col>
           )}
           {rollElixers && (
             <Col xs md="4" lg="3" className="text-center">
-              <span className="fw-bolder fs-5">Elixers:</span> <br />
-              <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={elixers} /></span>
+              <SimpleGeneratorView
+                isGenerating={isGenerating}
+                title="Elixers"
+                value={elixers}
+              />
             </Col>
           )}
         </Row>
@@ -237,7 +241,7 @@ function BlackOpsFourZombiesLoadout() {
                 onClick={isGenerating ? undefined : handleClick}
                 className="w-50 me-2"
               >
-                {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
+                {isGenerating ? "Generating Loadout..." : "Generate Loadout"}
               </Button>
             </div>
           </Col>
@@ -285,7 +289,7 @@ function BlackOpsFourZombiesLoadout() {
   );
 }
 
-async function fetchLoadoutData(setData, setContainerClass) {
+async function fetchLoadoutData(setData) {
   sendEvent("button_click", {
     button_id: "bo4Zombies_fetchLoadoutData",
     label: "BlackOpsFourZombies",
@@ -308,7 +312,9 @@ async function fetchLoadoutData(setData, setContainerClass) {
       special: fetchWeapon("all", `${story_key}-${game}`),
     };
 
-    const equipment = fetchEquipment("lethal", game).name;
+    const equipment = {
+      "lethal": fetchEquipment("lethal", game),
+    };
 
     const elixers = fetchZombiesGobblegum(game);
     const talisman = fetchZombiesGobblegum(`${game}-talismans`, 1);
@@ -333,7 +339,6 @@ async function fetchLoadoutData(setData, setContainerClass) {
       zombieMap,
       zombiePerks,
     });
-    setContainerClass("");
   } catch (error: any) {
     console.error(error.message); // Handle errors centrally
   }

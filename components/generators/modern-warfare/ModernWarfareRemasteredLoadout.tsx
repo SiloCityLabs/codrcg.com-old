@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import CodPlaceholder from "@/components/CodPlaceholder";
+import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
+import CodClassName from "@/components/CodClassName";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
@@ -11,121 +13,112 @@ import { fetchAttachments } from "@/helpers/generator/modern-warfare/remastered/
 import { fetchPerk } from "@/helpers/generator/modern-warfare/remastered/fetchPerk";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-generator-info.json";
 
 function ModernWarfareRemasteredLoadout() {
-  const [containerClass, setContainerClass] = useState("hidden");
+  const [isLoading, setIsLoading] = useState(true);
   const [isGenerating, setIsGenerating] = useState(true);
-  const [data, setData] = useState({
-    randClassName: "",
-    perks: {
-      perk1: "",
-      perk2: "",
-      perk3: "",
-    },
-    weapons: {
-      primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-      secondary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-      melee: { name: "", type: "", game: "" },
-    },
-    equipment: {
-      tactical: { name: "", type: "" },
-    },
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
-    fetchLoadoutData(setData, setContainerClass);
+    fetchLoadoutData(setData);
     setIsGenerating(false);
+    setIsLoading(false);
   }, []);
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
 
     setTimeout(() => {
-      fetchLoadoutData(setData, setContainerClass);
+      fetchLoadoutData(setData);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
-  const { randClassName, perks, weapons, equipment } = data;
+  const { randClassName, perkObj, weapons, equipment } = data;
+
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+  }
 
   return (
     <>
-      <Container
-        id="random-class"
-        className={`${containerClass} shadow-lg p-3 bg-body rounded`}
-      >
-        {!isGenerating && (
-          <>
-            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
-            <hr />
-          </>
-        )}
+      <Container id="random-class" className="shadow-lg p-3 bg-body rounded">
+        <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Primary:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary"
+              value={weapons.primary.weapon.name}
+            />
             <br />
-            <span className="fw-bolder fs-5">Primary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.primary.weapon.no_attach ? "No Attachments" : weapons.primary.attachments} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Primary Attachments"
+              value={
+                weapons.primary.weapon.no_attach
+                  ? "No Attachments"
+                  : weapons.primary.attachments
+              }
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Side Arm:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.weapon.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Secondary"
+              value={weapons.secondary.weapon.name}
+            />
             <br />
-            <span className="fw-bolder fs-5">Secondary Attachments:</span>
-            <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.secondary.weapon.no_attach ? "No Attachments" : weapons.secondary.attachments} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Secondary Attachments"
+              value={
+                weapons.secondary.weapon.no_attach
+                  ? "No Attachments"
+                  : weapons.secondary.attachments
+              }
+            />
           </Col>
           <Col sm className="text-center">
-            <span className="fw-bolder fs-5">Melee:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={weapons.melee.name} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Melee"
+              value={weapons.melee.name}
+            />
           </Col>
         </Row>
         <hr />
         <Row className="justify-content-md-center mb-4">
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Tactical:</span> <br />
-            <span className="text-muted fs-6"><CodPlaceholder isLoading={isGenerating} value={equipment.tactical.name} /></span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Tactical"
+              value={equipment.tactical.name}
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Perk 1:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={perks.perk1 ? perks.perk1 : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Perk 1"
+              value={perkObj.perk1 ? perkObj.perk1 : "None"}
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Perk 2:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={perks.perk2 ? perks.perk2 : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Perk 2"
+              value={perkObj.perk2 ? perkObj.perk2 : "None"}
+            />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
-            <span className="fw-bolder fs-5">Perk 3:</span> <br />
-            <span className="text-muted fs-6">
-              <CodPlaceholder isLoading={isGenerating} value={perks.perk3 ? perks.perk3 : "None"} />
-            </span>
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Perk 3"
+              value={perkObj.perk3 ? perkObj.perk3 : "None"}
+            />
           </Col>
         </Row>
         <Row id="button-row">
@@ -135,7 +128,7 @@ function ModernWarfareRemasteredLoadout() {
               disabled={isGenerating}
               onClick={isGenerating ? undefined : handleClick}
             >
-              {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
+              {isGenerating ? "Generating Loadout..." : "Generate Loadout"}
             </Button>
           </Col>
         </Row>
@@ -144,7 +137,7 @@ function ModernWarfareRemasteredLoadout() {
   );
 }
 
-async function fetchLoadoutData(setData, setContainerClass) {
+async function fetchLoadoutData(setData) {
   sendEvent("button_click", {
     button_id: "mwr_fetchLoadoutData",
     label: "ModernWarfareRemastered",
@@ -154,7 +147,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
   try {
     const game = "modern-warfare-remastered";
     const randClassName = fetchClassName();
-    const perks = {
+    const perkObj = {
       perk1: fetchPerk("perk1"),
       perk2: fetchPerk("perk2"),
       perk3: fetchPerk("perk3"),
@@ -179,7 +172,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       fetchAttachments(weapons.primary.weapon, 1)
     );
 
-    if (perks.perk2 === "Overkill") {
+    if (perkObj.perk2 === "Overkill") {
       weapons.secondary.weapon = fetchWeapon(
         "primary",
         game,
@@ -196,11 +189,10 @@ async function fetchLoadoutData(setData, setContainerClass) {
 
     setData({
       randClassName,
-      perks,
+      perkObj,
       weapons,
       equipment,
     });
-    setContainerClass("");
   } catch (error: any) {
     console.error(error.message); // Handle errors centrally
   }

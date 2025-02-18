@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
@@ -20,6 +21,8 @@ import CodPlaceholder from "@/components/CodPlaceholder";
 import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-generator-info.json";
 
 const defaultSettings: Bo6ZombiesSettings = {
   rollMap: true,
@@ -39,25 +42,7 @@ function BlackOpsSixZombiesLoadout() {
   const [showModal, setShowModal] = useState(false);
 
   //Data
-  const [data, setData] = useState({
-    randClassName: "",
-    weapons: {
-      primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-        ammoMod: "",
-      },
-      melee: { name: "", type: "", game: "" },
-    },
-    equipment: {
-      tactical: { name: "", type: "" },
-      lethal: { name: "", type: "" },
-      fieldUpgrade: { name: "", type: "" },
-    },
-    gobblegum: "",
-    zombieMap: "",
-    augments: { "0": { name: "", major: "", minor: "" } },
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     const storedSettings = getLocalStorage("bo6ZombiesSettings") ?? settings;
@@ -76,15 +61,11 @@ function BlackOpsSixZombiesLoadout() {
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
 
     setTimeout(() => {
       fetchLoadoutData(setData, setContainerClass);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 

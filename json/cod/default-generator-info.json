@@ -1,6 +1,14 @@
 {
   "randClassName": "",
   "perks": null,
+  "perkObj": {
+    "perk1": "",
+    "perk2": "",
+    "perk3": "",
+    "perk1Greed": "",
+    "perk2Greed": "",
+    "perk3Greed": ""
+  },
   "streaks": null,
   "weapons": {
     "primary": {

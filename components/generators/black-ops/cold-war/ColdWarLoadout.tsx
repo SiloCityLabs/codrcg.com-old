@@ -4,6 +4,7 @@ import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView
 import PerkGreedGeneratorView from "@/components/generators/cod/PerkGreedGeneratorView";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchStreaks } from "@/helpers/fetch/fetchStreaks";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
@@ -14,59 +15,37 @@ import { fetchWildcard } from "@/helpers/fetch/fetchWildcard";
 import { fetchPerk } from "@/helpers/generator/black-ops/cold-war/fetchPerk";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-generator-info.json";
 
 function ColdWarLoadout() {
+  const [isLoading, setIsLoading] = useState(true);
   const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
-  const [data, setData] = useState({
-    randClassName: "",
-    perks: {
-      perk1: "",
-      perk2: "",
-      perk3: "",
-      perk1Greed: "",
-      perk2Greed: "",
-      perk3Greed: "",
-    },
-    streaks: null,
-    weapons: {
-      primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-      secondary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-    },
-    equipment: {
-      tactical: { name: "", type: "" },
-      lethal: { name: "", type: "" },
-      field_upgrade: { name: "", type: "" },
-    },
-    wildcard: { name: "", type: "" },
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     fetchLoadoutData(setData, setContainerClass);
     setIsGenerating(false);
+    setIsLoading(false);
   }, []);
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
 
     setTimeout(() => {
       fetchLoadoutData(setData, setContainerClass);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
-  const { randClassName, perks, streaks, weapons, equipment, wildcard } = data;
+  const { randClassName, perkObj, streaks, weapons, equipment, wildcard } =
+    data;
+
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+  }
 
   return (
     <>
@@ -122,24 +101,24 @@ function ColdWarLoadout() {
             <PerkGreedGeneratorView
               isGenerating={isGenerating}
               title="Perk 1"
-              perk={perks.perk1}
-              perkGreed={perks.perk1Greed}
+              perk={perkObj.perk1}
+              perkGreed={perkObj.perk1Greed}
             />
           </Col>
           <Col sm className="text-center">
             <PerkGreedGeneratorView
               isGenerating={isGenerating}
               title="Perk 2"
-              perk={perks.perk2}
-              perkGreed={perks.perk2Greed}
+              perk={perkObj.perk2}
+              perkGreed={perkObj.perk2Greed}
             />
           </Col>
           <Col sm className="text-center">
             <PerkGreedGeneratorView
               isGenerating={isGenerating}
               title="Perk 3"
-              perk={perks.perk3}
-              perkGreed={perks.perk3Greed}
+              perk={perkObj.perk3}
+              perkGreed={perkObj.perk3Greed}
             />
           </Col>
         </Row>
@@ -173,7 +152,7 @@ function ColdWarLoadout() {
             <SimpleGeneratorView
               isGenerating={isGenerating}
               title="Field Upgrade"
-              value={equipment.field_upgrade.name}
+              value={equipment.fieldUpgrade.name}
             />
           </Col>
           <Col sm className="text-center">
@@ -241,7 +220,7 @@ async function fetchLoadoutData(setData, setContainerClass) {
       perk3Greed: isGreed ? fetchPerk("perk3", initialPerks.perk3) : "",
     };
 
-    const perks = { ...initialPerks, ...perkGreed };
+    const perkObj = { ...initialPerks, ...perkGreed };
     const streaks = fetchStreaks(game);
     let weapons = {
       primary: {
@@ -280,16 +259,15 @@ async function fetchLoadoutData(setData, setContainerClass) {
     let equipment = {
       tactical: fetchEquipment("tactical", game),
       lethal: fetchEquipment("lethal", game),
-      field_upgrade: fetchEquipment("field_upgrade", game),
+      fieldUpgrade: fetchEquipment("field_upgrade", game),
     };
     //Danger Close Check
-
     equipment.tactical.name += wildcard.name == "Danger Close" ? " x2" : "";
     equipment.lethal.name += wildcard.name == "Danger Close" ? " x2" : "";
 
     setData({
       randClassName,
-      perks,
+      perkObj,
       streaks,
       weapons,
       equipment,

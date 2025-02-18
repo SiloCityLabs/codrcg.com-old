@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 import PerkGreedGeneratorView from "@/components/generators/cod/PerkGreedGeneratorView";
+import CodClassName from "@/components/CodClassName";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
 import { scrollToTop } from "@/helpers/scrollToTop";
@@ -65,12 +66,7 @@ function InfiniteWarfareLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
-        {!isGenerating && (
-          <>
-            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
-            <hr />
-          </>
-        )}
+        <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center">
           <Col sm className="text-center mb-3 mb-md-0">
             <SimpleGeneratorView

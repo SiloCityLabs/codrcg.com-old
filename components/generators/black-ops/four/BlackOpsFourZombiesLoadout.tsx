@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
+import CodClassName from "@/components/CodClassName";
 //Helpers
 import { setLocalStorage, getLocalStorage } from "@/helpers/localStorage";
 import { scrollToTop } from "@/helpers/scrollToTop";
@@ -114,12 +115,7 @@ function BlackOpsFourZombiesLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
-        {!isGenerating && (
-          <>
-            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
-            <hr />
-          </>
-        )}
+        <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center mb-4">
           <Col sm className="text-center">
             <SimpleGeneratorView

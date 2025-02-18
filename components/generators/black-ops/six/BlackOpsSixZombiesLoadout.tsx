@@ -18,6 +18,7 @@ import { Bo6ZombiesSettings } from "@/types/Generator";
 //Components
 import CustomModal from "@/components/bootstrap/CustomModal";
 import CodPlaceholder from "@/components/CodPlaceholder";
+import CodClassName from "@/components/CodClassName";
 import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Utils
 import { sendEvent } from "@/utils/gtag";
@@ -110,12 +111,7 @@ function BlackOpsSixZombiesLoadout() {
         id="random-class"
         className={`${containerClass} shadow-lg p-3 bg-body rounded`}
       >
-        {!isGenerating && (
-          <>
-            <h3 className="text-center">&ldquo;{randClassName}&rdquo;</h3>
-            <hr />
-          </>
-        )}
+        <CodClassName isGenerating={isGenerating} value={randClassName} />
         <Row className="justify-content-md-center mb-4">
           <Col xs md="8" lg="6" className="text-center">
             <SimpleGeneratorView

@@ -52,7 +52,7 @@ export default function BlackOpsThreeInfo() {
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Loadout Information for Black Ops 3. Checout all the weapons, perks, equipment, wildcards, streaks and specialists."
+          content="Loadout Information for Black Ops 3. Checkout all the weapons, perks, equipment, wildcards, streaks and specialists."
         />
         <meta
           name="keywords"

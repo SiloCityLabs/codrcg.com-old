@@ -40,7 +40,7 @@ export default function ModernWarfareRemasteredInfo() {
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Loadout Information for Modern Warfare Remastered. Checout all the weapons, perks, equipment."
+          content="Loadout Information for Modern Warfare Remastered. Checkout all the weapons, perks, equipment."
         />
         <meta
           name="keywords"

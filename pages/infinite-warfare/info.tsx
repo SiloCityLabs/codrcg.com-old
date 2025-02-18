@@ -47,7 +47,7 @@ export default function InfiniteWarfareInfo() {
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Loadout Information for Infinite Warfare. Checout all the weapons, perks, equipment, wildcards, streaks and combat rigs."
+          content="Loadout Information for Infinite Warfare. Checkout all the weapons, perks, equipment, wildcards, streaks and combat rigs."
         />
         <meta
           name="keywords"

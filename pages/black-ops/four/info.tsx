@@ -77,7 +77,7 @@ export default function BlackOpsFourInfo() {
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Loadout Information for Black Ops 4. Checout all the weapons, perks, equipment, wildcards, streaks and zombies maps, ammo mods and gobblegums."
+          content="Loadout Information for Black Ops 4. Checkout all the weapons, perks, equipment, wildcards, streaks and zombies maps, ammo mods and gobblegums."
         />
         <meta
           name="keywords"

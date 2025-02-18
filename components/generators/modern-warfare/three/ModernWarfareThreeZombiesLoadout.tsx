@@ -3,56 +3,43 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import SimpleGeneratorView from "@/components/generators/cod/SimpleGeneratorView";
 //Helpers
 import { implodeObject } from "@/helpers/implodeObject";
+import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
 import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 //Utils
 import { sendEvent } from "@/utils/gtag";
+//json
+import defaultData from "@/json/cod/default-zombies-generator-info.json";
 
 function ModernWarfareThreeZombiesLoadout() {
+  const [isLoading, setIsLoading] = useState(true);
   const [containerClass, setContainerClass] = useState("hidden");
   const [isGenerating, setIsGenerating] = useState(true);
-  const [data, setData] = useState({
-    randClassName: "",
-    weapons: {
-      primary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-      secondary: {
-        weapon: { name: "", type: "", game: "", no_attach: false },
-        attachments: "",
-      },
-    },
-    equipment: {
-      tactical: { name: "", type: "" },
-      lethal: { name: "", type: "" },
-      fieldUpgrade: { name: "", type: "" },
-      vest: { name: "", type: "" },
-    },
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     fetchLoadoutData(setData, setContainerClass);
     setIsGenerating(false);
+    setIsLoading(false);
   }, []);
 
   const handleClick = async () => {
     setIsGenerating(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
 
     setTimeout(() => {
       fetchLoadoutData(setData, setContainerClass);
       setIsGenerating(false);
+      scrollToTop();
     }, 1000);
   };
 
   const { randClassName, weapons, equipment } = data;
+
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+  }
 
   return (
     <>

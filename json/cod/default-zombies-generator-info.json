@@ -40,6 +40,16 @@
       "attachments": "",
       "ammoMod": ""
     },
+    "secondary": {
+      "weapon": {
+        "name": "",
+        "type": "",
+        "game": "",
+        "no_attach": false
+      },
+      "attachments": "",
+      "ammoMod": ""
+    },
     "melee": {
       "name": "",
       "type": "",

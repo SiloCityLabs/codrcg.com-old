@@ -57,10 +57,10 @@ function WorldAtWarLoadoutLoadout() {
             <br />
             <SimpleGeneratorView
               isGenerating={isGenerating}
-              title="Primary Attachments"
+              title="Primary Attachment"
               value={
                 weapons.primary.weapon.no_attach
-                  ? "No Attachments"
+                  ? "No Attachment"
                   : weapons.primary.attachments
               }
             />
@@ -68,7 +68,7 @@ function WorldAtWarLoadoutLoadout() {
           <Col sm className="text-center mb-3 mb-md-0">
             <SimpleGeneratorView
               isGenerating={isGenerating}
-              title="Secondary"
+              title="Sidearm"
               value={weapons.secondary.weapon.name}
             />
           </Col>
@@ -78,15 +78,15 @@ function WorldAtWarLoadoutLoadout() {
           <Col sm className="text-center mb-3 mb-md-0">
             <SimpleGeneratorView
               isGenerating={isGenerating}
-              title="Tactical"
-              value={equipment.tactical.name}
+              title="Primary Grenade"
+              value={lethalMap[perkObj.perk1] || (perkObj.perk1 === "2x Primary Grenades" ? `${equipment.lethal.name} x2` : equipment.lethal.name)}
             />
           </Col>
           <Col sm className="text-center mb-3 mb-md-0">
             <SimpleGeneratorView
               isGenerating={isGenerating}
-              title="Lethal"
-              value={equipment.lethal.name}
+              title="Special Grenade"
+              value={perkObj.perk1 === "3x Special Grenades" ? "Smoke x3" : equipment.tactical.name}
             />
           </Col>
         </Row>
@@ -113,6 +113,13 @@ function WorldAtWarLoadoutLoadout() {
               value={perkObj.perk3 ? perkObj.perk3 : "None"}
             />
           </Col>
+          <Col sm className="text-center mb-3 mb-md-0">
+            <SimpleGeneratorView
+              isGenerating={isGenerating}
+              title="Vehicle Perk"
+              value={perkObj.vehiclePerk ? perkObj.vehiclePerk : "None"}
+            />
+          </Col>
         </Row>
         <Row id="button-row">
           <Col className="text-center">
@@ -130,6 +137,11 @@ function WorldAtWarLoadoutLoadout() {
   );
 }
 
+const lethalMap = {
+  "2x Satchel Charge": "Satchel Charge x2",
+  "2x Bouncing Betty": "Bouncing Betty x2"
+}
+
 async function fetchLoadoutData(setData) {
   sendEvent("button_click", {
     button_id: "waw_fetchLoadoutData",
@@ -144,8 +156,9 @@ async function fetchLoadoutData(setData) {
       perk1: fetchPerk("perk1"),
       perk2: fetchPerk("perk2"),
       perk3: fetchPerk("perk3"),
+      vehiclePerk: fetchPerk("vehicle-perk"),
     };
-    const vehiclePerk = fetchPerk("vehicle-perk");
+
     let equipment = {
       tactical: fetchEquipment("tactical", game),
       lethal: fetchEquipment("lethal", game),

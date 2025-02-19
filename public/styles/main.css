@@ -58,11 +58,14 @@
 
 #cod-header.infinite-warfare {
   background: #FFFF02 !important;
-  color: #000 !important;
 }
 
 #cod-header.infinite-warfare a {
   color: #000 !important;
+}
+
+#cod-header.waw {
+  background: #6C757D !important;
 }
 
 /* Cutom Button Colors */

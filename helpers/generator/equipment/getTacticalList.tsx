@@ -12,6 +12,7 @@ import coldWarList from "@/json/black-ops/cold-war/equipment/tactical.json";
 import ww2List from "@/json/world-war-two/equipment/tactical.json";
 import mw2List from "@/json/modern-warfare/two/equipment/tactical.json";
 import iwList from "@/json/infinite-warfare/equipment/tactical.json";
+import wawList from "@/json/world-at-war/equipment/tactical.json";
 
 const equipment: Record<string, any> = {
   "black-ops-six": bo6List,
@@ -27,6 +28,7 @@ const equipment: Record<string, any> = {
   "world-war-two": ww2List,
   "modern-warfare-two": mw2List,
   "infinite-warfare": iwList,
+  "world-at-war": wawList,
 };
 
 export function getTacticalList(game: string): any {

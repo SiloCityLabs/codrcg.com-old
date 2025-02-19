@@ -140,5 +140,17 @@
         "btnText": "Generator"
       }
     ]
+  },
+  {
+    "title": "World At War",
+    "text": "",
+    "variant": "secondary",
+    "buttons": [
+      {
+        "link": "world-at-war/generator",
+        "disabled": false,
+        "btnText": "Generator"
+      }
+    ]
   }
 ]

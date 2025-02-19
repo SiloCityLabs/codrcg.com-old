@@ -243,6 +243,9 @@
 		<loc>https://codrcg.com/modern-warfare/remastered/generator</loc>
 	</url>
 	<url>
+		<loc>https://codrcg.com/modern-warfare/remastered/info</loc>
+	</url>
+	<url>
 		<loc>https://codrcg.com/modern-warfare/remastered/info/equipment</loc>
 	</url>
 	<url>
@@ -326,13 +329,20 @@
 	<url>
 		<loc>https://codrcg.com/infinite-warfare/info/weapons</loc>
 	</url>
-	<!-- <url>
-		<loc>https://codrcg.com/contactus</loc>
+	<!-- World At War -->
+	<url>
+		<loc>https://codrcg.com/world-at-war/generator</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/shoutouts</loc>
+		<loc>https://codrcg.com/world-at-war/info</loc>
 	</url>
 	<url>
-		<loc>https://codrcg.com/statistics</loc>
-	</url> -->
+		<loc>https://codrcg.com/world-at-war/info/equipment</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-at-war/info/perks</loc>
+	</url>
+	<url>
+		<loc>https://codrcg.com/world-at-war/info/weapons</loc>
+	</url>
 </urlset>

@@ -12,6 +12,7 @@ import coldWarList from "@/json/black-ops/cold-war/equipment/lethal.json";
 import ww2List from "@/json/world-war-two/equipment/lethal.json";
 import mw2List from "@/json/modern-warfare/two/equipment/lethal.json";
 import iwList from "@/json/infinite-warfare/equipment/lethal.json";
+import wawList from "@/json/world-at-war/equipment/lethal.json";
 
 const equipment: Record<string, any> = {
   "black-ops-six": bo6List,
@@ -27,6 +28,7 @@ const equipment: Record<string, any> = {
   "world-war-two": ww2List,
   "modern-warfare-two": mw2List,
   "infinite-warfare": iwList,
+  "world-at-war": wawList,
 };
 
 export function getLethalList(game: string): any {

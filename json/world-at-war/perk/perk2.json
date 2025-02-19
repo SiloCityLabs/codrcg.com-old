@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Stopping Power",
+    "type": "Perk 2",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Fireworks",
+    "type": "Perk 2",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Flak Jacket",
+    "type": "Perk 2",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Gas Mask",
+    "type": "Perk 2",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Juggernaut",
+    "type": "Perk 2",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Camouflage",
+    "type": "Perk 2",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Sleight of Hand",
+    "type": "Perk 2",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Shades",
+    "type": "Perk 2",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Double Tap",
+    "type": "Perk 2",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Overkill",
+    "type": "Perk 2",
+    "game": "world-at-war"
+  }
+]

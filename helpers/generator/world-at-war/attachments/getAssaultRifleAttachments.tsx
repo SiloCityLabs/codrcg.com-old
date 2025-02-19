@@ -5,10 +5,10 @@ import m1a1carbine from "@/json/world-at-war/attachments/assault_rifle/m1a1carbi
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {
-  SVT40: default1,
+  svt40: default1,
   gewehr43,
   m1garand,
-  STG44: default1,
+  stg44: default1,
   m1a1carbine
 };
 

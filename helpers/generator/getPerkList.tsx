@@ -49,6 +49,13 @@ import mw2UltimateList from "@/json/modern-warfare/two/perk/ultimate.json";
 import iwPerk1List from "@/json/infinite-warfare/perk/perk1.json";
 import iwPerk2List from "@/json/infinite-warfare/perk/perk2.json";
 import iwPerk3List from "@/json/infinite-warfare/perk/perk3.json";
+//World At War
+import wawPerk1List from "@/json/world-at-war/perk/perk1.json";
+import wawPerk2List from "@/json/world-at-war/perk/perk2.json";
+import wawPerk3List from "@/json/world-at-war/perk/perk3.json";
+import wawVehiclePerkList from "@/json/world-at-war/perk/vehicle-perk.json";
+
+
 
 const perks: Record<
   string,
@@ -118,6 +125,11 @@ const perks: Record<
     perk1List: iwPerk1List,
     perk2List: iwPerk2List,
     perk3List: iwPerk3List,
+  },
+  "world-at-war": {
+    perk1List: wawPerk1List,
+    perk2List: wawPerk2List,
+    perk3List: mergeObjectsWithRekey(wawPerk3List, wawVehiclePerkList),
   },
 };
 

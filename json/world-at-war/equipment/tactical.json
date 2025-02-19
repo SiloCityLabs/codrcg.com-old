@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Signal Flare",
+    "type": "Tactical",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Tabun Gas",
+    "type": "Tactical",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Smoke",
+    "type": "Tactical",
+    "game": "world-at-war"
+  }
+]

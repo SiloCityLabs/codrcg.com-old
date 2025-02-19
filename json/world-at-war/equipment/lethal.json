@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Frag",
+    "type": "Lethal",
+    "game": "world-at-war"
+  },
+  {
+    "name": "N74 ST",
+    "type": "Lethal",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Molotov Cocktail",
+    "type": "Lethal",
+    "game": "world-at-war"
+  }
+]

@@ -1,17 +1,14 @@
-import default1 from "@/json/modern-warfare/remastered/attachments/smg/default1.json";
+import default1 from "@/json/world-at-war/attachments/sniper/default.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {
-  mp5: default1,
-  skorpion: default1,
-  miniuzi: default1,
-  ak74u: default1,
-  p90: default1,
-  mac10: default1,
-  fang45: default1,
+  springfield: default1,
+  arisaka: default1,
+  mosinnagant: default1,
+  kar98k: default1,
 };
 
-export function getSmgAttachments(gun: string, count: number) {
+export function getSniperAttachments(gun: string, count: number): any {
   const attachments: any = [];
   const data = attachmentsList[gun];
 

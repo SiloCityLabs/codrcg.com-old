@@ -1,0 +1,113 @@
+[
+  {
+    "name": "SVT-40",
+    "type": "assault_rifle",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Gewehr 43",
+    "type": "assault_rifle",
+    "game": "world-at-war"
+  },
+  {
+    "name": "M1 Garand",
+    "type": "assault_rifle",
+    "game": "world-at-war"
+  },
+  {
+    "name": "STG-44",
+    "type": "assault_rifle",
+    "game": "world-at-war"
+  },
+  {
+    "name": "M1A1 Carbine",
+    "type": "assault_rifle",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Thompson",
+    "type": "smg",
+    "game": "world-at-war"
+  },
+  {
+    "name": "MP40",
+    "type": "smg",
+    "game": "world-at-war"
+  },
+  {
+    "name": "PPSh-41",
+    "type": "smg",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Type 100",
+    "type": "smg",
+    "game": "world-at-war"
+  },
+  {
+    "name": "M1897 Trench Gun",
+    "type": "shotgun",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Double-Barreled Shotgun",
+    "type": "shotgun",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Springfield",
+    "type": "sniper",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Arisaka",
+    "type": "sniper",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Mosin-Nagant",
+    "type": "sniper",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Kar98k",
+    "type": "sniper",
+    "game": "world-at-war"
+  },
+  {
+    "name": "PTRS 41",
+    "type": "sniper",
+    "game": "world-at-war",
+    "no_attach": true
+  },
+  {
+    "name": "Type 99",
+    "type": "lmg",
+    "game": "world-at-war"
+  },
+  {
+    "name": "BAR",
+    "type": "lmg",
+    "game": "world-at-war"
+  },
+  {
+    "name": "DP-28",
+    "type": "lmg",
+    "game": "world-at-war"
+  },
+  {
+    "name": "MG42",
+    "type": "lmg",
+    "game": "world-at-war"
+  },
+  {
+    "name": "FG42",
+    "type": "lmg",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Browning M1919",
+    "type": "lmg",
+    "game": "world-at-war"
+  }
+]

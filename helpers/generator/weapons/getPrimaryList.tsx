@@ -16,6 +16,7 @@ import mwrList from "@/json/modern-warfare/remastered/weapon/primary.json";
 import ww2List from "@/json/world-war-two/weapon/primary.json";
 import ww2ZombieList from "@/json/world-war-two/zombies/weapon.json";
 import iwList from "@/json/infinite-warfare/weapon/primary.json";
+import wawList from "@/json/world-at-war/weapon/primary.json";
 
 const primaryWeapons: Record<string, any> = {
   warzone: mergeObjectsWithRekey(bo6List, mw3List, mw2List),
@@ -33,6 +34,7 @@ const primaryWeapons: Record<string, any> = {
   "world-war-two": ww2List,
   "world-war-two-zombies": ww2ZombieList,
   "infinite-warfare": iwList,
+  "world-at-war": wawList,
 };
 
 export function getPrimaryList(game: string): any {

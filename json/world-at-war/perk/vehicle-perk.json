@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Water Cooler",
+    "type": "Vehicle Perk",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Greased Bearings",
+    "type": "Vehicle Perk",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Ordnance Training",
+    "type": "Vehicle Perk",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Leadfoot",
+    "type": "Vehicle Perk",
+    "game": "world-at-war"
+  },
+  {
+    "name": "Coaxial Machine Gun",
+    "type": "Vehicle Perk",
+    "game": "world-at-war"
+  }
+]

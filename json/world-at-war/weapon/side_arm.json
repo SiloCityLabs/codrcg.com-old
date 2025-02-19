@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Colt M1911",
+    "type": "pistol",
+    "game": "world-at-war",
+    "no_attach": true
+  },
+  {
+    "name": "Nambu",
+    "type": "pistol",
+    "game": "world-at-war",
+    "no_attach": true
+  },
+  {
+    "name": "Walther P38",
+    "type": "pistol",
+    "game": "world-at-war",
+    "no_attach": true
+  },
+  {
+    "name": "Tokarev TT-33",
+    "type": "pistol",
+    "game": "world-at-war",
+    "no_attach": true
+  },
+  {
+    "name": ".357 Magnum",
+    "type": "pistol",
+    "game": "world-at-war",
+    "no_attach": true
+  }
+]

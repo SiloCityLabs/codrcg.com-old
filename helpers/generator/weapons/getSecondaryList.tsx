@@ -18,9 +18,14 @@ import wawList from "@/json/world-at-war/weapon/side_arm.json";
 const secondaryWeapons: Record<string, any> = {
   warzone: mergeObjectsWithRekey(bo6List, mw3List),
   "black-ops-six": bo6List,
+  // "modern-warfare-three": mergeObjectsWithRekey(
+  //   mw3List,
+  //   mw2List,
+  //   mw3MeleeList,
+  //   mw2MeleeList
+  // ),
   "modern-warfare-three": mergeObjectsWithRekey(
     mw3List,
-    mw2List,
     mw3MeleeList,
     mw2MeleeList
   ),

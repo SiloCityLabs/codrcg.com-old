@@ -165,5 +165,11 @@
     "type": "lmg",
     "game": "black-ops-six",
     "isDlc": true
+  },
+  {
+    "name": "TR2",
+    "type": "marksman_rifle",
+    "game": "black-ops-six",
+    "isDlc": true
   }
 ]

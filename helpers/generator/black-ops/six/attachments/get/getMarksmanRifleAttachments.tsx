@@ -2,6 +2,8 @@ import aek973 from "@/json/black-ops/six/attachments/marksman_rifle/aek973.json"
 import dm10 from "@/json/black-ops/six/attachments/marksman_rifle/dm10.json";
 import swat556 from "@/json/black-ops/six/attachments/marksman_rifle/swat556.json";
 import tsarkov762 from "@/json/black-ops/six/attachments/marksman_rifle/tsarkov762.json";
+//DLC
+import tr2 from "@/json/black-ops/six/attachments/marksman_rifle/tr2.json";
 import { randomizeAttachments } from "@/helpers/randomizeAttachments";
 
 const attachmentsList: Record<string, any> = {
@@ -9,6 +11,7 @@ const attachmentsList: Record<string, any> = {
   dm10,
   swat556,
   tsarkov762,
+  tr2,
 };
 
 export function getMarksmanRifleAttachments(gun: string, count: number): any {

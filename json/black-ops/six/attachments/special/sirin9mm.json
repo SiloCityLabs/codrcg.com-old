@@ -1,20 +1,7 @@
 {
-    "optic": [
-        "Iron Sight",
-        "Carry Handle Sight"
-    ],
-    "muzzle": [
-        "Suppressor"
-    ],
-    "barrel": [
-        "Long Barrel"
-    ],
-    "underbarrel": [
-        "Vertical Foregrip",
-        "Lightweight Foregrip"
-    ],
-    "magazine": [
-        "Extended Mag I",
-        "Fast Mag I"
-    ]
+  "optic": ["Iron Sight", "Carry Handle Sight"],
+  "muzzle": ["Suppressor"],
+  "barrel": ["Long Barrel"],
+  "underbarrel": ["Vertical Foregrip", "Lightweight Foregrip"],
+  "magazine": ["Extended Mag I", "Fast Mag I"]
 }

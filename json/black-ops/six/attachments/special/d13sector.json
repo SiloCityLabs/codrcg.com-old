@@ -1,0 +1,6 @@
+{
+  "barrel": ["Long Barrel"],
+  "underbarrel": ["Crossbar"],
+  "magazine": ["Explosive Blades", "Ricochet Blades"],
+  "stock": ["Overclocked Stock"]
+}

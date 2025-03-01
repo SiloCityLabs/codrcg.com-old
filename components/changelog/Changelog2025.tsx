@@ -6,20 +6,24 @@ function Changelog2025() {
       <Row>
         <Col>
           <p>
+            2/28/2025: <a href="black-ops/six/generator">Black Ops VI:</a> Added
+            new D1.3 Sector weapon!
+          </p>
+          <p>
             2/28/2025: <a href="warzone/generator">Warzone:</a> Added Low
             Profile Perk
           </p>
           <p>
-            2/28/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
+            2/28/2025: <a href="black-ops/six/generator">Black Ops VI:</a> Added
             new TMNT melee weapons! (Skateboard, Katanas, Bo Staff, Sai and
             Nunchaku)
           </p>
           <p>
-            2/28/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
+            2/28/2025: <a href="black-ops/six/generator">Black Ops VI:</a> Added
             Belt-Fed Mag to all LMGs
           </p>
           <p>
-            2/20/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
+            2/20/2025: <a href="black-ops/six/generator">Black Ops VI:</a> Added
             Full Auto Mod to AEK-973
           </p>
           <p>
@@ -77,21 +81,21 @@ function Changelog2025() {
             Custom Mutations Generator is now available!
           </p>
           <p>
-            1/29/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
+            1/29/2025: <a href="black-ops/six/generator">Black Ops VI:</a> Added
             Slipstream perk &amp; War Machine scorestreak
           </p>
           <p>
-            1/29/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
+            1/29/2025: <a href="black-ops/six/generator">Black Ops VI:</a> Added
             Cypher 091, PPSH-41 &amp; Feng 82 season 2 weapons
           </p>
           <p>
             1/28/2025:{" "}
-            <a href="black-ops-6/zombies-generator">Black Ops VI Zombies:</a>{" "}
+            <a href="black-ops/six/zombies-generator">Black Ops VI Zombies:</a>{" "}
             Added The Tomb
           </p>
           <p>
             1/28/2024:{" "}
-            <a href="black-ops-6/zombies-generator">Black Ops VI Zombies:</a>{" "}
+            <a href="black-ops/six/zombies-generator">Black Ops VI Zombies:</a>{" "}
             Added season 02 gobblegums &amp; and death perception augments
           </p>
           <p>

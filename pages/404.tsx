@@ -31,7 +31,9 @@ const redirects: Record<string, string> = {
   "/cold-war/zombies-generator": "/black-ops/cold-war/zombies-generator",
   "/cold-war/info": "/black-ops/cold-war/info",
   //Black Ops 6
+  "/black-ops-6/generator": "/black-ops/six/generator",
   "/black-ops-six/generator": "/black-ops/six/generator",
+  "/black-ops-6/zombies-generator": "/black-ops/six/zombies-generator",
   "/black-ops-six/zombies-generator": "/black-ops/six/zombies-generator",
   "/black-ops-six/info": "/black-ops/six/info",
 };

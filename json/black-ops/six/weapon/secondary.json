@@ -34,6 +34,13 @@
   {
     "name": "Sirin 9MM",
     "type": "special",
-    "game": "black-ops-six"
+    "game": "black-ops-six",
+    "isDlc": true
+  },
+  {
+    "name": "D1.3 Sector",
+    "type": "special",
+    "game": "black-ops-six",
+    "isDlc": true
   }
 ]

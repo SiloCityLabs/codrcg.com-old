@@ -3,8 +3,7 @@
     "Kepler Microflex",
     "PrismaTech Reflex",
     "Volzhskiy Reflex",
-    "Merlin Reflex",
-    "Dobrych MF Reflex",
+    "Redwell Reflex",
     "K&S Red Dot",
     "Kepler Red Dot",
     "Otero Red Dot",
@@ -20,17 +19,19 @@
     "PrismaPoint Hybrid",
     "R&K Multizoom",
     "Remuda Range Finder",
+    "Remuda Dual Zoom",
     "VMF Variable Scope",
     "Redwell Custom Zoom",
-    "Otero Thermal 2x"
+    "Otero Thermal 2x",
+    "Thermal 6x"
   ],
-  "muzzle": ["Suppressor", "Compensator", "Muzzle Brake", "Ported Compensator"],
+  "muzzle": ["Suppressor", "Compensator", "Ported Compensator", "Muzzle Brake"],
   "barrel": [
     "Gain-Twist Barrel",
     "Long Barrel",
-    "Reinforced Barrel",
     "Short Barrel",
-    "CHF Barrel"
+    "CHF Barrel",
+    "Reinforced Barrel"
   ],
   "underbarrel": [
     "Vertical Foregrip",
@@ -38,15 +39,13 @@
     "Marksman Foregrip",
     "Precision Foregrip",
     "Ranger Foregrip",
-    "Crossbar"
+    "Launcher - Standard",
+    "Launcher - Smoke",
+    "Launcher - High Explosive",
+    "Launcher - Drill Charge",
+    "Crossbow"
   ],
-  "magazine": [
-    "Extended Mag I",
-    "Extended Mag II",
-    "Extended Mag III",
-    "Extended Mag IV",
-    "Belt-Fed"
-  ],
+  "magazine": ["Extended Mag I", "Fast Mag I", "Extended Mag II", "Flip Mag"],
   "rear_grip": [
     "Quickdraw Grip",
     "Assault Grip",
@@ -70,8 +69,8 @@
   ],
   "fire_mods": [
     "Rapid Fire",
-    "7.62 NATO Overpressured",
+    "5.56 NATO Overpressured",
     "Recoil Springs",
-    "7.62 NATO FMJ"
+    "5.56 NATO FMJ"
   ]
 }

@@ -38,12 +38,12 @@ function Changelog2024() {
           </p>
           <p>
             12/5/2024:{" "}
-            <a href="black-ops-6/zombies-generator">Black Ops VI Zombies:</a>{" "}
+            <a href="black-ops/six/zombies-generator">Black Ops VI Zombies:</a>{" "}
             Added Citadelle Des Morts
           </p>
           <p>
             12/4/2024:{" "}
-            <a href="black-ops-6/zombies-generator">Black Ops VI Zombies:</a>{" "}
+            <a href="black-ops/six/zombies-generator">Black Ops VI Zombies:</a>{" "}
             Added season 01 reloaded gobblegums &amp; tesla storm field upgrade
           </p>
           <p>

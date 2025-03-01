@@ -35,5 +35,12 @@
     "game": "warzone",
     "color": "Blue",
     "isDlc": true
+  },
+  {
+    "name": "Low Profile",
+    "type": "Perk 1",
+    "game": "warzone",
+    "color": "Blue",
+    "isDlc": true
   }
 ]

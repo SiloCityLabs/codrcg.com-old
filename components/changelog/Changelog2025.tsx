@@ -7,6 +7,11 @@ function Changelog2025() {
         <Col>
           <p>
             2/28/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
+            new TMNT melee weapons! (Skateboard, Katanas, Bo Staff, Sai and
+            Nunchaku)
+          </p>
+          <p>
+            2/28/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
             Belt-Fed Mag to all LMGs
           </p>
           <p>

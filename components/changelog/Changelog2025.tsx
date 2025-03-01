@@ -6,6 +6,10 @@ function Changelog2025() {
       <Row>
         <Col>
           <p>
+            2/28/2025: <a href="black-ops/six/generator">Warzone:</a> Added
+            Hunter's Instinct Perk
+          </p>
+          <p>
             2/28/2025: <a href="black-ops/six/generator">Black Ops VI:</a> Added
             new TR2 - Marksman Rifle!
           </p>

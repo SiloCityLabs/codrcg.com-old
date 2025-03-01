@@ -47,5 +47,12 @@
     "game": "black-ops-six",
     "color": "Green",
     "isDlc": true
+  },
+  {
+    "name": "Hunter's Instinct",
+    "type": "Perk 2",
+    "game": "black-ops-six",
+    "color": "Red",
+    "isDlc": true
   }
 ]

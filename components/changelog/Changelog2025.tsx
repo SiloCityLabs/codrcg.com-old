@@ -6,6 +6,10 @@ function Changelog2025() {
       <Row>
         <Col>
           <p>
+            2/28/2025: <a href="warzone/generator">Warzone:</a> Added Low
+            Profile Perk
+          </p>
+          <p>
             2/28/2025: <a href="black-ops-6/generator">Black Ops VI:</a> Added
             new TMNT melee weapons! (Skateboard, Katanas, Bo Staff, Sai and
             Nunchaku)
